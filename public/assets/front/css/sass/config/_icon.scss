@@ -26,6 +26,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-favorite-2:before {
+  content: "\e91f";
+}
+.icon-arrow-circle-2:before {
+  content: "\e91d";
+}
+.icon-favorite:before {
+  content: "\e91e";
+}
+
+.icon-boat:before {
+  content: "\e91b";
+}
+.icon-route:before {
+  content: "\e91c";
+}
+
+.icon-location:before {
+  content: "\e91a";
+}
+
 .icon-linkedin-2:before {
   content: "\e919";
 }

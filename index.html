@@ -83,7 +83,7 @@
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
                             </button>
-                            <form class="dropdown-menu p-4 languageDropdown shadow-lg">
+                            <form class="dropdown-menu p-4 languageDropdown">
                                 <div class="title">Para Birimi</div>
                                 <ul class="languageList">
                                     <li>
@@ -103,6 +103,7 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <hr class="w-50 mx-auto">
                                 <div class="title">Dil ve Bölge</div>
                                 <ul class="languageList">
                                     <li>
@@ -130,7 +131,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                              <button type="submit" class="fixBtn button-primary languageSaveButton">Kaydet</button>
+                                <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
                         </div>
 
@@ -147,11 +148,11 @@
                 <div class="headerMenuNav">
                     <div class="navMenu">
                         <div class="container-xl ps-0 pe-0 h-100">
-                            <div class="row navMenuTop">
-                                <div class="leftMenuColumn col-lg-4">
+                            <div class="row navMenuTop mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0">
                                     <a class="logo" href="index.html"><img src="public/assets/images/statics/logo-white.png" alt="TekneKiralama logo beyaz"></a>
                                 </div>
-                                <div class="rightMenuColumn bg-primary col-lg-8">
+                                <div class="rightMenuColumn bg-primary col-lg-8 pe-0">
                                     <div class="searchInputWrapper position-relative">
                                         <input type="text" class="searchInput" placeholder="Aramak istediğiniz kelimeyi giriniz">
                                         <a href="#" class="searchButton"></a>
@@ -161,8 +162,8 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="row navMenuContent">
-                                <div class="leftMenuColumn col-lg-4">
+                            <div class="row navMenuContent mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0">
                                     <ul class="menuList">
                                         <li>
                                             <a href="index.html"><span>Anasayfa</span></a>
@@ -202,144 +203,246 @@
                                         <a data-aos="flip-right" data-aos-duration="2000" href="#"><span>EN</span></a>
                                     </div>
                                 </div>
-                                <div class="rightMenuColumn bg-primary col-lg-8 d-lg-block d-none">
-                                    <div class="subMenuWrapper">
-                                        <div class="subMenuList w-100">
-                                            <div class="title">Popular destinations</div>
-                                            <ul class="columns-2">
-                                                <li><a href="#">Donegal</a></li>
-                                                <li><a href="#">Cork</a></li>
-                                                <li><a href="#">Sligo</a></li>
-                                                <li><a href="#">Killkeny</a></li>
-                                                <li><a href="#">Mayo</a></li>
-                                                <li><a href="#">Waterford</a></li>
-                                                <li><a href="#">Galway</a></li>
-                                                <li><a href="#">Kerry</a></li>
-                                                <li><a href="#">Limerick</a></li>
-                                                <li><a href="#">Dublin</a></li>
-                                            </ul>
+                                <div class="rightMenuColumn bg-primary col-lg-8 d-lg-block d-none pe-0">
+                                    <div class="customScrollContent">
+                                        <div class="subMenuWrapper">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2">
+                                                <div class="title">Keep Discovering</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-02.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Enigma Blue</div>
+                                                                <div class="options">
+                                                                    <span>Fethiye, 10.9m, Yelkenli</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-04.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Fethiye</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
 
                                         </div>
-                                        <div class="keepDiscover subMenuList">
-                                            <div class="title">Keep Discovering</div>
-                                            <ul class="items">
-                                                <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-01.jpg" alt=""></div></a></li>
-                                                <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-02.jpg" alt=""></div></a></li>
-                                                <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-03.jpg" alt=""></div></a></li>
-                                                <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-04.jpg" alt=""></div></a></li>
-                                            </ul>
-                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
 
-                                    </div>
-                                    <div class="subMenuWrapper d-none">
-                                        <div class="subMenuList w-100">
-                                            <div class="title">Popular destinations</div>
-                                            <ul class="columns-2">
-                                                <li><a href="#">Donegal</a></li>
-                                                <li><a href="#">Cork</a></li>
-                                                <li><a href="#">Sligo</a></li>
-                                                <li><a href="#">Killkeny</a></li>
-                                                <li><a href="#">Mayo</a></li>
-                                                <li><a href="#">Waterford</a></li>
-                                                <li><a href="#">Galway</a></li>
-                                                <li><a href="#">Kerry</a></li>
-                                                <li><a href="#">Limerick</a></li>
-                                                <li><a href="#">Dublin</a></li>
-                                            </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink">See all destinations</a>
+                                            </div>
 
                                         </div>
-                                        <div class="subMenuList">
-                                            <div class="title">Regions</div>
-                                            <ul>
-                                                <li><a href="#">The Ring of Kerry</a></li>
-                                                <li><a href="#">The Burren</a></li>
-                                                <li><a href="#">The Boyne Valley</a></li>
-                                                <li><a href="#">Wild Atlantic Way</a></li>
-                                                <li><a href="#">Ireland's Ancient East</a></li>
-                                                <li><a href="#">Ireland's Hidden Heartlands</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="subMenuList">
-                                            <div class="title">Trip type</div>
-                                            <ul>
-                                                <li><a href="#">City breaks</a></li>
-                                                <li><a href="#">Coastal escapes</a></li>
-                                                <li><a href="#">Lakes & rivers</a></li>
-                                                <li><a href="#">Islands</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="w-100">
-                                            <a href="#" class="textLink">See all destinations</a>
-                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
 
-                                    </div>
-                                    <div class="subMenuWrapper d-none">
-                                        <div class="subMenuList">
-                                            <div class="title">Regions</div>
-                                            <ul>
-                                                <li><a href="#">The Ring of Kerry</a></li>
-                                                <li><a href="#">The Burren</a></li>
-                                                <li><a href="#">The Boyne Valley</a></li>
-                                                <li><a href="#">Wild Atlantic Way</a></li>
-                                                <li><a href="#">Ireland's Ancient East</a></li>
-                                                <li><a href="#">Ireland's Hidden Heartlands</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="subMenuList">
-                                            <div class="title">Trip type</div>
-                                            <ul>
-                                                <li><a href="#">City breaks</a></li>
-                                                <li><a href="#">Coastal escapes</a></li>
-                                                <li><a href="#">Lakes & rivers</a></li>
-                                                <li><a href="#">Islands</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="subMenuList">
-                                            <div class="title">Trip type</div>
-                                            <ul>
-                                                <li><a href="#">City breaks</a></li>
-                                                <li><a href="#">Coastal escapes</a></li>
-                                                <li><a href="#">Lakes & rivers</a></li>
-                                                <li><a href="#">Islands</a></li>
-                                            </ul>
-                                        </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink">See all things to do</a>
+                                            </div>
 
-                                        <div class="w-100">
-                                            <a href="#" class="textLink">See all things to do</a>
                                         </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="moretoexplore keepDiscover subMenuList">
+                                                <div class="title">More to explore</div>
+                                                <ul class="items">
+                                                    <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-01.jpg" alt=""></div></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink">See all routes & trails</a>
+                                            </div>
 
-                                    </div>
-                                    <div class="subMenuWrapper d-none">
-                                        <div class="subMenuList">
-                                            <div class="title">Regions</div>
-                                            <ul>
-                                                <li><a href="#">The Ring of Kerry</a></li>
-                                                <li><a href="#">The Burren</a></li>
-                                                <li><a href="#">The Boyne Valley</a></li>
-                                                <li><a href="#">Wild Atlantic Way</a></li>
-                                                <li><a href="#">Ireland's Ancient East</a></li>
-                                                <li><a href="#">Ireland's Hidden Heartlands</a></li>
-                                            </ul>
                                         </div>
-                                        <div class="subMenuList">
-                                            <div class="title">Trip type</div>
-                                            <ul>
-                                                <li><a href="#">City breaks</a></li>
-                                                <li><a href="#">Coastal escapes</a></li>
-                                                <li><a href="#">Lakes & rivers</a></li>
-                                                <li><a href="#">Islands</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="moretoexplore keepDiscover subMenuList">
-                                            <div class="title">More to explore</div>
-                                            <ul class="items">
-                                                <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-01.jpg" alt=""></div></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="w-100">
-                                            <a href="#" class="textLink">See all routes & trails</a>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -362,14 +465,14 @@
                                 <div class="text">Tasarımcı mobilyalı dairelerden oluşan küresel ağımızla, bir ay, bir yıl veya daha uzun süre sizinle birlikte taşınan evi deneyimleyin</div>
                                 <div class="calendarWrapper">
                                     <div class="boatType">
-                                        <button id="hiraBoat" class="active typeItem shadow-md">Tekne Kiralama</button>
-                                        <button id="toursBoat" class="typeItem shadow-md">Tekne Turları</button>
+                                        <button id="hiraBoat" class="active typeItem shadow-md"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
+                                        <button id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button>
                                     </div>
                               
                                 
                                     <div class="dateTimeSearchWrapper">
                                         <div class="form-floating formSelectWrapper">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                            <select class="form-select customSelect" id="floatingSelect" aria-label="Floating label select example">
                                               <option selected>Nereden binmek istersin?</option>
                                               <option value="1">One</option>
                                               <option value="2">Two</option>
@@ -429,7 +532,7 @@
                         <div class="sectionText">Tatil planınıza dahil olan tekne keyfi için içinizi rahat olmasını, güvenerek kiralama yapın. Tekne organizasyonu, tekne turu ve yat geizisi keyfini TekneKiralama.com ilen yapın</div>
                     </div>
                     <div class="sectionContent">
-                        <div class="cards">
+                        <div class="cards half">
                             <a href="#" class="card">
                                 <div class="cardTop-image">
                                     <div class="imageWrapper">
@@ -474,6 +577,220 @@
                                     <div class="cardText">Kiralama sonrasında deneyimli ekipden, profesyonel hizmet alın</div>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="container-3xl">
+                    <div class="sectionHead">
+                        <div class="sectionTitle">POPÜLER LOKASYONLAR</div>
+                        <div class="sectionText">Tatil planınıza dahil olan tekne keyfi için içinizi rahat olmasını, güvenerek kiralama yapın. Tekne organizasyonu, tekne turu ve yat geizisi keyfini TekneKiralama.com ilen yapın</div>
+                    </div>
+                    <div class="sectionContent">
+                        <div class="cards type2">
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/populerLokasyon/bodrum.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="title">Bodrum</div>
+                                    <div class="cardText">Dünyanın en meşhur tatil bölgesinde yapacaklarınız bitmez</div>
+                                    <div class="buttons">
+                                        <a href="#" class="fixBtn button-primary">Hemen Kirala</a>
+                                        <a href="#" class="fixBtn button-outline">Keşfet</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/populerLokasyon/fethiye.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="title">Fethiye</div>
+                                    <div class="cardText">Akdeniz’in incisi Fethiye deniz bir başka güzel</div>
+                                    <div class="buttons">
+                                        <a href="#" class="fixBtn button-primary">Hemen Kirala</a>
+                                        <a href="#" class="fixBtn button-outline">Keşfet</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/populerLokasyon/gocek.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="title">Göcek</div>
+                                    <div class="cardText">Tatilinizi yaşamın içinde geçirmek ister misiniz</div>
+                                    <div class="buttons">
+                                        <a href="#" class="fixBtn button-primary">Hemen Kirala</a>
+                                        <a href="#" class="fixBtn button-outline">Keşfet</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card allLinkCard">
+                                <div class="cardBody">
+                                    <div class="title">DAHA FAZLA LOKASYON</div>
+                                    <div class="cardText">TÜM LOKASYONLARI KEŞFET</div>
+                                    <div class="textLink"><span>TÜMÜNÜ GÖR</span> <span class="icon-arrow-long"></span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-3xl">
+                    <div class="bg-gray rounded-5 sectionWrapper">
+                       <div class="sectionHead">
+                        <div class="sectionTitle">
+                            RASTGELE TEKNE KİRALAMADAN <br> SIKILDINIZ MI ? 
+                        </div>
+                        <div class="sectionText">
+                            Türkiye’nin  en iyilerini burada. Özenle seçilmiş seçkin tekneler. En havalı yerel tasarımcılar ve sanatçılar tarafından yaratılan iç mekanlar. Her konaklama iklim açısından nötrdür ve tamamen karbon dengelemelidir.
+                            <br><br>
+                            Yaşamak, çalışmak ve oynamak için ihtiyacınız olan her şeyi alın. Tam donanımlı mutfaklar, temassız erişim, hızlı Wi-Fi, 7/24 destek, düzenli profesyonel temizlik, yerel spor salonu giriş kartları ve daha fazlası.
+                        </div>
+                       </div>
+                       <div class="sectionContent">
+                            <div class="videoWrapper" data-aos="fade-up">
+                                <a href="https://youtu.be/cf9mGKEmQ-4?si=92f2S5dv9n_ego5i" class="videoCardFull" data-fancybox>
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/video-picture.png" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <div class="playButton">
+                                            <span class="icon-play-arrow"></span>
+                                        </div>
+                                        <div class="name">BOB EXPOSED IN 60 SECS</div>
+                                    </div>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section>
+                <div class="container-3xl">
+                    <div class="sectionHead">
+                        <div class="sectionTitle">Öne Çıkan Tekneler</div>
+                        <a href="#" class="textLink"><span>TÜMÜNÜ GÖR</span><span class="icon-arrow-long"></span></a>
+                    </div>
+                    <div class="sectionContent">
+                        <div class="cards third">
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Bavaria 46 Cruiser</div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
+                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/onecikantekne/tekne-2.jpg" alt="">
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Bavaria 46 Cruiser</div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
+                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/onecikantekne/tekne-3.jpg" alt="">
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Bavaria 46 Cruiser</div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
+                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper">
+                                        <img src="public/assets/images/media/onecikantekne/tekne-4.jpg" alt="">
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Bavaria 46 Cruiser</div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
+                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -740,7 +1057,7 @@
             {
                 separator : ' to ',
                 container:".dateTimeSearchWrapper",
-                language: 'tr',
+                language: 'tr-short',
                 stickyMonths: true,
                 showTopbar: false,
                 getValue: function()
@@ -758,10 +1075,39 @@
             }
         ).bind('datepicker-open', function() {
             $(".reservation-type").removeClass("d-none"); // Açıldığında d-none kaldır
+            $("#checkInText, #checkinInput").addClass("selected")
+
+            const targetOffset = $('#dateInputs').offset().top - 150;
+            smoothScrollTo(targetOffset, 500); // 500ms animasyon
+
         }).bind('datepicker-close', function() {
             $(".reservation-type").addClass("d-none"); // Kapandığında d-none ekle
         });
         
+
+        // Akıcı kaydırma fonksiyonu
+        function smoothScrollTo(target, duration) {
+            const start = window.pageYOffset;
+            const distance = target - start;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuad(timeElapsed, start, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
     </script>
 </body>
 

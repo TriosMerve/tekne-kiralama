@@ -1,0 +1,461 @@
+.calendarWrapper {
+  min-height: 170px;
+  position: relative;
+  z-index: 9;
+  // width: calc(100% + 100px);
+  .boatType {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px auto 0;
+
+    button {
+      font-family: "GilroyMedium";
+      font-size: 15px;
+      line-height: 25px;
+      color: var(--gray-5);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      &.active {
+        color: var(--gray-6);
+      }
+      @media screen and (min-width:992px) {
+        &:hover{
+          color: var(--gray-6);
+        }
+      }
+    }
+  }
+  .reservation-type {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    margin: 20px auto 0;
+    position: absolute;
+    top: 92px;
+    z-index: 9;
+    background-color: var(--gray-3);
+    width: 253px !important;
+    left: 0;
+    right: 0;
+    border-radius: 29px;
+    padding: 4px 0;
+
+    button {
+      background-color: var(--gray);
+      padding: 3px 20px;
+      border-radius: 25px;
+      border: 1px solid var(--gray-3);
+      font-family: "GilroyMedium";
+      font-size: 14px;
+      line-height: 25px;
+      background-color: rgba(0, 0, 0, 0);
+      color: var(--gray-6);
+
+      &.active {
+        background-color: var(--white);
+      }
+    }
+  }
+  .dateTimeSearchWrapper {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: all 0.3s linear;
+    padding: 20px;
+    margin-left: -20px;
+    position: relative;
+
+    .formSelectWrapper {
+      width: calc(46% - 75px);
+      cursor: pointer;
+      label {
+        color: #878787;
+        font-family: "GilroyRegular";
+        transition: all 0.3s linear;
+        font-size: 13px;
+        opacity: 1;
+        padding-left: 16px;
+        padding-top: 20px;
+        transition: all 0.3s linear;
+      }
+      .form-select {
+        height: 60px;
+        background-color: var(--gray);
+        border: 1px solid var(--gray-3);
+        font-size: 13px;
+        color: #878787;
+        padding-left: 16px;
+        transition: all 0.3s linear;
+        cursor: pointer;
+        box-shadow: none;
+        width: 100%;
+        border-radius: 10px !important;
+        &:after {
+          display: none;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+        .current {
+          line-height: 31px;
+        }
+      }
+      .nice-select {
+        .list {
+          border-radius: 10px;
+        }
+        .option {
+          position: relative;
+          padding-left: 33px;
+          &:before {
+            content: "\e91a";
+            font-family: "customFont";
+            font-size: 20px;
+            color: var(--black);
+            position: absolute;
+            left: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-6);
+          }
+        }
+      }
+      @media screen and (min-width: 992px) {
+        &:hover {
+          .form-select {
+            background-color: var(--gray-3);
+          }
+          label {
+          }
+        }
+      }
+    }
+    .date-picker-wrapper {
+      position: relative !important;
+      width: 100% !important;
+      top: 0 !important;
+      left: 0 !important;
+      background: var(--white);
+      padding: 75px 0 40px 0;
+      border-radius: 10px 10px 25px 25px;
+      border: none;
+      box-shadow: none;
+      .month-element {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: var(--gray-6);
+      }
+      .month-name {
+        font-size: 18px;
+        color: var(--black);
+        font-family: "GilroyMedium";
+        height: 60px;
+      }
+      .first-date-selected,
+      .last-date-selected {
+        background-color: var(--black) !important;
+        color: var(--white) !important;
+      }
+      table {
+        .day {
+          padding: 0 0;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10.5px;
+          border-radius: 100%;
+          color: var(--gray-6) !important;
+          font-family: "GilroyMedium";
+
+          @media screen and (min-width: 992px) {
+            &:hover {
+              background-color: var(--gray);
+            }
+          }
+          &.real-today {
+            background: var(--primary);
+            color: var(--white) !important;
+          }
+          &.first-date-selected,
+          &.last-date-selected {
+            background-color: var(--black) !important;
+            color: var(--white) !important;
+          }
+          &.checked {
+            background-color: var(--black) !important;
+            color: var(--white) !important;
+          }
+          &.toMonth {
+            &.hovering {
+              background-color: var(--gray-3);
+            }
+          }
+        }
+        .week-name {
+          font-size: 16px;
+          height: 45px;
+        }
+        .caption {
+          .next,
+          .prev {
+            font-size: 0;
+            position: relative;
+            width: 24px;
+            height: 24px;
+            display: block;
+            padding: 0;
+            line-height: 24px;
+            &:before {
+              content: "\e902";
+              font-family: "customFont";
+              font-size: 24px;
+              color: var(--gray-5);
+              position: absolute;
+              display: block;
+              transition: all 0.3s linear;
+              top: 0;
+              left: 0;
+            }
+            &:hover {
+              background-color: rgba(0, 0, 0, 0);
+              color: var(--gray-6);
+              &:before {
+                color: var(--gray-6);
+              }
+            }
+
+            &.prev {
+              left: 10px;
+              &:before {
+                transform: rotate(180deg);
+              }
+            }
+            &.next{
+              margin-left: auto;
+              right: 10px;
+            }
+          }
+        }
+      }
+
+      .date-range-length-tip {
+        background-color: var(--black);
+        color: var(--white);
+        border-radius: 4px;
+        padding: 3px 8px;
+      }
+      .drp_top-bar {
+        .default-top {
+          display: none;
+        }
+        .apply-btn {
+          top: -30px;
+          padding: 10px 20px !important;
+          right: 20px;
+          background-color: var(--primary);
+          color: var(--white);
+          border: 1px solid var(--gray-3);
+          font-size: 14px;
+          font-family: "GilroySemibold";
+          border-radius: 10px;
+        }
+      }
+
+      .month-wrapper {
+        width: 100% !important;
+        padding: 0 0;
+        border: none;
+        table {
+          width: calc(50% - 18px) !important;
+          td,
+          th {
+            font-size: 14px;
+            text-transform: capitalize;
+            font-family: "GilroyRegular";
+          }
+        }
+      }
+    }
+
+    &.active {
+      position: absolute;
+      background: var(--white);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+      border-radius: 20px;
+      width: 130%;
+      margin-left: 0;
+      .dateInputWrapper {
+        width: calc(46% - 62px);
+      }
+      .formSelectWrapper {
+        width: calc(46% - 62px);
+      }
+    }
+  }
+  .dateInputWrapper {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: calc(46% - 75px);
+  }
+  .customRangeButton {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 60px;
+    background-color: var(--gray);
+    border: 1px solid var(--gray-3);
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    padding-left: 16px;
+    padding-top: 10px;
+    &:after {
+      content: "\e90c";
+      font-family: "customFont";
+      font-size: 16px;
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    span {
+      color: #878787;
+      font-family: "GilroyRegular";
+      transition: all 0.3s linear;
+      font-size: 13px;
+      &.name {
+        font-size: 11px;
+      }
+    }
+    &.active {
+      display: none;
+    }
+    @media screen and (min-width: 992px) {
+      &:hover {
+        background-color: var(--gray-3);
+      }
+    }
+  }
+  .dateSearchButton {
+    max-width: 150px;
+    width: 20%;
+    display: flex;
+    height: auto;
+  }
+
+  #dateInputs {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    #checkinInput {
+      width: 50%;
+      border-radius: 10px;
+      height: 60px;
+      background-color: var(--gray);
+      border: 1px solid var(--gray-3);
+      font-size: 14px;
+      padding-left: 16px;
+      color: #878787;
+      &.selected {
+        border-radius: 10px 50px 50px 10px;
+        background-color: var(--black);
+        color: var(--white);
+
+        .name {
+          color: var(--white);
+        }
+      }
+    }
+    #checkoutInput {
+      width: 50%;
+      border-radius: 10px;
+      height: 60px;
+      background-color: var(--gray);
+      border: 1px solid var(--gray-3);
+      font-size: 14px;
+      padding-left: 16px;
+      color: #878787;
+      &.selected {
+        border-radius: 10px 50px 50px 10px;
+        background-color: var(--black);
+        color: var(--white);
+
+        .name {
+          color: var(--white);
+        }
+      }
+    }
+    #checkInText {
+      position: absolute;
+      width: calc(50% - 10px);
+      left: 0;
+      top: 0;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 10px;
+      font-size: 13px;
+      color: #878787;
+      cursor: pointer;
+      .name {
+        font-family: "GilroyMedium";
+        text-transform: uppercase;
+        font-size: 11px;
+      }
+      &.selected {
+        border-radius: 10px 50px 50px 10px;
+        background-color: var(--black);
+        color: var(--white);
+
+        .name {
+          color: var(--white);
+        }
+      }
+    }
+    #checkOutText {
+      position: absolute;
+      width: calc(50% - 10px);
+      right: 0;
+      top: 0;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 10px;
+      font-size: 13px;
+      color: #878787;
+      cursor: no-drop;
+      &.selected {
+        border-radius: 10px 50px 50px 10px;
+        background-color: var(--black);
+        color: var(--white);
+        cursor: default;
+
+        .name {
+          color: var(--white);
+        }
+      }
+      .name {
+        font-family: "GilroyMedium";
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

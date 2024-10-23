@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?bsy6yg');
-  src:  url('fonts/icomoon.eot?bsy6yg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?bsy6yg') format('truetype'),
-    url('fonts/icomoon.woff?bsy6yg') format('woff'),
-    url('fonts/icomoon.svg?bsy6yg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?bk8d51');
+  src:  url('fonts/icomoon.eot?bk8d51#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bk8d51') format('truetype'),
+    url('fonts/icomoon.woff?bk8d51') format('woff'),
+    url('fonts/icomoon.svg?bk8d51#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-favorite-2:before {
+  content: "\e91f";
+}
+.icon-arrow-circle-2:before {
+  content: "\e91d";
+}
+.icon-favorite:before {
+  content: "\e91e";
+}
+.icon-boat:before {
+  content: "\e91b";
+}
+.icon-route:before {
+  content: "\e91c";
+}
+.icon-location:before {
+  content: "\e91a";
+}
 .icon-linkedin-2:before {
   content: "\e919";
 }

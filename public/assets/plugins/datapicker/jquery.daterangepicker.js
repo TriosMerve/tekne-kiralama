@@ -941,6 +941,43 @@
             "hour": "Saat",
             "minute": "Dakika"
         },
+        "tr-short": {
+            "selected": "Seçildi:",
+            "day": " gün",
+            "days": " gün",
+            "apply": "Uygula",
+            "week-1": "Pt",
+            "week-2": "S",
+            "week-3": "Ç",
+            "week-4": "P",
+            "week-5": "C",
+            "week-6": "Ct",
+            "week-7": "Pz",
+            "week-number": "H",
+            "month-name": ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+            "shortcuts": "Kısayollar",
+            "custom-values": "Özel Değerler",
+            "past": "Geçmiş",
+            "following": "Sonraki",
+            "previous": "&nbsp;&nbsp;&nbsp;",
+            "prev-week": "Önceki Hafta",
+            "prev-month": "Önceki Ay",
+            "prev-year": "Öncəki Yıl",
+            "next": "&nbsp;&nbsp;&nbsp;",
+            "next-week": "Sonraki Hafta",
+            "next-month": "Sonraki Ay",
+            "next-year": "Sonraki Yıl",
+            "less-than": "Tarih aralığı %d günden çok olmamalıdır",
+            "more-than": "Tarih aralığı %d günden az olmamalıdır",
+            "default-more": "%d günden çok bir tarih seçin",
+            "default-single": "Tarih seçin",
+            "default-less": "%d günden az bir tarih seçin",
+            "default-range": "%d ve %d gün aralığında tarihler seçin",
+            "default-default": "Tarih aralığı seçin",
+            "time": "Zaman",
+            "hour": "Saat",
+            "minute": "Dakika"
+        },
     };
 
     $.fn.dateRangePicker = function(opt) {
@@ -1873,12 +1910,15 @@
                 box.find('.start-day').html(getDateString(new Date(parseInt(opt.start))));
                 $('#checkinInput').val(getDateString(new Date(parseInt(opt.start))));
                 $("#checkInText").hide();
+                $("#checkOutText, #checkoutInput").addClass("selected");
+                $("#checkInText, #checkinInput").removeClass("selected");
             }
             if (opt.end) {
                 box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));
                 $('#checkoutInput').val(getDateString(new Date(parseInt(opt.start))));
                 closeDatePicker();
                 $("#checkOutText").hide();
+                $("#checkOutText, #checkoutInput").removeClass("selected");
             }
             var dateRange;
             if (opt.start && opt.singleDate) {

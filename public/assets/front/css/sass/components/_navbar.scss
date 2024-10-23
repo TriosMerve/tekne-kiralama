@@ -80,7 +80,9 @@ $navMenuTop:80px;
     .rightMenuColumn{
         text-align: left;
         padding-left: 90px;
+        padding-bottom: 60px;
         position: relative;
+        height: 100%;
         &:after{
             content: "";
             width: 200%;
@@ -240,6 +242,24 @@ $navMenuTop:80px;
         }
     }
 }
+.customScrollContent{
+    height: 96%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar{
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track{
+        border-radius: 6px;
+        width: 4px;
+        background-color: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb{
+        border-radius: 4px;
+        background-color: var(--gray-6);
+    }
+}
 .subMenuWrapper{
     display: flex;
     flex-wrap: wrap;
@@ -247,10 +267,11 @@ $navMenuTop:80px;
         width: 50%;
         padding-bottom:50px;
 
+
         .title{
             font-family: 'GilroySemibold';
             font-size: 20px;
-            line-height: 27px;
+            line-height: 40px;
             color: var(--white);
             padding-bottom: 30px;
             opacity: 0;
@@ -283,7 +304,7 @@ $navMenuTop:80px;
                     font-family: 'GilroyRegular';
                     position: relative;
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 35px;
                     padding: 5px 0;
                     display: inline-flex;
                     align-items: center;
@@ -294,9 +315,10 @@ $navMenuTop:80px;
                         height: 1px;
                         background-color: var(--white);
                         position: absolute;
-                        bottom: 0;
+                        bottom: 4px;
                         left: 0;
                         transition: all .3s linear;
+                        opacity: 0.5;
                     }
 
                     @media screen and (min-width:992px) {
@@ -305,6 +327,20 @@ $navMenuTop:80px;
                                 width: 100%;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        &.type2{
+            width: 100%;
+            ul{
+                flex-wrap: wrap;
+                li{
+                    width: calc(33.3% - 14px);
+
+                    a{
+                        padding: 0;
                     }
                 }
             }
@@ -348,15 +384,19 @@ $navMenuTop:80px;
         .items{
             display: flex;
             align-items: stretch;
+            gap:40px 20px;
             a{
                 display: flex;
                 align-items: center;
-                height: 150px;
-                padding:10px;
+                flex-direction: column;
+                &:after{
+                    display: none;
+                }
                 .imageWrapper{
                     aspect-ratio: 3/2;
                     border-radius: 4px;
                     overflow: hidden;
+                    height: 150px;
                 }
                 img{
                     min-width: 100%;
@@ -364,6 +404,25 @@ $navMenuTop:80px;
                     border-radius: 4px;
                     object-fit: cover;
                     transition: all .3s linear;
+                }
+                .desc{
+                    width: 100%;
+                    padding-top: 10px;
+
+                    .name{
+                        font-size: 16px;
+                        font-family: 'GilroySemibold';
+                        line-height: 22px;
+                    }
+                    .options{
+                        font-size: 13px;
+                        line-height: 20px;
+                        span{
+                            font-size: 13px;
+                            color: rgba(255,255,255,0.7);
+                            line-height: 20px;
+                        }
+                    }
                 }
 
                 @media screen and (min-width:992px) {

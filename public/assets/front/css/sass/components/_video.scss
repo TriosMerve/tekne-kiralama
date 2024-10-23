@@ -1,23 +1,60 @@
-.module-video{
-    padding-block:50px;
-    display: flex;
-    align-items: center;
-    @media screen and (min-width:992px) {
-        min-height: 100vh;
-        padding-block:100px;
-    }
-
-
-}
 .videoCardFull{
     // aspect-ratio: 9/6;
-    aspect-ratio: 9/4;
+    aspect-ratio: 9/3.5;
     border-radius: 30px;
     overflow: hidden;
     display: block;
     position: relative;
     @media screen and (max-width:991.98px){
         aspect-ratio: 9/6;
+    }
+
+    .desc{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.3);
+        flex-direction: column;
+        gap: 50px;
+        .playButton{
+            position: relative;
+            left: 0;
+            right: 0;
+            margin:0 auto;
+            bottom: initial;
+
+            &:before{
+                border: 2px solid var(--white);
+                background-color: rgba(0,0,0,0);
+                transition: all .3s linear;
+            }
+        }
+        .name{
+            font-family: 'GilroyBold';
+            font-size: 20px;
+            line-height: 27px;
+            color: var(--white);
+            transition: all .3s linear;
+        }
+    }
+    @media screen and (min-width:992px) {
+        &:hover{
+            .playButton{
+                &:before{
+                    background-color: var(--primary);
+                    border-color: var(--primary);
+                }
+            }
+            .name{
+                color: var(--black);
+            }
+        }   
     }
 }
 .videoCardFullWidth{
@@ -89,29 +126,6 @@
             height: 45px;
         }
     }
-    // &:after{
-    //     content: "";
-    //     position: absolute;
-    //     width: 117px;
-    //     height: 116px;
-    //     background-color: #0000;
-    //     border: 4px solid var(--primary);
-    //     top: 50%;
-    //     left: 50%;
-    //     margin-left: -58.5px;
-    //     margin-top: -58px;
-    //     z-index: -1;
-    //     border-radius: 100%;
-    //     animation: playBack2 2s alternate infinite;
-    //     @media screen and (max-width:1440px) {
-    //         width: 70px;
-    //         height: 70px;
-    //         margin-left: -35px;
-    //         margin-top: -35px;
-    //         border: 2px solid var(--primary);
-    //     }
-    // }
-
     &.type2{
         bottom:40px;
         left: 40px;

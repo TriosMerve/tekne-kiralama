@@ -237,28 +237,34 @@ header {
   padding-right: 50px !important;
   border-color: var(--gray-3);
   border-radius: 15px;
+  box-shadow:0 2rem 4rem rgba(0,0,0,0.475)!important;
 
   .title {
-    font-size: 20px;
+    font-size: 17px;
     font-family: "GilroySemibold";
     color: var(--gray-6);
     line-height: 27px;
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+  hr{
+    border-top-color: var(--gray-3);
+    opacity: 1;
   }
   .languageList {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 10px 0 20px 0;
+    gap: 35px;
+    padding: 10px 0 30px 0;
     li {
-      width: calc(33.3% - 14px);
+      width: calc(33.3% - 24px);
     }
   }
 
   .languageSaveButton {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     margin-left: auto;
+    margin-bottom: 20px;
   }
 
   &.show {
