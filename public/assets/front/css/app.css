@@ -2129,6 +2129,57 @@ footer .customTabContents .listItems .item .boatName {
 .cards.third .card .cardTop-image .imageWrapper {
   aspect-ratio: 3/2;
 }
+.cards.third .card .cardBody {
+  text-align: left;
+}
+.cards.third .card .cardBody .title {
+  font-size: 20px;
+  font-family: "GilroySemibold";
+  line-height: 27px;
+  padding-right: 10px;
+  flex: 1;
+}
+.cards.third .card .cardBody .card-id {
+  font-family: "GilroyRegular";
+  font-size: 14px;
+  color: var(--gray-6);
+  line-height: 20px;
+  min-height: 85px;
+}
+.cards.third .card .cardBody .options {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-6);
+  font-family: "GilroyRegular";
+  margin-top: 12px;
+}
+.cards.third .card .cardBody .countPrice {
+  margin-top: 20px;
+  color: var(--primary);
+  font-size: 14px;
+}
+.cards.third .card .cardBody .countPrice .price {
+  font-size: 28px;
+  font-family: "GilroySemibold";
+  line-height: 30px;
+}
+.cards.third .card .cardBody .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.cards.third .card .cardBody .tags span {
+  font-size: 14px;
+  font-family: "GilroyMedium";
+  line-height: 30px;
+  background-color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+}
 @media screen and (min-width: 992px) {
   .cards a.card:hover .imageWrapper {
     border-radius: 10px;
