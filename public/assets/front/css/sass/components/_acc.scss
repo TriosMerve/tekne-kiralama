@@ -1,0 +1,42 @@
+.accordion {
+    .accordion-item {
+        margin-bottom: 30px;
+
+        .accordion-button {
+            font-family: 'GilroyBold';
+            font-size: 24px;
+            line-height: 32px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 10px !important;
+            height: 75px;
+            box-shadow: none!important;
+
+            &:after {
+                content: "\e903";
+                font-family: 'iconYuvam';
+                color: var(--white);
+                font-size: 24px;
+                background-image: none;
+                transform: rotate(-90deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.collapsed {
+                &:after {
+                    transform: rotate(90deg);
+
+                }
+            }
+        }
+
+        .accordion-body{
+            font-size: 22px;
+            line-height: 30px;
+            font-family: 'GilroySemibold';
+            padding: 40px 20px 60px;
+        }
+    }
+}

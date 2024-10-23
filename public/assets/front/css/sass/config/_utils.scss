@@ -1,0 +1,327 @@
+:root {
+  --white: #fff;
+  --white-2: #ecedf0;
+  --black: #000000;
+  --primary: #d9043e;
+  --secondary: #f2055c;
+  --burgundy:#660000;
+  --light-brown:#aa552a;
+  --yellow:#fe9615;
+  --text:#383838;
+  --text-2:#5c5c5c;
+  --text-3:#c6c6c6;
+  --gray:#f3f3f3;
+  --gray-2:#f7f5f2;
+  --gray-3:#e2e6e9;
+  --gray-4:#d9d9d9;
+  --gray-5:#cccccc;
+  --gray-6:#696969;
+  --dark-gray:#252525;
+  --indigo:#134563;
+  --swiper-theme-color: $secondary;
+  --swiper-navigation-color: #0f1c44;
+  --swiper-navigation-size: 26px;
+  --opacity5:50%;
+}
+/*Custom Color ve background class*/
+$primary: #d9043e;
+$secondary: #f2055c;
+$gray:#f3f3f3;
+$gray-3:#cccccc;
+$black:#000000;
+$white:#ffffff;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "gray-3": $gray-3,
+  "dark": $black,
+  "light":$white
+  // "tertiary": $tertiary,
+);
+
+@mixin generate-button-classes($colors) {
+  @each $name, $color in $colors {
+    .button-#{$name} {
+      background-color: $color!important;
+      border: 1px solid $color!important;
+      @media screen and (min-width:992px) {
+        &:hover{
+          color:$color;
+        }
+      }
+    }
+  }
+}
+@mixin generate-background-classes($colors) {
+  @each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color!important;
+    }
+  }
+}
+
+@mixin generate-text-classes($colors) {
+  @each $name, $color in $colors {
+    .text-#{$name} {
+      color: $color!important;
+    }
+  }
+}
+
+@include generate-background-classes($colors);
+@include generate-text-classes($colors);
+@include generate-button-classes($colors);
+
+
+/*Custom container class*/
+@mixin generate-containers($container-max-width) {
+  @each $size in $container-max-width {
+    $class: nth($size, 1);
+    $width: nth($size, 2);
+
+    .container-#{$class} {
+      max-width: $width;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      position: relative;
+      &:not(.noSpace){
+        @media screen and (max-width:1280px) {
+          padding-left: 40px;
+          padding-right:40px;
+        }
+        @media screen and (max-width:370px) {
+          padding-left: 16px;
+          padding-right:16px;
+        }
+      }
+      
+      @media screen and (min-width:992px) {
+        // padding-left: 7.082vw;
+        // padding-right: 7.082vw;
+        padding-left: 8.3334vw;
+        padding-right: 8.3334vw;
+      }
+
+      @media screen and (min-width:1921px) {
+        padding-left: 160px;
+        padding-right: 160px;
+      }
+    }
+  }
+}
+
+$container-max-width: (
+  ("sm", 570px),
+  ("md", 768px),
+  ("lg", 992px),
+  ("xl", 1200px),
+  ("2xl", 1400px),
+  ("3xl", 1920px)
+);
+
+@include generate-containers($container-max-width);
+
+$padding-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  // Diğer değerleri ekleyebilirsiniz
+);
+
+// Temel class
+%padding-class {
+  padding-right: 0 !important; // veya padding: 0 !important; kullanabilirsiniz
+}
+
+// Ekran boyutuna özel mixin
+@mixin padding-responsive($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Ekran boyutuna özel class'lar
+// Ekran boyutuna özel class'lar
+@each $key, $value in $padding-values {
+  .pe-#{$key} {
+    @extend %padding-class;
+  }
+
+  @include padding-responsive(576px) {
+    .pe-sm-#{$key} {
+      padding-right: #{$value} !important; // veya padding: #{$value} !important; kullanabilirsiniz
+    }
+  }
+
+  @include padding-responsive(768px) {
+    .pe-md-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+
+  @include padding-responsive(992px) {
+    .pe-lg-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+
+  @include padding-responsive(1200px) {
+    .pe-xl-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+
+  @include padding-responsive(1400px) {
+    .pe-xxl-#{$key} {
+      padding-right: #{$value} !important;
+    }
+  }
+}
+
+
+
+
+/*Standart css style*/
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transition: all .3s linear;
+  }
+}
+
+.videoWrapper{
+  width: 100%;
+  height: 100%;
+
+  video,
+  iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/*fixButton*/
+.fixBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: currentColor;
+  color: var(--white);
+  font-family: 'GilroySemibold';
+  font-weight: 500;
+  font-size: 16px;
+  height: 45px;
+  border-radius: 10px;
+  padding: 0 20px;
+  transition: all .3s linear;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-width:95px;
+  white-space: nowrap;
+  gap: 10px;
+
+  @media screen and (max-width:1440px) {
+      height: 50px;
+
+  }
+
+  @media screen and (max-width:991.98px) {
+      height: 45px;
+
+  }
+
+  svg,
+  img {
+      margin-right: 20px;
+  }
+
+  &:after {
+      content: "";
+      width: 0;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all .3s linear;
+      background-color: var(--white);
+      z-index: -1;
+  }
+
+  &.button-outline {
+    color: var(--black);
+    border:1px solid var(--gray-5);
+    background-color: rgba(0,0,0,0);
+    &:after{
+      background-color: var(--primary);
+    }
+
+      @media screen and (min-width:992px) {
+          &:hover {
+            color: var(--white);
+          }
+      }
+  }
+
+  &.button-light {
+
+      &:after {
+      }
+  }
+
+  @media screen and (min-width:992px) {
+      &:hover {
+          &.button-light {
+              color: var(--white) !important;
+          }
+
+          &:after {
+              width: 100%;
+          }
+      }
+  }
+}
+
+
+.textLink{
+  color: var(--primary);
+  position: relative;
+  font-family: 'GilroySemibold';
+  font-size: 13px;
+
+  &:after{
+    content: "";
+    border-bottom: 1px solid var(--primary);
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transition: all .3s linear;
+  }
+
+  @media screen and (min-width:992px) {
+    &:hover{
+      color: var(--black);
+      &:after{
+        width: 0;
+      }
+    }
+  }
+}

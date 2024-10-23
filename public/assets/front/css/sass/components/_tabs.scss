@@ -1,0 +1,77 @@
+.customTabs {
+    border: none;
+    border-bottom: none;
+    gap: 40px;
+
+    .nav-item {
+        .nav-link {
+            font-size: 14px;
+            color: var(--gray-6);
+            font-family: 'GilroySemibold';
+            position: relative;
+            border: none;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &:after {
+                content: "";
+                width: 0;
+                background-color: var(--secondary);
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                transition: all .3s linear;
+                height: 2px;
+            }
+
+            &.active {
+                font-family: 'GilroySemibold';
+                color: var(--secondary);
+
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (min-width:992px) {
+                &:hover {
+                    color: var(--secondary);
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+#customTabContents {
+    margin-top: 34px;
+    @media screen and (max-width:991.98px) {
+        margin-top: 18px;
+        margin-bottom: 30px;
+    }
+    .tab-pane {
+        position: relative;
+    }
+
+    .sliderButtonWrapper {
+        position: absolute;
+        right: 0;
+        top: -69px;
+
+        @media screen and (max-width:991.98px) {
+            top: auto;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            justify-content: center;
+        }
+
+    }
+}

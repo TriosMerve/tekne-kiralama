@@ -1,0 +1,27 @@
+// @import "homeBanner";
+// @import "textContain";
+// @import "video";
+// @import "gallery";
+// @import "documents";
+// @import "supporters";
+// @import "section-scrollify";
+// @import "cardcontain";
+@import "calendar";
+@import "section";
+
+
+.module{
+    padding-block: 50px;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width:992px) {
+        min-height: 100vh;
+    }
+
+    &.homeSection{
+        padding: 0;
+        @media screen and (min-width:992px) {
+            padding-block:0;
+        }
+    }
+}

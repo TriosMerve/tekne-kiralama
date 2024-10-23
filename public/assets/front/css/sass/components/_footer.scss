@@ -1,0 +1,174 @@
+footer {
+  padding: 75px 0;
+  .footer {
+    border-radius: 25px 25px 0 0;
+    padding: 30px 70px;
+  }
+
+  .socialWrapper {
+    padding-top: 50px;
+    .socialMedia {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: var(--gray-3);
+        font-size: 20px;
+        transition: all 0.3s linear;
+        @media screen and (min-width: 992px) {
+          &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+  .footerTop {
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 70px;
+
+    .title{
+        font-family: 'GilroySemibold';
+        font-size: 25px;
+        color: var(--black);
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
+  }
+  .footerContent {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 70px;
+
+    .leftColumn {
+      width: 35%;
+      min-width: 280px;
+      .logoText {
+        font-family: "GilroyRegular";
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--gray-6);
+        max-width: 280px;
+      }
+    }
+    .rightColumn {
+      width: 65%;
+    }
+  }
+  .footerMenu {
+    display: flex;
+    align-items: flex-start;
+    .menuListColumn {
+      flex: 1;
+
+      .title {
+        font-family: "GilroySemibold";
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--black);
+      }
+      ul {
+        li {
+          a {
+            font-size: 15px;
+            line-height: 24px;
+            color: var(--gray-6);
+            font-family: "GilroyRegular";
+            padding: 5px 0;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s linear;
+
+            &:after {
+              content: "";
+              width: 0;
+              height: 1px;
+              background-color: var(--primary);
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transition: all 0.3s linear;
+            }
+            @media screen and (min-width: 992px) {
+              &:hover {
+                color: var(--primary);
+
+                &:after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    padding-top: 100px;
+    .copyRight {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray-6);
+    }
+  }
+
+  .customTab {
+    border-bottom: 1px solid var(--gray-4);
+    gap: 25px;
+
+    .nav-item {
+      .nav-link {
+        background-color: var(--gray-2);
+        border: 1px solid var(--gray-3);
+        border-radius: 10px 10px 0 0;
+        font-size: 15px;
+        color: var(--gray-6);
+        font-family: "GilroySemibold";
+        height: 52px;
+        padding: 0 25px;
+        &.active {
+          background-color: var(--gray-3);
+        }
+        @media screen and (min-width: 992px) {
+          &:hover {
+            background-color: var(--gray-3);
+          }
+        }
+      }
+      &.show {
+      }
+    }
+  }
+  .customTabContents {
+    padding: 20px 0;
+    .listItems {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .item {
+        width: 16.66%;
+        padding: 0 30px 20px;
+        .cityName {
+          font-family: "GilroyMedium";
+          color: var(--black);
+          font-size: 15px;
+          line-height: 24px;
+        }
+        .boatName {
+          font-family: "GilroyMedium";
+          font-size: 14px;
+          color: var(--gray-6);
+        }
+      }
+    }
+  }
+}

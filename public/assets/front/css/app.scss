@@ -1,0 +1,11 @@
+@import "sass/config/index";
+@import "sass/components/index";
+@import "sass/modules/index";
+
+#app {
+    min-height: 100vh;
+    width: 100%;
+}
+main{
+    min-height: 100vh;
+}

@@ -1,0 +1,125 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+
+    .preloader-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        backface-visibility: hidden;
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            border-radius: 100%;
+            animation: circleAnim .8s linear infinite alternate;
+        }
+
+        // .logo {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+
+        //     .logo1 {
+        //         height: 70px;
+        //         animation: logo1-animation 2s ease-in-out infinite alternate;
+        //         @media screen and (max-width:991.98px) {
+        //             height: 40px;
+        //         }
+        //     }
+
+        //     .logo2 {
+        //         height: 30px;
+        //         animation: logo2-animation 2s ease-in-out infinite alternate;
+        //         @media screen and (max-width:991.98px) {
+        //             height: 15px;
+        //         }
+        //     }
+        // }
+    }
+
+    &.last {
+        .preloader-container {
+            .circle {
+                animation: circleAnim2 .8s linear infinite alternate;
+            }
+        }
+    }
+}
+
+@keyframes circleAnim {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+@keyframes circleAnim2 {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(100);
+    }
+}
+
+@keyframes logo1-animation {
+    0% {
+        transform: translateX(-100%) rotate(0deg) scale(1);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    50% {
+        transform: translateX(0) rotate(180deg) scale(1.2);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0) rotate(360deg) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes logo2-animation {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
