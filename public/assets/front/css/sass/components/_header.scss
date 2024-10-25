@@ -9,7 +9,8 @@ header {
   height: 85px;
   background-color: var(--white);
   z-index: 99;
-
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 991.98px) {
     padding-top: 15px;
     height: 65px;
@@ -240,7 +241,7 @@ header {
   box-shadow:0 2rem 4rem rgba(0,0,0,0.475)!important;
 
   .title {
-    font-size: 17px;
+    font-size: 16px;
     font-family: "GilroySemibold";
     color: var(--gray-6);
     line-height: 27px;
@@ -258,12 +259,16 @@ header {
     li {
       width: calc(33.3% - 24px);
     }
+    .currencly{
+      font-family: sans-serif;
+      padding-right: 5px;
+    }
   }
 
   .languageSaveButton {
     margin-top: 20px;
     display: flex;
-    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
   }
 

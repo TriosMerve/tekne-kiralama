@@ -1,0 +1,49 @@
+.infoBannerWrapper{
+    border-radius: 25px;
+    background-color: var(--gray);
+    border: 1px solid var(--gray);
+    position: relative;
+    overflow: hidden;
+    .imageWrapper{
+        overflow: hidden;
+        aspect-ratio: 9 / 2.7;
+    }
+    .infoDescWrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 60px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        .desc {
+            background-color: rgba(245,247,246,0.98);
+            border-radius: 25px;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            height: 100%;
+
+            .title{
+                font-family: 'GilroySemibold';
+                font-size: 20px;
+                line-height: 27px;
+                color: var(--primary);
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            p{
+                color: #3c3c3c;
+                font-size: 15px;
+                line-height: 24px;
+                font-family: 'GilroyRegular';
+                max-width: 580px;
+                text-align: center;
+            }
+        }
+    }
+}

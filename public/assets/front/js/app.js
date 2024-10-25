@@ -27,29 +27,6 @@ AOS.init({
   once: true,
 });
 
-/**Marquee */
-$(".marquee").marquee({
-  direction: "left",
-  duration: 9000,
-  gap: 50,
-  delayBeforeStart: 0,
-  duplicated: true,
-  startVisible: true,
-});
-
-$(".stopMarquee").click(function (e) {
-  e.preventDefault();
-  console.log("dd");
-  if ($(this).hasClass("paused")) {
-    $(this).removeClass("paused");
-    $(".marquee").trigger("resume");
-  } else {
-    $(this).addClass("paused");
-    $(".marquee").trigger("pause");
-  }
-});
-/**Marquee finished */
-
 /**Header menu button */
 $(".openMenuButton").on("click", function () {
   $(this).toggleClass("active");
@@ -136,25 +113,118 @@ function animateSubMenu(wrapper, shouldAnimate = true) {
   });
 }
 
-const homeCarousel = new Swiper(".homeCarousel", {
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  speed: 300,
-  on: {
-    slideChangeTransitionStart: function () {
-      $(".swiper-slide .slideCaption").hide(0);
-      $(".swiper-slide .slideCaption")
-        .removeClass("aos-init")
-        .removeClass("aos-animate");
+//Header End
+
+// Swiper'ları başlatan fonksiyon
+function initializeSwipers() {
+  // .blogSlider sınıfına sahip bir element var mı?
+  const blogSliderElement = document.querySelector(".blogSlider");
+  if (blogSliderElement) {
+    var blogSlider = new Swiper(blogSliderElement, {
+      slidesPerView: 1,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+
+  const sliders = [
+    {
+      element: ".singleImgSlider",
+      pagination: ".swiper-pagination-single01",
+      nextEl: ".nextButton-single01",
+      prevEl: ".prevButton-single01"
     },
-    slideChangeTransitionEnd: function () {
-      $(".swiper-slide .slideCaption").show(0);
-      AOS.init();
+    {
+      element: ".singleImgSlider2",
+      pagination: ".swiper-pagination-single02",
+      nextEl: ".nextButton-single02",
+      prevEl: ".prevButton-single02"
     },
-  },
+    {
+      element: ".singleImgSlider3",
+      pagination: ".swiper-pagination-single03",
+      nextEl: ".nextButton-single03",
+      prevEl: ".prevButton-single03"
+    },
+    {
+      element: ".singleImgSlider4",
+      pagination: ".swiper-pagination-single04",
+      nextEl: ".nextButton-single04",
+      prevEl: ".prevButton-single04"
+    },
+    {
+      element: ".singleImgSlider5",
+      pagination: ".swiper-pagination-single05",
+      nextEl: ".nextButton-single05",
+      prevEl: ".prevButton-single05"
+    },
+    {
+      element: ".singleImgSlider6",
+      pagination: ".swiper-pagination-single06",
+      nextEl: ".nextButton-single06",
+      prevEl: ".prevButton-single06"
+    }
+  ];
+  
+  sliders.forEach(slider => {
+    const sliderElement = document.querySelector(slider.element);
+    if (sliderElement) {
+      new Swiper(sliderElement, {
+        slidesPerView: 1,
+        slidesPerGroup: 3, // Her kayıtta 3 kaydı gruplar
+        pagination: {
+          el: slider.pagination,
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: slider.nextEl,
+          prevEl: slider.prevEl,
+        },
+      });
+    }
+  });
+  
+  
+
+  // .verticalSwiper sınıfına sahip bir element var mı?
+  const verticalSwiperElement = document.querySelector(".verticalSwiper");
+  if (verticalSwiperElement) {
+    verticalSwiper = new Swiper(verticalSwiperElement, {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      loopAdditionalSlides: 1,
+      speed: 600,
+      observer: true,
+      observeParents: true,
+      on: {
+        slideChangeTransitionEnd: function () {
+          this.update();
+        },
+      },
+    });
+
+    // Tab tıklamalarını dinleyen event listener
+    document.querySelectorAll(".customTabs .nav-link").forEach((tab, index) => {
+      tab.addEventListener("click", function () {
+        verticalSwiper.slideToLoop(index, 600); // İlgili slide'a geçiş yap
+      });
+    });
+  }
+}
+
+// DOM tamamen yüklendikten sonra başlatma
+document.addEventListener("DOMContentLoaded", function () {
+  initializeSwipers();
 });
 
 if (typeof Fancybox !== "undefined") {

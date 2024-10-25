@@ -27,6 +27,11 @@ section {
   }
   .sectionContent {
   }
+  
+}
+.videoContent{
+  max-width: 900px;
+  margin:0 auto;
 }
 .homeSection {
   padding-top: 85px;
@@ -146,6 +151,92 @@ section {
       object-fit: cover;
       object-position: center;
       max-width: initial;
+    }
+  }
+}
+
+.boatTabWrapper{
+  aspect-ratio: 9/5;
+  overflow: hidden;
+}
+
+.blogSection{
+  .category{
+    font-family: 'GilroySemibold';
+    font-size: 15px;
+    line-height: 30px;
+    color: var(--primary);
+    margin-bottom: 65px;
+  }
+  .title{
+    font-family: 'GilroyBold';
+    font-size: 45px;
+    line-height: 55px;
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  p{
+    font-family: 'GilroyRegular';
+    font-size: 17px;
+    line-height: 30px;
+    color: #444444;
+    margin-bottom: 32px;
+  }
+  .buttons{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+  }
+}
+
+.eBultenSection{
+  #captchaWrapper{
+    max-width: 300px;
+  }
+  .title{
+    font-family: 'GilroyBold';
+    font-size: 60px;
+    line-height: 85px;
+    color: var(--white);
+    max-width: 640px;
+  }
+  .emailInputWrapper{
+    display: flex;
+    align-items: stretch;
+    max-width: 800px;
+    gap: 10px;
+    margin-bottom: 25px;
+    margin-top: 80px;
+    input{
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid var(--white);
+      background-color: rgba(0,0,0,0);
+      color: var(--white);
+
+      &::placeholder{
+        color: var(--white);
+        opacity: 1;
+      }
+      &::-moz-placeholder{
+        color: var(--white);
+        opacity: 1;
+      }
+      &::-webkit-input-placeholder{
+        color: var(--white);
+        opacity: 1;
+      }
+      &:-moz-placeholder{
+        color: var(--white);
+        opacity: 1;
+      }
+      &:-ms-input-placeholder{
+        color: var(--white);
+        opacity: 1;
+      }
+    }
+    .fixBtn{
+      width: 124px;
     }
   }
 }

@@ -1,77 +1,100 @@
 .customTabs {
-    border: none;
-    border-bottom: none;
-    gap: 40px;
+  border: none;
+  border-bottom: none;
+  gap: 15px 10px;
 
-    .nav-item {
-        .nav-link {
-            font-size: 14px;
-            color: var(--gray-6);
-            font-family: 'GilroySemibold';
-            position: relative;
-            border: none;
-            height: 36px;
-            display: inline-flex;
-            align-items: center;
-            padding-left: 0;
-            padding-top: 0;
-            padding-bottom: 0;
+  .nav-item {
+    .nav-link {
+      font-size: 14px;
+      color: var(--gray-6);
+      font-family: "GilroySemibold";
+      position: relative;
+      border: none;
+      height: 45px;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 0;
+      padding-bottom: 0;
+      border: 1px solid var(--primary);
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 25px;
+      font-size: 16px;
+      color: #444444;
 
-            &:after {
-                content: "";
-                width: 0;
-                background-color: var(--secondary);
-                left: 0;
-                bottom: 0;
-                position: absolute;
-                transition: all .3s linear;
-                height: 2px;
-            }
+      &.active {
+        color: var(--white);
+        background-color: var(--primary);
+      }
 
-            &.active {
-                font-family: 'GilroySemibold';
-                color: var(--secondary);
-
-                &:after {
-                    width: 100%;
-                }
-            }
-
-            @media screen and (min-width:992px) {
-                &:hover {
-                    color: var(--secondary);
-                    &:after {
-                        width: 100%;
-                    }
-                }
-            }
+      @media screen and (min-width: 992px) {
+        &:hover {
+          background-color: var(--primary);
+          color: var(--white);
         }
+      }
     }
-
+  }
 }
 
-#customTabContents {
-    margin-top: 34px;
-    @media screen and (max-width:991.98px) {
-        margin-top: 18px;
-        margin-bottom: 30px;
-    }
-    .tab-pane {
-        position: relative;
-    }
+.customTabContents {
+  margin-top: 34px;
+  @media screen and (max-width: 991.98px) {
+    margin-top: 18px;
+    margin-bottom: 30px;
+  }
+  .tab-pane {
+    position: relative;
+  }
 
-    .sliderButtonWrapper {
-        position: absolute;
-        right: 0;
-        top: -69px;
+  .sliderButtonWrapper {
+    position: absolute;
+    right: 0;
+    top: -69px;
 
-        @media screen and (max-width:991.98px) {
-            top: auto;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            justify-content: center;
-        }
-
+    @media screen and (max-width: 991.98px) {
+      top: auto;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      justify-content: center;
     }
+  }
+
+  .descContainer {
+    max-width: 500px;
+    .title {
+      font-size: 60px;
+      line-height: 65px;
+      color: var(--black);
+      font-family: "GilroySemibold";
+    }
+    .category {
+      font-family: "GilroySemibold";
+      font-size: 40px;
+      line-height: 65px;
+      color: var(--primary);
+    }
+    p {
+      color: #444444;
+      font-family: "GilroyRegular";
+      font-size: 16px;
+      line-height: 25px;
+      margin-top: 15px;
+    }
+    .textLink {
+      margin-top: 30px;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .icon-arrow-long{
+        font-size: 30px;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
 }

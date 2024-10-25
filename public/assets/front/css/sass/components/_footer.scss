@@ -56,6 +56,8 @@ footer {
         line-height: 20px;
         color: var(--gray-6);
         max-width: 280px;
+        display: block;
+        margin-top: 15px;
       }
     }
     .rightColumn {
@@ -73,6 +75,7 @@ footer {
         font-size: 16px;
         line-height: 24px;
         color: var(--black);
+        margin-bottom: 25px;
       }
       ul {
         li {
@@ -93,7 +96,7 @@ footer {
               height: 1px;
               background-color: var(--primary);
               position: absolute;
-              bottom: 0;
+              bottom: 5px;
               left: 0;
               transition: all 0.3s linear;
             }
@@ -161,12 +164,23 @@ footer {
           font-family: "GilroyMedium";
           color: var(--black);
           font-size: 15px;
+          transition: all .3s linear;
           line-height: 24px;
         }
         .boatName {
           font-family: "GilroyMedium";
           font-size: 14px;
           color: var(--gray-6);
+          transition: all .3s linear;
+        }
+
+        @media screen and (min-width:992px) {
+          &:hover{
+            .cityName{
+              color: var(--primary);
+            }
+
+          }
         }
       }
     }

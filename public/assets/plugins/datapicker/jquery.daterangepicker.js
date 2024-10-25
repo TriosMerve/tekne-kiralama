@@ -1916,9 +1916,10 @@
             if (opt.end) {
                 box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));
                 $('#checkoutInput').val(getDateString(new Date(parseInt(opt.start))));
-                closeDatePicker();
+                // closeDatePicker();
                 $("#checkOutText").hide();
                 $("#checkOutText, #checkoutInput").removeClass("selected");
+                $(".drp_top-bar").css("display","block")
             }
             var dateRange;
             if (opt.start && opt.singleDate) {
@@ -2618,7 +2619,7 @@
                     var todayDivAttr = {
                         time: today.time,
                         'data-tooltip': today.tooltip,
-                        'class': 'day ' + today.type + ' ' + today.extraClass + ' ' + (today.valid ? 'valid' : 'invalid') + ' ' + (highlightToday ? 'real-today' : '')
+                        'class': 'day ' + today.type + ' ' + today.extraClass + ' ' + (today.valid ? 'valid' : 'invalid') + ' ' + (highlightToday ? 'real-today invalid' : '')
                     };
 
                     if (day === 0 && opt.showWeekNumbers) {

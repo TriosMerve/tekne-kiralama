@@ -78,7 +78,7 @@
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <a href="#" class="textLink me-5">Teknenizi Ekleyin</a>
+                        <a href="#" class="textLink me-5 mt-0">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
@@ -103,14 +103,14 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <hr class="w-50 mx-auto">
+                                <hr class="mx-auto">
                                 <div class="title">Dil ve Bölge</div>
                                 <ul class="languageList">
                                     <li>
                                         <div class="form-check container-check type2">
                                             <input class="form-check-input" type="radio" name="currencyInput" id="Euro">
                                             <label class="form-check-label" for="Euro">
-                                                € EUR
+                                                <span class="currencly">€</span> EUR
                                             </label>
                                         </div>
                                     </li>
@@ -118,7 +118,7 @@
                                         <div class="form-check container-check type2">
                                             <input class="form-check-input" type="radio" name="currencyInput" id="Dolar" checked>
                                             <label class="form-check-label" for="Dolar">
-                                                $ USD
+                                                <span class="currencly">$</span> USD
                                             </label>
                                         </div>
                                     </li>
@@ -126,7 +126,7 @@
                                         <div class="form-check container-check type2">
                                             <input class="form-check-input" type="radio" name="currencyInput" id="TurkLisari" checked>
                                             <label class="form-check-label" for="TurkLisari">
-                                                ₺ TRY
+                                                <span class="currencly">₺</span> TRY
                                             </label>
                                         </div>
                                     </li>
@@ -432,10 +432,22 @@
                                                     <li><a href="#">Islands</a></li>
                                                 </ul>
                                             </div>
-                                            <div class="moretoexplore keepDiscover subMenuList">
+                                            <div class="keepDiscover subMenuList type2 moretoexplore">
                                                 <div class="title">More to explore</div>
                                                 <ul class="items">
-                                                    <li><a href="#"><div class="imageWrapper"><img src="public/assets/images/media/keep-disover-01.jpg" alt=""></div></a></li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="w-100">
@@ -472,7 +484,7 @@
                                 
                                     <div class="dateTimeSearchWrapper">
                                         <div class="form-floating formSelectWrapper">
-                                            <select class="form-select customSelect" id="floatingSelect" aria-label="Floating label select example">
+                                            <select class="form-select customSelect locationSelect" id="floatingSelect" aria-label="Floating label select example">
                                               <option selected>Nereden binmek istersin?</option>
                                               <option value="1">One</option>
                                               <option value="2">Two</option>
@@ -498,6 +510,8 @@
                                         <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
                                     </div>
                                
+
+
                                 </div>
 
                                 <div class="iconList">
@@ -526,6 +540,7 @@
             </section>
 
             <section>
+
                 <div class="container-3xl">
                     <div class="sectionHead">
                         <div class="sectionTitle">TEKNE KİRALAMANIN GELECEĞİ</div>
@@ -662,18 +677,20 @@
                         </div>
                        </div>
                        <div class="sectionContent">
-                            <div class="videoWrapper" data-aos="fade-up">
-                                <a href="https://youtu.be/cf9mGKEmQ-4?si=92f2S5dv9n_ego5i" class="videoCardFull" data-fancybox>
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/video-picture.png" alt="">
-                                    </div>
-                                    <div class="desc">
-                                        <div class="playButton">
-                                            <span class="icon-play-arrow"></span>
+                            <div class="videoContent">
+                                <div class="videoWrapper" data-aos="fade-up">
+                                    <a href="https://youtu.be/cf9mGKEmQ-4?si=92f2S5dv9n_ego5i" class="videoCardFull" data-fancybox>
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/video-picture.png" alt="">
                                         </div>
-                                        <div class="name">BOB EXPOSED IN 60 SECS</div>
-                                    </div>
-                                </a>
+                                        <div class="desc">
+                                            <div class="playButton">
+                                                <span class="icon-play-arrow"></span>
+                                            </div>
+                                            <div class="name">BOB EXPOSED IN 60 SECS</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                        </div>
                     </div>
@@ -681,45 +698,71 @@
             </section>
 
 
-
-
+            <!--Once cıkan tekneler section-->
             <section>
                 <div class="container-3xl">
                     <div class="sectionHead">
                         <div class="sectionTitle">Öne Çıkan Tekneler</div>
-                        <a href="#" class="textLink"><span>TÜMÜNÜ GÖR</span><span class="icon-arrow-long"></span></a>
+                        <a href="#" class="textLink noAfter"><span>TÜMÜNÜ GÖR</span><span class="icon-arrow-long"></span></a>
                     </div>
                     <div class="sectionContent">
                         <div class="cards third">
-                            <div class="card">
+                            <a href="#" class="card">
                                 <div class="cardTop-image">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                    </div>
-                                    <label class="container-check favorite">
-                                        <input type="checkbox" checked name="address">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="cardBody">
-                                    <div class="d-flex ">
-                                        <div class="title">Bavaria 46 Cruiser</div>
-                                        <div class="card-id ms-auto">ID: 1014434P</div>
-                                    </div>
-                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
-                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
-                                    <div class="tags">
-                                        <span>Seyir 14 kişi</span>
-                                        <span>14.2m</span>
-                                        <span>3 kabin</span>
-                                        <span>Konaklama 6 kişi</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="cardTop-image">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/onecikantekne/tekne-2.jpg" alt="">
+                                    <span class="category">Konaklamalı</span>
+                                    <div class="swiper singleImgSlider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev nextButton-single01"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next prevButton-single01"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single01"></div>
                                     </div>
                                     <label class="container-check favorite">
                                         <input type="checkbox" name="address">
@@ -732,7 +775,7 @@
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
                                     <div class="options">Göcek, 14.2m2, Motoryat</div>
-                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
                                     <div class="tags">
                                         <span>Seyir 14 kişi</span>
                                         <span>14.2m</span>
@@ -740,11 +783,89 @@
                                         <span>Konaklama 6 kişi</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card">
+                            </a>
+                            <a href="#" class="card">
                                 <div class="cardTop-image">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/onecikantekne/tekne-3.jpg" alt="">
+                                    <span class="category">Kapntanlı</span>
+                                    <div class="swiper singleImgSlider2">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev nextButton-single02"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next prevButton-single02"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single02"></div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Enigma Blue</div>
+                                        <div class="card-id ms-auto">ID: 1789034A</div>
+                                    </div>
+                                    <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                    <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    <div class="tags">
+                                        <span>Seyir 5 kişi</span>
+                                        <span>10.9m</span>
+                                        <span>2 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <span class="category">Konaklamalı</span>
+                                    <div class="swiper singleImgSlider3">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev nextButton-single03"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next prevButton-single03"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single03"></div>
                                     </div>
                                     <label class="container-check favorite">
                                         <input type="checkbox" checked name="address">
@@ -753,23 +874,44 @@
                                 </div>
                                 <div class="cardBody">
                                     <div class="d-flex ">
-                                        <div class="title">Bavaria 46 Cruiser</div>
+                                        <div class="title">Grande Mare</div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
-                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="options">Bodrum, 12 m, Motoryat</div>
+                                    <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
                                     <div class="tags">
-                                        <span>Seyir 14 kişi</span>
-                                        <span>14.2m</span>
-                                        <span>3 kabin</span>
-                                        <span>Konaklama 6 kişi</span>
+                                        <span>Seyir 8 kişi</span>
+                                        <span>11.6m</span>
+                                        <span>1 kabin</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card">
+                            </a>
+                            <a href="#" class="card">
                                 <div class="cardTop-image">
-                                    <div class="imageWrapper">
-                                        <img src="public/assets/images/media/onecikantekne/tekne-4.jpg" alt="">
+                                    <span class="category">Konaklamalı</span>
+                                    <div class="swiper singleImgSlider4">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev nextButton-single04"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next prevButton-single04"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single04"></div>
                                     </div>
                                     <label class="container-check favorite">
                                         <input type="checkbox" checked name="address">
@@ -778,11 +920,11 @@
                                 </div>
                                 <div class="cardBody">
                                     <div class="d-flex ">
-                                        <div class="title">Bavaria 46 Cruiser</div>
+                                        <div class="title">Azimut, Fly</div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                    <div class="options">Göcek, 14.2m2, Motoryat</div>
-                                    <div class="countPrice"><span class="price">20.744</span> ₺ / Gün</div>
+                                    <div class="options">Göcek, 12m2, Motoryat</div>
+                                    <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
                                     <div class="tags">
                                         <span>Seyir 14 kişi</span>
                                         <span>14.2m</span>
@@ -790,7 +932,314 @@
                                         <span>Konaklama 6 kişi</span>
                                     </div>
                                 </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="swiper singleImgSlider5">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev nextButton-single05"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next prevButton-single05"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single05"></div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Sunseeker, Manhattan 64</div>
+                                        <div class="card-id ms-auto">ID: 1789034A</div>
+                                    </div>
+                                    <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                    <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                    <div class="tags">
+                                        <span>Seyir 5 kişi</span>
+                                        <span>10.9m</span>
+                                        <span>2 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="swiper singleImgSlider6">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev nextButton-single06"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next prevButton-single06"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single06"></div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex ">
+                                        <div class="title">Beneteau, Cyclades 43</div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="options">Bodrum, 12 m, Motoryat</div>
+                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                    <div class="tags">
+                                        <span>Seyir 8 kişi</span>
+                                        <span>11.6m</span>
+                                        <span>1 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Info Section-->
+            <section class="infoSection">
+                <div class="container-3xl">
+                    <div class="infoBannerWrapper">
+                        <div class="imageWrapper">
+                            <img src="public/assets/images/media/info-banner.jpg" alt="">
+                        </div>
+                        <div class="infoDescWrapper">
+                            <div class="desc">
+                                <div class="title">BİRKAÇ SAAT VEYA TÜM GÜN KİRALAYIN</div>
+                                <img src="public/assets/images/statics/tekne.png" alt="">
+                                <p>
+                                    Kiralık teknelerimiz birkç saatliğine eğlenmeniz veya daha uzun süreli konaklamanız için 
+                                    her şeye sahipti. Online rezervasyon işlemi sırasında belirleyeceğiniz süreye özel fiyatlar
+                                    otomatik olarak uygulanmaktadırç
+                                </p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Motoryat tab section-->
+            <section class="">
+                <div class="container-3xl">
+                    <div class="bg-gray rounded-5 position-relative boatTabWrapper">
+                        <div class="row mx-0 h-100 align-items-center">
+                            <div class="col-lg-5">
+                                <ul class="nav nav-tabs customTabs" id="verticalSlideTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="motoryat-tab" data-bs-toggle="tab" data-bs-target="#motoryat-tab-pane" type="button" role="tab" aria-controls="motoryat-tab-pane" aria-selected="true">Motoryat</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="yelkenli-tab" data-bs-toggle="tab" data-bs-target="#yelkenli-tab-pane" type="button" role="tab" aria-controls="yelkenli-tab-pane" aria-selected="false">Yelkenli</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="katamaran-tab" data-bs-toggle="tab" data-bs-target="#katamaran-tab-pane" type="button" role="tab" aria-controls="katamaran-tab-pane" aria-selected="false">Katamaran</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="gulet-tab" data-bs-toggle="tab" data-bs-target="#gulet-tab-pane" type="button" role="tab" aria-controls="gulet-tab-pane" aria-selected="false">Gulet</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content customTabContents" id="verticalSlideTabContent">
+                                    <div class="tab-pane fade show active h-100" id="motoryat-tab-pane" role="tabpanel" aria-labelledby="motoryat-tab" tabindex="0">
+                                        <div class="d-flex align-items-center h-100">
+                                            <div class="descContainer">
+                                                <div class="title">
+                                                    Sevdikleriniz ile özel anlar yaşayın
+                                                </div>
+                                                <div class="category">Motoryat</div>
+                                                <p>Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayaşl 
+                                                    ediyorsunuz. Motoryat kiralama tam size göre </p>
+                                                    <a href="#" class="textLink"><span>Hemen Kirala</span><span class="icon-arrow-long"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade h-100" id="yelkenli-tab-pane" role="tabpanel" aria-labelledby="yelkenli-tab" tabindex="0">
+                                        <div class="d-flex align-items-center h-100">
+                                            <div class="descContainer">
+                                                <div class="title">
+                                                    Sevdikleriniz ile özel anlar yaşayın
+                                                </div>
+                                                <div class="category">Yelkenli</div>
+                                                <p>Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayaşl 
+                                                    ediyorsunuz. Motoryat kiralama tam size göre </p>
+                                                    <a href="#" class="textLink"><span>Hemen Kirala</span><span class="icon-arrow-long"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade h-100" id="katamaran-tab-pane" role="tabpanel" aria-labelledby="katamaran-tab" tabindex="0">
+                                        <div class="d-flex align-items-center h-100">
+                                            <div class="descContainer">
+                                                <div class="title">
+                                                    Sevdikleriniz ile özel anlar yaşayın
+                                                </div>
+                                                <div class="category">Katamaran</div>
+                                                <p>Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayaşl 
+                                                    ediyorsunuz. Motoryat kiralama tam size göre </p>
+                                                    <a href="#" class="textLink"><span>Hemen Kirala</span><span class="icon-arrow-long"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade h-100" id="gulet-tab-pane" role="tabpanel" aria-labelledby="gulet-tab" tabindex="0">
+                                        <div class="d-flex align-items-center h-100">
+                                            <div class="descContainer">
+                                                <div class="title">
+                                                    Sevdikleriniz ile özel anlar yaşayın
+                                                </div>
+                                                <div class="category">Gulet</div>
+                                                <p>Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayaşl 
+                                                    ediyorsunuz. Motoryat kiralama tam size göre </p>
+                                                    <a href="#" class="textLink"><span>Hemen Kirala</span><span class="icon-arrow-long"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="swiper verticalSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="public/assets/images/media/motoryat.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="public/assets/images/media/yelkenli-1200x800.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="public/assets/images/media/katamaran-1200x800.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="public/assets/images/media/gulet-1200x800.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Blog section-->
+            <section class="blogSection">
+                <div class="container-3xl">
+                    <div class="bg-gray rounded-5 sectionWrapper position-relative">
+                        <div class="swiper blogSlider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row mx-0">
+                                        <div class="col-lg-5 ps-0">
+                                            <div class="category">BLOG YAZILARI</div>
+                                            <a href="#" class="title">
+                                                Tekne Kiralarken dikkat etmeniz gereken 6 konu 
+                                            </a>
+                                            <p>
+                                                Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayal ediyorsunuz. Motoryat kiralama tam size göre 
+                                            </p>
+                                            <div class="buttons">
+                                                <a href="#" class="fixBtn button-primary">Devamını Oku</a>
+                                                <a href="#" class="fixBtn button-outline type2">Tüm Yazılar</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 pe-0 imgColumn">
+                                            <a href="#" class="imageWrapper">
+                                                <img src="public/assets/images/media/blog-1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row mx-0">
+                                        <div class="col-lg-5 ps-0 descColumn">
+                                            <div class="category">BLOG YAZILARI</div>
+                                            <a href="#" class="title">
+                                                Tekne Kiralarken dikkat etmeniz gereken 6 konu 
+                                            </a>
+                                            <p>
+                                                Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayal ediyorsunuz. Motoryat kiralama tam size göre 
+                                            </p>
+                                            <div class="buttons">
+                                                <a href="#" class="fixBtn button-primary">Devamını Oku</a>
+                                                <a href="#" class="fixBtn button-outline type2">Tüm Yazılar</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 pe-0 imgColumn">
+                                            <a href="#" class="imageWrapper">
+                                                <img src="public/assets/images/media/blog-2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row mx-0">
+                                        <div class="col-lg-5 ps-0 descColumn">
+                                            <div class="category">BLOG YAZILARI</div>
+                                            <a href="#" class="title">
+                                                Tekne Kiralarken dikkat etmeniz gereken 6 konu 
+                                            </a>
+                                            <p>
+                                                Eşiniz veya sevdiğiniz kişilerle kısa süreli tekne geizisi mi hayal ediyorsunuz. Motoryat kiralama tam size göre 
+                                            </p>
+                                            <div class="buttons">
+                                                <a href="#" class="fixBtn button-primary">Devamını Oku</a>
+                                                <a href="#" class="fixBtn button-outline type2">Tüm Yazılar</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 pe-0 imgColumn">
+                                            <a href="#" class="imageWrapper">
+                                                <img src="public/assets/images/media/blog-3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiperButtons">
+                            <div class="swiper-button-prev"><span class="icon-arrow-circle-2"></span></div>
+                            <div class="swiper-button-next"><span class="icon-arrow-circle-2"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--E-Bulten section-->
+            <section class="eBultenSection">
+                <div class="container-3xl">
+                    <div class="bg-primary rounded-5 sectionWrapper">
+                        <div class="title">
+                            SİZDE MİSAFİRİMİZ OLMAK İSTER MİSİNİZ ?
+                        </div>
+                        <div class="emailInputWrapper">
+                            <input type="email"  placeholder="E-mail adresiniz">
+                            <a href="#" class="fixBtn button-outline type3">Abone ol</a>
+                        </div>
+                        <div id="captchaWrapper">
+                            <img src="public/assets/images/statics/captcha.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -813,8 +1262,8 @@
                             <li class="nav-item" role="presentation">
                               <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
                             </li>
-                          </ul>
-                          <div class="tab-content customTabContents" id="footerTabContent">
+                        </ul>
+                        <div class="tab-content customTabContents" id="footerTabContent">
                               <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
                                 <div class="listItems">
                                     <a href="#" class="item">
@@ -1000,115 +1449,23 @@
     <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
     <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script>
-
-
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
-    <script src="public/assets/plugins/marquee/jquery.marquee.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
-
-
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
+
     <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/front/js/custom-date.js"></script>
 
     <script>
-      // Datepicker kapanmasını kontrol eden fonksiyon
-        $(document).on("click", function (event) {
-        // Tıklanan yer .customRangeButton, .dateTimeSearchWrapper veya .typeItem değilse
-        if (
-            !$(event.target).closest(".customRangeButton, .dateTimeSearchWrapper, .typeItem")
-            .length
-        ) {
-            $(".customRangeButton").removeClass("active");
-            $(".dateTimeSearchWrapper").removeClass("active");
-        }
-        });
+       
 
-        // .customRangeButton’a tıklayınca sınıflar ekleniyor
-        $(".customRangeButton").on("click", function (event) {
-        event.stopPropagation(); // Tıklamanın document'e yayılmasını engeller
-        $(this).addClass("active");
-        $(".dateTimeSearchWrapper").addClass("active");
-        });
-
-        // .typeItem’a tıklanınca active class kontrolü
-        $(".reservation-type .typeItem").on("click", function (event) {
-        event.stopPropagation(); // Tıklamanın document'e yayılmasını engeller
-        $(".reservation-type .typeItem").removeClass("active");
-        $(this).addClass("active");
-
-        // Date inputları temizleyip yeniden gösteriyoruz
-        $("#dateInputs input").val("");
-        $("#dateInputs #checkInText, #dateInputs #checkOutText").show();
-        });
-
-        $(".boatType .typeItem").on("click", function(){
-            $(".boatType .typeItem").removeClass("active");
-            $(this).addClass("active");
-            $("#dateInputs input").val("");
-            $("#dateInputs #checkInText, #dateInputs #checkOutText").show();
-        });
         
 
+    
 
-        $('#dateInputs').dateRangePicker(
-            {
-                separator : ' to ',
-                container:".dateTimeSearchWrapper",
-                language: 'tr-short',
-                stickyMonths: true,
-                showTopbar: false,
-                getValue: function()
-                {
-                    if ($('#checkinInput').val() && $('#checkoutInput').val() )
-                        return $('#checkinInput').val() + ' to ' + $('#checkoutInput').val();
-                    else
-                        return '';
-                },
-                setValue: function(s,s1,s2)
-                {
-                    $('#checkinInput').val(s1);
-                    $('#checkoutInput').val(s2);
-                },
-            }
-        ).bind('datepicker-open', function() {
-            $(".reservation-type").removeClass("d-none"); // Açıldığında d-none kaldır
-            $("#checkInText, #checkinInput").addClass("selected")
-
-            const targetOffset = $('#dateInputs').offset().top - 150;
-            smoothScrollTo(targetOffset, 500); // 500ms animasyon
-
-        }).bind('datepicker-close', function() {
-            $(".reservation-type").addClass("d-none"); // Kapandığında d-none ekle
-        });
-        
-
-        // Akıcı kaydırma fonksiyonu
-        function smoothScrollTo(target, duration) {
-            const start = window.pageYOffset;
-            const distance = target - start;
-            let startTime = null;
-
-            function animation(currentTime) {
-                if (!startTime) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = easeInOutQuad(timeElapsed, start, distance, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) requestAnimationFrame(animation);
-            }
-
-            function easeInOutQuad(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-
-            requestAnimationFrame(animation);
-        }
-    </script>
+   </script>
 </body>
 
 </html>
