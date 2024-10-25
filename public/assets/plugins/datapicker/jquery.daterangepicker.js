@@ -1909,7 +1909,7 @@
             if (opt.start) {
                 box.find('.start-day').html(getDateString(new Date(parseInt(opt.start))));
                 $('#checkinInput').val(getDateString(new Date(parseInt(opt.start))));
-                $("#checkInText").hide();
+                $("#checkInText .choose").hide();
                 $("#checkOutText, #checkoutInput").addClass("selected");
                 $("#checkInText, #checkinInput").removeClass("selected");
             }
@@ -1917,9 +1917,11 @@
                 box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));
                 $('#checkoutInput').val(getDateString(new Date(parseInt(opt.start))));
                 // closeDatePicker();
-                $("#checkOutText").hide();
+                $("#checkOutText .choose").hide();
                 $("#checkOutText, #checkoutInput").removeClass("selected");
                 $(".drp_top-bar").css("display","block")
+                $(".dateSearchButton").addClass("active");
+                $(".dateTimeSearchWrapper").addClass("apply");
             }
             var dateRange;
             if (opt.start && opt.singleDate) {

@@ -123,7 +123,7 @@ function initializeSwipers() {
     var blogSlider = new Swiper(blogSliderElement, {
       slidesPerView: 1,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".blog-pagination",
         clickable: true,
       },
       navigation: {
@@ -177,11 +177,9 @@ function initializeSwipers() {
     if (sliderElement) {
       new Swiper(sliderElement, {
         slidesPerView: 1,
-        slidesPerGroup: 3, // Her kayıtta 3 kaydı gruplar
         pagination: {
           el: slider.pagination,
           clickable: true,
-          dynamicBullets: true,
         },
         navigation: {
           nextEl: slider.nextEl,

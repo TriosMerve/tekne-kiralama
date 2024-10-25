@@ -52,10 +52,15 @@
     top: auto !important;
     right: 32px;
     height: 15px;
-    bottom: 18px !important;
+    bottom: 20px !important;
     transform: none !important;
     left: auto !important;
     padding: 0;
+    width: 58px;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .swiper-pagination-bullet {
       background-color: var(--gray-6) !important;
       opacity: 1;
@@ -94,13 +99,12 @@
 
   &.type2 {
     top: auto !important;
-    width: 134px;
+    width: 115px;
     bottom: 16px;
     background-color: rgba(0, 0, 0, 0);
     transition: all 0.3s linear;
     opacity: 0;
     height: 23px;
-    z-index: 9;
     border-radius: 10px;
     right: 6px;
     z-index: 99;
@@ -114,15 +118,15 @@
   }
 }
 
-.singleImgSlider {
+.singleSlide {
   &:before {
     content: "";
     position: absolute;
-    width: 124px;
-    height: 23px;
+    width: 105px;
+    height: 30px;
     background-color: rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    bottom: 17px;
+    border-radius: 14px;
+    bottom: 13px;
     right: 12px;
     transition: all 0.3s linear;
     z-index: 9;

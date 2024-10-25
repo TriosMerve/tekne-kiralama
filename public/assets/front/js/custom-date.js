@@ -35,6 +35,11 @@ $("#dateInputs")
   })
   .bind("datepicker-close", function (event) {
     // Kapatma işlemini engellemek için koşul kontrolü
+    if ($(event.target).closest(".reservation-type").length > 0) {
+      event.preventDefault(); // Kapatma işlemini durdur
+      return;
+    }
+  
     if (!event.forcedClose) {
       event.preventDefault(); // Manuel kapama dışındaki olayları engelle
     }
@@ -75,6 +80,7 @@ $(".locationSelect").on("click", ".option", function () {
   const value = $(this).data("value"); // Seçili option'ın data-value değeri
   console.log(value);
 
+  $(".dateTimeSearchWrapper").addClass("opened");
   $(".customRangeButton").addClass("active");
   $("#checkinInput, #checkInText").addClass("selected");
   // $('#dateInputs').data('dateRangePicker').close();
@@ -91,18 +97,18 @@ $(".customRangeButton").on("click", function (event) {
 });
 
 $(document).on("click", function (e) {
-  // Eğer tıklama locationSelect veya dateTimeSearchWrapper içinde değilse işlem yap
+  // Eğer tıklama locationSelect, dateTimeSearchWrapper veya calendarWrapper içinde değilse işlem yap
   if (
     !$(e.target).closest(".locationSelect").length &&
-    !$(e.target).closest(".dateTimeSearchWrapper").length
+    !$(e.target).closest(".dateTimeSearchWrapper").length &&
+    !$(e.target).closest(".calendarWrapper").length
   ) {
-    console.log("locationSelect dışında bir yere tıkladınız.");
+    console.log("calendarWrapper dışında bir yere tıkladınız.");
     $(".dateTimeSearchWrapper, .customRangeButton").removeClass("active");
-    $("#checkinInput, #checkInText,#checkoutInput,#checkOutText").removeClass(
-      "selected"
-    );
+    $("#checkinInput, #checkInText, #checkoutInput, #checkOutText").removeClass("selected");
   }
 });
+
 
 // Akıcı kaydırma fonksiyonu
 function smoothScrollTo(target, duration) {
@@ -128,6 +134,12 @@ function smoothScrollTo(target, duration) {
   requestAnimationFrame(animation);
 }
 
+
+// .reservation-type’a tıklamayı engelle
+$(".reservation-type").on("click", function (event) {
+  event.stopPropagation(); // Tıklama olayının yayılmasını durdur
+});
+
 // .typeItem’a tıklanınca active class kontrolü
 $(".reservation-type .typeItem").on("click", function (event) {
   event.stopPropagation(); // Tıklamanın document'e yayılmasını engeller
@@ -136,7 +148,7 @@ $(".reservation-type .typeItem").on("click", function (event) {
 
   // Date inputları temizleyip yeniden gösteriyoruz
   $("#dateInputs input").val("");
-  $("#dateInputs #checkInText, #dateInputs #checkOutText").show();
+  $("#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose").show();
 });
 
 // Tekne Kiralama ve Tekne Turları tıklayınca inputları temızler
@@ -144,5 +156,5 @@ $(".boatType .typeItem").on("click", function () {
   $(".boatType .typeItem").removeClass("active");
   $(this).addClass("active");
   $("#dateInputs input").val("");
-  $("#dateInputs #checkInText, #dateInputs #checkOutText").show();
+  $("#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose").show();
 });

@@ -1297,12 +1297,13 @@ video {
 }
 .customScrollContent::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: var(--gray-6);
+  background-color: var(--secondary);
 }
 
 .subMenuWrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-right: 20px;
 }
 .subMenuWrapper .subMenuList {
   width: 50%;
@@ -2157,7 +2158,7 @@ footer .customTabContents .listItems .item .boatName {
   width: calc(25% - 21px);
 }
 .cards.type2 .card .cardTop-image .imageWrapper {
-  aspect-ratio: 3/3.7;
+  aspect-ratio: 1/1;
 }
 .cards.type2 .card .cardBody {
   text-align: left;
@@ -2178,7 +2179,7 @@ footer .customTabContents .listItems .item .boatName {
   overflow: hidden;
 }
 .cards.type2 .card .cardBody .buttons {
-  margin-top: 15px;
+  margin-top: 5px;
   display: flex;
   align-items: stretch;
   gap: 20px;
@@ -2200,16 +2201,22 @@ footer .customTabContents .listItems .item .boatName {
 }
 .cards.third .card .cardTop-image .category {
   position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
+}
+.cards.third .card .cardTop-image .category span {
+  border-radius: 10px;
+  background-color: var(--gray);
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.275) !important;
+  color: var(--gray-6);
   font-family: "GilroyRegular";
   padding: 5px 10px;
   font-size: 13px;
-  color: var(--gray-6);
-  top: 20px;
-  left: 20px;
-  border-radius: 10px;
-  z-index: 9;
-  background-color: var(--gray);
-  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.275) !important;
 }
 .cards.third .card .cardBody {
   text-align: left;
@@ -2233,7 +2240,7 @@ footer .customTabContents .listItems .item .boatName {
   line-height: 22px;
   color: var(--gray-6);
   font-family: "GilroyRegular";
-  margin-top: 12px;
+  margin-top: 0;
 }
 .cards.third .card .cardBody .countPrice {
   margin-top: 20px;
@@ -2254,7 +2261,7 @@ footer .customTabContents .listItems .item .boatName {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .cards.third .card .cardBody .tags span {
   font-size: 13px;
@@ -2500,7 +2507,7 @@ section .sectionHead .sectionText {
   margin-top: 25px;
 }
 .videoContent {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -2517,10 +2524,21 @@ section .sectionHead .sectionText {
   max-width: 900px;
   padding-left: 90px;
   padding-right: 120px;
-  height: 56vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (max-width: 1600px) {
+  .homeSection .leftColumn {
+    padding-left: 45px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .homeSection .leftColumn {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
 }
 .homeSection .leftColumn .category {
   font-family: "GilroyBold";
@@ -2528,6 +2546,16 @@ section .sectionHead .sectionText {
   line-height: 25px;
   color: var(--primary);
   margin-bottom: 15px;
+}
+@media screen and (max-height: 768px) {
+  .homeSection .leftColumn .category {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .homeSection .leftColumn .category {
+    margin-bottom: 5px;
+  }
 }
 .homeSection .leftColumn h1,
 .homeSection .leftColumn .sectionTitle {
@@ -2537,11 +2565,58 @@ section .sectionHead .sectionText {
   color: var(--black);
   margin-bottom: 20px;
 }
+@media screen and (max-height: 900px) {
+  .homeSection .leftColumn h1,
+  .homeSection .leftColumn .sectionTitle {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+@media screen and (max-height: 768px) {
+  .homeSection .leftColumn h1,
+  .homeSection .leftColumn .sectionTitle {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .homeSection .leftColumn h1,
+  .homeSection .leftColumn .sectionTitle {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .homeSection .leftColumn h1,
+  .homeSection .leftColumn .sectionTitle {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .homeSection .leftColumn h1,
+  .homeSection .leftColumn .sectionTitle {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+}
 .homeSection .leftColumn .text {
   font-family: "GilroyRegular";
   font-size: 14px;
   line-height: 25px;
   color: var(--gray-6);
+}
+@media screen and (max-height: 768px) {
+  .homeSection .leftColumn .text {
+    line-height: 21px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .homeSection .leftColumn .text {
+    line-height: 21px;
+  }
 }
 .homeSection small {
   font-size: 14px;
@@ -2575,6 +2650,16 @@ section .sectionHead .sectionText {
   align-items: center;
   gap: 50px;
   margin-top: 20px;
+}
+@media screen and (max-height: 900px) {
+  .homeSection .iconList {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .homeSection .iconList {
+    margin-top: 0;
+  }
 }
 .homeSection .iconList a {
   font-family: "GilroyRegular";
@@ -2624,6 +2709,9 @@ section .sectionHead .sectionText {
   overflow: hidden;
 }
 
+.blogSection {
+  padding-bottom: 55px;
+}
 .blogSection .category {
   font-family: "GilroySemibold";
   font-size: 15px;
@@ -2679,26 +2767,32 @@ section .sectionHead .sectionText {
 .eBultenSection .emailInputWrapper input::-moz-placeholder {
   color: var(--white);
   opacity: 1;
+  font-family: "GilroySemibold";
 }
 .eBultenSection .emailInputWrapper input::placeholder {
   color: var(--white);
   opacity: 1;
+  font-family: "GilroySemibold";
 }
 .eBultenSection .emailInputWrapper input::-moz-placeholder {
   color: var(--white);
   opacity: 1;
+  font-family: "GilroySemibold";
 }
 .eBultenSection .emailInputWrapper input::-webkit-input-placeholder {
   color: var(--white);
   opacity: 1;
+  font-family: "GilroySemibold";
 }
 .eBultenSection .emailInputWrapper input:-moz-placeholder {
   color: var(--white);
   opacity: 1;
+  font-family: "GilroySemibold";
 }
 .eBultenSection .emailInputWrapper input:-ms-input-placeholder {
   color: var(--white);
   opacity: 1;
+  font-family: "GilroySemibold";
 }
 .eBultenSection .emailInputWrapper .fixBtn {
   width: 124px;
@@ -2716,9 +2810,19 @@ section .sectionHead .sectionText {
   margin: 40px auto 0;
   justify-content: center;
 }
+@media screen and (min-height: 900px) {
+  .calendarWrapper .boatType {
+    margin: 20px auto 0;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .calendarWrapper .boatType {
+    margin: 20px auto 0;
+  }
+}
 .calendarWrapper .boatType button {
   font-family: "GilroyMedium";
-  font-size: 15px;
+  font-size: 16px;
   line-height: 25px;
   color: var(--gray-5);
   display: flex;
@@ -2770,23 +2874,43 @@ section .sectionHead .sectionText {
   gap: 20px;
   transition: all 0.3s linear;
   padding: 20px;
-  margin-left: -20px;
-  margin-right: -20px;
   position: relative;
+}
+.calendarWrapper .dateTimeSearchWrapper:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 0;
+  height: 60px;
+  width: calc(50% + 47px);
+  z-index: 99;
+  cursor: not-allowed;
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper {
   width: calc(50% - 68px);
   cursor: pointer;
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
-  color: #878787;
+  color: var(--gray-6);
   font-family: "GilroyRegular";
   transition: all 0.3s linear;
-  font-size: 13px;
+  font-size: 12px;
   opacity: 1;
   padding-left: 16px;
-  padding-top: 20px;
+  padding-top: 0;
   transition: all 0.3s linear;
+  transform: none;
+  top: 10px;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
+    padding-top: 12px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
+    padding-top: 12px;
+  }
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select {
   height: 60px;
@@ -2801,6 +2925,16 @@ section .sectionHead .sectionText {
   box-shadow: none;
   width: 100%;
   border-radius: 10px !important;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select {
+    height: 45px;
+  }
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select:after {
   display: none;
@@ -2817,6 +2951,19 @@ section .sectionHead .sectionText {
   padding-left: 16px;
   padding-right: 29px;
   padding-top: 19px;
+  font-size: 14px;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
+    height: 45px;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
+    height: 45px;
+    padding-top: 10px;
+  }
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .list {
   border-radius: 0;
@@ -2828,6 +2975,13 @@ section .sectionHead .sectionText {
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option {
   position: relative;
   padding-left: 33px;
+  font-size: 17px;
+  font-family: "GilroyMedium";
+}
+.calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option.selected {
+  font-weight: initial;
+  font-family: "GilroyMedium";
+  color: var(--primary);
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option.focus {
   background-color: rgba(0, 0, 0, 0);
@@ -2839,7 +2993,7 @@ section .sectionHead .sectionText {
   content: "\e91a";
   font-family: "customFont";
   font-size: 20px;
-  color: var(--black);
+  color: var(--primary);
   position: absolute;
   left: 7px;
   top: 50%;
@@ -2860,10 +3014,10 @@ section .sectionHead .sectionText {
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper {
   position: relative !important;
   width: 100% !important;
-  top: 0 !important;
+  top: -20px !important;
   left: 0 !important;
   background: var(--white);
-  padding: 75px 0 75px 0;
+  padding: 95px 0 75px 0;
   border-radius: 10px 10px 25px 25px;
   border: none;
   box-shadow: none;
@@ -2970,6 +3124,7 @@ section .sectionHead .sectionText {
   transition: all 0.3s linear;
   top: 0;
   left: 0;
+  font-weight: 400;
 }
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next:hover,
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev:hover {
@@ -3009,9 +3164,6 @@ section .sectionHead .sectionText {
   width: 90px;
   left: 0;
   margin: 0 auto;
-  display: none;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .drp_top-bar.normal .normal-top {
   display: none !important;
 }
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .drp_top-bar .default-top {
@@ -3036,7 +3188,7 @@ section .sectionHead .sectionText {
   }
 }
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer {
-  margin-top: 25px;
+  margin-top: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3050,7 +3202,7 @@ section .sectionHead .sectionText {
   color: var(--gray-6);
 }
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-days a {
-  font-family: "GilroySemibold";
+  font-family: "GilroyMedium";
   font-size: 13px;
   color: var(--primary);
   text-decoration: none;
@@ -3082,7 +3234,7 @@ section .sectionHead .sectionText {
   }
 }
 .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-buttons a {
-  font-family: "GilroySemibold";
+  font-family: "GilroyMedium";
   font-size: 13px;
   color: var(--primary);
   text-decoration: none;
@@ -3125,16 +3277,23 @@ section .sectionHead .sectionText {
   background: var(--white);
   box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.175) !important;
   border-radius: 20px;
-  width: 750px;
+  width: 130%;
   margin-left: 0;
   margin-right: 0;
   min-height: 350px;
 }
 .calendarWrapper .dateTimeSearchWrapper.active .dateInputWrapper {
   width: calc(46% - 62px);
+  opacity: 1;
 }
 .calendarWrapper .dateTimeSearchWrapper.active .formSelectWrapper {
   width: calc(46% - 62px);
+}
+.calendarWrapper .dateTimeSearchWrapper.opened:before {
+  width: 170px;
+}
+.calendarWrapper .dateTimeSearchWrapper.opened.apply:before {
+  display: none;
 }
 .calendarWrapper .dateInputWrapper {
   position: relative;
@@ -3156,11 +3315,24 @@ section .sectionHead .sectionText {
   cursor: pointer;
   transition: all 0.3s linear;
   padding-left: 16px;
-  padding-top: 10px;
+  padding-top: 29px;
+  background: var(--gray);
+  border-color: var(--gray);
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper .customRangeButton {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .customRangeButton {
+    height: 45px;
+  }
 }
 .calendarWrapper .customRangeButton:after {
   content: "\e90c";
   font-family: "customFont";
+  color: var(--gray-5);
   font-size: 16px;
   position: absolute;
   right: 14px;
@@ -3168,13 +3340,15 @@ section .sectionHead .sectionText {
   transform: translateY(-50%);
 }
 .calendarWrapper .customRangeButton span {
-  color: var(--gray-6);
+  color: var(--gray-5);
   font-family: "GilroyRegular";
   transition: all 0.3s linear;
-  font-size: 13px;
+  font-size: 14px;
 }
 .calendarWrapper .customRangeButton span.name {
-  font-size: 11px;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
 }
 .calendarWrapper .customRangeButton.active {
   display: none;
@@ -3188,6 +3362,21 @@ section .sectionHead .sectionText {
   max-width: 150px;
   display: flex;
   height: 60px;
+  position: relative;
+  opacity: 0.5;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper .dateSearchButton {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .dateSearchButton {
+    height: 45px;
+  }
+}
+.calendarWrapper .dateSearchButton.active {
+  opacity: 1;
 }
 .calendarWrapper #dateInputs {
   position: relative;
@@ -3203,8 +3392,19 @@ section .sectionHead .sectionText {
   background-color: var(--gray);
   border: 1px solid var(--gray-3);
   font-size: 14px;
-  padding-left: 16px;
+  padding-top: 16px;
+  padding-left: 10px;
   color: #878787;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper #dateInputs #checkinInput {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper #dateInputs #checkinInput {
+    height: 45px;
+  }
 }
 .calendarWrapper #dateInputs #checkinInput.selected {
   border-radius: 10px 50px 50px 10px;
@@ -3221,8 +3421,19 @@ section .sectionHead .sectionText {
   background-color: var(--gray);
   border: 1px solid var(--gray-3);
   font-size: 14px;
-  padding-left: 16px;
+  padding-top: 16px;
+  padding-left: 10px;
   color: #878787;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper #dateInputs #checkoutInput {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper #dateInputs #checkoutInput {
+    height: 45px;
+  }
 }
 .calendarWrapper #dateInputs #checkoutInput.selected {
   border-radius: 10px 50px 50px 10px;
@@ -3231,6 +3442,12 @@ section .sectionHead .sectionText {
 }
 .calendarWrapper #dateInputs #checkoutInput.selected .name {
   color: var(--white);
+}
+.calendarWrapper #dateInputs #checkInText .name,
+.calendarWrapper #dateInputs #checkOutText .name {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 .calendarWrapper #dateInputs #checkInText {
   position: absolute;
@@ -3242,10 +3459,20 @@ section .sectionHead .sectionText {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 10px;
+  padding: 20px 10px 0;
   font-size: 13px;
   color: #878787;
   cursor: pointer;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper #dateInputs #checkInText {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper #dateInputs #checkInText {
+    height: 45px;
+  }
 }
 .calendarWrapper #dateInputs #checkInText .name {
   font-family: "GilroyMedium";
@@ -3270,10 +3497,20 @@ section .sectionHead .sectionText {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 10px;
+  padding: 20px 10px 0;
   font-size: 13px;
   color: #878787;
   cursor: no-drop;
+}
+@media screen and (max-height: 768px) {
+  .calendarWrapper #dateInputs #checkOutText {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper #dateInputs #checkOutText {
+    height: 45px;
+  }
 }
 .calendarWrapper #dateInputs #checkOutText.selected {
   border-radius: 10px 50px 50px 10px;
@@ -3572,10 +3809,15 @@ section .sectionHead .sectionText {
   top: auto !important;
   right: 32px;
   height: 15px;
-  bottom: 18px !important;
+  bottom: 20px !important;
   transform: none !important;
   left: auto !important;
   padding: 0;
+  width: 58px;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .swiper-pagination.type2 .swiper-pagination-bullet {
   background-color: var(--gray-6) !important;
@@ -3613,13 +3855,12 @@ section .sectionHead .sectionText {
 }
 .swiperButtons.type2 {
   top: auto !important;
-  width: 134px;
+  width: 115px;
   bottom: 16px;
   background-color: rgba(0, 0, 0, 0);
   transition: all 0.3s linear;
   opacity: 0;
   height: 23px;
-  z-index: 9;
   border-radius: 10px;
   right: 6px;
   z-index: 99;
@@ -3631,23 +3872,23 @@ section .sectionHead .sectionText {
   height: 26px;
 }
 
-.singleImgSlider:before {
+.singleSlide:before {
   content: "";
   position: absolute;
-  width: 124px;
-  height: 23px;
+  width: 105px;
+  height: 30px;
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 10px;
-  bottom: 17px;
+  border-radius: 14px;
+  bottom: 13px;
   right: 12px;
   transition: all 0.3s linear;
   z-index: 9;
 }
 @media screen and (min-width: 992px) {
-  .singleImgSlider:hover:before {
+  .singleSlide:hover:before {
     background-color: rgba(255, 255, 255, 0.6);
   }
-  .singleImgSlider:hover .swiperButtons.type2 {
+  .singleSlide:hover .swiperButtons.type2 {
     opacity: 1;
   }
 }

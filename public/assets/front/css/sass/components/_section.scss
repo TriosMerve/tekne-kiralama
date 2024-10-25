@@ -2,7 +2,7 @@ section {
   &:not(:first-child) {
     margin-top: 120px;
   }
-  .sectionWrapper{
+  .sectionWrapper {
     padding: 65px;
   }
   .sectionHead {
@@ -27,11 +27,10 @@ section {
   }
   .sectionContent {
   }
-  
 }
-.videoContent{
-  max-width: 900px;
-  margin:0 auto;
+.videoContent {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .homeSection {
   padding-top: 85px;
@@ -46,10 +45,20 @@ section {
     max-width: 900px;
     padding-left: 90px;
     padding-right: 120px;
-    height: 56vh;
+    // height: 56vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media screen and (max-height: 900px) {
+    }
+    @media screen and (max-width: 1600px) {
+      padding-left: 45px;
+      padding-right: 100px;
+    }
+    @media screen and (max-width: 1440px) {
+      padding-left: 30px;
+      padding-right: 50px;
+    }
 
     .category {
       font-family: "GilroyBold";
@@ -57,6 +66,12 @@ section {
       line-height: 25px;
       color: var(--primary);
       margin-bottom: 15px;
+      @media screen and (max-height: 768px) {
+        margin-bottom: 5px;
+      }
+      @media screen and (max-width: 1366px) {
+        margin-bottom: 5px;
+      }
     }
     h1,
     .sectionTitle {
@@ -65,12 +80,41 @@ section {
       line-height: 60px;
       color: var(--black);
       margin-bottom: 20px;
+      @media screen and (max-height: 900px) {
+        font-size: 48px;
+        line-height: 52px;
+      }
+      @media screen and (max-height: 768px) {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 1600px) {
+        font-size: 48px;
+        line-height: 52px;
+      }
+      @media screen and (max-width: 1440px) {
+        font-size: 36px;
+        line-height: 42px;
+      }
+      @media screen and (max-width: 1366px) {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 10px;
+      }
     }
     .text {
       font-family: "GilroyRegular";
       font-size: 14px;
       line-height: 25px;
       color: var(--gray-6);
+
+      @media screen and (max-height: 768px) {
+        line-height: 21px;
+      }
+      @media screen and (max-width: 1366px) {
+        line-height: 21px;
+      }
     }
   }
 
@@ -109,6 +153,12 @@ section {
     align-items: center;
     gap: 50px;
     margin-top: 20px;
+    @media screen and (max-height: 900px) {
+      margin-top: 0;
+    }
+    @media screen and (max-width: 1600px) {
+      margin-top: 0;
+    }
     a {
       font-family: "GilroyRegular";
       font-size: 13px;
@@ -155,87 +205,93 @@ section {
   }
 }
 
-.boatTabWrapper{
+.boatTabWrapper {
   aspect-ratio: 9/5;
   overflow: hidden;
 }
 
-.blogSection{
-  .category{
-    font-family: 'GilroySemibold';
+.blogSection {
+  padding-bottom: 55px;
+  .category {
+    font-family: "GilroySemibold";
     font-size: 15px;
     line-height: 30px;
     color: var(--primary);
     margin-bottom: 65px;
   }
-  .title{
-    font-family: 'GilroyBold';
+  .title {
+    font-family: "GilroyBold";
     font-size: 45px;
     line-height: 55px;
     color: var(--primary);
     margin-bottom: 15px;
   }
-  p{
-    font-family: 'GilroyRegular';
+  p {
+    font-family: "GilroyRegular";
     font-size: 17px;
     line-height: 30px;
     color: #444444;
     margin-bottom: 32px;
   }
-  .buttons{
+  .buttons {
     display: flex;
     align-items: stretch;
     gap: 20px;
   }
 }
 
-.eBultenSection{
-  #captchaWrapper{
+.eBultenSection {
+  #captchaWrapper {
     max-width: 300px;
   }
-  .title{
-    font-family: 'GilroyBold';
+  .title {
+    font-family: "GilroyBold";
     font-size: 60px;
     line-height: 85px;
     color: var(--white);
     max-width: 640px;
   }
-  .emailInputWrapper{
+  .emailInputWrapper {
     display: flex;
     align-items: stretch;
     max-width: 800px;
     gap: 10px;
     margin-bottom: 25px;
     margin-top: 80px;
-    input{
+    input {
       flex: 1;
       border: none;
       border-bottom: 1px solid var(--white);
-      background-color: rgba(0,0,0,0);
+      background-color: rgba(0, 0, 0, 0);
       color: var(--white);
 
-      &::placeholder{
+      &::placeholder {
         color: var(--white);
         opacity: 1;
+        font-family: 'GilroySemibold';
       }
-      &::-moz-placeholder{
+      &::-moz-placeholder {
         color: var(--white);
         opacity: 1;
+        font-family: 'GilroySemibold';
       }
-      &::-webkit-input-placeholder{
+      &::-webkit-input-placeholder {
         color: var(--white);
         opacity: 1;
+        font-family: 'GilroySemibold';
       }
-      &:-moz-placeholder{
+      &:-moz-placeholder {
         color: var(--white);
         opacity: 1;
+        font-family: 'GilroySemibold';
       }
-      &:-ms-input-placeholder{
+      &:-ms-input-placeholder {
         color: var(--white);
         opacity: 1;
+        font-family: 'GilroySemibold';
       }
     }
-    .fixBtn{
+    .fixBtn {
       width: 124px;
     }
   }
