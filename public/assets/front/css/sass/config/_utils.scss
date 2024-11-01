@@ -38,7 +38,7 @@ $colors: (
   "gray": $gray,
   "gray-3": $gray-3,
   "dark": $black,
-  "light": $white // "tertiary": $tertiary,,
+  "light": $white // "tertiary": $tertiary,,,
 );
 
 @mixin generate-button-classes($colors) {
@@ -91,10 +91,14 @@ $colors: (
           padding-left: 40px;
           padding-right: 40px;
         }
-        @media screen and (max-width: 370px) {
-          padding-left: 16px;
-          padding-right: 16px;
+        @media screen and (max-width: 991.98px) {
+          padding-left: 15px;
+          padding-right: 15px;
         }
+        // @media screen and (max-width: 370px) {
+        //   padding-left: 16px;
+        //   padding-right: 16px;
+        // }
       }
 
       @media screen and (min-width: 992px) {
@@ -179,7 +183,11 @@ $padding-values: (
     }
   }
 }
-
+a:hover {
+  @media screen and (max-width: 991.98px) {
+    color: inherit;
+  }
+}
 /*Standart css style*/
 .imageWrapper {
   position: relative;
@@ -233,10 +241,12 @@ $padding-values: (
 
   @media screen and (max-width: 1440px) {
     height: 50px;
+    font-size: 14px;
   }
 
   @media screen and (max-width: 991.98px) {
     height: 45px;
+    font-size: 13px;
   }
 
   svg,
@@ -284,7 +294,7 @@ $padding-values: (
     &.type3 {
       border-color: var(--white);
       color: var(--white);
-      &:after{
+      &:after {
         background-color: var(--white);
       }
       @media screen and (min-width: 992px) {
@@ -295,8 +305,17 @@ $padding-values: (
     }
   }
 
-  &.button-light {
+  &.button-white {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--white);
     &:after {
+      background-color: var(--primary);
+    }
+    @media screen and (min-width: 992px) {
+      &:hover{
+        color: var(--white);
+      }
     }
   }
 
@@ -322,7 +341,13 @@ $padding-values: (
   align-items: center;
   gap: 20px;
   margin-top: 20px;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
+  @media screen and (max-width: 991.98px) {
+    margin-top: 5px;
+    &:hover {
+      color: var(--primary);
+    }
+  }
 
   &:after {
     content: "";
@@ -334,11 +359,11 @@ $padding-values: (
     position: absolute;
     transition: all 0.3s linear;
   }
-  .icon-arrow-long{
+  .icon-arrow-long {
     font-size: 30px;
   }
-  &.noAfter{
-    &:after{
+  &.noAfter {
+    &:after {
       display: none;
     }
   }
@@ -350,5 +375,35 @@ $padding-values: (
         width: 0;
       }
     }
+  }
+}
+
+.verticalCustomScroll {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    background-color: rgba(217, 4, 62, 0.4);
+    height: 4px;
+    box-shadow: none;
+    border: none;
+    outline: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-4);
+    height: 4px;
+    box-shadow: none;
+    border: none;
+    outline: 0;
+    /* Chrome, Safari, Edge ve Opera için */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(217, 4, 62, 0.4);
+    height: 4px;
+    box-shadow: none;
+    border: none;
+    outline: 0;
+    /* Chrome, Safari, Edge ve Opera için */
   }
 }

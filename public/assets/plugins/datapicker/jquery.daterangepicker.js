@@ -1912,6 +1912,8 @@
                 $("#checkInText .choose").hide();
                 $("#checkOutText, #checkoutInput").addClass("selected");
                 $("#checkInText, #checkinInput").removeClass("selected");
+                $("#checkOutText").css("cursor","default");
+                $("#checkInText").css("cursor","default");
             }
             if (opt.end) {
                 box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));

@@ -1,42 +1,64 @@
-.accordion {
-    .accordion-item {
-        margin-bottom: 30px;
-
-        .accordion-button {
-            font-family: 'GilroyBold';
-            font-size: 24px;
-            line-height: 32px;
-            background-color: var(--primary);
-            color: var(--white);
-            border-radius: 10px !important;
-            height: 75px;
-            box-shadow: none!important;
-
-            &:after {
+.customAcc{
+    .accordion-item{
+        margin-bottom: 20px;
+        .accordion-button{
+            background-color: rgba(0,0,0,0);
+            border: none;
+            font-size: 16px;
+            color:var(--gray-7);
+            line-height: 22px;
+            font-family: 'GilroySemibold';
+            &:after{
                 content: "\e903";
-                font-family: 'iconYuvam';
-                color: var(--white);
-                font-size: 24px;
+                transform: rotate(90deg);
+                font-family: 'customFont';
                 background-image: none;
-                transform: rotate(-90deg);
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
-
-            &.collapsed {
-                &:after {
-                    transform: rotate(90deg);
-
-                }
+            &:focus{
+                border: none;
+                box-shadow: none;
             }
         }
-
+        &:last-child{
+            @media screen and (max-width:991.98px) {
+                border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+            }
+        }
         .accordion-body{
-            font-size: 22px;
-            line-height: 30px;
-            font-family: 'GilroySemibold';
-            padding: 40px 20px 60px;
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--gray-6);
+            font-family: 'GilroyRegular';
+
+            a{
+                font-family: 'GilroySemibold';
+                color: var(--primary);
+                position: relative;
+                &:after{
+                    content: "";
+                    border-bottom: 1px dotted var(--primary);
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    transition: all .3s linear;
+                }
+                @media screen and (min-width:992px) {
+                    &:hover{
+                        &:after{
+                            width: 0;
+                        }
+                    }
+                }
+            }
+            b{
+                font-family: 'GilroySemibold';
+                color: var(--primary);
+            }
+            code{
+                color: var(--primary);
+                font-family: 'GilroyRegular';
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-.cards {
+.cards:not(.swiper-wrapper) {
   display: flex;
   flex-wrap: wrap;
   .card {
@@ -8,6 +8,9 @@
         transition: all 0.3s linear;
         border-radius: 25px;
         aspect-ratio: 3/4;
+        @media screen and (max-width: 991.98px) {
+          border-radius: 24px;
+        }
         img {
           transition: all 0.3s linear;
         }
@@ -21,6 +24,10 @@
         font-size: 28px;
         line-height: 35px;
         color: var(--primary);
+        @media screen and (max-width: 991.98px) {
+          font-size: 20px;
+          line-height: 27px;
+        }
       }
       .cardText {
         font-family: "GilroyRegular";
@@ -28,14 +35,23 @@
         line-height: 22px;
         color: var(--gray-6);
         padding-top: 12px;
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+        }
       }
+
     }
   }
   &.half {
     gap: 60px 33px;
-    padding: 30px 11.3vw;
+    padding: 30px 0;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
     .card {
-      width: calc(50% - 23px);
+      @media screen and (min-width: 768px) {
+        width: calc(50% - 23px);
+      }
 
       .cardTop-image {
         .imageWrapper {
@@ -60,9 +76,9 @@
     }
   }
   &.type2 {
-    gap: 27px;
+    gap: 40px;
     .card {
-      width: calc(25% - 21px);
+      width: calc(25% - 30px);
       .cardTop-image {
         .imageWrapper {
           aspect-ratio: 1/1;
@@ -91,7 +107,7 @@
           align-items: stretch;
           gap: 20px;
           .fixBtn {
-            flex: 1;
+            // flex: 1;
           }
         }
       }
@@ -99,8 +115,17 @@
   }
   &.third {
     gap: 60px;
+    @media screen and (max-width: 991.98px) {
+      gap: 40px;
+    }
     .card {
       width: calc(33.3% - 40px);
+      @media screen and (max-width: 991.98px) {
+        width: calc(50% - 30px);
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
       .cardTop-image {
         position: relative;
         .imageWrapper {
@@ -136,6 +161,10 @@
           line-height: 27px;
           padding-right: 10px;
           flex: 1;
+          @media screen and (max-width: 991.98px) {
+            font-size: 18px;
+            line-height: 26px;
+          }
         }
         .card-id {
           font-family: "GilroyRegular";
@@ -143,6 +172,9 @@
           color: var(--gray-6);
           line-height: 20px;
           min-width: 85px;
+          @media screen and (max-width: 991.98px) {
+            font-size: 13px;
+          }
         }
         .options {
           font-size: 14px;
@@ -150,15 +182,25 @@
           color: var(--gray-6);
           font-family: "GilroyRegular";
           margin-top: 0;
+          @media screen and (max-width: 991.98px) {
+            font-size: 13px;
+          }
         }
         .countPrice {
           margin-top: 20px;
           color: var(--primary);
           font-size: 14px;
+          @media screen and (max-width: 991.98px) {
+            margin-top: 10px;
+            font-size: 13px;
+          }
           .price {
             font-size: 28px;
             font-family: "GilroySemibold";
             line-height: 30px;
+            @media screen and (max-width: 991.98px) {
+              font-size: 24px;
+            }
           }
           .currencly {
             font-family: sans-serif;
@@ -171,6 +213,10 @@
           flex-wrap: wrap;
           gap: 20px;
           margin-top: 20px;
+          @media screen and (max-width: 991.98px) {
+            margin-top: 10px;
+            gap: 10px;
+          }
           span {
             font-size: 13px;
             font-family: "GilroyMedium";
@@ -182,11 +228,16 @@
             padding: 5px 10px;
             border-radius: 5px;
             color: var(--gray-6);
+            @media screen and (max-width: 991.98px) {
+              font-size: 12px;
+              padding: 3px 7px;
+            }
           }
         }
       }
     }
   }
+
   a {
     &.card {
       &.allLinkCard {
@@ -201,6 +252,7 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+
         &:after {
           content: "";
           width: 0;
@@ -263,6 +315,233 @@
               .textLink {
                 color: var(--gray-6);
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cardList{
+  .cardItem{
+    .imageWrapper{
+      height: auto;
+      border-radius: 24px;
+      aspect-ratio: 9/4.5;
+    }
+    .text{
+      margin-top: 15px;
+      .category{
+        font-size: 14px;
+        font-family: 'GilroyMedium';
+        color: var(--gray-7);
+        line-height: 22px;
+      }
+      .title{
+        font-family: 'GilroySemibold';
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--primary);
+      }
+    }
+  }
+  a{
+    @media screen and (min-width:992px) {
+      &:hover{
+        .imageWrapper{
+          img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.thirdSlider {
+  &.swiper{
+  }
+  .cards {
+    &.swiper-wrapper {
+      .card {
+        border: none;
+        background-color: rgba(0,0,0,0);
+        .cardTop-image {
+          position: relative;
+          border-radius: 24px;
+          overflow: hidden;
+          .imageWrapper {
+            aspect-ratio: 3/2;
+            border-radius: 24px;
+          }
+          .point{
+            position: absolute;
+            background: var(--primary);
+            z-index: 9;
+            top: 20px;
+            left: 0;
+            padding-left: 10px;
+            height: 60px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 115px;
+            justify-content: center;
+            border-radius: 0 60px 0px 0;
+            .icon-star-percent{
+              color: var(--white);
+              font-size: 24px;
+              margin-right: 5px;
+            }
+            .pointNumber{
+              font-family: 'GilroyMedium';
+              font-size: 16px;
+              color: var(--white);
+            }
+            .text{
+              font-family: 'GilroyRegular';
+              font-size: 14px;
+              color: var(--white);
+              margin-top: 5px;
+            }
+          }
+          .category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 9;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            flex-direction: column;
+
+            span {
+              border-radius: 10px;
+              background-color: var(--gray);
+              box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.275) !important;
+              color: var(--gray-6);
+              font-family: "GilroyRegular";
+              padding: 5px 10px;
+              font-size: 13px;
+            }
+          }
+        }
+        .cardBody {
+          text-align: left;
+          padding-top: 12px;
+
+          .title {
+            font-size: 20px;
+            font-family: "GilroySemibold";
+            line-height: 27px;
+            padding-right: 10px;
+            flex: 1;
+            color: var(--primary);
+            @media screen and (max-width: 991.98px) {
+              font-size: 18px;
+              line-height: 26px;
+            }
+          }
+          .card-id {
+            font-family: "GilroyRegular";
+            font-size: 14px;
+            color: var(--gray-6);
+            line-height: 20px;
+            min-width: 85px;
+            @media screen and (max-width: 991.98px) {
+              font-size: 13px;
+            }
+          }
+          .options {
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--gray-6);
+            font-family: "GilroyRegular";
+            margin-top: 0;
+            @media screen and (max-width: 991.98px) {
+              font-size: 13px;
+            }
+          }
+          .discount{
+            margin-top: 20px;
+            font-size: 16px;
+            color: #919191;
+            font-family: 'GilroyMedium';
+            text-decoration: line-through;
+            @media screen and (max-width: 991.98px) {
+              margin-top: 0;
+              font-size: 13px;
+            }
+          }
+          .countPrice {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 14px;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 5px;
+            @media screen and (max-width: 991.98px) {
+              margin-top: 0;
+              font-size: 13px;
+            }
+            .price {
+              font-size: 28px;
+              font-family: "GilroySemibold";
+              line-height: 19px;
+              @media screen and (max-width: 991.98px) {
+                font-size: 24px;
+              }
+            }
+            .currencly {
+              font-family: sans-serif;
+              padding: 0 5px 0 10px;
+              font-size: 19px;
+            }
+          }
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            @media screen and (max-width: 991.98px) {
+              margin-top: 10px;
+              gap: 10px;
+            }
+            span {
+              font-size: 13px;
+              font-family: "GilroyMedium";
+              line-height: 20px;
+              background-color: var(--gray);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px 10px;
+              border-radius: 5px;
+              color: var(--gray-6);
+              @media screen and (max-width: 991.98px) {
+                font-size: 12px;
+                padding: 3px 7px;
+              }
+            }
+          }
+          .point{
+            .icon-star-percent{
+              color: var(--primary);
+              font-size: 26px;
+              margin-right: 10px;
+            }
+            .pointNumber{
+              font-family: 'GilroySemibold';
+              font-size: 22px;
+              line-height: 30px;
+              color: var(--primary);
+            }
+            .text{
+              font-family: 'GilroyRegular';
+              color: #545454;
+              font-size: 14px;
+              line-height: 20px;
             }
           }
         }

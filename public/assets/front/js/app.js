@@ -9,6 +9,22 @@ $(window).on("load", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("video");
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              video.src = video.getAttribute("data-src");
+              observer.unobserve(video);
+          }
+      });
+  });
+  observer.observe(video);
+});
+
+
+
+
 /*Scrooll page fixed header */
 document.addEventListener("scroll", function () {
   var header = document.getElementById("header");
@@ -17,6 +33,12 @@ document.addEventListener("scroll", function () {
     header.classList.add("sticky-top");
   } else {
     header.classList.remove("sticky-top");
+  }
+
+  if(window.scrollY > 230){
+    $(".calendarMobilButton").addClass("fixed")
+  }else{
+    $(".calendarMobilButton").removeClass("fixed")
   }
 });
 
@@ -62,14 +84,31 @@ $(".subMenuItem").on("click", function () {
   const targetIndex = $(this).data("target"); // Tıklanan öğeye ait target
 
   // Tüm subMenuWrapper'ları gizle
-  $(".rightMenuColumn .subMenuWrapper").addClass("d-none");
+  $(".rightMenuColumn .subMenuWrapper").addClass("d-none").removeClass("active");
 
   // İlgili subMenuWrapper'ı göster
   const targetWrapper = $(".rightMenuColumn .subMenuWrapper").eq(targetIndex);
-  targetWrapper.removeClass("d-none");
+  targetWrapper.removeClass("d-none").addClass("active");
+  targetWrapper.closest(".rightMenuColumn").addClass("opened");
+  $(".navMenuContent .leftMenuColumn").addClass("disabled")
 
   // Animasyonu çalıştır
   animateSubMenu(targetWrapper);
+});
+
+$(".subMenuWrapper .subMenuList").on("click", function () {
+  if ($(this).hasClass("selected")) {
+    $(this).removeClass("selected");
+  } else {
+    $(".subMenuWrapper .subMenuList").removeClass("selected");
+    $(this).addClass("selected");
+  }
+});
+
+$(".backLink").on("click", function () {
+  $(".navMenuContent .leftMenuColumn").removeClass("disabled")
+  $(this).parent(".mobileMenuColumn").removeClass("opened");
+
 });
 
 $(".closedMenuButton").on("click", function () {
@@ -112,118 +151,7 @@ function animateSubMenu(wrapper, shouldAnimate = true) {
     }
   });
 }
-
 //Header End
-
-// Swiper'ları başlatan fonksiyon
-function initializeSwipers() {
-  // .blogSlider sınıfına sahip bir element var mı?
-  const blogSliderElement = document.querySelector(".blogSlider");
-  if (blogSliderElement) {
-    var blogSlider = new Swiper(blogSliderElement, {
-      slidesPerView: 1,
-      pagination: {
-        el: ".blog-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
-
-  const sliders = [
-    {
-      element: ".singleImgSlider",
-      pagination: ".swiper-pagination-single01",
-      nextEl: ".nextButton-single01",
-      prevEl: ".prevButton-single01"
-    },
-    {
-      element: ".singleImgSlider2",
-      pagination: ".swiper-pagination-single02",
-      nextEl: ".nextButton-single02",
-      prevEl: ".prevButton-single02"
-    },
-    {
-      element: ".singleImgSlider3",
-      pagination: ".swiper-pagination-single03",
-      nextEl: ".nextButton-single03",
-      prevEl: ".prevButton-single03"
-    },
-    {
-      element: ".singleImgSlider4",
-      pagination: ".swiper-pagination-single04",
-      nextEl: ".nextButton-single04",
-      prevEl: ".prevButton-single04"
-    },
-    {
-      element: ".singleImgSlider5",
-      pagination: ".swiper-pagination-single05",
-      nextEl: ".nextButton-single05",
-      prevEl: ".prevButton-single05"
-    },
-    {
-      element: ".singleImgSlider6",
-      pagination: ".swiper-pagination-single06",
-      nextEl: ".nextButton-single06",
-      prevEl: ".prevButton-single06"
-    }
-  ];
-  
-  sliders.forEach(slider => {
-    const sliderElement = document.querySelector(slider.element);
-    if (sliderElement) {
-      new Swiper(sliderElement, {
-        slidesPerView: 1,
-        pagination: {
-          el: slider.pagination,
-          clickable: true,
-        },
-        navigation: {
-          nextEl: slider.nextEl,
-          prevEl: slider.prevEl,
-        },
-      });
-    }
-  });
-  
-  
-
-  // .verticalSwiper sınıfına sahip bir element var mı?
-  const verticalSwiperElement = document.querySelector(".verticalSwiper");
-  if (verticalSwiperElement) {
-    verticalSwiper = new Swiper(verticalSwiperElement, {
-      direction: "vertical",
-      slidesPerView: 1,
-      spaceBetween: 30,
-      centeredSlides: true,
-      loop: true,
-      loopAdditionalSlides: 1,
-      speed: 600,
-      observer: true,
-      observeParents: true,
-      on: {
-        slideChangeTransitionEnd: function () {
-          this.update();
-        },
-      },
-    });
-
-    // Tab tıklamalarını dinleyen event listener
-    document.querySelectorAll(".customTabs .nav-link").forEach((tab, index) => {
-      tab.addEventListener("click", function () {
-        verticalSwiper.slideToLoop(index, 600); // İlgili slide'a geçiş yap
-      });
-    });
-  }
-}
-
-// DOM tamamen yüklendikten sonra başlatma
-document.addEventListener("DOMContentLoaded", function () {
-  initializeSwipers();
-});
 
 if (typeof Fancybox !== "undefined") {
   Fancybox.bind("[data-fancybox]", {
@@ -240,74 +168,6 @@ if (typeof Fancybox !== "undefined") {
   });
 }
 
-/**Tab Js
- *
- *
- *
- */
-const swiper = new Swiper(".haberlerCardSlide", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-bizden-next",
-    prevEl: ".swiper-bizden-prev",
-  },
-  breakpoints: {
-    480: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    640: {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    992: {
-      loop: true,
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-  },
-});
-
-const gallerySlide = new Swiper(".gallerySlide", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-gallery-next",
-    prevEl: ".swiper-gallery-prev",
-  },
-  breakpoints: {
-    640: {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    992: {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-  },
-});
-
-const swipersingleSlide = new Swiper(".singleSlide", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-gallery-next",
-    prevEl: ".swiper-gallery-prev",
-  },
-});
-/**Tab js end
- *
- *
- */
-
 if (typeof $.fn.niceSelect !== "undefined") {
   $(".customSelect").niceSelect();
   // Select elementini seç
@@ -319,3 +179,35 @@ if (typeof $.fn.niceSelect !== "undefined") {
     $("#" + selectedValue).addClass("show active");
   });
 }
+document.querySelector('.languageWrapper .dropdown-toggle').addEventListener('click', function () {
+  const body = document.body;
+  if (this.classList.contains('show')) {
+      body.classList.toggle('overflow-hidden');
+  } else {
+      body.classList.remove('overflow-hidden');
+  }
+});
+
+// Dropdown kapandığında sınıfı kaldır
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.languageWrapper')) {
+      document.body.classList.remove('overflow-hidden');
+  }
+});
+
+
+document.querySelectorAll('.customTab .nav-link').forEach((tab) => {
+  tab.addEventListener('click', function () {
+      setTimeout(() => {
+          if (this.classList.contains('active')) {
+              const container = document.querySelector('.verticalCustomScroll');
+              const offsetLeft = this.offsetLeft - container.offsetLeft;
+
+              container.scrollTo({
+                  left: offsetLeft,
+                  behavior: 'smooth'
+              });
+          }
+      }, 100); // Aktif sınıfının atanmasını beklemek için kısa bir gecikme
+  });
+});

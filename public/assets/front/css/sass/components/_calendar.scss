@@ -1,19 +1,94 @@
+.calendarMobilButton {
+  transition: all 0.3s linear;
+  text-align: center;
+  a {
+    @media screen and (max-width: 991.98px) {
+      max-width: 400px;
+      height: 60px;
+      font-size: 16px;
+      font-family: "GilroySemibold";
+      width: 100%;
+      margin: 0 auto;
+      &:hover {
+        color: var(--white) !important;
+      }
+    }
+  }
+  &:after {
+    display: none;
+  }
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 999;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding: 20px 16px;
+    background: #ffffff;
+    box-shadow: 0 -5px 43px rgba(0, 0, 0, 0.4) !important;
+    // &>span{
+    //   display: block;
+    //   background: #ffffff;
+    //   position: fixed;
+    //   width: 100vw;
+    //   height: 75px;
+    //   box-shadow: 0 -5px 43px rgba(0, 0, 0, 0.4) !important;
+    //   z-index: -1;
+    // }
+  }
+}
+.closeCalendarButton {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  font-size: 34px;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 7px;
+}
 .calendarWrapper {
   min-height: 170px;
   position: relative;
   z-index: 9;
   // width: calc(100% + 100px);
+  @media screen and (max-width: 991.98px) {
+    position: fixed;
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    top: 0;
+    padding-top: 50px;
+    left: 100%;
+    transition: all 0.3s linear;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
   .boatType {
     display: flex;
     align-items: center;
     gap: 30px;
     margin: 40px auto 0;
     justify-content: center;
-    @media screen and (min-height:900px) {
+    @media screen and (min-height: 900px) {
       margin: 20px auto 0;
     }
-    @media screen and (max-width:1600px) {
+    @media screen and (max-width: 1600px) {
       margin: 20px auto 0;
+    }
+    @media screen and (max-width: 991.98px) {
+      width: calc(100% - 70px);
+      margin-left: auto;
+      margin-right: 20px;
+      margin-top: 0;
+      height: 36px;
+      gap: 20px;
+      justify-content: flex-end;
     }
     button {
       font-family: "GilroyMedium";
@@ -49,6 +124,10 @@
     right: 0;
     border-radius: 29px;
     padding: 4px 0;
+    @media screen and (max-width: 991.98px) {
+      position: relative;
+      top: 0;
+    }
 
     button {
       background-color: var(--gray);
@@ -73,23 +152,41 @@
     gap: 20px;
     transition: all 0.3s linear;
     padding: 20px;
-    // margin-left: -20px;
-    // margin-right: -20px;
     position: relative;
-    &:before{
+    @media screen and (max-width: 991.98px) {
+      display: block;
+      width: 100%;
+      position: relative;
+      max-width: 400px;
+      box-shadow: none !important;
+      margin: 0 auto;
+    }
+    &:before {
       content: "";
       position: absolute;
       top: 20px;
       right: 0;
-      height: 60px;
+      height: 68px;
       width: calc(50% + 47px);
       z-index: 99;
       cursor: not-allowed;
     }
-
     .formSelectWrapper {
       width: calc(50% - 68px);
       cursor: pointer;
+      height: 60px;
+
+      @media screen and (max-height: 768px) {
+        height: 45px;
+      }
+      @media screen and (max-width: 1366px) {
+        height: 45px;
+      }
+      @media screen and (max-width: 991.98px) {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
       label {
         color: var(--gray-6);
         font-family: "GilroyRegular";
@@ -102,10 +199,12 @@
         transform: none;
         top: 10px;
         @media screen and (max-height: 768px) {
-          padding-top: 12px;
+          padding-top: 0;
+          top: 5px;
         }
         @media screen and (max-width: 1366px) {
-          padding-top: 12px;
+          padding-top: 0;
+          top: 5px;
         }
       }
       .form-select {
@@ -143,13 +242,20 @@
           padding-right: 29px;
           padding-top: 19px;
           font-size: 14px;
+          z-index: 99;
           @media screen and (max-height: 768px) {
             height: 45px;
-            padding-top: 10px;
+            padding-top: 11px;
+            margin-top: 0;
+            position: absolute;
+            top: 0;
           }
           @media screen and (max-width: 1366px) {
             height: 45px;
-            padding-top: 10px;
+            padding-top: 11px;
+            margin-top: 0;
+            position: absolute;
+            top: 0;
           }
         }
       }
@@ -160,15 +266,24 @@
           margin-top: 25px;
           border: none;
           box-shadow: none;
+          @media screen and (max-width: 991.98px) {
+            z-index: 99;
+            margin-top: 6px;
+            width: calc(100% + 5px);
+            margin-left: -2.5px;
+          }
         }
         .option {
           position: relative;
           padding-left: 33px;
           font-size: 17px;
-          font-family: 'GilroyMedium';
-          &.selected{
+          font-family: "GilroyMedium";
+          border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+          padding-top: 8px;
+          padding-bottom: 8px;
+          &.selected {
             font-weight: initial;
-            font-family: 'GilroyMedium';
+            font-family: "GilroyMedium";
             color: var(--primary);
           }
           &.focus {
@@ -214,10 +329,13 @@
       top: -20px !important;
       left: 0 !important;
       background: var(--white);
-      padding: 95px 0 75px 0;
+      padding: 95px 0 45px 0;
       border-radius: 10px 10px 25px 25px;
       border: none;
       box-shadow: none;
+      @media screen and (max-width: 991.98px) {
+        padding-top: 25px;
+      }
       .month-element {
         text-transform: capitalize;
         font-size: 16px;
@@ -336,9 +454,9 @@
               }
             }
 
-            @media screen  and (min-width:992px){
-              &:hover{
-                &:before{
+            @media screen and (min-width: 992px) {
+              &:hover {
+                &:before {
                   color: var(--primary);
                 }
               }
@@ -371,7 +489,7 @@
         width: 90px;
         left: 0;
         margin: 0 auto;
-        display: none!important;
+        display: none !important;
         // &.normal {
         //   .normal-top {
         //     display: none !important;
@@ -390,11 +508,11 @@
           font-size: 14px;
           font-family: "GilroySemibold";
           border-radius: 10px;
-          transition: all .3s linear;
+          transition: all 0.3s linear;
 
-          @media screen and (min-width:992px) {
-            &:hover{
-              background-color: rgba(0,0,0,0);
+          @media screen and (min-width: 992px) {
+            &:hover {
+              background-color: rgba(0, 0, 0, 0);
               color: var(--black);
             }
           }
@@ -405,6 +523,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 991.98px) {
+          text-align: center;
+        }
         .shortcuts {
           & > b {
             display: none !important;
@@ -427,7 +548,7 @@
             padding: 5px 13px;
             border-radius: 4px;
             color: var(--gray-7);
-            transition: all .3s linear;
+            transition: all 0.3s linear;
 
             &:nth-child(1) {
               margin-left: 23px;
@@ -443,14 +564,19 @@
               }
             }
 
-            @media screen and (min-width:991.98px) {
-              &:hover{
+            @media screen and (min-width: 991.98px) {
+              &:hover {
                 background-color: var(--gray-3);
               }
             }
           }
         }
         .next-buttons {
+          @media screen and (max-width: 991.98px) {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+          }
           a {
             font-family: "GilroyMedium";
             font-size: 13px;
@@ -463,9 +589,9 @@
             padding: 5px 13px;
             border-radius: 4px;
             color: var(--gray-7);
-            transition: all .3s linear;
-            @media screen and (min-width:991.98px) {
-              &:hover{
+            transition: all 0.3s linear;
+            @media screen and (min-width: 991.98px) {
+              &:hover {
                 background-color: var(--gray-3);
               }
             }
@@ -480,8 +606,17 @@
         margin: 0 auto;
         table {
           width: 250px !important;
+          @media screen and (max-width: 991.98px) {
+            float: none;
+            margin: 0 auto;
+            max-width: 300px;
+            width: 100%!important;
+          }
           &.month2 {
             float: right;
+            @media screen and (max-width: 991.98px) {
+              float: none;
+            }
           }
           td,
           th {
@@ -491,6 +626,13 @@
             padding: 3px;
           }
         }
+      }
+      .gap {
+        width: 100%;
+        height: 30px;
+        top: 0;
+        float: none;
+        margin: 0 auto;
       }
     }
 
@@ -504,20 +646,38 @@
       margin-left: 0;
       margin-right: 0;
       min-height: 350px;
+      @media screen and (max-width: 991.98px) {
+        width: 100%;
+        position: relative;
+        box-shadow: none !important;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      &:before {
+        width: calc(50% + 75px);
+      }
       .dateInputWrapper {
         width: calc(46% - 62px);
-        opacity:1;
+        opacity: 1;
+        @media screen and (max-width: 991.98px) {
+          width: 100%;
+          max-width: 400px;
+        }
       }
       .formSelectWrapper {
         width: calc(46% - 62px);
+        @media screen and (max-width: 991.98px) {
+          width: 100%;
+          max-width: 400px;
+        }
       }
     }
-    &.opened{
-      &:before{
+    &.opened {
+      &:before {
         width: 170px;
       }
-      &.apply{
-        &:before{
+      &.apply {
+        &:before {
           display: none;
         }
       }
@@ -527,7 +687,20 @@
     position: relative;
     display: flex;
     align-items: stretch;
+    height: 60px;
     width: calc(50% - 68px);
+
+    @media screen and (max-height: 768px) {
+      height: 45px;
+    }
+    @media screen and (max-width: 1366px) {
+      height: 45px;
+    }
+    @media screen and (max-width: 991.98px) {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
   }
   .customRangeButton {
     display: flex;
@@ -548,9 +721,11 @@
     border-color: var(--gray);
     @media screen and (max-height: 768px) {
       height: 45px;
+      padding-top: 21px;
     }
     @media screen and (max-width: 1366px) {
       height: 45px;
+      padding-top: 21px;
     }
     &:after {
       content: "\e90c";
@@ -572,6 +747,13 @@
         font-size: 12px;
         position: absolute;
         top: 10px;
+
+        @media screen and (max-height: 768px) {
+          top: 4px;
+        }
+        @media screen and (max-width: 1366px) {
+          top: 4px;
+        }
       }
     }
     &.active {
@@ -595,7 +777,17 @@
     @media screen and (max-width: 1366px) {
       height: 45px;
     }
-    &.active{
+    @media screen and (max-width: 991.98px) {
+      max-width: 400px;
+      width: 100%;
+      font-family: "GilroySemibold";
+      font-size: 16px;
+
+      &:hover {
+        color: var(--white) !important;
+      }
+    }
+    &.active {
       opacity: 1;
     }
   }
@@ -606,6 +798,14 @@
     display: flex;
     align-items: stretch;
     gap: 20px;
+    height: 60px;
+
+    @media screen and (max-height: 768px) {
+      height: 45px;
+    }
+    @media screen and (max-width: 1366px) {
+      height: 45px;
+    }
     #checkinInput {
       width: 50%;
       border-radius: 10px;
@@ -661,11 +861,14 @@
       }
     }
     #checkInText,
-    #checkOutText{
-      .name{
+    #checkOutText {
+      .name {
         position: absolute;
         top: 10px;
         left: 10px;
+        @media screen and (max-width: 991.98px) {
+          top: 6px;
+        }
       }
     }
     #checkInText {
@@ -689,7 +892,7 @@
         height: 45px;
       }
       .name {
-        font-family: "GilroyMedium";
+        font-family: "GilroySemibold";
         text-transform: uppercase;
         font-size: 11px;
       }
@@ -734,10 +937,22 @@
         }
       }
       .name {
-        font-family: "GilroyMedium";
+        font-family: "GilroySemibold";
         font-size: 11px;
         text-transform: uppercase;
       }
+    }
+  }
+
+  &.opened {
+    @media screen and (max-width: 991.98px) {
+      opacity: 1;
+      left: 0;
+      visibility: visible;
+      overflow: hidden;
+      height: 100%;
+      overflow-y: auto;
+      padding-top: 10px;
     }
   }
 }

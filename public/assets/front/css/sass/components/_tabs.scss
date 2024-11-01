@@ -22,6 +22,11 @@
       border-radius: 25px;
       font-size: 16px;
       color: #444444;
+      @media screen and (max-width:991.98px) {
+        font-size: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
 
       &.active {
         color: var(--white);
@@ -69,12 +74,20 @@
       line-height: 65px;
       color: var(--black);
       font-family: "GilroySemibold";
+      @media screen and (max-width:991.98px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
     }
     .category {
       font-family: "GilroySemibold";
       font-size: 40px;
       line-height: 65px;
       color: var(--primary);
+      @media screen and (max-width:991.98px) {
+        font-size:20px;
+        line-height:27px;
+      }
     }
     p {
       color: #444444;
@@ -82,6 +95,10 @@
       font-size: 16px;
       line-height: 25px;
       margin-top: 15px;
+      @media screen and (max-width:991.98px) {
+        font-size:14px;
+        line-height:22px;
+      }
     }
     .textLink {
       margin-top: 30px;
@@ -89,6 +106,11 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      @media screen and (max-width:991.98px) {
+        font-size:14px;
+        line-height:22px;
+        margin-top: 10px;
+      }
       .icon-arrow-long{
         font-size: 30px;
       }
