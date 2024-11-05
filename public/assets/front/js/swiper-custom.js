@@ -17,7 +17,11 @@ const sliders = document.querySelectorAll('.singleSlide');
 sliders.forEach((sliderElement) => {
     new Swiper(sliderElement, {
         slidesPerView: 1,
-        loop: true, // loopEnabled değerini buraya yerleştirin
+        loop: true,
+        // autoplay: {
+        //   delay: 2500,
+        //   pauseOnMouseEnter: true,
+        // },
         pagination: {
             el: sliderElement.querySelector('.swiper-pagination-single'),
             clickable: true,

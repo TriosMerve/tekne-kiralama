@@ -18,6 +18,9 @@ section {
         padding: 30px 16px;
       }
     }
+    &.type2{
+      padding-top: 25px;
+    }
   }
   .sectionHead {
     max-width: 750px;
@@ -98,9 +101,9 @@ section {
       }
       p {
         font-family: "GilroyBold";
-        font-size: 16px;
+        font-size: 18px;
         color: var(--white);
-        line-height: 24px;
+        line-height: 26px;
         padding-left: 30px;
         @media screen and (max-width:640px) {
           flex: 1;
@@ -108,6 +111,10 @@ section {
       }
       .fixBtn {
         margin-left: auto;
+        font-family: 'GilroySemibold';
+        font-size: 16px;
+        height: 60px;
+        min-width: 200px;
         @media screen and (max-width: 640px) {
           width: 100%;
           max-width: 400px;
@@ -144,7 +151,7 @@ section {
     justify-content: space-evenly;
     @media screen and (max-height: 900px) {
     }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1700px) {
       padding-left: 36px;
       padding-right: 36px;
       padding-top: 30px;
@@ -317,8 +324,10 @@ section {
     aspect-ratio: 1 / 1;
     max-width: 575px;
     border-radius: 100px;
+    margin-left: auto;
     @media screen and (max-width: 991.98px) {
       border-radius: 40px;
+      margin-right: auto;
     }
     video,
     iframe {
@@ -614,4 +623,10 @@ section {
       }
     }
   }
+}
+
+
+//iç sayfalar
+.pageSection{
+  padding-top: 85px;
 }

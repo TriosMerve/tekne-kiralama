@@ -181,6 +181,8 @@
       }
       @media screen and (max-width: 1366px) {
         height: 45px;
+        width: auto;
+        flex: 1;
       }
       @media screen and (max-width: 991.98px) {
         width: 100%;
@@ -610,7 +612,7 @@
             float: none;
             margin: 0 auto;
             max-width: 300px;
-            width: 100%!important;
+            width: 100% !important;
           }
           &.month2 {
             float: right;
@@ -628,11 +630,13 @@
         }
       }
       .gap {
-        width: 100%;
-        height: 30px;
-        top: 0;
-        float: none;
-        margin: 0 auto;
+        @media screen and (max-width: 991.98px) {
+          width: 100%;
+          height: 30px;
+          top: 0;
+          float: none;
+          margin: 0 auto;
+        }
       }
     }
 
@@ -659,6 +663,11 @@
       .dateInputWrapper {
         width: calc(46% - 62px);
         opacity: 1;
+        @media screen and (max-width: 1366px) {
+          width: calc(46% - 62px);
+          visibility: visible;
+          overflow: visible;
+        }
         @media screen and (max-width: 991.98px) {
           width: 100%;
           max-width: 400px;
@@ -695,6 +704,9 @@
     }
     @media screen and (max-width: 1366px) {
       height: 45px;
+      width: 0;
+      visibility: hidden;
+      overflow: hidden;
     }
     @media screen and (max-width: 991.98px) {
       width: 100%;
@@ -953,6 +965,52 @@
       height: 100%;
       overflow-y: auto;
       padding-top: 10px;
+    }
+  }
+
+  &.type2 {
+    @media screen and (min-width: 992px) {
+      flex: 1;
+      min-height: initial;
+      height: 80px;
+      padding: 0;
+      max-width:900px;
+    }
+    .dateTimeSearchWrapper {
+      @media screen and (min-width:992px) {
+        padding: 10px 20px;
+        @media screen and (max-width: 1366px) {
+          padding: 18px 20px;
+        }
+      }
+
+      &.active {
+        @media screen and (min-width:992px){
+
+          width: 100%;
+          .formSelectWrapper {
+            width: calc(50% - 68px);
+          }
+          .dateInputWrapper {
+            width: calc(50% - 68px);
+          }
+        }
+      }
+    }
+    #dateInputs {
+      #checkOutText,
+      #checkInText {
+        &:after {
+          content: "\e90c";
+          font-family: "customFont";
+          color: var(--gray-5);
+          font-size: 16px;
+          position: absolute;
+          right: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
     }
   }
 }

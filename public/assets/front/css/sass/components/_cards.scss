@@ -39,6 +39,108 @@
           font-size: 13px;
         }
       }
+      .card-id {
+        font-family: "GilroyRegular";
+        font-size: 14px;
+        color: var(--gray-6);
+        line-height: 20px;
+        min-width: 85px;
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+        }
+      }
+      .options {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--gray-6);
+        font-family: "GilroyRegular";
+        margin-top: 0;
+        margin-bottom: 30px;
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+        }
+      }
+      .discount{
+        margin-top: 0;
+        font-size: 16px;
+        color: #919191;
+        font-family: 'GilroyMedium';
+        text-decoration: line-through;
+        @media screen and (max-width: 991.98px) {
+          margin-top: 0;
+          font-size: 13px;
+        }
+      }
+      .countPrice {
+        margin-top: 0;
+        color: var(--primary);
+        font-size: 14px;
+        display: flex;
+        align-items: flex-end;
+        margin-top: 5px;
+        @media screen and (max-width: 991.98px) {
+          margin-top: 0;
+          font-size: 13px;
+        }
+        .price {
+          font-size: 28px;
+          font-family: "GilroySemibold";
+          line-height: 19px;
+          @media screen and (max-width: 991.98px) {
+            font-size: 24px;
+          }
+        }
+        .currencly {
+          font-family: sans-serif;
+          padding: 0 5px 0 10px;
+          font-size: 19px;
+        }
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        @media screen and (max-width: 991.98px) {
+          margin-top: 10px;
+          gap: 10px;
+        }
+        span {
+          font-size: 13px;
+          font-family: "GilroyMedium";
+          line-height: 20px;
+          background-color: var(--gray);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 10px;
+          border-radius: 5px;
+          color: var(--gray-6);
+          @media screen and (max-width: 991.98px) {
+            font-size: 12px;
+            padding: 3px 7px;
+          }
+        }
+      }
+      .point{
+        .icon-star-percent{
+          color: var(--primary);
+          font-size: 26px;
+          margin-right: 10px;
+        }
+        .pointNumber{
+          font-family: 'GilroySemibold';
+          font-size: 22px;
+          line-height: 30px;
+          color: var(--primary);
+        }
+        .text{
+          font-family: 'GilroyRegular';
+          color: #545454;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
 
     }
   }
@@ -135,7 +237,7 @@
           position: absolute;
           top: 20px;
           left: 20px;
-          z-index: 9;
+          z-index: 2;
           display: flex;
           align-items: flex-start;
           gap: 10px;
@@ -166,74 +268,7 @@
             line-height: 26px;
           }
         }
-        .card-id {
-          font-family: "GilroyRegular";
-          font-size: 14px;
-          color: var(--gray-6);
-          line-height: 20px;
-          min-width: 85px;
-          @media screen and (max-width: 991.98px) {
-            font-size: 13px;
-          }
-        }
-        .options {
-          font-size: 14px;
-          line-height: 22px;
-          color: var(--gray-6);
-          font-family: "GilroyRegular";
-          margin-top: 0;
-          @media screen and (max-width: 991.98px) {
-            font-size: 13px;
-          }
-        }
-        .countPrice {
-          margin-top: 20px;
-          color: var(--primary);
-          font-size: 14px;
-          @media screen and (max-width: 991.98px) {
-            margin-top: 10px;
-            font-size: 13px;
-          }
-          .price {
-            font-size: 28px;
-            font-family: "GilroySemibold";
-            line-height: 30px;
-            @media screen and (max-width: 991.98px) {
-              font-size: 24px;
-            }
-          }
-          .currencly {
-            font-family: sans-serif;
-            padding: 0 5px 0 10px;
-            font-size: 19px;
-          }
-        }
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          margin-top: 20px;
-          @media screen and (max-width: 991.98px) {
-            margin-top: 10px;
-            gap: 10px;
-          }
-          span {
-            font-size: 13px;
-            font-family: "GilroyMedium";
-            line-height: 20px;
-            background-color: var(--gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px 10px;
-            border-radius: 5px;
-            color: var(--gray-6);
-            @media screen and (max-width: 991.98px) {
-              font-size: 12px;
-              padding: 3px 7px;
-            }
-          }
-        }
+
       }
     }
   }
@@ -410,7 +445,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            z-index: 9;
+            z-index:2;
             display: flex;
             align-items: flex-start;
             gap: 10px;

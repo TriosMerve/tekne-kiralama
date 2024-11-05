@@ -144,7 +144,7 @@
   font-size: 60px;
   bottom: auto;
   transform: none;
-  top: 34%;
+  top: 43%;
   transition: all .3s linear;
   @media screen and (max-width:991.98px) {
     top: calc(100% + 34px);
@@ -411,7 +411,7 @@
   display: flex;
   align-items: stretch;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom:20px;
   @media screen and (max-width:991.98px) {
     padding-left: 16px;
     padding-right: 16px;
@@ -419,9 +419,9 @@
   }
   .filterSlideButton{
     font-family: "GilroyMedium";
-    font-size: 16px;
-    color: var(--primary);
-    background-color: var(--white);
+    font-size: 15px;
+    background-color: var(--gray-3);
+    color: var(--gray-7);
     padding: 12px 20px;
     border-radius: 6px;
     transition: all .3s linear;
@@ -434,6 +434,60 @@
       &:hover{
         color: var(--white);
         background-color: var(--primary);
+      }
+    }
+  }
+}
+
+.textSlideWrapper{
+  height: 80px;
+  &:before{
+    display: none;
+  }
+}
+.slideTextItem{
+  a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    .icon-favorite{
+      font-size: 32px;
+      transition: all .3s linear;
+    }
+    .desc{
+      .title{
+        font-family: 'GilroySemibold';
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--gray-7);
+        transition: all .3s linear;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .text{
+        font-family: 'GilroyRegular';
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--gray-6);
+        display: -webkit-box;
+        -webkit-line-clamp:1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+    @media screen and (min-width:992px) {
+      &:hover{
+        .icon-favorite{
+          color: var(--primary);
+        }
+        .desc{
+          .title{
+            color: var(--primary);
+          }
+        }
       }
     }
   }

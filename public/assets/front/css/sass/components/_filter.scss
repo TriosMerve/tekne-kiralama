@@ -1,0 +1,118 @@
+.filterWrapper {
+  .filterTop {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray);
+    border-radius: 24px;
+    margin-top: 60px;
+
+    .boatType {
+      position: absolute;
+      top: -40px;
+      padding-left: 20px;
+      margin-top: 0;
+    }
+  }
+  .singleSlide {
+    width: 300px;
+    margin-left: auto;
+  }
+  .filterBottom {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    .filterLeft {
+      display: flex;
+      align-items: center;
+    }
+    .filterModalButton {
+      font-size: 40px;
+      color: var(--primary);
+      background-color: rgba(0, 0, 0, 0);
+      margin-right: 40px;
+      padding-left: 0;
+      min-width: initial;
+      @media screen and (max-width: 1100px) {
+        margin-right: 20px;
+      }
+      &:after {
+        display: none;
+      }
+      &:before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: var(--gray-5);
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: var(--gray-6);
+        }
+      }
+    }
+  }
+  .filterDropdownButton {
+    margin-left: auto;
+    .dropdown-toggle {
+      padding-right: 40px;
+      color: var(--gray-7);
+      &:after {
+        content: "\e903";
+        font-family: "customFont";
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        height: initial;
+        right: 20px;
+        width: initial;
+        transform: rotate(90deg);
+        left: initial;
+        bottom: initial;
+      }
+      @media screen and (min-width:992px) {
+        &:hover{
+            color: var(--primary);
+        }
+      }
+    }
+  }
+  .buttonsFilterWrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    @media screen and (max-width: 1100px) {
+      gap: 10px;
+    }
+    .filterButton {
+      color: var(--gray-6) !important;
+      font-size: 14px;
+      height: 40px;
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: var(--white) !important;
+        }
+      }
+    }
+  }
+  .filterFooter {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    .filterResult {
+      .title {
+        font-family: "GilroySemibold";
+        color: var(--black);
+        font-size: 20px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 14px;
+        color: var(--gray-5);
+        line-height: 24px;
+        font-family: "GilroyRegular";
+      }
+    }
+  }
+}
