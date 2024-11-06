@@ -73,10 +73,21 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header" class="">
+        <header id="header" class="type2">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <div class="calendarResult d-none">
+                        <div class="dateInfo">
+                            <span class="icon-search"></span>
+                            <div id="locationName" class="locationName">Şehir Seçiniz</div>
+                            <div class="dateResult">
+                                Tarih Seçiniz
+                            </div>
+                        </div>
+                        <a href="#" class="filterModalButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span class="icon-filter"></span></a>
+
+                    </div>
                     <div class="d-flex hstack ms-auto">
                         <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -469,133 +480,136 @@
             <section class="pageSection">
                 <div class="container-3xl">
                     <div class="filterWrapper">
-                        <div class="filterTop">
-                            <div class="calendarMobilButton d-lg-none my-5">
-                                <a href="#" class="fixBtn button-primary ">
-                                    Lokasyon Seç
-                                </a>
-                            </div>
-                            <div class="calendarWrapper type2">
-                                <div class="closeCalendarButton d-lg-none"><span class="icon-close"></span></div>
-            
-                                <div class="boatType">
-                                    <button id="hiraBoat" class="active typeItem shadow-md"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
-                                    <button id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button>
+                        <div class="filterHead">
+                            <div class="filterTop">
+                                <div class="calendarMobilButton d-lg-none my-lg-5">
+                                    <a href="#" class="fixBtn button-primary ">
+                                        Lokasyon Seç
+                                    </a>
                                 </div>
-                        
-                            
-                                <div class="dateTimeSearchWrapper">
-                                    <div class="form-floating formSelectWrapper">
-                                        <select class="form-select customSelect locationSelect" id="floatingSelect" aria-label="Floating label select example">
-                                        <option selected>Nereden binmek istersin?</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                        </select>
-                                        <label for="floatingSelect">Şehir</label>
+                                <div class="calendarWrapper type2">
+                                    <div class="closeCalendarButton d-lg-none"><span class="icon-close"></span></div>
+                
+                                    <div class="boatType">
+                                        <button id="hiraBoat" class="active typeItem shadow-md"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
+                                        <button id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button>
                                     </div>
-                                    <div class="dateInputWrapper">
-                                        <div id="dateInputs">
-                                            <input id="checkinInput" value="">  <input id="checkoutInput" value=""> 
-                                            <div id="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
-                                            <div id="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                            
+                                
+                                    <div class="dateTimeSearchWrapper">
+                                        <div class="form-floating formSelectWrapper">
+                                            <select class="form-select customSelect locationSelect" id="floatingSelect" aria-label="Floating label select example">
+                                            <option selected>Nereden binmek istersin?</option>
+                                            <option value="1">İstanbul</option>
+                                            <option value="2">Ordu</option>
+                                            <option value="3">Trabzon</option>
+                                            <option value="4">Çanakkale</option>
+                                            <option value="5">Üsküdar</option>
+                                            <option value="6">Beşiktaş</option>
+                                            <option value="7">Büyükçekmece</option>
+                                            </select>
+                                            <label for="floatingSelect">Şehir</label>
+                                        </div>
+                                        <div class="dateInputWrapper">
+                                            <div id="dateInputs">
+                                                <input id="checkinInput" value="">  <input id="checkoutInput" value=""> 
+                                                <div id="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
+                                                <div id="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
+                                        <div class="reservation-type d-none w-100">
+                                            <button id="overnight" class="active typeItem shadow-md">Gece Konaklamalı</button>
+                                            <button id="hourly" class="typeItem shadow-md">Saatlik</button>
                                         </div>
                                     </div>
-                                    <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
-                                    <div class="reservation-type d-none w-100">
-                                        <button id="overnight" class="active typeItem shadow-md">Gece Konaklamalı</button>
-                                        <button id="hourly" class="typeItem shadow-md">Saatlik</button>
-                                    </div>
+                
                                 </div>
-            
-                            </div>
-                            <div class="swiper singleSlide textSlideWrapper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide slideTextItem">
-                                        <a href="#">
-                                            <span class="icon-favorite"></span>
-                                            <div class="desc">
-                                                <div class="title">Guests love Bob W</div>
-                                                <div class="text">4.7/5 based on 23408 reviews</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide slideTextItem">
-                                        <a href="#">
-                                            <span class="icon-favorite"></span>
-                                            <div class="desc">
-                                                <div class="title">Stop by or stick around</div>
-                                                <div class="text">Save money by booking on Bobw.co</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide slideTextItem">
-                                        <a href="#">
-                                            <span class="icon-favorite"></span>
-                                            <div class="desc">
-                                                <div class="title">Guests love Bob W Stop by or stick around</div>
-                                                <div class="text">Get 5% off by joining our loyalty program</div>
-                                            </div>
-                                        </a>
+                                <div class="swiper singleSlide textSlideWrapper d-none d-lg-block">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slideTextItem">
+                                            <a href="#">
+                                                <span class="icon-favorite"></span>
+                                                <div class="desc">
+                                                    <div class="title">Guests love Bob W</div>
+                                                    <div class="text">4.7/5 based on 23408 reviews</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slideTextItem">
+                                            <a href="#">
+                                                <span class="icon-favorite"></span>
+                                                <div class="desc">
+                                                    <div class="title">Stop by or stick around</div>
+                                                    <div class="text">Save money by booking on Bobw.co</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slideTextItem">
+                                            <a href="#">
+                                                <span class="icon-favorite"></span>
+                                                <div class="desc">
+                                                    <div class="title">Guests love Bob W Stop by or stick around</div>
+                                                    <div class="text">Get 5% off by joining our loyalty program</div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="filterBottom">
-                            <div class="filterLeft">
-                                <a href="#" class="fixBtn filterModalButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span class="icon-filter"></span></a>
-                                <div class="buttonsFilterWrapper d-none d-lg-flex">
-                                    <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Tekne Tipi</a>
-                                    <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Fiyat</a>
-                                    <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Mürettebat</a>
-                                    <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Konaklama Kapasitesi</a>
-                                    <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Seyir Kapasitesi</a>
+                            <div class="filterBottom">
+                                <div class="filterLeft">
+                                    <a href="#" class="fixBtn filterModalButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span class="icon-filter"></span></a>
+                                    <div class="buttonsFilterWrapper d-none d-lg-flex">
+                                        <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Tekne Tipi</a>
+                                        <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Fiyat</a>
+                                        <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Mürettebat</a>
+                                        <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Konaklama Kapasitesi</a>
+                                        <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Seyir Kapasitesi</a>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
 
-                            <!-- <div class="dropdown filterDropdownButton d-none d-lg-flex">
-                                <a href="#" class="fixBtn button-outline dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                  İlan No İle Ara
-                                </a>
-                                <form class="dropdown-menu p-4">
-                                  <div class="mb-3">
-                                    <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-                                  </div>
-                                  <div class="mb-3">
-                                    <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-                                  </div>
-                                  <div class="mb-3">
-                                    <div class="form-check">
-                                      <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                                      <label class="form-check-label" for="dropdownCheck2">
-                                        Remember me
-                                      </label>
+                                <!-- <div class="dropdown filterDropdownButton d-none d-lg-flex">
+                                    <a href="#" class="fixBtn button-outline dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                    İlan No İle Ara
+                                    </a>
+                                    <form class="dropdown-menu p-4">
+                                    <div class="mb-3">
+                                        <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
                                     </div>
-                                  </div>
-                                  <button type="submit" class="btn btn-primary">Sign in</button>
-                                </form>
-                            </div> -->
+                                    <div class="mb-3">
+                                        <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                        <label class="form-check-label" for="dropdownCheck2">
+                                            Remember me
+                                        </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                    </form>
+                                </div> -->
 
+                            </div>
                         </div>
                         <div class="filterFooter">
                             <div class="filterResult">
                                 <div class="title">33 Yat types</div>
                                 <p>Multiple units of each  type are available</p>
                             </div>
-                            <div class="dropdown filterDropdownButton">
-                                <a href="#" class="fixBtn button-outline dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                  Sıralama
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><button class="dropdown-item" type="button">Önerilen</button></li>
-                                    <li><button class="dropdown-item" type="button">En düşük fiyat</button></li>
-                                    <li><button class="dropdown-item" type="button">En yüksek fiyat</button></li>
-                                    <li><button class="dropdown-item" type="button">En yüksek puan</button></li>
-                                </ul>
-                            </div>
+                            <select name="" id="shortSelect" class="shortSelect customSelect">
+                                <option value="">Sıralama</option>
+                                <option value="onerilen">Önerilen</option>
+                                <option value="endusukfiyat">En düşük fiyat</option>
+                                <option value="enyuksekfiyat">En yüksek fiyat</option>
+                                <option value="enyuksekpuan">En yüksek puan</option>
+                            </select>
+                            
                         </div>
                     </div>
 
@@ -644,9 +658,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                    
-                                    <div class="discount">25.800</div>
-                                    <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <div class="discount">25.800</div>
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 14 kişi</span>
                                         <span>14.2m</span>
@@ -697,8 +712,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1789034A</div>
                                     </div>
-                                  
-                                    <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 5 kişi</span>
                                         <span>10.9m</span>
@@ -748,8 +765,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                    
-                                    <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 8 kişi</span>
                                         <span>11.6m</span>
@@ -800,8 +819,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-
-                                    <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 14 kişi</span>
                                         <span>14.2m</span>
@@ -849,8 +870,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1789034A</div>
                                     </div>
-                                   
-                                    <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 5 kişi</span>
                                         <span>10.9m</span>
@@ -897,8 +920,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                   
-                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 8 kişi</span>
                                         <span>11.6m</span>
@@ -907,11 +932,117 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="d-flex text-center mt-5 pt-4">
+                            <a href="#" class="fixBtn button-primary mx-auto moreButton">Daha fazla göster</a>
+                        </div>
+                    
+                        <div class="pageContent padding bg-gray rounded-5">
+                            <div class="paragraph">
+                                <div class="shortText col-lg-9 text-primary">
+                                    Sıradan ve rutin geçen 364 günün ertesi, senede bir gün dahi olsa kendinizi şımartın. Teknede doğum günü; Boğaz Çocuğu konseptleri arasında en güzel alternatifler arasında yer almaktadır. 
+                                    Teknede doğum günü için tüm süslemeler
+                                </div>
+                                <h2>Teknede Doğum Günü</h2>
+                                Doğum günü için süslenmiş, makyajı tamamlanmış muhteşem bir teknede bir tek güne, o özel ve güzel güne, en özel anlarla tanıklık etmeniz için teknede doğum günü kutlaması davetlisisiniz.
+                                <br><br>
+                                <span>Senede Bir Gün</span>
+                                Sıradan ve rutin geçen 364 günün ertesi, senede bir gün dahi olsa kendinizi şımartın. Teknede doğum günü; Boğaz Çocuğu konseptleri arasında en güzel alternatifler arasında yer almaktadır. 
+                                <br><br>
+                                Teknede doğum günü için tüm süslemeler, konfetiler, doğum günü pastası, havai fişekler, hediyeler, içecekler ve mumlar hazır. 
+                                <br><br>
+                                Siz de hazırsanız mumları üfleyebilirsiniz. Yeni yaşınızın birinci günü davetlilerin her zaman hatırlayacağı güzel bir anıya dönüştü bile.
+                                <br><br>
+
+                                <span>Yeni Yaş Yeni Konseptler</span>
+                                Her yeni yaş özeldir. Boğaz Çocuğu müşterilerinin istek ve dileklerine göre şekillendirdiği yeni konseptlerle kalitesini her zaman konuşturmaya devam edecektir.
+                                <br><br>
+                                Planlı veya sürpriz doğum günü etkinliklerinde Boğaz Çocuğu farkını yaşayabilmeniz adına Teknede Doğum Günü organizasyonları için doğru adrestesiniz. 
+                                <br><br>
+                                Akılda kalıcı, etkileyici hatta ilham verici olması adına her ayrıntı düşünülerek davetlilerinizin unutamayacağı göz alıcı boğaz manzarası eşliğinde mükemmel bir doğum gününe davetlisiniz. 
+                                <br><br>
+                                Her Doğum günü özeldir ancak Teknede Doğum Günü sizinle daha da güzeldir.
+
+
+                            </div>
+                            <div class="row mx-0 mt-5">
+                                <div class="accordion accordion-flush customAcc col-lg-8 px-0" id="accordionGroupOne">
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Tekne kiralama hangi illerde yapılıyor? Tekne kiralama hangi illerde yapılıyor?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionGroupOne">
+                                        <div class="accordion-body">yatkiralama.net, sadece İstanbul'da, saatlik ve günlük sürelerde yat kiralama hizmeti vermektedir.</div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            En az yat kiralama süresi nedir?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionGroupOne">
+                                        <div class="accordion-body">
+                                            Yat kiralama süresi minimum 2 saattir. 30 dakika da kiralama yapmak isteseniz yine 2 saatlik yat kiralama ücretini ödemeniz gerekir.
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Kiralık yatların ses sistemi var mı?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionGroupOne">
+                                        <div class="accordion-body">
+                                            Evet, tüm kiralık yatların ses sistemi vardır ve kullanımları ücretsizdir. Bluetooth ile ses sistemine bağlanarak istediğiniz şarkıları cep telefonunuz üzerinden dinletebilirsiniz.
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                            Kiralanan yata yemek getirilir mi?
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionGroupOne">
+                                        <div class="accordion-body">
+                                            Evet, kiralık yatları menü talep etmeden kiralayıp, kendi yiyecek ve içeceklerinizi yanınızda getirebilirsiniz ancak bu durumda ekstra 1.500 TL karşılığında garson hizmeti almanız gerekecektir. Yatta yemek pişirme imkanı olmadığını bilerek getireceğiniz yiyecekleri ona göre seçmelisiniz.
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                            Yat kiralama fiyatları kaç TL?
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionGroupOne">
+                                        <div class="accordion-body">
+                                            İstanbul'da saatlik yat kiralama fiyatı 5.000 TL, günlük yat kiralama fiyatı 35.000 TL'den başlar.
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                            Yat kiralama süreci nasıl ilerler?
+                                        </button>
+                                        </h2>
+                                        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionGroupOne">
+                                        <div class="accordion-body">
+                                            Yat kiralama için şirketimize ödemeniz gereken toplam ücretin yarısını rezervasyon yaparken kaparo olarak göndermeniz gerekir. Kaparo ödemesi alınmadan rezervasyon yapılmaz. Bu nedenle elinizi çabuk tutmalı ve hızlıca ödeme yapmalısınız. Aksi halde bir başkası seçtiğiniz kiralık yatı kendi organizasyonu için rezerve edebilir. Ücretin kalan diğeri yarısı da organizasyon günü yatta nakit olarak alınacağından mutlaka yanınızda nakit bulundurun. Kredi kartı ile ödeme yapma imkanı yoktur.
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </section>
-            
-
             <!--E-Bulten section-->
             <section class="eBultenSection">
                 <div class="container-3xl">
@@ -929,6 +1060,8 @@
                     </div>
                 </div>
             </section>
+            
+
         </main>
 
         <!---Tüm sayfalarda standart footer-->
@@ -1184,7 +1317,6 @@
     <script src="public/assets/front/js/custom-date.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script>
     <script>
-
     </script>
 </body>
 

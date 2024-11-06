@@ -1,6 +1,7 @@
 .customAcc {
   .accordion-item {
     margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0);
     .accordion-button {
       background-color: rgba(0, 0, 0, 0);
       border: none;
@@ -71,6 +72,17 @@
       code {
         color: var(--primary);
         font-family: "GilroyRegular";
+      }
+    }
+  }
+}
+
+.pageContent{
+  .customAcc{
+    .accordion-item{
+      .accordion-button{
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }

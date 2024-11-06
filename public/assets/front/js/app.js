@@ -8,38 +8,71 @@ $(window).on("load", function () {
     }, 100);
   }
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("video");
-  const observer = new IntersectionObserver((entries) => {
+
+  // Video öğesi mevcutsa gözlem başlat
+  if (video) {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-              video.src = video.getAttribute("data-src");
-              observer.unobserve(video);
-          }
+        if (entry.isIntersecting) {
+          video.src = video.getAttribute("data-src");
+          observer.unobserve(video);
+        }
       });
-  });
-  observer.observe(video);
+    });
+
+    observer.observe(video);
+  }
 });
 
-
-
-
 /*Scrooll page fixed header */
+let lastScrollY = window.scrollY;
+
 document.addEventListener("scroll", function () {
   var header = document.getElementById("header");
 
+  // Header için sticky sınıfı ekleme
   if (window.scrollY > 0) {
     header.classList.add("sticky-top");
   } else {
     header.classList.remove("sticky-top");
   }
 
-  if(window.scrollY > 230){
-    $(".calendarMobilButton").addClass("fixed")
-  }else{
-    $(".calendarMobilButton").removeClass("fixed")
+  // Ekran genişliği 992 pikselden küçükse çalışacak kodlar
+  if (window.innerWidth < 992) {
+    // filterHead için fixed ve yukarı kaydırma sticky sınıfı ekleme
+    if (window.scrollY > 0) {
+      $(".filterHead").addClass("fixed");
+    } else {
+      $(".filterHead").removeClass("fixed");
+    }
+
+    // Yukarı kaydırma sırasında filterHead'e sticky sınıfı ekleme
+    if (window.scrollY < lastScrollY) {
+      $(".filterHead").addClass("sticky");
+    } else {
+      $(".filterHead").removeClass("sticky");
+    }
+
+    // calendarMobilButton sabitleme
+    if (window.scrollY > 230) {
+      $(".calendarMobilButton.sticky").addClass("fixed");
+    } else {
+      $(".calendarMobilButton.sticky").removeClass("fixed");
+    }
   }
+
+  if (window.innerWidth > 992) {
+    if (window.scrollY > 0) {
+      $(".calendarResult").removeClass("d-none").show();
+    } else {
+      $(".calendarResult").hide();
+    }
+  }
+
+  // Mevcut scroll pozisyonunu sakla
+  lastScrollY = window.scrollY;
 });
 
 //Animasyonlar icin aos init kullaniliyor
@@ -84,13 +117,15 @@ $(".subMenuItem").on("click", function () {
   const targetIndex = $(this).data("target"); // Tıklanan öğeye ait target
 
   // Tüm subMenuWrapper'ları gizle
-  $(".rightMenuColumn .subMenuWrapper").addClass("d-none").removeClass("active");
+  $(".rightMenuColumn .subMenuWrapper")
+    .addClass("d-none")
+    .removeClass("active");
 
   // İlgili subMenuWrapper'ı göster
   const targetWrapper = $(".rightMenuColumn .subMenuWrapper").eq(targetIndex);
   targetWrapper.removeClass("d-none").addClass("active");
   targetWrapper.closest(".rightMenuColumn").addClass("opened");
-  $(".navMenuContent .leftMenuColumn").addClass("disabled")
+  $(".navMenuContent .leftMenuColumn").addClass("disabled");
 
   // Animasyonu çalıştır
   animateSubMenu(targetWrapper);
@@ -106,9 +141,8 @@ $(".subMenuWrapper .subMenuList").on("click", function () {
 });
 
 $(".backLink").on("click", function () {
-  $(".navMenuContent .leftMenuColumn").removeClass("disabled")
+  $(".navMenuContent .leftMenuColumn").removeClass("disabled");
   $(this).parent(".mobileMenuColumn").removeClass("opened");
-
 });
 
 $(".closedMenuButton").on("click", function () {
@@ -179,35 +213,36 @@ if (typeof $.fn.niceSelect !== "undefined") {
     $("#" + selectedValue).addClass("show active");
   });
 }
-document.querySelector('.languageWrapper .dropdown-toggle').addEventListener('click', function () {
-  const body = document.body;
-  if (this.classList.contains('show')) {
-      body.classList.toggle('overflow-hidden');
-  } else {
-      body.classList.remove('overflow-hidden');
-  }
-});
+document
+  .querySelector(".languageWrapper .dropdown-toggle")
+  .addEventListener("click", function () {
+    const body = document.body;
+    if (this.classList.contains("show")) {
+      body.classList.toggle("overflow-hidden");
+    } else {
+      body.classList.remove("overflow-hidden");
+    }
+  });
 
 // Dropdown kapandığında sınıfı kaldır
-document.addEventListener('click', function (e) {
-  if (!e.target.closest('.languageWrapper')) {
-      document.body.classList.remove('overflow-hidden');
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".languageWrapper")) {
+    document.body.classList.remove("overflow-hidden");
   }
 });
 
+document.querySelectorAll(".customTab .nav-link").forEach((tab) => {
+  tab.addEventListener("click", function () {
+    setTimeout(() => {
+      if (this.classList.contains("active")) {
+        const container = document.querySelector(".verticalCustomScroll");
+        const offsetLeft = this.offsetLeft - container.offsetLeft;
 
-document.querySelectorAll('.customTab .nav-link').forEach((tab) => {
-  tab.addEventListener('click', function () {
-      setTimeout(() => {
-          if (this.classList.contains('active')) {
-              const container = document.querySelector('.verticalCustomScroll');
-              const offsetLeft = this.offsetLeft - container.offsetLeft;
-
-              container.scrollTo({
-                  left: offsetLeft,
-                  behavior: 'smooth'
-              });
-          }
-      }, 100); // Aktif sınıfının atanmasını beklemek için kısa bir gecikme
+        container.scrollTo({
+          left: offsetLeft,
+          behavior: "smooth",
+        });
+      }
+    }, 100); // Aktif sınıfının atanmasını beklemek için kısa bir gecikme
   });
 });

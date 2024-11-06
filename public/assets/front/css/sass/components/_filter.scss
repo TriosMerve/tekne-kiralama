@@ -1,11 +1,50 @@
 .filterWrapper {
+  .filterHead {
+    @media screen and (max-width: 991.98px) {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &.fixed {
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      left: 0;
+      right: 0;
+      z-index: 99999;
+      background: var(--white);
+      padding: 20px 16px;
+      transition: all 0.3s linear;
+      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2) !important;
+      &.sticky {
+        top: 65px;
+      }
+    }
+  }
   .filterTop {
     display: flex;
     align-items: center;
     border: 1px solid var(--gray);
-    border-radius: 24px;
+    border-radius: 16px;
     margin-top: 60px;
-
+    @media screen and (max-width: 991.98px) {
+      border: none;
+      margin-top: 0;
+      flex: 1;
+    }
+    .calendarMobilButton {
+      @media screen and (max-width: 991.98px) {
+        width: 100%;
+      }
+      a {
+        @media screen and (max-width: 991.98px) {
+          background-color: rgba(0, 0, 0, 0) !important;
+          color: var(--gray-6);
+          border-color: var(--gray) !important;
+          height: 45px;
+        }
+      }
+    }
     .boatType {
       position: absolute;
       top: -40px;
@@ -16,11 +55,15 @@
   .singleSlide {
     width: 300px;
     margin-left: auto;
+    margin-right: 5%;
   }
   .filterBottom {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
+    @media screen and (max-width: 991.98px) {
+      margin-top: 0;
+    }
     .filterLeft {
       display: flex;
       align-items: center;
@@ -34,22 +77,86 @@
       min-width: initial;
       @media screen and (max-width: 1100px) {
         margin-right: 20px;
+        font-size: 32px;
       }
       &:after {
         display: none;
       }
-      &:before {
-        content: "";
-        width: 1px;
-        height: 100%;
-        background-color: var(--gray-5);
-        position: absolute;
-        right: 0;
-        top: 0;
+      @media screen and (max-width: 991.98px) {
+        background-color: var(--gray);
+        color: var(--gray-6);
+        width: 50px;
+        height: 45px;
+        margin-right: 0;
+        padding-right: 0;
       }
+
       @media screen and (min-width: 992px) {
+        &:before {
+          content: "";
+          width: 1px;
+          height: 100%;
+          background-color: var(--gray-5);
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
         &:hover {
           color: var(--gray-6);
+        }
+      }
+    }
+  }
+  .shortSelect {
+    margin-left: auto;
+    width: 200px;
+    height: 40px;
+    border: 1px solid var(--gray-5);
+    color: var(--gray-6);
+    border-radius: 10px;
+    @media screen and (max-width: 991.98px) {
+      width: 50px;
+      height: 45px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:after {
+      width: 8px;
+      height: 8px;
+      @media screen and (max-width: 991.98px) {
+        display: none;
+      }
+    }
+
+    .current {
+      font-family: "GilroyMedium";
+      @media screen and (max-width: 991.98px) {
+        font-size: 0;
+        height: 100%;
+        &:before {
+          content: "\e928";
+          font-family: "customFont";
+          font-size: 30px;
+        }
+      }
+    }
+    &.open {
+      .list {
+        @media screen and (max-width:991.98px) {
+            left: auto;
+            right: 0;
+        }
+        @media screen and (min-width:992px) {
+            width: 100%;
+        }
+      }
+      .current {
+        &:before {
+          transform: rotate(180deg);
+          display: block;
         }
       }
     }
@@ -59,6 +166,7 @@
     .dropdown-toggle {
       padding-right: 40px;
       color: var(--gray-7);
+
       &:after {
         content: "\e903";
         font-family: "customFont";
@@ -71,9 +179,9 @@
         left: initial;
         bottom: initial;
       }
-      @media screen and (min-width:992px) {
-        &:hover{
-            color: var(--primary);
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: var(--primary);
         }
       }
     }
@@ -99,18 +207,22 @@
   .filterFooter {
     display: flex;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     .filterResult {
+        padding-right: 15px;
       .title {
         font-family: "GilroySemibold";
         color: var(--black);
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 25px;
+        line-height: 32px;
+        @media screen and (max-width:991.98px) {
+            font-size: 20px;
+        }
       }
       p {
         font-size: 14px;
         color: var(--gray-5);
-        line-height: 24px;
+        line-height: 20px;
         font-family: "GilroyRegular";
       }
     }

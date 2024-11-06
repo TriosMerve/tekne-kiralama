@@ -54,7 +54,14 @@
   min-height: 170px;
   position: relative;
   z-index: 9;
+  margin-top: 40px;
   // width: calc(100% + 100px);
+  @media screen and (min-height: 900px) {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 1600px) {
+    margin-top: 20px;
+  }
   @media screen and (max-width: 991.98px) {
     position: fixed;
     background-color: var(--white);
@@ -68,19 +75,15 @@
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+    margin-top: 0;
   }
   .boatType {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin: 40px auto 0;
+    margin: 0 auto 0;
     justify-content: center;
-    @media screen and (min-height: 900px) {
-      margin: 20px auto 0;
-    }
-    @media screen and (max-width: 1600px) {
-      margin: 20px auto 0;
-    }
+
     @media screen and (max-width: 991.98px) {
       width: calc(100% - 70px);
       margin-left: auto;
@@ -222,6 +225,7 @@
         box-shadow: none;
         width: 100%;
         border-radius: 10px !important;
+        background-image: none;
         @media screen and (max-height: 768px) {
           height: 45px;
         }
@@ -229,7 +233,8 @@
           height: 45px;
         }
         &:after {
-          display: none;
+          width: 8px;
+          height: 8px;
         }
         &:focus {
           box-shadow: none;
@@ -268,6 +273,18 @@
           margin-top: 25px;
           border: none;
           box-shadow: none;
+          max-height: 244px;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar{
+            width: 4px;
+          }
+          &::-webkit-scrollbar-thumb{
+            background-color: var(--gray-5);
+          }
+          &::-webkit-scrollbar-track{
+            background-color: var(--gray-3);
+          }
           @media screen and (max-width: 991.98px) {
             z-index: 99;
             margin-top: 6px;
@@ -660,6 +677,19 @@
       &:before {
         width: calc(50% + 75px);
       }
+      .dateBack {
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+        // background: #ffffff;
+        // box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.175) !important;
+        // height: calc(100% + 40px);
+        // min-height: 350px;
+        // left: -20px;
+        // border-radius: 24px;
+        // top: -20px;
+        // z-index: -1;
+      }
       .dateInputWrapper {
         width: calc(46% - 62px);
         opacity: 1;
@@ -969,24 +999,39 @@
   }
 
   &.type2 {
+    margin-top: 0;
     @media screen and (min-width: 992px) {
       flex: 1;
-      min-height: initial;
-      height: 80px;
-      padding: 0;
-      max-width:900px;
+      min-height: 100px;
+      height: 100px;
+      max-width: 900px;
+      @media screen and (max-height: 768px) {
+        min-height: 80px;
+        height: 80px;
+      }
+      @media screen and (max-width: 1366px) {
+        min-height: 80px;
+        height: 80px;
+      }
     }
     .dateTimeSearchWrapper {
-      @media screen and (min-width:992px) {
-        padding: 10px 20px;
+      @media screen and (min-width: 992px) {
+        @media screen and (max-height: 768px) {
+          padding: 15px 20px;
+        }
         @media screen and (max-width: 1366px) {
-          padding: 18px 20px;
+          padding: 15px 20px;
         }
       }
 
       &.active {
-        @media screen and (min-width:992px){
-
+        .dateInputWrapper {
+          @media screen and (max-width: 991.98px) {
+            height: 45px;
+            margin-bottom: 20px;
+          }
+        }
+        @media screen and (min-width: 992px) {
           width: 100%;
           .formSelectWrapper {
             width: calc(50% - 68px);
@@ -1010,6 +1055,217 @@
           top: 50%;
           transform: translateY(-50%);
         }
+      }
+    }
+    .dateInputWrapper {
+      @media screen and (max-width: 991.98px) {
+        width: 0;
+        visibility: hidden;
+        overflow: hidden;
+        margin-bottom: 0;
+        height: 0;
+      }
+    }
+    &.opened {
+      padding-top: 50px;
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 19px;
+      z-index: 9999;
+      left: 30%;
+      height: 46px;
+      min-height: 46px;
+
+      .dateSearchButton {
+        width: auto;
+        min-width: initial;
+        font-size: 0;
+        line-height: 0;
+        padding: 0;
+        width: 23px;
+        position: absolute;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0) !important;
+        color: var(--primary);
+        border: none !important;
+        margin-left: 5px;
+        &:after {
+          content: "\e901";
+          font-family: "customFont";
+          font-size: 26px;
+          width: 30px;
+          height: 30px;
+          background-color: rgba(0, 0, 0, 0);
+          top: 50%;
+          line-height: 34px;
+          transform: translateY(-50%);
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+        }
+      }
+
+      .dateTimeSearchWrapper {
+        gap: 0;
+        background: var(--gray);
+        height: 46px;
+        border: 1px solid var(--gray-3);
+        border-radius: 10px;
+        padding: 0;
+        width: 400px;
+        &:before {
+          display: none;
+        }
+
+        .formSelectWrapper {
+          width: 200px;
+          .form-select {
+            padding-left: 33px;
+            border: none;
+            &:after {
+              border: none;
+              content: "|";
+              width: auto;
+              height: auto;
+              font-size: 22px;
+              transform: none;
+              margin-top: 0;
+              transform: translateY(-50%);
+              transform-origin: unset;
+              opacity: 0.5;
+            }
+            .current {
+              padding-left: 33px;
+              width: 100%;
+              left: 0;
+            }
+          }
+          label {
+            padding-left: 33px;
+          }
+          @media screen and (min-width: 992px) {
+            &:hover {
+              .form-select {
+                background-color: rgba(0, 0, 0, 0);
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+
+      .dateInputWrapper {
+        width: auto;
+        flex: 1;
+      }
+      #dateInputs {
+        gap: 0;
+        #checkInText,
+        #checkOutText {
+          display: none;
+        }
+        #checkinInput,
+        #checkoutInput {
+          padding: 0;
+          text-align: center;
+          border: none;
+          border-radius: 0;
+          background-color: rgba(0, 0, 0, 0);
+        }
+      }
+    }
+  }
+}
+
+.calendarResult {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+
+  .dateInfo {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray);
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    .icon-search {
+      font-size: 22px;
+      color: var(--gray-5);
+      margin-right: 10px;
+      transition: all 0.3s linear;
+    }
+    .locationName {
+      font-size: 14px;
+      color: var(--gray-6);
+      line-height: 22px;
+      position: relative;
+      font-family: "GilroySemibold";
+      padding-right: 15px;
+      margin-right: 7px;
+      transition: all 0.3s linear;
+      width: 120px;
+      &:after {
+        content: "/";
+        font-size: 15px;
+        font-family: "GilroyRegular";
+        color: var(--gray-7);
+        opacity: 0.6;
+        position: absolute;
+        right: 0;
+        transition: all 0.3s linear;
+      }
+    }
+    .dateResult {
+      font-size: 14px;
+      color: var(--gray-6);
+      line-height: 22px;
+      position: relative;
+      font-family: "GilroyMedium";
+      transition: all 0.3s linear;
+    }
+    @media screen and (min-width: 992px) {
+      &:hover {
+        background-color: var(--primary);
+        .icon-search {
+          color: var(--white);
+        }
+        .locationName {
+          color: var(--white);
+          &:after {
+            color: var(--white);
+          }
+        }
+        .dateResult {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .filterModalButton {
+    background-color: var(--gray);
+    color: var(--gray-6);
+    height: 45px;
+    border-radius: 10px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 0.3s linear;
+    @media screen and (min-width: 992px) {
+      &:hover {
+        background-color: var(--primary);
+        color: var(--white);
       }
     }
   }

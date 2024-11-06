@@ -32,6 +32,19 @@ sliders.forEach((sliderElement) => {
         },
     });
 });
+const slidersText = document.querySelectorAll('.textSlideWrapper');
+
+slidersText.forEach((sliderElement) => {
+    new Swiper(sliderElement, {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          pauseOnMouseEnter: true,
+        },
+    });
+});
+
 
 // Swiper slider'ı ilk başlatma
 const swiperInstance = new Swiper(".verticalSwiper", {

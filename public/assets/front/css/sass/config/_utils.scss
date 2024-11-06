@@ -304,6 +304,10 @@ a:hover {
       }
     }
   }
+  &.moreButton{
+    height: 60px;
+    width: 200px;
+  }
 
   &.button-white {
     background-color: var(--white);
@@ -318,7 +322,7 @@ a:hover {
       }
     }
   }
-
+  
   @media screen and (min-width: 992px) {
     &:hover {
       &.button-light {

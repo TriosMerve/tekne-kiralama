@@ -26,7 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-sort:before {
+  content: "\e928";
+}
 .icon-filter:before {
   content: "\e927";
 }

@@ -476,7 +476,7 @@
                                     <h1 class="sectionTitle">Güvenle kiralayın, denizin keyfini sürün</h1>
                                     <div class="text">Tasarımcı mobilyalı dairelerden oluşan küresel ağımızla, bir ay, bir yıl veya daha uzun süre sizinle birlikte taşınan evi deneyimleyin</div>
                                 </div>
-                                <div class="calendarMobilButton d-lg-none my-5">
+                                <div class="calendarMobilButton sticky d-lg-none my-5">
                                     <a href="#" class="fixBtn button-primary ">
                                         Lokasyon Seç
                                     </a>
@@ -493,10 +493,14 @@
                                     <div class="dateTimeSearchWrapper">
                                         <div class="form-floating formSelectWrapper">
                                             <select class="form-select customSelect locationSelect" id="floatingSelect" aria-label="Floating label select example">
-                                              <option selected>Nereden binmek istersin?</option>
-                                              <option value="1">One</option>
-                                              <option value="2">Two</option>
-                                              <option value="3">Three</option>
+                                              <option value="" selected>Nereden binmek istersin?</option>
+                                              <option value="1">İstanbul</option>
+                                              <option value="2">Ordu</option>
+                                              <option value="3">Trabzon</option>
+                                              <option value="4">Çanakkale</option>
+                                              <option value="5">Üsküdar</option>
+                                              <option value="6">Beşiktaş</option>
+                                              <option value="7">Büyükçekmece</option>
                                             </select>
                                             <label for="floatingSelect">Şehir</label>
                                         </div>
@@ -668,8 +672,10 @@
                                                             <div class="options">Göcek, 14.2m2, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -712,8 +718,10 @@
                                                             <div class="options">Fethiye, 10.9 m, Yelkenli</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -756,8 +764,10 @@
                                                             <div class="options">Bodrum, 12 m, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -800,8 +810,10 @@
                                                             <div class="options">Göcek, 12m2, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -844,8 +856,10 @@
                                                             <div class="options">Fethiye, 10.9 m, Yelkenli</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -888,8 +902,10 @@
                                                             <div class="options">Bodrum, 12 m, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -932,8 +948,10 @@
                                                             <div class="options">Bodrum, 12 m, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -976,8 +994,10 @@
                                                             <div class="options">Bodrum, 12 m, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -1020,8 +1040,10 @@
                                                             <div class="options">Bodrum, 12 m, Motoryat</div>
                                                         </div>
                                                     </div>
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                                    </div>
                                                 </div>
                                             </a>
                                         </div>
@@ -1096,6 +1118,10 @@
                                         <div class="swiper-slide" data-location="istanbul">
                                             <a href="#" class="card">
                                                 <div class="cardTop-image">
+                                                    <!-- <div class="category">
+                                                        <span>Konaklamalı</span>
+                                                        <span>Kaptanlı</span>
+                                                    </div> -->
                                                     <div class="point ms-auto">
                                                         <div class="d-flex align-items-center">
                                                             <span class="icon-star-percent"></span>
@@ -1139,6 +1165,16 @@
                                                             <div class="options">Göcek, 14.2m2, Motoryat</div>
                                                         </div>
                                                     </div>
+                                                    <!-- <div class="priceWrapper">
+                                                        <div class="discount">25.800</div>
+                                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                                    </div>
+                                                    <div class="tags">
+                                                        <span>Seyir 14 kişi</span>
+                                                        <span>14.2m</span>
+                                                        <span>3 kabin</span>
+                                                        <span>Konaklama 6 kişi</span>
+                                                    </div> -->
                                                 </div>
                                             </a>
                                         </div>
@@ -1490,6 +1526,13 @@
                                         <span>Konaklamalı</span>
                                         <span>Kaptanlı</span>
                                     </div>
+                                    <!-- <div class="point ms-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="icon-star-percent"></span>
+                                            <span class="pointNumber">5.0</span>
+                                        </div>
+                                        <span class="text">1586 Yorum</span>
+                                    </div> -->
                                     <div class="swiper singleSlide">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
@@ -1527,9 +1570,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                    
-                                    <!-- <div class="discount">25.800</div> -->
-                                    <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <div class="discount">25.800</div>
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 14 kişi</span>
                                         <span>14.2m</span>
@@ -1580,8 +1624,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1789034A</div>
                                     </div>
-                                  
-                                    <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 5 kişi</span>
                                         <span>10.9m</span>
@@ -1631,8 +1677,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                    
-                                    <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 8 kişi</span>
                                         <span>11.6m</span>
@@ -1683,8 +1731,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-
-                                    <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 14 kişi</span>
                                         <span>14.2m</span>
@@ -1732,8 +1782,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1789034A</div>
                                     </div>
-                                   
-                                    <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 5 kişi</span>
                                         <span>10.9m</span>
@@ -1780,8 +1832,10 @@
                                         </div>
                                         <div class="card-id ms-auto">ID: 1014434P</div>
                                     </div>
-                                   
-                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
                                     <div class="tags">
                                         <span>Seyir 8 kişi</span>
                                         <span>11.6m</span>
