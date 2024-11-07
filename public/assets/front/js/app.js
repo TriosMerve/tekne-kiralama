@@ -40,7 +40,7 @@ document.addEventListener("scroll", function () {
   }
 
   // Ekran genişliği 992 pikselden küçükse çalışacak kodlar
-  if (window.innerWidth < 992) {
+  // if (window.innerWidth < 992) {
     // filterHead için fixed ve yukarı kaydırma sticky sınıfı ekleme
     if (window.scrollY > 0) {
       $(".filterHead").addClass("fixed");
@@ -61,15 +61,15 @@ document.addEventListener("scroll", function () {
     } else {
       $(".calendarMobilButton.sticky").removeClass("fixed");
     }
-  }
+  // }
 
-  if (window.innerWidth > 992) {
-    if (window.scrollY > 0) {
-      $(".calendarResult").removeClass("d-none").show();
-    } else {
-      $(".calendarResult").hide();
-    }
-  }
+  // if (window.innerWidth > 992) {
+  //   if (window.scrollY > 0) {
+  //     $(".calendarResult").removeClass("d-none").show();
+  //   } else {
+  //     $(".calendarResult").hide();
+  //   }
+  // }
 
   // Mevcut scroll pozisyonunu sakla
   lastScrollY = window.scrollY;

@@ -62,7 +62,11 @@ $("#dateInputs")
     $(".reservation-type").addClass("d-none");
   });
 
-$(".calendarMobilButton").on("click", function () {
+$(".calendarMobilButton.home").on("click", function () {
+  $(".calendarWrapper").addClass("opened");
+  $("body").addClass("overflow-hidden");
+});
+$(".dateInfo").on("click", function () {
   $(".calendarWrapper").addClass("opened");
   $("body").addClass("overflow-hidden");
 });
@@ -113,24 +117,27 @@ function resetDateInputs() {
   $("#checkinInput, #checkInText").removeClass("selected");
 }
 
-$(".dateInfo").on("click", function(){
-  const targetOffset = $(".calendarWrapper").offset().top - 150;
-  smoothScrollTo(targetOffset, 500); // 500ms animasyon
+// $(".dateInfo").on("click", function(){
+//   const targetOffset = $(".calendarWrapper").offset().top - 150;
+//   smoothScrollTo(targetOffset, 500); // 500ms animasyon
 
-  // Mevcut seçili değeri saklayın
-  const selectedValue = $(".locationSelect").val();
+//   // Mevcut seçili değeri saklayın
+//   const selectedValue = $(".locationSelect").val();
 
-  // Ardından .locationSelect tıklamasını bir miktar gecikme ile tetikleyin
-  setTimeout(function() {
-    $(".locationSelect").trigger("click");
+//   // Ardından .locationSelect tıklamasını bir miktar gecikme ile tetikleyin
+//   setTimeout(function() {
+//     $(".locationSelect").trigger("click");
 
-    // Mevcut değeri yeniden ayarlayın
-    $(".locationSelect").val(selectedValue).niceSelect("update");
-  }, 800); // 800ms gecikme
-});
+//     // Mevcut değeri yeniden ayarlayın
+//     $(".locationSelect").val(selectedValue).niceSelect("update");
+//   }, 800); // 800ms gecikme
+// });
 
 // Location Select durum kontrolü
 $(".locationSelect").on("click", function () {
+  if ($(this).closest(".nice-select").hasClass("scrollTop")){
+    smoothScrollToTarget();
+  }
   if ($(this).closest(".nice-select").hasClass("open")) {
     // dateRangePicker'da tarihleri sıfırlama
     console.log("Location select kapandı");
@@ -141,8 +148,7 @@ $(".locationSelect").on("click", function () {
       console.log("Date picker kapalı, active sınıfı kaldırıldı.");
     }
   } else {
-    
-    smoothScrollToTarget();
+    $(".nice-select .list .option").first().hide();
     resetDateInputs();
     $("#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose").show();
 
@@ -175,6 +181,7 @@ $(".locationSelect").on("change", function () {
 
 $(".dateSearchButton").on("click", function(){
   $(".dateTimeSearchWrapper").removeClass("active");
+  $(".calendarWrapper").removeClass("opened");
 })
 // Belirtilen alan dışında bir yere tıklandığında active sınıfını kaldır
 $(document).on("click", function (event) {

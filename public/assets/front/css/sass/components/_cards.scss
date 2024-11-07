@@ -255,7 +255,7 @@
   &.third {
     gap: 60px;
     @media screen and (max-width: 991.98px) {
-      gap: 40px;
+      gap: 50px;
     }
     .card {
       width: calc(33.3% - 40px);
