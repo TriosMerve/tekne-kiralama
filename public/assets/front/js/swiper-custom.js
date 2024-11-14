@@ -12,6 +12,20 @@ var blogSlider = new Swiper(".blogSlider", {
   },
 });
 
+
+var detailsSlider = new Swiper(".detailsSlider", {
+  slidesPerView:3,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 const sliders = document.querySelectorAll('.singleSlide');
 
 sliders.forEach((sliderElement) => {

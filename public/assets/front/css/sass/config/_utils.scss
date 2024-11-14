@@ -29,6 +29,8 @@ $primary: #d9043e;
 $secondary: #f2055c;
 $gray: #f3f3f3;
 $gray-3: #cccccc;
+$gray-6: #696969;
+$gray-7: #4e4e4e;
 $black: #000000;
 $white: #ffffff;
 
@@ -37,6 +39,8 @@ $colors: (
   "secondary": $secondary,
   "gray": $gray,
   "gray-3": $gray-3,
+  "gray-6": $gray-6,
+  "gray-7": $gray-7,
   "dark": $black,
   "light": $white // "tertiary": $tertiary,,,
 );
@@ -266,6 +270,11 @@ a:hover {
     background-color: var(--white);
     z-index: -1;
   }
+  &.notAfter{
+    &:after{
+      display: none;
+    }
+  }
 
   &.button-outline {
     color: var(--black);
@@ -280,7 +289,17 @@ a:hover {
         color: var(--white);
       }
     }
-
+    &.notAfter{
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: var(--primary);
+          border-color: var(--primary);
+        }
+      }
+    }
+    &.bold{
+      font-family: 'GilroySemibold';
+    }
     &.type2 {
       border-color: var(--primary);
       color: var(--primary);
@@ -303,6 +322,24 @@ a:hover {
         }
       }
     }
+  }
+  &.button-outline-2 {
+    color: var(--gray-6);
+    border: 1px solid #cbc8c8;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'GilroyMedium';
+    font-size: 16px;
+    &:after {
+      display: none;
+    }
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+    }
+
   }
   &.moreButton{
     height: 60px;
@@ -415,4 +452,8 @@ a:hover {
     outline: 0;
     /* Chrome, Safari, Edge ve Opera için */
   }
+}
+
+.fMedium{
+  font-family: 'GilroyMedium'!important;
 }

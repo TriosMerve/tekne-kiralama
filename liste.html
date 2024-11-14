@@ -54,11 +54,10 @@
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
     <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
-    
-    
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
+    <link rel="stylesheet" href="public/assets/plugins/rangeSlider/nouislider.min.css">
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
@@ -482,7 +481,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" class="filterModalButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span class="icon-filter"></span></a>
+                                        <a href="#" class="filterModalButton" data-bs-target="#filterModal" data-bs-toggle="modal"><span class="icon-filter"></span></a>
                                     </div>
                                 </div>
                                 <div class="calendarWrapper type2">
@@ -509,10 +508,10 @@
                                             <label for="floatingSelect">Şehir</label>
                                         </div>
                                         <div class="dateInputWrapper">
-                                            <div id="dateInputs">
-                                                <input id="checkinInput" value="">  <input id="checkoutInput" value=""> 
-                                                <div id="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
-                                                <div id="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                            <div id="dateInputs" class="dateInputs">
+                                                <input id="checkinInput" class="checkinInput" value="">  <input id="checkoutInput" class="checkoutInput" value=""> 
+                                                <div id="checkInText" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
+                                                <div id="checkOutText" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
                                             </div>
                                         </div>
                                         <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
@@ -523,7 +522,7 @@
                                     </div>
                 
                                 </div>
-                                <a href="#" class="fixBtn filterModalButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span class="icon-filter"></span><span>Filtrele</span></a>
+                                <a href="#" class="fixBtn filterModalButton" data-bs-target="#filterModal" data-bs-toggle="modal"><span class="icon-filter"></span><span>Filtrele</span></a>
 
                                 <div class="swiper textSlideWrapper d-none d-lg-block">
                                     <div class="swiper-wrapper">
@@ -559,7 +558,7 @@
                             </div>
                             <div class="filterBottom">
                                 <div class="filterLeft">
-                                    <a href="#" class="fixBtn filterModalButton d-none d-lg-flex" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span class="icon-filter"></span></a>
+                                    <a href="#" class="fixBtn filterModalButton d-none d-lg-flex" data-bs-target="#filterModal" data-bs-toggle="modal"><span class="icon-filter"></span></a>
                                     <div class="buttonsFilterWrapper d-none d-lg-flex">
                                         <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Tekne Tipi</a>
                                         <a href="#" class="fixBtn button-outline filterButton" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Fiyat</a>
@@ -2350,55 +2349,309 @@
     </div>
 
     <!--modallar-->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <!--Bu filtreleme modalı sadece filtreleme olan sayfalar ıcın eklenmelı-->
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="titleColumn">
+                    <div class="modal-title fs-5" id="filterModalLabel">Filtrele</div>
+                    <p>Mükemmel tekneleri bulun</p>
+                </div>
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
             </div>
             <div class="modal-body">
-              İçerik gelecek
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                <div class="propList">
+                    <div class="listItem">
+                        <div class="title">Fiyat</div>
+                        <div class="rangesliderWrapper">
+                            <!-- Başlangıç ve bitiş değerleri için gösterim alanları -->
+                            <div class="valueTop">
+                                <span id="sliderStartValueDisplay"></span>
+                                <span id="sliderEndValueDisplay"></span>
+                            </div>
+                            <div id="rangeSlider"></div>
+
+                            <!-- Başlangıç ve bitiş değerleri için input alanları -->
+                             <div class="rangeInput">
+                                 <input type="text" id="sliderStartInput">
+                                 <input type="text" id="sliderEndInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush customAcc" id="filtrelemeAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Tekne Tipi
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"> <span class="checkText">Gulet</span></span>
+                                    
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"><span class="checkText">Yelkenli</span></span>
+                                        
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Katamaran</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Motoryat</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Şişme Bot</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Sürat Teknesi</span>
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Mürettebat
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Tümün Göster</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptanlı Kiralama</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptansız Kiralama</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Kapasite
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">1-5</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">6-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-15</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">16-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">20+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Seyir Kapasitesi
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Uzunluğu
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Hide this modal and show the first with the button below.
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
 
 
-    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
+    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/jquery.easing.min.js"></script>
     <script src="public/assets/plugins/jquery.pause.js"></script>
-    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
+    <script src="public/assets/plugins/rangeSlider/nouislider.min.js"></script><!--Bu script fiyat aralıgı ıcın eklenmıs eklentidir. filtreleme modal ıcerısınde kullanılır-->
 
     <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script>
-    <script src="public/assets/front/js/swiper-custom.js"></script>
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
+    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script>
+            //rangeslider filtreleme modal ıcerısınde fiyat aralıgı ıcın kullanılmıs eklentinin kullanımı asagıdakı gıbı sadece range slider olan sayfalarda kullanılmalı
+            const rangeSlider = document.getElementById('rangeSlider');
+            noUiSlider.create(rangeSlider, {
+                start: [0, 10000], // Başlangıç ve bitiş değerleri
+                connect: true, // Seçili aralığı renklendirme
+                range: {
+                    'min': 0,
+                    'max': 10000
+                },
+                step: 1, // Artış değeri
+                tooltips:false// Her iki değerde tooltip gösterimi
+            });
+
+            // Gösterim ve input alanlarına değerleri güncelleme
+            const sliderStartValueDisplay = document.getElementById('sliderStartValueDisplay');
+            const sliderEndValueDisplay = document.getElementById('sliderEndValueDisplay');
+            const sliderStartInput = document.getElementById('sliderStartInput');
+            const sliderEndInput = document.getElementById('sliderEndInput');
+
+            rangeSlider.noUiSlider.on('update', function (values) {
+                // Gösterim alanları
+                sliderStartValueDisplay.innerHTML = values[0];
+                sliderEndValueDisplay.innerHTML = values[1];
+                
+                // Input alanları
+                sliderStartInput.value = values[0];
+                sliderEndInput.value = values[1];
+            });
+
+            // Input alanlarında değer değiştiğinde slider'ı güncelle
+            sliderStartInput.addEventListener('change', function () {
+                rangeSlider.noUiSlider.set([this.value, null]);
+            });
+
+            sliderEndInput.addEventListener('change', function () {
+                rangeSlider.noUiSlider.set([null, this.value]);
+            });
     </script>
 </body>
 

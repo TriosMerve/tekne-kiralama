@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="" />
+    <meta name="publisher" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon'">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="public/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="manifest" href="public/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="public/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <title>Tekne Kiralama</title>
+
+    <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
+    
+    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
+    <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
+    <link rel="stylesheet" href="public/assets/plugins/rangeSlider/nouislider.min.css">
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
+</head>
+
+<body>
+    <!---Tüm sayfalarda standart-->
+    <div class="preloader">
+        <div class="preloader-container">
+            <div class="circle">
+            </div>
+        </div>
+    </div>
+    <!---Tüm sayfalarda standart kapsayıcı-->
+    <div id="app">
+        <!---Tüm sayfalarda standart header-->
+        <header id="header" class="type2">
+            <div class="header container-3xl">
+                <div class="headerNav">
+                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <div class="d-flex hstack ms-auto">
+                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <div class="dropdown languageWrapper">
+                            <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <span class="icon-language"></span>
+                            </button>
+                            <form class="dropdown-menu p-4 languageDropdown">
+                                <div class="title">Para Birimi</div>
+                                <ul class="languageList">
+                                    <li>
+                                    <div class="form-check container-check type2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label checkText" for="flexRadioDefault1">
+                                          English
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label checkText" for="flexRadioDefault2">
+                                               Türkçe
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <hr class="mx-auto">
+                                <div class="title">Dil ve Bölge</div>
+                                <ul class="languageList">
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="Euro">
+                                            <label class="form-check-label" for="Euro">
+                                                <span class="currencly">€</span> EUR
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="Dolar" checked>
+                                            <label class="form-check-label" for="Dolar">
+                                                <span class="currencly">$</span> USD
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="TurkLisari" checked>
+                                            <label class="form-check-label" for="TurkLisari">
+                                                <span class="currencly">₺</span> TRY
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
+                            </form>
+                        </div>
+                        <a href="#" class="userButton"><span class="icon-user"></span></a>
+
+                        <div class="buttons d-lg-flex d-none pe-3 ps-3" >
+                            <a href="#" class="fixBtn button-outline">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary">Üye Ol</a>
+                        </div>
+                        <a href="#" class="menuNavButton openMenuButton ms-4">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="headerMenuNav">
+                    <div class="navMenu">
+                        <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
+                            <div class="row navMenuTop mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0 d-none d-md-flex">
+                                    <a class="logo" href="index.html"><img src="public/assets/images/statics/logo-white.png" alt="TekneKiralama logo beyaz"></a>
+                                </div>
+                                <div class="rightMenuColumn bg-primary col-md-8 pe-0">
+                                    <div class="searchInputWrapper position-relative">
+                                        <input type="text" class="searchInput" placeholder="Aramak istediğiniz kelimeyi giriniz">
+                                        <a href="#" class="searchButton"><span class="icon-search"></span></a>
+                                    </div>
+                                    <a href="#" class="menuNavButton closedMenuButton ms-4">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row navMenuContent mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0">
+                                    <ul class="menuList">
+                                        <li>
+                                            <a href="index.html"><span>Anasayfa</span></a>
+                                        </li>
+                                        <li>
+                                            <div data-target="1" class="subMenuItem"><span>Destinations</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <div data-target="2" class="subMenuItem"><span>Things to do</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Guides</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Festival & events</span></a>
+                                        </li>
+                                        <li>
+                                            <div data-target="3" class="subMenuItem"><span>Routes & trails</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Accommodation</span></a>
+                                        </li>
+                                    </ul>
+                                    <div class="buttons d-lg-none" >
+                                        <a href="#" class="fixBtn button-primary">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary">Üye Ol</a>
+                                    </div>
+                                    <div class="socialWrapper">
+                                        <div class="socialMedia">
+                                            <a href="#" target="_blank"><span class="icon-twitter"></span></a>
+                                            <a href="#" target="_blank"><span class="icon-linkedin"></span></a>
+                                            <a href="#" target="_blank"><span class="icon-instagram"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rightMenuColumn mobileMenuColumn bg-primary col-lg-8 pe-0">
+                                    <div class="backLink">
+                                        <span class="icon-arrow-right"></span><span>Geri Dön</span>
+                                    </div>
+                                    <div class="customScrollContent">
+                                        <div class="subMenuWrapper">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2">
+                                                <div class="title">Keep Discovering</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-02.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Enigma Blue</div>
+                                                                <div class="options">
+                                                                    <span>Fethiye, 10.9m, Yelkenli</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-04.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Fethiye</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all destinations</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all things to do</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2 moretoexplore">
+                                                <div class="title">More to explore</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all routes & trails</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
+        <main>
+            <section class="pageSection">
+                <div class="detailsSlideWrapper">
+                    <label class="container-check favorite fv-type2">
+                        <input type="checkbox" name="address">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="swiper detailsSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="public/assets/images/media/detay/02.jpg" data-fancybox="detailsGallery" class="galleryItem">
+                                    <img src="public/assets/images/media/detay/02.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="public/assets/images/media/detay/01.jpg" data-fancybox="detailsGallery" class="galleryItem">
+                                    <img src="public/assets/images/media/detay/01.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="public/assets/images/media/detay/02.jpg" data-fancybox="detailsGallery" class="galleryItem">
+                                    <img src="public/assets/images/media/detay/02.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="public/assets/images/media/detay/03.jpg" data-fancybox="detailsGallery" class="galleryItem">
+                                    <img src="public/assets/images/media/detay/03.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="public/assets/images/media/detay/04.jpeg" data-fancybox="detailsGallery" class="galleryItem">
+                                    <img src="public/assets/images/media/detay/04.jpeg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="public/assets/images/media/detay/02.jpg" data-fancybox="detailsGallery" class="galleryItem">
+                                    <img src="public/assets/images/media/detay/02.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev swiperButton"><span class="icon-arrow-right-2"></span></div>
+                        <div class="swiper-button-next swiperButton"><span class="icon-arrow-right-2"></span></div>
+                    </div> 
+                    <a href="public/assets/images/media/tekne1.jpg" data-fancybox="detailsGallery" class="allButton fixBtn button-white galleryItem" >Tümünü Gör</a>
+                    <a href="#" class="shareButton fixBtn button-white" data-bs-target="#shareModal" data-bs-toggle="modal">Paylaş</a>
+                </div>
+                <div class="breadCrumbWrapper">
+                    <div class="container-3xl">
+                        <div class="breadcrumb">
+                            <a href="index.html">TekneKiralama.com</a>
+                            <a href="#">Muğla</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-3xl">
+                    <div class="twiceColumn">
+                        <div class="leftColumn pageDetailsContent row mx-0 pe-lg-5 staticColumn">
+                            <div class="infoDetails col-lg-6 px-0 pe-lg-4">
+                                <div class="detailsHead d-inline-block w-auto">
+                                    <div class="pageTitle pe-lg-3">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="location">Fethiye, Muğla</div>
+                                            <div class="id">ID:1789034A</div>
+                                        </div>
+                                        <div class="title">Göcek 14.2m Kiralık Yelkenli</div>
+                                    </div>
+                                    <div class="type">Bavaria 46 Cruiser (2009 / 2021 refit)</div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="properties col-lg-6 px-0 ps-lg-3 text-end">
+                                <div class="point">
+                                    <div class="d-flex align-items-center">
+                                        <span class="icon-star"></span>
+                                        <span class="pointNumber">5.0</span>
+                                    </div>
+                                    <a href="#" class="text">1586 Yorum</a>
+                                </div>
+                                <div class="category align-items-end">
+                                    <span>Konaklamalı</span>
+                                    <span>Kaptanlı</span>
+                                </div>
+                            </div>
+                            <div class="col-12 subContent">
+                                <div class="userDetails">
+                                    <div class="userHead">
+                                        <div class="userInfo">
+                                            <span class="icon-user"></span>
+                                            <div class="d-flex flex-column">
+                                                <div class="title">TEKNE SAHİBİ</div>
+                                                <div class="name">Enver Sarıgül</div>
+                                            </div>
+                                        </div>
+                                        <div class="stick">
+                                            SÜPER TEKNE SAHİBİ
+                                        </div>
+                                    </div>
+                                    <div class="userContent">
+                                        <div class="paragraph movContent">
+                                            Kiralık teknenin arka kısmındaki kütük masada kahvaltı ve yemek <a href="#">ikramları</a> rahat bir şekilde yapılır. Üst katta bulunan kokteyl masa sadece atıştırmalıklar ve içeceklerin servisinin yapılması içindir. Üst kattaki masa yemek ikramı yapılması için uygun değildir. Lüks teknenin arka havuzu güneşli havalarda fotoğraflarda görüldüğü üzere açık haldedir ancak havalar soğuduğunda, kar ve yağmur yağdığında şeffaf branda ile tamamen kapatılarak dışarıdaki kötü havanın teknenin iç kısmındaki ortamı olumsuz olarak etkilemesinin önüne geçilir. Buna ilaveten webasto ısıtma sistemi de devreye sokularak teknenin iç kısımlarındaki havanın istenilen sıcaklığa çıkarılması sağlanır. Aşırı sıcak havalarda da klima sistemleri devreye sokularak misafirlerin serin bir ortamda seyir yapabilmesine imkan tanınır. Boğazda ve Adalar koylarında organize edilen günübirlik yüzme turlarında teknenin ön kısmında bulunan minderlere özel havlular serilerek güneşlenebilme imkanı da vardır.
+                                            <br><br>
+                                            <span>TEKNE KALKIŞ VE VARIŞ NOKTASI</span>
+                                            Lüks tekne Arnavutköy sahilinde, Arnavutköy Balıkçısı'nın tam karşısında bağlıdır. Bu nedenle organizasyon günü tekneye binmek ve tur sona erdiğinde inmek için kullanılabilecek en uygun yer Arnavutköy'dür. Ancak Kuruçeşme ve Bebek sahillerini yakın olması, Kuleli ve Kandilli sahillerini de Anadolu yakasından gelecek olan misafirlere kolaylık sağlamak adına ekstra bir ücret talep etmeden kalkış ve varış noktası olarak kullanabiliriz. Lüks teknenin bağlı olduğu yere 10-15 dakikadan çok daha uzun mesafedeki yerleri kullanmak isteyen müşterilerin ek ücretler ödemeleri gerekecektir. Ayrıca şirketimiz boğazdaki ücretsiz alış ve bırakış yerlerini kullandığından marina ve iskele gibi ücretleri yerlerin kullanılmasını talep eden misafirler buralardaki palamar ücretini ödemekle yükümlüdürler.
+                                            <br><br>
+                                            <span>BU TEKNEDE ORGANİZE EDİLEBİLECEK TURLAR</span>
+                                            2 kişilik romantik organizasyonlar için biçilmiş kaftan olan bu lüks teknede doğum günü kutlaması, sürpriz evlenme teklifi, evlilik yıldönümü, iftar programı, yüzme turu, iş yemeği ve toplantılar en sık düzenlediğimiz turların başında gelse de ihtiyaç duyulan tüm bireysel ve kurumsal davetler için 12 ay süresince saatlik ve günlük olarak kiralama imkanı vardır.
+                                        </div>
+                                        <div class="morePlusButton">+ Daha Fazla</div>
+                                    </div>
+                                </div>
+
+                                <div class="otherProperties">
+                                    <div class="productsPropList type4">
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/AirConditioning.svg" alt=""></div>
+                                            <div>
+                                                <div class="title">Kaptanlı Kiralama</div>
+                                                <p>Tekne Profesyonel bir kaptan tarafından kullanılır</p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/Balcony.svg" alt=""></div>
+                                            <div>
+                                                <div class="title">Yakıt dahil (1 saat seyir / gün)</div>
+                                                <p>Tekne Profesyonel bir kaptan tarafından kullanılır</p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/DishwashingMachine.svg" alt=""></div>
+                                            <div>
+                                                <div class="title">Bülent bir süper tekne sahibi</div>
+                                                <p>Tekne Profesyonel bir kaptan tarafından kullanılır</p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/DoubleGlazed.svg" alt=""></div>
+                                            <div>
+                                                <div class="title">Giriş zamanı & Minimum kiralama süresi</div>
+                                                <p>Bu tekne <b>minimum 2 gece konaklamalı</b> olarak sunulur. Ayrıca sezon dışı veya son dakika (check-in tarihinden 14 gün önce) gece konaklamasız tam gün olarak sunulur. Sezon dışı tarihleri görmek için <a href="#">tıklayın</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/Gym.svg" alt=""></div>
+                                            <div>
+                                                <div class="title">Fiyata dahil hizmetler</div>
+                                                <div class="movContent mt-5">
+                                                    <div class="tags">
+                                                        <span>Kaptan</span>
+                                                        <span>Yakıt</span>
+                                                        <span>Mürettebat</span>
+                                                        <span>Transitlog</span>
+                                                        <span>Son Temizlik</span>
+                                                        <span>Kaptan</span>
+                                                        <span>Yakıt</span>
+                                                        <span>Mürettebat</span>
+                                                        <span>Transitlog</span>
+                                                        <span>Son Temizlik</span>
+                                                    </div>
+                                                </div>
+                                                <div class="morePlusButton">+ Daha Fazla</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-5">
+                                    <div class="title">Tekne Kapasitesi</div>
+                                    <div class="productsPropList">
+                                        <div class="item">
+                                            <div class="title">Seyir Kapasitesi</div>
+                                            <div class="content"><b>15 kişi</b></div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Konaklama Kapasitesi</div>
+                                            <div class="content"><b>4 kişi</b></div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Kabin</div>
+                                            <div class="content"><b>2 Kabin ( 4 Kişi )</b></div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-5">
+                                    <div class="title">Fiyat Bilgileri</div>
+                                    <div class="paragraph mb-lg-4">
+                                        Teknenin rezervasyon bedeli sezonsal olarak değişiklik gösterebilir.
+                                    </div>
+                                    <a href="#" class="fixBtn button-outline-2" data-bs-toggle="modal" data-bs-target="#priceModal">Fiyat Bilgileri</a>
+                                    
+                                    <hr class="my-5">
+                                    <div class="title">Tekne Özellikleri</div>
+                                    <div class="productsPropList type3 mb-lg-4">
+                                        <div class="item">
+                                            <div class="title">Tekne Tipi : </div>
+                                            <div class="content"><b>Yelkenli</b></div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Marka : </div>
+                                            <div class="content"><b>Bavaria</b></div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Model : </div>
+                                            <div class="content"><b>46 Cruiser</b></div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Yapım Yılı : </div>
+                                            <div class="content"><b>2009</b></div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="fixBtn button-outline-2" data-bs-toggle="modal" data-bs-target="#tekneOzellikleriModal">Tümünü Görüntüle (65)</a>
+                                    
+
+                                    <hr class="my-5">
+                                    <div class="title">Tekne İmkanları</div>
+                                    <div class="subTitle">Temel Olanaklar</div>
+                                    <div class="productsPropList type2">
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/01.svg" alt=""></div>
+                                            <div class="title">Fully equipped kitchen</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/02.svg" alt=""></div>
+                                            <div class="title">Linens & towels</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/03.svg" alt=""></div>
+                                            <div class="title">Ongoing support</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/04.svg" alt=""></div>
+                                            <div class="title">Wi-Fi</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/05.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                    </div>
+                                    <div class="subTitle">Diğer Olanaklar</div>
+                                    <div class="productsPropList type3">
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/AirConditioning.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/Balcony.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/DishwashingMachine.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/DoubleGlazed.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/Elevator.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/Gym.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/Heating.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="icon"><img src="public/assets/images/media/icon/WashingMachine.svg" alt=""></div>
+                                            <div class="title">Home office setup</div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-5">
+                                    <div class="title">Sunulan Hizmetler</div>
+                                    <div class="row mx-0">
+                                        <div class="col-lg-6 ps-0">
+                                            <div class="subTitle">Ücretsiz Hizmetler</div>
+                                            <ul class="productsPropList list">
+                                                <li class="item">
+                                                    <div class="title">Fully equipped kitchen</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Linens & towels</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Ongoing support</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Wi-Fi</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 pe-0">
+                                            <div class="subTitle">Ücretli Hizmetler</div>
+                                            <ul class="productsPropList list">
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="title">Home office setup</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <hr class="my-5">
+                                    <div class="title">Yemek Opsiyonları</div>
+                                    <div class="paragraph mb-lg-5">
+                                        *Mürettebatlı kiralamalarda personelin yemek giderlerinden misafirler sorumludur.
+                                    </div>
+                                    <div class="productsPropList type4">
+                                        <div class="row mx-0 gy-4">
+                                            <div class="col-lg-6 ps-0 align-items-strech">
+                                                <div class="item h-100">
+                                                    <div class="icon">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">Yemek Hazırlığı</div>
+                                                        <p>Yemek hazırlığından misafirler sorumludur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 pe-0">
+                                                <div class="item h-100">
+                                                    <div class="icon">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">Kumanya alışverişi</div>
+                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 ps-0">
+                                                <div class="item h-100">
+                                                    <div class="icon">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">Kumanya alışverişi</div>
+                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 pe-0">
+                                                <div class="item h-100">
+                                                    <div class="icon">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">Kumanya alışverişi</div>
+                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 ps-0">
+                                                <div class="item h-100">
+                                                    <div class="icon">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">Kumanya alışverişi</div>
+                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <hr class="my-5">
+                                    <div class="title">Bilmeniz Gerekenler</div>
+                                    <div class="paragraph mb-lg-5">
+                                        Bu tekne <b>minimum 2 gece konaklamalı</b> olarak sunulur. Ayrıca sezon dışı veya son dakika (check-in tarihinden 14 gün önce) gece konaklamasız tam gün olarak sunulur. Sezon dışı tarihleri görmek için <a href="#">tıklayın.</a>
+                                    </div>
+                                    <div class="productsPropList type4">
+                                        <div class="row mx-0 w-100">
+                                            <div class="col-lg-6 ps-0 align-items-strech">
+                                                <div class="item h-100">
+                                                    <div>
+                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-in :</span> <span class="content"><b>14:00</b></span></div>
+                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-out :</span> <span class="content"><b>08:00</b></span></div>
+                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-in (günlük kiralama) :</span> <span class="content"><b>10:00</b></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 pe-0">
+                                                <div class="item h-100">
+                                                    <div>
+                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-out (günlük kiralama) :</span> <span class="content"><b>18:00</b></span></div>
+                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Depozito Tipi :</span> <span class="content"><b>Depozito yok</b></span></div>
+                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Yakıt :</span> <span class="content"><b>Fiyata Dahil (1 saat seyir / gün)</b></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="item">
+                                            <div class="row mx-0 w-100">
+                                                <div class="d-flex col-lg-4 ps-0">
+                                                    <div class="icon me-3">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                    </div>
+                                                    <div class="title">Kalan Ödeme Seçenekleri</div>
+                                                </div>
+                                                <div class="col-lg-8 pe-0">
+                                                    <p>Kalan ödeme check-in tarihinde ilan sahibine yapılır.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="row mx-0 w-100">
+                                                <div class="d-flex col-lg-4 ps-0">
+                                                    <div class="icon me-3">
+                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+
+                                                    </div>
+                                                    <div class="title">İptal Poltikası</div>
+                                                </div>
+                                                <div class="col-lg-8 pe-0">
+                                                    <p>İptal durumunda ön ödeme tutarı iade edilmez <br> <a href="#">Detayları Göster</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-5">
+                                    <div class="title">Sıkça Sorulan Sorular</div>
+                                    <div class="accordion accordion-flush customAcc" id="accordionGroupOne">
+                                        <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Tekne kiralama hangi illerde yapılıyor? Tekne kiralama hangi illerde yapılıyor?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse">
+                                            <div class="accordion-body">yatkiralama.net, sadece İstanbul'da, saatlik ve günlük sürelerde yat kiralama hizmeti vermektedir.</div>
+                                        </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                En az yat kiralama süresi nedir?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                Yat kiralama süresi minimum 2 saattir. 30 dakika da kiralama yapmak isteseniz yine 2 saatlik yat kiralama ücretini ödemeniz gerekir.
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Kiralık yatların ses sistemi var mı?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                Evet, tüm kiralık yatların ses sistemi vardır ve kullanımları ücretsizdir. Bluetooth ile ses sistemine bağlanarak istediğiniz şarkıları cep telefonunuz üzerinden dinletebilirsiniz.
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                                Kiralanan yata yemek getirilir mi?
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseFour" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                Evet, kiralık yatları menü talep etmeden kiralayıp, kendi yiyecek ve içeceklerinizi yanınızda getirebilirsiniz ancak bu durumda ekstra 1.500 TL karşılığında garson hizmeti almanız gerekecektir. Yatta yemek pişirme imkanı olmadığını bilerek getireceğiniz yiyecekleri ona göre seçmelisiniz.
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                                Yat kiralama fiyatları kaç TL?
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseFive" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                İstanbul'da saatlik yat kiralama fiyatı 5.000 TL, günlük yat kiralama fiyatı 35.000 TL'den başlar.
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                                Yat kiralama süreci nasıl ilerler?
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseSix" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                Yat kiralama için şirketimize ödemeniz gereken toplam ücretin yarısını rezervasyon yaparken kaparo olarak göndermeniz gerekir. Kaparo ödemesi alınmadan rezervasyon yapılmaz. Bu nedenle elinizi çabuk tutmalı ve hızlıca ödeme yapmalısınız. Aksi halde bir başkası seçtiğiniz kiralık yatı kendi organizasyonu için rezerve edebilir. Ücretin kalan diğeri yarısı da organizasyon günü yatta nakit olarak alınacağından mutlaka yanınızda nakit bulundurun. Kredi kartı ile ödeme yapma imkanı yoktur.
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="fixedColumn">
+                                <div class="dateColumnWrapper">
+                                    <div class="dateColumn">
+                                        <div class="title">Fiyatları görmek için tarih seçiniz</div>
+                                        <div id="dateInputs2" class="dateInputs">
+                                            <input id="checkinInput2" class="checkinInput" value="">  <input id="checkoutInput2" class="checkoutInput" value=""> 
+                                            <div id="checkInText2" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
+                                            <div id="checkOutText2" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                        </div>
+                                        <a href="#" class="teklifisteButton fixBtn button-primary">Teklif İste</a>
+                                    </div>
+                                </div>
+                             
+
+                                <div class="bg-gray rounded-4 mt-5 information">
+                                    <div class="notification p-0 mt-0 mb-5">
+                                        <span class="icon-info"></span>
+                                        <a href="#">See our FAQs, message us, or redeem a promo code</a>
+                                    </div>
+                                    <div class="paragraph">
+                                        <ul>
+                                            <li><a href="#">See our FAQs</a></li>
+                                            <li>See our FAQs, message us, or redeem</li>
+                                            <li>See our FAQs, message us, or redeem a promo code</li>
+                                            <li><a href="#">See our FAQs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--E-Bulten section-->
+            <section class="eBultenSection">
+                <div class="container-3xl">
+                    <div class="bg-primary rounded-5 sectionWrapper">
+                        <div class="title">
+                            SİZDE MİSAFİRİMİZ OLMAK İSTER MİSİNİZ ?
+                        </div>
+                        <div class="emailInputWrapper">
+                            <input type="email"  placeholder="E-mail adresiniz">
+                            <a href="#" class="fixBtn button-outline type3">Abone ol</a>
+                        </div>
+                        <div id="captchaWrapper">
+                            <img src="public/assets/images/statics/captcha.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </main>
+
+        <!---Tüm sayfalarda standart footer-->
+        <footer>
+            <div class="container-3xl">
+                <div class="bg-gray footer">
+                    <div class="footerTop">
+                        <div class="title">Sizin için hazırladığımız özel fikirler</div>
+                        <div class="verticalCustomScroll">
+                            <ul class="nav nav-tabs customTab" id="footerTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="gezilecekkoy-tab" data-bs-toggle="tab" data-bs-target="#gezilecekkoy-tab-pane" type="button" role="tab" aria-controls="gezilecekkoy-tab-pane" aria-selected="false">Gezilecek Koylar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content customTabContents" id="footerTabContent">
+                              <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+
+                              </div>
+                              <div class="tab-pane fade" id="gezilecekkoy-tab-pane" role="tabpanel" aria-labelledby="gezilecekkoy-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+
+                    <div class="footerContent">
+                        <div class="leftColumn">
+                            <div class="d-flex flex-column">
+                                <a href="index.html"><img src="public/assets/images/statics/logo.png" alt=""></a>
+                                <span class="logoText">TekneKiralama.com Türkiye’nin en popüler 
+                                    tatil bölgelerinde lüks teklneleri</span>
+                            </div>
+                            <div class="socialWrapper">
+                                <div class="socialMedia">
+                                    <a href="#" target="_blank" class="instagram"><span class="icon-instagram-2"></span></a>
+                                    <a href="#" target="_blank" class="facebook"><span class="icon-facebook"></span></a>
+                                    <a href="#" target="_blank" class="twitter"><span class="icon-twitter"></span></a>
+                                    <a href="#" target="_blank" class="spotify"><span class="icon-spotify"></span></a>
+                                    <a href="#" target="_blank" class="linkedin"><span class="icon-linkedin-2"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="footerMenu">
+                                <div class="menuListColumn">
+                                    <div class="title">TekneKiralama.com</div>
+                                    <ul>
+                                        <li><a href="#">Neden TekneKiralama.com</a></li>
+                                        <li><a href="#">Hakkımızda</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Sürdürülebilirlik</a></li>
+                                        <li><a href="#">İletişim</a></li>
+                                        <li><a href="#">SSS</a></li>
+                                        <li><a href="#">Kariyer</a></li>
+                                        <li><a href="#">Basın Kiti</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Lokasyonlar</div>
+                                    <ul>
+                                        <li><a href="#">İstanbul Tekne Kiralama</a></li>
+                                        <li><a href="#">Fethiye Tekne Kiralama</a></li>
+                                        <li><a href="#">Marmaris Tekne Kiralama</a></li>
+                                        <li><a href="#">Göcek Tekne Kiralama</a></li>
+                                        <li><a href="#">Bodrum Tekne Kiralama</a></li>
+                                        <li><a href="#">İzmir Tekne Kiralama</a></li>
+                                        <li><a href="#">Balıkesir Tekne Kiralama</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Tekne Sahipleri</div>
+                                    <ul>
+                                        <li><a href="#">Tekneni Kirala</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Yasal Bilgiler</div>
+                                    <ul>
+                                        <li><a href="#">KUllanım Koşulları</a></li>
+                                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="#">İptal ve İdade Koşulları</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footerBottom d-flex align-items-center">
+                        <div class="copyRightWrapper">
+                            <div class="copyRight">
+                                © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
+                            </div>
+                        </div>
+                        <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--modallar-->
+    <!--shareModal  Sosyal medya paylasım ıcın kullanılıyor-->
+    <div class="modal fade" id="shareModal" aria-hidden="true" aria-labelledby="shareModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div class="titleColumn">
+                    <div class="modal-title fs-5" id="filterModalLabel">Göcek 14,2m Kiralık Yelkenli - #10381</div>
+                    <p>Göcek 14,2m Kiralık Yelkenli - #10381</p>
+                </div>
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="socialShareWrapper">
+                    <button class="button socialButton" data-sharer="facebook" data-hashtag="hashtag" data-url="https://ellisonleao.github.io/sharer.js/"><span class="icon-facebook"></span></button>
+                    <button class="button socialButton" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/"><span class="icon-linkedin-2"></span></button>
+                    <button class="button socialButton" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"><span class="icon-twitter"></span></button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!--Fiyat modal fiyat gosterım ıcın kullanılıyor-->
+    <div class="modal fade" id="priceModal" aria-hidden="true" aria-labelledby="priceModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-header">
+                <div class="titleColumn text-start">
+                    <div class="modal-title type2" id="filterModalLabel">Fiyat Bilgileri</div>
+                    Teknenin rezervasyon bedeli sezonsal olarak değişiklik gösterebilir.
+                </div>
+                <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+    
+                <div class="productsPropList type4">
+                    <div class="item">
+                        <div>
+                            <div class="title text-primary">01 Mayıs - 31 Mayıs</div>
+                            <div class="content">Gece Konaklamalı Fiyatı: <b>20.680 TL</b>/Gün</div>
+                            <div class="content">Gece Konaklamasız Kiralama Fiyatı: <b>20.680 TL</b>/Gün</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <div class="title text-primary">01 Haziran - 13 Haziran</div>
+                            <div class="content">Gece Konaklamalı Fiyatı: <b>21.980 TL</b>/Gün</div>
+                            <div class="content">Gece Konaklamasız Kiralama Fiyatı: <b>21.980 TL</b>/Gün</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Tekne Ozellikleri Modal-->
+    <div class="modal fade" id="tekneOzellikleriModal" aria-hidden="true" aria-labelledby="tekneOzellikleriModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="titleColumn text-start">
+                        <div class="modal-title type2" id="filterModalLabel">Tekne Özellikleri</div>
+                        Teknenin rezervasyon bedeli sezonsal olarak değişiklik gösterebilir.
+                    </div>
+                    <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+                </div>
+                <div class="modal-body">
+                    <div class="productsPropList">
+                        <div class="item border-bottom">
+                            <div class="title">Tekne Tipi: </div>
+                            <div class="content"><b>Yelkenli</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Marka: </div>
+                            <div class="content"><b>Bavaria</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Model: </div>
+                            <div class="content"><b>46 Cruiser</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Yapım Yılı: </div>
+                            <div class="content"><b>2009</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Yenilenme Yılı: </div>
+                            <div class="content"><b>2021</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Seyir Kapasitesi: </div>
+                            <div class="content"><b>4</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Kabin Sayısı: </div>
+                            <div class="content"><b>2</b></div>
+                        </div>
+                        <div class="item border-bottom">
+                            <div class="title">Yatılı Yolcu Kapasitesi: </div>
+                            <div class="content"><b>4</b></div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="public/assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
+    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="public/assets/plugins/jquery.easing.min.js"></script>
+    <script src="public/assets/plugins/jquery.pause.js"></script>
+    <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script>
+    <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
+    <script src="public/assets/plugins/aos/aos.js"></script>
+    <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
+
+    <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script>
+
+        var headerHeight = $("header").outerHeight();
+        var staticColumn = $(".staticColumn").offset().top + $(".staticColumn").outerHeight();
+        var fixedColumn = $(".fixedColumn");
+        var fixedColumnTop = fixedColumn.offset().top;
+
+        $(window).scroll(function (){
+            var scrollTop = $(this).scrollTop();
+            console.log("fixedTop : " + fixedColumnTop)
+            console.log("scrollTop : " + scrollTop)
+            // Header yüksekliğinden +100px daha aşağı scroll yapıldığında show class'ı ekle
+            if (scrollTop > fixedColumnTop - 100) {
+                fixedColumn.addClass("show");
+            } else {
+                fixedColumn.removeClass("show");
+            }
+
+            // pageContent'in altına geldiğimizde absolute class'ı ekle
+            if (scrollTop + $(window).height() - 300 >= staticColumn) {
+                fixedColumn.addClass("absolute");
+            } else {
+                fixedColumn.removeClass("absolute");
+            }
+
+        });
+
+        /*Bu date time sadece bu sayfa icin eklenmıstır dıger sayfalarda olmasına gerek yok */
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Saat bilgisi sıfırlanır
+        $(".dateInputs").on("click", function(){
+            const targetOffset = $(".dateColumnWrapper").offset().top - 150;
+            smoothScrollTo(targetOffset, 500); // 500ms animasyon
+        })
+        $("#dateInputs2")
+        .dateRangePicker({
+            separator: " to ",
+            container: ".dateColumn",
+            language: "tr-short",
+            stickyMonths: true,
+            autoClose: true,
+            showShortcuts: true,
+            shortcuts: {
+            "next-days": [3, 5, 7],
+            next: ["week", "month", "year"],
+            },
+            startDate: today, // Bugün tarihini sıfırlanmış şekilde ayarla
+            selectForward: false, // Sadece ileri tarih seçimine izin ver
+
+            getValue: function () {
+            if ($("#checkinInput2").val() && $("#checkoutInput2").val())
+                return $("#checkinInput2").val() + " to " + $("#checkoutInput2").val();
+            else return "";
+            },
+            setValue: function (s, s1, s2) {
+            $("#checkinInput2").val(s1);
+            $("#checkoutInput2").val(s2);
+            },
+        });
+
+    </script>
+</body>
+
+</html>

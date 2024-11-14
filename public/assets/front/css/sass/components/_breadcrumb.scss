@@ -39,11 +39,11 @@
                 }
             }
             &.active{
-                color: #fe9313;
+                color: var(--primary);
             }
             @media screen and (min-width:992px) {
                 &:hover{
-                    color: #fe9313;
+                    color: var(--primary);
                 }
             }
         }

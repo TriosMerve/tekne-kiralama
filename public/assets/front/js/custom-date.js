@@ -45,8 +45,6 @@ $("#dateInputs")
     $(".reservation-type").removeClass("d-none"); // Açıldığında d-none kaldır
     $("#checkInText, #checkinInput").addClass("selected");
 
-    // const targetOffset = $("#dateInputs").offset().top - 150;
-    // smoothScrollTo(targetOffset, 500); // 500ms animasyon
   })
   .bind("datepicker-close", function (event) {
     // Kapatma işlemini engellemek için koşul kontrolü
@@ -81,29 +79,7 @@ $(".apply-btn").click(function (evt) {
   $(".dateTimeSearchWrapper").removeClass("active");
   $("#checkoutInput, #checkinInput").removeClass("selected");
 });
-// Akıcı kaydırma fonksiyonu
-function smoothScrollTo(target, duration) {
-  const start = window.pageYOffset;
-  const distance = target - start;
-  let startTime = null;
 
-  function animation(currentTime) {
-    if (!startTime) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const run = easeInOutQuad(timeElapsed, start, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  function easeInOutQuad(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  }
-
-  requestAnimationFrame(animation);
-}
 
 function smoothScrollToTarget() {
   const targetOffset = $(".calendarWrapper").offset().top - 150;
@@ -116,22 +92,6 @@ function resetDateInputs() {
   $("#dateInputs").data("dateRangePicker").clear();
   $("#checkinInput, #checkInText").removeClass("selected");
 }
-
-// $(".dateInfo").on("click", function(){
-//   const targetOffset = $(".calendarWrapper").offset().top - 150;
-//   smoothScrollTo(targetOffset, 500); // 500ms animasyon
-
-//   // Mevcut seçili değeri saklayın
-//   const selectedValue = $(".locationSelect").val();
-
-//   // Ardından .locationSelect tıklamasını bir miktar gecikme ile tetikleyin
-//   setTimeout(function() {
-//     $(".locationSelect").trigger("click");
-
-//     // Mevcut değeri yeniden ayarlayın
-//     $(".locationSelect").val(selectedValue).niceSelect("update");
-//   }, 800); // 800ms gecikme
-// });
 
 // Location Select durum kontrolü
 $(".locationSelect").on("click", function () {

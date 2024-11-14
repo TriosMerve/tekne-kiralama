@@ -26,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-star:before {
+  content: "\e92b";
+}
+
+.icon-tl:before {
+  content: "\e92a";
+}
+.icon-info:before {
+  content: "\e929";
+}
 .icon-sort:before {
   content: "\e928";
 }

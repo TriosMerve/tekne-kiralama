@@ -1908,19 +1908,19 @@
             box.find('.selected-days').hide();
             if (opt.start) {
                 box.find('.start-day').html(getDateString(new Date(parseInt(opt.start))));
-                $('#checkinInput').val(getDateString(new Date(parseInt(opt.start))));
-                $("#checkInText .choose").hide();
-                $("#checkOutText, #checkoutInput").addClass("selected");
-                $("#checkInText, #checkinInput").removeClass("selected");
-                $("#checkOutText").css("cursor","default");
-                $("#checkInText").css("cursor","default");
+                $('.checkinInput').val(getDateString(new Date(parseInt(opt.start))));
+                $(".checkInText .choose").hide();
+                $(".checkOutText, .checkoutInput").addClass("selected");
+                $(".checkInText, .checkinInput").removeClass("selected");
+                $(".checkOutText").css("cursor","default");
+                $(".checkInText").css("cursor","default");
             }
             if (opt.end) {
                 box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));
-                $('#checkoutInput').val(getDateString(new Date(parseInt(opt.start))));
+                $('.checkoutInput').val(getDateString(new Date(parseInt(opt.start))));
                 // closeDatePicker();
-                $("#checkOutText .choose").hide();
-                $("#checkOutText, #checkoutInput").removeClass("selected");
+                $(".checkOutText .choose").hide();
+                $(".checkOutText, .checkoutInput").removeClass("selected");
                 $(".drp_top-bar").css("display","block")
                 $(".dateSearchButton").addClass("active");
                 $(".dateTimeSearchWrapper").addClass("apply");

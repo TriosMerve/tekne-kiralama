@@ -509,10 +509,10 @@
                                                 <span class="name">Tarih</span>
                                                 <span>Tarih aralığı seç</span>
                                             </div>
-                                            <div id="dateInputs">
-                                                <input id="checkinInput" value="">  <input id="checkoutInput" value=""> 
-                                                <div id="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
-                                                <div id="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                            <div id="dateInputs" class="dateInputs">
+                                                <input id="checkinInput" value="" class="checkinInput">  <input id="checkoutInput" class="checkoutInput" value=""> 
+                                                <div id="checkInText" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
+                                                <div id="checkOutText" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
                                             </div>
                                         </div>
                                         <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
@@ -1111,7 +1111,7 @@
                                     <a href="#" class="filterSlideButton" data-filter="izmir">İzmir</a>
                                 </div>
                             </div>
-                            <div class="swiper-button-prev thirdSlidePrev swiperCustomPrev" data-swiper-id="2"><span class="icon-arrow-right"></span></div>
+                            <div class="swiper-button-prev thirdSlidePrev swiperCustomPrev" data-swiper-id="2"><span class="icon-arrow-right-2"></span></div>
                             <div class="col-lg-11 mx-auto">
                                 <div class="swiper thirdSlider" data-swiper-id="2">
                                     <div class="cards swiper-wrapper">
@@ -1431,7 +1431,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next thirdSlideNext swiperCustomNext" data-swiper-id="2"><span class="icon-arrow-right"></span></div>
+                            <div class="swiper-button-next thirdSlideNext swiperCustomNext" data-swiper-id="2"><span class="icon-arrow-right-2"></span></div>
                         </div>
                     </div>
                 </div>
@@ -2487,14 +2487,14 @@
     <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
 
     <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script>
-    <script src="public/assets/front/js/swiper-custom.js"></script>
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
+    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script>
 
     </script>

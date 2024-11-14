@@ -200,8 +200,30 @@ if (typeof Fancybox !== "undefined") {
       },
     },
   });
+  Fancybox.bind(".galleryItem", {
+    compact: !1,
+    Carousel: {},
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
+  });
 }
 
+$(".morePlusButton").on("click", function(){
+    $(this).siblings(".movContent").toggleClass("opened")
+    $(this).toggleClass("active");
+
+    if($(this).hasClass("active")){
+      $(this).text("- Daha az")
+    }
+    else{
+      $(this).text("+ Daha Fazla")
+    }
+})
 if (typeof $.fn.niceSelect !== "undefined") {
   $(".customSelect").niceSelect();
   // Select elementini seç
@@ -246,3 +268,28 @@ document.querySelectorAll(".customTab .nav-link").forEach((tab) => {
     }, 100); // Aktif sınıfının atanmasını beklemek için kısa bir gecikme
   });
 });
+
+
+// Akıcı kaydırma fonksiyonu
+function smoothScrollTo(target, duration) {
+  const start = window.pageYOffset;
+  const distance = target - start;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeInOutQuad(timeElapsed, start, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}

@@ -1,0 +1,90 @@
+.modal{
+    .modal-content{
+        max-height: 700px;
+        .modal-header{
+            padding:50px 50px 20px;
+            border-bottom: none;
+            .titleColumn{
+                flex: 1;
+                text-align: center;
+                padding-right: 20px;
+                .modal-title{
+                    font-size: 24px;
+                    color: var(--text);
+                    font-family: 'GilroySemibold';
+                    line-height: 32px;
+                    margin-bottom: 20px;
+
+                }
+                p{
+                    font-family: 'GilroyRegular';
+                    color: var(--gray-6);
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+            .btn-close{
+                width: 45px;
+                height: 45px;
+                background-color: var(--primary);
+                padding: 0;
+                box-shadow: none;
+                opacity: 1;
+                background-image: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                &:after{
+                    content: "\e922";
+                    font-family: 'customFont';
+                    font-size: 32px;
+                    color: var(--white);
+                }
+            }
+        }
+        .modal-body{
+            padding: 30px 90px 50px 50px;
+
+            .customAcc {
+                .accordion-item {
+                    margin-bottom: 20px;
+                    background-color: rgba(0, 0, 0, 0);
+                    margin-top: 30px;
+                    border: 1px solid var(--gray);
+                    border-radius: 16px;
+                    &:first-child{
+                        border-top: 1px solid var(--gray);
+                    }
+                    .accordion-button {
+                        font-size: 20px;
+                        color: var(--text);
+                        line-height: 28px;
+                        font-family: "GilroySemibold";
+                        box-shadow: none;
+                        padding: 20px 15px;
+              
+                    }
+                }
+            }
+
+            .checkList{
+                display: flex;
+                align-items: stretch;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+.propList{
+    .listItem{
+        .title{
+            font-size: 24px;
+            line-height: 32px;
+            font-family: 'GilroyMedium';
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+    }
+}

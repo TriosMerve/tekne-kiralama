@@ -205,6 +205,33 @@
     }
   }
 }
+
+.swiperButton{
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: 100%;
+  color: var(--primary);
+  font-size: 34px;
+  &:after{
+    display: none;
+  }
+  &.swiper-button-prev{
+    left: 30px;
+    .icon-arrow-right-2{
+      transform: rotate(180deg);
+    }
+  }
+  &.swiper-button-next{
+    right: 30px;
+  }
+  @media screen and (min-width:992px) {
+    &:hover{
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+}
 .tekneKiralamaSlider {
   @media screen and (max-width: 991.98px) {
     padding-left: 16px;
@@ -492,4 +519,23 @@
       }
     }
   }
+}
+
+/*Detay slider*/
+.detailsSlideWrapper{
+  position:relative;
+  .swiper-slide{
+    .galleryItem{
+      position: relative;
+      overflow: hidden;
+      display:block;
+      aspect-ratio: 3/2;
+      img{
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+ 
 }

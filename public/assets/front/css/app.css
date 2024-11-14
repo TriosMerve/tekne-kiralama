@@ -279,6 +279,18 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-star:before {
+  content: "\e92b";
+}
+
+.icon-tl:before {
+  content: "\e92a";
+}
+
+.icon-info:before {
+  content: "\e929";
+}
+
 .icon-sort:before {
   content: "\e928";
 }
@@ -491,6 +503,14 @@ video {
   background-color: #cccccc !important;
 }
 
+.bg-gray-6 {
+  background-color: #696969 !important;
+}
+
+.bg-gray-7 {
+  background-color: #4e4e4e !important;
+}
+
 .bg-dark {
   background-color: #000000 !important;
 }
@@ -513,6 +533,14 @@ video {
 
 .text-gray-3 {
   color: #cccccc !important;
+}
+
+.text-gray-6 {
+  color: #696969 !important;
+}
+
+.text-gray-7 {
+  color: #4e4e4e !important;
 }
 
 .text-dark {
@@ -560,6 +588,26 @@ video {
 @media screen and (min-width: 992px) {
   .button-gray-3:hover {
     color: #cccccc;
+  }
+}
+
+.button-gray-6 {
+  background-color: #696969 !important;
+  border: 1px solid #696969 !important;
+}
+@media screen and (min-width: 992px) {
+  .button-gray-6:hover {
+    color: #696969;
+  }
+}
+
+.button-gray-7 {
+  background-color: #4e4e4e !important;
+  border: 1px solid #4e4e4e !important;
+}
+@media screen and (min-width: 992px) {
+  .button-gray-7:hover {
+    color: #4e4e4e;
   }
 }
 
@@ -940,6 +988,9 @@ video {
   background-color: var(--white);
   z-index: -1;
 }
+.fixBtn.notAfter:after {
+  display: none;
+}
 .fixBtn.button-outline {
   color: var(--black);
   border: 1px solid var(--gray-5);
@@ -952,6 +1003,15 @@ video {
   .fixBtn.button-outline:hover {
     color: var(--white);
   }
+}
+@media screen and (min-width: 992px) {
+  .fixBtn.button-outline.notAfter:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+}
+.fixBtn.button-outline.bold {
+  font-family: "GilroySemibold";
 }
 .fixBtn.button-outline.type2 {
   border-color: var(--primary);
@@ -972,6 +1032,22 @@ video {
 @media screen and (min-width: 992px) {
   .fixBtn.button-outline.type3:hover {
     color: var(--primary);
+  }
+}
+.fixBtn.button-outline-2 {
+  color: var(--gray-6);
+  border: 1px solid #cbc8c8;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "GilroyMedium";
+  font-size: 16px;
+}
+.fixBtn.button-outline-2:after {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .fixBtn.button-outline-2:hover {
+    color: var(--primary);
+    border-color: var(--primary);
   }
 }
 .fixBtn.moreButton {
@@ -1078,6 +1154,10 @@ video {
   border: none;
   outline: 0;
   /* Chrome, Safari, Edge ve Opera için */
+}
+
+.fMedium {
+  font-family: "GilroyMedium" !important;
 }
 
 .preloader {
@@ -2544,6 +2624,79 @@ footer .customTabContents .listItems .item .boatName {
   content: "\e91f";
   color: var(--primary);
 }
+.container-check.favorite.fv-type2 .checkmark {
+  background-color: var(--white);
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.container-check.favorite.fv-type2 .checkmark:after {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-check.button {
+  text-align: center;
+  justify-content: center;
+}
+.container-check.button .checkmark {
+  width: auto;
+  padding: 10px 20px;
+  height: auto;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s linear;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container-check.button .checkmark .checkText {
+  transition: all 0.3s linear;
+}
+.container-check.button .checkmark:after {
+  display: none;
+}
+.container-check.button.type2 {
+  height: 75px;
+}
+.container-check.button input:checked ~ .checkmark {
+  background-color: var(--text);
+}
+.container-check.button input:checked ~ .checkmark .checkText {
+  color: var(--white);
+}
+.container-check.button input:checked ~ .checkmark:after {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .container-check.button:hover .checkmark {
+    background-color: var(--text);
+  }
+  .container-check.button:hover .checkmark .checkText {
+    color: var(--white);
+  }
+}
+.container-check.radioCheck {
+  align-items: center;
+}
+.container-check.radioCheck .checkmark {
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  width: 30px;
+  height: 30px;
+}
+.container-check.radioCheck .checkmark:after {
+  width: 75%;
+  height: 75%;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .breadCrumbWrapper {
   margin-top: 11px;
@@ -2582,11 +2735,11 @@ footer .customTabContents .listItems .item .boatName {
   }
 }
 .breadCrumbWrapper .breadcrumb a.active {
-  color: #fe9313;
+  color: var(--primary);
 }
 @media screen and (min-width: 992px) {
   .breadCrumbWrapper .breadcrumb a:hover {
-    color: #fe9313;
+    color: var(--primary);
   }
 }
 
@@ -3340,9 +3493,9 @@ footer .customTabContents .listItems .item .boatName {
 .customAcc .accordion-item .accordion-button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  font-size: 16px;
+  font-size: 17px;
   color: var(--gray-7);
-  line-height: 22px;
+  line-height: 25px;
   font-family: "GilroySemibold";
   box-shadow: none;
 }
@@ -3371,8 +3524,8 @@ footer .customTabContents .listItems .item .boatName {
   }
 }
 .customAcc .accordion-item .accordion-body {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 25px;
   color: var(--gray-6);
   font-family: "GilroyRegular";
   padding-top: 0;
@@ -4145,12 +4298,30 @@ section .customBlockquote blockquote .fixBtn,
 .pageSection {
   padding-top: 85px;
   width: 100%;
-  overflow-x: hidden;
 }
 @media screen and (max-width: 991.98px) {
   .pageSection {
     padding-top: 65px;
   }
+}
+.pageSection .shareButton {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+  border: none;
+}
+.pageSection .allButton {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  height: 40px;
+  border-radius: 30px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+  border: none;
 }
 
 .pageContent {
@@ -4176,6 +4347,19 @@ section .customBlockquote blockquote .fixBtn,
     font-size: 14px;
     line-height: 22px;
   }
+}
+.paragraph ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.paragraph ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.paragraph ul li::marker {
+  color: var(--text);
+  font-size: 16px;
 }
 .paragraph .shortText {
   font-family: "GilroySemibold";
@@ -4220,11 +4404,580 @@ section .customBlockquote blockquote .fixBtn,
   left: 0;
   bottom: -1px;
   transition: all 0.3s linear;
+  border-bottom: 1px dotted var(--primary);
 }
 @media screen and (min-width: 992px) {
   .paragraph a:hover:after {
     width: 0;
   }
+}
+.paragraph b {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+}
+.paragraph strong {
+  color: var(--text);
+  font-family: "GilroySemibold";
+}
+
+.socialShareWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.socialShareWrapper .socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--gray-3);
+  font-size: 20px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .socialShareWrapper .socialButton:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
+/*İkili alan*/
+.twiceColumn {
+  display: flex;
+  align-items: stretch;
+  margin-top: 50px;
+}
+.twiceColumn .pageDetailsContent {
+  width: calc(100% - 550px);
+}
+.twiceColumn .rightColumn {
+  width: 450px;
+  position: relative;
+  margin-left: auto;
+}
+.twiceColumn .dateColumnWrapper {
+  width: 100%;
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 12px 17px rgba(39, 54, 86, 0.14), 0 5px 22px rgba(39, 54, 86, 0.12);
+}
+.twiceColumn .dateColumnWrapper .title {
+  color: var(--text);
+  font-size: 18px;
+  font-family: "GilroySemibold";
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.twiceColumn .dateColumnWrapper .dateInputs {
+  margin-bottom: 30px;
+}
+.twiceColumn .dateColumnWrapper .fixBtn {
+  width: 100%;
+  height: 60px;
+  font-family: "GilroySemibold";
+  font-size: 16px;
+}
+.twiceColumn .information {
+  padding: 30px;
+}
+.twiceColumn .notification {
+  background-color: var(--gray);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.twiceColumn .notification .icon-info {
+  font-size: 24px;
+  color: var(--text);
+}
+.twiceColumn .notification a {
+  color: var(--text);
+  font-size: 14px;
+  font-family: "GilroySemibold";
+  line-height: 22px;
+  position: relative;
+}
+.twiceColumn .notification a:before {
+  content: "";
+  width: 100%;
+  border-bottom: 1px dotted var(--text);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .twiceColumn .notification a:hover {
+    color: var(--primary);
+  }
+  .twiceColumn .notification a:hover:before {
+    width: 0;
+    border-bottom-color: var(--primary);
+  }
+}
+
+.pageDetailsContent .infoDetails .detailsHead .location {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 24px;
+  font-family: "GilroyRegular";
+}
+.pageDetailsContent .infoDetails .detailsHead .id {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 24px;
+  font-family: "GilroyRegular";
+}
+.pageDetailsContent .infoDetails .detailsHead .pageTitle .title {
+  font-family: "GilroySemibold";
+  font-size: 30px;
+  line-height: 37px;
+  color: var(--primary);
+  min-width: 400px;
+  max-width: 400px;
+}
+.pageDetailsContent .infoDetails .detailsHead .type {
+  font-size: 17px;
+  font-family: "GilroySemibold";
+  color: var(--gray-7);
+  line-height: 27px;
+  margin-top: 15px;
+}
+.pageDetailsContent .infoDetails .detailsHead .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  margin-top: 15px;
+}
+.pageDetailsContent .infoDetails .detailsHead .tags span {
+  font-size: 15px;
+  font-family: "GilroyMedium";
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  border-radius: 5px;
+  color: var(--gray-6);
+  position: relative;
+}
+.pageDetailsContent .infoDetails .detailsHead .tags span:first-child {
+  padding-left: 0;
+}
+.pageDetailsContent .infoDetails .detailsHead .tags span:not(:first-child):before {
+  content: "|";
+  position: absolute;
+  left: 0;
+}
+.pageDetailsContent .properties .point {
+  background: var(--primary);
+  z-index: 9;
+  left: 0;
+  padding: 10px 30px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  width: auto;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.pageDetailsContent .properties .point .icon-star-percent {
+  color: var(--white);
+  font-size: 36px;
+  margin-right: 5px;
+}
+.pageDetailsContent .properties .point .icon-star {
+  color: var(--white);
+  font-size: 36px;
+  margin-right: 15px;
+}
+.pageDetailsContent .properties .point .pointNumber {
+  font-family: "GilroyMedium";
+  font-size: 32px;
+  color: var(--white);
+}
+.pageDetailsContent .properties .point .text {
+  font-family: "GilroyRegular";
+  font-size: 16px;
+  color: var(--white);
+  position: relative;
+}
+.pageDetailsContent .properties .point .text:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px dotted var(--white);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .pageDetailsContent .properties .point .text:hover:after {
+    width: 0;
+    overflow: hidden;
+  }
+}
+.pageDetailsContent .properties .category {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.pageDetailsContent .properties .category span {
+  border-radius: 10px;
+  background-color: var(--gray);
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.275);
+  color: var(--gray-6);
+  font-family: "GilroyRegular";
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.subContent {
+  padding-top: 70px;
+}
+.subContent .otherProperties {
+  padding-top: 50px;
+}
+.subContent .otherProperties > .title {
+  font-family: "GilroySemibold";
+  font-size: 22px;
+  color: var(--text);
+  line-height: 37px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.subContent .otherProperties .subTitle {
+  font-family: "GilroySemibold";
+  font-size: 16px;
+  color: var(--text);
+  line-height: 27px;
+  margin-bottom: 30px;
+}
+
+.productsPropList .item {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.productsPropList .item .title {
+  font-size: 16px;
+  font-family: "GilroyMedium";
+  line-height: 25px;
+  color: var(--gray-7);
+  width: 30%;
+  margin-bottom: 0;
+}
+.productsPropList .item .content {
+  font-size: 17px;
+  line-height: 25px;
+  color: var(--text);
+  font-family: "GilroyRegular";
+  width: 70%;
+}
+.productsPropList .item .content b {
+  font-family: "GilroySemibold";
+}
+.productsPropList .item .tags {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.productsPropList .item .tags > span {
+  display: inline-flex;
+  justify-content: center;
+  border: 1px solid var(--gray);
+  color: var(--gray-6);
+  font-size: 14px;
+  font-family: "GilroyMedium";
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+.productsPropList.type2 {
+  display: flex;
+  align-items: stretch;
+}
+.productsPropList.type2 .item {
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  padding: 0 5px;
+  gap: 10px 0;
+}
+.productsPropList.type2 .item .title {
+  width: initial;
+  text-align: center;
+  color: var(--text);
+}
+.productsPropList.type3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.productsPropList.type3 .item {
+  gap: 25px;
+  width: 50%;
+  padding: 15px 0;
+}
+.productsPropList.type3 .item .title {
+  width: initial;
+}
+.productsPropList.type3 .item .content {
+  width: initial;
+}
+.productsPropList.type4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.productsPropList.type4 .item {
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+.productsPropList.type4 .item p,
+.productsPropList.type4 .item .paragraph {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text);
+  font-family: "GilroyRegular";
+}
+.productsPropList.type4 .item p b,
+.productsPropList.type4 .item .paragraph b {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+}
+.productsPropList.type4 .item p a,
+.productsPropList.type4 .item .paragraph a {
+  color: var(--primary);
+  font-family: "GilroySemibold";
+  position: relative;
+}
+.productsPropList.type4 .item p a:after,
+.productsPropList.type4 .item .paragraph a:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+  border-bottom: 1px dotted var(--primary);
+}
+@media screen and (min-width: 992px) {
+  .productsPropList.type4 .item p a:hover:after,
+  .productsPropList.type4 .item .paragraph a:hover:after {
+    width: 0;
+  }
+}
+.productsPropList.type4 .item p.type2,
+.productsPropList.type4 .item .paragraph.type2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+.productsPropList.type4 .item .icon {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+.productsPropList.type4 .item .icon img {
+  width: 100%;
+}
+.productsPropList.type4 .item .title {
+  width: initial;
+  font-family: "GilroySemibold";
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.productsPropList.type4 .item .content {
+  width: initial;
+}
+.productsPropList.list {
+  list-style: disc;
+  padding-left: 20px;
+}
+.productsPropList.list li {
+  display: list-item;
+}
+.productsPropList.list .item .title {
+  width: initial;
+  color: var(--text);
+}
+
+.movContent {
+  height: 110px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.movContent.opened {
+  height: auto;
+  overflow: visible;
+}
+.movContent.type2:not(.opened) {
+  height: 0;
+}
+
+.morePlusButton {
+  margin-top: 30px;
+  font-family: "GilroySemibold";
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--primary);
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+.morePlusButton:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid var(--primary);
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .morePlusButton:hover {
+    color: var(--primary);
+  }
+  .morePlusButton:hover:after {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+.userDetails {
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.userDetails .userHead {
+  display: flex;
+  align-items: center;
+}
+.userDetails .userHead .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.userDetails .userHead .userInfo .icon-user {
+  font-size: 72px;
+}
+.userDetails .userHead .userInfo .title {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 22px;
+  font-family: "GilroyRegular";
+}
+.userDetails .userHead .userInfo .name {
+  font-family: "GilroyMedium";
+  font-size: 17px;
+  line-height: 27px;
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+}
+.userDetails .userHead .stick {
+  margin-left: auto;
+  border: 1px solid var(--gray-6);
+  color: var(--gray-6);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "GilroyRegular";
+  font-size: 13px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  opacity: 0.5;
+}
+.userDetails .userContent {
+  padding-top: 30px;
+}
+.userDetails .userContent .movContent {
+  height: 85px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.userDetails .userContent .movContent.opened {
+  height: auto;
+  overflow: visible;
+}
+.userDetails .userContent .paragraph {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--gray-7);
+}
+.userDetails .userContent .paragraph a {
+  position: relative;
+  font-family: "GilroySemibold";
+  color: var(--primary);
+}
+.userDetails .userContent .paragraph a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px dotted var(--primary);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .userDetails .userContent .paragraph a:hover:after {
+    width: 0;
+    overflow: hidden;
+  }
+}
+.userDetails .userContent .morePlusButton {
+  margin-top: 30px;
+  font-family: "GilroySemibold";
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--primary);
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+.userDetails .userContent .morePlusButton:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid var(--primary);
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .userDetails .userContent .morePlusButton:hover {
+    color: var(--primary);
+  }
+  .userDetails .userContent .morePlusButton:hover:after {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+/*Fixed Column*/
+.fixedColumn {
+  transition: all 0.3s linear;
+  width: 450px;
+}
+.fixedColumn.show {
+  position: fixed !important;
+  top: 100px;
+}
+.fixedColumn.show.absolute {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  top: auto !important;
 }
 
 .calendarMobilButton {
@@ -4270,6 +5023,310 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--white);
   background-color: var(--primary);
   border-radius: 7px;
+}
+
+.date-picker-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  top: -20px !important;
+  left: 0 !important;
+  background: var(--white);
+  padding: 95px 0 45px 0;
+  border-radius: 10px 10px 25px 25px;
+  border: none;
+  box-shadow: none;
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper {
+    padding-top: 25px;
+  }
+}
+.date-picker-wrapper .month-element {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: var(--gray-6);
+}
+.date-picker-wrapper .month-name {
+  font-size: 18px;
+  color: var(--black);
+  font-family: "GilroyMedium";
+  height: 60px;
+}
+.date-picker-wrapper .first-date-selected,
+.date-picker-wrapper .last-date-selected {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+}
+.date-picker-wrapper table .day {
+  padding: 0 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10.5px;
+  border-radius: 100%;
+  color: var(--gray-6) !important;
+  font-family: "GilroyMedium";
+}
+@media screen and (min-width: 992px) {
+  .date-picker-wrapper table .day:hover {
+    background-color: var(--gray) !important;
+  }
+}
+.date-picker-wrapper table .day.real-today {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: 1px solid var(--gray) !important;
+  cursor: default;
+}
+.date-picker-wrapper table .day.first-date-selected, .date-picker-wrapper table .day.last-date-selected {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+}
+.date-picker-wrapper table .day.first-date-selected.lastMonth, .date-picker-wrapper table .day.last-date-selected.lastMonth {
+  background-color: var(--gray) !important;
+  color: var(--gray-5) !important;
+}
+.date-picker-wrapper table .day.checked {
+  background-color: rgba(242, 5, 92, 0.2) !important;
+  color: var(--gray-7) !important;
+}
+.date-picker-wrapper table .day.checked.first-date-selected, .date-picker-wrapper table .day.checked.last-date-selected {
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+.date-picker-wrapper table .day.checked.first-date-selected.lastMonth, .date-picker-wrapper table .day.checked.last-date-selected.lastMonth {
+  background-color: var(--gray) !important;
+  color: var(--gray-5) !important;
+}
+.date-picker-wrapper table .day.checked.lastMonth {
+  background-color: var(--gray) !important;
+  color: var(--gray-5) !important;
+}
+.date-picker-wrapper table .day.toMonth.hovering {
+  background-color: var(--gray-3) !important;
+}
+.date-picker-wrapper table .day.invalid {
+  background-color: var(--gray) !important;
+  color: var(--gray-5) !important;
+}
+.date-picker-wrapper table .day.invalid.real-today {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: 1px solid var(--gray) !important;
+}
+.date-picker-wrapper table .day.lastMonth {
+  background-color: var(--gray) !important;
+  color: var(--gray-5) !important;
+}
+.date-picker-wrapper table .week-name {
+  font-size: 16px;
+  height: 45px;
+}
+.date-picker-wrapper table .caption .next,
+.date-picker-wrapper table .caption .prev {
+  font-size: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: block;
+  padding: 0;
+  line-height: 24px;
+}
+.date-picker-wrapper table .caption .next:before,
+.date-picker-wrapper table .caption .prev:before {
+  content: "\e902";
+  font-family: "customFont";
+  font-size: 28px;
+  color: var(--gray-6);
+  position: absolute;
+  display: block;
+  transition: all 0.3s linear;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+}
+.date-picker-wrapper table .caption .next:hover,
+.date-picker-wrapper table .caption .prev:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--gray-6);
+}
+.date-picker-wrapper table .caption .next:hover:before,
+.date-picker-wrapper table .caption .prev:hover:before {
+  color: var(--gray-6);
+}
+@media screen and (min-width: 992px) {
+  .date-picker-wrapper table .caption .next:hover:before,
+  .date-picker-wrapper table .caption .prev:hover:before {
+    color: var(--primary);
+  }
+}
+.date-picker-wrapper table .caption .prev {
+  left: 5px;
+}
+.date-picker-wrapper table .caption .prev:before {
+  transform: rotate(180deg);
+}
+.date-picker-wrapper table .caption .next {
+  margin-left: auto;
+  right: 5px;
+}
+.date-picker-wrapper .date-range-length-tip {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+.date-picker-wrapper .date-range-length-tip:after {
+  border-top-color: var(--black) !important;
+}
+.date-picker-wrapper .drp_top-bar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  left: 0;
+  margin: 0 auto;
+  display: none !important;
+}
+.date-picker-wrapper .drp_top-bar .default-top {
+  display: none;
+}
+.date-picker-wrapper .drp_top-bar .apply-btn {
+  top: -30px;
+  padding: 10px 20px !important;
+  right: 0;
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  font-size: 14px;
+  font-family: "GilroySemibold";
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .date-picker-wrapper .drp_top-bar .apply-btn:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--black);
+  }
+}
+.date-picker-wrapper .footer {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper .footer {
+    text-align: center;
+  }
+}
+.date-picker-wrapper .footer .shortcuts > b {
+  display: none !important;
+}
+.date-picker-wrapper .footer .next-days {
+  font-family: "GilroyMedium";
+  font-size: 13px;
+  color: var(--gray-6);
+}
+.date-picker-wrapper .footer .next-days a {
+  font-family: "GilroyMedium";
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+  margin-left: 5px;
+  background-color: var(--gray);
+  padding: 5px 13px;
+  border-radius: 4px;
+  color: var(--gray-7);
+  transition: all 0.3s linear;
+}
+.date-picker-wrapper .footer .next-days a:nth-child(1) {
+  margin-left: 23px;
+}
+.date-picker-wrapper .footer .next-days a:nth-child(1):before {
+  content: "\e903";
+  font-family: "customFont";
+  font-size: 16px;
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-6);
+}
+@media screen and (min-width: 991.98px) {
+  .date-picker-wrapper .footer .next-days a:hover {
+    background-color: var(--gray-3);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper .footer .next-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+.date-picker-wrapper .footer .next-buttons a {
+  font-family: "GilroyMedium";
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+  margin-left: 5px;
+  background-color: var(--gray);
+  padding: 5px 13px;
+  border-radius: 4px;
+  color: var(--gray-7);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 991.98px) {
+  .date-picker-wrapper .footer .next-buttons a:hover {
+    background-color: var(--gray-3);
+  }
+}
+.date-picker-wrapper .month-wrapper {
+  width: 100% !important;
+  padding: 0 0;
+  border: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.date-picker-wrapper .month-wrapper table {
+  width: 250px !important;
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper .month-wrapper table {
+    float: none;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100% !important;
+  }
+}
+.date-picker-wrapper .month-wrapper table.month2 {
+  float: right;
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper .month-wrapper table.month2 {
+    float: none;
+  }
+}
+.date-picker-wrapper .month-wrapper table td,
+.date-picker-wrapper .month-wrapper table th {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-family: "GilroyRegular";
+  padding: 3px;
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper .gap {
+    width: 100%;
+    height: 30px;
+    top: 0;
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 .calendarWrapper {
@@ -4592,306 +5649,6 @@ section .customBlockquote blockquote .fixBtn,
     background-color: var(--gray-3);
   }
 }
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper {
-  position: relative !important;
-  width: 100% !important;
-  top: -20px !important;
-  left: 0 !important;
-  background: var(--white);
-  padding: 95px 0 45px 0;
-  border-radius: 10px 10px 25px 25px;
-  border: none;
-  box-shadow: none;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper {
-    padding-top: 25px;
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-element {
-  text-transform: capitalize;
-  font-size: 16px;
-  color: var(--gray-6);
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-name {
-  font-size: 18px;
-  color: var(--black);
-  font-family: "GilroyMedium";
-  height: 60px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .first-date-selected,
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .last-date-selected {
-  background-color: var(--black) !important;
-  color: var(--white) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day {
-  padding: 0 0;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10.5px;
-  border-radius: 100%;
-  color: var(--gray-6) !important;
-  font-family: "GilroyMedium";
-}
-@media screen and (min-width: 992px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day:hover {
-    background-color: var(--gray);
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.real-today {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid var(--gray);
-  cursor: default;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.first-date-selected, .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.last-date-selected {
-  background-color: var(--black) !important;
-  color: var(--white) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.first-date-selected.lastMonth, .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.last-date-selected.lastMonth {
-  background-color: var(--gray) !important;
-  color: var(--gray-5) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.checked {
-  background-color: rgba(242, 5, 92, 0.2) !important;
-  color: var(--gray-7) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.checked.first-date-selected, .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.checked.last-date-selected {
-  background-color: var(--primary) !important;
-  color: var(--white) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.checked.first-date-selected.lastMonth, .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.checked.last-date-selected.lastMonth {
-  background-color: var(--gray) !important;
-  color: var(--gray-5) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.checked.lastMonth {
-  background-color: var(--gray) !important;
-  color: var(--gray-5) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.toMonth.hovering {
-  background-color: var(--gray-3);
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.invalid {
-  background-color: var(--gray) !important;
-  color: var(--gray-5) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.invalid.real-today {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid var(--gray) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .day.lastMonth {
-  background-color: var(--gray) !important;
-  color: var(--gray-5) !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .week-name {
-  font-size: 16px;
-  height: 45px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next,
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev {
-  font-size: 0;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  display: block;
-  padding: 0;
-  line-height: 24px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next:before,
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev:before {
-  content: "\e902";
-  font-family: "customFont";
-  font-size: 28px;
-  color: var(--gray-6);
-  position: absolute;
-  display: block;
-  transition: all 0.3s linear;
-  top: 0;
-  left: 0;
-  font-weight: 400;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next:hover,
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--gray-6);
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next:hover:before,
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev:hover:before {
-  color: var(--gray-6);
-}
-@media screen and (min-width: 992px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next:hover:before,
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev:hover:before {
-    color: var(--primary);
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev {
-  left: 5px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .prev:before {
-  transform: rotate(180deg);
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper table .caption .next {
-  margin-left: auto;
-  right: 5px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .date-range-length-tip {
-  background-color: var(--black);
-  color: var(--white);
-  border-radius: 4px;
-  padding: 3px 8px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .drp_top-bar {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 90px;
-  left: 0;
-  margin: 0 auto;
-  display: none !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .drp_top-bar .default-top {
-  display: none;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .drp_top-bar .apply-btn {
-  top: -30px;
-  padding: 10px 20px !important;
-  right: 0;
-  background-color: var(--black);
-  color: var(--white);
-  border: 1px solid var(--black);
-  font-size: 14px;
-  font-family: "GilroySemibold";
-  border-radius: 10px;
-  transition: all 0.3s linear;
-}
-@media screen and (min-width: 992px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .drp_top-bar .apply-btn:hover {
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--black);
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer {
-  margin-top: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer {
-    text-align: center;
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .shortcuts > b {
-  display: none !important;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-days {
-  font-family: "GilroyMedium";
-  font-size: 13px;
-  color: var(--gray-6);
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-days a {
-  font-family: "GilroyMedium";
-  font-size: 13px;
-  color: var(--primary);
-  text-decoration: none;
-  display: inline-flex;
-  position: relative;
-  margin-left: 5px;
-  background-color: var(--gray);
-  padding: 5px 13px;
-  border-radius: 4px;
-  color: var(--gray-7);
-  transition: all 0.3s linear;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-days a:nth-child(1) {
-  margin-left: 23px;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-days a:nth-child(1):before {
-  content: "\e903";
-  font-family: "customFont";
-  font-size: 16px;
-  position: absolute;
-  left: -18px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--gray-6);
-}
-@media screen and (min-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-days a:hover {
-    background-color: var(--gray-3);
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-buttons {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-buttons a {
-  font-family: "GilroyMedium";
-  font-size: 13px;
-  color: var(--primary);
-  text-decoration: none;
-  display: inline-flex;
-  position: relative;
-  margin-left: 5px;
-  background-color: var(--gray);
-  padding: 5px 13px;
-  border-radius: 4px;
-  color: var(--gray-7);
-  transition: all 0.3s linear;
-}
-@media screen and (min-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .footer .next-buttons a:hover {
-    background-color: var(--gray-3);
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper {
-  width: 100% !important;
-  padding: 0 0;
-  border: none;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper table {
-  width: 250px !important;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper table {
-    float: none;
-    margin: 0 auto;
-    max-width: 300px;
-    width: 100% !important;
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper table.month2 {
-  float: right;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper table.month2 {
-    float: none;
-  }
-}
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper table td,
-.calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .month-wrapper table th {
-  font-size: 14px;
-  text-transform: capitalize;
-  font-family: "GilroyRegular";
-  padding: 3px;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .date-picker-wrapper .gap {
-    width: 100%;
-    height: 30px;
-    top: 0;
-    float: none;
-    margin: 0 auto;
-  }
-}
 .calendarWrapper .dateTimeSearchWrapper.active {
   position: absolute;
   background: var(--white);
@@ -5077,171 +5834,6 @@ section .customBlockquote blockquote .fixBtn,
 }
 .calendarWrapper .dateSearchButton.active {
   opacity: 1;
-}
-.calendarWrapper #dateInputs {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: stretch;
-  gap: 20px;
-  height: 60px;
-}
-@media screen and (max-height: 768px) {
-  .calendarWrapper #dateInputs {
-    height: 45px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .calendarWrapper #dateInputs {
-    height: 45px;
-  }
-}
-.calendarWrapper #dateInputs #checkinInput {
-  width: 50%;
-  border-radius: 10px;
-  height: 60px;
-  background-color: var(--gray);
-  border: 1px solid var(--gray-3);
-  font-size: 14px;
-  padding-top: 16px;
-  padding-left: 10px;
-  color: #878787;
-}
-@media screen and (max-height: 768px) {
-  .calendarWrapper #dateInputs #checkinInput {
-    height: 45px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .calendarWrapper #dateInputs #checkinInput {
-    height: 45px;
-  }
-}
-.calendarWrapper #dateInputs #checkinInput.selected {
-  border-radius: 10px 50px 50px 10px;
-  background-color: var(--black);
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkinInput.selected .name {
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkoutInput {
-  width: 50%;
-  border-radius: 10px;
-  height: 60px;
-  background-color: var(--gray);
-  border: 1px solid var(--gray-3);
-  font-size: 14px;
-  padding-top: 16px;
-  padding-left: 10px;
-  color: #878787;
-}
-@media screen and (max-height: 768px) {
-  .calendarWrapper #dateInputs #checkoutInput {
-    height: 45px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .calendarWrapper #dateInputs #checkoutInput {
-    height: 45px;
-  }
-}
-.calendarWrapper #dateInputs #checkoutInput.selected {
-  border-radius: 10px 50px 50px 10px;
-  background-color: var(--black);
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkoutInput.selected .name {
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkInText .name,
-.calendarWrapper #dateInputs #checkOutText .name {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper #dateInputs #checkInText .name,
-  .calendarWrapper #dateInputs #checkOutText .name {
-    top: 6px;
-  }
-}
-.calendarWrapper #dateInputs #checkInText {
-  position: absolute;
-  width: calc(50% - 10px);
-  left: 0;
-  top: 0;
-  height: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px 10px 0;
-  font-size: 13px;
-  color: #878787;
-  cursor: pointer;
-}
-@media screen and (max-height: 768px) {
-  .calendarWrapper #dateInputs #checkInText {
-    height: 45px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .calendarWrapper #dateInputs #checkInText {
-    height: 45px;
-  }
-}
-.calendarWrapper #dateInputs #checkInText .name {
-  font-family: "GilroySemibold";
-  text-transform: uppercase;
-  font-size: 11px;
-}
-.calendarWrapper #dateInputs #checkInText.selected {
-  border-radius: 10px 50px 50px 10px;
-  background-color: var(--black);
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkInText.selected .name {
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkOutText {
-  position: absolute;
-  width: calc(50% - 10px);
-  right: 0;
-  top: 0;
-  height: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px 10px 0;
-  font-size: 13px;
-  color: #878787;
-  cursor: no-drop;
-}
-@media screen and (max-height: 768px) {
-  .calendarWrapper #dateInputs #checkOutText {
-    height: 45px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .calendarWrapper #dateInputs #checkOutText {
-    height: 45px;
-  }
-}
-.calendarWrapper #dateInputs #checkOutText.selected {
-  border-radius: 10px 50px 50px 10px;
-  background-color: var(--black);
-  color: var(--white);
-  cursor: default;
-}
-.calendarWrapper #dateInputs #checkOutText.selected .name {
-  color: var(--white);
-}
-.calendarWrapper #dateInputs #checkOutText .name {
-  font-family: "GilroySemibold";
-  font-size: 11px;
-  text-transform: uppercase;
 }
 @media screen and (max-width: 991.98px) {
   .calendarWrapper.opened {
@@ -5556,6 +6148,187 @@ section .customBlockquote blockquote .fixBtn,
     background-color: var(--primary);
     color: var(--white);
   }
+}
+
+.dateInputs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  height: 60px;
+}
+@media screen and (max-height: 768px) {
+  .dateInputs {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .dateInputs {
+    height: 45px;
+  }
+}
+.dateInputs .checkinInput {
+  width: 50%;
+  border-radius: 10px;
+  height: 60px;
+  background-color: var(--gray);
+  border: 1px solid var(--gray-3);
+  font-size: 14px;
+  padding-top: 16px;
+  padding-left: 10px;
+  color: #878787;
+}
+@media screen and (max-height: 768px) {
+  .dateInputs .checkinInput {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .dateInputs .checkinInput {
+    height: 45px;
+  }
+}
+.dateInputs .checkinInput.selected {
+  border-radius: 10px 50px 50px 10px;
+  background-color: var(--black);
+  color: var(--white);
+}
+.dateInputs .checkinInput.selected .name {
+  color: var(--white);
+}
+.dateInputs .checkoutInput {
+  width: 50%;
+  border-radius: 10px;
+  height: 60px;
+  background-color: var(--gray);
+  border: 1px solid var(--gray-3);
+  font-size: 14px;
+  padding-top: 16px;
+  padding-left: 10px;
+  color: #878787;
+}
+@media screen and (max-height: 768px) {
+  .dateInputs .checkoutInput {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .dateInputs .checkoutInput {
+    height: 45px;
+  }
+}
+.dateInputs .checkoutInput.selected {
+  border-radius: 10px 50px 50px 10px;
+  background-color: var(--black);
+  color: var(--white);
+}
+.dateInputs .checkoutInput.selected .name {
+  color: var(--white);
+}
+.dateInputs .checkInText .name,
+.dateInputs .checkOutText .name {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .dateInputs .checkInText .name,
+  .dateInputs .checkOutText .name {
+    top: 6px;
+  }
+}
+.dateInputs .checkInText {
+  position: absolute;
+  width: calc(50% - 10px);
+  left: 0;
+  top: 0;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 10px 0;
+  font-size: 13px;
+  color: #878787;
+  cursor: pointer;
+}
+@media screen and (max-height: 768px) {
+  .dateInputs .checkInText {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .dateInputs .checkInText {
+    height: 45px;
+  }
+}
+.dateInputs .checkInText .name {
+  font-family: "GilroySemibold";
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.dateInputs .checkInText.selected {
+  border-radius: 10px 50px 50px 10px;
+  background-color: var(--black);
+  color: var(--white);
+}
+.dateInputs .checkInText.selected .name {
+  color: var(--white);
+}
+.dateInputs .checkOutText {
+  position: absolute;
+  width: calc(50% - 10px);
+  right: 0;
+  top: 0;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 10px 0;
+  font-size: 13px;
+  color: #878787;
+  cursor: no-drop;
+}
+@media screen and (max-height: 768px) {
+  .dateInputs .checkOutText {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .dateInputs .checkOutText {
+    height: 45px;
+  }
+}
+.dateInputs .checkOutText.selected {
+  border-radius: 10px 50px 50px 10px;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: default;
+}
+.dateInputs .checkOutText.selected .name {
+  color: var(--white);
+}
+.dateInputs .checkOutText .name {
+  font-family: "GilroySemibold";
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.dateColumnWrapper {
+  position: relative;
+  width: 380px;
+  margin-left: auto;
+}
+.dateColumnWrapper .date-picker-wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  padding-top: 30px !important;
+  width: 700px !important;
+  left: auto !important;
+  right: 0 !important;
+  box-shadow: 0 12px 17px rgba(39, 54, 86, 0.14), 0 5px 22px rgba(39, 54, 86, 0.12);
 }
 
 .videoCardFull {
@@ -6062,6 +6835,33 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 
+.swiperButton {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: 100%;
+  color: var(--primary);
+  font-size: 34px;
+}
+.swiperButton:after {
+  display: none;
+}
+.swiperButton.swiper-button-prev {
+  left: 30px;
+}
+.swiperButton.swiper-button-prev .icon-arrow-right-2 {
+  transform: rotate(180deg);
+}
+.swiperButton.swiper-button-next {
+  right: 30px;
+}
+@media screen and (min-width: 992px) {
+  .swiperButton:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
 @media screen and (max-width: 991.98px) {
   .tekneKiralamaSlider {
     padding-left: 16px;
@@ -6344,6 +7144,23 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 
+/*Detay slider*/
+.detailsSlideWrapper {
+  position: relative;
+}
+.detailsSlideWrapper .swiper-slide .galleryItem {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 3/2;
+}
+.detailsSlideWrapper .swiper-slide .galleryItem img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media screen and (max-width: 991.98px) {
   .filterWrapper .filterHead {
     display: flex;
@@ -6421,6 +7238,12 @@ section .customBlockquote blockquote .fixBtn,
     margin-left: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .filterWrapper .filterHead.fixed .filterTop .filterModalButton {
+    height: 50px;
+    width: 60px;
+  }
+}
 .filterWrapper .filterHead.fixed .filterTop .filterModalButton:before {
   display: none;
 }
@@ -6486,7 +7309,7 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 480px) {
   .filterWrapper .filterTop .calendarMobilButton .filterModalButton {
     height: 50px;
-    width: 50px;
+    width: 60px;
   }
 }
 .filterWrapper .filterTop .calendarMobilButton .dateInfo {
@@ -6715,6 +7538,210 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroyRegular";
 }
 
+.modal .modal-content {
+  max-height: 700px;
+}
+.modal .modal-content .modal-header {
+  padding: 50px 50px 20px;
+  border-bottom: none;
+}
+.modal .modal-content .modal-header .titleColumn {
+  flex: 1;
+  text-align: center;
+  padding-right: 20px;
+}
+.modal .modal-content .modal-header .titleColumn .modal-title {
+  font-size: 24px;
+  color: var(--text);
+  font-family: "GilroySemibold";
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.modal .modal-content .modal-header .titleColumn p {
+  font-family: "GilroyRegular";
+  color: var(--gray-6);
+  font-size: 14px;
+  line-height: 22px;
+}
+.modal .modal-content .modal-header .btn-close {
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary);
+  padding: 0;
+  box-shadow: none;
+  opacity: 1;
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.modal .modal-content .modal-header .btn-close:after {
+  content: "\e922";
+  font-family: "customFont";
+  font-size: 32px;
+  color: var(--white);
+}
+.modal .modal-content .modal-body {
+  padding: 30px 90px 50px 50px;
+}
+.modal .modal-content .modal-body .customAcc .accordion-item {
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 30px;
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+}
+.modal .modal-content .modal-body .customAcc .accordion-item:first-child {
+  border-top: 1px solid var(--gray);
+}
+.modal .modal-content .modal-body .customAcc .accordion-item .accordion-button {
+  font-size: 20px;
+  color: var(--text);
+  line-height: 28px;
+  font-family: "GilroySemibold";
+  box-shadow: none;
+  padding: 20px 15px;
+}
+.modal .modal-content .modal-body .checkList {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.propList .listItem .title {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "GilroyMedium";
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.rangesliderWrapper .valueTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rangesliderWrapper .valueTop span {
+  font-size: 18px;
+  color: var(--text);
+  line-height: 24px;
+  font-family: "GilroyMedium";
+}
+.rangesliderWrapper #rangeSlider {
+  margin: 20px auto;
+  width: calc(100% - 30px);
+}
+.rangesliderWrapper .rangeInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rangesliderWrapper .rangeInput input {
+  border: 1px solid var(--text);
+  border-radius: 6px;
+  height: 50px;
+  width: 40%;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+  color: var(--text);
+  line-height: 24px;
+  font-family: "GilroyMedium";
+}
+.rangesliderWrapper .noUi-connect {
+  background-color: var(--primary);
+}
+.rangesliderWrapper .noUi-horizontal .noUi-handle {
+  border-radius: 100%;
+  height: 34px !important;
+  top: -10px !important;
+  cursor: pointer;
+  box-shadow: 0 0 1px #000, 0 1px 7px rgba(0, 0, 0, 0), 0 3px 6px -3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s linear;
+}
+.rangesliderWrapper .noUi-horizontal .noUi-handle:before, .rangesliderWrapper .noUi-horizontal .noUi-handle:after {
+  top: 10px;
+  background-color: var(--primary);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .rangesliderWrapper .noUi-horizontal .noUi-handle:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  .rangesliderWrapper .noUi-horizontal .noUi-handle:hover:before, .rangesliderWrapper .noUi-horizontal .noUi-handle:hover:after {
+    background-color: var(--white);
+  }
+}
+
+.is-idle .fancybox__nav {
+  animation: none;
+}
+
+.f-button[title=Close] {
+  top: 30px;
+  right: 30px;
+}
+.f-button[title=Close]:before {
+  content: "\e922";
+  font-family: "customFont";
+  color: var(--primary);
+  position: relative;
+  font-size: 50px;
+  transition: all 0.3s linear;
+}
+
+.f-button {
+  background-color: var(--white);
+  width: 75px;
+  height: 75px;
+  transition: all 0.3s linear;
+  border-radius: 0;
+}
+.f-button svg {
+  display: none;
+}
+.f-button:hover {
+  background-color: var(--primary);
+}
+.f-button:hover:before {
+  color: var(--white);
+}
+.f-button:hover:not([disabled]) {
+  color: var(--white);
+  background-color: var(--primary);
+}
+.f-button:hover:not([disabled]):before {
+  color: var(--white);
+}
+
+.fancybox__nav .f-button:before {
+  content: "\e906";
+  font-family: "customFont";
+  color: var(--primary);
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  font-size: 50px;
+  transition: all 0.3s linear;
+}
+.fancybox__nav .f-button.is-prev {
+  left: 30px !important;
+}
+.fancybox__nav .f-button.is-prev:before {
+  transform: rotate(180deg);
+}
+.fancybox__nav .f-button.is-next {
+  right: 30px !important;
+}
+
+.fancybox__slide.has-image > .fancybox__content {
+  padding-top: 50px;
+}
+
 #app {
   min-height: 100vh;
   width: 100%;
@@ -6722,4 +7749,10 @@ section .customBlockquote blockquote .fixBtn,
 
 main {
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+hr {
+  border-top-color: var(--gray);
+  opacity: 1;
 }/*# sourceMappingURL=app.css.map */
