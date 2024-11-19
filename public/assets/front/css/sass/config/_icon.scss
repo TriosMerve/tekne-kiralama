@@ -26,6 +26,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-route-map:before {
+  content: "\e92f";
+}
+.icon-star-fill:before {
+  content: "\e92e";
+}
+.icon-eye:before {
+  content: "\e92c";
+}
+.icon-eye-cancel:before {
+  content: "\e92d";
+}
+
 .icon-star:before {
   content: "\e92b";
 }

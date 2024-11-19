@@ -279,6 +279,22 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-route-map:before {
+  content: "\e92f";
+}
+
+.icon-star-fill:before {
+  content: "\e92e";
+}
+
+.icon-eye:before {
+  content: "\e92c";
+}
+
+.icon-eye-cancel:before {
+  content: "\e92d";
+}
+
 .icon-star:before {
   content: "\e92b";
 }
@@ -4390,6 +4406,21 @@ section .customBlockquote blockquote .fixBtn,
     line-height: 24px;
   }
 }
+.paragraph h3 {
+  display: block;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "GilroySemibold";
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .paragraph h3 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
 .paragraph a {
   font-family: "GilroySemibold";
   color: var(--primary);
@@ -4646,7 +4677,7 @@ section .customBlockquote blockquote .fixBtn,
 .subContent .otherProperties {
   padding-top: 50px;
 }
-.subContent .otherProperties > .title {
+.subContent .otherProperties .caption {
   font-family: "GilroySemibold";
   font-size: 22px;
   color: var(--text);
@@ -4660,6 +4691,7 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--text);
   line-height: 27px;
   margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .productsPropList .item {
@@ -4700,6 +4732,44 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroyMedium";
   padding: 10px 15px;
   border-radius: 30px;
+}
+.productsPropList .item .itemHead {
+  display: flex;
+  align-items: center;
+}
+.productsPropList .item .itemHead .name {
+  font-family: "GilroySemibold";
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--black);
+}
+.productsPropList .item .itemHead .date {
+  color: var(--black);
+  font-family: "GilroyMedium";
+  font-size: 15px;
+  line-height: 22px;
+  margin-left: auto;
+}
+.productsPropList .item .startWrapper {
+  margin-top: 12px;
+}
+.productsPropList .item .startWrapper span {
+  color: var(--primary);
+}
+.productsPropList .item .itemContent {
+  font-family: "GilroyRegular";
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--black);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  margin-top: 15px;
+}
+.productsPropList .item .morePlusButton {
+  margin-top: 20px;
 }
 .productsPropList.type2 {
   display: flex;
@@ -4814,6 +4884,78 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--text);
 }
 
+.placesVisit {
+  border: 1px solid var(--gray);
+  padding: 40px 30px;
+  margin-top: 30px;
+}
+.placesVisit .top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.placesVisit .top .icon-route-map {
+  font-size: 50px;
+  color: var(--primary);
+}
+.placesVisit .top .title {
+  font-family: "GilroySemibold";
+  font-size: 24px;
+  color: var(--black);
+  line-height: 32px;
+}
+.placesVisit .top .title b {
+  color: var(--primary);
+}
+.placesVisit .top .title span {
+  font-size: 16px;
+}
+.placesVisit .placesVisitList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+  padding-left: 92px;
+}
+.placesVisit .placesVisitList a {
+  font-family: "GilroyMedium";
+  position: relative;
+  color: var(--black);
+  font-size: 16px;
+  display: inline-flex;
+  width: calc(33.3% - 27px);
+  text-decoration: underline;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .placesVisit .placesVisitList a:hover {
+    color: var(--primary);
+  }
+}
+
+.pointWrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+  margin-bottom: 20px;
+}
+.pointWrapper .title {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+  font-size: 20px;
+  line-height: 27px;
+}
+.pointWrapper .title b {
+  margin-left: 20px;
+}
+.pointWrapper .startWrapper {
+  color: var(--primary);
+  padding-left: 40px;
+}
+.pointWrapper .startWrapper span {
+  font-size: 19px;
+}
+
 .movContent {
   height: 110px;
   overflow: hidden;
@@ -4845,6 +4987,9 @@ section .customBlockquote blockquote .fixBtn,
   left: 0;
   bottom: 0;
   transition: all 0.3s linear;
+}
+.morePlusButton.noAfter:after {
+  display: none;
 }
 @media screen and (min-width: 992px) {
   .morePlusButton:hover {

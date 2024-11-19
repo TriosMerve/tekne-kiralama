@@ -729,6 +729,19 @@ section,
       line-height: 24px;
     }
   }
+  h3{
+    display: block;
+    color: var(--dark-gray);
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "GilroySemibold";
+    margin-bottom: 10px;
+    margin-top: 20px;
+    @media screen and (max-width: 991.98px) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
   a {
     font-family: "GilroySemibold";
     color: var(--primary);
@@ -1000,7 +1013,7 @@ section,
   padding-top:70px;
   .otherProperties{
     padding-top: 50px;
-    & > .title{
+    .caption{
       font-family: 'GilroySemibold';
       font-size: 22px;
       color: var(--text);
@@ -1014,6 +1027,7 @@ section,
       color: var(--text);
       line-height:27px;
       margin-bottom: 30px;
+      margin-top: 50px;
     }
   }
 }
@@ -1057,6 +1071,46 @@ section,
         padding: 10px 15px;
         border-radius: 30px;
       }
+    }
+    .itemHead{
+      display: flex;
+      align-items: center;
+
+      .name{
+        font-family: 'GilroySemibold';
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--black);
+      }
+      .date{
+        color: var(--black);
+        font-family: 'GilroyMedium';
+        font-size: 15px;
+        line-height: 22px;
+        margin-left: auto;
+      }
+    }
+    .startWrapper{
+      margin-top: 12px;
+      span{
+        color: var(--primary);
+      }
+    }
+    .itemContent{
+      font-family: 'GilroyRegular';
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--black);
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+      margin-top: 15px;
+    }
+    .morePlusButton{
+      margin-top: 20px;
     }
   }
 
@@ -1175,6 +1229,87 @@ section,
     }
   }
 }
+.placesVisit{
+  border: 1px solid var(--gray);
+  padding:40px 30px;
+  margin-top: 30px;
+  .top{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .icon-route-map{
+      font-size: 50px;
+      color: var(--primary);
+    }
+    .title{
+      font-family: 'GilroySemibold';
+      font-size: 24px;
+      color: var(--black);
+      line-height: 32px;
+      b{
+        color: var(--primary);
+      }
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+  .placesVisitList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    padding-left: 92px;
+    a{
+      font-family: 'GilroyMedium';
+      position: relative;
+      color: var(--black);
+      font-size: 16px;
+      display: inline-flex;
+      width: calc(33.3% - 27px);
+      text-decoration: underline;
+      transition: all .3s linear;
+
+      // &:after{
+      //   content: "";
+      //   width: 100%;
+      //   border-bottom: 1px solid var(--black);
+      //   position: absolute;
+      //   left: 0;
+      //   bottom: 1px;
+      //   transition: all .3s linear;
+      // }
+
+      @media screen and (min-width:992px) {
+        &:hover{
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+.pointWrapper{
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+  margin-bottom: 20px;
+  .title{
+    font-family: 'GilroySemibold';
+    color: var(--primary);
+    font-size: 20px;
+    line-height: 27px;
+    b{
+      margin-left: 20px;
+    }
+  }
+  .startWrapper{
+    color: var(--primary);
+    padding-left: 40px;
+    span{
+      font-size: 19px;
+    }
+  }
+}
 .movContent{
   height: 110px;
   overflow: hidden;
@@ -1205,6 +1340,11 @@ section,
     left: 0;
     bottom: 0;
     transition: all .3s linear;
+  }
+  &.noAfter{
+    &:after{
+      display: none;
+    }
   }
   @media screen and (min-width:992px) {
     &:hover{
