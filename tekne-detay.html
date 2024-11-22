@@ -507,8 +507,8 @@
                         <div class="swiper-button-prev swiperButton"><span class="icon-arrow-right-2"></span></div>
                         <div class="swiper-button-next swiperButton"><span class="icon-arrow-right-2"></span></div>
                     </div> 
-                    <a href="public/assets/images/media/tekne1.jpg" data-fancybox="detailsGallery" class="allButton fixBtn button-white galleryItem" >Tümünü Gör</a>
-                    <a href="#" class="shareButton fixBtn button-white" data-bs-target="#shareModal" data-bs-toggle="modal">Paylaş</a>
+                    <a href="public/assets/images/media/tekne1.jpg" data-fancybox="detailsGallery" class="allButton fixBtn button-white galleryItem" ><span class="d-none d-lg-block">Tümünü Gör</span> <span class="icon-gallery d-lg-none"></span></a>
+                    <a href="#" class="shareButton fixBtn button-white" data-bs-target="#shareModal" data-bs-toggle="modal"><span class="d-none d-lg-block">Paylaş</span><span class="icon-share d-lg-none"></span></a>
                 </div>
                 <div class="breadCrumbWrapper">
                     <div class="container-3xl">
@@ -519,16 +519,16 @@
                     </div>
                 </div>
                 <div class="container-3xl">
-                    <div class="twiceColumn">
+                    <div class="twiceColumn flex-lg-row flex-column-reverse">
                         <div class="leftColumn pageDetailsContent row mx-0 pe-lg-5 staticColumn">
-                            <div class="infoDetails col-lg-6 px-0 pe-lg-4">
+                            <div class="infoDetails col-xl-6 px-0 pe-lg-4">
                                 <div class="detailsHead d-inline-block w-auto">
                                     <div class="pageTitle pe-lg-3">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="location">Fethiye, Muğla</div>
-                                            <div class="id">ID:1789034A</div>
+                                            <div class="id d-none d-lg-block">ID:1789034A</div>
                                         </div>
-                                        <div class="title">Göcek 14.2m Kiralık Yelkenli</div>
+                                        <h1 class="title">Göcek 14.2m Kiralık Yelkenli</h1>
                                     </div>
                                     <div class="type">Bavaria 46 Cruiser (2009 / 2021 refit)</div>
                                     <div class="tags">
@@ -539,7 +539,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="properties col-lg-6 px-0 ps-lg-3 text-end">
+                            <div class="properties col-xl-6 px-0 ps-xl-3 text-xl-end text-start mt-xl-0 mt-4">
                                 <div class="point">
                                     <div class="d-flex align-items-center">
                                         <span class="icon-star"></span>
@@ -547,12 +547,12 @@
                                     </div>
                                     <a href="#" class="text">1586 Yorum</a>
                                 </div>
-                                <div class="category align-items-end">
+                                <div class="category align-items-xl-end align-items-start">
                                     <span>Konaklamalı</span>
                                     <span>Kaptanlı</span>
                                 </div>
                             </div>
-                            <div class="col-12 subContent">
+                            <div class="col-12 subContent px-0">
                                 <div class="userDetails">
                                     <div class="userHead">
                                         <div class="userInfo">
@@ -562,7 +562,7 @@
                                                 <div class="name">Enver Sarıgül</div>
                                             </div>
                                         </div>
-                                        <div class="stick">
+                                        <div class="stick d-none d-lg-flex">
                                             SÜPER TEKNE SAHİBİ
                                         </div>
                                     </div>
@@ -632,8 +632,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <hr class="my-5">
-                                    <div class="caption">Tekne Kapasitesi</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Tekne Kapasitesi</h2>
                                     <div class="productsPropList">
                                         <div class="item">
                                             <div class="title">Seyir Kapasitesi</div>
@@ -648,15 +648,15 @@
                                             <div class="content"><b>2 Kabin ( 4 Kişi )</b></div>
                                         </div>
                                     </div>
-                                    <hr class="my-5">
-                                    <div class="caption">Fiyat Bilgileri</div>
-                                    <div class="paragraph mb-lg-4">
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Fiyat Bilgileri</h2>
+                                    <div class="paragraph mb-4">
                                         Teknenin rezervasyon bedeli sezonsal olarak değişiklik gösterebilir.
                                     </div>
                                     <a href="#" class="fixBtn button-outline-2" data-bs-toggle="modal" data-bs-target="#priceModal">Fiyat Bilgileri</a>
                                     
-                                    <hr class="my-5">
-                                    <div class="caption">Tekne Özellikleri</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Tekne Özellikleri</h2>
                                     <div class="productsPropList type3 mb-lg-4">
                                         <div class="item">
                                             <div class="title">Tekne Tipi : </div>
@@ -678,9 +678,9 @@
                                     <a href="#" class="fixBtn button-outline-2" data-bs-toggle="modal" data-bs-target="#tekneOzellikleriModal">Tümünü Görüntüle (65)</a>
                                     
 
-                                    <hr class="my-5">
-                                    <div class="caption">Tekne İmkanları</div>
-                                    <div class="subTitle mt-0">Temel Olanaklar</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Tekne İmkanları</h2>
+                                    <h3 class="subTitle mt-0">Temel Olanaklar</h3>
                                     <div class="productsPropList type2">
                                         <div class="item">
                                             <div class="icon"><img src="public/assets/images/media/icon/01.svg" alt=""></div>
@@ -703,7 +703,7 @@
                                             <div class="title">Home office setup</div>
                                         </div>
                                     </div>
-                                    <div class="subTitle">Diğer Olanaklar</div>
+                                    <h3 class="subTitle">Diğer Olanaklar</h3>
                                     <div class="productsPropList type3">
                                         <div class="item">
                                             <div class="icon"><img src="public/assets/images/media/icon/AirConditioning.svg" alt=""></div>
@@ -738,11 +738,14 @@
                                             <div class="title">Home office setup</div>
                                         </div>
                                     </div>
-                                    <hr class="my-5">
-                                    <div class="caption">Sunulan Hizmetler</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Sunulan Hizmetler</h2>
+                                    <div class="paragraph">
+                                        Teknenin rezervasyon bedeli sezonsal olarak değişiklik gösterebilir.
+                                    </div>
                                     <div class="row mx-0">
                                         <div class="col-lg-6 ps-0">
-                                            <div class="subTitle">Ücretsiz Hizmetler</div>
+                                            <h3 class="subTitle">Ücretsiz Hizmetler</h3>
                                             <ul class="productsPropList list">
                                                 <li class="item">
                                                     <div class="title">Fully equipped kitchen</div>
@@ -762,7 +765,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-lg-6 pe-0">
-                                            <div class="subTitle">Ücretli Hizmetler</div>
+                                            <h3 class="subTitle">Ücretli Hizmetler</h3>
                                             <ul class="productsPropList list">
                                                 <li class="item">
                                                     <div class="title">Home office setup</div>
@@ -791,130 +794,116 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <hr class="my-5">
-                                    <div class="caption">Yemek Opsiyonları</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Yemek Opsiyonları</h2>
                                     <div class="paragraph mb-lg-5">
                                         *Mürettebatlı kiralamalarda personelin yemek giderlerinden misafirler sorumludur.
                                     </div>
                                     <div class="productsPropList type4">
-                                        <div class="row mx-0 gy-4">
-                                            <div class="col-lg-6 ps-0 align-items-strech">
-                                                <div class="item h-100">
-                                                    <div class="icon">
-                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">Yemek Hazırlığı</div>
-                                                        <p>Yemek hazırlığından misafirler sorumludur.</p>
-                                                    </div>
+                                        <div class="gy-4 mt-4 mt-lg-0 colCustomGroup half">
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                </div>
+                                                <div>
+                                                    <div class="title">Yemek Hazırlığı</div>
+                                                    <p>Yemek hazırlığından misafirler sorumludur.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 pe-0">
-                                                <div class="item h-100">
-                                                    <div class="icon">
-                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">Kumanya alışverişi</div>
-                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
-                                                    </div>
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                </div>
+                                                <div>
+                                                    <div class="title">Kumanya alışverişi</div>
+                                                    <p>Kumanya alışverişinden misafirler sorumludur.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 ps-0">
-                                                <div class="item h-100">
-                                                    <div class="icon">
-                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">Kumanya alışverişi</div>
-                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
-                                                    </div>
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                </div>
+                                                <div>
+                                                    <div class="title">Kumanya alışverişi</div>
+                                                    <p>Kumanya alışverişinden misafirler sorumludur.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 pe-0">
-                                                <div class="item h-100">
-                                                    <div class="icon">
-                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">Kumanya alışverişi</div>
-                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
-                                                    </div>
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                </div>
+                                                <div>
+                                                    <div class="title">Kumanya alışverişi</div>
+                                                    <p>Kumanya alışverişinden misafirler sorumludur.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 ps-0">
-                                                <div class="item h-100">
-                                                    <div class="icon">
-                                                        <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">Kumanya alışverişi</div>
-                                                        <p>Kumanya alışverişinden misafirler sorumludur.</p>
-                                                    </div>
+                                            <div class="item">
+                                                <div class="icon">
+                                                    <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
+                                                </div>
+                                                <div>
+                                                    <div class="title">Kumanya alışverişi</div>
+                                                    <p>Kumanya alışverişinden misafirler sorumludur.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
 
-                                    <hr class="my-5">
-                                    <div class="caption">Bilmeniz Gerekenler</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Bilmeniz Gerekenler</h2>
                                     <div class="paragraph mb-lg-5">
                                         Bu tekne <b>minimum 2 gece konaklamalı</b> olarak sunulur. Ayrıca sezon dışı veya son dakika (check-in tarihinden 14 gün önce) gece konaklamasız tam gün olarak sunulur. Sezon dışı tarihleri görmek için <a href="#">tıklayın.</a>
                                     </div>
                                     <div class="productsPropList type4">
-                                        <div class="row mx-0 w-100">
-                                            <div class="col-lg-6 ps-0 align-items-strech">
-                                                <div class="item h-100">
-                                                    <div>
-                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-in :</span> <span class="content"><b>14:00</b></span></div>
-                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-out :</span> <span class="content"><b>08:00</b></span></div>
-                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-in (günlük kiralama) :</span> <span class="content"><b>10:00</b></span></div>
-                                                    </div>
+                                        <div class="w-100 mt-5 mt-lg-0 colCustomGroup half">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-in :</span> <span class="content"><b>14:00</b></span></div>
+                                                    <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-out :</span> <span class="content"><b>08:00</b></span></div>
+                                                    <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-in (günlük kiralama) :</span> <span class="content"><b>10:00</b></span></div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 pe-0">
-                                                <div class="item h-100">
-                                                    <div>
-                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-out (günlük kiralama) :</span> <span class="content"><b>18:00</b></span></div>
-                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Depozito Tipi :</span> <span class="content"><b>Depozito yok</b></span></div>
-                                                        <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Yakıt :</span> <span class="content"><b>Fiyata Dahil (1 saat seyir / gün)</b></span></div>
-                                                    </div>
+                                            <div class="item">
+                                                <div>
+                                                    <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Check-out (günlük kiralama) :</span> <span class="content"><b>18:00</b></span></div>
+                                                    <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Depozito Tipi :</span> <span class="content"><b>Depozito yok</b></span></div>
+                                                    <div class="mb-3"> <span class="title text-gray-7 fMedium me-2">Yakıt :</span> <span class="content"><b>Fiyata Dahil (1 saat seyir / gün)</b></span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         
                                         <div class="item">
                                             <div class="row mx-0 w-100">
-                                                <div class="d-flex col-lg-4 ps-0">
+                                                <div class="d-flex col-xl-4 px-0">
                                                     <div class="icon me-3">
                                                         <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
                                                     </div>
                                                     <div class="title">Kalan Ödeme Seçenekleri</div>
                                                 </div>
-                                                <div class="col-lg-8 pe-0">
+                                                <div class="col-xl-8 px-0">
                                                     <p>Kalan ödeme check-in tarihinde ilan sahibine yapılır.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="item">
                                             <div class="row mx-0 w-100">
-                                                <div class="d-flex col-lg-4 ps-0">
+                                                <div class="d-flex col-xl-4 px-0">
                                                     <div class="icon me-3">
                                                         <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" height="32" viewBox="0 0 512.002 512.002" width="32" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"></path><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"></path></g></svg>
 
                                                     </div>
                                                     <div class="title">İptal Poltikası</div>
                                                 </div>
-                                                <div class="col-lg-8 pe-0">
+                                                <div class="col-xl-8 px-0">
                                                     <p>İptal durumunda ön ödeme tutarı iade edilmez <br> <a href="#">Detayları Göster</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <hr class="my-5">
-                                    <div class="d-flex align-items-center">
+                                    <hr class="standartLine">
+                                    <div class="d-lg-flex align-items-xxl-center">
                                         <div class="caption mt-0">Tekne hakkında misafir yorumları</div>
                                         <div class="pointWrapper">
                                             <div class="title">
@@ -930,126 +919,129 @@
                                         </div>
                                     </div>
                                     <div class="productsPropList type4 mt-4">
-                                        <div class="row mx-0 w-100 gy-4">
-                                            <div class="col-lg-6 ps-0">
-                                                <div class="item h-100">
-                                                    <div>
-                                                        <div class="itemHead">
-                                                            <div class="name">Enver S*</div>
-                                                            <div class="date">Eylül 2024</div>
-                                                        </div>
-                                                        <div class="startWrapper">  
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                        </div>
-                                                        <div class="itemContent">
-                                                            Bülent kaptanın teknesinde harika bir tatil geçirdik. Bizim için güzel bir deneyim oldu. Yeme içme tavsiyelerini dikkate almalısınız. Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
-                                                        </div>
-                                                        <div class="morePlusButton noAfter">+ Daha Fazla</div>
+                                        <div class="w-100 colCustomGroup half">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="itemHead">
+                                                        <div class="name">Enver S*</div>
+                                                        <div class="date">Eylül 2024</div>
                                                     </div>
+                                                    <div class="startWrapper">  
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                    </div>
+                                                    <div class="itemContent">
+                                                        Bülent kaptanın teknesinde harika bir tatil geçirdik. Bizim için güzel bir deneyim oldu. Yeme içme tavsiyelerini dikkate almalısınız. Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
+                                                    </div>
+                                                    <a href="#" class="textLink noAfter" data-bs-target="#commentModal" data-bs-toggle="modal">+ Daha Fazla</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 pe-0">
-                                                <div class="item h-100">
-                                                    <div>
-                                                        <div class="itemHead">
-                                                            <div class="name">Serap Y S*</div>
-                                                            <div class="date">Eylül 2024</div>
-                                                        </div>
-                                                        <div class="startWrapper">  
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                        </div>
-                                                        <div class="itemContent">
-                                                            Değerli Bülent Abi ile ailecek ilk yatılı tekne deneyimimizi yaşadık. Ne büyük mutluluk ki bizim gibi  düşünen, çevreye son derece duyarlı ve çok temiz bir tekneye rastladık. Ailecek son derece.....
-                                                        </div>
-                                                        <div class="morePlusButton noAfter">+ Daha Fazla</div>
+                                            <div class="item">
+                                                <div>
+                                                    <div class="itemHead">
+                                                        <div class="name">Serap Y S*</div>
+                                                        <div class="date">Eylül 2024</div>
                                                     </div>
+                                                    <div class="startWrapper">  
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                    </div>
+                                                    <div class="itemContent">
+                                                        Değerli Bülent Abi ile ailecek ilk yatılı tekne deneyimimizi yaşadık. Ne büyük mutluluk ki bizim gibi  düşünen, çevreye son derece duyarlı ve çok temiz bir tekneye rastladık. Ailecek son derece.....
+                                                    </div>
+                                                    <a href="#" class="textLink noAfter" data-bs-target="#commentModal" data-bs-toggle="modal">+ Daha Fazla</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 ps-0">
-                                                <div class="item h-100">
-                                                    <div>
-                                                        <div class="itemHead">
-                                                            <div class="name">Mahmut L*</div>
-                                                            <div class="date">Eylül 2024</div>
-                                                        </div>
-                                                        <div class="startWrapper">  
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                        </div>
-                                                        <div class="itemContent">
-                                                            Kaptanımıza keyifli seyahat için çok teşekkür ederiz, iki çift olarak üç gece geçirdik teknede, tecrübesi ile tekneyi kullanırken ve koylara hakimiyetiyle güven içinde yolculuk yaptık,...
-                                                        </div>
-                                                        <div class="morePlusButton noAfter">+ Daha Fazla</div>
+                                            <div class="item">
+                                                <div>
+                                                    <div class="itemHead">
+                                                        <div class="name">Mahmut L*</div>
+                                                        <div class="date">Eylül 2024</div>
                                                     </div>
+                                                    <div class="startWrapper">  
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                    </div>
+                                                    <div class="itemContent">
+                                                        Kaptanımıza keyifli seyahat için çok teşekkür ederiz, iki çift olarak üç gece geçirdik teknede, tecrübesi ile tekneyi kullanırken ve koylara hakimiyetiyle güven içinde yolculuk yaptık,...
+                                                    </div>
+                                                    <a href="#" class="textLink noAfter" data-bs-target="#commentModal" data-bs-toggle="modal">+ Daha Fazla</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 pe-0">
-                                                <div class="item h-100">
-                                                    <div>
-                                                        <div class="itemHead">
-                                                            <div class="name">Ali Sami Z*</div>
-                                                            <div class="date">Eylül 2024</div>
-                                                        </div>
-                                                        <div class="startWrapper">  
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                            <span class="icon-star-fill"></span>
-                                                        </div>
-                                                        <div class="itemContent">
-                                                            Çok güzel keyifli bir tatil oldu. Kaptanın tavsiyesine uyduk güzel yerlere gittik. Bebeğimiz vardı onunla dahi çok keyifliydi.
-                                                        </div>
+                                            <div class="item">
+                                                <div>
+                                                    <div class="itemHead">
+                                                        <div class="name">Ali Sami Z*</div>
+                                                        <div class="date">Eylül 2024</div>
+                                                    </div>
+                                                    <div class="startWrapper">  
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                        <span class="icon-star-fill"></span>
+                                                    </div>
+                                                    <div class="itemContent">
+                                                        Çok güzel keyifli bir tatil oldu. Kaptanın tavsiyesine uyduk güzel yerlere gittik. Bebeğimiz vardı onunla dahi çok keyifliydi.
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <hr class="my-5">
-                                    <div class="caption">Lokasyon</div>
+                                    <hr class="standartLine">
+                                    <h2 class="caption">Lokasyon</h2>
                                     <div class="map">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12786.788082584597!2d28.92505570118106!3d36.75384290824281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c065fa398fef15%3A0x8de56199ebeef49d!2zR8O2Y2VrLCBGZXRoaXllL011xJ9sYQ!5e0!3m2!1str!2str!4v1732008018546!5m2!1str!2str" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12786.788082584597!2d28.92505570118106!3d36.75384290824281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c065fa398fef15%3A0x8de56199ebeef49d!2zR8O2Y2VrLCBGZXRoaXllL011xJ9sYQ!5e0!3m2!1str!2str!4v1732008018546!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                     <div class="placesVisit">
                                         <div class="top">
                                             <span class="icon-route-map"></span>
                                             <div class="title">Bu tekne ile görebileceğiniz <b>özel yerler</b> <span>(Koy,Ada, Kumsal)</span></div>
                                         </div>
-                                        <div class="placesVisitList">
-                                            <a href="#">Cennet Koyu</a>
-                                            <a href="#">Hattat Koyu</a>
-                                            <a href="#">Salih Adası</a>
-                                            <a href="#">İkiz Adalar</a>
-                                            <a href="#">Bağla Koyu</a>
-                                            <a href="#">Kissebükü Koyu</a>
-                                            <a href="#">Aspat Koyu</a>
+                                        <div class="placesVisitList type2">
+                                            <div class="visitItem"><a href="#">Cennet Koyu</a></div>
+                                            <div class="visitItem"><a href="#">Hattat Koyu</a></div>
+                                            <div class="visitItem"><a href="#">Salih Adası</a></div>
+                                            <div class="visitItem"><a href="#">İkiz Adalar</a></div>
+                                            <div class="visitItem"><a href="#">Bağla Koyu</a></div>
+                                            <div class="visitItem"><a href="#">Kissebükü Koyu</a></div>
+                                            <div class="visitItem"><a href="#">Aspat Koyu</a></div>
                                         </div>
                                     </div>
-                                    <hr class="my-5">
+                                    <hr class="standartLine">
                                     <div class="caption">Benzer Tekneler</div>
-                                    <div class="paragraph mb-lg-5">
+                                    <div class="paragraph mb-5">
                                         Bu tekne <b>minimum 2 gece konaklamalı</b> olarak sunulur. Ayrıca sezon dışı veya son dakika (check-in tarihinden 14 gün önce) gece konaklamasız tam gün olarak sunulur. Sezon dışı tarihleri görmek için <a href="#">tıklayın.</a>
                                     </div>
-                                    <div class="cards third">
+                                    <div class="cards third type2">
                                         <a href="#" class="card">
                                             <div class="cardTop-image">
+                                                <div class="imageWrapper d-lg-none">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                                
                                                 <div class="category">
                                                     <span>Konaklamalı</span>
                                                     <span>Kaptanlı</span>
                                                 </div>
-                                                <div class="swiper singleSlide">
+                                                <!-- <div class="point ms-auto">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="icon-star-percent"></span>
+                                                        <span class="pointNumber">5.0</span>
+                                                    </div>
+                                                    <span class="text">1586 Yorum</span>
+                                                </div> -->
+                                                <div class="swiper singleSlide d-none d-lg-block">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
@@ -1090,20 +1082,17 @@
                                                     <div class="discount">25.800</div>
                                                     <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
                                                 </div>
-                                                <div class="tags">
-                                                    <span>Seyir 14 kişi</span>
-                                                    <span>14.2m</span>
-                                                    <span>3 kabin</span>
-                                                    <span>Konaklama 6 kişi</span>
-                                                </div>
                                             </div>
                                         </a>
                                         <a href="#" class="card">
                                             <div class="cardTop-image">
+                                                <div class="imageWrapper d-lg-none">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
                                                 <div class="category">
                                                     <span>Konaklamalı</span>
                                                 </div>
-                                                <div class="swiper singleSlide">
+                                                <div class="swiper singleSlide d-none d-lg-block">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
@@ -1144,19 +1133,17 @@
                                                     <!-- <div class="discount">25.800</div> -->
                                                     <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
                                                 </div>
-                                                <div class="tags">
-                                                    <span>Seyir 5 kişi</span>
-                                                    <span>10.9m</span>
-                                                    <span>2 kabin</span>
-                                                </div>
                                             </div>
                                         </a>
                                         <a href="#" class="card">
                                             <div class="cardTop-image">
+                                                <div class="imageWrapper d-lg-none">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
                                                 <div class="category">
                                                     <span>Kaptanlı</span>
                                                 </div>
-                                                <div class="swiper singleSlide">
+                                                <div class="swiper singleSlide d-none d-lg-block">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
@@ -1197,20 +1184,18 @@
                                                     <!-- <div class="discount">25.800</div> -->
                                                     <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
                                                 </div>
-                                                <div class="tags">
-                                                    <span>Seyir 8 kişi</span>
-                                                    <span>11.6m</span>
-                                                    <span>1 kabin</span>
-                                                </div>
                                             </div>
                                         </a>
                                         <a href="#" class="card">
                                             <div class="cardTop-image">
+                                                <div class="imageWrapper d-lg-none">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
                                                 <div class="category">
                                                     <span>Konaklamalı</span>
                                                     <span>Kaptanlı</span>
                                                 </div>
-                                                <div class="swiper singleSlide">
+                                                <div class="swiper singleSlide d-none d-lg-block">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
@@ -1251,76 +1236,20 @@
                                                     <!-- <div class="discount">25.800</div> -->
                                                     <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
                                                 </div>
-                                                <div class="tags">
-                                                    <span>Seyir 14 kişi</span>
-                                                    <span>14.2m</span>
-                                                    <span>3 kabin</span>
-                                                    <span>Konaklama 6 kişi</span>
-                                                </div>
                                             </div>
                                         </a>
                                         <a href="#" class="card">
                                             <div class="cardTop-image">
-                                                <div class="category">
-                                                    <span>Konaklamalı</span>
-                                                    <span>Kaptanlı</span>
+                                                <div class="imageWrapper d-lg-none">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
                                                 </div>
-                                                <div class="swiper singleSlide">
+                                                <div class="swiper singleSlide d-none d-lg-block">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
-                                                                <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                                <img src="public/assets/images/media/tekne1.jpg" alt="">
                                                             </div>
                                                         </div>
-                                                        <div class="swiper-slide">
-                                                            <div class="imageWrapper">
-                                                                <img src="public/assets/images/media/tekne3.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="swiper-slide">
-                                                            <div class="imageWrapper">
-                                                                <img src="public/assets/images/media/tekne3.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiperButtons type2">
-                                                        <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
-                                                        <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
-                                                    </div>
-                                                    <div class="swiper-pagination type2 swiper-pagination-single"></div>
-                                                </div>
-                                                <label class="container-check favorite">
-                                                    <input type="checkbox" name="address">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                            <div class="cardBody">
-                                                <div class="d-flex align-items-strech">
-                                                    <div>
-                                                        <div class="title">Bavaria 46 Cruiser</div>
-                                                        <div class="options">Göcek, 14.2m2, Motoryat</div>
-                                                    </div>
-                                                    <div class="card-id ms-auto">ID: 1014434P</div>
-                                                </div>
-                                                <div class="priceWrapper">
-                                                    <div class="discount">25.800</div>
-                                                    <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
-                                                </div>
-                                                <div class="tags">
-                                                    <span>Seyir 14 kişi</span>
-                                                    <span>14.2m</span>
-                                                    <span>3 kabin</span>
-                                                    <span>Konaklama 6 kişi</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="card">
-                                            <div class="cardTop-image">
-                                                <div class="category">
-                                                    <span>Konaklamalı</span>
-                                                </div>
-                                                <div class="swiper singleSlide">
-                                                    <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
                                                                 <img src="public/assets/images/media/tekne2.jpg" alt="">
@@ -1331,9 +1260,52 @@
                                                                 <img src="public/assets/images/media/tekne3.jpg" alt="">
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                                    <div class="swiperButtons type2">
+                                                        <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                                        <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                                    </div>
+                                                </div>
+                                                <label class="container-check favorite">
+                                                    <input type="checkbox" checked name="address">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="cardBody">
+                                                <div class="d-flex align-items-strech">
+                                                    <div>
+                                                        <div class="title">Sunseeker, Manhattan 64</div>
+                                                        <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                                    </div>
+                                                    <div class="card-id ms-auto">ID: 1789034A</div>
+                                                </div>
+                                                <div class="priceWrapper">
+                                                    <!-- <div class="discount">25.800</div> -->
+                                                    <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="card">
+                                            <div class="cardTop-image">
+                                                <div class="imageWrapper d-lg-none">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                                <div class="swiper singleSlide d-none d-lg-block">
+                                                    <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="imageWrapper">
                                                                 <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/tekne3.jpg" alt="">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1344,33 +1316,27 @@
                                                     </div>
                                                 </div>
                                                 <label class="container-check favorite">
-                                                    <input type="checkbox" name="address">
+                                                    <input type="checkbox" checked name="address">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
                                             <div class="cardBody">
                                                 <div class="d-flex align-items-strech">
                                                     <div>
-                                                        <div class="title">Enigma Blue</div>
-                                                        <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                                        <div class="title">Beneteau, Cyclades 43</div>
+                                                        <div class="options">Bodrum, 12 m, Motoryat</div>
                                                     </div>
-                                                    <div class="card-id ms-auto">ID: 1789034A</div>
+                                                    <div class="card-id ms-auto">ID: 1014434P</div>
                                                 </div>
                                                 <div class="priceWrapper">
                                                     <!-- <div class="discount">25.800</div> -->
-                                                    <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
-                                                </div>
-                                                <div class="tags">
-                                                    <span>Seyir 5 kişi</span>
-                                                    <span>10.9m</span>
-                                                    <span>2 kabin</span>
+                                                    <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
                                                 </div>
                                             </div>
                                         </a>
-                                       
                                     </div>
 
-                                    <hr class="my-5">
+                                    <hr class="standartLine">
                                     <div class="caption">Sıkça Sorulan Sorular</div>
                                     <div class="accordion accordion-flush customAcc" id="accordionGroupOne">
                                         <div class="accordion-item">
@@ -1457,12 +1423,14 @@
                                             <div id="checkInText2" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
                                             <div id="checkOutText2" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
                                         </div>
-                                        <a href="#" class="teklifisteButton fixBtn button-primary">Teklif İste</a>
+                                        <span class="teklifisteButton fixBtn button-primary disabled">
+                                            <input type="button" class="disabled" value="Teklif İste"></input>
+                                        </span>
                                     </div>
                                 </div>
                              
 
-                                <div class="bg-gray rounded-4 mt-5 information">
+                                <div class="bg-gray rounded-4 mt-5 information d-none d-lg-block">
                                     <div class="notification p-0 mt-0 mb-5">
                                         <span class="icon-info"></span>
                                         <a href="#">See our FAQs, message us, or redeem a promo code</a>
@@ -1548,52 +1516,45 @@
                                 <div class="listItems">
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Yat</div>
+                                        <div class="boatName">Cennet Koyu</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Göcek</div>
-                                        <div class="boatName">Kiralık Katamaran</div>
+                                        <div class="boatName">Hattat Koyu</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Gulet</div>
+                                        <div class="boatName">Salih Adası</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
+                                        <div class="boatName">Yalıkavak</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
+                                        <div class="boatName">Turgutreis</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
+                                        <div class="boatName">Bağla Koyu</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
+                                        <div class="boatName">Kissebükü Koyu</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
+                                        <div class="boatName">Aspat Koyu</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
+                                        <div class="boatName">Karaincir Koyu</div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="cityName">Bodrum</div>
                                         <div class="boatName">Kiralık Tekne</div>
                                     </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
+                                  
                                 </div>
                               </div>
                               <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
@@ -1815,6 +1776,46 @@
     </div>
 
 
+    <div class="modal fade" id="commentModal" aria-hidden="true" aria-labelledby="commentModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="commentProps">
+                    <div class="item">
+                        <div>
+                            <div class="itemHead">
+                                <div class="name">Enver S*</div>
+                                <div class="date">Eylül 2024</div>
+                            </div>
+                            <div class="startWrapper">  
+                                <span class="icon-star-fill"></span>
+                                <span class="icon-star-fill"></span>
+                                <span class="icon-star-fill"></span>
+                                <span class="icon-star-fill"></span>
+                                <span class="icon-star-fill"></span>
+                            </div>
+                            <div class="itemContent">
+                                Bülent kaptanın teknesinde harika bir tatil geçirdik. Bizim için güzel bir deneyim oldu. Yeme içme tavsiyelerini dikkate almalısınız. Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
+                                <br><br>
+                                Bizim için güzel bir deneyim oldu. Yeme içme tavsiyelerini dikkate almalısınız. Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
+                                <br><br>
+                                Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
+                                <br><br>
+                                Bülent kaptanın teknesinde harika bir tatil geçirdik. Bizim için güzel bir deneyim oldu. Yeme içme tavsiyelerini dikkate almalısınız. Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
+                                <br><br>
+                                Tekne içinde donanım olarak ev rahatlığındaydık airfryera kadar....
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1834,11 +1835,11 @@
         var staticColumn = $(".staticColumn").offset().top + $(".staticColumn").outerHeight();
         var fixedColumn = $(".fixedColumn");
         var fixedColumnTop = fixedColumn.offset().top;
+        var wWidth = $(window).width();
 
         $(window).scroll(function (){
+
             var scrollTop = $(this).scrollTop();
-            console.log("fixedTop : " + fixedColumnTop)
-            console.log("scrollTop : " + scrollTop)
             // Header yüksekliğinden +100px daha aşağı scroll yapıldığında show class'ı ekle
             if (scrollTop > fixedColumnTop - 100) {
                 fixedColumn.addClass("show");
@@ -1853,15 +1854,72 @@
                 fixedColumn.removeClass("absolute");
             }
 
+            if (isDatepickerOpen) {
+                if(wWidth < 992){
+                    if (scrollTop > fixedColumnTop - 100){
+                        $(".dateColumnWrapper").addClass("fixed selected");
+                    }
+                }
+                console.log("Datepicker açıkken sayfa scroll edildi.");
+            }
+            if(wWidth < 992){
+                if (scrollTop > fixedColumnTop - 100) {
+                    $(".dateColumnWrapper").addClass("fixed");
+                    $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
+                } else {
+                    $(".dateColumnWrapper").removeClass("fixed");
+                    $(".dateColumnWrapper .dateColumn .title").text("Fiyatları görmek için tarih seçiniz");
+                }
+             }
+        });
+        // Sadece ekran genişliği 992px'den küçükse çalışacak
+        if (wWidth < 992) {
+            var $wrapper = $(".dateColumnWrapper");
+
+            // Eğer .fixed sınıfı varsa, metni hemen değiştir
+            if ($wrapper.hasClass("fixed")) {
+                console.log("test")
+                $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
+            }
+            
+            // Tıklama olayını dinle
+            $(".dateColumnWrapper .dateColumn .title").on("click", function() {
+                var $wrapper = $(this).closest(".dateColumnWrapper");
+
+                // .fixed sınıfı eklenmişse işlem yapılacak
+                if ($wrapper.hasClass("fixed")) {
+                    // Başlangıç metni değişikliği ve selected sınıfının kontrolü
+                    if ($wrapper.hasClass("selected")) {
+                        $(this).text("Tarih Seçimini göster");
+                        $wrapper.removeClass("selected");
+                        $("html").removeClass("overflow-hidden");
+                    } else {
+                        $(this).text("Fiyatları görmek için tarih seçiniz");
+                        $wrapper.addClass("selected");
+                        $("html").addClass("overflow-hidden");
+                    }
+                }
+            });
+        }
+        $(document).on("click", function (e) {
+            var $wrapper = $(".dateColumnWrapper");
+            
+            // Tıklanan element .fixedColumn veya .dateColumnWrapper içinde değilse işlemi çalıştır
+            if (!$wrapper.is(e.target) && $wrapper.has(e.target).length === 0) {
+                // .fixed sınıfı varsa işlem yapılacak
+                if ($wrapper.hasClass("fixed") && $wrapper.hasClass("selected")) {
+                    $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
+                    $wrapper.removeClass("selected");
+                    $("html").removeClass("overflow-hidden");
+                }
+            }
         });
 
         /*Bu date time sadece bu sayfa icin eklenmıstır dıger sayfalarda olmasına gerek yok */
         const today = new Date();
         today.setHours(0, 0, 0, 0); // Saat bilgisi sıfırlanır
-        $(".dateInputs").on("click", function(){
-            const targetOffset = $(".dateColumnWrapper").offset().top - 150;
-            smoothScrollTo(targetOffset, 500); // 500ms animasyon
-        })
+        let isDatepickerOpen = false;
+
         $("#dateInputs2")
         .dateRangePicker({
             separator: " to ",
@@ -1883,10 +1941,26 @@
             else return "";
             },
             setValue: function (s, s1, s2) {
-            $("#checkinInput2").val(s1);
-            $("#checkoutInput2").val(s2);
+                $("#checkinInput2").val(s1);
+                $("#checkoutInput2").val(s2);
+                $(".teklifisteButton").removeClass("disabled")
+
             },
+        })
+        .bind("datepicker-open", function () {
+            isDatepickerOpen = true; // Açık olduğunu belirt
+            console.log("Datepicker açıldı!");
+        })
+        .bind("datepicker-close", function () {
+            isDatepickerOpen = false; // Kapandığında durumu sıfırla
+            console.log("Datepicker kapandı!");
         });
+
+
+        //Teklif iste butonu tıklandıgında yukarı kaydırdıgı ıcın bu kod eklendı ıslem yaparken kaldırılabılır
+        $(".teklifisteButton").on("click", function(e){
+            e.preventDefault();
+        })
 
     </script>
 </body>

@@ -74,6 +74,14 @@
       line-height: 65px;
       color: var(--black);
       font-family: "GilroySemibold";
+      @media screen and (max-width:1600px) {
+        font-size: 50px;
+        line-height: 55px;
+      }
+      @media screen and (max-width:1440px) {
+        font-size: 40px;
+        line-height: 45px;
+      }
       @media screen and (max-width:991.98px) {
         font-size: 30px;
         line-height: 40px;
@@ -84,6 +92,10 @@
       font-size: 40px;
       line-height: 65px;
       color: var(--primary);
+      @media screen and (max-width:1600px) {
+        font-size: 34px;
+        line-height: 45px;
+      }
       @media screen and (max-width:991.98px) {
         font-size:20px;
         line-height:27px;

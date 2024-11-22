@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="" />
+    <meta name="publisher" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon'">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="public/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="manifest" href="public/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="public/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <title>Tekne Kiralama</title>
+
+    <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
+    
+    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
+    <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
+    <link rel="stylesheet" href="public/assets/plugins/rangeSlider/nouislider.min.css">
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
+</head>
+
+<body>
+    <!---Tüm sayfalarda standart-->
+    <div class="preloader">
+        <div class="preloader-container">
+            <div class="circle">
+            </div>
+        </div>
+    </div>
+    <!---Tüm sayfalarda standart kapsayıcı-->
+    <div id="app">
+        <!---Tüm sayfalarda standart header-->
+        <header id="header" class="type2">
+            <div class="header container-3xl">
+                <div class="headerNav">
+                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <div class="d-flex hstack ms-auto">
+                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <div class="dropdown languageWrapper">
+                            <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <span class="icon-language"></span>
+                            </button>
+                            <form class="dropdown-menu p-4 languageDropdown">
+                                <div class="title">Para Birimi</div>
+                                <ul class="languageList">
+                                    <li>
+                                    <div class="form-check container-check type2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label checkText" for="flexRadioDefault1">
+                                          English
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label checkText" for="flexRadioDefault2">
+                                               Türkçe
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <hr class="mx-auto">
+                                <div class="title">Dil ve Bölge</div>
+                                <ul class="languageList">
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="Euro">
+                                            <label class="form-check-label" for="Euro">
+                                                <span class="currencly">€</span> EUR
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="Dolar" checked>
+                                            <label class="form-check-label" for="Dolar">
+                                                <span class="currencly">$</span> USD
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="TurkLisari" checked>
+                                            <label class="form-check-label" for="TurkLisari">
+                                                <span class="currencly">₺</span> TRY
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
+                            </form>
+                        </div>
+                        <a href="#" class="userButton"><span class="icon-user"></span></a>
+
+                        <div class="buttons d-lg-flex d-none pe-3 ps-3" >
+                            <a href="#" class="fixBtn button-outline">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary">Üye Ol</a>
+                        </div>
+                        <a href="#" class="menuNavButton openMenuButton ms-4">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="headerMenuNav">
+                    <div class="navMenu">
+                        <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
+                            <div class="row navMenuTop mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0 d-none d-md-flex">
+                                    <a class="logo" href="index.html"><img src="public/assets/images/statics/logo-white.png" alt="TekneKiralama logo beyaz"></a>
+                                </div>
+                                <div class="rightMenuColumn bg-primary col-md-8 pe-0">
+                                    <div class="searchInputWrapper position-relative">
+                                        <input type="text" class="searchInput" placeholder="Aramak istediğiniz kelimeyi giriniz">
+                                        <a href="#" class="searchButton"><span class="icon-search"></span></a>
+                                    </div>
+                                    <a href="#" class="menuNavButton closedMenuButton ms-4">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row navMenuContent mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0">
+                                    <ul class="menuList">
+                                        <li>
+                                            <a href="index.html"><span>Anasayfa</span></a>
+                                        </li>
+                                        <li>
+                                            <div data-target="1" class="subMenuItem"><span>Destinations</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <div data-target="2" class="subMenuItem"><span>Things to do</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Guides</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Festival & events</span></a>
+                                        </li>
+                                        <li>
+                                            <div data-target="3" class="subMenuItem"><span>Routes & trails</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Accommodation</span></a>
+                                        </li>
+                                    </ul>
+                                    <div class="buttons d-lg-none" >
+                                        <a href="#" class="fixBtn button-primary">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary">Üye Ol</a>
+                                    </div>
+                                    <div class="socialWrapper">
+                                        <div class="socialMedia">
+                                            <a href="#" target="_blank"><span class="icon-twitter"></span></a>
+                                            <a href="#" target="_blank"><span class="icon-linkedin"></span></a>
+                                            <a href="#" target="_blank"><span class="icon-instagram"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rightMenuColumn mobileMenuColumn bg-primary col-lg-8 pe-0">
+                                    <div class="backLink">
+                                        <span class="icon-arrow-right"></span><span>Geri Dön</span>
+                                    </div>
+                                    <div class="customScrollContent">
+                                        <div class="subMenuWrapper">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2">
+                                                <div class="title">Keep Discovering</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-02.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Enigma Blue</div>
+                                                                <div class="options">
+                                                                    <span>Fethiye, 10.9m, Yelkenli</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-04.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Fethiye</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all destinations</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all things to do</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2 moretoexplore">
+                                                <div class="title">More to explore</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all routes & trails</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
+        <main>
+            <section class="pageSection">
+                <div class="container-3xl">
+                    <div class="sectionContent">
+                        <div class="bannerWrapper">
+                            <div class="swiper bannerSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="bannerItem">
+                                            <div class="imageWrapper">
+                                                <img src="public/assets/images/media/banners/blogSlider01.jpg" alt="">
+                                            </div>
+                                            <!-- <div class="desc">
+                                                <div class="category">KİRALIK TEKNE BUL</div>
+                                                <p>Tekne kiralamanın püf noktaları nelerdir ?</p>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination position-relative type3"></div>
+                            </div>
+                        </div>
+                        <div class="breadCrumbWrapper px-4">
+                            <div class="breadcrumb">
+                                <a href="index.html">TekneKiralama.com</a>
+                                <a href="#">Blog</a>
+                            </div>
+                        </div>
+                    
+                        <div class="pageContent">
+                            <div class="sectionHead col-lg-11 mx-auto">
+                                <div class="category">KİRALIK TEKNE BUL</div>
+                                <h1 class="sectionTitle">
+                                    Tekne kiralamanın püf noktaları nelerdir ?
+                                </h1>
+                            </div>
+                            <div class="paragraph col-lg-8 mx-auto type2">
+                                <div class="shortText">
+                                    Zurich is Switzerland’s largest city, consistently ranking high in global surveys for quality of life. With its stunning location, medieval history, and modern infrastructure, Zurich offers a unique combination of old-world charm and cutting-edge innovation. However, like any major city, living in Zurich has advantages and disadvantages.
+    
+                                </div>
+                                Zurich is Switzerland’s largest city, consistently ranking high in global surveys for quality of life. With its stunning location, medieval history, and modern infrastructure, Zurich offers a unique combination of old-world charm and cutting-edge innovation. However, like any major city, <a href="#">living in Zurich </a>has advantages and disadvantages.
+                                <br><br>
+                                <a href="#" class="notafter">
+                                    <img decoding="async" loading="lazy" class="banner-img lazyloaded" alt="Blueground offers fully-furnished, equipped and serviced apartments in some of the world's most sought after cities." src="https://res.cloudinary.com/dljmzqxza/q_auto:best/f_auto/article-banner-desktop-generic.jpg" width="100%" height="280">
+                                </a>
+                                <br><br>
+                                Considering moving to Zurich soon? <a href="#">Whether</a> for work, study, or a change of scenery, it’s important to weigh the pros and cons of relocating. This comprehensive guide will help you understand the key aspects of Zurich life, including the cost of living, cultural opportunities, and practical considerations.
+                                <br><br>
+                                <h2>Pros of living in Zurich in 2024</h2>
+                                <img loading="lazy" decoding="async" class="alignnone size-full wp-post-19550 wp-image-17796" src="https://res.cloudinary.com/dljmzqxza/q_auto,f_auto/zurich.jpg" alt="The city of Zurich from above" width="100%" height="900">
+                                <br><br>
+
+                                <h2>High quality of life</h2>
+                                This is one of the biggest reasons Zurich is a top city in Europe. In 2024, the city continues to be celebrated for its clean environment, efficient public services, and excellent infrastructure.
+                                <br><br>
+                                <span>Key highlights:</span>
+                                <ul>
+                                    <li><b>Cleanliness:</b> Zurich is known for how pristine it is. Streets are well-maintained, public spaces are spotless, and littering is highly discouraged. The end result? A really inviting look and feel.</li>
+                                    <li><b>Public transportation: </b>The city’s public transport system is world-class, with frequent trains, trams, and buses connecting every part of the city and the surrounding region. The system is punctual, reliable, and easy to navigate.</li>
+                                    <li><b>Safety:</b> Zurich has a low crime rate, making it one of the safest cities in the world to live in. Plus, you can comfortably walk around most parts of the city at any time of day.</li>
+                                </ul>
+                                <h2> 2. Strong economy & job market</h2>
+                                Zurich is Switzerland’s financial hub. It’s home to major international banks, financial institutions, and multinational corporations. The city’s economy is diverse, with the finance, pharmaceuticals, technology, and engineering industries leading the way.
+
+                            </div>
+                        </div>
+                        <div class="pageContent padding bg-gray rounded-5">
+                            <div class="sectionHead type2 col-lg-11 mx-auto">
+                                <div class="sectionTitle">
+                                    Benzer Yazılar
+                                </div>
+                            </div>
+                     
+                            <div class="cards third blogCards col-lg-11 mx-auto">
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-4.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="category">FETHİYE</div>
+                                        <div class="title">Neden kabinli tekneleri kiralamak daha cazip geliyor ?</div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="category">BODRUM</div>
+                                        <div class="title">Kiralayacağını tekneden atladığınızda tekrar kolay çıkabledceiniz merdiven olmalı </div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="category">MUĞLA</div>
+                                        <div class="title">Tekne seçiminde mutlaka teknedeki olanakları soruglayın</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <!--E-Bulten section-->
+            <section class="eBultenSection">
+                <div class="container-3xl">
+                    <div class="bg-primary rounded-5 sectionWrapper">
+                        <div class="title">
+                            SİZDE MİSAFİRİMİZ OLMAK İSTER MİSİNİZ ?
+                        </div>
+                        <div class="emailInputWrapper">
+                            <input type="email"  placeholder="E-mail adresiniz">
+                            <a href="#" class="fixBtn button-outline type3">Abone ol</a>
+                        </div>
+                        <div id="captchaWrapper">
+                            <img src="public/assets/images/statics/captcha.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </main>
+
+        <!---Tüm sayfalarda standart footer-->
+        <footer>
+            <div class="container-3xl">
+                <div class="bg-gray footer">
+                    <div class="footerTop">
+                        <div class="title">Sizin için hazırladığımız özel fikirler</div>
+                        <div class="verticalCustomScroll">
+                            <ul class="nav nav-tabs customTab" id="footerTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="gezilecekkoy-tab" data-bs-toggle="tab" data-bs-target="#gezilecekkoy-tab-pane" type="button" role="tab" aria-controls="gezilecekkoy-tab-pane" aria-selected="false">Gezilecek Koylar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content customTabContents" id="footerTabContent">
+                              <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+
+                              </div>
+                              <div class="tab-pane fade" id="gezilecekkoy-tab-pane" role="tabpanel" aria-labelledby="gezilecekkoy-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Cennet Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Hattat Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Salih Adası</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Yalıkavak</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Turgutreis</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Bağla Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kissebükü Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Aspat Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Karaincir Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                  
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+
+                    <div class="footerContent">
+                        <div class="leftColumn">
+                            <div class="d-flex flex-column">
+                                <a href="index.html"><img src="public/assets/images/statics/logo.png" alt=""></a>
+                                <span class="logoText">TekneKiralama.com Türkiye’nin en popüler 
+                                    tatil bölgelerinde lüks teklneleri</span>
+                            </div>
+                            <div class="socialWrapper">
+                                <div class="socialMedia">
+                                    <a href="#" target="_blank" class="instagram"><span class="icon-instagram-2"></span></a>
+                                    <a href="#" target="_blank" class="facebook"><span class="icon-facebook"></span></a>
+                                    <a href="#" target="_blank" class="twitter"><span class="icon-twitter"></span></a>
+                                    <a href="#" target="_blank" class="spotify"><span class="icon-spotify"></span></a>
+                                    <a href="#" target="_blank" class="linkedin"><span class="icon-linkedin-2"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="footerMenu">
+                                <div class="menuListColumn">
+                                    <div class="title">TekneKiralama.com</div>
+                                    <ul>
+                                        <li><a href="#">Neden TekneKiralama.com</a></li>
+                                        <li><a href="#">Hakkımızda</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Sürdürülebilirlik</a></li>
+                                        <li><a href="#">İletişim</a></li>
+                                        <li><a href="#">SSS</a></li>
+                                        <li><a href="#">Kariyer</a></li>
+                                        <li><a href="#">Basın Kiti</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Lokasyonlar</div>
+                                    <ul>
+                                        <li><a href="#">İstanbul Tekne Kiralama</a></li>
+                                        <li><a href="#">Fethiye Tekne Kiralama</a></li>
+                                        <li><a href="#">Marmaris Tekne Kiralama</a></li>
+                                        <li><a href="#">Göcek Tekne Kiralama</a></li>
+                                        <li><a href="#">Bodrum Tekne Kiralama</a></li>
+                                        <li><a href="#">İzmir Tekne Kiralama</a></li>
+                                        <li><a href="#">Balıkesir Tekne Kiralama</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Tekne Sahipleri</div>
+                                    <ul>
+                                        <li><a href="#">Tekneni Kirala</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Yasal Bilgiler</div>
+                                    <ul>
+                                        <li><a href="#">KUllanım Koşulları</a></li>
+                                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="#">İptal ve İdade Koşulları</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footerBottom d-flex align-items-center">
+                        <div class="copyRightWrapper">
+                            <div class="copyRight">
+                                © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
+                            </div>
+                        </div>
+                        <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--modallar-->
+    <!--Bu filtreleme modalı sadece filtreleme olan sayfalar ıcın eklenmelı-->
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div class="titleColumn">
+                    <div class="modal-title fs-5" id="filterModalLabel">Filtrele</div>
+                    <p>Mükemmel tekneleri bulun</p>
+                </div>
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="propList">
+                    <div class="listItem">
+                        <div class="title">Fiyat</div>
+                        <div class="rangesliderWrapper">
+                            <!-- Başlangıç ve bitiş değerleri için gösterim alanları -->
+                            <div class="valueTop">
+                                <span id="sliderStartValueDisplay"></span>
+                                <span id="sliderEndValueDisplay"></span>
+                            </div>
+                            <div id="rangeSlider"></div>
+
+                            <!-- Başlangıç ve bitiş değerleri için input alanları -->
+                             <div class="rangeInput">
+                                 <input type="text" id="sliderStartInput">
+                                 <input type="text" id="sliderEndInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush customAcc" id="filtrelemeAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Tekne Tipi
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"> <span class="checkText">Gulet</span></span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"><span class="checkText">Yelkenli</span></span>
+                                        
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Katamaran</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Motoryat</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Şişme Bot</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Sürat Teknesi</span>
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Mürettebat
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Tümün Göster</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptanlı Kiralama</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptansız Kiralama</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Kapasite
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">1-5</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">6-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-15</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">16-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">20+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Seyir Kapasitesi
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Uzunluğu
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="public/assets/plugins/jquery.min.js"></script>
+    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="public/assets/plugins/aos/aos.js"></script>
+    <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
+
+    <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+</body>
+
+</html>

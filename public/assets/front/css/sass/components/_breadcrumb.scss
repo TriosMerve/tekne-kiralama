@@ -1,5 +1,8 @@
 .breadCrumbWrapper{
     margin-top: 11px;
+    position: relative;
+    z-index: 99;
+    display: inline-block;
     // margin-bottom: 60px;
     // margin-bottom:38px;
     @media screen and (max-width:1200px) {
@@ -12,6 +15,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        margin-bottom: 0;
         // padding-left: 11px;
         a{
             font-family: 'Roboto',sans-serif;
@@ -23,7 +27,7 @@
             @media screen and (max-width:991.98px) {
                 padding-right: 10px;
                 font-size: 12px;
-                margin-bottom: 10px;
+                margin-bottom: 0;
             }
             & + a{
                 &:before{

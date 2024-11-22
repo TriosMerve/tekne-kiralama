@@ -14,8 +14,8 @@ var blogSlider = new Swiper(".blogSlider", {
 
 
 var detailsSlider = new Swiper(".detailsSlider", {
-  slidesPerView:3,
-  spaceBetween: 10,
+  slidesPerView:1,
+  spaceBetween: 0,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -23,6 +23,16 @@ var detailsSlider = new Swiper(".detailsSlider", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
   },
 });
 
@@ -46,6 +56,25 @@ sliders.forEach((sliderElement) => {
         },
     });
 });
+
+
+const bannerSlider = document.querySelectorAll('.bannerSlider');
+
+bannerSlider.forEach((sliderElement) => {
+    new Swiper(sliderElement, {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: '.paginationBanner',
+            clickable: true,
+        },
+    });
+});
+
 const slidersText = document.querySelectorAll('.textSlideWrapper');
 
 slidersText.forEach((sliderElement) => {
@@ -86,7 +115,7 @@ document.querySelectorAll('.thirdSlider').forEach(slider => {
   
   new Swiper(`.thirdSlider[data-swiper-id="${swiperId}"]`, {
     slidesPerView: 1.3,
-    spaceBetween: 16,
+    spaceBetween: 30,
     navigation: {
       nextEl: `.thirdSlideNext[data-swiper-id="${swiperId}"]`,
       prevEl: `.thirdSlidePrev[data-swiper-id="${swiperId}"]`,
@@ -94,7 +123,7 @@ document.querySelectorAll('.thirdSlider').forEach(slider => {
     breakpoints: {
       640: {
         slidesPerView: 2.3,
-        spaceBetween: 16,
+        spaceBetween:30,
       },
 
       992: {
@@ -132,11 +161,11 @@ function initOrDestroySwipers() {
     if (!populerLokasyonSlider) {
       populerLokasyonSlider = new Swiper(".populerLokasyonSlider", {
         slidesPerView: 1.3,
-        spaceBetween: 16,
+        spaceBetween: 30,
         breakpoints: {
           640: {
             slidesPerView: 2.3,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
         },
       });

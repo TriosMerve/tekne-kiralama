@@ -1055,7 +1055,7 @@
         if (opt.isTouchDevice) opt.hoveringTooltip = false;
 
         //show one month on mobile devices
-        if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < 480;
+        if (opt.singleMonth == 'auto') opt.singleMonth = $(window).width() < 992;
         if (opt.singleMonth) opt.stickyMonths = false;
 
         if (!opt.showTopbar) opt.autoClose = true;

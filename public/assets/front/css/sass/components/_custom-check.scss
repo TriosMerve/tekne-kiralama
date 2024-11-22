@@ -163,8 +163,9 @@
   &.button{
     text-align: center;
     justify-content: center;
+
     .checkmark{
-      width: auto;
+      // width: auto;
       padding: 10px 20px;
       height: auto;
       border-radius: 10px;
@@ -173,6 +174,9 @@
       height: 100%;
       display: flex;
       align-items: center;
+      width: 100%;
+      justify-content: center;
+      margin-right: 0;
       .checkText{
         transition: all .3s linear; 
       }
@@ -182,6 +186,11 @@
     }
     &.type2{
       height: 75px;
+      flex: 1;
+      @media screen and (max-width:991.98px) {
+        min-width: calc(50% - 5px);
+        max-width: 50%;
+      }
     }
     input:checked ~ .checkmark{
       background-color: var(--text);

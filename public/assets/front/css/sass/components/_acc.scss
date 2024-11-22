@@ -10,6 +10,11 @@
       line-height: 25px;
       font-family: "GilroySemibold";
       box-shadow: none;
+      padding-left: 0;
+      @media screen and (max-width: 991.98px) {
+        font-size: 15px;
+        line-height: 22px;
+      }
       &:after {
         content: "\e903";
         transform: rotate(90deg);
@@ -43,8 +48,10 @@
       font-family: "GilroyRegular";
       padding-top: 0;
       padding-bottom: 30px;
-      @media screen and (max-width:991.98px) {
+      padding-left: 0;
+      @media screen and (max-width: 991.98px) {
         padding-left: 0;
+        font-size: 14px;
       }
 
       a {
@@ -80,10 +87,10 @@
   }
 }
 
-.pageContent{
-  .customAcc{
-    .accordion-item{
-      .accordion-button{
+.pageContent {
+  .customAcc {
+    .accordion-item {
+      .accordion-button {
         padding-left: 0;
         padding-right: 0;
       }

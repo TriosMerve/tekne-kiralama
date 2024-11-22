@@ -30,13 +30,20 @@ section,
     margin-bottom: 60px;
     @media screen and (max-width: 991.98px) {
       margin-bottom: 20px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .category {
+      font-family: "GilroyMedium";
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--gray-6);
     }
     .sectionTitle {
       font-family: "GilroySemibold";
       font-size: 35px;
       color: var(--primary);
       line-height: 45px;
-      text-transform: uppercase;
       @media screen and (max-width: 991.98px) {
         font-size: 20px;
         line-height: 30px;
@@ -72,14 +79,17 @@ section,
       }
       .sectionText {
         font-family: "GilroyMedium";
-        font-size: 15px;
         line-height: 30px;
         margin-top: 0;
         max-width: 800px;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 22px;
         margin-top: 15px;
         text-align: justify;
+        &.type2 {
+          font-size: 16px;
+          line-height: 25px;
+        }
       }
     }
   }
@@ -93,6 +103,10 @@ section,
       min-height: 110px;
       padding: 30px;
       color: var(--white);
+      @media screen and (max-width: 991.98px) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
       @media screen and (max-width: 640px) {
         flex-wrap: wrap;
       }
@@ -106,6 +120,9 @@ section,
         color: var(--white);
         line-height: 26px;
         padding-left: 30px;
+        @media screen and (max-width: 991.98px) {
+          padding-left: 16px;
+        }
         @media screen and (max-width: 640px) {
           flex: 1;
         }
@@ -122,6 +139,14 @@ section,
           margin: 30px auto 0;
         }
       }
+    }
+  }
+}
+.container-3xl {
+  .sectionHead {
+    @media screen and (max-width: 991.98px) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
@@ -220,7 +245,7 @@ section,
     }
     .text {
       font-family: "GilroyRegular";
-      font-size: 14px;
+      font-size: 15px;
       line-height: 25px;
       color: var(--gray-6);
 
@@ -241,7 +266,7 @@ section,
   }
 
   small {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--gray-6);
     font-family: "GilroyRegular";
     padding: 50px 0 0;
@@ -350,6 +375,8 @@ section,
   @media screen and (max-width: 991.98px) {
     height: auto;
     padding-top: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -658,6 +685,18 @@ section,
     border-radius: 30px;
     box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
     border: none;
+
+    @media screen and (max-width:991.98px) {
+      width: 40px;
+      min-width: 40px;
+      padding: 0;
+      right: 16px;
+      bottom: 16px;
+    }
+    .icon-share{
+      font-size: 22px;
+      
+    }
   }
   .allButton {
     position: absolute;
@@ -667,10 +706,26 @@ section,
     border-radius: 30px;
     box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
     border: none;
+    @media screen and (max-width:991.98px) {
+      width: 40px;
+      min-width: 40px;
+      padding: 0;
+      left: 16px;
+      bottom: 16px;
+    }
+    .icon-gallery{
+      font-size: 22px;
+    }
   }
 }
 .pageContent {
   margin-top: 100px;
+  @media screen and (max-width: 991.98px) {
+    margin-top: 50px;
+  }
+  // @media screen and (max-width: 640px) {
+  //   margin-top: 20px;
+  // }
 
   &.padding {
     padding: 45px;
@@ -688,14 +743,14 @@ section,
     font-size: 14px;
     line-height: 22px;
   }
-  ul{
+  ul {
     list-style-type: disc;
     padding-left: 20px;
-    li{
+    li {
       padding-top: 5px;
       padding-bottom: 5px;
       font-size: 14px;
-      &::marker{
+      &::marker {
         color: var(--text);
         font-size: 16px;
       }
@@ -703,15 +758,15 @@ section,
   }
   .shortText {
     font-family: "GilroySemibold";
-    font-size: 22px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 32px;
     margin-bottom: 34px;
     // display: -webkit-box;
     // -webkit-line-clamp: 2;
     // -webkit-box-orient: vertical;
     // overflow: hidden;
     @media screen and (max-width: 991.98px) {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 24px;
     }
   }
@@ -719,17 +774,17 @@ section,
   h2 {
     display: block;
     color: var(--primary);
-    font-size: 20px;
-    line-height: 27px;
+    font-size: 23px;
+    line-height: 30px;
     font-family: "GilroySemibold";
     margin-bottom: 10px;
     margin-top: 20px;
     @media screen and (max-width: 991.98px) {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
     }
   }
-  h3{
+  h3 {
     display: block;
     color: var(--dark-gray);
     font-size: 18px;
@@ -757,6 +812,11 @@ section,
       transition: all 0.3s linear;
       border-bottom: 1px dotted var(--primary);
     }
+    &.notafter {
+      &:after {
+        display: none;
+      }
+    }
     @media screen and (min-width: 992px) {
       &:hover {
         &:after {
@@ -765,13 +825,24 @@ section,
       }
     }
   }
-  b{
-    font-family: 'GilroySemibold';
+  b {
+    font-family: "GilroySemibold";
     color: var(--primary);
   }
-  strong{
+  strong {
     color: var(--text);
-    font-family: 'GilroySemibold';
+    font-family: "GilroySemibold";
+  }
+
+  &.type2 {
+    font-size: 18px;
+    line-height: 30px;
+    ul {
+      li {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
   }
 }
 
@@ -805,41 +876,75 @@ section,
   display: flex;
   align-items: stretch;
   margin-top: 50px;
+  @media screen and (max-width: 991.98px) {
+    margin-top: 20px;
+  }
   .pageDetailsContent {
     width: calc(100% - 550px);
+    @media screen and (max-width:1600px) {
+      width: calc(100% - 500px);
+    }
+    @media screen and (max-width:1440px) {
+      width: calc(100% - 450px);
+    }
+    @media screen and (max-width: 991.98px) {
+      width: 100%;
+    }
   }
-  .rightColumn{
+  .rightColumn {
     width: 450px;
     position: relative;
     margin-left: auto;
+    @media screen and (max-width: 991.98px) {
+      width: 100%;
+      // max-width: 450px;
+      margin: 0 auto 50px;
+    }
   }
   .dateColumnWrapper {
     width: 100%;
     border: 1px solid var(--gray);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 12px 17px rgba(39,54,86,.14),0 5px 22px rgba(39,54,86,.12);
+    box-shadow: 0 12px 17px rgba(39, 54, 86, 0.14),
+      0 5px 22px rgba(39, 54, 86, 0.12);
+    border: 1px solid var(--gray-5);
+    @media screen and (max-width: 991.98px) {
+      padding: 16px;
+    }
     .title {
       color: var(--text);
       font-size: 18px;
       font-family: "GilroySemibold";
       line-height: 25px;
       margin-bottom: 30px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 16px;
+      }
     }
     .dateInputs {
       margin-bottom: 30px;
+      @media screen and (max-width: 991.98px) {
+        margin-bottom: 16px;
+      }
     }
     .fixBtn {
       width: 100%;
       height: 60px;
-      font-family: 'GilroySemibold';
+      font-family: "GilroySemibold";
       font-size: 16px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+        height: 45px;
+      }
     }
   }
-  .information{
+  .information {
     padding: 30px;
   }
-  .notification{
+  .notification {
     background-color: var(--gray);
     border-radius: 12px;
     padding: 30px;
@@ -847,29 +952,29 @@ section,
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    .icon-info{
+    .icon-info {
       font-size: 24px;
       color: var(--text);
     }
-    a{
+    a {
       color: var(--text);
       font-size: 14px;
-      font-family: 'GilroySemibold';
+      font-family: "GilroySemibold";
       line-height: 22px;
       position: relative;
-      &:before{
+      &:before {
         content: "";
         width: 100%;
         border-bottom: 1px dotted var(--text);
         position: absolute;
         left: 0;
         bottom: 0;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
       }
-      @media screen and (min-width:992px) {
-        &:hover{
-          color:var(--primary);
-          &:before{
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: var(--primary);
+          &:before {
             width: 0;
             border-bottom-color: var(--primary);
           }
@@ -877,32 +982,63 @@ section,
       }
     }
   }
-
 }
 
 .pageDetailsContent {
   .infoDetails {
     .detailsHead {
+      min-width: 400px;
+      max-width: 400px;
+      @media screen and (max-width: 1600px) {
+        min-width: 310px;
+        max-width: 310px;
+      }
       .location {
         font-size: 15px;
         color: var(--text);
         line-height: 24px;
         font-family: "GilroyRegular";
+        @media screen and (max-width: 1600px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+          line-height: 20px;
+        }
       }
       .id {
         font-size: 15px;
         color: var(--text);
         line-height: 24px;
         font-family: "GilroyRegular";
+        @media screen and (max-width: 1600px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+          line-height: 20px;
+        }
       }
       .pageTitle {
-        .title{
+        .title {
           font-family: "GilroySemibold";
           font-size: 30px;
           line-height: 37px;
           color: var(--primary);
           min-width: 400px;
-          max-width:400px;
+          max-width: 400px;
+          @media screen and (max-width: 1600px) {
+            font-size: 24px;
+            line-height: 32px;
+            min-width: 310px;
+            max-width: 310px;
+          }
+          @media screen and (max-width: 991.98px) {
+            font-size: 20px;
+            line-height: 27px;
+            min-width: 100%;
+            width: 100%;
+          }
         }
       }
       .type {
@@ -911,6 +1047,14 @@ section,
         color: var(--gray-7);
         line-height: 27px;
         margin-top: 15px;
+        @media screen and (max-width: 1600px) {
+          font-size: 15px;
+        }
+        @media screen and (max-width: 991.98px) {
+          font-size: 14px;
+          line-height: 20px;
+          margin-top: 10px;
+        }
       }
       .tags {
         display: flex;
@@ -928,10 +1072,18 @@ section,
           border-radius: 5px;
           color: var(--gray-6);
           position: relative;
-          &:first-child{
+          @media screen and (max-width: 1600px) {
+            font-size: 14px;
+          }
+          @media screen and (max-width: 991.98px) {
+            font-size: 13px;
+            line-height: 20px;
+            padding: 5px 10px;
+          }
+          &:first-child {
             padding-left: 0;
           }
-          &:not(:first-child):before{
+          &:not(:first-child):before {
             content: "|";
             position: absolute;
             left: 0;
@@ -940,8 +1092,8 @@ section,
       }
     }
   }
-  .properties{
-    .point{
+  .properties {
+    .point {
       background: var(--primary);
       z-index: 9;
       left: 0;
@@ -950,40 +1102,67 @@ section,
       align-items: center;
       border-radius: 10px;
       width: auto;
-      gap:30px;
+      gap: 30px;
       margin-bottom: 30px;
-      .icon-star-percent{
+      @media screen and (max-width: 991.98px) {
+        gap: 15px;
+        padding: 10px 16px;
+      }
+      .icon-star-percent {
         color: var(--white);
         font-size: 36px;
         margin-right: 5px;
+        @media screen and (max-width: 991.98px) {
+          font-size: 26px;
+        }
       }
-      .icon-star{
+      .icon-star {
         color: var(--white);
         font-size: 36px;
         margin-right: 15px;
+        @media screen and (max-width: 1600px) {
+          font-size: 30px;
+          margin-right: 10px;
+        }
+        @media screen and (max-width: 991.98px) {
+          font-size: 26px;
+          margin-right: 5px;
+        }
       }
-      .pointNumber{
-        font-family: 'GilroyMedium';
+      .pointNumber {
+        font-family: "GilroyMedium";
         font-size: 32px;
         color: var(--white);
+        @media screen and (max-width: 1600px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 991.98px) {
+          font-size: 26px;
+        }
       }
-      .text{
-        font-family: 'GilroyRegular';
+      .text {
+        font-family: "GilroyRegular";
         font-size: 16px;
         color: var(--white);
         position: relative;
-        &:after{
+        @media screen and (max-width: 1600px) {
+          font-size: 15px;
+        }
+        @media screen and (max-width: 991.98px) {
+          font-size: 14px;
+        }
+        &:after {
           content: "";
           width: 100%;
           position: absolute;
           left: 0;
           bottom: 0;
           border-bottom: 1px dotted var(--white);
-          transition: all .3s linear;
+          transition: all 0.3s linear;
         }
-        @media screen and (min-width:992px) {
-          &:hover{
-            &:after{
+        @media screen and (min-width: 992px) {
+          &:hover {
+            &:after {
               width: 0;
               overflow: hidden;
             }
@@ -995,7 +1174,9 @@ section,
       display: flex;
       gap: 20px;
       flex-direction: column;
-
+      @media screen and (max-width: 991.98px) {
+        gap: 10px;
+      }
       span {
         border-radius: 10px;
         background-color: var(--gray);
@@ -1004,100 +1185,181 @@ section,
         font-family: "GilroyRegular";
         padding: 10px 20px;
         font-size: 15px;
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+          padding: 10px;
+        }
       }
     }
   }
 }
 
-.subContent{
-  padding-top:70px;
-  .otherProperties{
+.subContent {
+  padding-top: 70px;
+  @media screen and (max-width: 991.98px) {
+    padding-top: 30px;
+  }
+  .standartLine {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    @media screen and (max-width: 991.98px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  .otherProperties {
     padding-top: 50px;
-    .caption{
-      font-family: 'GilroySemibold';
+    .caption {
+      font-family: "GilroySemibold";
       font-size: 22px;
       color: var(--text);
-      line-height:37px;
+      line-height: 37px;
       margin-bottom: 20px;
-      margin-top:50px;
+      margin-top: 50px;
+      position: relative;
+      @media screen and (max-width: 1600px) {
+        font-size: 21px;
+      }
+      @media screen and (max-width: 1400px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 991.98px) {
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      &:after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: var(--primary);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @media screen and (max-width: 991.98px){
+          bottom: -2px;
+        }
+      }
     }
-    .subTitle{
-      font-family: 'GilroySemibold';
+    .subTitle {
+      font-family: "GilroySemibold";
       font-size: 16px;
       color: var(--text);
-      line-height:27px;
+      line-height: 27px;
       margin-bottom: 30px;
       margin-top: 50px;
+      padding-left: 14px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+      }
+      position: relative;
+      &:after {
+        content: "";
+        width: 7px;
+        height: 1px;
+        background-color: var(--primary);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 }
-.productsPropList{
+
+.productsPropList {
   // margin-bottom: 80px;
-  .item{
+  .item {
     display: flex;
     align-items: flex-start;
     padding: 10px 0;
-    .title{
+    &:first-child{
+      @media screen and (max-width:991.98px) {
+        padding-top: 0;
+      }
+    }
+    .title {
       font-size: 16px;
-      font-family: 'GilroyMedium';
+      font-family: "GilroyMedium";
       line-height: 25px;
       color: var(--gray-7);
       width: 30%;
       margin-bottom: 0;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+        line-height: 22px;
+        width: 55%;
+      }
     }
-    .content{
+    .content {
       font-size: 17px;
       line-height: 25px;
       color: var(--text);
-      font-family: 'GilroyRegular';
+      font-family: "GilroyRegular";
       width: 70%;
-      b{
-        font-family: 'GilroySemibold';
+      @media screen and (max-width: 991.98px) {
+        font-size: 16px;
+        width: 45%;
+      }
+      b {
+        font-family: "GilroySemibold";
       }
     }
-    .tags{
+    .tags {
       display: flex;
       align-items: stretch;
-      gap:30px;
+      gap: 30px;
       flex-wrap: wrap;
+      @media screen and (max-width:991.98px) {
+        gap: 15px;
+      }
 
-      & > span{
+      & > span {
         display: inline-flex;
         justify-content: center;
         border: 1px solid var(--gray);
         color: var(--gray-6);
         font-size: 14px;
-        font-family: 'GilroyMedium';
+        font-family: "GilroyMedium";
         padding: 10px 15px;
         border-radius: 30px;
       }
     }
-    .itemHead{
+    .itemHead {
       display: flex;
       align-items: center;
 
-      .name{
-        font-family: 'GilroySemibold';
+      .name {
+        font-family: "GilroySemibold";
         font-size: 18px;
         line-height: 25px;
         color: var(--black);
+        @media screen and (max-width: 991.98px) {
+          font-size: 16px;
+        }
       }
-      .date{
-        color: var(--black);
-        font-family: 'GilroyMedium';
+      .date {
+        color: var(--gray-6);
+        font-family: "GilroyMedium";
         font-size: 15px;
         line-height: 22px;
         margin-left: auto;
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
+        }
       }
     }
-    .startWrapper{
-      margin-top: 12px;
-      span{
+    .startWrapper {
+      margin-top: 5px;
+      span {
         color: var(--primary);
       }
     }
-    .itemContent{
-      font-family: 'GilroyRegular';
+    .itemContent {
+      font-family: "GilroyRegular";
       font-size: 15px;
       line-height: 22px;
       color: var(--black);
@@ -1108,289 +1370,515 @@ section,
       line-clamp: 3;
       -webkit-line-clamp: 3;
       margin-top: 15px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+      }
     }
-    .morePlusButton{
+    .morePlusButton {
       margin-top: 20px;
     }
   }
 
-  &.type2{
+  &.type2 {
     display: flex;
     align-items: stretch;
-    .item{
+    flex-wrap: wrap;
+    gap: 40px 0;
+
+    .item {
       flex-direction: column;
       align-items: center;
       width: 20%;
       padding: 0 5px;
       gap: 10px 0;
-      .title{
+      @media screen and (max-width:1200px) {
+        width: 33.3%;
+      }
+      @media screen and (max-width: 991.98px) {
+        width: 50%;
+      }
+      .title {
         width: initial;
         text-align: center;
         color: var(--text);
       }
     }
   }
-  &.type3{
+  &.type3 {
     display: flex;
     flex-wrap: wrap;
-    .item{
+    .item {
       gap: 25px;
       width: 50%;
       padding: 15px 0;
-      .title{
+      @media screen and (max-width: 570px) {
+        width: 100%;
+        padding:7px 0;
+
+      }
+      .title {
         width: initial;
       }
-      .content{
+      .content {
         width: initial;
       }
     }
   }
-  &.type4{
+  &.type4 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    .item{
+    @media screen and (max-width: 991.98px) {
+      gap: 20px;
+    }
+    .item {
       border: 1px solid var(--gray);
       border-radius: 12px;
-      padding:20px 30px;
+      padding: 20px 30px;
       width: 100%;
       display: flex;
       align-items: stretch;
       gap: 30px;
+      @media screen and (max-width: 991.98px) {
+        padding: 16px;
+        gap: 10px;
+        align-items: flex-start;
+      }
       p,
-      .paragraph{
+      .paragraph {
         font-size: 16px;
         line-height: 25px;
         color: var(--text);
-        font-family: 'GilroyRegular';
-        b{
-          font-family: 'GilroySemibold';
+        font-family: "GilroyRegular";
+        @media screen and (max-width: 991.98px) {
+          font-size: 14px;
+          line-height: 20px;
+          // padding-left: 44px;
+        }
+        b {
+          font-family: "GilroySemibold";
           color: var(--primary);
         }
 
-        a{
+        a {
           color: var(--primary);
-          font-family: 'GilroySemibold';
+          font-family: "GilroySemibold";
           position: relative;
-          &:after{
+          &:after {
             content: "";
             width: 100%;
             position: absolute;
             left: 0;
             bottom: 0;
-            transition:all .3s linear;
+            transition: all 0.3s linear;
             border-bottom: 1px dotted var(--primary);
           }
-          @media screen and (min-width:992px) {
-            &:hover{
-              &:after{
+          @media screen and (min-width: 992px) {
+            &:hover {
+              &:after {
                 width: 0;
               }
             }
           }
         }
-        &.type2{
+        &.type2 {
           font-size: 14px;
           line-height: 22px;
         }
       }
-      .icon{
+      .icon {
         width: 40px;
         min-width: 40px;
         max-width: 40px;
-        img{
+        img {
           width: 100%;
         }
-
       }
-      .title{
+      .title {
         width: initial;
-        font-family: 'GilroySemibold';
+        font-family: "GilroySemibold";
         margin-bottom: 10px;
         color: var(--text);
+        margin-top: 7px;
       }
-      .content{
+      .content {
         width: initial;
       }
     }
   }
 
-  &.list{
+  &.list {
     list-style: disc;
     padding-left: 20px;
-    li{
+    li {
       display: list-item;
     }
-    .item{
-      .title{
+    .item {
+      .title {
         width: initial;
         color: var(--text);
       }
     }
   }
 }
-.placesVisit{
+.map {
+  height: 580px;
+  @media screen and (max-width: 991.98px) {
+    height: 400px;
+  }
+}
+.colCustomGroup {
+  gap: 30px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  @media screen and (max-width: 991.98px) {
+    gap: 20px;
+  }
+  &.half {
+    & > div {
+      width: 100%!important;
+      @media screen and (min-width: 1100px) {
+        max-width: calc(50% - 15px);
+      }
+    }
+  }
+}
+.commentProps {
+  .item {
+    border-radius: 12px;
+    padding: 20px 30px;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    p,
+    .paragraph {
+      font-size: 16px;
+      line-height: 25px;
+      color: var(--text);
+      font-family: "GilroyRegular";
+      b {
+        font-family: "GilroySemibold";
+        color: var(--primary);
+      }
+
+      a {
+        color: var(--primary);
+        font-family: "GilroySemibold";
+        position: relative;
+        &:after {
+          content: "";
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: all 0.3s linear;
+          border-bottom: 1px dotted var(--primary);
+        }
+        @media screen and (min-width: 992px) {
+          &:hover {
+            &:after {
+              width: 0;
+            }
+          }
+        }
+      }
+      &.type2 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    .icon {
+      width: 40px;
+      min-width: 40px;
+      max-width: 40px;
+      img {
+        width: 100%;
+      }
+    }
+    .title {
+      font-family: "GilroySemibold";
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .itemHead {
+      display: flex;
+      align-items: center;
+
+      .name {
+        font-family: "GilroySemibold";
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--black);
+      }
+      .date {
+        color: var(--gray-6);
+        font-family: "GilroyMedium";
+        font-size: 15px;
+        line-height: 22px;
+        margin-left: auto;
+      }
+    }
+    .startWrapper {
+      margin-top: 5px;
+      span {
+        color: var(--primary);
+      }
+    }
+    .itemContent {
+      font-family: "GilroyRegular";
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--black);
+      margin-top: 15px;
+    }
+  }
+}
+.placesVisit {
   border: 1px solid var(--gray);
-  padding:40px 30px;
+  padding: 40px 30px;
   margin-top: 30px;
-  .top{
+  @media screen and (max-width: 991.98px) {
+    padding: 20px 16px;
+  }
+  .top {
     display: flex;
     align-items: center;
     gap: 40px;
-    .icon-route-map{
+
+    @media screen and (max-width: 991.98px) {
+      gap: 20px;
+    }
+    .icon-route-map {
       font-size: 50px;
       color: var(--primary);
+
+      @media screen and (max-width: 991.98px) {
+        font-size: 32px;
+      }
     }
-    .title{
-      font-family: 'GilroySemibold';
+    .title {
+      font-family: "GilroySemibold";
       font-size: 24px;
       color: var(--black);
       line-height: 32px;
-      b{
+      @media screen and (max-width: 991.98px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      b {
         color: var(--primary);
       }
-      span{
+      span {
         font-size: 16px;
       }
     }
   }
-  .placesVisitList{
+  .placesVisitList {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     margin-top: 40px;
     padding-left: 92px;
-    a{
-      font-family: 'GilroyMedium';
+    min-height: 100px;
+    @media screen and (max-width: 991.98px) {
+      padding-left: 52px;
+      gap: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @media screen and (max-width: 540px) {
+    }
+    .visitItem{
+      width: calc(33.3% - 27px);
+      @media screen and (max-width: 991.98px) {
+        width: calc(50% - 20px);
+      }
+      @media screen and (max-width: 540px) {
+        width:auto;
+      }
+    }
+    a {
+      font-family: "GilroyMedium";
       position: relative;
       color: var(--black);
       font-size: 16px;
       display: inline-flex;
-      width: calc(33.3% - 27px);
-      text-decoration: underline;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
+      width: auto;
+      
 
-      // &:after{
-      //   content: "";
-      //   width: 100%;
-      //   border-bottom: 1px solid var(--black);
-      //   position: absolute;
-      //   left: 0;
-      //   bottom: 1px;
-      //   transition: all .3s linear;
-      // }
+      &:after{
+        content: "";
+        width: 100%;
+        border-bottom: 1px solid var(--primary);
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transition: all .3s linear;
+      }
 
-      @media screen and (min-width:992px) {
-        &:hover{
+      @media screen and (min-width: 992px) {
+        &:hover {
           color: var(--primary);
+        }
+      }
+    }
+
+    &.type2{
+      .visitItem{
+        @media screen and (max-width:1200px) {
+          width: calc(50% - 20px);
         }
       }
     }
   }
 }
-.pointWrapper{
+.pointWrapper {
   display: flex;
   align-items: center;
-  padding-left: 90px;
   margin-bottom: 20px;
-  .title{
-    font-family: 'GilroySemibold';
+  margin-left: auto;
+  @media screen and (max-width:1440px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title {
+    font-family: "GilroySemibold";
     color: var(--primary);
     font-size: 20px;
     line-height: 27px;
-    b{
+    @media screen and (max-width: 1440px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media screen and (max-width: 991.98px) {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    b {
       margin-left: 20px;
+      @media screen and (max-width: 991.98px) {
+        margin-left: 10px;
+      }
     }
   }
-  .startWrapper{
+  .startWrapper {
     color: var(--primary);
     padding-left: 40px;
-    span{
+    @media screen and (max-width:1600px) {
+      padding-left: 30px;
+    }
+    @media screen and (max-width:1440px) {
+      padding-left: 0;
+    }
+    span {
       font-size: 19px;
+      @media screen and (max-width:1400px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 991.98px) {
+        font-size: 17px;
+      }
     }
   }
 }
-.movContent{
+.movContent {
   height: 110px;
   overflow: hidden;
-  transition: all .3s linear;
-  &.opened{
+  transition: all 0.3s linear;
+  @media screen and (max-width:991.98px) {
+    height: 100px;
+  }
+  &.opened {
     height: auto;
     overflow: visible;
   }
 
-  &.type2:not(.opened){
+  &.type2:not(.opened) {
     height: 0;
   }
 }
-.morePlusButton{
+.morePlusButton {
   margin-top: 30px;
-  font-family: 'GilroySemibold';
+  font-family: "GilroySemibold";
   font-size: 14px;
   line-height: 25px;
   color: var(--primary);
   position: relative;
   display: inline-flex;
   cursor: pointer;
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     width: 100%;
     border-bottom: 1px solid var(--primary);
     left: 0;
     bottom: 0;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
-  &.noAfter{
-    &:after{
+  &.noAfter {
+    &:after {
       display: none;
     }
   }
-  @media screen and (min-width:992px) {
-    &:hover{
+  @media screen and (min-width: 992px) {
+    &:hover {
       color: var(--primary);
-      &:after{
+      &:after {
         width: 0;
         overflow: hidden;
       }
     }
   }
 }
-.userDetails{
-  border-top: 1px solid var(--gray);
-  border-bottom: 1px solid var(--gray);
+.userDetails {
+  border-top: 1px solid var(--gray-5);
+  border-bottom: 1px solid var(--gray-5);
   padding-top: 50px;
   padding-bottom: 50px;
-  .userHead{
+  .userHead {
     display: flex;
     align-items: center;
-    .userInfo{
+    .userInfo {
       display: flex;
       align-items: center;
-      gap:10px;
-      .icon-user{
-        font-size:72px;
+      gap: 10px;
+      .icon-user {
+        font-size: 72px;
+        @media screen and (max-width:991.98px) {
+          font-size: 45px; 
+        }
       }
-      .title{
+      .title {
         font-size: 14px;
-        color:var(--text);
+        color: var(--text);
         line-height: 22px;
-        font-family: 'GilroyRegular';
+        font-family: "GilroyRegular";
+        @media screen and (max-width:991.98px) {
+          font-size: 13px; 
+          line-height: 20px;
+        }
       }
-      .name{
-        font-family: 'GilroyMedium';
+      .name {
+        font-family: "GilroyMedium";
         font-size: 17px;
         line-height: 27px;
         color: var(--text);
         border-bottom: 1px solid var(--text);
+        @media screen and (max-width:991.98px) {
+          font-size: 15px; 
+          line-height: 22px;
+        }
       }
     }
-    .stick{
+    .stick {
       margin-left: auto;
       border: 1px solid var(--gray-6);
       color: var(--gray-6);
       background-color: rgba(0, 0, 0, 0);
-      font-family: 'GilroyRegular';
+      font-family: "GilroyRegular";
       font-size: 13px;
       border-radius: 30px;
       padding: 5px 10px;
@@ -1398,72 +1886,77 @@ section,
     }
   }
 
-  .userContent{
+  .userContent {
     padding-top: 30px;
-    .movContent{
+    .movContent {
       height: 85px;
       overflow: hidden;
-      transition: all .3s linear;
-      &.opened{
+      transition: all 0.3s linear;
+      @media screen and (max-width:991.98px) {
+        height: 75px;
+      }
+      &.opened {
         height: auto;
         overflow: visible;
       }
     }
-    .paragraph{
+    .paragraph {
       font-size: 16px;
       line-height: 28px;
       color: var(--gray-7);
-      span{
-
+      @media screen and (max-width:991.98px) {
+        font-size: 14px; 
+        line-height: 25px;
       }
-      a{
+      span {
+      }
+      a {
         position: relative;
-        font-family: 'GilroySemibold';
+        font-family: "GilroySemibold";
         color: var(--primary);
-        &:after{
+        &:after {
           content: "";
           position: absolute;
           bottom: 0;
           left: 0;
           width: 100%;
           border-bottom: 1px dotted var(--primary);
-          transition: all .3s linear;
+          transition: all 0.3s linear;
         }
-        @media screen and (min-width:992px) {
-          &:hover{
-            &:after{
+        @media screen and (min-width: 992px) {
+          &:hover {
+            &:after {
               width: 0;
               overflow: hidden;
             }
           }
         }
       }
-      b{
-
+      b {
       }
     }
-    .morePlusButton{
+    .morePlusButton {
       margin-top: 30px;
-      font-family: 'GilroySemibold';
+      font-family: "GilroySemibold";
       font-size: 14px;
       line-height: 25px;
       color: var(--primary);
       position: relative;
       display: inline-flex;
       cursor: pointer;
-      &:after{
+      &:after {
         content: "";
         position: absolute;
         width: 100%;
         border-bottom: 1px solid var(--primary);
         left: 0;
         bottom: 0;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
       }
-      @media screen and (min-width:992px) {
-        &:hover{
+      @media screen and (min-width: 992px) {
+        &:hover {
           color: var(--primary);
-          &:after{
+          &:after {
             width: 0;
             overflow: hidden;
           }
@@ -1474,17 +1967,101 @@ section,
 }
 
 /*Fixed Column*/
-.fixedColumn{
-  transition: all .3s linear;
+.fixedColumn {
+  transition: all 0.3s linear;
   width: 450px;
-  &.show{
-    position:fixed!important;
+  @media screen and (max-width: 991.98px) {
+    width: 100%;
+  }
+  &.show {
+    position: fixed !important;
     top: 100px;
-    &.absolute{
-      position: absolute!important;
+    @media screen and (max-width: 991.98px) {
+      // top: 65px;
+      top: auto;
       bottom: 0;
-      right: 0;
-      top: auto!important;
+      width: 100%;
+      left: 0;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow: none;
+      border: none;
+    }
+    &.absolute {
+      @media screen and (min-width: 992px) {
+        position: absolute !important;
+        bottom: 0;
+        right: 0;
+        top: auto !important;
+      }
+    }
+  }
+  .dateColumnWrapper {
+    &.fixed {
+      // height: 55px;
+      // overflow: hidden;
+      // transition: all 0.3s linear;
+      // padding-top: 0;
+      // padding-bottom: 0;
+      // border: none;
+      height: 100px;
+      transition: all 0.3s linear;
+      padding-top: 10px;
+      padding-bottom: 0;
+      border: none;
+      box-shadow: none;
+
+      .title {
+        @media screen and (max-width: 991.98px) {
+          margin-bottom: 10px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          background: var(--primary);
+          color: var(--white);
+          border-radius: 16px;
+          padding: 0 16px;
+          justify-content: center;
+          box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+          // margin-bottom: 0;
+          // height: 55px;
+          // display: flex;
+          // align-items: center;
+        }
+      }
+      .dateInputs{
+        opacity: 0;
+      }
+
+      &.selected {
+        height: auto;
+        overflow: visible;
+        padding-bottom: 30px;
+        background-color: var(--white);
+        box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+        .dateInputs{
+          opacity: 1;
+        }
+
+        .title {
+          @media screen and (max-width: 991.98px) {
+            background: rgba(0, 0, 0, 0);
+            color: var(--text);
+            justify-content: flex-start;
+            padding-left: 0;
+            padding-right: 0;
+            box-shadow: none!important;
+          }
+        }
+      }
+      .date-picker-wrapper {
+        @media screen and (max-width: 991.98px) {
+          position: absolute !important;
+          padding-top: 30px !important;
+          top: auto !important;
+          bottom: calc(100% - 55px);
+        }
+      }
     }
   }
   // &.absolute{

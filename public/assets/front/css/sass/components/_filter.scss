@@ -11,11 +11,13 @@
       width: 100vw;
       left: 0;
       right: 0;
-      z-index: 99999;
+      z-index: 999;
+      // z-index: 99999;
       background: var(--white);
       padding: 20px 0;
       transition: all 0.3s linear;
-      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2) !important;
+      // box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2) !important;
+      box-shadow: 0 12px 10px rgba(217, 4, 62, 0.3) !important;
       .filterTop{
 
         & > .filterModalButton {
@@ -106,12 +108,18 @@
       .boatType{
         display: none;
       }
+      .calendarWrapper{
+        &.opened{
+          .boatType{
+            display: flex;
+          }
+        }
+      }
     }
   }
   .filterTop {
     display: flex;
     align-items: center;
-    border: 1px solid var(--gray);
     border-radius: 16px;
     margin-top: 60px;
     gap: 20px;
@@ -135,9 +143,12 @@
         width: 70px;
         padding-left: 0;
         margin-left: 0;
+        border: 1px solid var(--gray-5);
         @media screen and (max-width:480px) {
           height: 50px;
+          min-width: 60px;
           width: 60px;
+          color: var(--primary);
         }
       }
       .dateInfo{
@@ -154,19 +165,31 @@
         text-align: left;
       }
       a {
+        outline: 0!important;
+        &:focus,
+        &.focus{
+          box-shadow: none!important;
+          outline: 0!important;
+        }
         @media screen and (max-width: 991.98px) {
           background-color: rgba(0, 0, 0, 0) !important;
-          color: var(--gray-6);
-          border-color: var(--gray) !important;
+          color: var(--primary);
+          border-color: var(--gray-5) !important;
           height: 45px;
+          &:hover{
+            color: var(--primary)!important;
+          }
         }
+        
       }
     }
     .boatType {
-      position: absolute;
-      top: -30px;
-      padding-left: 20px;
-      margin-top: 0;
+      @media screen and (min-width:992px) {
+        position: absolute;
+        top: -30px;
+        padding-left: 20px;
+        margin-top: 0;
+      }
     }
     .textSlideWrapper{
       @media screen and (max-width:1440px) {
@@ -240,8 +263,8 @@
     color: var(--gray-6);
     border-radius: 10px;
     @media screen and (max-width: 991.98px) {
-      width: 50px;
-      height: 45px;
+      width: 60px;
+      height: 50px;
       padding: 0;
       display: flex;
       align-items: center;
@@ -261,6 +284,8 @@
       @media screen and (max-width: 991.98px) {
         font-size: 0;
         height: 100%;
+        display: flex;
+        align-items: center;
         &:before {
           content: "\e928";
           font-family: "customFont";
@@ -276,6 +301,10 @@
         }
         @media screen and (min-width: 992px) {
           width: 100%;
+        }
+        .option{
+          font-family: 'GilroyMedium';
+          color: var(--gray-7);
         }
       }
       .current {
@@ -349,9 +378,9 @@
         }
       }
       p {
-        font-size: 14px;
-        color: var(--gray-5);
-        line-height: 20px;
+        font-size: 15px;
+        color: var(--gray-6);
+        line-height: 22px;
         font-family: "GilroyRegular";
       }
     }

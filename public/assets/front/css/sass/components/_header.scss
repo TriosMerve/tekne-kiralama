@@ -8,7 +8,7 @@ header {
   padding-bottom: 11px;
   height: 85px;
   background-color: var(--white);
-  z-index: 99;
+  z-index: 999;
   display: flex;
   align-items: center;
   @media screen and (max-width: 991.98px) {
@@ -98,6 +98,10 @@ header {
       overflow: visible;
       visibility: visible;
       top: 0;
+    }
+
+    &.transitionTop{
+      top: -100%;
     }
   }
 }
@@ -358,7 +362,7 @@ header {
 
     & + a {
       position: relative;
-      padding-left: 15px;
+      padding-left: 16px;
       gap: 15px;
 
       &:before {

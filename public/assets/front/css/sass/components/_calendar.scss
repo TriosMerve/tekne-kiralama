@@ -28,8 +28,14 @@
     margin-bottom: 0 !important;
     margin-top: 0 !important;
     padding: 20px 16px;
-    background: #ffffff;
-    box-shadow: 0 -5px 43px rgba(0, 0, 0, 0.4) !important;
+    // background: #ffffff;
+    // box-shadow: 0 -5px 43px rgba(0, 0, 0, 0.4) !important;
+
+    a{
+      // background-color: var(--black) !important;
+      // border-color: var(--black) !important;
+      box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+    }
     // &>span{
     //   display: block;
     //   background: #ffffff;
@@ -94,12 +100,12 @@
 
       @media screen and (min-width: 992px) {
         &:hover {
-          background-color: var(--gray)!important;
+          background-color: var(--gray) !important;
         }
       }
       &.real-today {
-        background-color: rgba(0, 0, 0, 0)!important;
-        border: 1px solid var(--gray)!important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        border: 1px solid var(--gray) !important;
         cursor: default;
       }
       &.first-date-selected,
@@ -130,7 +136,7 @@
       }
       &.toMonth {
         &.hovering {
-          background-color: var(--gray-3)!important;
+          background-color: var(--gray-3) !important;
         }
       }
 
@@ -138,7 +144,7 @@
         background-color: var(--gray) !important;
         color: var(--gray-5) !important;
         &.real-today {
-          background-color: rgba(0, 0, 0, 0)!important;
+          background-color: rgba(0, 0, 0, 0) !important;
           border: 1px solid var(--gray) !important;
         }
       }
@@ -204,12 +210,12 @@
   }
 
   .date-range-length-tip {
-    background-color: var(--black)!important;
-    color: var(--white)!important;
+    background-color: var(--black) !important;
+    color: var(--white) !important;
     border-radius: 4px;
     padding: 3px 8px;
-    &:after{
-      border-top-color: var(--black)!important;
+    &:after {
+      border-top-color: var(--black) !important;
     }
   }
   .drp_top-bar {
@@ -356,7 +362,7 @@
   .gap {
     @media screen and (max-width: 991.98px) {
       width: 100%;
-      height: 30px;
+      height: 30px !important;
       top: 0;
       float: none;
       margin: 0 auto;
@@ -414,6 +420,10 @@
       display: flex;
       align-items: center;
       gap: 7px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
 
       &.active {
         color: var(--gray-6);
@@ -506,8 +516,8 @@
         margin-bottom: 20px;
       }
       label {
-        color: var(--gray-6);
-        font-family: "GilroyRegular";
+        // color: var(--gray-6);
+        // font-family: "GilroyRegular";
         transition: all 0.3s linear;
         font-size: 12px;
         opacity: 1;
@@ -516,6 +526,9 @@
         transition: all 0.3s linear;
         transform: none;
         top: 10px;
+        text-transform: uppercase;
+        font-family: "GilroySemibold";
+        color: var(--text);
         @media screen and (max-height: 768px) {
           padding-top: 0;
           top: 5px;
@@ -618,7 +631,7 @@
           padding-top: 5px;
           padding-bottom: 5px;
           width: calc(33.3% - 15px);
-          @media screen and (max-width:991.98px) {
+          @media screen and (max-width: 991.98px) {
             width: 100%;
           }
           &.selected {
@@ -664,7 +677,6 @@
       }
     }
 
-
     &.active {
       position: absolute;
       background: var(--white);
@@ -709,6 +721,8 @@
         @media screen and (max-width: 991.98px) {
           width: 100%;
           max-width: 400px;
+          height: 45px;
+          margin-bottom: 20px;
         }
       }
       .formSelectWrapper {
@@ -746,10 +760,17 @@
       visibility: hidden;
       overflow: hidden;
     }
+    // @media screen and (max-width: 991.98px) {
+    //   width: 100%;
+    //   max-width: 400px;
+    //   margin-bottom: 20px;
+    // }
     @media screen and (max-width: 991.98px) {
-      width: 100%;
-      max-width: 400px;
-      margin-bottom: 20px;
+      width: 0;
+      visibility: hidden;
+      overflow: hidden;
+      margin-bottom: 0;
+      height: 0;
     }
   }
   .customRangeButton {
@@ -797,6 +818,9 @@
         font-size: 12px;
         position: absolute;
         top: 10px;
+        text-transform: uppercase;
+        font-family: "GilroySemibold";
+        // color: var(--text);
 
         @media screen and (max-height: 768px) {
           top: 4px;
@@ -883,8 +907,8 @@
         }
       }
       .formSelectWrapper {
-        @media screen and (max-width:1366px) {
-          @media screen and (min-width:992px) {
+        @media screen and (max-width: 1366px) {
+          @media screen and (min-width: 992px) {
             width: calc(50% - 68px);
           }
         }
@@ -900,12 +924,6 @@
         }
       }
       &.active {
-        .dateInputWrapper {
-          @media screen and (max-width: 991.98px) {
-            height: 45px;
-            margin-bottom: 20px;
-          }
-        }
         @media screen and (min-width: 992px) {
           width: 100%;
           .formSelectWrapper {
@@ -933,7 +951,7 @@
           .name {
             color: var(--text);
           }
-          &:after{
+          &:after {
             color: var(--text);
           }
         }
@@ -960,6 +978,9 @@
     }
     &.opened {
       padding-top: 50px;
+      @media screen and (max-width: 991.98px) {
+        padding-top: 10px;
+      }
     }
 
     &.sticky {
@@ -1089,14 +1110,18 @@
     padding-right: 20px;
     cursor: pointer;
     transition: all 0.3s linear;
-    @media screen and (max-width:480px) {
+    @media screen and (max-width: 480px) {
       height: 50px;
+      border: 1px solid var(--gray-5);
     }
     .icon-search {
       font-size: 22px;
       color: var(--gray-6);
       margin-right: 10px;
       transition: all 0.3s linear;
+      @media screen and (max-width:991.98px) {
+        color: var(--primary);
+      }
     }
     .locationName {
       font-size: 14px;
@@ -1239,6 +1264,7 @@
       position: absolute;
       top: 10px;
       left: 10px;
+      color: var(--text);
       @media screen and (max-width: 991.98px) {
         top: 6px;
       }
@@ -1317,18 +1343,22 @@
   }
 }
 
-.dateColumnWrapper{
+.dateColumnWrapper {
   position: relative;
   width: 380px;
   margin-left: auto;
 
-  .date-picker-wrapper{
+  .date-picker-wrapper {
     position: absolute !important;
-    top: 0 !important;
     padding-top: 30px !important;
-    width: 700px !important;
-    left: auto !important;
-    right: 0 !important;
-    box-shadow: 0 12px 17px rgba(39,54,86,.14),0 5px 22px rgba(39,54,86,.12);
+    top: 110px !important;
+    box-shadow: 0 12px 17px rgba(39, 54, 86, 0.14),
+    0 5px 22px rgba(39, 54, 86, 0.12);
+    @media screen and (min-width: 992px) {
+      top: 0 !important;
+      width: 700px !important;
+      left: auto !important;
+      right: 0 !important;
+    }
   }
 }

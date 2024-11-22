@@ -279,6 +279,14 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-share:before {
+  content: "\e930";
+}
+
+.icon-gallery:before {
+  content: "\e931";
+}
+
 .icon-route-map:before {
   content: "\e92f";
 }
@@ -571,80 +579,360 @@ video {
   background-color: #d9043e !important;
   border: 1px solid #d9043e !important;
 }
-@media screen and (min-width: 992px) {
+.button-primary input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-primary:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-primary:not(.disabled):hover {
     color: #d9043e;
   }
+  .button-primary:not(.disabled):hover input {
+    color: #d9043e;
+  }
+}
+.button-primary.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-primary.disabled:after {
+  display: none;
+}
+.button-primary.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-primary.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-secondary {
   background-color: #f2055c !important;
   border: 1px solid #f2055c !important;
 }
-@media screen and (min-width: 992px) {
+.button-secondary input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-secondary:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-secondary:not(.disabled):hover {
     color: #f2055c;
   }
+  .button-secondary:not(.disabled):hover input {
+    color: #f2055c;
+  }
+}
+.button-secondary.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-secondary.disabled:after {
+  display: none;
+}
+.button-secondary.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-secondary.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-gray {
   background-color: #f3f3f3 !important;
   border: 1px solid #f3f3f3 !important;
 }
-@media screen and (min-width: 992px) {
+.button-gray input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-gray:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-gray:not(.disabled):hover {
     color: #f3f3f3;
   }
+  .button-gray:not(.disabled):hover input {
+    color: #f3f3f3;
+  }
+}
+.button-gray.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-gray.disabled:after {
+  display: none;
+}
+.button-gray.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-gray.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-gray-3 {
   background-color: #cccccc !important;
   border: 1px solid #cccccc !important;
 }
-@media screen and (min-width: 992px) {
+.button-gray-3 input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-gray-3:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-gray-3:not(.disabled):hover {
     color: #cccccc;
   }
+  .button-gray-3:not(.disabled):hover input {
+    color: #cccccc;
+  }
+}
+.button-gray-3.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-gray-3.disabled:after {
+  display: none;
+}
+.button-gray-3.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-gray-3.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-gray-6 {
   background-color: #696969 !important;
   border: 1px solid #696969 !important;
 }
-@media screen and (min-width: 992px) {
+.button-gray-6 input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-gray-6:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-gray-6:not(.disabled):hover {
     color: #696969;
   }
+  .button-gray-6:not(.disabled):hover input {
+    color: #696969;
+  }
+}
+.button-gray-6.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-gray-6.disabled:after {
+  display: none;
+}
+.button-gray-6.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-gray-6.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-gray-7 {
   background-color: #4e4e4e !important;
   border: 1px solid #4e4e4e !important;
 }
-@media screen and (min-width: 992px) {
+.button-gray-7 input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-gray-7:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-gray-7:not(.disabled):hover {
     color: #4e4e4e;
   }
+  .button-gray-7:not(.disabled):hover input {
+    color: #4e4e4e;
+  }
+}
+.button-gray-7.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-gray-7.disabled:after {
+  display: none;
+}
+.button-gray-7.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-gray-7.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-dark {
   background-color: #000000 !important;
   border: 1px solid #000000 !important;
 }
-@media screen and (min-width: 992px) {
+.button-dark input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-dark:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-dark:not(.disabled):hover {
     color: #000000;
   }
+  .button-dark:not(.disabled):hover input {
+    color: #000000;
+  }
+}
+.button-dark.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-dark.disabled:after {
+  display: none;
+}
+.button-dark.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-dark.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 .button-light {
   background-color: #ffffff !important;
   border: 1px solid #ffffff !important;
 }
-@media screen and (min-width: 992px) {
+.button-light input {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 991.98px) {
   .button-light:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-light:not(.disabled):hover {
     color: #ffffff;
   }
+  .button-light:not(.disabled):hover input {
+    color: #ffffff;
+  }
+}
+.button-light.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+}
+.button-light.disabled:after {
+  display: none;
+}
+.button-light.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-light.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
 }
 
 /*Custom container class*/
@@ -663,8 +951,8 @@ video {
 }
 @media screen and (max-width: 991.98px) {
   .container-sm:not(.noSpace) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -695,8 +983,8 @@ video {
 }
 @media screen and (max-width: 991.98px) {
   .container-md:not(.noSpace) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -727,8 +1015,8 @@ video {
 }
 @media screen and (max-width: 991.98px) {
   .container-lg:not(.noSpace) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -759,8 +1047,8 @@ video {
 }
 @media screen and (max-width: 991.98px) {
   .container-xl:not(.noSpace) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -791,8 +1079,8 @@ video {
 }
 @media screen and (max-width: 991.98px) {
   .container-2xl:not(.noSpace) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -823,8 +1111,8 @@ video {
 }
 @media screen and (max-width: 991.98px) {
   .container-3xl:not(.noSpace) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1071,6 +1359,11 @@ video {
   width: 200px;
   font-size: 16px;
 }
+@media screen and (max-width: 991.98px) {
+  .fixBtn.moreButton:hover {
+    color: var(--white);
+  }
+}
 @media screen and (max-width: 480px) {
   .fixBtn.moreButton {
     width: 100%;
@@ -1174,6 +1467,28 @@ video {
 
 .fMedium {
   font-family: "GilroyMedium" !important;
+}
+
+.formSelectWrapper .customSelect {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+}
+.formSelectWrapper .customSelect:after {
+  border: none;
+}
+.formSelectWrapper .customSelect:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.formSelectWrapper .customSelect.open .list {
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 20px -7px rgb(0, 0, 0);
+  border: 1px solid var(--gray-5);
 }
 
 .preloader {
@@ -1899,7 +2214,7 @@ header {
   padding-bottom: 11px;
   height: 85px;
   background-color: var(--white);
-  z-index: 99;
+  z-index: 999;
   display: flex;
   align-items: center;
 }
@@ -1968,6 +2283,9 @@ header.sticky-top:before, header.sticky:before {
   overflow: visible;
   visibility: visible;
   top: 0;
+}
+header.sticky-top.transitionTop, header.sticky.transitionTop {
+  top: -100%;
 }
 
 .userButton {
@@ -2214,7 +2532,7 @@ header.sticky-top:before, header.sticky:before {
 }
 .language a + a {
   position: relative;
-  padding-left: 15px;
+  padding-left: 16px;
   gap: 15px;
 }
 .language a + a:before {
@@ -2658,7 +2976,6 @@ footer .customTabContents .listItems .item .boatName {
   justify-content: center;
 }
 .container-check.button .checkmark {
-  width: auto;
   padding: 10px 20px;
   height: auto;
   border-radius: 10px;
@@ -2667,6 +2984,9 @@ footer .customTabContents .listItems .item .boatName {
   height: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-right: 0;
 }
 .container-check.button .checkmark .checkText {
   transition: all 0.3s linear;
@@ -2676,6 +2996,13 @@ footer .customTabContents .listItems .item .boatName {
 }
 .container-check.button.type2 {
   height: 75px;
+  flex: 1;
+}
+@media screen and (max-width: 991.98px) {
+  .container-check.button.type2 {
+    min-width: calc(50% - 5px);
+    max-width: 50%;
+  }
 }
 .container-check.button input:checked ~ .checkmark {
   background-color: var(--text);
@@ -2716,11 +3043,15 @@ footer .customTabContents .listItems .item .boatName {
 
 .breadCrumbWrapper {
   margin-top: 11px;
+  position: relative;
+  z-index: 99;
+  display: inline-block;
 }
 .breadCrumbWrapper .breadcrumb {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 0;
 }
 .breadCrumbWrapper .breadcrumb a {
   font-family: "Roboto", sans-serif;
@@ -2734,7 +3065,7 @@ footer .customTabContents .listItems .item .boatName {
   .breadCrumbWrapper .breadcrumb a {
     padding-right: 10px;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 }
 .breadCrumbWrapper .breadcrumb a + a:before {
@@ -2765,6 +3096,7 @@ footer .customTabContents .listItems .item .boatName {
 }
 .cards:not(.swiper-wrapper) .card {
   border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 .cards:not(.swiper-wrapper) .card .cardTop-image .imageWrapper {
   transition: all 0.3s linear;
@@ -2813,12 +3145,15 @@ footer .customTabContents .listItems .item .boatName {
 .cards:not(.swiper-wrapper) .card .cardBody {
   padding-top: 12px;
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .cards:not(.swiper-wrapper) .card .cardBody .title {
   font-family: "GilroyMedium";
   font-size: 28px;
   line-height: 35px;
   color: var(--primary);
+  transition: all 0.3s linear;
 }
 @media screen and (max-width: 991.98px) {
   .cards:not(.swiper-wrapper) .card .cardBody .title {
@@ -2882,12 +3217,11 @@ footer .customTabContents .listItems .item .boatName {
   }
 }
 .cards:not(.swiper-wrapper) .card .cardBody .countPrice {
-  margin-top: 0;
   color: var(--primary);
   font-size: 14px;
   display: flex;
   align-items: flex-end;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 991.98px) {
   .cards:not(.swiper-wrapper) .card .cardBody .countPrice {
@@ -2938,6 +3272,7 @@ footer .customTabContents .listItems .item .boatName {
   .cards:not(.swiper-wrapper) .card .cardBody .tags span {
     font-size: 12px;
     padding: 3px 7px;
+    background-color: var(--gray-3);
   }
 }
 .cards:not(.swiper-wrapper) .card .cardBody .point .icon-star-percent {
@@ -3035,6 +3370,10 @@ footer .customTabContents .listItems .item .boatName {
 @media screen and (max-width: 640px) {
   .cards:not(.swiper-wrapper).third .card {
     width: 100%;
+    background: var(--gray);
+    padding-bottom: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--gray);
   }
 }
 .cards:not(.swiper-wrapper).third .card .cardTop-image {
@@ -3076,6 +3415,72 @@ footer .customTabContents .listItems .item .boatName {
   .cards:not(.swiper-wrapper).third .card .cardBody .title {
     font-size: 18px;
     line-height: 26px;
+  }
+}
+.cards:not(.swiper-wrapper).third.blogCards {
+  gap: 50px;
+}
+@media screen and (max-width: 991.98px) {
+  .cards:not(.swiper-wrapper).third.blogCards {
+    gap: 30px;
+  }
+}
+.cards:not(.swiper-wrapper).third.blogCards .card {
+  width: calc(33.3% - 35px);
+}
+@media screen and (max-width: 991.98px) {
+  .cards:not(.swiper-wrapper).third.blogCards .card {
+    width: calc(50% - 25px);
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards:not(.swiper-wrapper).third.blogCards .card {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+.cards:not(.swiper-wrapper).third.blogCards .card .cardBody .category {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.cards:not(.swiper-wrapper).third.blogCards .card .cardBody .title {
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--black);
+}
+@media screen and (max-width: 991.98px) {
+  .cards:not(.swiper-wrapper).third.blogCards .card .cardBody .title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards:not(.swiper-wrapper).third.blogCards .card:hover .cardTop-image img {
+    transform: scale(1.1);
+  }
+  .cards:not(.swiper-wrapper).third.blogCards .card:hover .cardBody .title {
+    color: var(--primary);
+  }
+}
+.cards:not(.swiper-wrapper).third.type2 .card {
+  width: calc(50% - 30px);
+}
+@media screen and (max-width: 1100px) {
+  .cards:not(.swiper-wrapper).third.type2 .card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .cards:not(.swiper-wrapper).third.type2 .card {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards:not(.swiper-wrapper).third.type2 .card {
+    width: 100%;
   }
 }
 .cards:not(.swiper-wrapper) a.card.allLinkCard {
@@ -3159,6 +3564,8 @@ footer .customTabContents .listItems .item .boatName {
 }
 .cardList .cardItem .text {
   margin-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .cardList .cardItem .text .category {
   font-size: 14px;
@@ -3168,7 +3575,7 @@ footer .customTabContents .listItems .item .boatName {
 }
 .cardList .cardItem .text .title {
   font-family: "GilroySemibold";
-  font-size: 18px;
+  font-size: 19px;
   line-height: 25px;
   color: var(--primary);
 }
@@ -3244,6 +3651,8 @@ footer .customTabContents .listItems .item .boatName {
 .thirdSlider .cards.swiper-wrapper .card .cardBody {
   text-align: left;
   padding-top: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .thirdSlider .cards.swiper-wrapper .card .cardBody .title {
   font-size: 20px;
@@ -3283,6 +3692,12 @@ footer .customTabContents .listItems .item .boatName {
     font-size: 13px;
   }
 }
+.thirdSlider .cards.swiper-wrapper .card .cardBody .priceWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
 .thirdSlider .cards.swiper-wrapper .card .cardBody .discount {
   margin-top: 20px;
   font-size: 16px;
@@ -3297,12 +3712,11 @@ footer .customTabContents .listItems .item .boatName {
   }
 }
 .thirdSlider .cards.swiper-wrapper .card .cardBody .countPrice {
-  margin-top: 0;
   color: var(--primary);
   font-size: 14px;
   display: flex;
   align-items: flex-end;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 991.98px) {
   .thirdSlider .cards.swiper-wrapper .card .cardBody .countPrice {
@@ -3450,6 +3864,18 @@ footer .customTabContents .listItems .item .boatName {
   color: var(--black);
   font-family: "GilroySemibold";
 }
+@media screen and (max-width: 1600px) {
+  .customTabContents .descContainer .title {
+    font-size: 50px;
+    line-height: 55px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .customTabContents .descContainer .title {
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .customTabContents .descContainer .title {
     font-size: 30px;
@@ -3461,6 +3887,12 @@ footer .customTabContents .listItems .item .boatName {
   font-size: 40px;
   line-height: 65px;
   color: var(--primary);
+}
+@media screen and (max-width: 1600px) {
+  .customTabContents .descContainer .category {
+    font-size: 34px;
+    line-height: 45px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .customTabContents .descContainer .category {
@@ -3514,6 +3946,13 @@ footer .customTabContents .listItems .item .boatName {
   line-height: 25px;
   font-family: "GilroySemibold";
   box-shadow: none;
+  padding-left: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .customAcc .accordion-item .accordion-button {
+    font-size: 15px;
+    line-height: 22px;
+  }
 }
 .customAcc .accordion-item .accordion-button:after {
   content: "\e903";
@@ -3546,10 +3985,12 @@ footer .customTabContents .listItems .item .boatName {
   font-family: "GilroyRegular";
   padding-top: 0;
   padding-bottom: 30px;
+  padding-left: 0;
 }
 @media screen and (max-width: 991.98px) {
   .customAcc .accordion-item .accordion-body {
     padding-left: 0;
+    font-size: 14px;
   }
 }
 .customAcc .accordion-item .accordion-body a {
@@ -3630,7 +4071,16 @@ section .sectionHead,
   section .sectionHead,
   .section .sectionHead {
     margin-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
+}
+section .sectionHead .category,
+.section .sectionHead .category {
+  font-family: "GilroyMedium";
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-6);
 }
 section .sectionHead .sectionTitle,
 .section .sectionHead .sectionTitle {
@@ -3638,7 +4088,6 @@ section .sectionHead .sectionTitle,
   font-size: 35px;
   color: var(--primary);
   line-height: 45px;
-  text-transform: uppercase;
 }
 @media screen and (max-width: 991.98px) {
   section .sectionHead .sectionTitle,
@@ -3687,14 +4136,18 @@ section .sectionHead.type2 .sectionTitle,
 section .sectionHead.type2 .sectionText,
 .section .sectionHead.type2 .sectionText {
   font-family: "GilroyMedium";
-  font-size: 15px;
   line-height: 30px;
   margin-top: 0;
   max-width: 800px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   margin-top: 15px;
   text-align: justify;
+}
+section .sectionHead.type2 .sectionText.type2,
+.section .sectionHead.type2 .sectionText.type2 {
+  font-size: 16px;
+  line-height: 25px;
 }
 section .customBlockquote blockquote,
 .section .customBlockquote blockquote {
@@ -3703,6 +4156,13 @@ section .customBlockquote blockquote,
   min-height: 110px;
   padding: 30px;
   color: var(--white);
+}
+@media screen and (max-width: 991.98px) {
+  section .customBlockquote blockquote,
+  .section .customBlockquote blockquote {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 @media screen and (max-width: 640px) {
   section .customBlockquote blockquote,
@@ -3721,6 +4181,12 @@ section .customBlockquote blockquote p,
   color: var(--white);
   line-height: 26px;
   padding-left: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  section .customBlockquote blockquote p,
+  .section .customBlockquote blockquote p {
+    padding-left: 16px;
+  }
 }
 @media screen and (max-width: 640px) {
   section .customBlockquote blockquote p,
@@ -3742,6 +4208,13 @@ section .customBlockquote blockquote .fixBtn,
     width: 100%;
     max-width: 400px;
     margin: 30px auto 0;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .container-3xl .sectionHead {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -3864,7 +4337,7 @@ section .customBlockquote blockquote .fixBtn,
 }
 .homeSection .leftColumn .text {
   font-family: "GilroyRegular";
-  font-size: 14px;
+  font-size: 15px;
   line-height: 25px;
   color: var(--gray-6);
 }
@@ -3890,7 +4363,7 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 .homeSection small {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--gray-6);
   font-family: "GilroyRegular";
   padding: 50px 0 0;
@@ -4003,6 +4476,8 @@ section .customBlockquote blockquote .fixBtn,
   .boatTabWrapper {
     height: auto;
     padding-top: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -4330,6 +4805,18 @@ section .customBlockquote blockquote .fixBtn,
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
   border: none;
 }
+@media screen and (max-width: 991.98px) {
+  .pageSection .shareButton {
+    width: 40px;
+    min-width: 40px;
+    padding: 0;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+.pageSection .shareButton .icon-share {
+  font-size: 22px;
+}
 .pageSection .allButton {
   position: absolute;
   bottom: 30px;
@@ -4339,9 +4826,26 @@ section .customBlockquote blockquote .fixBtn,
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
   border: none;
 }
+@media screen and (max-width: 991.98px) {
+  .pageSection .allButton {
+    width: 40px;
+    min-width: 40px;
+    padding: 0;
+    left: 16px;
+    bottom: 16px;
+  }
+}
+.pageSection .allButton .icon-gallery {
+  font-size: 22px;
+}
 
 .pageContent {
   margin-top: 100px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageContent {
+    margin-top: 50px;
+  }
 }
 .pageContent.padding {
   padding: 45px;
@@ -4379,13 +4883,13 @@ section .customBlockquote blockquote .fixBtn,
 }
 .paragraph .shortText {
   font-family: "GilroySemibold";
-  font-size: 22px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 32px;
   margin-bottom: 34px;
 }
 @media screen and (max-width: 991.98px) {
   .paragraph .shortText {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
   }
 }
@@ -4393,8 +4897,8 @@ section .customBlockquote blockquote .fixBtn,
 .paragraph h2 {
   display: block;
   color: var(--primary);
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 23px;
+  line-height: 30px;
   font-family: "GilroySemibold";
   margin-bottom: 10px;
   margin-top: 20px;
@@ -4402,7 +4906,7 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 991.98px) {
   .paragraph span,
   .paragraph h2 {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
@@ -4437,6 +4941,9 @@ section .customBlockquote blockquote .fixBtn,
   transition: all 0.3s linear;
   border-bottom: 1px dotted var(--primary);
 }
+.paragraph a.notafter:after {
+  display: none;
+}
 @media screen and (min-width: 992px) {
   .paragraph a:hover:after {
     width: 0;
@@ -4449,6 +4956,14 @@ section .customBlockquote blockquote .fixBtn,
 .paragraph strong {
   color: var(--text);
   font-family: "GilroySemibold";
+}
+.paragraph.type2 {
+  font-size: 18px;
+  line-height: 30px;
+}
+.paragraph.type2 ul li {
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .socialShareWrapper {
@@ -4482,13 +4997,39 @@ section .customBlockquote blockquote .fixBtn,
   align-items: stretch;
   margin-top: 50px;
 }
+@media screen and (max-width: 991.98px) {
+  .twiceColumn {
+    margin-top: 20px;
+  }
+}
 .twiceColumn .pageDetailsContent {
   width: calc(100% - 550px);
+}
+@media screen and (max-width: 1600px) {
+  .twiceColumn .pageDetailsContent {
+    width: calc(100% - 500px);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .twiceColumn .pageDetailsContent {
+    width: calc(100% - 450px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .twiceColumn .pageDetailsContent {
+    width: 100%;
+  }
 }
 .twiceColumn .rightColumn {
   width: 450px;
   position: relative;
   margin-left: auto;
+}
+@media screen and (max-width: 991.98px) {
+  .twiceColumn .rightColumn {
+    width: 100%;
+    margin: 0 auto 50px;
+  }
 }
 .twiceColumn .dateColumnWrapper {
   width: 100%;
@@ -4496,6 +5037,12 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 12px 17px rgba(39, 54, 86, 0.14), 0 5px 22px rgba(39, 54, 86, 0.12);
+  border: 1px solid var(--gray-5);
+}
+@media screen and (max-width: 991.98px) {
+  .twiceColumn .dateColumnWrapper {
+    padding: 16px;
+  }
 }
 .twiceColumn .dateColumnWrapper .title {
   color: var(--text);
@@ -4504,14 +5051,32 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 25px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 991.98px) {
+  .twiceColumn .dateColumnWrapper .title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+}
 .twiceColumn .dateColumnWrapper .dateInputs {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .twiceColumn .dateColumnWrapper .dateInputs {
+    margin-bottom: 16px;
+  }
 }
 .twiceColumn .dateColumnWrapper .fixBtn {
   width: 100%;
   height: 60px;
   font-family: "GilroySemibold";
   font-size: 16px;
+}
+@media screen and (max-width: 991.98px) {
+  .twiceColumn .dateColumnWrapper .fixBtn {
+    font-size: 14px;
+    height: 45px;
+  }
 }
 .twiceColumn .information {
   padding: 30px;
@@ -4555,17 +5120,49 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 
+.pageDetailsContent .infoDetails .detailsHead {
+  min-width: 400px;
+  max-width: 400px;
+}
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .infoDetails .detailsHead {
+    min-width: 310px;
+    max-width: 310px;
+  }
+}
 .pageDetailsContent .infoDetails .detailsHead .location {
   font-size: 15px;
   color: var(--text);
   line-height: 24px;
   font-family: "GilroyRegular";
 }
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .infoDetails .detailsHead .location {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .infoDetails .detailsHead .location {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
 .pageDetailsContent .infoDetails .detailsHead .id {
   font-size: 15px;
   color: var(--text);
   line-height: 24px;
   font-family: "GilroyRegular";
+}
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .infoDetails .detailsHead .id {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .infoDetails .detailsHead .id {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 .pageDetailsContent .infoDetails .detailsHead .pageTitle .title {
   font-family: "GilroySemibold";
@@ -4575,12 +5172,40 @@ section .customBlockquote blockquote .fixBtn,
   min-width: 400px;
   max-width: 400px;
 }
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .infoDetails .detailsHead .pageTitle .title {
+    font-size: 24px;
+    line-height: 32px;
+    min-width: 310px;
+    max-width: 310px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .infoDetails .detailsHead .pageTitle .title {
+    font-size: 20px;
+    line-height: 27px;
+    min-width: 100%;
+    width: 100%;
+  }
+}
 .pageDetailsContent .infoDetails .detailsHead .type {
   font-size: 17px;
   font-family: "GilroySemibold";
   color: var(--gray-7);
   line-height: 27px;
   margin-top: 15px;
+}
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .infoDetails .detailsHead .type {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .infoDetails .detailsHead .type {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
 }
 .pageDetailsContent .infoDetails .detailsHead .tags {
   display: flex;
@@ -4599,6 +5224,18 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 5px;
   color: var(--gray-6);
   position: relative;
+}
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .infoDetails .detailsHead .tags span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .infoDetails .detailsHead .tags span {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px 10px;
+  }
 }
 .pageDetailsContent .infoDetails .detailsHead .tags span:first-child {
   padding-left: 0;
@@ -4620,26 +5257,69 @@ section .customBlockquote blockquote .fixBtn,
   gap: 30px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .point {
+    gap: 15px;
+    padding: 10px 16px;
+  }
+}
 .pageDetailsContent .properties .point .icon-star-percent {
   color: var(--white);
   font-size: 36px;
   margin-right: 5px;
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .point .icon-star-percent {
+    font-size: 26px;
+  }
 }
 .pageDetailsContent .properties .point .icon-star {
   color: var(--white);
   font-size: 36px;
   margin-right: 15px;
 }
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .properties .point .icon-star {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .point .icon-star {
+    font-size: 26px;
+    margin-right: 5px;
+  }
+}
 .pageDetailsContent .properties .point .pointNumber {
   font-family: "GilroyMedium";
   font-size: 32px;
   color: var(--white);
+}
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .properties .point .pointNumber {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .point .pointNumber {
+    font-size: 26px;
+  }
 }
 .pageDetailsContent .properties .point .text {
   font-family: "GilroyRegular";
   font-size: 16px;
   color: var(--white);
   position: relative;
+}
+@media screen and (max-width: 1600px) {
+  .pageDetailsContent .properties .point .text {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .point .text {
+    font-size: 14px;
+  }
 }
 .pageDetailsContent .properties .point .text:after {
   content: "";
@@ -4661,6 +5341,11 @@ section .customBlockquote blockquote .fixBtn,
   gap: 20px;
   flex-direction: column;
 }
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .category {
+    gap: 10px;
+  }
+}
 .pageDetailsContent .properties .category span {
   border-radius: 10px;
   background-color: var(--gray);
@@ -4670,9 +5355,30 @@ section .customBlockquote blockquote .fixBtn,
   padding: 10px 20px;
   font-size: 15px;
 }
+@media screen and (max-width: 991.98px) {
+  .pageDetailsContent .properties .category span {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
 
 .subContent {
   padding-top: 70px;
+}
+@media screen and (max-width: 991.98px) {
+  .subContent {
+    padding-top: 30px;
+  }
+}
+.subContent .standartLine {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 991.98px) {
+  .subContent .standartLine {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 .subContent .otherProperties {
   padding-top: 50px;
@@ -4684,6 +5390,39 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 37px;
   margin-bottom: 20px;
   margin-top: 50px;
+  position: relative;
+}
+@media screen and (max-width: 1600px) {
+  .subContent .otherProperties .caption {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .subContent .otherProperties .caption {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .subContent .otherProperties .caption {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+.subContent .otherProperties .caption:after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .subContent .otherProperties .caption:after {
+    bottom: -2px;
+  }
 }
 .subContent .otherProperties .subTitle {
   font-family: "GilroySemibold";
@@ -4692,12 +5431,36 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 27px;
   margin-bottom: 30px;
   margin-top: 50px;
+  padding-left: 14px;
+  position: relative;
+}
+@media screen and (max-width: 991.98px) {
+  .subContent .otherProperties .subTitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+}
+.subContent .otherProperties .subTitle:after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .productsPropList .item {
   display: flex;
   align-items: flex-start;
   padding: 10px 0;
+}
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item:first-child {
+    padding-top: 0;
+  }
 }
 .productsPropList .item .title {
   font-size: 16px;
@@ -4707,12 +5470,25 @@ section .customBlockquote blockquote .fixBtn,
   width: 30%;
   margin-bottom: 0;
 }
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item .title {
+    font-size: 14px;
+    line-height: 22px;
+    width: 55%;
+  }
+}
 .productsPropList .item .content {
   font-size: 17px;
   line-height: 25px;
   color: var(--text);
   font-family: "GilroyRegular";
   width: 70%;
+}
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item .content {
+    font-size: 16px;
+    width: 45%;
+  }
 }
 .productsPropList .item .content b {
   font-family: "GilroySemibold";
@@ -4722,6 +5498,11 @@ section .customBlockquote blockquote .fixBtn,
   align-items: stretch;
   gap: 30px;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item .tags {
+    gap: 15px;
+  }
 }
 .productsPropList .item .tags > span {
   display: inline-flex;
@@ -4743,15 +5524,25 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 25px;
   color: var(--black);
 }
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item .itemHead .name {
+    font-size: 16px;
+  }
+}
 .productsPropList .item .itemHead .date {
-  color: var(--black);
+  color: var(--gray-6);
   font-family: "GilroyMedium";
   font-size: 15px;
   line-height: 22px;
   margin-left: auto;
 }
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item .itemHead .date {
+    font-size: 13px;
+  }
+}
 .productsPropList .item .startWrapper {
-  margin-top: 12px;
+  margin-top: 5px;
 }
 .productsPropList .item .startWrapper span {
   color: var(--primary);
@@ -4768,12 +5559,19 @@ section .customBlockquote blockquote .fixBtn,
   -webkit-line-clamp: 3;
   margin-top: 15px;
 }
+@media screen and (max-width: 991.98px) {
+  .productsPropList .item .itemContent {
+    font-size: 14px;
+  }
+}
 .productsPropList .item .morePlusButton {
   margin-top: 20px;
 }
 .productsPropList.type2 {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px 0;
 }
 .productsPropList.type2 .item {
   flex-direction: column;
@@ -4781,6 +5579,16 @@ section .customBlockquote blockquote .fixBtn,
   width: 20%;
   padding: 0 5px;
   gap: 10px 0;
+}
+@media screen and (max-width: 1200px) {
+  .productsPropList.type2 .item {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .productsPropList.type2 .item {
+    width: 50%;
+  }
 }
 .productsPropList.type2 .item .title {
   width: initial;
@@ -4796,6 +5604,12 @@ section .customBlockquote blockquote .fixBtn,
   width: 50%;
   padding: 15px 0;
 }
+@media screen and (max-width: 570px) {
+  .productsPropList.type3 .item {
+    width: 100%;
+    padding: 7px 0;
+  }
+}
 .productsPropList.type3 .item .title {
   width: initial;
 }
@@ -4807,6 +5621,11 @@ section .customBlockquote blockquote .fixBtn,
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (max-width: 991.98px) {
+  .productsPropList.type4 {
+    gap: 20px;
+  }
+}
 .productsPropList.type4 .item {
   border: 1px solid var(--gray);
   border-radius: 12px;
@@ -4816,12 +5635,26 @@ section .customBlockquote blockquote .fixBtn,
   align-items: stretch;
   gap: 30px;
 }
+@media screen and (max-width: 991.98px) {
+  .productsPropList.type4 .item {
+    padding: 16px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
 .productsPropList.type4 .item p,
 .productsPropList.type4 .item .paragraph {
   font-size: 16px;
   line-height: 25px;
   color: var(--text);
   font-family: "GilroyRegular";
+}
+@media screen and (max-width: 991.98px) {
+  .productsPropList.type4 .item p,
+  .productsPropList.type4 .item .paragraph {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .productsPropList.type4 .item p b,
 .productsPropList.type4 .item .paragraph b {
@@ -4868,6 +5701,7 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroySemibold";
   margin-bottom: 10px;
   color: var(--text);
+  margin-top: 7px;
 }
 .productsPropList.type4 .item .content {
   width: initial;
@@ -4884,25 +5718,166 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--text);
 }
 
+.map {
+  height: 580px;
+}
+@media screen and (max-width: 991.98px) {
+  .map {
+    height: 400px;
+  }
+}
+
+.colCustomGroup {
+  gap: 30px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 991.98px) {
+  .colCustomGroup {
+    gap: 20px;
+  }
+}
+.colCustomGroup.half > div {
+  width: 100% !important;
+}
+@media screen and (min-width: 1100px) {
+  .colCustomGroup.half > div {
+    max-width: calc(50% - 15px);
+  }
+}
+
+.commentProps .item {
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+.commentProps .item p,
+.commentProps .item .paragraph {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text);
+  font-family: "GilroyRegular";
+}
+.commentProps .item p b,
+.commentProps .item .paragraph b {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+}
+.commentProps .item p a,
+.commentProps .item .paragraph a {
+  color: var(--primary);
+  font-family: "GilroySemibold";
+  position: relative;
+}
+.commentProps .item p a:after,
+.commentProps .item .paragraph a:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+  border-bottom: 1px dotted var(--primary);
+}
+@media screen and (min-width: 992px) {
+  .commentProps .item p a:hover:after,
+  .commentProps .item .paragraph a:hover:after {
+    width: 0;
+  }
+}
+.commentProps .item p.type2,
+.commentProps .item .paragraph.type2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+.commentProps .item .icon {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+.commentProps .item .icon img {
+  width: 100%;
+}
+.commentProps .item .title {
+  font-family: "GilroySemibold";
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.commentProps .item .itemHead {
+  display: flex;
+  align-items: center;
+}
+.commentProps .item .itemHead .name {
+  font-family: "GilroySemibold";
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--black);
+}
+.commentProps .item .itemHead .date {
+  color: var(--gray-6);
+  font-family: "GilroyMedium";
+  font-size: 15px;
+  line-height: 22px;
+  margin-left: auto;
+}
+.commentProps .item .startWrapper {
+  margin-top: 5px;
+}
+.commentProps .item .startWrapper span {
+  color: var(--primary);
+}
+.commentProps .item .itemContent {
+  font-family: "GilroyRegular";
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--black);
+  margin-top: 15px;
+}
+
 .placesVisit {
   border: 1px solid var(--gray);
   padding: 40px 30px;
   margin-top: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .placesVisit {
+    padding: 20px 16px;
+  }
 }
 .placesVisit .top {
   display: flex;
   align-items: center;
   gap: 40px;
 }
+@media screen and (max-width: 991.98px) {
+  .placesVisit .top {
+    gap: 20px;
+  }
+}
 .placesVisit .top .icon-route-map {
   font-size: 50px;
   color: var(--primary);
+}
+@media screen and (max-width: 991.98px) {
+  .placesVisit .top .icon-route-map {
+    font-size: 32px;
+  }
 }
 .placesVisit .top .title {
   font-family: "GilroySemibold";
   font-size: 24px;
   color: var(--black);
   line-height: 32px;
+}
+@media screen and (max-width: 991.98px) {
+  .placesVisit .top .title {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 .placesVisit .top .title b {
   color: var(--primary);
@@ -4916,6 +5891,28 @@ section .customBlockquote blockquote .fixBtn,
   gap: 40px;
   margin-top: 40px;
   padding-left: 92px;
+  min-height: 100px;
+}
+@media screen and (max-width: 991.98px) {
+  .placesVisit .placesVisitList {
+    padding-left: 52px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.placesVisit .placesVisitList .visitItem {
+  width: calc(33.3% - 27px);
+}
+@media screen and (max-width: 991.98px) {
+  .placesVisit .placesVisitList .visitItem {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 540px) {
+  .placesVisit .placesVisitList .visitItem {
+    width: auto;
+  }
 }
 .placesVisit .placesVisitList a {
   font-family: "GilroyMedium";
@@ -4923,8 +5920,16 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--black);
   font-size: 16px;
   display: inline-flex;
-  width: calc(33.3% - 27px);
-  text-decoration: underline;
+  transition: all 0.3s linear;
+  width: auto;
+}
+.placesVisit .placesVisitList a:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -3px;
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
@@ -4932,12 +5937,23 @@ section .customBlockquote blockquote .fixBtn,
     color: var(--primary);
   }
 }
+@media screen and (max-width: 1200px) {
+  .placesVisit .placesVisitList.type2 .visitItem {
+    width: calc(50% - 20px);
+  }
+}
 
 .pointWrapper {
   display: flex;
   align-items: center;
-  padding-left: 90px;
   margin-bottom: 20px;
+  margin-left: auto;
+}
+@media screen and (max-width: 1440px) {
+  .pointWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .pointWrapper .title {
   font-family: "GilroySemibold";
@@ -4945,21 +5961,63 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 20px;
   line-height: 27px;
 }
+@media screen and (max-width: 1440px) {
+  .pointWrapper .title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pointWrapper .title {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
 .pointWrapper .title b {
   margin-left: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .pointWrapper .title b {
+    margin-left: 10px;
+  }
 }
 .pointWrapper .startWrapper {
   color: var(--primary);
   padding-left: 40px;
 }
+@media screen and (max-width: 1600px) {
+  .pointWrapper .startWrapper {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .pointWrapper .startWrapper {
+    padding-left: 0;
+  }
+}
 .pointWrapper .startWrapper span {
   font-size: 19px;
+}
+@media screen and (max-width: 1400px) {
+  .pointWrapper .startWrapper span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pointWrapper .startWrapper span {
+    font-size: 17px;
+  }
 }
 
 .movContent {
   height: 110px;
   overflow: hidden;
   transition: all 0.3s linear;
+}
+@media screen and (max-width: 991.98px) {
+  .movContent {
+    height: 100px;
+  }
 }
 .movContent.opened {
   height: auto;
@@ -5002,8 +6060,8 @@ section .customBlockquote blockquote .fixBtn,
 }
 
 .userDetails {
-  border-top: 1px solid var(--gray);
-  border-bottom: 1px solid var(--gray);
+  border-top: 1px solid var(--gray-5);
+  border-bottom: 1px solid var(--gray-5);
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -5019,11 +6077,22 @@ section .customBlockquote blockquote .fixBtn,
 .userDetails .userHead .userInfo .icon-user {
   font-size: 72px;
 }
+@media screen and (max-width: 991.98px) {
+  .userDetails .userHead .userInfo .icon-user {
+    font-size: 45px;
+  }
+}
 .userDetails .userHead .userInfo .title {
   font-size: 14px;
   color: var(--text);
   line-height: 22px;
   font-family: "GilroyRegular";
+}
+@media screen and (max-width: 991.98px) {
+  .userDetails .userHead .userInfo .title {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 .userDetails .userHead .userInfo .name {
   font-family: "GilroyMedium";
@@ -5031,6 +6100,12 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 27px;
   color: var(--text);
   border-bottom: 1px solid var(--text);
+}
+@media screen and (max-width: 991.98px) {
+  .userDetails .userHead .userInfo .name {
+    font-size: 15px;
+    line-height: 22px;
+  }
 }
 .userDetails .userHead .stick {
   margin-left: auto;
@@ -5051,6 +6126,11 @@ section .customBlockquote blockquote .fixBtn,
   overflow: hidden;
   transition: all 0.3s linear;
 }
+@media screen and (max-width: 991.98px) {
+  .userDetails .userContent .movContent {
+    height: 75px;
+  }
+}
 .userDetails .userContent .movContent.opened {
   height: auto;
   overflow: visible;
@@ -5059,6 +6139,12 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 16px;
   line-height: 28px;
   color: var(--gray-7);
+}
+@media screen and (max-width: 991.98px) {
+  .userDetails .userContent .paragraph {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 .userDetails .userContent .paragraph a {
   position: relative;
@@ -5114,15 +6200,87 @@ section .customBlockquote blockquote .fixBtn,
   transition: all 0.3s linear;
   width: 450px;
 }
+@media screen and (max-width: 991.98px) {
+  .fixedColumn {
+    width: 100%;
+  }
+}
 .fixedColumn.show {
   position: fixed !important;
   top: 100px;
 }
-.fixedColumn.show.absolute {
-  position: absolute !important;
-  bottom: 0;
-  right: 0;
-  top: auto !important;
+@media screen and (max-width: 991.98px) {
+  .fixedColumn.show {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    border: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fixedColumn.show.absolute {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    top: auto !important;
+  }
+}
+.fixedColumn .dateColumnWrapper.fixed {
+  height: 100px;
+  transition: all 0.3s linear;
+  padding-top: 10px;
+  padding-bottom: 0;
+  border: none;
+  box-shadow: none;
+}
+@media screen and (max-width: 991.98px) {
+  .fixedColumn .dateColumnWrapper.fixed .title {
+    margin-bottom: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 0 16px;
+    justify-content: center;
+    box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+  }
+}
+.fixedColumn .dateColumnWrapper.fixed .dateInputs {
+  opacity: 0;
+}
+.fixedColumn .dateColumnWrapper.fixed.selected {
+  height: auto;
+  overflow: visible;
+  padding-bottom: 30px;
+  background-color: var(--white);
+  box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+}
+.fixedColumn .dateColumnWrapper.fixed.selected .dateInputs {
+  opacity: 1;
+}
+@media screen and (max-width: 991.98px) {
+  .fixedColumn .dateColumnWrapper.fixed.selected .title {
+    background: rgba(0, 0, 0, 0);
+    color: var(--text);
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none !important;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .fixedColumn .dateColumnWrapper.fixed .date-picker-wrapper {
+    position: absolute !important;
+    padding-top: 30px !important;
+    top: auto !important;
+    bottom: calc(100% - 55px);
+  }
 }
 
 .calendarMobilButton {
@@ -5156,8 +6314,9 @@ section .customBlockquote blockquote .fixBtn,
   margin-bottom: 0 !important;
   margin-top: 0 !important;
   padding: 20px 16px;
-  background: #ffffff;
-  box-shadow: 0 -5px 43px rgba(0, 0, 0, 0.4) !important;
+}
+.calendarMobilButton.fixed a {
+  box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
 }
 
 .closeCalendarButton {
@@ -5467,7 +6626,7 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 991.98px) {
   .date-picker-wrapper .gap {
     width: 100%;
-    height: 30px;
+    height: 30px !important;
     top: 0;
     float: none;
     margin: 0 auto;
@@ -5533,6 +6692,12 @@ section .customBlockquote blockquote .fixBtn,
   display: flex;
   align-items: center;
   gap: 7px;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper .boatType button {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 .calendarWrapper .boatType button.active {
   color: var(--gray-6);
@@ -5632,8 +6797,6 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
-  color: var(--gray-6);
-  font-family: "GilroyRegular";
   transition: all 0.3s linear;
   font-size: 12px;
   opacity: 1;
@@ -5642,6 +6805,9 @@ section .customBlockquote blockquote .fixBtn,
   transition: all 0.3s linear;
   transform: none;
   top: 10px;
+  text-transform: uppercase;
+  font-family: "GilroySemibold";
+  color: var(--text);
 }
 @media screen and (max-height: 768px) {
   .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
@@ -5836,6 +7002,8 @@ section .customBlockquote blockquote .fixBtn,
   .calendarWrapper .dateTimeSearchWrapper.active .dateInputWrapper {
     width: 100%;
     max-width: 400px;
+    height: 45px;
+    margin-bottom: 20px;
   }
 }
 .calendarWrapper .dateTimeSearchWrapper.active .formSelectWrapper {
@@ -5875,9 +7043,11 @@ section .customBlockquote blockquote .fixBtn,
 }
 @media screen and (max-width: 991.98px) {
   .calendarWrapper .dateInputWrapper {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
+    width: 0;
+    visibility: hidden;
+    overflow: hidden;
+    margin-bottom: 0;
+    height: 0;
   }
 }
 .calendarWrapper .customRangeButton {
@@ -5930,6 +7100,8 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 12px;
   position: absolute;
   top: 10px;
+  text-transform: uppercase;
+  font-family: "GilroySemibold";
 }
 @media screen and (max-height: 768px) {
   .calendarWrapper .customRangeButton span.name {
@@ -6041,12 +7213,6 @@ section .customBlockquote blockquote .fixBtn,
 .calendarWrapper.type2 .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
   color: #878787;
 }
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper.type2 .dateTimeSearchWrapper.active .dateInputWrapper {
-    height: 45px;
-    margin-bottom: 20px;
-  }
-}
 @media screen and (min-width: 992px) {
   .calendarWrapper.type2 .dateTimeSearchWrapper.active {
     width: 100%;
@@ -6098,6 +7264,11 @@ section .customBlockquote blockquote .fixBtn,
 }
 .calendarWrapper.type2.opened {
   padding-top: 50px;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2.opened {
+    padding-top: 10px;
+  }
 }
 .calendarWrapper.type2.sticky {
   position: fixed;
@@ -6222,6 +7393,7 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 480px) {
   .calendarResult .dateInfo {
     height: 50px;
+    border: 1px solid var(--gray-5);
   }
 }
 .calendarResult .dateInfo .icon-search {
@@ -6229,6 +7401,11 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--gray-6);
   margin-right: 10px;
   transition: all 0.3s linear;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarResult .dateInfo .icon-search {
+    color: var(--primary);
+  }
 }
 .calendarResult .dateInfo .locationName {
   font-size: 14px;
@@ -6376,6 +7553,7 @@ section .customBlockquote blockquote .fixBtn,
   position: absolute;
   top: 10px;
   left: 10px;
+  color: var(--text);
 }
 @media screen and (max-width: 991.98px) {
   .dateInputs .checkInText .name,
@@ -6468,12 +7646,17 @@ section .customBlockquote blockquote .fixBtn,
 }
 .dateColumnWrapper .date-picker-wrapper {
   position: absolute !important;
-  top: 0 !important;
   padding-top: 30px !important;
-  width: 700px !important;
-  left: auto !important;
-  right: 0 !important;
+  top: 110px !important;
   box-shadow: 0 12px 17px rgba(39, 54, 86, 0.14), 0 5px 22px rgba(39, 54, 86, 0.12);
+}
+@media screen and (min-width: 992px) {
+  .dateColumnWrapper .date-picker-wrapper {
+    top: 0 !important;
+    width: 700px !important;
+    left: auto !important;
+    right: 0 !important;
+  }
 }
 
 .videoCardFull {
@@ -6819,6 +8002,8 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 991.98px) {
   .blogSlider .imageWrapper {
     border-radius: 24px;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -6856,6 +8041,29 @@ section .customBlockquote blockquote .fixBtn,
   background-color: var(--white) !important;
   width: 12px;
   height: 12px;
+}
+.swiper-pagination.type3 {
+  bottom: auto;
+  top: auto !important;
+  margin-top: 12px;
+}
+@media screen and (max-width: 991.98px) {
+  .swiper-pagination.type3 {
+    width: auto;
+    right: 20px;
+    left: auto;
+  }
+}
+.swiper-pagination.type3 .swiper-pagination-bullet {
+  border: 1px solid #aaaaaa;
+  background-color: rgba(0, 0, 0, 0);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+.swiper-pagination.type3 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .swiperButtons {
@@ -7123,6 +8331,8 @@ section .customBlockquote blockquote .fixBtn,
 .populerLokasyonSlider .card .cardBody {
   text-align: left;
   padding-top: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 @media screen and (max-width: 991.98px) {
   .populerLokasyonSlider .card .cardBody {
@@ -7175,7 +8385,7 @@ section .customBlockquote blockquote .fixBtn,
 }
 @media screen and (max-width: 991.98px) {
   .slideSection {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -7225,10 +8435,10 @@ section .customBlockquote blockquote .fixBtn,
 .filterSlideTab .filterSlideButton {
   font-family: "GilroyMedium";
   font-size: 15px;
-  background-color: var(--gray-3);
+  background-color: #e4e4e4;
   color: var(--gray-7);
   padding: 12px 20px;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: all 0.3s linear;
 }
 .filterSlideTab .filterSlideButton.active {
@@ -7293,6 +8503,21 @@ section .customBlockquote blockquote .fixBtn,
 .detailsSlideWrapper {
   position: relative;
 }
+@media screen and (max-width: 991.98px) {
+  .detailsSlideWrapper .container-check.favorite {
+    right: 16px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .detailsSlideWrapper .swiperButton.swiper-button-next {
+    right: 16px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .detailsSlideWrapper .swiperButton.swiper-button-prev {
+    left: 16px;
+  }
+}
 .detailsSlideWrapper .swiper-slide .galleryItem {
   position: relative;
   overflow: hidden;
@@ -7304,6 +8529,110 @@ section .customBlockquote blockquote .fixBtn,
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/*Banner Slider*/
+.bannerWrapper {
+  position: relative;
+}
+
+.bannerSlider {
+  border-radius: 24px;
+}
+@media screen and (max-width: 1440px) {
+  .bannerSlider {
+    height: 350px;
+  }
+  .bannerSlider .swiper-wrapper,
+  .bannerSlider .bannerItem {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .bannerSlider {
+    height: 220px;
+  }
+}
+.bannerSlider .bannerItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bannerSlider .bannerItem .desc {
+  position: absolute;
+  background-color: var(--white);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  color: var(--black);
+  border-radius: 0 24px 24px 0;
+  min-height: 250px;
+  padding: 30px;
+  max-width: 590px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.475) !important;
+}
+@media screen and (max-width: 1440px) {
+  .bannerSlider .bannerItem .desc {
+    max-width: 400px;
+    min-height: 200px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .bannerSlider .bannerItem .desc {
+    min-height: initial;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .bannerSlider .bannerItem .desc {
+    max-width: 60%;
+    padding: 20px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+.bannerSlider .bannerItem .desc .category {
+  font-family: "GilroyMedium";
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 991.98px) {
+  .bannerSlider .bannerItem .desc .category {
+    margin-bottom: 0;
+    display: none;
+  }
+}
+.bannerSlider .bannerItem .desc p {
+  font-family: "GilroyMedium";
+  font-size: 35px;
+  color: var(--black);
+  line-height: 45px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+@media screen and (max-width: 1600px) {
+  .bannerSlider .bannerItem .desc p {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .bannerSlider .bannerItem .desc p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .bannerSlider .bannerItem .desc p {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -7319,11 +8648,11 @@ section .customBlockquote blockquote .fixBtn,
   width: 100vw;
   left: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 999;
   background: var(--white);
   padding: 20px 0;
   transition: all 0.3s linear;
-  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 12px 10px rgba(217, 4, 62, 0.3) !important;
 }
 @media screen and (max-width: 991.98px) {
   .filterWrapper .filterHead.fixed .filterTop > .filterModalButton {
@@ -7419,10 +8748,12 @@ section .customBlockquote blockquote .fixBtn,
 .filterWrapper .filterHead.fixed .boatType {
   display: none;
 }
+.filterWrapper .filterHead.fixed .calendarWrapper.opened .boatType {
+  display: flex;
+}
 .filterWrapper .filterTop {
   display: flex;
   align-items: center;
-  border: 1px solid var(--gray);
   border-radius: 16px;
   margin-top: 60px;
   gap: 20px;
@@ -7450,11 +8781,14 @@ section .customBlockquote blockquote .fixBtn,
   width: 70px;
   padding-left: 0;
   margin-left: 0;
+  border: 1px solid var(--gray-5);
 }
 @media screen and (max-width: 480px) {
   .filterWrapper .filterTop .calendarMobilButton .filterModalButton {
     height: 50px;
+    min-width: 60px;
     width: 60px;
+    color: var(--primary);
   }
 }
 .filterWrapper .filterTop .calendarMobilButton .dateInfo {
@@ -7470,19 +8804,31 @@ section .customBlockquote blockquote .fixBtn,
 .filterWrapper .filterTop .calendarMobilButton .dateResult {
   text-align: left;
 }
+.filterWrapper .filterTop .calendarMobilButton a {
+  outline: 0 !important;
+}
+.filterWrapper .filterTop .calendarMobilButton a:focus, .filterWrapper .filterTop .calendarMobilButton a.focus {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
 @media screen and (max-width: 991.98px) {
   .filterWrapper .filterTop .calendarMobilButton a {
     background-color: rgba(0, 0, 0, 0) !important;
-    color: var(--gray-6);
-    border-color: var(--gray) !important;
+    color: var(--primary);
+    border-color: var(--gray-5) !important;
     height: 45px;
   }
+  .filterWrapper .filterTop .calendarMobilButton a:hover {
+    color: var(--primary) !important;
+  }
 }
-.filterWrapper .filterTop .boatType {
-  position: absolute;
-  top: -30px;
-  padding-left: 20px;
-  margin-top: 0;
+@media screen and (min-width: 992px) {
+  .filterWrapper .filterTop .boatType {
+    position: absolute;
+    top: -30px;
+    padding-left: 20px;
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 1440px) {
   .filterWrapper .filterTop .textSlideWrapper {
@@ -7561,8 +8907,8 @@ section .customBlockquote blockquote .fixBtn,
 }
 @media screen and (max-width: 991.98px) {
   .filterWrapper .shortSelect {
-    width: 50px;
-    height: 45px;
+    width: 60px;
+    height: 50px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -7585,6 +8931,8 @@ section .customBlockquote blockquote .fixBtn,
   .filterWrapper .shortSelect .current {
     font-size: 0;
     height: 100%;
+    display: flex;
+    align-items: center;
   }
   .filterWrapper .shortSelect .current:before {
     content: "\e928";
@@ -7602,6 +8950,10 @@ section .customBlockquote blockquote .fixBtn,
   .filterWrapper .shortSelect.open .list {
     width: 100%;
   }
+}
+.filterWrapper .shortSelect.open .list .option {
+  font-family: "GilroyMedium";
+  color: var(--gray-7);
 }
 .filterWrapper .shortSelect.open .current:before {
   transform: rotate(180deg);
@@ -7677,9 +9029,9 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 .filterWrapper .filterFooter .filterResult p {
-  font-size: 14px;
-  color: var(--gray-5);
-  line-height: 20px;
+  font-size: 15px;
+  color: var(--gray-6);
+  line-height: 22px;
   font-family: "GilroyRegular";
 }
 
@@ -7687,8 +9039,7 @@ section .customBlockquote blockquote .fixBtn,
   max-height: 700px;
 }
 .modal .modal-content .modal-header {
-  padding: 50px 50px 20px;
-  border-bottom: none;
+  padding: 20px;
 }
 .modal .modal-content .modal-header .titleColumn {
   flex: 1;
@@ -7727,8 +9078,13 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 32px;
   color: var(--white);
 }
+.modal .modal-content .modal-header .btn-close.type2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 .modal .modal-content .modal-body {
-  padding: 30px 90px 50px 50px;
+  padding: 20px;
 }
 .modal .modal-content .modal-body .customAcc .accordion-item {
   margin-bottom: 20px;
@@ -7753,13 +9109,66 @@ section .customBlockquote blockquote .fixBtn,
   align-items: stretch;
   gap: 10px;
 }
+@media screen and (max-width: 991.98px) {
+  .modal .modal-content .modal-body .checkList {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .modal .modal-content .modal-body .checkList .radioCheck {
+    min-width: calc(50% - 5px);
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal .modal-content .modal-body .checkList .radioCheck {
+    max-width: initial;
+    width: 100%;
+  }
+}
+.modal .modal-content .modal-footer {
+  padding: 20px;
+}
+.modal .customAcc .accordion-item .accordion-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.modal .customAcc .accordion-item .accordion-button {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.modal .customAcc .accordion-item .accordion-button:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .boatInformation {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+@media screen and (max-width: 640px) {
+  .modal .boatInformation {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+.modal .boatInformation > div {
+  width: calc(50% - 15px);
+}
+@media screen and (max-width: 640px) {
+  .modal .boatInformation > div {
+    width: 100%;
+  }
+}
 
 .propList .listItem .title {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: "GilroyMedium";
-  margin-bottom: 20px;
-  margin-top: 30px;
+  font-size: 20px;
+  color: var(--text);
+  line-height: 28px;
+  font-family: "GilroySemibold";
+  box-shadow: none;
+  padding: 20px 0 20px 0;
 }
 
 .rangesliderWrapper .valueTop {
@@ -7782,8 +9191,14 @@ section .customBlockquote blockquote .fixBtn,
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 480px) {
+  .rangesliderWrapper .rangeInput {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
 .rangesliderWrapper .rangeInput input {
-  border: 1px solid var(--text);
+  border: 1px solid var(--gray-5);
   border-radius: 6px;
   height: 50px;
   width: 40%;
@@ -7793,6 +9208,16 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--text);
   line-height: 24px;
   font-family: "GilroyMedium";
+}
+@media screen and (max-width: 991.98px) {
+  .rangesliderWrapper .rangeInput input {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rangesliderWrapper .rangeInput input {
+    width: 100%;
+  }
 }
 .rangesliderWrapper .noUi-connect {
   background-color: var(--primary);
@@ -7898,6 +9323,6 @@ main {
 }
 
 hr {
-  border-top-color: var(--gray);
+  border-top-color: var(--gray-5);
   opacity: 1;
 }/*# sourceMappingURL=app.css.map */

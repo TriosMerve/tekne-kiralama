@@ -44,12 +44,15 @@ document.addEventListener("scroll", function () {
     // filterHead için fixed ve yukarı kaydırma sticky sınıfı ekleme
     if (window.scrollY > 0) {
       $(".filterHead").addClass("fixed");
+      $("header").addClass("transitionTop")
     } else {
       $(".filterHead").removeClass("fixed");
+      $("header").removeClass("transitionTop")
     }
 
     // Yukarı kaydırma sırasında filterHead'e sticky sınıfı ekleme
     if (window.scrollY < lastScrollY) {
+      $("header").removeClass("transitionTop")
       $(".filterHead").addClass("sticky");
     } else {
       $(".filterHead").removeClass("sticky");
