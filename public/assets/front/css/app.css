@@ -603,6 +603,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-primary.disabled:after {
   display: none;
@@ -648,6 +649,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-secondary.disabled:after {
   display: none;
@@ -693,6 +695,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-gray.disabled:after {
   display: none;
@@ -738,6 +741,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-gray-3.disabled:after {
   display: none;
@@ -783,6 +787,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-gray-6.disabled:after {
   display: none;
@@ -828,6 +833,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-gray-7.disabled:after {
   display: none;
@@ -873,6 +879,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-dark.disabled:after {
   display: none;
@@ -918,6 +925,7 @@ video {
   border-color: var(--gray-2) !important;
   background-color: var(--gray-2) !important;
   color: var(--gray-5) !important;
+  pointer-events: none;
 }
 .button-light.disabled:after {
   display: none;
@@ -1474,6 +1482,7 @@ video {
   height: 50px;
   border: 1px solid #bfbfbf;
   border-radius: 10px;
+  overflow: hidden;
 }
 .formSelectWrapper .customSelect:after {
   border: none;
@@ -1482,6 +1491,9 @@ video {
   outline: 0 !important;
   box-shadow: none !important;
 }
+.formSelectWrapper .customSelect.open {
+  overflow: visible;
+}
 .formSelectWrapper .customSelect.open .list {
   width: 100%;
   max-height: 150px;
@@ -1489,6 +1501,11 @@ video {
   border-radius: 10px;
   box-shadow: 0 3px 20px -7px rgb(0, 0, 0);
   border: 1px solid var(--gray-5);
+}
+
+.currencly {
+  font-family: sans-serif;
+  font-weight: 600;
 }
 
 .preloader {
@@ -3002,6 +3019,7 @@ footer .customTabContents .listItems .item .boatName {
   .container-check.button.type2 {
     min-width: calc(50% - 5px);
     max-width: 50%;
+    height: 60px;
   }
 }
 .container-check.button input:checked ~ .checkmark {
@@ -3934,6 +3952,38 @@ footer .customTabContents .listItems .item .boatName {
   display: none;
 }
 
+.offerNavTabs {
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.offerNavTabs .nav-link {
+  font-family: "GilroyMedium";
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--gray-5);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  transition: all 0.3s linear;
+  padding: 4px 0;
+}
+.offerNavTabs .nav-link.active {
+  color: var(--gray-6);
+}
+@media screen and (min-width: 992px) {
+  .offerNavTabs .nav-link:hover {
+    color: var(--gray-6);
+  }
+}
+
+.offertabContents .tab-pane {
+  position: relative;
+}
+
 .customAcc .accordion-item {
   margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0);
@@ -3947,6 +3997,8 @@ footer .customTabContents .listItems .item .boatName {
   font-family: "GilroySemibold";
   box-shadow: none;
   padding-left: 0;
+  overflow: hidden;
+  align-items: flex-start;
 }
 @media screen and (max-width: 991.98px) {
   .customAcc .accordion-item .accordion-button {
@@ -3959,6 +4011,12 @@ footer .customTabContents .listItems .item .boatName {
   transform: rotate(90deg);
   font-family: "customFont";
   background-image: none;
+  margin-top: 4px;
+  transform-origin: center;
+  display: flex;
+  width: 15px;
+  align-items: center;
+  justify-content: center;
 }
 .customAcc .accordion-item .accordion-button:focus {
   border: none;
@@ -4019,6 +4077,13 @@ footer .customTabContents .listItems .item .boatName {
 .customAcc .accordion-item .accordion-body code {
   color: var(--primary);
   font-family: "GilroyRegular";
+}
+.customAcc.type2 .accordion-item .accordion-button {
+  padding-left: 15px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.customAcc.type2 .accordion-item .accordion-body {
+  padding-left: 15px;
 }
 
 .pageContent .customAcc .accordion-item .accordion-button {
@@ -4961,9 +5026,21 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 18px;
   line-height: 30px;
 }
+@media screen and (max-width: 991.98px) {
+  .paragraph.type2 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 .paragraph.type2 ul li {
   font-size: 18px;
   line-height: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .paragraph.type2 ul li {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .socialShareWrapper {
@@ -5061,7 +5138,7 @@ section .customBlockquote blockquote .fixBtn,
 .twiceColumn .dateColumnWrapper .dateInputs {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1366px) {
   .twiceColumn .dateColumnWrapper .dateInputs {
     margin-bottom: 16px;
   }
@@ -5407,7 +5484,7 @@ section .customBlockquote blockquote .fixBtn,
     font-size: 18px;
     line-height: 25px;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 .subContent .otherProperties .caption:after {
@@ -5726,6 +5803,11 @@ section .customBlockquote blockquote .fixBtn,
     height: 400px;
   }
 }
+.map img {
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .colCustomGroup {
   gap: 30px;
@@ -5926,11 +6008,11 @@ section .customBlockquote blockquote .fixBtn,
 .placesVisit .placesVisitList a:after {
   content: "";
   width: 100%;
-  border-bottom: 1px solid var(--primary);
   position: absolute;
   left: 0;
   bottom: -3px;
   transition: all 0.3s linear;
+  border-bottom: 1px solid var(--gray-5);
 }
 @media screen and (min-width: 992px) {
   .placesVisit .placesVisitList a:hover {
@@ -5953,6 +6035,13 @@ section .customBlockquote blockquote .fixBtn,
   .pointWrapper {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .pointWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .pointWrapper .title {
@@ -6205,6 +6294,20 @@ section .customBlockquote blockquote .fixBtn,
     width: 100%;
   }
 }
+.fixedColumn .boatType {
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .fixedColumn .boatType {
+    position: absolute;
+    left: 17px;
+    top: 0;
+    z-index: -1;
+    height: 50px;
+    padding-bottom: 0;
+  }
+}
 .fixedColumn.show {
   position: fixed !important;
   top: 100px;
@@ -6260,6 +6363,7 @@ section .customBlockquote blockquote .fixBtn,
   padding-bottom: 30px;
   background-color: var(--white);
   box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+  padding-top: 40px;
 }
 .fixedColumn .dateColumnWrapper.fixed.selected .dateInputs {
   opacity: 1;
@@ -6280,6 +6384,11 @@ section .customBlockquote blockquote .fixBtn,
     padding-top: 30px !important;
     top: auto !important;
     bottom: calc(100% - 55px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .fixedColumn.selected .boatType {
+    z-index: 99;
   }
 }
 
@@ -6329,16 +6438,24 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 7px;
 }
 
-.date-picker-wrapper {
+.homeSection .date-picker-wrapper {
   position: relative !important;
   width: 100% !important;
   top: -20px !important;
   left: 0 !important;
-  background: var(--white);
-  padding: 95px 0 45px 0;
-  border-radius: 10px 10px 25px 25px;
   border: none;
   box-shadow: none;
+}
+@media screen and (max-width: 1366px) {
+  .homeSection .date-picker-wrapper {
+    top: 5px !important;
+  }
+}
+
+.date-picker-wrapper {
+  padding: 95px 0 45px 0;
+  border-radius: 10px 10px 25px 25px;
+  background: var(--white);
 }
 @media screen and (max-width: 991.98px) {
   .date-picker-wrapper {
@@ -6632,6 +6749,170 @@ section .customBlockquote blockquote .fixBtn,
     margin: 0 auto;
   }
 }
+.date-picker-wrapper.single-date {
+  width: 500px !important;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991.98px) {
+  .date-picker-wrapper.single-date {
+    width: auto !important;
+  }
+}
+.date-picker-wrapper.single-date .month-wrapper table {
+  margin: 0 auto;
+  float: none;
+}
+
+.boatType {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto 0;
+  justify-content: center;
+}
+@media screen and (max-width: 991.98px) {
+  .boatType {
+    width: calc(100% - 70px);
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 0;
+    height: 36px;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+}
+.boatType button {
+  font-family: "GilroyMedium";
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--gray-5);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+@media screen and (max-width: 991.98px) {
+  .boatType button {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.boatType button.active {
+  color: var(--gray-6);
+}
+@media screen and (min-width: 992px) {
+  .boatType button:hover {
+    color: var(--gray-6);
+  }
+}
+
+.chooseHourWrapper {
+  display: none;
+  align-items: stretch;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  width: 340px;
+  gap: 10px;
+}
+.chooseHourWrapper.active {
+  display: flex !important;
+}
+.chooseHourWrapper .formSelectWrapper {
+  position: relative;
+  width: calc(50% - 4px) !important;
+}
+.chooseHourWrapper .formSelectWrapper .selectLabel {
+  position: absolute;
+  z-index: 1;
+  font-family: "GilroySemibold";
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--text);
+  left: 11px;
+  top: 11px;
+}
+@media screen and (max-width: 1366px) {
+  .chooseHourWrapper .formSelectWrapper .selectLabel {
+    top: 8px;
+  }
+}
+.chooseHourWrapper .formSelectWrapper .customSelect {
+  padding-top: 20px;
+  padding-left: 11px;
+  height: 60px;
+  background-color: var(--gray);
+  border: 1px solid var(--gray-3);
+}
+@media screen and (max-width: 1366px) {
+  .chooseHourWrapper .formSelectWrapper .customSelect {
+    height: 45px;
+    padding-top: 10px;
+  }
+}
+.chooseHourWrapper .formSelectWrapper .nice-select .current {
+  color: #878787;
+}
+.chooseHourWrapper .formSelectWrapper .nice-select:after {
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  width: 8px;
+  height: 8px;
+  top: auto;
+  margin-top: 0;
+  bottom: 15px;
+}
+@media screen and (max-width: 1366px) {
+  .chooseHourWrapper .formSelectWrapper .nice-select:after {
+    bottom: 10px;
+  }
+}
+.chooseHourWrapper .formSelectWrapper .nice-select .list {
+  border: 1px solid var(--gray-3) !important;
+  margin-top: -7px !important;
+  background: var(--gray);
+  border-top: none !important;
+  width: calc(100% + 2px) !important;
+  margin-left: -1px;
+}
+.chooseHourWrapper .formSelectWrapper .nice-select .option {
+  width: 100% !important;
+  position: relative;
+  font-size: 14px;
+  font-family: "GilroyMedium";
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 11px;
+}
+.chooseHourWrapper .formSelectWrapper .nice-select .option.selected {
+  font-weight: initial;
+  font-family: "GilroyMedium";
+  color: var(--primary);
+}
+.chooseHourWrapper .formSelectWrapper .nice-select .option.focus {
+  background-color: rgba(0, 0, 0, 0);
+}
+.chooseHourWrapper .formSelectWrapper .nice-select .option.selected.focus {
+  background-color: rgba(0, 0, 0, 0);
+}
+@media screen and (min-width: 992px) {
+  .chooseHourWrapper .formSelectWrapper .nice-select .option:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--primary);
+  }
+}
+.chooseHourWrapper .formSelectWrapper.disabled {
+  cursor: no-drop !important;
+}
+.chooseHourWrapper .formSelectWrapper.disabled .selectLabel {
+  color: var(--gray-5);
+}
+.chooseHourWrapper .formSelectWrapper.disabled .customSelect {
+  cursor: no-drop;
+}
+.chooseHourWrapper .formSelectWrapper.disabled .nice-select .current {
+  color: var(--gray-5);
+}
 
 .calendarWrapper {
   min-height: 170px;
@@ -6655,7 +6936,7 @@ section .customBlockquote blockquote .fixBtn,
     background-color: var(--white);
     width: 100%;
     height: 100%;
-    z-index: 99;
+    z-index: 999;
     top: 0;
     padding-top: 50px;
     left: 100%;
@@ -6664,47 +6945,6 @@ section .customBlockquote blockquote .fixBtn,
     visibility: hidden;
     overflow: hidden;
     margin-top: 0;
-  }
-}
-.calendarWrapper .boatType {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin: 0 auto 0;
-  justify-content: center;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .boatType {
-    width: calc(100% - 70px);
-    margin-left: auto;
-    margin-right: 20px;
-    margin-top: 0;
-    height: 36px;
-    gap: 20px;
-    justify-content: flex-end;
-  }
-}
-.calendarWrapper .boatType button {
-  font-family: "GilroyMedium";
-  font-size: 16px;
-  line-height: 25px;
-  color: var(--gray-5);
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .boatType button {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-.calendarWrapper .boatType button.active {
-  color: var(--gray-6);
-}
-@media screen and (min-width: 992px) {
-  .calendarWrapper .boatType button:hover {
-    color: var(--gray-6);
   }
 }
 .calendarWrapper .reservation-type {
@@ -6751,6 +6991,11 @@ section .customBlockquote blockquote .fixBtn,
   transition: all 0.3s linear;
   padding: 20px;
   position: relative;
+}
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .dateTimeSearchWrapper {
+    gap: 10px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .calendarWrapper .dateTimeSearchWrapper {
@@ -6895,6 +7140,16 @@ section .customBlockquote blockquote .fixBtn,
   max-height: 200px;
   overflow-y: auto;
 }
+@media screen and (max-width: 1366px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .list {
+    width: 220%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .list {
+    width: 260%;
+  }
+}
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .list::-webkit-scrollbar {
   width: 4px;
 }
@@ -6914,18 +7169,12 @@ section .customBlockquote blockquote .fixBtn,
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option {
   position: relative;
-  padding-left: 33px;
   font-size: 14px;
   font-family: "GilroyMedium";
   border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
   padding-top: 5px;
   padding-bottom: 5px;
-  width: calc(33.3% - 15px);
-}
-@media screen and (max-width: 991.98px) {
-  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option {
-    width: 100%;
-  }
+  padding-left: 11px;
 }
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option.selected {
   font-weight: initial;
@@ -6938,7 +7187,22 @@ section .customBlockquote blockquote .fixBtn,
 .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option.selected.focus {
   background-color: rgba(0, 0, 0, 0);
 }
-.calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option:before {
+@media screen and (min-width: 992px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--primary);
+  }
+}
+.calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select.locationSelect .option {
+  padding-left: 33px;
+  width: calc(33.3% - 15px);
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select.locationSelect .option {
+    width: 100%;
+  }
+}
+.calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select.locationSelect .option:before {
   content: "\e91a";
   font-family: "customFont";
   font-size: 20px;
@@ -6948,12 +7212,6 @@ section .customBlockquote blockquote .fixBtn,
   top: 50%;
   transform: translateY(-50%);
   color: var(--gray-6);
-}
-@media screen and (min-width: 992px) {
-  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .nice-select .option:hover {
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--primary);
-  }
 }
 @media screen and (min-width: 992px) {
   .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper:hover .form-select {
@@ -7008,6 +7266,13 @@ section .customBlockquote blockquote .fixBtn,
 }
 .calendarWrapper .dateTimeSearchWrapper.active .formSelectWrapper {
   width: calc(46% - 62px);
+  flex: none;
+}
+@media screen and (max-width: 1200px) {
+  .calendarWrapper .dateTimeSearchWrapper.active .formSelectWrapper {
+    flex: none;
+    width: calc(40% - 62px);
+  }
 }
 @media screen and (max-width: 991.98px) {
   .calendarWrapper .dateTimeSearchWrapper.active .formSelectWrapper {
@@ -7171,7 +7436,7 @@ section .customBlockquote blockquote .fixBtn,
     flex: 1;
     min-height: 90px;
     height: 90px;
-    max-width: 900px;
+    max-width: 950px;
   }
 }
 @media screen and (min-width: 992px) and (max-height: 768px) {
@@ -7200,9 +7465,18 @@ section .customBlockquote blockquote .fixBtn,
     height: 100%;
   }
 }
+.calendarWrapper.type2 .dateTimeSearchWrapper .formSelectWrapper {
+  width: calc(40% - 68px);
+}
 @media screen and (max-width: 1366px) and (min-width: 992px) {
   .calendarWrapper.type2 .dateTimeSearchWrapper .formSelectWrapper {
     width: calc(50% - 68px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2 .dateTimeSearchWrapper .formSelectWrapper {
+    width: auto !important;
+    flex: 1;
   }
 }
 .calendarWrapper.type2 .dateTimeSearchWrapper .formSelectWrapper label {
@@ -7213,6 +7487,17 @@ section .customBlockquote blockquote .fixBtn,
 .calendarWrapper.type2 .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
   color: #878787;
 }
+.calendarWrapper.type2 .dateTimeSearchWrapper .dateInputWrapper {
+  width: calc(60% - 68px);
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2 .dateTimeSearchWrapper .dateInputWrapper {
+    width: 100%;
+  }
+}
+.calendarWrapper.type2 .dateTimeSearchWrapper.active {
+  min-height: 350px;
+}
 @media screen and (min-width: 992px) {
   .calendarWrapper.type2 .dateTimeSearchWrapper.active {
     width: 100%;
@@ -7222,6 +7507,61 @@ section .customBlockquote blockquote .fixBtn,
   }
   .calendarWrapper.type2 .dateTimeSearchWrapper.active .dateInputWrapper {
     width: calc(50% - 68px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2 .dateTimeSearchWrapper.active .dateInputWrapper {
+    height: auto;
+  }
+}
+.calendarWrapper.type2 .date-picker-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  top: -20px !important;
+  left: 0 !important;
+  border: none;
+  box-shadow: none;
+}
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper {
+  display: flex;
+  gap: 20px;
+}
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs {
+  min-width: 130px;
+  max-width: initial;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs {
+    height: auto;
+    flex-direction: column;
+  }
+}
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkInText,
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkinInput,
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkInText2,
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkinInput2 {
+  width: 40%;
+  max-width: initial;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkInText,
+  .calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkinInput,
+  .calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkInText2,
+  .calendarWrapper.type2.singleDateWrapper .dateInputWrapper .dateInputs .checkinInput2 {
+    width: 100%;
+    max-width: initial;
+  }
+}
+.calendarWrapper.type2.singleDateWrapper .dateInputWrapper .chooseHourWrapper {
+  width: auto;
+  flex: 1;
+  position: relative;
+  gap: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.type2.singleDateWrapper .dateInputWrapper .chooseHourWrapper {
+    height: 45px;
+    width: 100%;
   }
 }
 .calendarWrapper.type2 #dateInputs #checkOutText:after,
@@ -7370,7 +7710,70 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0);
 }
-
+.calendarWrapper.singleDateWrapper .checkOutText,
+.calendarWrapper.singleDateWrapper .checkoutInput {
+  display: none;
+}
+.calendarWrapper.singleDateWrapper .date-picker-wrapper {
+  padding-top: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.singleDateWrapper .date-picker-wrapper {
+    top: 0 !important;
+  }
+}
+.calendarWrapper.singleDateWrapper .date-picker-wrapper .month-wrapper table {
+  float: none;
+  margin: 0 auto;
+}
+.calendarWrapper.singleDateWrapper .date-picker-wrapper .footer {
+  display: none;
+}
+.calendarWrapper.singleDateWrapper .dateTimeSearchWrapper.active .dateInputWrapper {
+  width: auto;
+  flex: 1;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.singleDateWrapper .dateTimeSearchWrapper.active .dateInputWrapper {
+    height: auto;
+  }
+}
+.calendarWrapper.singleDateWrapper .dateInputs {
+  gap: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.singleDateWrapper .dateInputs {
+    height: auto;
+    flex-direction: column;
+  }
+}
+.calendarWrapper.singleDateWrapper .dateInputs .checkInText,
+.calendarWrapper.singleDateWrapper .dateInputs .checkinInput,
+.calendarWrapper.singleDateWrapper .dateInputs .checkInText2,
+.calendarWrapper.singleDateWrapper .dateInputs .checkinInput2 {
+  width: 40%;
+  max-width: 100px;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.singleDateWrapper .dateInputs .checkInText,
+  .calendarWrapper.singleDateWrapper .dateInputs .checkinInput,
+  .calendarWrapper.singleDateWrapper .dateInputs .checkInText2,
+  .calendarWrapper.singleDateWrapper .dateInputs .checkinInput2 {
+    width: 100%;
+    max-width: initial;
+  }
+}
+.calendarWrapper.singleDateWrapper .dateInputs .chooseHourWrapper {
+  width: auto;
+  flex: 1;
+  position: relative;
+}
+@media screen and (max-width: 991.98px) {
+  .calendarWrapper.singleDateWrapper .dateInputs .chooseHourWrapper {
+    height: 45px;
+    width: 100%;
+  }
+}
 .calendarResult {
   display: flex;
   align-items: center;
@@ -7488,9 +7891,11 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 1366px) {
   .dateInputs {
     height: 45px;
+    gap: 10px;
   }
 }
-.dateInputs .checkinInput {
+.dateInputs .checkinInput,
+.dateInputs .checkinInput2 {
   width: 50%;
   border-radius: 10px;
   height: 60px;
@@ -7502,21 +7907,25 @@ section .customBlockquote blockquote .fixBtn,
   color: #878787;
 }
 @media screen and (max-height: 768px) {
-  .dateInputs .checkinInput {
+  .dateInputs .checkinInput,
+  .dateInputs .checkinInput2 {
     height: 45px;
   }
 }
 @media screen and (max-width: 1366px) {
-  .dateInputs .checkinInput {
+  .dateInputs .checkinInput,
+  .dateInputs .checkinInput2 {
     height: 45px;
   }
 }
-.dateInputs .checkinInput.selected {
+.dateInputs .checkinInput.selected,
+.dateInputs .checkinInput2.selected {
   border-radius: 10px 50px 50px 10px;
   background-color: var(--black);
   color: var(--white);
 }
-.dateInputs .checkinInput.selected .name {
+.dateInputs .checkinInput.selected .name,
+.dateInputs .checkinInput2.selected .name {
   color: var(--white);
 }
 .dateInputs .checkoutInput {
@@ -7549,7 +7958,9 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--white);
 }
 .dateInputs .checkInText .name,
-.dateInputs .checkOutText .name {
+.dateInputs .checkOutText .name,
+.dateInputs .checkInText2 .name,
+.dateInputs .checkinInput2 .name {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -7557,11 +7968,14 @@ section .customBlockquote blockquote .fixBtn,
 }
 @media screen and (max-width: 991.98px) {
   .dateInputs .checkInText .name,
-  .dateInputs .checkOutText .name {
+  .dateInputs .checkOutText .name,
+  .dateInputs .checkInText2 .name,
+  .dateInputs .checkinInput2 .name {
     top: 6px;
   }
 }
-.dateInputs .checkInText {
+.dateInputs .checkInText,
+.dateInputs .checkInText2 {
   position: absolute;
   width: calc(50% - 10px);
   left: 0;
@@ -7577,26 +7991,31 @@ section .customBlockquote blockquote .fixBtn,
   cursor: pointer;
 }
 @media screen and (max-height: 768px) {
-  .dateInputs .checkInText {
+  .dateInputs .checkInText,
+  .dateInputs .checkInText2 {
     height: 45px;
   }
 }
 @media screen and (max-width: 1366px) {
-  .dateInputs .checkInText {
+  .dateInputs .checkInText,
+  .dateInputs .checkInText2 {
     height: 45px;
   }
 }
-.dateInputs .checkInText .name {
+.dateInputs .checkInText .name,
+.dateInputs .checkInText2 .name {
   font-family: "GilroySemibold";
   text-transform: uppercase;
   font-size: 11px;
 }
-.dateInputs .checkInText.selected {
+.dateInputs .checkInText.selected,
+.dateInputs .checkInText2.selected {
   border-radius: 10px 50px 50px 10px;
   background-color: var(--black);
   color: var(--white);
 }
-.dateInputs .checkInText.selected .name {
+.dateInputs .checkInText.selected .name,
+.dateInputs .checkInText2.selected .name {
   color: var(--white);
 }
 .dateInputs .checkOutText {
@@ -7657,6 +8076,70 @@ section .customBlockquote blockquote .fixBtn,
     left: auto !important;
     right: 0 !important;
   }
+}
+@media screen and (min-width: 992px) {
+  .dateColumnWrapper .date-picker-wrapper.single-date {
+    width: 350px !important;
+    right: auto !important;
+  }
+}
+.dateColumnWrapper .dateInputs.singleInputs {
+  flex-direction: column;
+  height: auto;
+}
+.dateColumnWrapper .dateInputs.singleInputs .checkOutText,
+.dateColumnWrapper .dateInputs.singleInputs .checkoutInput {
+  display: none;
+}
+.dateColumnWrapper .dateInputs.singleInputs .checkinInput,
+.dateColumnWrapper .dateInputs.singleInputs .checkinInput2 {
+  width: 100%;
+}
+.dateColumnWrapper .dateInputs.singleInputs .chooseHourWrapper {
+  width: auto;
+  flex: 1;
+  position: relative;
+  gap: 20px;
+}
+.dateColumnWrapper.singleDateWrapper .chooseHourWrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1366px) {
+  .dateColumnWrapper.singleDateWrapper .chooseHourWrapper {
+    margin-bottom: 16px;
+  }
+}
+.dateColumnWrapper.singleDateWrapper .chooseHourWrapper .formSelectWrapper .customSelect {
+  background-color: var(--gray);
+  border: 1px solid var(--gray-3);
+  height: 60px;
+}
+@media screen and (max-width: 1366px) {
+  .dateColumnWrapper.singleDateWrapper .chooseHourWrapper .formSelectWrapper .customSelect {
+    height: 45px;
+  }
+}
+.dateColumnWrapper.singleDateWrapper .chooseHourWrapper .formSelectWrapper .nice-select:after {
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  width: 8px;
+  height: 8px;
+  top: auto;
+  margin-top: 0;
+  bottom: 15px;
+}
+.dateColumnWrapper.singleDateWrapper .chooseHourWrapper .formSelectWrapper .nice-select .current {
+  color: #878787;
+}
+
+.offerCanvas .date-picker-wrapper {
+  width: 700px !important;
+  left: auto !important;
+  top: 185px !important;
+  right: 30px !important;
 }
 
 .videoCardFull {
@@ -8587,8 +9070,7 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 420px) {
   .bannerSlider .bannerItem .desc {
     max-width: 60%;
-    padding: 20px 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 10px;
   }
 }
 .bannerSlider .bannerItem .desc .category {
@@ -9104,6 +9586,9 @@ section .customBlockquote blockquote .fixBtn,
   box-shadow: none;
   padding: 20px 15px;
 }
+.modal .modal-content .modal-body .customAcc .accordion-item .accordion-button.collapsed {
+  background-color: rgba(0, 0, 0, 0.03);
+}
 .modal .modal-content .modal-body .checkList {
   display: flex;
   align-items: stretch;
@@ -9128,6 +9613,18 @@ section .customBlockquote blockquote .fixBtn,
 }
 .modal .modal-content .modal-footer {
   padding: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .modal .modal-content .modal-footer .fixBtn {
+    height: 50px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .modal .modal-content .modal-footer .textLink {
+    font-size: 15px;
+    margin-top: 0;
+  }
 }
 .modal .customAcc .accordion-item .accordion-body {
   padding-left: 16px;
@@ -9182,6 +9679,9 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 24px;
   font-family: "GilroyMedium";
 }
+.rangesliderWrapper .valueTop span.priceIcon {
+  font-size: 14px;
+}
 .rangesliderWrapper #rangeSlider {
   margin: 20px auto;
   width: calc(100% - 30px);
@@ -9202,7 +9702,7 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 6px;
   height: 50px;
   width: 40%;
-  padding-left: 16px;
+  padding-left: 30px;
   padding-right: 16px;
   font-size: 18px;
   color: var(--text);
@@ -9218,6 +9718,17 @@ section .customBlockquote blockquote .fixBtn,
   .rangesliderWrapper .rangeInput input {
     width: 100%;
   }
+}
+.rangesliderWrapper .rangeInput .sliderInputWrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+.rangesliderWrapper .rangeInput .priceIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
 }
 .rangesliderWrapper .noUi-connect {
   background-color: var(--primary);
@@ -9269,6 +9780,13 @@ section .customBlockquote blockquote .fixBtn,
   transition: all 0.3s linear;
   border-radius: 0;
 }
+@media screen and (max-width: 991.98px) {
+  .f-button {
+    width: 45px;
+    height: 45px;
+    top: -45px !important;
+  }
+}
 .f-button svg {
   display: none;
 }
@@ -9312,6 +9830,227 @@ section .customBlockquote blockquote .fixBtn,
   padding-top: 50px;
 }
 
+.offerCanvas {
+  --bs-offcanvas-width: 550px;
+}
+.offerCanvas .offcanvas-title {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--primary);
+  font-family: "GilroyBold";
+}
+.offerCanvas .btn-close {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0;
+  box-shadow: none;
+  opacity: 1;
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: all 0.3s linear;
+}
+.offerCanvas .btn-close:after {
+  content: "\e922";
+  font-family: "customFont";
+  font-size: 20px;
+  color: var(--white);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 991.98px) {
+  .offerCanvas .btn-close:hover {
+    background-color: var(--white);
+  }
+  .offerCanvas .btn-close:hover:after {
+    color: var(--primary);
+  }
+}
+.offerCanvas .countPrice {
+  border: 1px solid rgba(170, 170, 170, 0.5);
+  border-radius: 10px;
+  font-family: "GilroySemibold";
+  font-size: 16px;
+  color: var(--primary);
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -56px;
+  left: 200px;
+  gap: 5px;
+}
+.offerCanvas .offcanvas-header {
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+}
+.offerCanvas .offcanvas-body {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.offerCanvas .offcanvas-body::-webkit-scrollbar {
+  background-color: rgba(217, 4, 62, 0.4);
+  width: 4px;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+}
+.offerCanvas .offcanvas-body::-webkit-scrollbar-thumb {
+  background-color: var(--gray-4);
+  width: 4px;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  /* Chrome, Safari, Edge ve Opera için */
+}
+.offerCanvas .offcanvas-body::-webkit-scrollbar-track {
+  background-color: rgba(217, 4, 62, 0.4);
+  width: 4px;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  /* Chrome, Safari, Edge ve Opera için */
+}
+.offerCanvas .dateInputs .checkinInput,
+.offerCanvas .dateInputs .checkinInput2,
+.offerCanvas .dateInputs .checkoutInput,
+.offerCanvas .dateInputs .checkoutInput2 {
+  padding-left: 20px;
+}
+.offerCanvas .dateInputs .checkInText .name,
+.offerCanvas .dateInputs .checkOutText .name,
+.offerCanvas .dateInputs .checkInText2 .name {
+  left: 20px;
+}
+.offerCanvas .offerBody {
+  padding-bottom: 50px;
+}
+.offerCanvas .offerBody hr {
+  margin: 5px 0;
+}
+.offerCanvas .offerBody .header {
+  display: flex;
+  align-items: center;
+}
+.offerCanvas .offerBody .header .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.offerCanvas .offerBody .header .info .pointWrapper {
+  margin-left: 0;
+  flex-direction: row;
+}
+.offerCanvas .offerBody .header .infoImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.offerCanvas .offerBody .offerSendButton {
+  width: 80%;
+  margin-bottom: 10px;
+}
+.offerCanvas .offerBody .offer-req-note {
+  color: var(--primary);
+  font-family: "GilroyMedium";
+  font-size: 14px;
+  line-height: 20px;
+}
+.offerCanvas .offerBody .offerDateInfo {
+  padding: 10px 0;
+}
+.offerCanvas .offerBody .offerDateInfo .checkInfo {
+  font-size: 12px;
+  font-family: "GilroyMedium";
+  color: #606060;
+  margin-top: 6px;
+  padding-left: 20px;
+}
+.offerCanvas .offerBody .offer-prices-list {
+  border: 1px solid var(--gray-5);
+  border-radius: 10px;
+  padding: 20px;
+}
+.offerCanvas .offerBody .offer-prices-list .item {
+  font-family: "GilroySemibold";
+  font-size: 15px;
+  color: var(--primary);
+  padding: 5px 0;
+}
+.offerCanvas .offerBody .offer-prices-list .item .title {
+  color: #434343;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.offerCanvas .offerBody .offer-prices-list .item .title .icon-info {
+  font-size: 19px;
+  color: var(--primary);
+  margin-left: 7px;
+}
+.offerCanvas .offerBody .offer-prices-list .item p {
+  color: #434343;
+  font-family: "GilroyMedium";
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 10px;
+}
+.offerCanvas .offerBody .offer-modal-message {
+  border: 1px solid var(--gray-5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+}
+.offerCanvas .offerBody .offer-modal-message p {
+  color: #434343;
+  font-family: "GilroyMedium";
+  font-size: 13px;
+  line-height: 19px;
+}
+.offerCanvas .offerBody .offer-modal-message .message-title {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.offerCanvas .offerBody .offer-modal-message textarea {
+  border: 1px solid var(--gray-5);
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 10px;
+  font-family: "GilroyMedium";
+  font-size: 14px;
+  line-height: 22px;
+  color: #434343;
+  margin: 10px auto 0;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--primary);
+  --bs-tooltip-max-width:300px;
+  --bs-tooltip-padding-y:10px;
+  --bs-tooltip-padding-x:20px;
+  opacity: 1 !important;
+  font-size: 12px !important;
+  font-family: "GilroyMedium";
+  line-height: 17px !important;
+}
+
+.changeDateButton.dateInputs .checkInText {
+  cursor: pointer !important;
+}
+
 #app {
   min-height: 100vh;
   width: 100%;
@@ -9325,4 +10064,4 @@ main {
 hr {
   border-top-color: var(--gray-5);
   opacity: 1;
-}/*# sourceMappingURL=app.css.map */
+}

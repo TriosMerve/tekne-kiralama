@@ -837,10 +837,18 @@ section,
   &.type2 {
     font-size: 18px;
     line-height: 30px;
+    @media screen and (max-width: 991.98px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
     ul {
       li {
         font-size: 18px;
         line-height: 30px;
+        @media screen and (max-width: 991.98px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
     }
   }
@@ -926,7 +934,7 @@ section,
     }
     .dateInputs {
       margin-bottom: 30px;
-      @media screen and (max-width: 991.98px) {
+      @media screen and (max-width: 1366px) {
         margin-bottom: 16px;
       }
     }
@@ -1227,7 +1235,7 @@ section,
         font-size: 18px;
         line-height: 25px;
         margin-top: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       &:after {
         content: "";
@@ -1526,6 +1534,10 @@ section,
   @media screen and (max-width: 991.98px) {
     height: 400px;
   }
+  img{
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
 .colCustomGroup {
   gap: 30px;
@@ -1712,11 +1724,12 @@ section,
       &:after{
         content: "";
         width: 100%;
-        border-bottom: 1px solid var(--primary);
+        // border-bottom: 1px solid var(--primary);
         position: absolute;
         left: 0;
         bottom: -3px;
         transition: all .3s linear;
+        border-bottom: 1px solid var(--gray-5);
       }
 
       @media screen and (min-width: 992px) {
@@ -1743,6 +1756,11 @@ section,
   @media screen and (max-width:1440px) {
     flex-direction: column;
     align-items: flex-start;
+  }
+  @media screen and (max-width:991.98px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .title {
     font-family: "GilroySemibold";
@@ -1973,6 +1991,18 @@ section,
   @media screen and (max-width: 991.98px) {
     width: 100%;
   }
+  .boatType{
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    @media screen and (max-width: 991.98px) {
+      position: absolute;
+      left: 17px;
+      top: 0;
+      z-index: -1;
+      height: 50px;
+      padding-bottom: 0;
+    }
+  }
   &.show {
     position: fixed !important;
     top: 100px;
@@ -2039,6 +2069,7 @@ section,
         padding-bottom: 30px;
         background-color: var(--white);
         box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+        padding-top: 40px;
         .dateInputs{
           opacity: 1;
         }
@@ -2061,6 +2092,14 @@ section,
           top: auto !important;
           bottom: calc(100% - 55px);
         }
+      }
+    }
+  }
+
+  &.selected{
+    .boatType{
+      @media screen and (max-width:991.98px) {
+        z-index: 99;
       }
     }
   }

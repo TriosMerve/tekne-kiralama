@@ -44,15 +44,15 @@ document.addEventListener("scroll", function () {
     // filterHead için fixed ve yukarı kaydırma sticky sınıfı ekleme
     if (window.scrollY > 0) {
       $(".filterHead").addClass("fixed");
-      $("header").addClass("transitionTop")
+      $("header.type2").addClass("transitionTop")
     } else {
       $(".filterHead").removeClass("fixed");
-      $("header").removeClass("transitionTop")
+      $("header.type2").removeClass("transitionTop")
     }
 
     // Yukarı kaydırma sırasında filterHead'e sticky sınıfı ekleme
     if (window.scrollY < lastScrollY) {
-      $("header").removeClass("transitionTop")
+      $("header.type2").removeClass("transitionTop")
       $(".filterHead").addClass("sticky");
     } else {
       $(".filterHead").removeClass("sticky");
@@ -256,21 +256,42 @@ document.addEventListener("click", function (e) {
   }
 });
 
-document.querySelectorAll(".customTab .nav-link").forEach((tab) => {
-  tab.addEventListener("click", function () {
-    setTimeout(() => {
-      if (this.classList.contains("active")) {
-        const container = document.querySelector(".verticalCustomScroll");
-        const offsetLeft = this.offsetLeft - container.offsetLeft;
+$(document).on("click", ".footerTab.customTab .nav-link", function () {
+  var $scrollContainer = $(".verticalCustomScroll"); // Scrollable container
+  var $activeTab = $(this); // Clicked tab
+  
+  // Tabın soldan uzaklığını hesaplayalım
+  var scrollPosition = $activeTab.position().left + $scrollContainer.scrollLeft();
 
-        container.scrollTo({
-          left: offsetLeft,
-          behavior: "smooth",
-        });
-      }
-    }, 100); // Aktif sınıfının atanmasını beklemek için kısa bir gecikme
-  });
+  // Tabın scrollContainer içinde yatay olarak ortalanması
+  var centerScrollPosition =
+      scrollPosition - $scrollContainer.width() / 2 + $activeTab.outerWidth() / 2;
+
+  // Scroll hareketi
+  $scrollContainer.animate(
+      {
+          scrollLeft: centerScrollPosition,
+      },
+      300 // Animasyon süresi (ms)
+  );
 });
+
+// document.querySelectorAll(".customTab .nav-link").forEach((tab) => {
+//   tab.addEventListener("click", function () {
+//     console.log("tıkladım")
+//     setTimeout(() => {
+//       if (this.classList.contains("active")) {
+//         const container = document.querySelector(".verticalCustomScroll");
+//         const offsetLeft = this.offsetLeft - container.offsetLeft;
+
+//         container.scrollTo({
+//           left: offsetLeft,
+//           behavior: "smooth",
+//         });
+//       }
+//     }, 100); // Aktif sınıfının atanmasını beklemek için kısa bir gecikme
+//   });
+// });
 
 
 // Akıcı kaydırma fonksiyonu

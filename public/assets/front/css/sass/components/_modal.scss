@@ -67,6 +67,9 @@
             font-family: "GilroySemibold";
             box-shadow: none;
             padding: 20px 15px;
+            &.collapsed {
+              background-color: rgba(0, 0, 0, 0.03);
+            }
           }
         }
       }
@@ -92,6 +95,19 @@
     }
     .modal-footer {
       padding: 20px;
+
+      .fixBtn {
+        @media screen and (max-width: 991.98px) {
+          height: 50px;
+          font-size: 15px;
+        }
+      }
+      .textLink {
+        @media screen and (max-width: 991.98px) {
+          font-size: 15px;
+          margin-top: 0;
+        }
+      }
     }
   }
   .customAcc {

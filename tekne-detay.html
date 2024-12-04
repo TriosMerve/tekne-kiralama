@@ -72,7 +72,7 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header" class="type2">
+        <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
@@ -607,7 +607,7 @@
                                             <div class="icon"><img src="public/assets/images/media/icon/DoubleGlazed.svg" alt=""></div>
                                             <div>
                                                 <div class="title">Giriş zamanı & Minimum kiralama süresi</div>
-                                                <p>Bu tekne <b>minimum 2 gece konaklamalı</b> olarak sunulur. Ayrıca sezon dışı veya son dakika (check-in tarihinden 14 gün önce) gece konaklamasız tam gün olarak sunulur. Sezon dışı tarihleri görmek için <a href="#">tıklayın</a></p>
+                                                <p>Bu tekne <b>minimum 2 gece konaklamalı</b> olarak sunulur. Ayrıca sezon dışı veya son dakika (check-in tarihinden 14 gün önce) gece konaklamasız tam gün olarak sunulur. Sezon dışı tarihleri görmek için</p>
                                             </div>
                                         </div>
                                         <div class="item">
@@ -1001,7 +1001,7 @@
                                     <hr class="standartLine">
                                     <h2 class="caption">Lokasyon</h2>
                                     <div class="map">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12786.788082584597!2d28.92505570118106!3d36.75384290824281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c065fa398fef15%3A0x8de56199ebeef49d!2zR8O2Y2VrLCBGZXRoaXllL011xJ9sYQ!5e0!3m2!1str!2str!4v1732008018546!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <img src="public/assets/images/media/map.jpg" alt="">
                                     </div>
                                     <div class="placesVisit">
                                         <div class="top">
@@ -1338,7 +1338,7 @@
 
                                     <hr class="standartLine">
                                     <div class="caption">Sıkça Sorulan Sorular</div>
-                                    <div class="accordion accordion-flush customAcc" id="accordionGroupOne">
+                                    <div class="accordion accordion-flush customAcc " id="accordionGroupOne">
                                         <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -1415,6 +1415,11 @@
                         </div>
                         <div class="rightColumn">
                             <div class="fixedColumn">
+                                <div class="boatType">
+                                    <button id="hiraBoat" data-id="hiraBoat" class="active typeItem shadow-md"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
+                                    <button id="toursBoat" data-id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button>
+                                </div>
+                          
                                 <div class="dateColumnWrapper">
                                     <div class="dateColumn">
                                         <div class="title">Fiyatları görmek için tarih seçiniz</div>
@@ -1423,9 +1428,37 @@
                                             <div id="checkInText2" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
                                             <div id="checkOutText2" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
                                         </div>
-                                        <span class="teklifisteButton fixBtn button-primary disabled">
+                                        <div id="dateInputs3" class="dateInputs d-none">
+                                            <input id="checkinInput2" class="checkinInput" value="">  <input id="checkoutInput2" class="checkoutInput" value=""> 
+                                            <div id="checkInText2" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
+                                            <div id="checkOutText2" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                        </div>
+                                        <div class="chooseHourWrapper detailsHour">
+                                            <div class="formSelectWrapper disabled">
+                                                <span class="selectLabel">Giriş Saati</span>
+                                                <select name="" disabled id="checkin-hour2" class="checkin-hour customSelect">
+                                                    <option value="" selected disabled >Seçiniz</option>
+                                                    <option value="">08:00</option>
+                                                    <option value="">09:00</option>
+                                                    <option value="">10:00</option>
+                                                    <option value="">11:00</option>
+                                                </select>
+                                            </div>
+                                            <div class="formSelectWrapper disabled">
+                                                <span class="selectLabel">Çıkış Saati</span>
+                                                <select name="" disabled id="checkout-hour2" class="checkout-hour customSelect">
+                                                    <option value="" selected disabled>Seçiniz</option>
+                                                    <option value="">08:00</option>
+                                                    <option value="">09:00</option>
+                                                    <option value="">10:00</option>
+                                                    <option value="">11:00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <a href="#offerCanvas" class="teklifisteButton fixBtn button-primary disabled" data-bs-toggle="offcanvas" role="button" aria-controls="offerCanvas">Teklif iste</a>
+                                        <!-- <span class="teklifisteButton fixBtn button-primary disabled">
                                             <input type="button" class="disabled" value="Teklif İste"></input>
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
                              
@@ -1478,7 +1511,7 @@
                     <div class="footerTop">
                         <div class="title">Sizin için hazırladığımız özel fikirler</div>
                         <div class="verticalCustomScroll">
-                            <ul class="nav nav-tabs customTab" id="footerTab" role="tablist">
+                            <ul class="nav nav-tabs customTab footerTab" id="footerTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
                                 </li>
@@ -1723,6 +1756,7 @@
         </div>
     </div>
 
+
     <!--Tekne Ozellikleri Modal-->
     <div class="modal fade" id="tekneOzellikleriModal" aria-hidden="true" aria-labelledby="tekneOzellikleriModalLabel" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -1816,6 +1850,187 @@
         </div>
     </div>
 
+
+
+
+    <div class="offcanvas offcanvas-end offerCanvas" data-bs-backdrop="static" tabindex="-1" id="offerCanvas" aria-labelledby="offerCanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offerCanvasLabel">FİYAT TEKLİFİ İSTE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="offerBody">
+            <nav>
+                <div class="nav nav-tabs offerNavTabs" id="offerNavTabs" role="tablist">
+                  <button class="nav-link active" data-id="hiraBoat" id="nav-teknekiralama-tab" data-bs-toggle="tab" data-bs-target="#nav-teknekiralama" type="button" role="tab" aria-controls="nav-teknekiralama" aria-selected="true"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
+                  <button class="nav-link" data-id="toursBoat" id="nav-tekneturlari-tab" data-bs-toggle="tab" data-bs-target="#nav-tekneturlari" type="button" role="tab" aria-controls="nav-tekneturlari" aria-selected="false"><span class="icon-route"></span> <span>Tekne Turları</span></button>
+                </div>
+              </nav>
+              <div class="tab-content offertabContents" id="offertabContents">
+                <div class="tab-pane fade show active" id="nav-teknekiralama" role="tabpanel" aria-labelledby="nav-teknekiralama-tab" tabindex="0">
+                    <div class="countPrice">1.700 <span class="currencly"> $ </span>  / Gün</div>
+                    <div class="offerDateInfo d-flex align-items-start">
+                        <div id="dateInputs2" class="dateInputs changeDateButton h-auto w-100">
+                            <div class="d-flex flex-column w-50">
+                                <input class="checkinInput w-100" value="">
+                                <div class="checkInText" style="cursor: default;"><span class="name">CheckIn</span><span class="choose" style="display: none;">Tarih Seç</span></div>
+                                <div class="checkInfo">Check-in Hour: 14:00</div>
+                            </div>
+                            <div class="d-flex flex-column w-50">
+                                <input class="checkoutInput w-100" value=""> 
+                                <div class="checkOutText" style="cursor: default;"><span class="name">CheckOut</span><span class="choose" style="display: none;">Tarih Seç</span></div>
+                                <div class="checkInfo">Check-out Hour: 14:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer-prices-list">
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">Kiralama Gün/Saat</div>
+                            <div class="col px-0 text-end">5 Gün</div>
+                        </div>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">Toplam Kiralama Bedeli</div>
+                            <div class="col px-0 text-end">1700 <span class="currencly">$</span></div>
+                        </div>
+                        <hr>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">
+                                <span>Depozito Bedeli</span>
+                                <div class="info">
+                                    <button type="button" class=""
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip"
+                                        data-bs-title="Ön ödeme yaparak rezervasyonunuzu kesinleştirin, kalan tutarı check-in sırasında ödeyin.">
+                                        <span class="icon-info"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col px-0 text-end">1500 <span class="currencly">$</span></div>
+                        </div>
+                        <hr>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">
+                                <span>Kalan Tutar</span>
+                                <div class="info">
+                                    <button type="button" class=""
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip"
+                                        data-bs-title="Check-in sırasında ödenecektir.">
+                                        <span class="icon-info"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col px-0 text-end">2500 <span class="currencly">$</span></div>
+                        </div>
+                    </div>
+                    <div class="offer-modal-message">
+                        <p>Fiyat, ön ödeme oranı, rota, yemek ve diğer konular hakkında sorularınızı sorun. Kişi sayınızı belirtin.</p>
+                        <div class="message-title">
+                            Mesajınız
+                        </div>
+                        <div class="message-wrapper">
+                            <textarea name="message" id="message">Merhaba,
+Fiyat ve müsaitlik durumu bilgisi alabilir miyim</textarea>
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center mt-3">
+                            <a href="#" class="fixBtn button-primary offerSendButton">Teklif Talebini İlet</a>
+                            <p class="offer-req-note">Henüz bir ücret ödemeyeceksiniz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-tekneturlari" role="tabpanel" aria-labelledby="nav-tekneturlari-tab" tabindex="0">
+                    <div class="countPrice">1.100 <span class="currencly"> $ </span>  / Saat</div>
+                    <div class="offerDateInfo d-flex align-items-start gap-3">
+                        <div id="dateInputs3" class="dateInputs changeDateButton2 h-auto w-50">
+                            <div class="d-flex flex-column w-100">
+                                <input class="checkinInput2 w-100" value="">
+                                <div class="checkInText2" style="cursor: default;"><span class="name">CheckIn</span><span class="choose" style="display: none;">Tarih Seç</span></div>
+                            </div>
+                        </div>
+                        <div class="chooseHourWrapper offerHours d-flex position-relative w-50 gap-3">
+                            <div class="formSelectWrapper">
+                                <span class="selectLabel">Giriş Saati</span>
+                                <select name="" id="checkin-hour2" class="checkin-hour checkinHourGet customSelect">
+                                    <option value="" selected disabled>Seçiniz</option>
+                                    <option value="">08:00</option>
+                                    <option value="">09:00</option>
+                                    <option value="">10:00</option>
+                                    <option value="">11:00</option>
+                                </select>
+                            </div>
+                            <div class="formSelectWrapper">
+                                <span class="selectLabel">Çıkış Saati</span>
+                                <select name="" id="checkout-hour2" class="checkout-hour checkoutHourGet customSelect">
+                                    <option value="" selected disabled>Seçiniz</option>
+                                    <option value="">08:00</option>
+                                    <option value="">09:00</option>
+                                    <option value="">10:00</option>
+                                    <option value="">11:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer-prices-list">
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">Kiralama Saat</div>
+                            <div class="col px-0 text-end">3 Saat</div>
+                        </div>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">Toplam Kiralama Bedeli</div>
+                            <div class="col px-0 text-end">1100 <span class="currencly">$</span></div>
+                        </div>
+                        <hr>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">
+                                <span>Depozito Bedeli</span>
+                                <div class="info">
+                                    <button type="button" class=""
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip"
+                                        data-bs-title="Ön ödeme yaparak rezervasyonunuzu kesinleştirin, kalan tutarı check-in sırasında ödeyin.">
+                                        <span class="icon-info"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col px-0 text-end">1100 <span class="currencly">$</span></div>
+                        </div>
+                        <hr>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title">
+                                <span>Kalan Tutar</span>
+                                <div class="info">
+                                    <button type="button" class=""
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip"
+                                        data-bs-title="Check-in sırasında ödenecektir.">
+                                        <span class="icon-info"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col px-0 text-end">2200 <span class="currencly">$</span></div>
+                        </div>
+                    </div>
+                    <div class="offer-modal-message">
+                        <p>Fiyat, ön ödeme oranı, rota, yemek ve diğer konular hakkında sorularınızı sorun. Kişi sayınızı belirtin.</p>
+                        <div class="message-title">
+                            Mesajınız
+                        </div>
+                        <div class="message-wrapper">
+                            <textarea name="message" id="message">Merhaba,
+Fiyat ve müsaitlik durumu bilgisi alabilir miyim</textarea>
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center mt-3">
+                            <a href="#" class="fixBtn button-primary offerSendButton">Teklif Talebini İlet</a>
+                            <p class="offer-req-note">Henüz bir ücret ödemeyeceksiniz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1829,140 +2044,8 @@
 
     <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script>
+    <script src="public/assets/front/js/tekne-detay.js"></script>
 
-        var headerHeight = $("header").outerHeight();
-        var staticColumn = $(".staticColumn").offset().top + $(".staticColumn").outerHeight();
-        var fixedColumn = $(".fixedColumn");
-        var fixedColumnTop = fixedColumn.offset().top;
-        var wWidth = $(window).width();
-
-        $(window).scroll(function (){
-
-            var scrollTop = $(this).scrollTop();
-            // Header yüksekliğinden +100px daha aşağı scroll yapıldığında show class'ı ekle
-            if (scrollTop > fixedColumnTop - 100) {
-                fixedColumn.addClass("show");
-            } else {
-                fixedColumn.removeClass("show");
-            }
-
-            // pageContent'in altına geldiğimizde absolute class'ı ekle
-            if (scrollTop + $(window).height() - 300 >= staticColumn) {
-                fixedColumn.addClass("absolute");
-            } else {
-                fixedColumn.removeClass("absolute");
-            }
-
-            if (isDatepickerOpen) {
-                if(wWidth < 992){
-                    if (scrollTop > fixedColumnTop - 100){
-                        $(".dateColumnWrapper").addClass("fixed selected");
-                    }
-                }
-                console.log("Datepicker açıkken sayfa scroll edildi.");
-            }
-            if(wWidth < 992){
-                if (scrollTop > fixedColumnTop - 100) {
-                    $(".dateColumnWrapper").addClass("fixed");
-                    $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
-                } else {
-                    $(".dateColumnWrapper").removeClass("fixed");
-                    $(".dateColumnWrapper .dateColumn .title").text("Fiyatları görmek için tarih seçiniz");
-                }
-             }
-        });
-        // Sadece ekran genişliği 992px'den küçükse çalışacak
-        if (wWidth < 992) {
-            var $wrapper = $(".dateColumnWrapper");
-
-            // Eğer .fixed sınıfı varsa, metni hemen değiştir
-            if ($wrapper.hasClass("fixed")) {
-                console.log("test")
-                $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
-            }
-            
-            // Tıklama olayını dinle
-            $(".dateColumnWrapper .dateColumn .title").on("click", function() {
-                var $wrapper = $(this).closest(".dateColumnWrapper");
-
-                // .fixed sınıfı eklenmişse işlem yapılacak
-                if ($wrapper.hasClass("fixed")) {
-                    // Başlangıç metni değişikliği ve selected sınıfının kontrolü
-                    if ($wrapper.hasClass("selected")) {
-                        $(this).text("Tarih Seçimini göster");
-                        $wrapper.removeClass("selected");
-                        $("html").removeClass("overflow-hidden");
-                    } else {
-                        $(this).text("Fiyatları görmek için tarih seçiniz");
-                        $wrapper.addClass("selected");
-                        $("html").addClass("overflow-hidden");
-                    }
-                }
-            });
-        }
-        $(document).on("click", function (e) {
-            var $wrapper = $(".dateColumnWrapper");
-            
-            // Tıklanan element .fixedColumn veya .dateColumnWrapper içinde değilse işlemi çalıştır
-            if (!$wrapper.is(e.target) && $wrapper.has(e.target).length === 0) {
-                // .fixed sınıfı varsa işlem yapılacak
-                if ($wrapper.hasClass("fixed") && $wrapper.hasClass("selected")) {
-                    $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
-                    $wrapper.removeClass("selected");
-                    $("html").removeClass("overflow-hidden");
-                }
-            }
-        });
-
-        /*Bu date time sadece bu sayfa icin eklenmıstır dıger sayfalarda olmasına gerek yok */
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Saat bilgisi sıfırlanır
-        let isDatepickerOpen = false;
-
-        $("#dateInputs2")
-        .dateRangePicker({
-            separator: " to ",
-            container: ".dateColumn",
-            language: "tr-short",
-            stickyMonths: true,
-            autoClose: true,
-            showShortcuts: true,
-            shortcuts: {
-            "next-days": [3, 5, 7],
-            next: ["week", "month", "year"],
-            },
-            startDate: today, // Bugün tarihini sıfırlanmış şekilde ayarla
-            selectForward: false, // Sadece ileri tarih seçimine izin ver
-
-            getValue: function () {
-            if ($("#checkinInput2").val() && $("#checkoutInput2").val())
-                return $("#checkinInput2").val() + " to " + $("#checkoutInput2").val();
-            else return "";
-            },
-            setValue: function (s, s1, s2) {
-                $("#checkinInput2").val(s1);
-                $("#checkoutInput2").val(s2);
-                $(".teklifisteButton").removeClass("disabled")
-
-            },
-        })
-        .bind("datepicker-open", function () {
-            isDatepickerOpen = true; // Açık olduğunu belirt
-            console.log("Datepicker açıldı!");
-        })
-        .bind("datepicker-close", function () {
-            isDatepickerOpen = false; // Kapandığında durumu sıfırla
-            console.log("Datepicker kapandı!");
-        });
-
-
-        //Teklif iste butonu tıklandıgında yukarı kaydırdıgı ıcın bu kod eklendı ıslem yaparken kaldırılabılır
-        $(".teklifisteButton").on("click", function(e){
-            e.preventDefault();
-        })
-
-    </script>
 </body>
 
 </html>

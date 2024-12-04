@@ -190,6 +190,7 @@
       @media screen and (max-width:991.98px) {
         min-width: calc(50% - 5px);
         max-width: 50%;
+        height: 60px;
       }
     }
     input:checked ~ .checkmark{

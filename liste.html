@@ -488,22 +488,22 @@
                                     <div class="closeCalendarButton d-lg-none"><span class="icon-close"></span></div>
                 
                                     <div class="boatType">
-                                        <button id="hiraBoat" class="active typeItem shadow-md"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
-                                        <button id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button>
+                                        <button id="hiraBoat2" data-id="hiraBoat" class="active typeItem shadow-md"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
+                                        <button id="toursBoat2" data-id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button>
                                     </div>
                             
                                 
                                     <div class="dateTimeSearchWrapper">
                                         <div class="form-floating formSelectWrapper">
                                             <select class="form-select customSelect locationSelect" id="floatingSelect" aria-label="Floating label select example">
-                                            <!-- <option selected>Nereden binmek istersin?</option> -->
-                                            <option value="1">İstanbul</option>
-                                            <option value="2">Ordu</option>
-                                            <option value="3">Trabzon</option>
-                                            <option value="4">Çanakkale</option>
-                                            <option value="5">Üsküdar</option>
-                                            <option value="6">Beşiktaş</option>
-                                            <option value="7">Büyükçekmece</option>
+                                                <!-- <option selected>Nereden binmek istersin?</option> -->
+                                                <option value="1">İstanbul</option>
+                                                <option selected value="2">Ordu</option>
+                                                <option value="3">Trabzon</option>
+                                                <option value="4">Çanakkale</option>
+                                                <option value="5">Üsküdar</option>
+                                                <option value="6">Beşiktaş</option>
+                                                <option value="7">Büyükçekmece</option>
                                             </select>
                                             <label for="floatingSelect">Şehir</label>
                                         </div>
@@ -512,6 +512,28 @@
                                                 <input id="checkinInput" class="checkinInput" value="">  <input id="checkoutInput" class="checkoutInput" value=""> 
                                                 <div id="checkInText" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
                                                 <div id="checkOutText" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                                <div class="chooseHourWrapper">
+                                                    <div class="formSelectWrapper disabled">
+                                                        <span class="selectLabel">Giriş Saati</span>
+                                                        <select name="" id="checkin-hour" disabled class="checkin-hour customSelect">
+                                                            <option value="" selected>Seçiniz</option>
+                                                            <option value="">08:00</option>
+                                                            <option value="">09:00</option>
+                                                            <option value="">10:00</option>
+                                                            <option value="">11:00</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="formSelectWrapper disabled">
+                                                        <span class="selectLabel">Çıkış Saati</span>
+                                                        <select name="" id="checkout-hour" disabled class="checkout-hour customSelect">
+                                                            <option value="" selected>Seçiniz</option>
+                                                            <option value="">08:00</option>
+                                                            <option value="">09:00</option>
+                                                            <option value="">10:00</option>
+                                                            <option value="">11:00</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
@@ -1173,75 +1195,51 @@
 
                             </div>
                             <div class="row mx-0 mt-5">
-                                <div class="accordion accordion-flush customAcc col-lg-8 px-0" id="accordionGroupOne">
+                                <div class="accordion customAcc accordion-flush" id="accordionPanelsStayOpenExample">
                                     <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                             Tekne kiralama hangi illerde yapılıyor? Tekne kiralama hangi illerde yapılıyor?
                                         </button>
-                                    </h2>
-                                    <div id="flush-collapseOne" class="accordion-collapse collapse">
+                                      </h2>
+                                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                                         <div class="accordion-body">yatkiralama.net, sadece İstanbul'da, saatlik ve günlük sürelerde yat kiralama hizmeti vermektedir.</div>
-                                    </div>
+                                      </div>
                                     </div>
                                     <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                                             En az yat kiralama süresi nedir?
                                         </button>
-                                    </h2>
-                                    <div id="flush-collapseTwo" class="accordion-collapse collapse">
+                                      </h2>
+                                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                         <div class="accordion-body">
                                             Yat kiralama süresi minimum 2 saattir. 30 dakika da kiralama yapmak isteseniz yine 2 saatlik yat kiralama ücretini ödemeniz gerekir.
                                         </div>
-                                    </div>
+                                      </div>
                                     </div>
                                     <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                                             Kiralık yatların ses sistemi var mı?
                                         </button>
-                                    </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse">
+                                      </h2>
+                                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                                         <div class="accordion-body">
                                             Evet, tüm kiralık yatların ses sistemi vardır ve kullanımları ücretsizdir. Bluetooth ile ses sistemine bağlanarak istediğiniz şarkıları cep telefonunuz üzerinden dinletebilirsiniz.
                                         </div>
-                                    </div>
+                                      </div>
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                                             Kiralanan yata yemek getirilir mi?
-                                        </button>
+                                          </button>
                                         </h2>
-                                        <div id="flush-collapseFour" class="accordion-collapse collapse">
-                                        <div class="accordion-body">
-                                            Evet, kiralık yatları menü talep etmeden kiralayıp, kendi yiyecek ve içeceklerinizi yanınızda getirebilirsiniz ancak bu durumda ekstra 1.500 TL karşılığında garson hizmeti almanız gerekecektir. Yatta yemek pişirme imkanı olmadığını bilerek getireceğiniz yiyecekleri ona göre seçmelisiniz.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                            Yat kiralama fiyatları kaç TL?
-                                        </button>
-                                        </h2>
-                                        <div id="flush-collapseFive" class="accordion-collapse collapse">
-                                        <div class="accordion-body">
-                                            İstanbul'da saatlik yat kiralama fiyatı 5.000 TL, günlük yat kiralama fiyatı 35.000 TL'den başlar.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                                            Yat kiralama süreci nasıl ilerler?
-                                        </button>
-                                        </h2>
-                                        <div id="flush-collapseSix" class="accordion-collapse collapse">
-                                        <div class="accordion-body">
-                                            Yat kiralama için şirketimize ödemeniz gereken toplam ücretin yarısını rezervasyon yaparken kaparo olarak göndermeniz gerekir. Kaparo ödemesi alınmadan rezervasyon yapılmaz. Bu nedenle elinizi çabuk tutmalı ve hızlıca ödeme yapmalısınız. Aksi halde bir başkası seçtiğiniz kiralık yatı kendi organizasyonu için rezerve edebilir. Ücretin kalan diğeri yarısı da organizasyon günü yatta nakit olarak alınacağından mutlaka yanınızda nakit bulundurun. Kredi kartı ile ödeme yapma imkanı yoktur.
-                                        </div>
+                                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                          <div class="accordion-body">
+                                                Evet, kiralık yatları menü talep etmeden kiralayıp, kendi yiyecek ve içeceklerinizi yanınızda getirebilirsiniz ancak bu durumda ekstra 1.500 TL karşılığında garson hizmeti almanız gerekecektir. Yatta yemek pişirme imkanı olmadığını bilerek getireceğiniz yiyecekleri ona göre seçmelisiniz.
+                                          </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1308,7 +1306,7 @@
                     <div class="footerTop">
                         <div class="title">Sizin için hazırladığımız özel fikirler</div>
                         <div class="verticalCustomScroll">
-                            <ul class="nav nav-tabs customTab" id="footerTab" role="tablist">
+                            <ul class="nav nav-tabs customTab footerTab" id="footerTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
                                 </li>
@@ -1523,8 +1521,14 @@
 
                             <!-- Başlangıç ve bitiş değerleri için input alanları -->
                              <div class="rangeInput">
-                                 <input type="text" id="sliderStartInput">
-                                 <input type="text" id="sliderEndInput">
+                                <div class="sliderInputWrapper">
+                                    <span class="icon-tl priceIcon"></span>
+                                    <input type="text" id="sliderStartInput">
+                                </div>
+                                <div class="sliderInputWrapper">
+                                    <span class="icon-tl priceIcon"></span>
+                                    <input type="text" id="sliderEndInput">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1533,7 +1537,7 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
                                 Tekne Tipi
                             </button>
                         </h2>
@@ -1579,7 +1583,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
                                 Mürettebat
                             </button>
                         </h2>
@@ -1607,7 +1611,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="true" aria-controls="flush-collapseThree">
                             Kapasite
                             </button>
                         </h2>
@@ -1656,7 +1660,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="true" aria-controls="flush-collapseFour">
                             Seyir Kapasitesi
                         </button>
                         </h2>
@@ -1699,7 +1703,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="true" aria-controls="flush-collapseFive">
                             Uzunluğu
                         </button>
                         </h2>
@@ -1742,7 +1746,7 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="true" aria-controls="flush-collapseFive">
                             Tekne Bilgileri
                         </button>
                         </h2>
@@ -1799,15 +1803,15 @@
     <script src="public/assets/plugins/rangeSlider/nouislider.min.js"></script><!--Bu script fiyat aralıgı ıcın eklenmıs eklentidir. filtreleme modal ıcerısınde kullanılır-->
 
     <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script>
-            const rangeSlider = document.getElementById('rangeSlider');
+         const rangeSlider = document.getElementById('rangeSlider');
 
-            // Binlik ayracı eklemek için formatter
+            // Binlik ayracı ve TL simgesi eklemek için formatter
             const formatThousands = {
                 to: function (value) {
-                    return Math.round(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                    return Math.round(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); // Sadece sayıyı döndür
                 },
                 from: function (value) {
                     return Number(value.replace(/\./g, ''));
@@ -1823,7 +1827,7 @@
                 },
                 step: 1, // Artış değeri
                 tooltips: false, // Her iki değerde tooltip gösterimi
-                format: formatThousands // Binlik ayracı formatı
+                format: formatThousands // Sadece sayısal format
             });
 
             // Gösterim ve input alanlarına değerleri güncelleme
@@ -1833,9 +1837,9 @@
             const sliderEndInput = document.getElementById('sliderEndInput');
 
             rangeSlider.noUiSlider.on('update', function (values) {
-                // Gösterim alanları
-                sliderStartValueDisplay.innerHTML = values[0];
-                sliderEndValueDisplay.innerHTML = values[1];
+                // Gösterim alanlarına HTML ile TL simgesi ekleme
+                sliderStartValueDisplay.innerHTML = values[0] + ' <span class="icon-tl priceIcon"></span>';
+                sliderEndValueDisplay.innerHTML = values[1] + ' <span class="icon-tl priceIcon"></span>';
                 
                 // Input alanları
                 sliderStartInput.value = values[0];
@@ -1850,6 +1854,8 @@
             sliderEndInput.addEventListener('change', function () {
                 rangeSlider.noUiSlider.set([null, formatThousands.from(this.value)]);
             });
+
+
     </script>
 </body>
 

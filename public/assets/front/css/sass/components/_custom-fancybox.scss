@@ -19,6 +19,11 @@
     height: 75px;
     transition: all .3s linear;
     border-radius: 0;
+    @media screen and (max-width:991.98px) {
+        width: 45px;
+        height: 45px;
+        top: -45px!important;
+    }
     svg{
         display: none;
     }

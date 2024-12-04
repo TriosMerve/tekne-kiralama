@@ -49,7 +49,10 @@ if ($("#dateInputs").length > 0) {
     .bind("datepicker-open", function () {
       isDateRangePickerOpen = true; // DatePicker açıldığında durumu güncelle
       $(".reservation-type").removeClass("d-none"); // Açıldığında d-none kaldır
-      $("#checkInText, #checkinInput").addClass("selected");
+      $(".checkInText, .checkinInput").addClass("selected");
+      if (!$(this).parents(".dateTimeSearchWrapper").hasClass("active")) {
+        $(this).parents(".dateTimeSearchWrapper").addClass("active");
+      }
     })
     .bind("datepicker-close", function (event) {
       // Kapatma işlemini engellemek için koşul kontrolü
@@ -83,7 +86,7 @@ $(".apply-btn").click(function (evt) {
   evt.stopPropagation();
   console.log("sss");
   $(".dateTimeSearchWrapper").removeClass("active");
-  $("#checkoutInput, #checkinInput").removeClass("selected");
+  $(".checkoutInput, .checkinInput").removeClass("selected");
 });
 
 function smoothScrollToTarget() {
@@ -94,9 +97,10 @@ function smoothScrollToTarget() {
 function resetDateInputs() {
   $(".customRangeButton").show();
   $("#dateInputs").data("dateRangePicker").clear();
-  $("#checkinInput, #checkInText").removeClass("selected");
+  $(".checkinInput, .checkInText, .checkOutText, .checkoutInput").removeClass(
+    "selected"
+  );
   $(".dateSearchButton").removeClass("active");
-
 }
 
 // Location Select durum kontrolü
@@ -117,7 +121,7 @@ $(".locationSelect").on("click", function () {
     $(".nice-select .list .option").first().hide();
     resetDateInputs();
     $(
-      "#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose"
+      ".dateInputs .checkInText .choose, .dateInputs .checkOutText .choose"
     ).show();
 
     console.log("Location select açıldı");
@@ -138,13 +142,25 @@ $(".locationSelect").on("change", function () {
 
   $(".customRangeButton").hide();
 
-  $(".dateTimeSearchWrapper").addClass("active opened apply");
-  $(".dateSearchButton").addClass("active");
-  $("#checkinInput, #checkInText").addClass("selected");
+  if ($(this).closest(".locationSelect").hasClass("singleDate")) {
+    console.log("s");
 
-  setTimeout(function () {
-    $("#dateInputs").data("dateRangePicker").open(); // dateRangePicker'i aç
-  }, 100); // 100 milisaniye gecikme
+    $(".dateTimeSearchWrapper").addClass("active opened apply");
+    $(".dateSearchButton").addClass("active");
+    $("#checkinInput, #checkInText").addClass("selected");
+
+    setTimeout(function () {
+      $("#dateInputs.singleInputs").data("dateRangePicker").open(); // dateRangePicker'i aç
+    }, 100); // 100 milisaniye gecikme
+  } else {
+    $(".dateTimeSearchWrapper").addClass("active opened apply");
+    $(".dateSearchButton").addClass("active");
+    $("#checkinInput, #checkInText").addClass("selected");
+
+    setTimeout(function () {
+      $("#dateInputs").data("dateRangePicker").open(); // dateRangePicker'i aç
+    }, 100); // 100 milisaniye gecikme
+  }
 });
 
 $(".dateSearchButton").on("click", function () {
@@ -158,7 +174,7 @@ $(document).on("click", function (event) {
 
     resetDateInputs();
     $(
-      "#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose"
+      ".dateInputs .checkInText .choose, .dateInputs .checkOutText .choose"
     ).show();
 
     // .locationSelect öğesinin ilk option'ını seçili yapalım
@@ -197,30 +213,36 @@ $(".calendarWrapper").on("click", function () {
   }
 });
 
-$(".boatType").on("click", function () {
-  $(".dateTimeSearchWrapper").removeClass("active");
+$(".boatType").on("click", function (e) {
+  console.log("dısarı tıkladm")
+  e.preventDefault();
+  return false;
+  // $(".dateTimeSearchWrapper").removeClass("active");
+  // console.log("qqq")
+  // resetDateInputs();
 
-  resetDateInputs();
+  // $(
+  //   ".dateInputs .checkInText .choose, .dateInputs .checkOutText .choose"
+  // ).show();
+  // $(".locationSelect").each(function () {
+  //   // niceSelect görünümünü sıfırlayıp güncelliyoruz
+  //   $(this).niceSelect("update");
+  // });
 
-  $(
-    "#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose"
-  ).show();
-  $(".locationSelect").val("").niceSelect("update"); // niceSelect'i güncelle
-
-  // .locationSelect tıklama olayını sıfırlayıp yeniden ekleyelim
-  $(".locationSelect")
-    .off("click")
-    .on("click", function () {
-      if (!$(this).closest(".nice-select").hasClass("open")) {
-        console.log("Location select açıldı");
-        $(".dateTimeSearchWrapper").addClass("active");
-      } else {
-        console.log("Location select kapandı");
-        if (!isDateRangePickerOpen) {
-          $(".dateTimeSearchWrapper").removeClass("active");
-        }
-      }
-    });
+  // // .locationSelect tıklama olayını sıfırlayıp yeniden ekleyelim
+  // $(".locationSelect")
+  //   .off("click")
+  //   .on("click", function () {
+  //     if (!$(this).closest(".nice-select").hasClass("open")) {
+  //       console.log("Location select açıldı");
+  //       $(".dateTimeSearchWrapper").addClass("active");
+  //     } else {
+  //       console.log("Location select kapandı");
+  //       if (!isDateRangePickerOpen) {
+  //         $(".dateTimeSearchWrapper").removeClass("active");
+  //       }
+  //     }
+  //   });
 });
 $(".boatType .typeItem").on("click", function () {
   $(".boatType .typeItem").removeClass("active");
@@ -229,18 +251,131 @@ $(".boatType .typeItem").on("click", function () {
 
   resetDateInputs();
 
-  $(
-    "#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose"
-  ).show();
-  $(".locationSelect").val("").niceSelect("update"); // niceSelect'i güncelle
+  var thisDataId = $(this).attr("data-id");
+  console.log("this data id : " + thisDataId);
 
+  // Önce mevcut datepicker'ı yok et
+  $("#dateInputs").data("dateRangePicker").destroy();
+
+
+  if (thisDataId == "toursBoat") {
+    $(".chooseHourWrapper").show().addClass("active");
+    $(".locationSelect").addClass("singleDate");
+    $("#dateInputs").addClass("singleInputs");
+    $(".calendarWrapper").addClass("singleDateWrapper");
+    $(".reservation-type").addClass("d-none");
+    // Single date picker ayarlarıyla yeniden başlat
+    $("#dateInputs")
+      .dateRangePicker({
+        singleDate: true,
+        singleMonth: true,
+        container: ".dateTimeSearchWrapper",
+        language: "tr-short",
+        autoClose: false,
+        showShortcuts: false,
+        startDate: new Date(),
+        selectForward: false,
+        showTopbar:true,
+        setValue: function (s, s1) {
+          $(".checkinInput").val(s1);
+
+          // Tarihi .dateResult içine ekle
+          if (s1) {
+            var selectedDate = new Date(s1);
+            var formattedDate =
+              selectedDate.getDate() +
+              " " +
+              selectedDate.toLocaleString("default", { month: "short" });
+
+            $(".dateResult").text(formattedDate).show();
+
+            // İlk .formSelectWrapper'dan disabled sınıfını kaldır ve select'i etkinleştir
+            $(".chooseHourWrapper .formSelectWrapper").first().removeClass("disabled").find(".checkin-hour").prop("disabled", false).niceSelect("update");
+            $(".chooseHourWrapper .formSelectWrapper").find(".checkin-hour").trigger("click");
+               // Nice Select menüsünü aç
+        }
+          //Secım yapıldıgında takvımı kapatma
+        },
+      })
+      .bind("datepicker-open", function () {
+        $(".reservation-type").addClass("d-none"); // Açıldığında d-none ekle
+      })
+  } else {
+    $(".chooseHourWrapper").hide().removeClass("active");
+    $(".locationSelect").removeClass("singleDate");
+    $("#dateInputs").removeClass("singleInputs");
+    $(".calendarWrapper").removeClass("singleDateWrapper");
+
+    // Çift tarih picker ayarlarıyla yeniden başlat
+    $("#dateInputs")
+      .dateRangePicker({
+        separator: " to ",
+        container: ".dateTimeSearchWrapper",
+        language: "tr-short",
+        stickyMonths: true,
+        autoClose: false,
+        showShortcuts: true,
+        shortcuts: {
+          "next-days": [3, 5, 7],
+          next: ["week", "month", "year"],
+        },
+        startDate: new Date(),
+        selectForward: false,
+        getValue: function () {
+          if ($(".checkinInput").val() && $(".checkoutInput").val())
+            return (
+              $(".checkinInput").val() + " to " + $(".checkoutInput").val()
+            );
+          else return "";
+        },
+        setValue: function (s, s1, s2) {
+          $(".checkinInput").val(s1);
+          $(".checkoutInput").val(s2);
+
+          if (s1 && s2) {
+            var startDate = new Date(s1);
+            var endDate = new Date(s2);
+            var startFormatted =
+              startDate.getDate() +
+              " " +
+              startDate.toLocaleString("default", { month: "short" });
+            var endFormatted =
+              endDate.getDate() +
+              " " +
+              endDate.toLocaleString("default", { month: "short" });
+
+            $(".dateResult")
+              .text(startFormatted + " - " + endFormatted)
+              .show();
+          }
+        },
+      })
+      .bind("datepicker-open", function () {
+        $(".reservation-type").removeClass("d-none"); // Açıldığında d-none ekle
+      });
+  }
+  $(
+    ".dateInputs .checkInText .choose, .dateInputs .checkOutText .choose"
+  ).show();
+
+  $(".locationSelect").each(function () {
+    // niceSelect görünümünü sıfırlayıp güncelliyoruz
+    $(this).niceSelect("update");
+  });
+  // Burada val() ile seçili öğe tekrar seçilsin
+
+  smoothScrollToTarget();
   // .locationSelect tıklama olayını sıfırlayıp yeniden ekleyelim
   $(".locationSelect")
     .off("click")
     .on("click", function () {
+      console.log("off");
       if (!$(this).closest(".nice-select").hasClass("open")) {
         console.log("Location select açıldı");
+        console.log("off 2");
         $(".dateTimeSearchWrapper").addClass("active");
+
+        // Eğer smooth scroll fonksiyonu gerekli ise burada çağırın
       } else {
         console.log("Location select kapandı");
         if (!isDateRangePickerOpen) {
@@ -249,6 +384,26 @@ $(".boatType .typeItem").on("click", function () {
       }
     });
 });
+
+$(".chooseHourWrapper .formSelectWrapper .checkin-hour").on(
+  "change",
+  function () {
+    // Aktif form elemanına 'test' sınıfı ekle
+    $(this).closest(".formSelectWrapper").addClass("test");
+
+    // Bir sonraki form elemanını tanımla
+    $(this)
+      .closest(".formSelectWrapper")
+      .next(".formSelectWrapper")
+      .removeClass("disabled");
+    $(".checkout-hour").prop("disabled", false).niceSelect("update");
+
+    // niceSelect açma işlemi
+    setTimeout(function () {
+      $(".checkout-hour.nice-select").trigger("click");
+    }, 100); // 100ms gecikme ile
+  }
+);
 
 // .typeItem’a tıklanınca active class kontrolü
 $(".reservation-type .typeItem").on("click", function (event) {
@@ -259,6 +414,6 @@ $(".reservation-type .typeItem").on("click", function (event) {
   // Date inputları temizleyip yeniden gösteriyoruz
   $("#dateInputs").data("dateRangePicker").clear();
   $(
-    "#dateInputs #checkInText .choose, #dateInputs #checkOutText .choose"
+    ".dateInputs .checkInText .choose, .dateInputs .checkOutText .choose"
   ).show();
 });

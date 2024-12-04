@@ -42,7 +42,7 @@ $colors: (
   "gray-6": $gray-6,
   "gray-7": $gray-7,
   "dark": $black,
-  "light": $white // "tertiary": $tertiary,,,
+  "light": $white // "tertiary": $tertiary,,,,
 );
 
 @mixin generate-button-classes($colors) {
@@ -51,15 +51,15 @@ $colors: (
       background-color: $color !important;
       border: 1px solid $color !important;
 
-      input{
+      input {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0);
         border: none;
         color: $white;
       }
-      @media screen and (max-width:991.98px) {
-        &:hover{
+      @media screen and (max-width: 991.98px) {
+        &:hover {
           color: var(--white);
         }
       }
@@ -67,23 +67,25 @@ $colors: (
         &:not(.disabled):hover {
           color: $color;
 
-          input{
+          input {
             color: $color;
           }
         }
       }
 
-      &.disabled{
+      &.disabled {
         border-color: var(--gray-2) !important;
-        background-color:var(--gray-2) !important;
+        background-color: var(--gray-2) !important;
         color: var(--gray-5) !important;
-        &:after{
+        pointer-events: none;
+
+        &:after {
           display: none;
         }
-        input{
-          color: var(--gray-5) !important
+        input {
+          color: var(--gray-5) !important;
         }
-        &:before{
+        &:before {
           content: "";
           width: 100%;
           height: 100%;
@@ -137,7 +139,6 @@ $colors: (
           padding-left: 16px;
           padding-right: 16px;
         }
-
       }
 
       @media screen and (min-width: 992px) {
@@ -163,7 +164,6 @@ $container-max-width: (
 );
 
 @include generate-containers($container-max-width);
-
 
 $padding-values: (
   0: 0,
@@ -304,8 +304,8 @@ a:hover {
     background-color: var(--white);
     z-index: -1;
   }
-  &.notAfter{
-    &:after{
+  &.notAfter {
+    &:after {
       display: none;
     }
   }
@@ -323,7 +323,7 @@ a:hover {
         color: var(--white);
       }
     }
-    &.notAfter{
+    &.notAfter {
       @media screen and (min-width: 992px) {
         &:hover {
           color: var(--primary);
@@ -331,8 +331,8 @@ a:hover {
         }
       }
     }
-    &.bold{
-      font-family: 'GilroySemibold';
+    &.bold {
+      font-family: "GilroySemibold";
     }
     &.type2 {
       border-color: var(--primary);
@@ -361,7 +361,7 @@ a:hover {
     color: var(--gray-6);
     border: 1px solid #cbc8c8;
     background-color: rgba(0, 0, 0, 0);
-    font-family: 'GilroyMedium';
+    font-family: "GilroyMedium";
     font-size: 16px;
     &:after {
       display: none;
@@ -373,18 +373,17 @@ a:hover {
         border-color: var(--primary);
       }
     }
-
   }
-  &.moreButton{
+  &.moreButton {
     height: 60px;
     width: 200px;
     font-size: 16px;
-    @media screen and (max-width:991.98px) {
-      &:hover{
+    @media screen and (max-width: 991.98px) {
+      &:hover {
         color: var(--white);
       }
     }
-    @media screen and (max-width:480px) {
+    @media screen and (max-width: 480px) {
       width: 100%;
       max-width: 400px;
     }
@@ -398,12 +397,12 @@ a:hover {
       background-color: var(--primary);
     }
     @media screen and (min-width: 992px) {
-      &:hover{
+      &:hover {
         color: var(--white);
       }
     }
   }
-  
+
   @media screen and (min-width: 992px) {
     &:hover {
       &.button-light {
@@ -493,26 +492,28 @@ a:hover {
   }
 }
 
-.fMedium{
-  font-family: 'GilroyMedium'!important;
+.fMedium {
+  font-family: "GilroyMedium" !important;
 }
 
-.formSelectWrapper{
-  .customSelect{
+.formSelectWrapper {
+  .customSelect {
     width: 100%;
     height: 50px;
     border: 1px solid #bfbfbf;
     border-radius: 10px;
-    &:after{
+    overflow: hidden;
+    &:after {
       border: none;
     }
 
-    &:focus{
-      outline: 0!important;
-      box-shadow: none!important;
+    &:focus {
+      outline: 0 !important;
+      box-shadow: none !important;
     }
-    &.open{
-      .list{
+    &.open {
+      overflow: visible;
+      .list {
         width: 100%;
         max-height: 150px;
         overflow-y: auto;
@@ -522,4 +523,8 @@ a:hover {
       }
     }
   }
+}
+.currencly{
+  font-family: sans-serif;
+  font-weight: 600;
 }
