@@ -100,16 +100,58 @@ header {
       top: 0;
     }
 
-    &.transitionTop{
+    &.transitionTop {
       top: -100%;
     }
   }
 }
 
-.userButton{
+.userButton {
   font-size: 32px;
   color: var(--primary);
   margin-left: 14px;
+  &:after {
+    display: none;
+  }
+
+  & ~ .dropdown-menu {
+    box-shadow: 0 2px 4px rgba(39, 54, 86, 0.14), 0 1px 10px rgba(39, 54, 86, 0.2);
+    border: none;
+    border-radius: 24px;
+    padding: 20px 30px;
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      gap: 10px;
+      font-family: "GilroyMedium";
+      height: 30px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      .icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 18px;
+          max-height: 18px;
+          object-fit: contain;
+        }
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--primary);
+      }
+      &.active {
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--primary);
+        font-size: "GilroySemibold";
+      }
+    }
+  }
 }
 
 .menuNavButton {
@@ -129,7 +171,7 @@ header {
     height: 2px;
     background-color: var(--primary);
     transition: all 0.3s linear;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       background-color: var(--primary);
     }
   }
@@ -140,7 +182,7 @@ header {
     background-color: var(--primary);
     transition: all 0.3s linear;
 
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       background-color: var(--primary);
     }
   }
@@ -238,8 +280,8 @@ header {
   .dropdown-toggle {
     padding-right: 20px;
     margin-right: 15px;
-      color: var(--primary);
-      @media screen and (max-width:991.98px) {
+    color: var(--primary);
+    @media screen and (max-width: 991.98px) {
       margin-right: 0;
       color: var(--primary);
     }
@@ -255,7 +297,7 @@ header {
       top: 50%;
       position: absolute;
       transition: all 0.3s linear;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         color: var(--primary);
       }
     }
@@ -264,8 +306,8 @@ header {
       &::after {
         transform: none;
         transform: translateY(-50%);
-        @media screen and (max-width:991.98px) {
-          transform:translateY(-50%) rotate(-90deg);
+        @media screen and (max-width: 991.98px) {
+          transform: translateY(-50%) rotate(-90deg);
         }
       }
     }
@@ -278,7 +320,7 @@ header {
   border-color: var(--gray-3);
   border-radius: 15px;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.475) !important;
-  @media screen and (max-width:991.98px) {
+  @media screen and (max-width: 991.98px) {
     width: calc(100vw - 30px);
     left: 15px;
     transform: none !important;
@@ -287,7 +329,7 @@ header {
     top: 65px;
     border-radius: 0;
   }
-  @media screen and (max-width:640px) {
+  @media screen and (max-width: 640px) {
     width: 100%;
     padding-left: 30px !important;
     padding-right: 30px !important;
@@ -309,10 +351,10 @@ header {
     flex-wrap: wrap;
     gap: 35px;
     padding: 10px 0 30px 0;
-    @media screen and (max-width:640px) {
+    @media screen and (max-width: 640px) {
       gap: 20px;
     }
-  
+
     li {
       width: calc(33.3% - 24px);
     }
@@ -332,13 +374,13 @@ header {
   &.show {
     left: 50%;
     transform: translate(-50%, 48px) !important;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       width: calc(100vw - 30px);
-      left: 16px!important;
+      left: 16px !important;
       transform: none !important;
-      right: 16px!important;
-      position: fixed!important;
-      top: 65px!important;
+      right: 16px !important;
+      position: fixed !important;
+      top: 65px !important;
       border-radius: 0;
     }
   }

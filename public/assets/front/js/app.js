@@ -256,6 +256,10 @@ document.addEventListener("click", function (e) {
   }
 });
 
+$(".closeBlockquote").on("click", function(){
+  $(this).parent("blockquote").remove()
+});
+
 $(document).on("click", ".footerTab.customTab .nav-link", function () {
   var $scrollContainer = $(".verticalCustomScroll"); // Scrollable container
   var $activeTab = $(this); // Clicked tab

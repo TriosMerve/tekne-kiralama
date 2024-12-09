@@ -22,7 +22,7 @@
       border-radius: 25px;
       font-size: 16px;
       color: #444444;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         font-size: 14px;
         padding-left: 16px;
         padding-right: 16px;
@@ -41,6 +41,51 @@
       }
     }
   }
+
+  &.type2 {
+    border-bottom: 1px solid var(--primary);
+
+    &.nav-tabs {
+      gap: 0;
+      .nav-item {
+        &.show {
+          .nav-link {
+            border-color: var(--gray);
+            border-bottom: none;
+          }
+        }
+      }
+      .nav-link {
+        font-family: "GilroyMedium";
+        color: var(--gray-7);
+        padding: 15px 30px;
+        background-color: var(--gray);
+        margin-bottom: 0;
+        border-radius: 0;
+        font-size: 16px;
+        @media screen and (max-width:991.98px) {
+          padding: 10px 15px;
+          font-size: 14px;
+        }
+        &:first-child{
+          border-radius: 10px 0 0 0;
+        }
+        &:last-child{
+          border-radius: 0 10px 0 0;
+        }
+        &.active {
+          border-color: var(--primary);
+          border-bottom: none;
+          background-color: var(--primary);
+          color: var(--white);
+        }
+        &:not(.active):hover {
+          border-color: rgba(0, 0, 0, 0);
+          color: var(--primary);
+        }
+      }
+    }
+  }
 }
 
 .customTabContents {
@@ -48,6 +93,12 @@
   @media screen and (max-width: 991.98px) {
     margin-top: 18px;
     margin-bottom: 30px;
+  }
+  .note {
+    font-size: 14px;
+    color: var(--gray-6);
+    line-height: 22px;
+    font-family: "GilroySemibold";
   }
   .tab-pane {
     position: relative;
@@ -74,15 +125,15 @@
       line-height: 65px;
       color: var(--black);
       font-family: "GilroySemibold";
-      @media screen and (max-width:1600px) {
+      @media screen and (max-width: 1600px) {
         font-size: 50px;
         line-height: 55px;
       }
-      @media screen and (max-width:1440px) {
+      @media screen and (max-width: 1440px) {
         font-size: 40px;
         line-height: 45px;
       }
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         font-size: 30px;
         line-height: 40px;
       }
@@ -92,13 +143,13 @@
       font-size: 40px;
       line-height: 65px;
       color: var(--primary);
-      @media screen and (max-width:1600px) {
+      @media screen and (max-width: 1600px) {
         font-size: 34px;
         line-height: 45px;
       }
-      @media screen and (max-width:991.98px) {
-        font-size:20px;
-        line-height:27px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 20px;
+        line-height: 27px;
       }
     }
     p {
@@ -107,9 +158,9 @@
       font-size: 16px;
       line-height: 25px;
       margin-top: 15px;
-      @media screen and (max-width:991.98px) {
-        font-size:14px;
-        line-height:22px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+        line-height: 22px;
       }
     }
     .textLink {
@@ -118,12 +169,12 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      @media screen and (max-width:991.98px) {
-        font-size:14px;
-        line-height:22px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+        line-height: 22px;
         margin-top: 10px;
       }
-      .icon-arrow-long{
+      .icon-arrow-long {
         font-size: 30px;
       }
       &:after {
@@ -133,13 +184,13 @@
   }
 }
 
-.offerNavTabs{
+.offerNavTabs {
   flex-direction: column;
   align-items: flex-start;
   border-bottom: none;
   padding-left: 20px;
   padding-right: 20px;
-  .nav-link{
+  .nav-link {
     font-family: "GilroyMedium";
     font-size: 15px;
     line-height: 25px;
@@ -150,18 +201,18 @@
     border: none;
     transition: all 0.3s linear;
     padding: 4px 0;
-    &.active{
+    &.active {
       color: var(--gray-6);
     }
-    @media screen and (min-width:992px) {
-      &:hover{
+    @media screen and (min-width: 992px) {
+      &:hover {
         color: var(--gray-6);
       }
     }
   }
 }
-.offertabContents{
-  .tab-pane{
+.offertabContents {
+  .tab-pane {
     position: relative;
   }
 }

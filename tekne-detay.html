@@ -132,9 +132,21 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
+                       </div>
+                        <div class="dropdown">
+                            <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class=""><span class="icon-user"></span> </div>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
+                            </ul>
                         </div>
-                        <a href="#" class="userButton"><span class="icon-user"></span></a>
-
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
                             <a href="#" class="fixBtn button-outline">Üye Girişi</a>
                             <a href="#" class="fixBtn button-primary">Üye Ol</a>
@@ -1852,6 +1864,406 @@
 
 
 
+    <div class="modal fade" id="hizmetlerModal" aria-hidden="true" aria-labelledby="hizmetlerModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div class="modalHead pb-0 ps-0">
+                    <div class="modal-title type2">Ekstralarınızı Seçiniz</div>
+                </div>
+                <a href="#" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <nav>
+                    <div class="nav nav-tabs customTabs type2" id="ekstralarTab" role="tablist">
+                      <button class="nav-link active" data-id="yemekler" id="nav-yemekler-tab" data-bs-toggle="tab" data-bs-target="#nav-yemekler" type="button" role="tab" aria-controls="nav-yemekler" aria-selected="true"><span>Yemekler</span></button>
+                      <button class="nav-link" data-id="paketler" id="nav-paketler-tab" data-bs-toggle="tab" data-bs-target="#nav-paketler" type="button" role="tab" aria-controls="nav-paketler" aria-selected="false"><span>Paketler</span></button>
+                      <button class="nav-link" data-id="ekstralar" id="nav-ekstralar-tab" data-bs-toggle="tab" data-bs-target="#nav-ekstralar" type="button" role="tab" aria-controls="nav-ekstralar" aria-selected="false"><span>Ekstralar</span></button>
+                    </div>
+                </nav>
+                <div class="tab-content customTabContents mt-4" id="ekstralarTabContents">
+                    <div class="tab-pane fade show active" id="nav-yemekler" role="tabpanel" aria-labelledby="nav-yemekler-tab" tabindex="0">
+                        <span class="note">Sadece bir menü seçebilirsiniz</span>
+                        <div class="ekstralarList">
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Dana Antrikot Menü</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Lüks Kokteyl Menü</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Karışık Izgara Menü</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Gulet</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Tavuk Izgara Menü</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-paketler" role="tabpanel" aria-labelledby="nav-paketler-tab" tabindex="0">
+                        <span class="note">Sadece bir tane paket seçebilirsiniz</span>
+                        <div class="ekstralarList">
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Ekonomik Evlilik Teklifi Paketi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">6.000</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Lüks Evlilik Teklifi Paketi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">22.000</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Bekarlığa Veda Süsleme Paketi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">2.000</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check type2">
+                                        <input type="radio" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Klasik Evlilik Teklifi Paketi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">7.500</span><span class="currencly">₺</span></div>
+                                        <span>Kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-ekstralar" role="tabpanel" aria-labelledby="nav-ekstralar-tab" tabindex="0">
+                        <div class="ekstralarList">
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Fotoğraf Ve Video Çekimi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>saat</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Boğazda Lazer Gösterisi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Balon Süsleme</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">750</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Özel İsimli Karşılama Panosu</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Volkanlı Karşılama Seremonisi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">750</span><span class="currencly">₺</span></div>
+                                        <span>kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Fotoğraf Ve Video Çekimi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>saat</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Boğazda Lazer Gösterisi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Balon Süsleme</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">750</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Özel İsimli Karşılama Panosu</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Volkanlı Karşılama Seremonisi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">750</span><span class="currencly">₺</span></div>
+                                        <span>kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Fotoğraf Ve Video Çekimi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>saat</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Boğazda Lazer Gösterisi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Balon Süsleme</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">750</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Özel İsimli Karşılama Panosu</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">1.500</span><span class="currencly">₺</span></div>
+                                        <span>rez</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                            <div class="listItem">
+                                <div class="d-flex align-items-start">
+                                    <label class="container-check">
+                                        <input type="checkbox" class="form-check-input" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Volkanlı Karşılama Seremonisi</span>
+                                    </label>
+                                    <div class="priceInfo">
+                                        <div class="countPrice"><span class="price">750</span><span class="currencly">₺</span></div>
+                                        <span>kişi</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="textLink" data-bs-toggle="modal" data-bs-target="#hizmetlerDetailsModal">Daha fazla göster</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="hizmetlerDetailsModal" aria-hidden="true" aria-labelledby="hizmetlerDetailsModalLabel" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header justify-content-start gap-5">
+                <a href="#" class="hizmetlerModalBackButton" data-bs-toggle="modal" data-bs-target="#hizmetlerModal"><span class="icon-arrow-right-2"></span></a>
+                <div class="modalHead pb-0 ps-0">
+                    <div class="modal-title type2">Balon Süsleme</div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="paragraph">
+                    <span>YATLAR İÇİN</span>
+                    Yatın arka kısmına balon süslemesi yapılmaktadır. Helyum balonları dahil değildir.
+                    <br><br>
+                    <span>DAVET TEKNELERİ İÇİN</span>
+                    Teknenin ön tarafı ve açık alandaki bazı yerler balonlarla süslenmektedir. Helyum balonları dahil değildir.
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
 
     <div class="offcanvas offcanvas-end offerCanvas" data-bs-backdrop="static" tabindex="-1" id="offerCanvas" aria-labelledby="offerCanvasLabel">
         <div class="offcanvas-header">
@@ -1865,8 +2277,8 @@
                   <button class="nav-link active" data-id="hiraBoat" id="nav-teknekiralama-tab" data-bs-toggle="tab" data-bs-target="#nav-teknekiralama" type="button" role="tab" aria-controls="nav-teknekiralama" aria-selected="true"><span class="icon-boat"></span> <span>Tekne Kiralama</span></button>
                   <button class="nav-link" data-id="toursBoat" id="nav-tekneturlari-tab" data-bs-toggle="tab" data-bs-target="#nav-tekneturlari" type="button" role="tab" aria-controls="nav-tekneturlari" aria-selected="false"><span class="icon-route"></span> <span>Tekne Turları</span></button>
                 </div>
-              </nav>
-              <div class="tab-content offertabContents" id="offertabContents">
+            </nav>
+            <div class="tab-content offertabContents" id="offertabContents">
                 <div class="tab-pane fade show active" id="nav-teknekiralama" role="tabpanel" aria-labelledby="nav-teknekiralama-tab" tabindex="0">
                     <div class="countPrice">1.700 <span class="currencly"> $ </span>  / Gün</div>
                     <div class="offerDateInfo d-flex align-items-start">
@@ -1970,13 +2382,40 @@ Fiyat ve müsaitlik durumu bilgisi alabilir miyim</textarea>
                             </div>
                         </div>
                     </div>
+                    <div class="otherOptions">
+                        <div class="columnFlexWrapper">
+                            <div class="position-relative columnFlex">
+                                <label for="" class="">Liman</label>
+                                <select name="liman" id="limanSelect" class="customSelect limanSelect">
+                                    <option value="" selected hidden>Liman Seç</option>
+                                    <option value="">Arnavutkoy</option>
+                                    <option value="">Ortakoy</option>
+                                    <option value="">Bebek</option>
+                                    <option value="">İstinye</option>
+                                </select>
+                            </div>
+                            <div class="position-relative columnFlex">
+                                <label class="inputLabel" for="">Kişi Sayısı</label>
+                                <input type="text" class="form-control numberMask2" placeholder="Kişi Sayısı Giriniz" required>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2 pt-1 mb-2 pb-1">
+
+                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#hizmetlerModal">Yemek & Hizmet Ekstraları Seç</a>
+                        </div>
+                    </div>
                     <div class="offer-prices-list">
                         <div class="item row mx-0">
                             <div class="col-6 px-0 title">Kiralama Saat</div>
                             <div class="col px-0 text-end">3 Saat</div>
                         </div>
                         <div class="item row mx-0">
-                            <div class="col-6 px-0 title">Toplam Kiralama Bedeli</div>
+                            <div class="col-6 px-0 title">Yemek Hizmet Ekstraları</div>
+                            <div class="col px-0 text-end">1100 <span class="currencly">$</span></div>
+                        </div>
+                        <hr>
+                        <div class="item row mx-0">
+                            <div class="col-6 px-0 title text-primary">Toplam Kiralama Bedeli</div>
                             <div class="col px-0 text-end">1100 <span class="currencly">$</span></div>
                         </div>
                         <hr>
@@ -2026,10 +2465,9 @@ Fiyat ve müsaitlik durumu bilgisi alabilir miyim</textarea>
                     </div>
                 </div>
             </div>
-
           </div>
         </div>
-      </div>
+    </div>
 
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
@@ -2037,6 +2475,7 @@ Fiyat ve müsaitlik durumu bilgisi alabilir miyim</textarea>
     <script src="public/assets/plugins/jquery.easing.min.js"></script>
     <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script>
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
@@ -2045,6 +2484,39 @@ Fiyat ve müsaitlik durumu bilgisi alabilir miyim</textarea>
     <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/tekne-detay.js"></script>
+    <script>
+        document.getElementById('hizmetlerModal').addEventListener('shown.bs.modal', function () {
+            // Sadece #ekstralarTab içinde işlem yap
+            const ekstralarTab = document.getElementById('ekstralarTab');
+            const ekstralarTabContents = document.getElementById('ekstralarTabContents');
+
+            // İlk sekme butonu ve içeriği
+            const firstTabButton = ekstralarTab.querySelector('#nav-yemekler-tab');
+            const firstTabContent = ekstralarTabContents.querySelector('#nav-yemekler');
+
+            // Tüm sekmelerdeki aktif sınıfları kaldır
+            ekstralarTab.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
+            ekstralarTabContents.querySelectorAll('.tab-pane').forEach(content => content.classList.remove('active', 'show'));
+
+            // İlk sekme butonunu ve içeriğini aktif yap
+            firstTabButton.classList.add('active');
+            firstTabContent.classList.add('active', 'show');
+        });
+
+
+
+        $(document).ready(function(){
+            // $('#hizmetlerModal').modal('show');
+                $(".numberMask2").mask("0", {
+                translation: {
+                    0: {
+                        pattern: /\d/,
+                        recursive: true
+                    }
+                }
+            });
+        })
+    </script>
 
 </body>
 

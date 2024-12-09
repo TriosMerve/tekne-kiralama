@@ -71,6 +71,26 @@ if (wWidth < 992) {
         $(this).text("Fiyatları görmek için tarih seçiniz");
         $wrapper.addClass("selected");
         $("html").addClass("overflow-hidden");
+
+        $(".nice-select").on("click", function () {
+          var $dropdown = $(this).find(".list");
+          var dropdownHeight = $dropdown.outerHeight(); // Dropdown yüksekliği
+          var viewportHeight = $(window).height(); // Görünen ekranın yüksekliği
+          var offsetTop = $(this).offset().top; // Dropdown'un üstten uzaklığı
+        
+          // Eğer alan yukarı daha genişse, yukarı açılacak
+          if (viewportHeight - offsetTop < dropdownHeight) {
+            $dropdown.css({
+              top: "auto",
+              bottom: "100%",
+            });
+          } else {
+            $dropdown.css({
+              top: "100%",
+              bottom: "auto",
+            });
+          }
+        });
       }
     }
   });

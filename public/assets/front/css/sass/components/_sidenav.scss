@@ -1,0 +1,193 @@
+.sidenavWrapper {
+  width: 300px;
+  padding-top: 60px;
+  .sideNav {
+    display: flex;
+    flex-direction: column;
+    a {
+      font-family: "GilroySemibold";
+      font-size: 16px;
+      color: var(--gray-6);
+      transition: all 0.3s linear;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      &.active {
+        color: var(--primary);
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #cccccc;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        transition: all .3s linear;
+        img{
+            max-width: 20px;
+            max-height: 20px;
+            -o-object-fit: contain;
+            object-fit: contain;
+            height: initial;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: var(--primary);
+          .icon{
+            border-color: var(--primary);
+            background-color: var(--gray);
+          }
+        }
+      }
+    }
+  }
+}
+.sideContentWrapper {
+  padding-top: 60px;
+  width: calc(100% - 300px);
+  @media screen and (max-width: 991.98px) {
+    width: 100%;
+  }
+  .backLink {
+    font-family: "GilroyMedium";
+    color: var(--gray-7);
+    font-size: 14px;
+    height: auto;
+    line-height: 16px;
+    margin-bottom: 40px;
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .pageTitle {
+    font-size: 26px;
+    line-height: 38px;
+    font-family: "GilroyMedium";
+    color: var(--gray-6);
+    margin-bottom:24px;
+  }
+
+  .profileInfo {
+    .profilItem {
+      font-size: 14px;
+      font-family: "GilroyMedium";
+      line-height: 22px;
+      color: var(--gray-7);
+      padding: 7px 0;
+    }
+    .userName {
+    }
+    .email {
+    }
+    .editButton {
+      font-family: "GilroySemibold";
+      color: var(--primary);
+      position: relative;
+      margin-top: 30px;
+      display: inline-flex;
+
+      @media screen and (min-width: 992px) {
+        &:after {
+          content: "";
+          width: 0;
+          border-bottom: 1px dotted var(--primary);
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          transition: all 0.3s linear;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.blockquote {
+  border: 1px solid rgba(217, 4, 62, 0.2);
+  background-color: rgba(217, 4, 62, 0.03);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  min-height: 50px;
+  padding: 15px 20px;
+  border-radius: 24px;
+  font-family: "GilroyMedium";
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(217, 4, 62, 0.6);
+
+  .icon-info {
+    margin-top: -1.1px;
+    color: var(--primary);
+    font-size: 20px;
+  }
+  .closeBlockquote {
+    font-size: 20px;
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: rgba(217, 4, 62, 0.2);
+    &:before {
+      transform: rotate(45deg);
+      display: flex;
+    }
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+  a {
+    position: relative;
+    @media screen and (min-width: 992px) {
+      &:after {
+        content: "";
+        width: 100%;
+        border-bottom: 1px dotted var(--primary);
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        transition: all 0.3s linear;
+      }
+      &:hover {
+        color: var(--primary);
+        &:after {
+          width: 0;
+        }
+      }
+    }
+  }
+}
+.notDataContent{
+    text-align: center;
+    width: 100%;
+    .title{
+        font-size: 34px;
+        font-family: 'GilroyBold';
+        line-height: 45px;
+        color: var(--gray-6);
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 20px;
+        line-height: 27px;
+        color: var(--gray-6);
+        font-family: 'GilroyMedium';
+        margin-bottom: 30px;
+    }
+}

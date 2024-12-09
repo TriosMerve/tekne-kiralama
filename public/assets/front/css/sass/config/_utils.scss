@@ -53,10 +53,11 @@ $colors: (
 
       input {
         width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        border: none;
-        color: $white;
+        height: 100%!important;
+        background-color: rgba(0, 0, 0, 0)!important;
+        border: none!important;
+        color: $white!important;
+        padding: 0!important;
       }
       @media screen and (max-width: 991.98px) {
         &:hover {
@@ -68,7 +69,12 @@ $colors: (
           color: $color;
 
           input {
-            color: $color;
+            color: $color!important;
+          }
+        }
+        &:hover{
+          input {
+            color: $color!important;
           }
         }
       }

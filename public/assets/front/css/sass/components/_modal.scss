@@ -1,6 +1,6 @@
 .modal {
   .modal-content {
-    max-height: 700px;
+    max-height: 750px;
     .modal-header {
       padding: 20px;
       // border-bottom: none;
@@ -49,7 +49,30 @@
     }
     .modal-body {
       padding: 20px;
+      &::-webkit-scrollbar {
+        background-color: rgba(217, 4, 62, 0.4);
+        width: 4px;
+        box-shadow: none;
+        border: none;
+        outline: 0;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--gray-4);
+        width: 4px;
+        box-shadow: none;
+        border: none;
+        outline: 0;
+        /* Chrome, Safari, Edge ve Opera için */
+      }
 
+      &::-webkit-scrollbar-track {
+        background-color: rgba(217, 4, 62, 0.4);
+        width: 4px;
+        box-shadow: none;
+        border: none;
+        outline: 0;
+        /* Chrome, Safari, Edge ve Opera için */
+      }
       .customAcc {
         .accordion-item {
           margin-bottom: 20px;
@@ -109,6 +132,19 @@
         }
       }
     }
+    .paragraph {
+      span,
+      h2 {
+        font-size: 19px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        line-height: 27px;
+        @media screen and (max-width:991.98px) {
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+    }
   }
   .customAcc {
     .accordion-item {
@@ -142,8 +178,114 @@
       }
     }
   }
+  .modalHead {
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    .modal-title {
+      font-family: "GilroySemibold";
+      font-size: 20px;
+      color: var(--primary);
+    }
+  }
+  &.type2 {
+    .modal-header {
+      border-bottom: none;
+      padding: 0;
+      .btn-close {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        z-index: 99;
+      }
+    }
+    .modalHead{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
-
+.hizmetlerModalBackButton {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  transition: all 0.3s linear;
+  .icon-arrow-right-2 {
+    transform: rotate(180deg);
+    display: flex;
+    font-size: 24px;
+    color: var(--white);
+    transition: all 0.3s linear;
+  }
+  @media screen and (min-width: 992px) {
+    &:hover {
+      background-color: var(--white);
+      .icon-arrow-right-2 {
+        color: var(--primary);
+      }
+    }
+  }
+}
+#UyeGirisiModal,
+#UyeOlModal,
+#sifremiUnuttumModal {
+  hr {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .modal-content {
+    min-height: 750px;
+    .modal-header {
+      .btn-close {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .modal-body {
+    padding: 50px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 480px) {
+      padding: 50px 20px;
+    }
+  }
+}
+#hizmetlerModal,
+#hizmetlerDetailsModal {
+  .modal-content {
+    padding-bottom: 30px;
+  }
+  .modal-header {
+    padding-left: 50px;
+    padding-right: 50px;
+    @media screen and (max-width: 480px) {
+      padding: 20px;
+    }
+  }
+  .modal-body {
+    padding: 20px 50px;
+    @media screen and (max-width: 480px) {
+      padding: 20px;
+    }
+  }
+}
+.priceInfo {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+}
 .propList {
   .listItem {
     .title {
@@ -153,6 +295,53 @@
       font-family: "GilroySemibold";
       box-shadow: none;
       padding: 20px 0 20px 0;
+    }
+  }
+}
+
+.ekstralarList {
+  padding-top: 10px;
+  .listItem {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid var(--gray-4);
+    .container-check {
+      .checkText {
+        font-size: 16px;
+        @media screen and (max-width:991.98px) {
+          font-size: 14px;
+        }
+      }
+    }
+    .textLink {
+      margin-left: 30px;
+      margin-top: 0;
+    }
+    .priceInfo {
+      & > span {
+        font-size: 13px;
+        color: var(--gray-6);
+      }
+
+      .countPrice {
+        color: var(--gray-6);
+        &:after {
+          content: "/";
+          font-size: 14px;
+          color: var(--gray-5);
+          display: inline-block;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .price {
+          font-size: 16px;
+          margin-right: 5px;
+          font-family: "GilroyMedium";
+          @media screen and (max-width:991.98px) {
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }

@@ -99,7 +99,7 @@ const swiperInstance = new Swiper(".verticalSwiper", {
 });
 
 // Tab değişikliklerinde ilgili slide'a geçiş ve güncelleme işlemleri
-$(".customTabs .nav-link").on("shown.bs.tab", function (e) {
+$(".boatTabWrapper .customTabs .nav-link").on("shown.bs.tab", function (e) {
   const tabIndex = $(e.target).parent().index(); // Aktif tab'ın index'ini al
 
   // DOM değişiklikleri için kısa bir gecikme ekleyin

@@ -1,0 +1,88 @@
+.userPageContainer {
+  .userHead {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    @media screen and (max-width: 540px) {
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
+    .userTitle {
+      font-family: "GilroySemibold";
+      font-size: 30px;
+      line-height: 40px;
+      color: var(--primary);
+      text-align: center;
+      @media screen and (max-width: 991.98px) {
+        font-size: 22px;
+      }
+    }
+  }
+  .userMenuCardList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    align-self: stretch;
+    margin-top: 50px;
+    @media screen and (max-width: 540px) {
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .menuCardItem {
+      width: calc(33.3% - 20px);
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 30px 20px;
+      min-height: 180px;
+      transition: all 0.3s linear;
+      @media screen and (max-width: 991.98px) {
+        width: calc(50% - 15px);
+      }
+      @media screen and (max-width: 540px) {
+        width: 100%;
+        min-height: 120px;
+      }
+      .title {
+        font-family: "GilroySemibold";
+        font-size: 20px;
+        line-height: 27px;
+        color: var(--primary);
+        @media screen and (max-width: 540px) {
+          font-size: 17px;
+          line-height: 25px;
+        }
+      }
+      p {
+        font-family: "GilroyRegular";
+        font-size: 15px;
+        line-height: 22px;
+        color: #545454;
+        margin-top: 25px;
+        @media screen and (max-width: 540px) {
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 15px;
+        }
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #cccccc;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        img {
+          max-width:30px;
+          max-height: 30px;
+          object-fit: contain;
+          height: initial;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        &:hover {
+          background-color: var(--gray);
+        }
+      }
+    }
+  }
+}

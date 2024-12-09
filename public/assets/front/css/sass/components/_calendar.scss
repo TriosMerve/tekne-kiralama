@@ -420,11 +420,11 @@
     }
 
     &.active {
-      color: var(--gray-6);
+      color: var(--primary);
     }
     @media screen and (min-width: 992px) {
       &:hover {
-        color: var(--gray-6);
+        color: var(--primary);
       }
     }
   }

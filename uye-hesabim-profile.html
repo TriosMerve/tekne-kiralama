@@ -53,11 +53,12 @@
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">    
+    
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
-    <link rel="stylesheet" href="public/assets/plugins/rangeSlider/nouislider.min.css">
+    <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
@@ -72,7 +73,7 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header">
+        <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
@@ -132,13 +133,13 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                       </div>
+                        </div>
                         <div class="dropdown">
                             <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class=""><span class="icon-user"></span> </div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item active" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
@@ -147,9 +148,10 @@
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
+
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="#" class="fixBtn button-outline">Üye Girişi</a>
-                            <a href="#" class="fixBtn button-primary">Üye Ol</a>
+                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
@@ -199,8 +201,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a href="#" class="fixBtn button-primary">Üye Girişi</a>
-                                        <a href="#" class="fixBtn button-secondary">Üye Ol</a>
+                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -479,118 +481,46 @@
         <main>
             <section class="pageSection">
                 <div class="container-3xl">
-                    <div class="sectionContent">
-                        <div class="breadCrumbWrapper">
-                            <div class="breadcrumb">
-                                <a href="index.html">TekneKiralama.com</a>
-                                <a href="#">Blog</a>
-                                <a href="#" class="active">Kiralık Tekne Bul</a>
-                            </div>
-                        </div>
-                        <div class="pageContent">
-                            <div class="sectionHead">
-                                <h1 class="sectionTitle">
-                                    Lokasyonları Keşfet
-                                </h1>
-                                <div class="sectionText type2">
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                    <div class="userPageContainer">
+                        <div class="row mx-0">
+                            <div class="sidenavWrapper d-none d-lg-block">
+                                <div class="sideNav">
+                                    <a class="active" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a>
+                                    <a href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a>
+                                    <a href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a>
+                                    <a href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a>
+                                    <a href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a>
+                                    <a href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a>
                                 </div>
                             </div>
-                            <div class="cards third blogCards">
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-1.jpg" alt="">
+                            <div class="sideContentWrapper">
+                                <div class="col-lg-10 col-xl-9 col-xxl-8 px-0">
+                                    <a href="javascript:history.back()" class="backLink"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
+                                    <div class="pageTitle">Profilim</div>
+                                    <blockquote class="blockquote">
+                                        <span class="icon-info"></span> <p>A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element.</p>
+                                        <span class="icon-plus closeBlockquote"></span>
+                                    </blockquote>
+                                    <div class="sideContent">
+                                        <div class="bg-gray rounded-5 p-5">
+                                            <div class="profileInfo">
+                                                <div class="userName profilItem">
+                                                    Enver Sarıgül
+                                                </div>
+                                                <div class="email profilItem">esarigul@trios.com.tr</div>
+                                                <a href="#" class="editButton" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="cardBody">
-                                        <div class="category">FETHİYE</div>
-                                        <div class="title pb-4 pb-lg-0">Fethiye’de görmeniz gereken 5 harika koyu keşfedin</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="category">BODRUM</div>
-                                        <div class="title pb-4 pb-lg-0">Bodrum’un en ünlü eğlence mekanlarının merak ediyor musunuz?</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-3.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="category">MUĞLA</div>
-                                        <div class="title pb-4 pb-lg-0">Muğla akşam saaatlerinde neler yapabilirsiniz?</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-4.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="category">FETHİYE</div>
-                                        <div class="title pb-4 pb-lg-0">Fethiye’de görmeniz gereken 5 harika koyu keşfedin</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="category">BODRUM</div>
-                                        <div class="title pb-4 pb-lg-0">Bodrum’un en ünlü eğlence mekanlarının merak ediyor musunuz?</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-6.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="category">MUĞLA</div>
-                                        <div class="title pb-4 pb-lg-0">Muğla akşam saaatlerinde neler yapabilirsiniz?</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="text-center mt-5 pt-lg-5">
-
-                                <a href="#" class="fixBtn button-outline type2">Daha Fazla Göster</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </section>
-            <!--E-Bulten section-->
-            <section class="eBultenSection">
-                <div class="container-3xl">
-                    <div class="bg-primary rounded-5 sectionWrapper">
-                        <div class="title">
-                            SİZDE MİSAFİRİMİZ OLMAK İSTER MİSİNİZ ?
-                        </div>
-                        <div class="emailInputWrapper">
-                            <input type="email"  placeholder="E-mail adresiniz">
-                            <a href="#" class="fixBtn button-outline type3">Abone ol</a>
-                        </div>
-                        <div id="captchaWrapper">
-                            <img src="public/assets/images/statics/captcha.png" alt="">
-                        </div>
+                
                     </div>
                 </div>
             </section>
-            
+
+
 
         </main>
 
@@ -598,123 +528,6 @@
         <footer>
             <div class="container-3xl">
                 <div class="bg-gray footer">
-                    <div class="footerTop">
-                        <div class="title">Sizin için hazırladığımız özel fikirler</div>
-                        <div class="verticalCustomScroll">
-                            <ul class="nav nav-tabs customTab footerTab" id="footerTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="gezilecekkoy-tab" data-bs-toggle="tab" data-bs-target="#gezilecekkoy-tab-pane" type="button" role="tab" aria-controls="gezilecekkoy-tab-pane" aria-selected="false">Gezilecek Koylar</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-content customTabContents" id="footerTabContent">
-                              <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
-                                <div class="listItems">
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Yat</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Göcek</div>
-                                        <div class="boatName">Kiralık Katamaran</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Gulet</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                </div>
-
-                              </div>
-                              <div class="tab-pane fade" id="gezilecekkoy-tab-pane" role="tabpanel" aria-labelledby="gezilecekkoy-tab" tabindex="0">
-                                <div class="listItems">
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Cennet Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Göcek</div>
-                                        <div class="boatName">Hattat Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Salih Adası</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Yalıkavak</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Turgutreis</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Bağla Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kissebükü Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Aspat Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Karaincir Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                  
-                                </div>
-                              </div>
-                              <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
-                                <div class="listItems">
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Yat</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Göcek</div>
-                                        <div class="boatName">Kiralık Katamaran</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Gulet</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                </div>
-                              </div>
-                          </div>
-                    </div>
-
                     <div class="footerContent">
                         <div class="leftColumn">
                             <div class="d-flex flex-column">
@@ -789,265 +602,218 @@
             </div>
         </footer>
     </div>
-
-    <!--modallar-->
-    <!--Bu filtreleme modalı sadece filtreleme olan sayfalar ıcın eklenmelı-->
-    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-                <div class="titleColumn">
-                    <div class="modal-title fs-5" id="filterModalLabel">Filtrele</div>
-                    <p>Mükemmel tekneleri bulun</p>
-                </div>
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
             </div>
             <div class="modal-body">
-                <div class="propList">
-                    <div class="listItem">
-                        <div class="title">Fiyat</div>
-                        <div class="rangesliderWrapper">
-                            <!-- Başlangıç ve bitiş değerleri için gösterim alanları -->
-                            <div class="valueTop">
-                                <span id="sliderStartValueDisplay"></span>
-                                <span id="sliderEndValueDisplay"></span>
-                            </div>
-                            <div id="rangeSlider"></div>
-
-                            <!-- Başlangıç ve bitiş değerleri için input alanları -->
-                             <div class="rangeInput">
-                                 <input type="text" id="sliderStartInput">
-                                 <input type="text" id="sliderEndInput">
-                            </div>
-                        </div>
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
                     </div>
                 </div>
-                <div class="accordion accordion-flush customAcc" id="filtrelemeAccordion">
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Tekne Tipi
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <div class="checkList">
-                                    <label class="container-check button type2">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark"> <span class="checkText">Gulet</span></span>
-                                    </label>
-                                    <label class="container-check button type2">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark"><span class="checkText">Yelkenli</span></span>
-                                        
-                                    </label>
-                                    <label class="container-check button type2">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                        <span class="checkText">Katamaran</span>
-                                    </span>
-                                    </label>
-                                    <label class="container-check button type2">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                        <span class="checkText">Motoryat</span>
-                                    </span>
-                                    </label>
-                                    <label class="container-check button type2">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                        <span class="checkText">Şişme Bot</span>
-                                    </span>
-                                    </label>
-                                    <label class="container-check button type2">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                        <span class="checkText">Sürat Teknesi</span>
-                                    </span>
-                                    </label>
-                                </div>
-                            </div>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                        Lütfen E-Posta Adresinizi Giriniz
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Mürettebat
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <div class="checkList">
-                                    <label class="container-check radioCheck">
-                                        <input type="radio" name="address">
-                                        <span class="checkmark"></span>
-                                        <span class="checkText">Tümün Göster</span>
-                                    </label>
-                                    <label class="container-check radioCheck">
-                                        <input type="radio" name="address">
-                                        <span class="checkmark"></span>
-                                        <span class="checkText">Kaptanlı Kiralama</span>
-                                    </label>
-                                    <label class="container-check radioCheck">
-                                        <input type="radio" name="address">
-                                        <span class="checkmark"></span>
-                                        <span class="checkText">Kaptansız Kiralama</span>
-                                    </label>
-                                </div>
-                            </div>
+                    <div class="mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                        <div class="invalid-feedback">
+                            Lütfen Parolanızı Giriniz
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Kapasite
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <div class="checkList">
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">Tümü</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">1-5</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">6-10</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">11-15</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">16-20</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">20+</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="mb-5 text-end">
+                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                            Seyir Kapasitesi
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <div class="checkList">
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">Tümü</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">5-10</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">11-20</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">21-30</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">30+</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Giriş Yap">
+                        </span>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                            Uzunluğu
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <div class="checkList">
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">Tümü</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">5-10</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">11-20</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">21-30</span>
-                                        </span>
-                                    </label>
-                                    <label class="container-check button">
-                                        <input type="checkbox" name="address">
-                                        <span class="checkmark">
-                                            <span class="checkText">30+</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </form>
+                <hr class="my-5">
+                <div class="otherLogin">
+                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
                 </div>
+                <div class="signText paragraph text-center pt-4">
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                </div>
+                
             </div>
           </div>
         </div>
     </div>
 
 
+    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
+                    <div class="stepHead">
+                        <span class="">1</span>
+                        <span>2</span>
+                    </div>
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
+                    </div>
+                </div>
+                <div class="signupFormSteps">
+                    <div class="stepOne">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                <div class="invalid-feedback">
+                                Lütfen E-Posta Adresinizi Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Devam Et">
+                                </span>
+                            </div>
+                        </form>
+                        <hr class="my-5">
+                        <div class="otherLogin">
+                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                        </div>
+                    </div>
+                    <div class="stepTwo d-none">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Adınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Soyadınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Parolanızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-5 ps-3">
+                                <label class="container-check">
+                                    <input type="checkbox" name="address">
+                                    <span class="checkmark"></span>
+                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Hesap Oluştur">
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
+                    </div>
+                </div>
+                <blockquote class="blockquote">
+                    <span class="icon-info"></span> 
+                    <p>
+                        Your account is not verified. <a href="#">Resend confirmation</a>
+                    </p>
+                </blockquote>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Adınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Soyadınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="phoneWrapper">
+                            <div class="codeWrapper position-relative">
+                                <input type="tel" placeholder="" id="telephone">
+                            </div>
+                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                            <div class="invalid-feedback w-100">
+                                Lütfen Telefon Numaranızı Giriniz
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Kaydet">
+                        </span>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
+    <script src="public/assets/plugins/jquery.easing.min.js"></script>
+    <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
+    <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
 
+
+    <script src="public/assets/plugins/jquery.mask.min.js"></script>
+    <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
+
     <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script>
+
+    </script>
 </body>
 
 </html>

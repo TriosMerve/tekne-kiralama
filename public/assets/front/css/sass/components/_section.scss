@@ -686,16 +686,15 @@ section,
     box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
     border: none;
 
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       width: 40px;
       min-width: 40px;
       padding: 0;
       right: 16px;
       bottom: 16px;
     }
-    .icon-share{
+    .icon-share {
       font-size: 22px;
-      
     }
   }
   .allButton {
@@ -706,14 +705,14 @@ section,
     border-radius: 30px;
     box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
     border: none;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       width: 40px;
       min-width: 40px;
       padding: 0;
       left: 16px;
       bottom: 16px;
     }
-    .icon-gallery{
+    .icon-gallery {
       font-size: 22px;
     }
   }
@@ -852,6 +851,9 @@ section,
       }
     }
   }
+  &.type3 {
+    font-size: 14px;
+  }
 }
 
 .socialShareWrapper {
@@ -889,10 +891,10 @@ section,
   }
   .pageDetailsContent {
     width: calc(100% - 550px);
-    @media screen and (max-width:1600px) {
+    @media screen and (max-width: 1600px) {
       width: calc(100% - 500px);
     }
-    @media screen and (max-width:1440px) {
+    @media screen and (max-width: 1440px) {
       width: calc(100% - 450px);
     }
     @media screen and (max-width: 991.98px) {
@@ -1245,7 +1247,7 @@ section,
         position: absolute;
         left: 0;
         bottom: 0;
-        @media screen and (max-width: 991.98px){
+        @media screen and (max-width: 991.98px) {
           bottom: -2px;
         }
       }
@@ -1284,8 +1286,8 @@ section,
     display: flex;
     align-items: flex-start;
     padding: 10px 0;
-    &:first-child{
-      @media screen and (max-width:991.98px) {
+    &:first-child {
+      @media screen and (max-width: 991.98px) {
         padding-top: 0;
       }
     }
@@ -1321,7 +1323,7 @@ section,
       align-items: stretch;
       gap: 30px;
       flex-wrap: wrap;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         gap: 15px;
       }
 
@@ -1399,7 +1401,7 @@ section,
       width: 20%;
       padding: 0 5px;
       gap: 10px 0;
-      @media screen and (max-width:1200px) {
+      @media screen and (max-width: 1200px) {
         width: 33.3%;
       }
       @media screen and (max-width: 991.98px) {
@@ -1421,8 +1423,7 @@ section,
       padding: 15px 0;
       @media screen and (max-width: 570px) {
         width: 100%;
-        padding:7px 0;
-
+        padding: 7px 0;
       }
       .title {
         width: initial;
@@ -1534,7 +1535,7 @@ section,
   @media screen and (max-width: 991.98px) {
     height: 400px;
   }
-  img{
+  img {
     min-height: 100%;
     object-fit: cover;
   }
@@ -1549,7 +1550,7 @@ section,
   }
   &.half {
     & > div {
-      width: 100%!important;
+      width: 100% !important;
       @media screen and (min-width: 1100px) {
         max-width: calc(50% - 15px);
       }
@@ -1702,13 +1703,13 @@ section,
     }
     @media screen and (max-width: 540px) {
     }
-    .visitItem{
+    .visitItem {
       width: calc(33.3% - 27px);
       @media screen and (max-width: 991.98px) {
         width: calc(50% - 20px);
       }
       @media screen and (max-width: 540px) {
-        width:auto;
+        width: auto;
       }
     }
     a {
@@ -1719,16 +1720,15 @@ section,
       display: inline-flex;
       transition: all 0.3s linear;
       width: auto;
-      
 
-      &:after{
+      &:after {
         content: "";
         width: 100%;
         // border-bottom: 1px solid var(--primary);
         position: absolute;
         left: 0;
         bottom: -3px;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
         border-bottom: 1px solid var(--gray-5);
       }
 
@@ -1739,9 +1739,9 @@ section,
       }
     }
 
-    &.type2{
-      .visitItem{
-        @media screen and (max-width:1200px) {
+    &.type2 {
+      .visitItem {
+        @media screen and (max-width: 1200px) {
           width: calc(50% - 20px);
         }
       }
@@ -1753,11 +1753,11 @@ section,
   align-items: center;
   margin-bottom: 20px;
   margin-left: auto;
-  @media screen and (max-width:1440px) {
+  @media screen and (max-width: 1440px) {
     flex-direction: column;
     align-items: flex-start;
   }
-  @media screen and (max-width:991.98px) {
+  @media screen and (max-width: 991.98px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -1785,15 +1785,15 @@ section,
   .startWrapper {
     color: var(--primary);
     padding-left: 40px;
-    @media screen and (max-width:1600px) {
+    @media screen and (max-width: 1600px) {
       padding-left: 30px;
     }
-    @media screen and (max-width:1440px) {
+    @media screen and (max-width: 1440px) {
       padding-left: 0;
     }
     span {
       font-size: 19px;
-      @media screen and (max-width:1400px) {
+      @media screen and (max-width: 1400px) {
         font-size: 18px;
       }
       @media screen and (max-width: 991.98px) {
@@ -1806,7 +1806,7 @@ section,
   height: 110px;
   overflow: hidden;
   transition: all 0.3s linear;
-  @media screen and (max-width:991.98px) {
+  @media screen and (max-width: 991.98px) {
     height: 100px;
   }
   &.opened {
@@ -1865,8 +1865,8 @@ section,
       gap: 10px;
       .icon-user {
         font-size: 72px;
-        @media screen and (max-width:991.98px) {
-          font-size: 45px; 
+        @media screen and (max-width: 991.98px) {
+          font-size: 45px;
         }
       }
       .title {
@@ -1874,8 +1874,8 @@ section,
         color: var(--text);
         line-height: 22px;
         font-family: "GilroyRegular";
-        @media screen and (max-width:991.98px) {
-          font-size: 13px; 
+        @media screen and (max-width: 991.98px) {
+          font-size: 13px;
           line-height: 20px;
         }
       }
@@ -1885,8 +1885,8 @@ section,
         line-height: 27px;
         color: var(--text);
         border-bottom: 1px solid var(--text);
-        @media screen and (max-width:991.98px) {
-          font-size: 15px; 
+        @media screen and (max-width: 991.98px) {
+          font-size: 15px;
           line-height: 22px;
         }
       }
@@ -1910,7 +1910,7 @@ section,
       height: 85px;
       overflow: hidden;
       transition: all 0.3s linear;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         height: 75px;
       }
       &.opened {
@@ -1922,8 +1922,8 @@ section,
       font-size: 16px;
       line-height: 28px;
       color: var(--gray-7);
-      @media screen and (max-width:991.98px) {
-        font-size: 14px; 
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
         line-height: 25px;
       }
       span {
@@ -1991,9 +1991,10 @@ section,
   @media screen and (max-width: 991.98px) {
     width: 100%;
   }
-  .boatType{
+  .boatType {
     justify-content: flex-start;
     padding-bottom: 10px;
+    padding-left: 32px;
     @media screen and (max-width: 991.98px) {
       position: absolute;
       left: 17px;
@@ -2001,6 +2002,14 @@ section,
       z-index: -1;
       height: 50px;
       padding-bottom: 0;
+    }
+  }
+  &:not(.show) {
+    .boatType {
+      position: relative;
+      z-index: 1;
+      left: 0;
+      width: 100%;
     }
   }
   &.show {
@@ -2059,7 +2068,7 @@ section,
           // align-items: center;
         }
       }
-      .dateInputs{
+      .dateInputs {
         opacity: 0;
       }
 
@@ -2070,7 +2079,7 @@ section,
         background-color: var(--white);
         box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
         padding-top: 40px;
-        .dateInputs{
+        .dateInputs {
           opacity: 1;
         }
 
@@ -2081,7 +2090,7 @@ section,
             justify-content: flex-start;
             padding-left: 0;
             padding-right: 0;
-            box-shadow: none!important;
+            box-shadow: none !important;
           }
         }
       }
@@ -2095,14 +2104,39 @@ section,
       }
     }
   }
-
-  &.selected{
-    .boatType{
-      @media screen and (max-width:991.98px) {
-        z-index: 99;
+  .chooseHourWrapper {
+    .customSelect {
+      &.open {
+        .list {
+          @media screen and (max-width: 991.98px) {
+            top: auto; /* Varsayılan `bottom` pozisyonunu etkisizleştir */
+            bottom: 100%; /* Üst tarafa hizala */
+            transform-origin: bottom; /* Yukarı doğru animasyon başlat */
+            transform: scaleY(1); /* Açık durumda */
+            transition: transform 0.3s ease-in-out;
+          }
+        }
       }
     }
   }
+  &.selected {
+    .boatType {
+      @media screen and (max-width: 991.98px) {
+        z-index: 1;
+      }
+    }
+    .chooseHourWrapper {
+      .customSelect {
+        .list {
+          @media screen and (max-width: 991.98px) {
+            transform: scaleY(1);
+            visibility: visible; /* Görünür yap */
+          }
+        }
+      }
+    }
+  }
+
   // &.absolute{
   //   position: absolute!important;
   //   bottom: 0;
