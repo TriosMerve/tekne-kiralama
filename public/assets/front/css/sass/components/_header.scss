@@ -113,21 +113,42 @@ header {
   &:after {
     display: none;
   }
+  @media screen and (max-width: 991.98px){
+    position: relative;
+    z-index: 9999;
+
+    &.show{
+      transform: translateX(34px)!important;
+      .icon-user{
+        background-color: var(--primary);
+        color: var(--white);
+        border-radius: 6px;
+        &:before{
+          content: "\e922";
+        }
+      }
+    }
+  }
 
   & ~ .dropdown-menu {
-    box-shadow: 0 2px 4px rgba(39, 54, 86, 0.14), 0 1px 10px rgba(39, 54, 86, 0.2);
+    box-shadow: 0 2px 4px rgba(39, 54, 86, 0.14),
+      0 1px 10px rgba(39, 54, 86, 0.2);
     border: none;
     border-radius: 24px;
-    padding: 20px 30px;
+    padding: 20px 40px 20px 25px;
     .dropdown-item {
       display: flex;
       align-items: center;
-      font-size: 14px;
+      font-size: 16px;
       gap: 10px;
       font-family: "GilroyMedium";
-      height: 30px;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      min-height: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 0;
+      @media screen and (max-width:991.98px) {
+        font-family: 'GilroySemibold';
+      }
       .icon {
         width: 24px;
         height: 24px;
@@ -135,10 +156,15 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        
         img {
           max-width: 18px;
           max-height: 18px;
           object-fit: contain;
+          @media screen and (max-width:991.98px) {
+            max-width: 22px;
+            max-height: 22px;
+          }
         }
       }
       &:hover {
@@ -149,6 +175,21 @@ header {
         background-color: rgba(0, 0, 0, 0);
         color: var(--primary);
         font-size: "GilroySemibold";
+      }
+      @media screen and (max-width:991.98px) {
+        min-height: 45px;
+      }
+    }
+    @media screen and (max-width: 991.98px) {
+      position: fixed!important;
+      width: 100%;
+      height: 100%;
+      transform: translate(0, 100%)!important;
+      border-radius: 0;
+      padding-top: 70px;
+      transition: all .3s linear!important;
+      &.show {
+        transform: translate(0, 0)!important;
       }
     }
   }

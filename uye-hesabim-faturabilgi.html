@@ -145,6 +145,7 @@
                                 <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <hr>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
@@ -490,17 +491,68 @@
                                     <a href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a>
                                     <a class="active" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a>
                                     <a href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a>
+                                    <hr>
+                                    <a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a>
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
-                                <div class="col-lg-10 col-xl-9 col-xxl-8 px-0">
-                                    <a href="javascript:history.back()" class="backLink"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
-                                    <div class="pageTitle">Fatura Bilgilerim</div>
+                                <div class="col-xl-9 px-0">
+                                    <div class="sideHead">
+                                        <div class="pageTitle">Fatura Bilgilerim</div>
+                                        <a href="javascript:history.back()" class="backLink ms-auto"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
+                                    </div>
                                     <blockquote class="blockquote">
                                         <span class="icon-info"></span> <p>A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element.</p>
                                         <span class="icon-plus closeBlockquote"></span>
                                     </blockquote>
                                     <div class="sideContent">
+                                        <div class="invoiceWrapper">
+                                            <div class="invoiceItem">
+                                                <div class="profileInfo readonlyForm type2">
+                                                    <a href="#" class="invoiceShow ms-auto d-none">Gizle</a>
+                                                    <div class="profilItem">
+                                                        <div class="d-flex align-items-center profilHead">
+                                                            <div class="title">Fatura Bilgilerinizi Giriniz</div>
+                                                        </div>
+                                                        <div class="row mx-0 pt-4">
+                                                            <div class="adressTitle col-lg-6 ps-lg-0 mb-3">
+                                                                <label for="adresbasligi">Adres Başlığı</label>
+                                                                <input type="text" placeholder="Adres Başlığı" required>
+                                                                <div class="invalid-message">Lütfen Adres Başlığı giriniz</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mx-0">
+                                                            <div class="mb-3 px-lg-0">
+                                                                <label for="faturaadi">Fatura Adı</label>
+                                                                <input type="text" placeholder="Fatura Adı" value="" autocomplete="off" required>
+                                                                <div class="invalid-message">Lütfen Fatura Adını giriniz</div>
+                                                            </div>
+                                                            <div class="mb-3 px-lg-0">
+                                                                <label for="faturaadresi">Fatura Adresi</label>
+                                                                <input type="text" placeholder="Fatura Adresi" value="" autocomplete="off" required>
+                                                                <div class="invalid-message">Lütfen Fatura Adresini giriniz</div>
+                                                            </div>
+                                                            <div class="col-lg-6 mb-3 ps-lg-0">
+                                                                <label for="vergiNo">Vergi Numarası</label>
+                                                                <input type="text" placeholder="Vergi Numarası" class="numberMask2" value="" autocomplete="off" required>
+                                                                <div class="invalid-message">Lütfen Vergi Numarasını giriniz</div>
+                                                                <div class="wrong-message">Bu alana sadece sayı girilebilir</div>
+                                                            </div>
+                                                            <div class="col-lg-6 mb-3 pe-lg-0">
+                                                                <label for="vergiDairesi">Vergi Dairesi</label>
+                                                                <input type="text" placeholder="Vergi Dairesi" value="" autocomplete="off" required>
+                                                                <div class="invalid-message">Lütfen Vergi Dairesini giriniz</div>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        <a href="#" class="saveButton"><span class="icon-save"></span><span>Adresi Kaydet</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div>
+                                            <a href="#" class="invoiceAddButton"><span class="icon-plus"></span></a>
+                                        </div> -->
                                         <div class="border border-gray rounded-5 p-5">
                                             <div class="notDataContent">
                                                 <div class="title">Henüz fatura bilgisi girilmemiştir.</div>
@@ -805,10 +857,253 @@
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
     <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
-    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script>
+        $(document).on("click", ".invoiceShow", function(){
+            if($(this).hasClass("hide")){
+                console.log("ddddd")
+                $(this).removeClass("hide")
+                $(this).next(".profilItem").removeClass("hide");
+                $(this).text('Gizle');
+            }
+            else{
+                $(this).addClass("hide")
+                $(this).next(".profilItem").addClass("hide")
+                $(this).html('<span class="icon-plus"></span> Yeni Adres Ekle');
+                console.log("sss")
+            }
+        });
+
+
+        document.querySelector('.saveButton').addEventListener('click', function (e) {
+            e.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
+
+            const profilItem = document.querySelector('.profilItem');
+            const inputs = profilItem.querySelectorAll('input');
+            let isValid = true; // Form geçerliliğini kontrol etmek için bir bayrak
+
+            // Input değerlerini kontrol et
+            inputs.forEach(input => {
+                const container = input.closest("div"); // Input'un kapsayıcı öğesi
+                if (!input.value.trim()) {
+                    // Eğer input boşsa, error sınıfı ekle
+                    input.classList.add('error');
+                    if (container) container.classList.add('error');
+                    isValid = false; // Geçersiz olduğu için bayrağı false yap
+                } else {
+                    // Eğer input doluysa, mevcut error sınıfını kaldır
+                    input.classList.remove('error');
+                    if (container) container.classList.remove('error');
+                }
+            });
+
+            // Eğer form geçerli değilse işlemi sonlandır
+            if (!isValid) {
+                console.log('Lütfen tüm alanları doldurunuz.');
+                return;
+            }
+
+            // .title öğesini geçici olarak DOM'dan kaldır
+            const titleElement = profilItem.querySelector('.profilHead');
+            if (titleElement) {
+                titleElement.remove();
+            }
+
+            // .profilItem içindeki input değerlerini kopyala
+            const clonedItem = profilItem.cloneNode(true); // Derin kopyalama (inputlar dahil)
+
+            // Yeni oluşturulan öğede input değerlerini sıfırlama ve readonly yapma
+            const clonedInputs = clonedItem.querySelectorAll('input');
+            clonedInputs.forEach(input => {
+                input.value = input.value.trim() || input.placeholder; // Girilen değer ya da placeholder
+                input.readOnly = true; // Inputları readonly yap
+            });
+
+            // Save butonunu kaldırma
+            const saveButton = clonedItem.querySelector('.saveButton');
+            if (saveButton) {
+                saveButton.remove();
+            }
+
+            // Yeni delete buton olusturma
+            const deleteButton = document.createElement('a');
+            deleteButton.href = '#';
+            deleteButton.classList.add('deleteButton');
+            deleteButton.innerHTML = `<span class="icon-delete"></span><span>Adresi Sil</span>`;
+
+            // Delete butonuna tıklandığında, profilItem'ı sil
+            deleteButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Sayfa yenilenmesini engelle
+                clonedItem.remove(); // Profil öğesini sil
+            });
+
+            // Yeni bir Edit butonu oluşturma
+            const editButton = document.createElement('a');
+            editButton.href = '#';
+            editButton.classList.add('editButton');
+            editButton.innerHTML = `<span class="icon-edit"></span><span>Adresi Düzenle</span>`;
+            editButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Sayfa yenilenmesini engelle
+
+                // Kapsayıcıdaki inputlardan readonly kaldır ve sınıf güncelle
+                const editableInputs = clonedItem.querySelectorAll('input');
+                editableInputs.forEach(input => {
+                    input.readOnly = false;
+                });
+                clonedItem.classList.add('edit'); // Edit sınıfını ekle
+                clonedItem.classList.remove('approve'); // Approve sınıfını kaldır
+
+                // Düzenle butonunu kaldır ve yerine Kaydet butonu ekle
+                editButton.remove();
+                const saveChangesButton = document.createElement('a');
+                saveChangesButton.href = '#';
+                saveChangesButton.classList.add('saveChangesButton');
+                saveChangesButton.innerHTML = `<span class="icon-save"></span><span>Adresi Kaydet</span>`;
+                saveChangesButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Inputları tekrar readonly yap ve sınıf güncelle
+                    editableInputs.forEach(input => {
+                        input.readOnly = true;
+                    });
+                    clonedItem.classList.remove('edit'); // Edit sınıfını kaldır
+                    clonedItem.classList.add('approve'); // Approve sınıfını ekle
+
+                    // Kaydet butonunu kaldır ve tekrar Düzenle butonu ekle
+                    saveChangesButton.remove();
+                    clonedItem.appendChild(editButton);
+
+                    saveChangesButton.innerHTML = '<span class="icon-plus"></span> Yeni Adres Ekle'; // Kaydet butonunun içeriğini değiştirme
+                });
+
+                clonedItem.appendChild(saveChangesButton);
+            });
+
+            clonedItem.appendChild(editButton); // Yeni öğeye Edit butonunu ekleme
+            clonedItem.appendChild(deleteButton); // Yeni öğeye Delete butonunu ekleme
+
+            // Yeni öğeyi profileInfo'nun sonuna ekleme
+            document.querySelector('.profileInfo').appendChild(clonedItem);
+
+            // Kopyalanan profilItem öğesine approve sınıfını ekleme
+            clonedItem.classList.add('approve');
+
+            // Orijinal input değerlerini sıfırlama
+            inputs.forEach(input => {
+                input.value = ''; // Değerleri sıfırlama
+            });
+
+            // .title öğesini tekrar ekle
+            if (titleElement) {
+                profilItem.prepend(titleElement);
+            }
+
+            // Kaydet butonuyla ilgili işlem sonrası .invoiceShow davranışı
+            const invoiceShowButton = clonedItem.querySelector('.invoiceShow');
+            if (invoiceShowButton) {
+                invoiceShowButton.addEventListener('click', function () {
+                    if ($(this).hasClass("hide")) {
+                        $(this).removeClass("hide");
+                        $(this).next(".profilItem").removeClass("show");
+                        $(this).html('<span class="icon-plus"></span> Yeni Adres Ekle');
+                    } else {
+                        $(this).addClass("hide");
+                        $(this).next(".profilItem").addClass("show");
+                        $(this).text('Gizle');
+                    }
+                });
+            }
+        });
+
+
+
+    //    $(document).on("click", ".invoiceAddButton", function (e) {
+    //         e.preventDefault();
+
+    //         // Mevcut profileInfo'yu klonla
+    //         const profileInfoClone = $(".invoiceItem .profileInfo").first().clone();
+
+    //         // 1. Klonlanan elemandaki input'lardan readonly ve disabled özelliklerini kaldır
+    //         profileInfoClone.find("input").not("input[type='radio']").prop("readonly", false).prop("disabled", false).val("");
+
+    //         // 3. Edit butonunu kaldır ve Kaydet butonunu ekle
+    //         profileInfoClone.find(".editButton").remove();
+    //         profileInfoClone.find(".saveButton").remove();
+    //         profileInfoClone.find(".profilItem").removeClass("approve");
+    //         const saveButton = `<a href="#" class="saveButton"><span class="icon-save"></span><span>Adresi Kaydet</span></a>`;
+    //         profileInfoClone.find(".profilItem").append(saveButton);
+
+    //         // 4. Klonlanan elemanı .invoiceWrapper içine ekle
+    //         $(".profileInfo").append(`${profileInfoClone.prop("outerHTML")}`);
+
+    //         // 2. Klonlanan input'ların değerlerini boş yap
+    //         profileInfoClone.find("input").val(''); // Her input'un değerini boş yap
+    //     });
+
+        // $(document).on("click", ".editButton", function (e) {
+        //     e.preventDefault();
+
+        //     const parent = $(this).closest(".profileInfo");
+
+        //     // 1. Edit butonunu kaldır
+        //     $(this).remove();
+
+        //     // 2. Tüm input'lardan readonly ve disabled özelliklerini kaldır
+        //     parent.find("input").not("input[type='radio']").prop("readonly", false).prop("disabled", false);
+
+        //     // 3. Kaydet butonunu ekle
+        //     const saveButton = `<a href="#" class="saveButton"><span class="icon-save"></span><span>Adresi Kaydet</span></a>`;
+        //     parent.find(".profilItem").append(saveButton);
+
+        //     // 4. profileItem'a "edit" sınıfını ekle ve "approve" sınıfını kaldır
+        //     parent.closest(".invoiceItem").find(".profilItem").addClass("edit").removeClass("approve");
+        // });
+
+        // $(document).on("click", ".saveButton", function (e) {
+        //     e.preventDefault();
+
+        //     const parent = $(this).closest(".profileInfo");
+
+        //     // 1. Tüm input'ları tekrar readonly ve disabled yap, sadece radio hariç
+        //     parent.find("input").not("input[type='radio']").prop("readonly", true).prop("disabled", true);
+
+        //     // 2. Kaydet butonunu kaldır
+        //     $(this).remove();
+
+        //     // 3. Edit butonunu geri ekle
+        //     const editButton = `<a href="#" class="editButton"><span class="icon-edit"></span><span>Adresi Düzenle</span></a>`;
+        //     parent.find(".profilItem").append(editButton);
+
+        //     // 4. .radioCheck içerisindeki radio input'ları kontrol et
+        //     parent.find(".radioCheck input[type='radio']").each(function () {
+        //         if ($(this).is(":checked")) {
+        //             console.log(`Radio button işaretli: ${$(this).val()}`);
+        //         } else {
+        //             console.log(`Radio button işaretli değil: ${$(this).val()}`);
+        //         }
+        //     });
+
+        //     // 5. profileItem'a "approve" sınıfını ekle ve "edit" sınıfını kaldır
+        //     parent.closest(".invoiceItem").find(".profilItem").addClass("approve").removeClass("edit");
+        // });
+
+
+        // $(document).on("click", ".radioCheck", function (e) {
+        //     e.preventDefault();
+
+        //     // İçerisindeki input'u seç
+        //     const inputElement = $(this).find("input[type='radio']");
+
+        //     // Checked kontrolü
+        //     if (inputElement.is(":checked")) {
+        //         console.log("Radio button checked kaldırıldı.");
+        //     } else {
+        //         console.log("Radio button checked durumda.");
+        //     }
+
+        //     // Alternatif: Checked durumu tersine çevirmek için (Opsiyonel)
+        //     inputElement.prop("checked", !inputElement.prop("checked"));
+        // });
 
     </script>
 </body>

@@ -279,6 +279,18 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-delete:before {
+  content: "\e934";
+}
+
+.icon-save:before {
+  content: "\e933";
+}
+
+.icon-edit:before {
+  content: "\e932";
+}
+
 .icon-share:before {
   content: "\e930";
 }
@@ -1782,6 +1794,36 @@ video {
   flex: 1;
 }
 
+.readonlyForm input {
+  border: 1px solid var(--gray-4);
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--white);
+  border-radius: 6px;
+  color: var(--gray-6);
+  width: 100%;
+}
+.readonlyForm input.error {
+  border-color: var(--primary);
+}
+.readonlyForm input.is-invalid ~ .wrong-message {
+  display: block;
+}
+.readonlyForm .invalid-message,
+.readonlyForm .wrong-message {
+  display: none;
+  color: var(--primary);
+  font-size: 12px;
+  font-family: "GilroySemibold";
+}
+.readonlyForm .wrong-message {
+  color: #e94a00;
+}
+.readonlyForm .error .invalid-message {
+  display: block;
+}
+
 .headerMenuNav {
   width: 100vw;
   height: 100vh;
@@ -2501,21 +2543,44 @@ header.sticky-top.transitionTop, header.sticky.transitionTop {
 .userButton:after {
   display: none;
 }
+@media screen and (max-width: 991.98px) {
+  .userButton {
+    position: relative;
+    z-index: 9999;
+  }
+  .userButton.show {
+    transform: translateX(34px) !important;
+  }
+  .userButton.show .icon-user {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 6px;
+  }
+  .userButton.show .icon-user:before {
+    content: "\e922";
+  }
+}
 .userButton ~ .dropdown-menu {
   box-shadow: 0 2px 4px rgba(39, 54, 86, 0.14), 0 1px 10px rgba(39, 54, 86, 0.2);
   border: none;
   border-radius: 24px;
-  padding: 20px 30px;
+  padding: 20px 40px 20px 25px;
 }
 .userButton ~ .dropdown-menu .dropdown-item {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   gap: 10px;
   font-family: "GilroyMedium";
-  height: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  min-height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .userButton ~ .dropdown-menu .dropdown-item {
+    font-family: "GilroySemibold";
+  }
 }
 .userButton ~ .dropdown-menu .dropdown-item .icon {
   width: 24px;
@@ -2531,6 +2596,12 @@ header.sticky-top.transitionTop, header.sticky.transitionTop {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (max-width: 991.98px) {
+  .userButton ~ .dropdown-menu .dropdown-item .icon img {
+    max-width: 22px;
+    max-height: 22px;
+  }
+}
 .userButton ~ .dropdown-menu .dropdown-item:hover {
   background-color: rgba(0, 0, 0, 0);
   color: var(--primary);
@@ -2539,6 +2610,25 @@ header.sticky-top.transitionTop, header.sticky.transitionTop {
   background-color: rgba(0, 0, 0, 0);
   color: var(--primary);
   font-size: "GilroySemibold";
+}
+@media screen and (max-width: 991.98px) {
+  .userButton ~ .dropdown-menu .dropdown-item {
+    min-height: 45px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .userButton ~ .dropdown-menu {
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100%) !important;
+    border-radius: 0;
+    padding-top: 70px;
+    transition: all 0.3s linear !important;
+  }
+  .userButton ~ .dropdown-menu.show {
+    transform: translate(0, 0) !important;
+  }
 }
 
 .menuNavButton {
@@ -10867,47 +10957,185 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 14px;
   height: auto;
   line-height: 16px;
-  margin-bottom: 40px;
+  margin-top: 10px;
 }
 @media screen and (min-width: 992px) {
   .sideContentWrapper .backLink:hover {
     color: var(--primary);
   }
 }
+.sideContentWrapper .sideHead {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
 .sideContentWrapper .pageTitle {
   font-size: 26px;
   line-height: 38px;
-  font-family: "GilroyMedium";
-  color: var(--gray-6);
-  margin-bottom: 24px;
+  font-family: "GilroyBold";
+  color: var(--primary);
 }
 .sideContentWrapper .profileInfo .profilItem {
   font-size: 14px;
   font-family: "GilroyMedium";
   line-height: 22px;
   color: var(--gray-7);
-  padding: 7px 0;
 }
-.sideContentWrapper .profileInfo .editButton {
+.sideContentWrapper .profileInfo .profilItem .title {
+  font-size: 18px;
+  color: var(--primary);
+  font-family: "GilroySemibold";
+}
+.sideContentWrapper .profileInfo .invoiceShow {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--primary);
+  gap: 10px;
+  transition: all 0.3s linear;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-family: "GilroySemibold";
+  margin-top: 40px;
+}
+@media screen and (min-width: 992px) {
+  .sideContentWrapper .profileInfo .invoiceShow:hover {
+    color: green;
+  }
+}
+.sideContentWrapper .profileInfo .invoiceShow + .profilItem.hide {
+  height: 80px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.sideContentWrapper .profileInfo .invoiceShow + .profilItem.hide .profilHead {
+  margin-bottom: 30px;
+}
+.sideContentWrapper .profileInfo .invoiceShow + .profilItem.hide.show {
+  height: auto;
+  overflow: visible;
+}
+.sideContentWrapper .profileInfo .editButton,
+.sideContentWrapper .profileInfo .saveButton,
+.sideContentWrapper .profileInfo .saveChangesButton,
+.sideContentWrapper .profileInfo .deleteButton {
   font-family: "GilroySemibold";
   color: var(--primary);
   position: relative;
   margin-top: 30px;
   display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.sideContentWrapper .profileInfo .editButton .icon-edit,
+.sideContentWrapper .profileInfo .editButton .icon-save,
+.sideContentWrapper .profileInfo .editButton .icon-delete,
+.sideContentWrapper .profileInfo .saveButton .icon-edit,
+.sideContentWrapper .profileInfo .saveButton .icon-save,
+.sideContentWrapper .profileInfo .saveButton .icon-delete,
+.sideContentWrapper .profileInfo .saveChangesButton .icon-edit,
+.sideContentWrapper .profileInfo .saveChangesButton .icon-save,
+.sideContentWrapper .profileInfo .saveChangesButton .icon-delete,
+.sideContentWrapper .profileInfo .deleteButton .icon-edit,
+.sideContentWrapper .profileInfo .deleteButton .icon-save,
+.sideContentWrapper .profileInfo .deleteButton .icon-delete {
+  font-size: 24px;
+  transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
-  .sideContentWrapper .profileInfo .editButton:after {
-    content: "";
-    width: 0;
-    border-bottom: 1px dotted var(--primary);
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    transition: all 0.3s linear;
+  .sideContentWrapper .profileInfo .editButton:hover,
+  .sideContentWrapper .profileInfo .saveButton:hover,
+  .sideContentWrapper .profileInfo .saveChangesButton:hover,
+  .sideContentWrapper .profileInfo .deleteButton:hover {
+    color: var(--gray-7);
   }
-  .sideContentWrapper .profileInfo .editButton:hover:after {
-    width: 100%;
+  .sideContentWrapper .profileInfo .editButton:hover .icon-edit,
+  .sideContentWrapper .profileInfo .saveButton:hover .icon-edit,
+  .sideContentWrapper .profileInfo .saveChangesButton:hover .icon-edit,
+  .sideContentWrapper .profileInfo .deleteButton:hover .icon-edit {
+    transform: translateY(-2px);
   }
+}
+.sideContentWrapper .profileInfo .saveButton {
+  color: green;
+}
+@media screen and (min-width: 992px) {
+  .sideContentWrapper .profileInfo .saveButton:hover {
+    color: var(--primary);
+  }
+}
+.sideContentWrapper .profileInfo .deleteButton {
+  float: right;
+}
+.sideContentWrapper .profileInfo.type2 {
+  display: flex;
+  flex-direction: column;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem {
+  border: 1px solid #dee2e6;
+  padding: 30px;
+  border-radius: 24px;
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 0;
+  background-color: var(--gray);
+}
+.sideContentWrapper .profileInfo.type2 .profilItem label {
+  color: var(--text-2);
+  font-size: 14px;
+  font-family: "GilroySemibold";
+  margin-bottom: 4px;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem input {
+  color: var(--text-2);
+  font-size: 14px;
+  font-family: "GilroyMedium";
+}
+.sideContentWrapper .profileInfo.type2 .profilItem input::-moz-placeholder {
+  opacity: 0.4;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem input::placeholder {
+  opacity: 0.4;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem input::-moz-placeholder {
+  opacity: 0.4;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem input::-webkit-input-placeholder {
+  opacity: 0.4;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem .container-check {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem .container-check .checkmark {
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  width: 36px;
+  height: 36px;
+  margin-right: 0;
+  border-radius: 0 20px 0 7px;
+  border-color: #dee2e6;
+  border-right: 0;
+  border-top: 0;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem .container-check input:checked ~ .checkmark:after {
+  width: 10px;
+  height: 18px;
+  top: 9px;
+  border-color: var(--primary);
+  left: 12px;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem.approve input {
+  opacity: 0.6;
+}
+.sideContentWrapper .profileInfo.type2 .profilItem.approve .adressTitle input {
+  font-family: "GilroySemibold";
+  color: var(--primary);
+}
+.sideContentWrapper .profileInfo.type2 .invoiceShow + .profilItem {
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .blockquote {
@@ -10977,18 +11205,136 @@ section .customBlockquote blockquote .fixBtn,
   width: 100%;
 }
 .notDataContent .title {
-  font-size: 34px;
+  font-size: 24px;
   font-family: "GilroyBold";
-  line-height: 45px;
+  line-height: 32px;
   color: var(--gray-6);
   margin-bottom: 20px;
 }
 .notDataContent p {
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 17px;
+  line-height: 25px;
   color: var(--gray-6);
   font-family: "GilroyMedium";
   margin-bottom: 30px;
+}
+
+.demandsList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.demandsList .demansItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 24px;
+  border: 1px solid var(--primary);
+  padding: 30px;
+  min-height: 280px;
+}
+.demandsList .demansItem .imageWrapper {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  border-radius: 100%;
+}
+.demandsList .demansItem .body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.demandsList .demansItem .body .bodyInfo {
+  flex: 1;
+}
+.demandsList .demansItem .category {
+  display: inline-flex;
+  padding: 5px 20px;
+  background-color: var(--primary);
+  border-radius: 20px;
+  font-family: "GilroyMedium";
+  font-size: 13px;
+  color: var(--white);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.demandsList .demansItem .title {
+  font-size: 22px;
+  line-height: 34px;
+  font-family: "GilroySemibold";
+}
+.demandsList .demansItem .dateInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.demandsList .demansItem .dateInfo .date {
+  font-size: 14px;
+  color: var(--primary);
+  font-family: "GilroySemibold";
+}
+.demandsList .demansItem .dateInfo .loc {
+  font-size: 14px;
+  color: var(--primary);
+  font-family: "GilroySemibold";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  gap: 10px;
+}
+.demandsList .demansItem .dateInfo .loc:before {
+  content: "";
+  width: 4px;
+  height: 2px;
+  background-color: var(--primary);
+}
+.demandsList .demansItem .other {
+  font-size: 13px;
+  color: var(--primary);
+  line-height: 22px;
+  font-family: "GilroyMedium";
+  margin-top: 10px;
+}
+.demandsList .demansItem .message {
+  font-family: "GilroyMedium";
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-2);
+  margin-top: 20px;
+  height: 66px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.demandsList .demansItem .message.type2 {
+  color: var(--primary);
+}
+.demandsList .demansItem.disabled {
+  border: 1px solid #dee2e6;
+}
+.demandsList .demansItem.disabled .body {
+  filter: grayscale(1);
+}
+
+.invoiceWrapper {
+  margin-bottom: 50px;
+}
+.invoiceWrapper .invoiceAddButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-7);
+  color: var(--gray-7);
+  font-size: 30px;
+  margin: 30px auto;
 }
 
 #app {

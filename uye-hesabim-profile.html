@@ -145,6 +145,7 @@
                                 <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <hr>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
@@ -491,24 +492,36 @@
                                     <a href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a>
                                     <a href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a>
                                     <a href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a>
+                                        <hr>
+                                    <a href="#" class="mt-4"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a>
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
-                                <div class="col-lg-10 col-xl-9 col-xxl-8 px-0">
-                                    <a href="javascript:history.back()" class="backLink"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
-                                    <div class="pageTitle">Profilim</div>
+                                <div class="col-xl-9 px-0">
+                                    <div class="sideHead">
+                                        <div class="pageTitle">Profilim</div>
+                                        <a href="javascript:history.back()" class="backLink ms-auto"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
+                                    </div>
                                     <blockquote class="blockquote">
                                         <span class="icon-info"></span> <p>A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element.</p>
                                         <span class="icon-plus closeBlockquote"></span>
                                     </blockquote>
                                     <div class="sideContent">
                                         <div class="bg-gray rounded-5 p-5">
-                                            <div class="profileInfo">
-                                                <div class="userName profilItem">
-                                                    Enver Sarıgül
+                                            <div class="profileInfo readonlyForm row mx-0">
+                                                <div class="userName profilItem col-lg-6 mb-3">
+                                                    <input type="text" value="Enver" disabled readonly>
                                                 </div>
-                                                <div class="email profilItem">esarigul@trios.com.tr</div>
-                                                <a href="#" class="editButton" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit</a>
+                                                <div class="userName profilItem col-lg-6 mb-3">
+                                                    <input type="text" value="Sarıgül" disabled readonly>
+                                                </div>
+                                                <div class="email profilItem col-lg-6 mb-3">
+                                                    <input type="email" name="email" id="email" value="esarigul@trios.com.tr" disabled readonly>
+                                                </div>
+                                                <div class="userName profilItem col-lg-6 mb-3">
+                                                    <input type="text" value="05354552478" disabled readonly>
+                                                </div>
+                                                <a href="#" class="editButton" data-bs-toggle="modal" data-bs-target="#editProfileModal"><span class="icon-edit"></span><span>Düzenle</span></a>
                                             </div>
                                         </div>
                                     </div>

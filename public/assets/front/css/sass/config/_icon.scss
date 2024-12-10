@@ -26,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-delete:before {
+  content: "\e934";
+}
+
+.icon-save:before {
+  content: "\e933";
+}
+.icon-edit:before {
+  content: "\e932";
+}
 
 .icon-share:before {
   content: "\e930";

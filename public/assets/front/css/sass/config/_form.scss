@@ -145,3 +145,37 @@
     flex: 1;
   }
 }
+
+.readonlyForm{
+  input{
+    border: 1px solid var(--gray-4);
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: var(--white);
+    border-radius: 6px;
+    color: var(--gray-6);
+    width: 100%;
+    &.error{
+      border-color: var(--primary);
+    }
+    &.is-invalid ~ .wrong-message{
+      display: block;
+    }
+  }
+  .invalid-message,
+  .wrong-message{
+    display: none;
+    color: var(--primary);
+    font-size: 12px;
+    font-family: 'GilroySemibold';
+  }
+  .wrong-message{
+    color: #e94a00;
+  }
+  .error{
+    .invalid-message{
+      display: block;
+    }
+  }
+}
