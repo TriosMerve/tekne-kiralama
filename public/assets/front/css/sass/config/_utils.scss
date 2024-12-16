@@ -4,6 +4,7 @@
   --black: #000000;
   --primary: #d9043e;
   --secondary: #f2055c;
+  --success:#146c43;
   --burgundy: #660000;
   --light-brown: #aa552a;
   --yellow: #fe9615;
@@ -27,6 +28,7 @@
 /*Custom Color ve background class*/
 $primary: #d9043e;
 $secondary: #f2055c;
+$success:#146c43;
 $gray: #f3f3f3;
 $gray-3: #cccccc;
 $gray-6: #696969;
@@ -42,7 +44,8 @@ $colors: (
   "gray-6": $gray-6,
   "gray-7": $gray-7,
   "dark": $black,
-  "light": $white // "tertiary": $tertiary,,,,
+  "light": $white,
+  "success":$success // "tertiary": $tertiary,,,,
 );
 
 @mixin generate-button-classes($colors) {
@@ -533,4 +536,28 @@ a:hover {
 .currencly{
   font-family: sans-serif;
   font-weight: 600;
+}
+
+
+.rounded-end-5{
+  border-radius: 0 24px 24px 0;
+}
+.rounded-start-5{
+  border-radius: 24px 0 0 24px;
+}
+
+.info{
+  display: flex;
+  align-items: flex-start;
+  font-family: 'GilroyMedium';
+  font-size: 14px;
+  line-height: 20px;
+  gap:10px;
+  color: var(--gray-6);
+  opacity: 0.8;
+
+  .icon-info{
+    font-size: 20px;
+    color: var(--gray-6);
+  }
 }

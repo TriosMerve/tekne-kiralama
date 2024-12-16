@@ -51,6 +51,74 @@
       }
     }
   }
+  .customLabel{
+    display: block;
+    color: var(--text-2);
+    font-size: 14px;
+    font-family: "GilroySemibold";
+    margin-bottom: 4px;
+  }
+  .customSelect{
+    &.type2{
+      color: var(--text-2);
+      font-size: 14px;
+      font-family: "GilroyMedium";
+      border: 1px solid var(--gray-4);
+      height: 50px;
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: var(--white);
+      border-radius: 6px;
+      width: 100%;
+      &:after{
+        width: 10px;
+        height: 10px;
+      }
+      .current{
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .list{
+        width: 100%;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6) !important;
+        border: none;
+
+        .option{
+          &:hover{
+            color: var(--primary);
+          }
+          &.focus{
+            color: var(--primary);
+          }
+          &.selected{
+            &.focus{
+              color: var(--primary);
+            }
+          }
+        }
+      }
+      &.disabled{
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &.type2{
+    input,
+    .form-control{
+      color: var(--text-2);
+      font-size: 14px;
+      font-family: "GilroyMedium";
+      border: 1px solid var(--gray-4);
+      height: 50px;
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: var(--white);
+      border-radius: 6px;
+      width: 100%;
+    }
+  }
 }
 .backStep {
   position: absolute;

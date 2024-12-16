@@ -1,0 +1,39 @@
+.boatList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 15px;
+
+  a {
+    display: inline-flex;
+    position: relative;
+    color: var(--primary);
+    &:before {
+      content: "";
+      width: 4px;
+      height: 2px;
+      background-color: var(--text-2);
+      position: absolute;
+      left: -15px;
+      top: 7px;
+    }
+    &:after {
+      content: "";
+      border-bottom: 1px dotted var(--primary);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: -1px;
+      transition: all 0.3s linear;
+    }
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: var(--primary);
+        &:after {
+          width: 0;
+        }
+      }
+    }
+  }
+}

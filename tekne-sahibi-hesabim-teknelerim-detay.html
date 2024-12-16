@@ -53,13 +53,14 @@
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
-    
+    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">    
     
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
-    <link rel="stylesheet" href="public/assets/front/css/app.css">
+    <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
 <body>
@@ -133,21 +134,23 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                       </div>
+                        </div>
                         <div class="dropdown">
                             <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class=""><span class="icon-user"></span> </div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item active" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <hr>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
+
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
                             <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
                             <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
@@ -481,55 +484,54 @@
             <section class="pageSection">
                 <div class="container-3xl">
                     <div class="userPageContainer">
-                        <div class="userHead">
-                            <div class="userTitle">Hoşgeldin Enver</div>
-                        </div>
-                        <div class="userContent">
-                            <div class="userMenuCardList">
-                                <a href="#" class="menuCardItem">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div>
-                                        <span class="title">Profil</span>
+                        <div class="row mx-0">
+                            <div class="sidenavWrapper d-none d-lg-block">
+                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="fixBtn button-primary backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
+                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
+                                <div class="sideNav type2">
+                                    <a href="#"><span>Genel Bilgiler</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim.html"><span>Görseller</span></a>
+                                    <a href="#"><span>Hizmet Seçenekleri</span></a>
+                                    <a href="#"><span>Kiralama Seçenekleri</span></a>
+                                    <a href="#"><span>Kapasite Bilgileri</span></a>
+                                    <a href="#"><span>Tekne Olanakları</span></a>
+                                    <a href="#"><span>Sunulan Hizmetler</span></a>
+                                </div>
+                            </div>
+                            <div class="sideContentWrapper">
+                                <div class="col-xl-9 px-0">
+                                    <div class="sideHead">
+                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
                                     </div>
-                                    <p>Adınızı ve iletişim detaylarınızı düzenleyin</p>
-                                </a>
-                                <a href="#" class="menuCardItem">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div>
-                                        <span class="title">Taleplerim</span>
+                                    <div class="sideContent">
+
+                                        <div class="my-5">
+                                            <div class="custom-file-upload-single">
+                                                <span class="icon">📁</span>
+                                                <p>Resmi Seçmek için Tıklayın veya Sürükleyin</p>
+                                                <input type="file" id="singleImageInput" accept="image/*" style="display: none;">
+                                            </div>
+                                            <div class="single-preview d-flex flex-wrap mt-3" id="singleImgPreview"></div>
+
+                                            <div class="custom-file-upload">
+                                              <span class="icon">📁</span>
+                                              <p>Görselleri Seçmek için Tıklayın veya Sürükleyin</p>
+                                              <input type="file" id="imageInput" accept="image/*" multiple style="display: none;">
+                                            </div>
+                                            <div class="gallery-preview d-flex flex-wrap mt-3" id="galleryPreview"></div>
+                                        </div>
+
+
+
+
+                                        <div class="bg-gray rounded-5 p-5">
+                                            
+                                        </div>
                                     </div>
-                                    <p>Fiyat ve bilgi taleplerini görüntüle...</p>
-                                </a>
-                                <a href="#" class="menuCardItem">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div>
-                                        <span class="title">Rezervasyonlarım</span>
-                                    </div>
-                                    <p>Rezervasyonlarını incele...</p>
-                                </a>
-                                <a href="#" class="menuCardItem">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div>
-                                        <span class="title">Favorilerim</span>
-                                    </div>
-                                    <p>Favorilere eklediğiniz tekneleri göntüleyin</p>
-                                </a>
-                                <a href="#" class="menuCardItem">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div>
-                                        <span class="title">Fatura Bilgilerim</span>
-                                    </div>
-                                    <p>Fatura bilgilerinizi düzeleyin</p>
-                                </a>
-                                <a href="#" class="menuCardItem">
-                                    <div class="d-flex align-items-center gap-4">
-                                        <div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div>
-                                        <span class="title">Ayarlar</span>
-                                    </div>
-                                    <p>Diğer ayarlarını buradan tamamlayabilirsiniz</p>
-                                </a>
+                                </div>
                             </div>
                         </div>
+                
                     </div>
                 </div>
             </section>
@@ -605,17 +607,62 @@
                     </div>
 
                     <div class="footerBottom d-flex align-items-center">
-                        <div class="copyRightWrapper">
+                        <div class="copyRightWrapper pe-5">
                             <div class="copyRight">
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
+                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+
+    <!-- Tek Resim İçin Modal -->
+<div class="modal fade" id="singleCropModal" tabindex="-1" role="dialog" aria-labelledby="singleCropModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="singleCropModalLabel">Resmi Kırp</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="singleModalImage" alt="Seçilen Resim">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" id="singleCropButton" class="btn btn-primary">Kırp ve Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cropModalLabel">Resmi Kırp</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" alt="Seçilen Resim">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" id="cropButton" class="btn btn-primary">Kırp ve Kaydet</button>
+        </div>
+      </div>
+    </div>
+</div>
+  
+
+
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
         <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -746,6 +793,66 @@
         </div>
     </div>
 
+    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
+                    </div>
+                </div>
+                <blockquote class="blockquote">
+                    <span class="icon-info"></span> 
+                    <p>
+                        Your account is not verified. <a href="#">Resend confirmation</a>
+                    </p>
+                </blockquote>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Adınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Soyadınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="phoneWrapper">
+                            <div class="codeWrapper position-relative">
+                                <input type="tel" placeholder="" id="telephone">
+                            </div>
+                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                            <div class="invalid-feedback w-100">
+                                Lütfen Telefon Numaranızı Giriniz
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Kaydet">
+                        </span>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script src="public/assets/plugins/jquery.easing.min.js"></script>
@@ -759,14 +866,216 @@
 
 
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
+    <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
     <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script>
+        let singleCropper;
 
-    </script>
+        // Yükleme Alanı Olayları
+        const singleFileUploadArea = document.querySelector('.custom-file-upload-single');
+        const singleImageInput = document.getElementById('singleImageInput');
+        const singleModalImage = document.getElementById('singleModalImage');
+
+        singleFileUploadArea.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            singleFileUploadArea.classList.add('drag-over');
+        });
+
+        singleFileUploadArea.addEventListener('dragleave', () => {
+            singleFileUploadArea.classList.remove('drag-over');
+        });
+
+        singleFileUploadArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+            singleFileUploadArea.classList.remove('drag-over');
+            singleImageInput.files = event.dataTransfer.files;
+            const changeEvent = new Event('change');
+            singleImageInput.dispatchEvent(changeEvent);
+        });
+
+        singleFileUploadArea.addEventListener('click', () => {
+            singleImageInput.click();
+        });
+
+        // Resim Seçildiğinde İşlem
+        singleImageInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    singleModalImage.src = e.target.result;
+
+                    $('#singleCropModal').on('shown.bs.modal', () => {
+                        if (singleCropper) singleCropper.destroy();
+                        singleCropper = new Cropper(singleModalImage, {
+                            aspectRatio: 16 / 9,
+                            viewMode: 2,
+                        });
+                    });
+
+                    $('#singleCropModal').modal('show');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        document.getElementById('singleCropButton').addEventListener('click', () => {
+            if (singleCropper) {
+                // Kırpılmış görüntüyü al
+                const canvas = singleCropper.getCroppedCanvas();
+                const croppedImageURL = canvas.toDataURL();
+
+                // Yeni bir img etiketi oluştur ve kırpılmış resmi bu etikette göster
+                const croppedImage = document.createElement('img');
+                croppedImage.src = croppedImageURL;
+                croppedImage.alt = 'Kırpılmış Resim';
+                croppedImage.classList.add('cropped-image'); // Stil eklemek için bir sınıf
+
+                // Resmi bir konteynıra ekle
+                const croppedImageContainer = document.createElement('div');
+                croppedImageContainer.classList.add('cropped-image-container', 'm-2');
+                croppedImageContainer.appendChild(croppedImage);
+
+                // Eğer gerekliyse bir silme butonu ekleyebilirsiniz
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Sil';
+                deleteButton.classList.add('delete-btn', 'btn', 'btn-danger', 'mt-2');
+                deleteButton.addEventListener('click', () => {
+                    croppedImageContainer.remove();
+                });
+
+                croppedImageContainer.appendChild(deleteButton);
+
+                // Galeri önizlemesine ekle
+                const galleryPreview = document.getElementById('singleImgPreview');
+                galleryPreview.innerHTML = ''; // Önceki resimleri temizle
+                galleryPreview.appendChild(croppedImageContainer);
+
+                // Modal'ı kapat ve cropper'ı sıfırla
+                $('#singleCropModal').modal('hide');
+                singleCropper.destroy();
+                singleCropper = null;
+            }
+        });
+
+
+
+        let cropper;
+        const fileUploadArea = document.querySelector('.custom-file-upload');
+        const imageInput = document.getElementById('imageInput');
+        const galleryPreview = document.getElementById('galleryPreview');
+        const modalImage = document.getElementById('modalImage');
+
+        fileUploadArea.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        fileUploadArea.classList.add('drag-over');
+        });
+
+        fileUploadArea.addEventListener('dragleave', () => {
+        fileUploadArea.classList.remove('drag-over');
+        });
+
+        fileUploadArea.addEventListener('drop', (event) => {
+        event.preventDefault();
+        fileUploadArea.classList.remove('drag-over');
+        imageInput.files = event.dataTransfer.files;
+        const changeEvent = new Event('change');
+        imageInput.dispatchEvent(changeEvent);
+        });
+
+        fileUploadArea.addEventListener('click', () => {
+        imageInput.click();
+        });
+
+        imageInput.addEventListener('change', (event) => {
+        const files = event.target.files;
+
+        // Resimleri yükleyin ve her biri için işlem yapın
+        Array.from(files).forEach((file, index) => {
+            if (!file.type.startsWith('image/')) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+
+            // Her görsel için bir div oluşturun ve silme butonu ekleyin
+            const thumbContainer = document.createElement('div');
+            thumbContainer.classList.add('galleryThumb');
+
+            // Silme butonunu oluşturun
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Sil';
+            deleteButton.classList.add('delete-btn');
+            deleteButton.addEventListener('click', () => {
+                galleryPreview.removeChild(thumbContainer);
+            });
+
+            // Silme butonunu container'a ekleyin
+            thumbContainer.appendChild(deleteButton);
+
+            // galleryPreview'a eklemiyoruz, sadece kırpma işlemi için modali açıyoruz
+            if (index === 0) {
+                modalImage.src = URL.createObjectURL(file);
+
+                $('#cropModal').on('shown.bs.modal', () => {
+                if (cropper) cropper.destroy(); // Eski cropper'ı yok et
+                cropper = new Cropper(modalImage, {
+                    aspectRatio: 3 / 2,
+                    viewMode: 2,
+                });
+                });
+
+                $('#cropModal').modal('show');
+            }
+            };
+            reader.readAsDataURL(file);
+        });
+        });
+
+        // Kırpma butonuna tıklanıldığında
+        document.getElementById('cropButton').addEventListener('click', () => {
+        if (cropper) {
+            // Kırpılmış görüntüyü al
+            const canvas = cropper.getCroppedCanvas();
+            const croppedImage = document.createElement('img');
+            croppedImage.src = canvas.toDataURL();
+
+            // Her kırpılmış resim için bir div oluşturun ve silme butonu ekleyin
+            const thumbContainer = document.createElement('div');
+            thumbContainer.classList.add('galleryThumb');
+
+            // Kırpılmış görseli container'a ekle
+            thumbContainer.appendChild(croppedImage);
+
+            // Silme butonunu oluşturun
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Sil';
+            deleteButton.classList.add('delete-btn');
+            deleteButton.addEventListener('click', () => {
+            galleryPreview.removeChild(thumbContainer);
+            });
+
+            // Silme butonunu container'a ekleyin
+            thumbContainer.appendChild(deleteButton);
+
+            // galleryPreview'a ekleyin
+            galleryPreview.appendChild(thumbContainer);
+
+            // Modal'ı kapat ve cropper'ı sıfırla
+            $('#cropModal').modal('hide');
+            cropper.destroy();
+            cropper = null;
+        }
+        });
+
+
+      </script>
+
 </body>
 
 </html>

@@ -26,6 +26,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-magnify:before {
+  content: "\e936";
+}
+
+.icon-upload:before {
+  content: "\e935";
+}
+
 .icon-delete:before {
   content: "\e934";
 }
