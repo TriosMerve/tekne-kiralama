@@ -70,6 +70,9 @@
       background-color: var(--white);
       border-radius: 6px;
       width: 100%;
+      @media screen and (max-width:991.98px) {
+        height: 45px;
+      }
       &:after{
         width: 10px;
         height: 10px;
@@ -117,6 +120,9 @@
       background-color: var(--white);
       border-radius: 6px;
       width: 100%;
+      @media screen and (max-width:991.98px) {
+        height: 45px;
+      }
     }
   }
 }
@@ -187,10 +193,11 @@
 .phoneWrapper {
   display: flex;
   align-items: stretch;
-  border: 1px solid #bfbfbf;
-  height: 50px;
+  // border: 1px solid #bfbfbf;
+  // height: 50px;
   border-radius: 10px;
   flex-wrap: wrap;
+  position: relative;
   input,
   .form-control {
     height: 48px;
@@ -201,10 +208,28 @@
     width: calc(100% - 90px);
     position: relative;
     z-index: 99;
+    border: 1px solid #bfbfbf;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
   }
   .codeWrapper {
-    width: 90px!important;
+    width: 90px !important;
+    border: 1px solid #bfbfbf;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
   }
+  // .invalid-feedback{
+  //   position: absolute;
+  //   left: 10px;
+  //   bottom: -8px;
+  //   z-index: 99;
+  //   background: #ffffff;
+  //   width: auto !important;
+  // }
+  // .is-invalid~.invalid-feedback, .is-invalid~.invalid-tooltip, .was-validated :invalid~.invalid-feedback, .was-validated :invalid~.invalid-tooltip{
+  //   display: inline-block!important;
+  // }
 }
 .columnFlexWrapper{
   display: flex;
@@ -245,5 +270,12 @@
     .invalid-message{
       display: block;
     }
+  }
+}
+.priceInputWrapper{
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
   }
 }

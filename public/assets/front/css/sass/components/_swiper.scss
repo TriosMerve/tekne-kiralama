@@ -90,8 +90,10 @@
   }
   &.type3 {
     bottom: auto;
-    top: auto !important;
-    margin-top: 12px;
+    // top: auto !important;
+    // margin-top: 12px;
+    margin-top: 0;
+    top: calc(100% + 12px)!important;
     @media screen and (max-width:991.98px) {
       width: auto;
       right: 20px;

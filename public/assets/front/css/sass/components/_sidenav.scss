@@ -1,13 +1,94 @@
+.mobileSideMenu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 30px;
+  width: auto;
+  background: var(--primary);
+  height: 55px;
+  z-index: 9999;
+  padding-right: 10px;
+  border-radius: 6px;
+  transition: all 0.3s linear;
+  box-shadow: 10px 4px 27px rgba(39, 54, 86, 0.34),
+    0 1px 10px rgba(39, 54, 86, 0.4);
+  right: 0;
+  margin: 0 auto;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  // box-shadow: 0 3px 67px rgba(217, 4, 62, 0.8) !important;
+
+  .icon-arrow-right {
+    // position: absolute;
+    position: relative;
+    font-size: 20px;
+    color: var(--white);
+    z-index: 1;
+    display: flex;
+    &:before {
+      transition: all 0.3s linear;
+      // transform: rotate(-90deg);
+    }
+  }
+  .text {
+    font-family: "GilroySemibold";
+    color: var(--white);
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 22px;
+  }
+
+  &.active {
+    // box-shadow: none;
+    .text {
+      // opacity: 0;
+    }
+    .icon-arrow-right {
+      &:before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
 .sidenavWrapper {
   width: 300px;
   padding-top: 60px;
+  @media screen and (max-width: 991.98px) {
+    background: var(--gray);
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    border-radius: 12px 12px 0 0;
+    width: 300px;
+    max-width: 90vw;
+    transition: all 0.3s linear;
+    z-index: 999;
+    right: 0;
+    margin: 0 auto;
+    bottom: 69px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    &.active {
+      height: 60vh;
+      overflow: visible;
+      opacity: 1;
+    }
+  }
   .backLink {
     color: var(--primary);
     height: auto;
     display: inline-flex;
     font-size: 16px;
     margin-bottom: 21px;
-    font-family: 'GilroySemibold';
+    font-family: "GilroySemibold";
   }
   .boatName {
     color: var(--text-2);
@@ -61,19 +142,25 @@
       }
     }
 
-    &.type2{
+    &.type2 {
       background: var(--gray);
       border-radius: 24px;
       padding: 40px 30px;
+      @media screen and (max-width: 991.98px) {
+        padding-top: 0;
+        height: calc(100% - 70px);
+        overflow-x: auto;
+        padding-bottom: 0;
+      }
 
-      a{
+      a {
         position: relative;
         display: flex;
         width: 100%;
         padding-bottom: 20px;
-        font-family: 'GilroyMedium';
+        font-family: "GilroyMedium";
         font-size: 15.5px;
-        &:after{
+        &:after {
           content: "";
           border-bottom: 1px solid #e5dfdf;
           position: absolute;
@@ -96,11 +183,19 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  font-size: 16px;
+  @media screen and (max-width:991.98px) {
+    margin-top: 10px;
+    font-size: 14px;
+  }
   .icon-edit,
   .icon-save,
   .icon-delete {
     font-size: 24px;
     transition: all 0.3s linear;
+    @media screen and (max-width:991.98px) {
+      font-size: 20px;
+    }
   }
 
   @media screen and (min-width: 992px) {
@@ -130,6 +225,7 @@
   @media screen and (max-width: 991.98px) {
     width: 100%;
     padding-left: 0;
+    padding-top: 0;
   }
   .backLink {
     font-family: "GilroyMedium";
@@ -148,11 +244,44 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 24px;
+    @media screen and (max-width:991.98px) {
+      margin-top: 20px;
+    }
+  }
+  .formSwitchWrapper {
   }
   .formSwitchBody {
     background-color: var(--white);
     padding: 30px;
     border-radius: 24px;
+    @media screen and (max-width:991.98px) {
+      padding: 16px;
+    }
+
+    &.accSwitchBody {
+      background-color: rgba(0, 0, 0, 0);
+      padding: 0 !important;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      height: 0;
+      transition: all 0.3s linear;
+
+      .content {
+        padding: 30px;
+
+        @media screen and (max-width:991.98px) {
+          padding: 16px;
+        }
+      }
+      &:not(.disabled) {
+        padding: 0 0 30px 0 !important;
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+        height: auto;
+      }
+    }
   }
 
   .pageTitle {
@@ -160,23 +289,41 @@
     line-height: 38px;
     font-family: "GilroyBold";
     color: var(--primary);
+    @media screen and (max-width: 991.98px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
   }
-  .subTitle{
-    font-family: 'GilroySemibold';
+  .subTitle {
+    font-family: "GilroySemibold";
     font-size: 15.5px;
     line-height: 22px;
     color: var(--primary);
     margin-bottom: 10px;
   }
-  .moduleHead{
+  .moduleHead {
     display: flex;
     gap: 40px;
     align-items: flex-start;
     margin-bottom: 30px;
+    @media screen and (max-width: 991.98px) {
+      flex-direction: column;
+      gap: 10px;
+    }
 
-    .info{
-      max-width:500px;
+    .info {
+      max-width: 500px;
       margin-top: 4px;
+    }
+    .moduleTitle {
+      @media screen and (max-width: 991.98px) {
+        margin-bottom: 0;
+      }
+    }
+    .moduleTitle {
+      @media screen and (max-width: 991.98px) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -406,6 +553,9 @@
   flex-direction: column;
   gap: 50px;
   margin-bottom: 50px;
+  @media screen and (max-width: 991.98px) {
+    gap:30px;
+  }
   .demansItem {
     display: flex;
     align-items: flex-start;
@@ -414,19 +564,31 @@
     border: 1px solid var(--primary);
     padding: 30px;
     min-height: 280px;
+    @media screen and (max-width: 991.98px) {
+      padding: 16px;
+      gap: 10px;
+    }
 
     .imageWrapper {
       width: 100px;
       height: 100px;
       min-width: 100px;
       border-radius: 100%;
+      @media screen and (max-width: 991.98px) {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+      }
     }
     .body {
       display: flex;
       align-items: flex-start;
       gap: 20px;
       width: 100%;
-
+      @media screen and (max-width: 991.98px) {
+        flex-direction: column;
+        gap: 10px;
+      }
       .bodyInfo {
         flex: 1;
       }
@@ -458,6 +620,10 @@
           display: flex;
           gap: 7px;
           align-items: flex-start;
+          @media screen and (max-width: 991.98px) {
+            font-size: 18px;
+            line-height: 25px;
+          }
         }
         .location {
           font-size: 15px;
@@ -466,6 +632,9 @@
           font-family: "GilroyRegular";
           @media screen and (max-width: 1600px) {
             font-size: 14px;
+          }
+          @media screen and (max-width: 991.98px) {
+            font-size: 13px;
           }
         }
         .id {
@@ -476,6 +645,9 @@
           @media screen and (max-width: 1600px) {
             font-size: 14px;
           }
+          @media screen and (max-width: 991.98px) {
+            font-size: 13px;
+          }
         }
       }
     }
@@ -485,6 +657,11 @@
       color: var(--gray-7);
       line-height: 27px;
       margin-top: 15px;
+      @media screen and (max-width: 991.98px) {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 10px;
+      }
     }
 
     .dateInfo {
@@ -544,7 +721,7 @@
         filter: grayscale(1);
       }
     }
-    &.type2{
+    &.type2 {
       min-height: initial;
     }
   }

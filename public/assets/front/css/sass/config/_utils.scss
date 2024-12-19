@@ -264,6 +264,15 @@ a:hover {
     object-fit: cover;
   }
 }
+.line-clamp{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  &-3{
+    -webkit-line-clamp: 1;
+  }
+
+}
 
 /*fixButton*/
 .fixBtn {
@@ -424,7 +433,40 @@ a:hover {
     }
   }
 }
+.notLinkButton{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: currentColor;
+  color: var(--white);
+  font-family: "GilroyMedium";
+  font-weight: 500;
+  font-size: 15px;
+  height: 45px;
+  border-radius: 10px;
+  padding: 0 20px;
+  transition: all 0.3s linear;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-width: 95px;
+  white-space: nowrap;
+  gap: 10px;
 
+  @media screen and (max-width: 1440px) {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    height: 45px;
+    font-size: 13px;
+  }
+  &.primaryButton{
+    background-color: #d9043e !important;
+    border: 1px solid #d9043e !important;
+  }
+}
 .textLink {
   color: var(--primary);
   position: relative;
@@ -560,4 +602,15 @@ a:hover {
     font-size: 20px;
     color: var(--gray-6);
   }
+}
+
+.overlay{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 999;
 }

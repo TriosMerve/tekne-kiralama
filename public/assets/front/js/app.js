@@ -41,29 +41,29 @@ document.addEventListener("scroll", function () {
 
   // Ekran genişliği 992 pikselden küçükse çalışacak kodlar
   // if (window.innerWidth < 992) {
-    // filterHead için fixed ve yukarı kaydırma sticky sınıfı ekleme
-    if (window.scrollY > 0) {
-      $(".filterHead").addClass("fixed");
-      $("header.type2").addClass("transitionTop")
-    } else {
-      $(".filterHead").removeClass("fixed");
-      $("header.type2").removeClass("transitionTop")
-    }
+  // filterHead için fixed ve yukarı kaydırma sticky sınıfı ekleme
+  if (window.scrollY > 0) {
+    $(".filterHead").addClass("fixed");
+    $("header.type2").addClass("transitionTop");
+  } else {
+    $(".filterHead").removeClass("fixed");
+    $("header.type2").removeClass("transitionTop");
+  }
 
-    // Yukarı kaydırma sırasında filterHead'e sticky sınıfı ekleme
-    if (window.scrollY < lastScrollY) {
-      $("header.type2").removeClass("transitionTop")
-      $(".filterHead").addClass("sticky");
-    } else {
-      $(".filterHead").removeClass("sticky");
-    }
+  // Yukarı kaydırma sırasında filterHead'e sticky sınıfı ekleme
+  if (window.scrollY < lastScrollY) {
+    $("header.type2").removeClass("transitionTop");
+    $(".filterHead").addClass("sticky");
+  } else {
+    $(".filterHead").removeClass("sticky");
+  }
 
-    // calendarMobilButton sabitleme
-    if (window.scrollY > 230) {
-      $(".calendarMobilButton.sticky").addClass("fixed");
-    } else {
-      $(".calendarMobilButton.sticky").removeClass("fixed");
-    }
+  // calendarMobilButton sabitleme
+  if (window.scrollY > 230) {
+    $(".calendarMobilButton.sticky").addClass("fixed");
+  } else {
+    $(".calendarMobilButton.sticky").removeClass("fixed");
+  }
   // }
 
   // if (window.innerWidth > 992) {
@@ -216,17 +216,16 @@ if (typeof Fancybox !== "undefined") {
   });
 }
 
-$(".morePlusButton").on("click", function(){
-    $(this).siblings(".movContent").toggleClass("opened")
-    $(this).toggleClass("active");
+$(".morePlusButton").on("click", function () {
+  $(this).siblings(".movContent").toggleClass("opened");
+  $(this).toggleClass("active");
 
-    if($(this).hasClass("active")){
-      $(this).text("- Daha az")
-    }
-    else{
-      $(this).text("+ Daha Fazla")
-    }
-})
+  if ($(this).hasClass("active")) {
+    $(this).text("- Daha az");
+  } else {
+    $(this).text("+ Daha Fazla");
+  }
+});
 if (typeof $.fn.niceSelect !== "undefined") {
   $(".customSelect").niceSelect();
   // Select elementini seç
@@ -238,9 +237,10 @@ if (typeof $.fn.niceSelect !== "undefined") {
     $("#" + selectedValue).addClass("show active");
   });
 }
-document
-  .querySelector(".languageWrapper .dropdown-toggle")
-  .addEventListener("click", function () {
+const dropdownToggle = document.querySelector(".languageWrapper .dropdown-toggle");
+
+if (dropdownToggle) { // Eğer element varsa
+  dropdownToggle.addEventListener("click", function () { 
     const body = document.body;
     if (this.classList.contains("show")) {
       body.classList.toggle("overflow-hidden");
@@ -248,7 +248,21 @@ document
       body.classList.remove("overflow-hidden");
     }
   });
+}
 
+
+const userButtonToggle = document.querySelector(".userButton.type2");
+
+if (userButtonToggle) { // Eğer element varsa
+  userButtonToggle.addEventListener("click", function () { 
+    const body = document.body;
+    if (this.classList.contains("show")) {
+      $(".mobileSideMenu").hide()
+    } else {
+      $(".mobileSideMenu").show()
+    }
+  });
+}
 // Dropdown kapandığında sınıfı kaldır
 document.addEventListener("click", function (e) {
   if (!e.target.closest(".languageWrapper")) {
@@ -256,27 +270,28 @@ document.addEventListener("click", function (e) {
   }
 });
 
-$(".closeBlockquote").on("click", function(){
-  $(this).parent("blockquote").remove()
+$(".closeBlockquote").on("click", function () {
+  $(this).parent("blockquote").remove();
 });
 
 $(document).on("click", ".footerTab.customTab .nav-link", function () {
   var $scrollContainer = $(".verticalCustomScroll"); // Scrollable container
   var $activeTab = $(this); // Clicked tab
-  
+
   // Tabın soldan uzaklığını hesaplayalım
-  var scrollPosition = $activeTab.position().left + $scrollContainer.scrollLeft();
+  var scrollPosition =
+    $activeTab.position().left + $scrollContainer.scrollLeft();
 
   // Tabın scrollContainer içinde yatay olarak ortalanması
   var centerScrollPosition =
-      scrollPosition - $scrollContainer.width() / 2 + $activeTab.outerWidth() / 2;
+    scrollPosition - $scrollContainer.width() / 2 + $activeTab.outerWidth() / 2;
 
   // Scroll hareketi
   $scrollContainer.animate(
-      {
-          scrollLeft: centerScrollPosition,
-      },
-      300 // Animasyon süresi (ms)
+    {
+      scrollLeft: centerScrollPosition,
+    },
+    300 // Animasyon süresi (ms)
   );
 });
 
@@ -297,6 +312,91 @@ $(document).on("click", ".footerTab.customTab .nav-link", function () {
 //   });
 // });
 
+$(document).ready(function () {
+  // Switch durumunu dinle
+  $(".custom-switch-input").on("change", function () {
+    // Şu anki switch'in kapsayıcı .accSwitchHead'ini al
+    const accSwitchHead = $(this).closest(".accSwitchHead");
+
+    // Bu .accSwitchHead'in next'ini (yani ilgili .accSwitchBody) al
+    const accSwitchBody = accSwitchHead.next(".accSwitchBody");
+
+    if ($(this).is(":checked")) {
+      // Eğer switch checked ise: Yüksekliği hesapla ve aç
+      const targetHeight = accSwitchBody.prop("scrollHeight"); // Dinamik yükseklik
+      accSwitchBody.removeClass("disabled");
+    } else {
+      // Eğer switch unchecked ise: Kapat
+      accSwitchBody.addClass("disabled");
+    }
+  });
+
+  $(".mobileSideMenu").on("click", function () {
+    $(this).hasClass("active")
+      ? ($(this).removeClass("active"),
+        $(this).next(".sidenavWrapper").removeClass("active"),
+        $(".overlay").hide(),
+        $("html").removeClass("overflow-hidden"))
+      : ($(this).addClass("active"),
+        $(this).next(".sidenavWrapper").addClass("active"),
+        $(".overlay").show(),
+        $("html").addClass("overflow-hidden"));
+  });
+
+  $(".overlay").on("click", function () {
+    if ($(".mobileSideMenu").hasClass("active")) {
+      $(".mobileSideMenu").removeClass("active");
+      $(".mobileSideMenu").next(".sidenavWrapper").removeClass("active");
+      $(this).hide();
+      $("html").removeClass("overflow-hidden");
+    }
+  });
+
+  //Tekne sahibi hesabım sunulan hizmetler fiyat buton
+  // Radio button durum kontrolü
+  $(".priceRadioWrapper").each(function () {
+    const wrapper = $(this); // Her priceRadioWrapper için işleme başla
+    const radios = wrapper.find('input[type="radio"]'); // Bu wrapper içindeki tüm radio butonlarını al
+    const priceInputWrapper = wrapper.find(".priceInputWrapper"); // Fiyat input alanını seç
+
+    // Sayfa yüklendiğinde radio butonlarının başlangıç durumunu kontrol et
+    const initialRadio = radios.filter(":checked"); // Seçili olan radio butonunu al
+    console.log(
+      "Başlangıç durumunda seçili radio:",
+      initialRadio.length ? initialRadio.val() : "Seçili yok"
+    ); // Başlangıç durumunu logla
+    if (initialRadio.length && initialRadio.hasClass("priceRadioCheck")) {
+      console.log("Ücretli radio butonu seçili, disabled kaldırılıyor");
+      priceInputWrapper.removeClass("disabled"); // Eğer "Ücretli" seçiliyse
+    } else {
+      console.log("Fiyata Dahil radio butonu seçili, disabled ekleniyor");
+      priceInputWrapper.addClass("disabled"); // Eğer "Fiyata Dahil" seçiliyse
+    }
+
+    // Radio button değişikliklerini dinle
+    radios.on("change", function () {
+      const radio = $(this); // Tıklanan radio butonunu al
+      console.log("Tıklanan radio:", radio.val()); // Tıklanan radio butonunu logla
+      if (radio.hasClass("priceRadioCheck") && radio.prop("checked")) {
+        console.log("Ücretli radio butonu seçildi, disabled kaldırılıyor");
+        priceInputWrapper.removeClass("disabled"); // "Ücretli" seçildiğinde fiyat input alanını aktif et
+      } else {
+        console.log("Fiyata Dahil radio butonu seçildi, disabled ekleniyor");
+        priceInputWrapper.addClass("disabled"); // Diğer seçeneklerde fiyat input alanını devre dışı bırak
+      }
+    });
+  });
+});
+
+$(".moreLink").on("click", function(){
+  $(this).prev(".line-clamp").toggleClass("line-clamp-3");
+  if($(this).hasClass("active")){
+    $(this).removeClass("active").text("Daha Fazla")
+  }
+  else{
+    $(this).addClass("active").text("Daha Az")
+  }
+})
 
 // Akıcı kaydırma fonksiyonu
 function smoothScrollTo(target, duration) {

@@ -12,8 +12,8 @@
   .checkText {
     color: #747474;
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-family:'GilroyMedium';
+    margin-top: 4px;
   }
   a {
     color: var(--light-brown);
@@ -40,11 +40,12 @@
     position: relative;
     top: 0;
     left: 0;
-    height: 18px;
-    width: 20px;
-    min-width: 20px;
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
     border: 1px solid #bfbfbf;
-    background-color: #f2f2f2;
+    // background-color: #f2f2f2;
+    background-color: #ffffff;
     margin-right: 10px;
   }
 
@@ -75,9 +76,9 @@
     // left: 9px;
     // top: 5px;
     left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
+    top: 2px;
+    width: 8px;
+    height: 15px;
     border: solid var(--light-brown);
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -250,6 +251,12 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
+
+    }
+    .checkText{
+      color: var(--primary);
+      font-family: 'GilroySemibold';
+      font-size: 14px;
     }
   }
 }
@@ -262,7 +269,12 @@
   margin-bottom: 15px;
   font-size: 16px;
   color: var(--text-2);
-  font-family: 'GilroySemibold';
+  font-family: "GilroySemibold";
+
+  @media screen and (max-width: 991.98px) {
+    font-size: 14px;
+    padding:7px 7px 7px 12px;
+  }
 
   .custom-switch {
     display: inline-flex;
@@ -289,6 +301,11 @@
       color: white;
       font-weight: bold;
       cursor: pointer;
+      @media screen and (max-width: 991.98px) {
+        height: 30px;
+        font-size: 12px;
+        width: 80px;
+      }
     }
 
     .custom-switch-indicator {
@@ -303,6 +320,11 @@
       top: 50%; /* Dikey hizalama */
       transform: translateY(-50%);
       left: 5px; /* Başlangıç pozisyonu */
+
+      @media screen and (max-width: 991.98px) {
+        width: 18px;
+        height: 18px;
+      }
     }
 
     .custom-switch-input:checked + .custom-switch-label {
@@ -313,6 +335,9 @@
       + .custom-switch-label
       .custom-switch-indicator {
       transform: translate(57px, -50%); /* Sağ tarafa kaydır */
+      @media screen and (max-width: 991.98px) {
+        transform: translate(52px, -50%); /* Sağ tarafa kaydır */
+      }
     }
 
     .custom-switch-text {
@@ -324,6 +349,9 @@
       &.disabled {
         right: 25px;
         left: auto;
+        @media screen and (max-width: 991.98px) {
+          right: 20px;
+        }
       }
     }
 
@@ -355,7 +383,7 @@
   }
 }
 
-.formSwitchBody{
+.formSwitchBody {
   padding-left: 20px;
   padding-right: 20px;
   &.disabled {

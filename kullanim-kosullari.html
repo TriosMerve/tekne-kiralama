@@ -53,14 +53,12 @@
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">    
-    
+    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
-    <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="public/assets/front/css/app.css">
+    <link rel="stylesheet" href="public/assets/plugins/rangeSlider/nouislider.min.css">
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
 <body>
@@ -74,12 +72,12 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header" class="">
+        <header id="header">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
@@ -134,33 +132,31 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                        </div> -->
+                       </div>
                         <div class="dropdown">
-                            <button class="dropdown-toggle userButton type2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="otherUserMenuIcon">ES</div>
+                            <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class=""><span class="icon-user"></span> </div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
-                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Teknelerim</span></a></li>
-                                <li><a class="dropdown-item" href="#"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Talepler</span></a></li>
-                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Rezervasyonlar</span></a></li>
-                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Ödemeler</span></a></li>
-                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
-                                <hr>
-                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
-
-                        <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
-                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                        <div class="buttons d-lg-flex d-none pe-3 ps-3" >
+                            <a href="#" class="fixBtn button-outline">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
-                        </a> -->
+                        </a>
                     </div>
                 </div>
-                <!-- <div class="headerMenuNav">
+                <div class="headerMenuNav">
                     <div class="navMenu">
                         <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
                             <div class="row navMenuTop mx-0">
@@ -203,8 +199,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
-                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                                        <a href="#" class="fixBtn button-primary">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -474,7 +470,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </header>
 
@@ -482,79 +478,156 @@
         <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
         <main>
             <section class="pageSection">
-                <div class="overlay"></div>
                 <div class="container-3xl">
-                    <div class="userPageContainer">
-                        <div class="row mx-0">
-                            <div class="mobileSideMenu d-lg-none"><span class="text">Tekne Yönetimi</span><span class="icon-arrow-right"></span> </div>
-                            <div class="sidenavWrapper">
-                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
-                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
-                                <div class="sideNav type2">
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
-                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-kapasite.html"><span>Kapasite Bilgileri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
-                                </div>
-                            </div>
-                            <div class="sideContentWrapper">
-                                <div class="col-xxl-9 px-0">
-                                    <div class="sideHead">
-                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
-                                    </div>
-                                    <div class="sideContent">
-                                        <div class="bg-gray rounded-5 p-lg-5 mt-lg-5 p-4 mt-4">
-                                            <div class="moduleHead">
-                                                <div class="moduleTitle">Liste Görseli</div>
-                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                            </div>
-                                            <div class="customImageUpload">
-                                                <div class="custom-file-upload-single">
-                                                    <span class="icon-upload"></span>
-                                                    <p>Resmi Seçmek için Tıklayın veya Sürükleyin</p>
-                                                    <input type="file" id="singleImageInput" accept="image/*" style="display: none;">
-                                                </div>
-                                                <div class="single-preview" id="singleImgPreview">
-                                                    Liste Görseli
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="bg-gray rounded-5 p-lg-5 mt-lg-5 p-4 mt-4">
-                                            <div class="moduleHead">
-                                                <div class="moduleTitle">Galeri Görselleri</div>
-                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                            </div>
-                                            <div class="customImageUpload type2">
-                                                <div class="custom-file-upload">
-                                                    <span class="icon-upload"></span>
-                                                    <p>Görselleri Seçmek için Tıklayın veya Sürükleyin</p>
-                                                    <input type="file" id="imageInput" accept="image/*" multiple style="display: none;">
-                                                </div>
-                                                <div class="gallery-preview" id="galleryPreview"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="sectionContent">
+                        <div class="breadCrumbWrapper px-4">
+                            <div class="breadcrumb">
+                                <a href="index.html">TekneKiralama.com</a>
+                                <a href="#" class="active">Kvkk Aydınlatma Metni</a>
                             </div>
                         </div>
-                
+                    
+                        <div class="pageContent">
+                            <div class="sectionHead col-lg-8 mx-auto type2">
+                                <h1 class="sectionTitle">
+                                    KULLANIM ŞARTLARI SÖZLEŞMESİ
+                                </h1>
+                            </div>
+                            <div class="paragraph col-lg-8 mx-auto type2">
+                                BU YASAL BİR SÖZLEŞMEDİR. BU İNTERNET SİTESİNE ERİŞEREK YA DA BURADA SAĞLANAN HERHANGİ BİR HİZMETTEN YARARLANARAK BU SÖZLEŞMENİN ŞART VE HÜKÜMLERİNİ KABUL ETMİŞ OLURSUNUZ. LÜTFEN BU ŞARTLARI KABUL ETMEDEN ÖNCE BÜTÜN SÖZLEŞMEYİ DİKKATLİCE OKUYUNUZ.
+                                <br><br>
+                                (AŞAĞIDA TANIMLANAN) HİZMETLER, (AŞAĞIDA TANIMLANAN) TEKNE SAHİPLERİ’NİN (AŞAĞIDA TANIMLANAN) TEKNE’LERİ VE/VEYA (AŞAĞIDA TANIMLANAN) VİRAVİRA DENEYİMLERİ İÇİN (AŞAĞIDA TANIMLANAN) İLANLAR OLUŞTURDUĞU VE (AŞAĞIDA TANIMLANAN) KİRACILAR’IN TEKNELER HAKKINDA BİLGİ EDİNİP REZERVASYON YAPTIKLARI BİR ONLİNE PLATFORMDUR. (AŞAĞIDA TANIMLANAN) HİZMET SAĞLAYICI’NIN TEKNE SAHİPLERİ VE KİRACILAR ARASINDA DÜZENLENEN HERHANGİ BİR SÖZLEŞMEYE TARAF OLMADIĞINI VE HİZMET SAĞLAYICI’NIN CHARTER FİRMASI, TEKNE BROKERI, ACENTE YA DA SİGORTA ŞİRKETİ OLMADIĞINI ANLAR VE KABUL EDERSİNİZ. HİZMET SAĞLAYICI’NIN, TEKNE SAHİPLERİ, KİRACILAR VE BU SİTENİN HİÇBİR KULLANICISIN VEYA HİZMETLER VE TEKNELERİN HAL VE HAREKETLERİ ÜZERİNDE HERHANGİ BİR KONTROLÜ BULUNMADIĞINI VE BU BAĞLAMDA HERHANGİ BİR YÜKÜMLÜLÜK ALTINDA OLMADIĞINI KABUL VE BEYAN EDERSİNİZ.
+                                
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </section>
-
-
-
         </main>
 
         <!---Tüm sayfalarda standart footer-->
         <footer>
             <div class="container-3xl">
                 <div class="bg-gray footer">
+                    <div class="footerTop">
+                        <div class="title">Sizin için hazırladığımız özel fikirler</div>
+                        <div class="verticalCustomScroll">
+                            <ul class="nav nav-tabs customTab footerTab" id="footerTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="gezilecekkoy-tab" data-bs-toggle="tab" data-bs-target="#gezilecekkoy-tab-pane" type="button" role="tab" aria-controls="gezilecekkoy-tab-pane" aria-selected="false">Gezilecek Koylar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content customTabContents" id="footerTabContent">
+                              <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+
+                              </div>
+                              <div class="tab-pane fade" id="gezilecekkoy-tab-pane" role="tabpanel" aria-labelledby="gezilecekkoy-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Cennet Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Hattat Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Salih Adası</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Yalıkavak</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Turgutreis</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Bağla Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kissebükü Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Aspat Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Karaincir Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                  
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+
                     <div class="footerContent">
                         <div class="leftColumn">
                             <div class="d-flex flex-column">
@@ -618,12 +691,11 @@
                     </div>
 
                     <div class="footerBottom d-flex align-items-center">
-                        <div class="copyRightWrapper pe-5">
+                        <div class="copyRightWrapper">
                             <div class="copyRight">
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
-                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
@@ -631,466 +703,264 @@
         </footer>
     </div>
 
-    <!-- Tek Resim İçin Modal -->
-    <div class="modal fade" id="singleCropModal" tabindex="-1" role="dialog" aria-labelledby="singleCropModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <a href="#" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></a>
-                </div>
-                <div class="modal-body">
-                    <img id="singleModalImage" alt="Seçilen Resim">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="fixBtn button-outline" data-dismiss="modal">Kapat</button>
-                    <button type="button" id="singleCropButton" class="fixBtn button-primary">Kırp ve Kaydet</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap Modal -->
-    <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <a href="#" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></a>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" alt="Seçilen Resim">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="fixBtn button-outline" data-dismiss="modal">Kapat</button>
-                    <button type="button" id="cropButton" class="fixBtn button-primary">Kırp ve Kaydet</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-
-    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+    <!--modallar-->
+    <!--Bu filtreleme modalı sadece filtreleme olan sayfalar ıcın eklenmelı-->
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
+                <div class="titleColumn">
+                    <div class="modal-title fs-5" id="filterModalLabel">Filtrele</div>
+                    <p>Mükemmel tekneleri bulun</p>
+                </div>
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
             </div>
             <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                        Lütfen E-Posta Adresinizi Giriniz
+                <div class="propList">
+                    <div class="listItem">
+                        <div class="title">Fiyat</div>
+                        <div class="rangesliderWrapper">
+                            <!-- Başlangıç ve bitiş değerleri için gösterim alanları -->
+                            <div class="valueTop">
+                                <span id="sliderStartValueDisplay"></span>
+                                <span id="sliderEndValueDisplay"></span>
+                            </div>
+                            <div id="rangeSlider"></div>
+
+                            <!-- Başlangıç ve bitiş değerleri için input alanları -->
+                             <div class="rangeInput">
+                                 <input type="text" id="sliderStartInput">
+                                 <input type="text" id="sliderEndInput">
+                            </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                        <div class="invalid-feedback">
-                            Lütfen Parolanızı Giriniz
+                </div>
+                <div class="accordion accordion-flush customAcc" id="filtrelemeAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Tekne Tipi
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"> <span class="checkText">Gulet</span></span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"><span class="checkText">Yelkenli</span></span>
+                                        
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Katamaran</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Motoryat</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Şişme Bot</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                        <span class="checkText">Sürat Teknesi</span>
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mb-5 text-end">
-                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Mürettebat
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Tümün Göster</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptanlı Kiralama</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="address">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptansız Kiralama</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Giriş Yap">
-                        </span>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Kapasite
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">1-5</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">6-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-15</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">16-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">20+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
-                <hr class="my-5">
-                <div class="otherLogin">
-                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
-                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Seyir Kapasitesi
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Uzunluğu
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="signText paragraph text-center pt-4">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
-                </div>
-                
             </div>
           </div>
         </div>
     </div>
 
 
-    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
-                    <div class="stepHead">
-                        <span class="">1</span>
-                        <span>2</span>
-                    </div>
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
-                    </div>
-                </div>
-                <div class="signupFormSteps">
-                    <div class="stepOne">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Devam Et">
-                                </span>
-                            </div>
-                        </form>
-                        <hr class="my-5">
-                        <div class="otherLogin">
-                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
-                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
-                        </div>
-                    </div>
-                    <div class="stepTwo d-none">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Adınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Soyadınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Parolanızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-5 ps-3">
-                                <label class="container-check">
-                                    <input type="checkbox" name="address">
-                                    <span class="checkmark"></span>
-                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
-                                </label>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Hesap Oluştur">
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="signText paragraph text-center pt-4">
-                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
-                    </div>
-                </div>
-                <blockquote class="blockquote">
-                    <span class="icon-info"></span> 
-                    <p>
-                        Your account is not verified. <a href="#">Resend confirmation</a>
-                    </p>
-                </blockquote>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Adınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Soyadınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="phoneWrapper">
-                            <div class="codeWrapper position-relative">
-                                <input type="tel" placeholder="" id="telephone">
-                            </div>
-                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                            <div class="invalid-feedback w-100">
-                                Lütfen Telefon Numaranızı Giriniz
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Kaydet">
-                        </span>
-                    </div>
-                </form>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
-    <script src="public/assets/plugins/jquery.easing.min.js"></script>
-    <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
-    <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
 
-
-    <script src="public/assets/plugins/jquery.mask.min.js"></script>
-    <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
-
     <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
-    <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script>
-        let singleCropper;
-
-        // Yükleme Alanı Olayları
-        const singleFileUploadArea = document.querySelector('.custom-file-upload-single');
-        const singleImageInput = document.getElementById('singleImageInput');
-        const singleModalImage = document.getElementById('singleModalImage');
-
-        singleFileUploadArea.addEventListener('dragover', (event) => {
-            event.preventDefault();
-            singleFileUploadArea.classList.add('drag-over');
-        });
-
-        singleFileUploadArea.addEventListener('dragleave', () => {
-            singleFileUploadArea.classList.remove('drag-over');
-        });
-
-        singleFileUploadArea.addEventListener('drop', (event) => {
-            event.preventDefault();
-            singleFileUploadArea.classList.remove('drag-over');
-            singleImageInput.files = event.dataTransfer.files;
-            const changeEvent = new Event('change');
-            singleImageInput.dispatchEvent(changeEvent);
-        });
-
-        singleFileUploadArea.addEventListener('click', () => {
-            singleImageInput.click();
-        });
-
-        // Resim Seçildiğinde İşlem
-        singleImageInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    singleModalImage.src = e.target.result;
-
-                    $('#singleCropModal').on('shown.bs.modal', () => {
-                        if (singleCropper) singleCropper.destroy();
-                        singleCropper = new Cropper(singleModalImage, {
-                            aspectRatio: 16 / 9,
-                            viewMode: 2,
-                        });
-                    });
-
-                    $('#singleCropModal').modal('show');
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-        document.getElementById('singleCropButton').addEventListener('click', () => {
-            if (singleCropper) {
-                // Kırpılmış görüntüyü al
-                const canvas = singleCropper.getCroppedCanvas();
-                const croppedImageURL = canvas.toDataURL();
-
-                // Yeni bir img etiketi oluştur ve kırpılmış resmi bu etikette göster
-                const croppedImage = document.createElement('img');
-                croppedImage.src = croppedImageURL;
-                croppedImage.alt = 'Kırpılmış Resim';
-                croppedImage.classList.add('cropped-image'); // Stil eklemek için bir sınıf
-
-                // Resmi bir konteynıra ekle
-                const croppedImageContainer = document.createElement('div');
-                croppedImageContainer.classList.add('cropped-image-container');
-
-                 // Fancybox için data-fancybox ve data-src özelliklerini ekle
-                croppedImageContainer.setAttribute('data-fancybox', 'gallery-single'); // 'gallery' grubu için
-                croppedImageContainer.setAttribute('data-src', croppedImageURL); // Kırpılmış resmin yolu
-                
-                croppedImageContainer.appendChild(croppedImage);
-
-                // Eğer gerekliyse bir silme butonu ekleyebilirsiniz
-                const deleteButton = document.createElement('button');
-                deleteButton.innerHTML = '<span class="icon-delete"></span>';
-                deleteButton.classList.add('delete-btn', 'fixBtn', 'button-primary');
-                deleteButton.addEventListener('click', () => {
-                    croppedImageContainer.remove();
-                });
-
-                croppedImageContainer.appendChild(deleteButton);
-
-                // Galeri önizlemesine ekle
-                const galleryPreview = document.getElementById('singleImgPreview');
-                galleryPreview.innerHTML = ''; // Önceki resimleri temizle
-                galleryPreview.appendChild(croppedImageContainer);
-
-                // Modal'ı kapat ve cropper'ı sıfırla
-                $('#singleCropModal').modal('hide');
-                singleCropper.destroy();
-                singleCropper = null;
-            }
-        });
-
-
-
-        let cropper;
-        const fileUploadArea = document.querySelector('.custom-file-upload');
-        const imageInput = document.getElementById('imageInput');
-        const galleryPreview = document.getElementById('galleryPreview');
-        const modalImage = document.getElementById('modalImage');
-
-        fileUploadArea.addEventListener('dragover', (event) => {
-            event.preventDefault();
-            fileUploadArea.classList.add('drag-over');
-        });
-
-        fileUploadArea.addEventListener('dragleave', () => {
-            fileUploadArea.classList.remove('drag-over');
-        });
-
-        fileUploadArea.addEventListener('drop', (event) => {
-            event.preventDefault();
-            fileUploadArea.classList.remove('drag-over');
-            imageInput.files = event.dataTransfer.files;
-            const changeEvent = new Event('change');
-            imageInput.dispatchEvent(changeEvent);
-        });
-
-        fileUploadArea.addEventListener('click', () => {
-            imageInput.click();
-        });
-
-        imageInput.addEventListener('change', (event) => {
-            const files = event.target.files;
-
-            // Resimleri yükleyin ve her biri için işlem yapın
-            Array.from(files).forEach((file, index) => {
-                if (!file.type.startsWith('image/')) return;
-
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-
-                    // Her görsel için bir div oluşturun ve silme butonu ekleyin
-                    const thumbContainer = document.createElement('div');
-                    thumbContainer.classList.add('galleryThumb');
-
-                    // Silme butonunu oluşturun
-                    const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'Sil';
-                    deleteButton.classList.add('delete-btn');
-                    deleteButton.addEventListener('click', () => {
-                        galleryPreview.removeChild(thumbContainer);
-                    });
-
-                    // Silme butonunu container'a ekleyin
-                    thumbContainer.appendChild(deleteButton);
-
-                    // galleryPreview'a eklemiyoruz, sadece kırpma işlemi için modali açıyoruz
-                    if (index === 0) {
-                        modalImage.src = URL.createObjectURL(file);
-
-                        $('#cropModal').on('shown.bs.modal', () => {
-                            if (cropper) cropper.destroy(); // Eski cropper'ı yok et
-                            cropper = new Cropper(modalImage, {
-                                aspectRatio: 3 / 2,
-                                viewMode: 2,
-                            });
-                        });
-
-                        $('#cropModal').modal('show');
-                    }
-                };
-                reader.readAsDataURL(file);
-            });
-        });
-
-        // Kırpma butonuna tıklanıldığında
-        document.getElementById('cropButton').addEventListener('click', () => {
-            if (cropper) {
-                // Kırpılmış görüntüyü al
-                const canvas = cropper.getCroppedCanvas();
-                const croppedImage = document.createElement('img');
-                const croppedImageURL = canvas.toDataURL(); // Görselin Data URL'si
-                croppedImage.src = croppedImageURL;
-
-                // Her kırpılmış resim için bir div oluşturun
-                const thumbContainer = document.createElement('div');
-                thumbContainer.classList.add('galleryThumb');
-
-                // Fancybox entegrasyonu için nitelikler ekle
-                thumbContainer.setAttribute('data-fancybox', 'gallery'); // Fancybox galerisi için
-                thumbContainer.setAttribute('data-src', croppedImageURL); // Data URL'sini kaynak olarak ekle
-
-                // Kırpılmış görseli kapsayıcıya ekle
-                thumbContainer.appendChild(croppedImage);
-
-                // Silme butonunu oluşturun
-                const deleteButton = document.createElement('button');
-                deleteButton.innerHTML = '<span class="icon-delete"></span>';
-                deleteButton.classList.add('delete-btn', 'fixBtn', 'button-primary');
-                deleteButton.addEventListener('click', () => {
-                    galleryPreview.removeChild(thumbContainer);
-                });
-
-                // Silme butonunu kapsayıcıya ekleyin
-                thumbContainer.appendChild(deleteButton);
-
-                // Kapsayıcıyı galleryPreview'e ekleyin
-                galleryPreview.appendChild(thumbContainer);
-
-                // Modal'ı kapat ve cropper'ı sıfırla
-                $('#cropModal').modal('hide');
-                cropper.destroy();
-                cropper = null;
-            }
-        });
-
-
-      </script>
-
 </body>
 
 </html>

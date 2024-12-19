@@ -183,6 +183,30 @@
         }
       }
     }
+    .card-body {
+      padding: 0;
+      .icon {
+        width: 30px;
+        min-width: 30px;
+
+        img {
+          min-width: 100%;
+          object-fit: contain;
+        }
+      }
+      .card-title {
+        font-size: 16px;
+        color: var(--gray-7);
+        font-family: "GilroySemibold";
+        line-height: 24px;
+      }
+      .card-text {
+        font-size: 15.5px;
+        color: var(--gray-6);
+        line-height: 24px;
+        font-family: "GilroyMedium";
+      }
+    }
   }
   &.half {
     gap: 60px 33px;
@@ -376,8 +400,78 @@
         }
       }
     }
+    &.type3 {
+      gap: 50px 20px;
+      @media screen and (max-width: 991.98px) {
+        gap: 20px;
+      }
+      .card {
+        width: calc(33.3% - 15px);
+        @media screen and (max-width: 991.98px) {
+          width: calc(50% - 10px);
+        }
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
+      }
+    }
   }
+  &.quad {
+    gap: 20px;
+    .card {
+      width: calc(25% - 15px);
 
+      .imageWrapper {
+        aspect-ratio: 3/2;
+      }
+      .cardBody {
+        text-align: left;
+      }
+      .card-text {
+        font-size: 16px;
+        line-height: 23px;
+        font-family: "GilroySemibold";
+        color: var(--gray-7);
+        text-align: left;
+        transition: all 0.3s linear;
+      }
+      .moreLink {
+        color: var(--primary);
+        font-family: "GilroySemibold";
+        font-size: 14px;
+        line-height: 22px;
+        position: relative;
+        text-align: left;
+        display: inline-flex;
+        margin-top: 10px;
+        cursor: pointer;
+        @media screen and (min-width: 992px) {
+          &:after {
+            content: "";
+            width: 100%;
+            border-bottom: 1px dotted var(--primary);
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            transition: all 0.3s linear;
+          }
+          &:hover {
+            &:after {
+              width: 0;
+            }
+          }
+        }
+      }
+
+      .userShortInfo {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--text-2);
+        font-family: "GilroyMedium";
+        margin-top: 20px;
+      }
+    }
+  }
   a {
     &.card {
       &.allLinkCard {
@@ -695,5 +789,54 @@
         }
       }
     }
+  }
+}
+
+.listHowCan {
+  .num {
+    margin: auto;
+    background-color: var(--primary);
+    font-size: 35px;
+    font-family: 'GilroyBold';
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .title{
+    margin-top: 25px;
+    color: var(--gray-7);
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'GilroySemibold';
+    text-align: center;
+  }
+}
+
+.twiceList{
+  .leftColumn{
+    padding-right: 50px;
+    &.imageColumn{
+      padding-right: 0;
+    }
+  }
+  .rightColumn{
+    padding-left: 50px;
+  }
+  .title{
+    font-size: 26px;
+    color: var(--gray-7);
+    line-height: 32px;
+    font-family: 'GilroySemibold';
+  }
+  p{
+    line-height: 40px;
+    font-size: 22px;
+    color: var(--gray-6);
+    font-family: 'GilroyMedium';
+    margin-top: 40px;
   }
 }

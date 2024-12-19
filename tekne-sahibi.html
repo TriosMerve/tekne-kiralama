@@ -48,19 +48,18 @@
         rel="stylesheet">
 
 
-    <title>Tekne Kiralama</title>
+    <title>Tekne Sahibi</title>
 
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">    
     
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="public/assets/front/css/app.css">
+
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
 <body>
@@ -74,7 +73,7 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header" class="">
+        <header id="header">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
@@ -134,26 +133,24 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                        </div>
+                       </div>
                         <div class="dropdown">
                             <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class=""><span class="icon-user"></span> </div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
-                                <hr>
                                 <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
-
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
-                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                            <a data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" class="fixBtn button-outline">Üye Girişi</a>
+                            <a data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal" class="fixBtn button-primary">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
@@ -203,8 +200,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
-                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                                        <a data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" class="fixBtn button-primary">Üye Girişi</a>
+                                        <a data-bs-toggle="modal" data-bs-target="#OlTekneModal" class="fixBtn button-secondary">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -483,60 +480,393 @@
         <main>
             <section class="pageSection">
                 <div class="container-3xl">
-                    <div class="userPageContainer">
-                        <div class="row mx-0">
-                            <div class="sidenavWrapper d-none d-lg-block">
-                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="fixBtn button-primary backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
-                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
-                                <div class="sideNav type2">
-                                    <a href="#"><span>Genel Bilgiler</span></a>
-                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim.html"><span>Görseller</span></a>
-                                    <a href="#"><span>Hizmet Seçenekleri</span></a>
-                                    <a href="#"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="#"><span>Kapasite Bilgileri</span></a>
-                                    <a href="#"><span>Tekne Olanakları</span></a>
-                                    <a href="#"><span>Sunulan Hizmetler</span></a>
+                    <div class="sectionContent">
+                        <div class="bannerWrapper">
+                            <div class="swiper bannerSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="bannerItem">
+                                            <div class="imageWrapper">
+                                                <img src="public/assets/images/media/banners/blogSlider01.jpg" alt="">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="category">teknekiralama.com Tekne Sahibi Ol</div>
+                                                <p>12.000 doğrulanmış tekne arasında yerinizi alın ve hemen rezervasyon taleplerini kabul etmeye başlayın.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination position-relative type3"></div>
+                            </div>
+                        </div>
+                        <div class="breadCrumbWrapper px-4">
+                            <div class="breadcrumb">
+                                <a href="index.html">TekneKiralama.com</a>
+                                <a href="#" class="active">Tekne Sahibi</a>
+                            </div>
+                        </div>
+                    
+                        <div class="pageContent">
+                            <div class="sectionHead col-lg-11 mx-auto">
+                                <div class="sectionTitle">
+                                    Tekne sahiplerimiz ile tanışın
+                                </div>
+                                <div class="sectionText type2">
+                                    Tekne turizmini sevdirmek ve daha geniş kitlelerin erişimine sunmak için birlikte çalışıyoruz.
                                 </div>
                             </div>
-                            <div class="sideContentWrapper">
-                                <div class="col-xl-9 px-0">
-                                    <div class="sideHead">
-                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
-                                    </div>
-                                    <div class="sideContent">
-
-                                        <div class="my-5">
-                                            <div class="custom-file-upload-single">
-                                                <span class="icon">📁</span>
-                                                <p>Resmi Seçmek için Tıklayın veya Sürükleyin</p>
-                                                <input type="file" id="singleImageInput" accept="image/*" style="display: none;">
-                                            </div>
-                                            <div class="single-preview d-flex flex-wrap mt-3" id="singleImgPreview"></div>
-
-                                            <div class="custom-file-upload">
-                                              <span class="icon">📁</span>
-                                              <p>Görselleri Seçmek için Tıklayın veya Sürükleyin</p>
-                                              <input type="file" id="imageInput" accept="image/*" multiple style="display: none;">
-                                            </div>
-                                            <div class="gallery-preview d-flex flex-wrap mt-3" id="galleryPreview"></div>
+                     
+                            <div class="cards quad">
+                                <div class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-4.jpg" alt="">
                                         </div>
-
-
-
-
-                                        <div class="bg-gray rounded-5 p-5">
-                                            
+                                    </div>
+                                    <div class="cardBody">
+                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
+                                        <div class="moreLink">Daha Fazla</div>
+                                        <div class="userShortInfo">
+                                            Kemal Erden, Tekne Sahibi, Erden Guleti
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
+                                        <div class="moreLink">Daha Fazla</div>
+                                        <div class="userShortInfo">
+                                            Uğur Özdel, Tekne Sahibi, Saadet Guleti
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
+                                        <div class="moreLink">Daha Fazla</div>
+                                        <div class="userShortInfo">
+                                            Ali Engin Haznedar, CEO, Sailfleet
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
+                                        <div class="moreLink">Daha Fazla</div>
+                                        <div class="userShortInfo">
+                                            N. Candan Tokyürek, Tekne Sahibi, Ancyra Sailing
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
+                        <div class="pageContent padding bg-gray rounded-5">
+                            <div class="sectionHead">
+                                <div class="sectionTitle">
+                                    Teknemi neden teknekiralama.com’da listelemeliyim?
+                                </div>
+                            </div>
+                            <div class="cards third type3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
+                                            <div>
+                                                <div class="card-title">Pazarlama & Satış Giderlerinizi Düşürün</div>
+                                                <div class="card-text">teknekiralama.com sayesinde tekne sahipleri tekne kiralamak isteyen kişiler ile bir araya gelirler. Charter firmaları pazarlama giderlerini düşürürken, bireysel tekne sahipleri daha önceden bağlantıları olmayan geniş bir talep havuzuna erişim sağlarlar.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
+                                            <div>
+                                                <div class="card-title">Tahsilat Riskinizi Ortadan Kaldırın</div>
+                                                <div class="card-text">teknekiralama.com tekne sahipleri için tahsilat riskini de ortadan kaldırır. Rezervasyon sırasında kiracıdan tahsil edilen ödemeler tekne sahibinin hesabına yatırılana kadar BDDK tarafından denetlenen bir ödeme hizmeti sağlayıcısının koruma hesabında tutulur.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
+                                            <div>
+                                                <div class="card-title">Müşterilerinize Taksit İmkanı Sunun</div>
+                                                <div class="card-text">Teknenizi kiralamak isteyen kişilere 12’ye kadar taksit imkanı sunabilirsiniz.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
+                                            <div>
+                                                <div class="card-title">Tekneniz için Ücretsiz Bir Listeleme Sayfası Yapın</div>
+                                                <div class="card-text">Verdiğiniz ilanlar ile teknenizin tüm özelliklerini ve görsellerini yayınlayabilirsiniz.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
+                                            <div>
+                                                <div class="card-title">Kullanıcı Yorumları ile Güven Sağlayın</div>
+                                                <div class="card-text">Teknenizi daha önceden kiralayan kişilerin kullanıcı yorumları sayesinde potansiyel müşteriler nezdinde iyi bir intiba bırakırsınız.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start gap-3">
+                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
+                                            <div>
+                                                <div class="card-title">Kredi Kartı ve EFT/Havale ile Online Ödeme Alın</div>
+                                                <div class="card-text">Müşterilerinizden online olarak kredi kartı ve EFT/Havale ile ödeme alabilirsiniz.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="pageContent">
+                            <div class="sectionHead col-lg-11 mx-auto">
+                                <div class="sectionTitle d-flex align-items-center justify-content-center gap-3">
+                                    Nasıl <span class="notLinkButton primaryButton">Süper Tekne Sahibi</span> olurum?
+                                </div>
+                                <div class="sectionText type2">
+                                    teknekiralama.com’da Süper Tekne Sahibi olarak aramalarda üst sıralarda çıkabilir ve rezervasyon alma ihtimalinizi 3 kata kadar artırabilirsiniz!
+                                    Süper tekne sahibi olmak için;
+                                </div>
+                            </div>
+                            <div class="sectionContent">
+                                <div class="listHowCan row">
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="num">1</div>
+                                        <div class="title">
+                                            Tekne ve kullanıcı bilgilerini eksiksiz doldurun
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="num">2</div>
+                                        <div class="title">
+                                            Doğrulama belgelerini ekibimize iletin
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="num">3</div>
+                                        <div class="title">
+                                            viravira.co sözleşmesini imzalayın
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="num">4</div>
+                                        <div class="title">
+                                            Rezervasyonlarınızdan minimum 4,5 puan alın
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="pageContent padding bg-gray rounded-5">
+                            <div class="sectionHead col-lg-11 mx-auto">
+                                <div class="sectionTitle">
+                                    Pazarlama ve Promosyon
+                                </div>
+                            </div>
+
+                            <div class="sectionContent">
+                                <div class="row twiceList">
+                                    <div class="col-lg-4 imageColumn leftColumn mb-lg-5 pb-lg-4">
+                                        <img class="img-fluid" src="https://partner.viravira.co/img/b1.png" alt="">
+                                    </div>
+                                    <div class="col-lg-8 textColumn rightColumn mb-lg-5 pb-lg-4">
+                                        <div class="title">Birçok seyahat sever tekne tatillerini planlamaya arama motorlarıyla başlıyor</div>
+                                        <p>Konukların bize gelmesini beklemek yerine teknenizi tüm arama motorlarında aktif olarak tanıtıyoruz.</p>
+                                    </div>
+                                    <div class="col-lg-8 textColumn leftColumn mb-lg-5 pb-lg-4">
+                                        <div class="title">Tekne kiralamak isteyenler sadakat platformlarındaki fırsatları değerlendiriyor</div>
+                                        <p>viravira.co Hopi gibi sadakat platformlarında yer alıyor. Ayrıca, büyük bankaların, şirketlerin ve holdinglerin çalışanlarına ve müşterilerine yönelik kampanyalar yapıyor.</p>
+                                    </div>
+                                    <div class="col-lg-4 imageColumn leftColumn mb-lg-5 pb-lg-4">
+                                        <img class="img-fluid" src="https://partner.viravira.co/img/b2.png" alt="">
+                                    </div>
+                                    <div class="col-lg-4 imageColumn leftColumn mb-lg-5 pb-lg-4">
+                                        <img class="img-fluid" src="https://partner.viravira.co/img/b3.png" alt="">
+                                    </div>
+                                    <div class="col-lg-8 textColumn rightColumn mb-lg-5 pb-lg-4">
+                                        <div class="title">Sosyal medya hesapları ile dijital reklamlar kullanıcı seçimlerinde etkili oluyor</div>
+                                        <p>viravira.co sosyal medya hesapları üzerinden ve dijital mecralarda verdiği reklamlarla hem daha önceden mavi tur yapanlara hem de ilk defa mavi tura çıkacaklara yönelik iletişim yapıyor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="pageContent">
+                            <div class="sectionHead">
+                                <div class="sectionTitle">
+                                    Hangi tip tekneler viravira.co’da listelenebilir?
+                                </div>
+                            </div>
+                     
+                            <div class="cards third blogCards">
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-4.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="title">Katamaran</div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="title">Yelkenli </div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="title">Motoryat</div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="title">Gulet</div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="title">Sürat Teknesi</div>
+                                    </div>
+                                </a>
+                                <a href="blog-detay.html" class="card">
+                                    <div class="cardTop-image">
+                                        <div class="imageWrapper">
+                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="cardBody">
+                                        <div class="title">Şişme Bot</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="pageContent padding bg-gray rounded-5">
+                            <div class="sectionHead col-lg-11 mx-auto">
+                                <div class="sectionTitle">
+                                    Farklı bir deniz deneyimi mi listelemek istiyorsunuz?
+                                </div>
+                                <div class="sectionText type2">
+                                    teknekiralama.com’da üzerinden rezerve edilebilen hizmetler her geçen gün artıyor. Gelişmelerden haberdar olmak için iletişim bilgilerinizi bırakabilirsiniz.
+                                </div>
+                            </div>
+                            <div class="sectionContent">
+                                <div class="col-xxl-4 col-xl-6 col-lg-7 col-md-8 mx-auto">
+                                    <form class="form needs-validation" novalidate>
+                                        <div class="mb-3">
+                                            <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                            <div class="invalid-feedback">
+                                                Lütfen E-Posta Adresinizi Giriniz
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                                            <div class="invalid-feedback">
+                                                Lütfen Adınızı Giriniz
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="phoneWrapper">
+                                                <div class="codeWrapper position-relative">
+                                                    <input type="tel" placeholder="" id="telephone">
+                                                </div>
+                                                <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                                                <div class="invalid-feedback w-100">
+                                                    Lütfen Telefon Numaranızı Giriniz
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="mb-3">
+                                            <span class="fixBtn button-primary w-100">
+                                                <input type="submit" value="Beni Arayın">
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--E-Bulten section-->
+            <section class="eBultenSection">
+                <div class="container-3xl">
+                    <div class="bg-primary rounded-5 sectionWrapper">
+                        <div class="title">
+                            SİZDE MİSAFİRİMİZ OLMAK İSTER MİSİNİZ ?
+                        </div>
+                        <div class="emailInputWrapper">
+                            <input type="email"  placeholder="E-mail adresiniz">
+                            <a href="#" class="fixBtn button-outline type3">Abone ol</a>
+                        </div>
+                        <div id="captchaWrapper">
+                            <img src="public/assets/images/statics/captcha.png" alt="">
+                        </div>
                     </div>
                 </div>
             </section>
-
-
+            
 
         </main>
 
@@ -544,6 +874,123 @@
         <footer>
             <div class="container-3xl">
                 <div class="bg-gray footer">
+                    <div class="footerTop">
+                        <div class="title">Sizin için hazırladığımız özel fikirler</div>
+                        <div class="verticalCustomScroll">
+                            <ul class="nav nav-tabs customTab footerTab" id="footerTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="gezilecekkoy-tab" data-bs-toggle="tab" data-bs-target="#gezilecekkoy-tab-pane" type="button" role="tab" aria-controls="gezilecekkoy-tab-pane" aria-selected="false">Gezilecek Koylar</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content customTabContents" id="footerTabContent">
+                              <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+
+                              </div>
+                              <div class="tab-pane fade" id="gezilecekkoy-tab-pane" role="tabpanel" aria-labelledby="gezilecekkoy-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Cennet Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Hattat Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Salih Adası</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Yalıkavak</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Turgutreis</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Bağla Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kissebükü Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Aspat Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Karaincir Koyu</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                  
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
+                                <div class="listItems">
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Yat</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Göcek</div>
+                                        <div class="boatName">Kiralık Katamaran</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Gulet</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="cityName">Bodrum</div>
+                                        <div class="boatName">Kiralık Tekne</div>
+                                    </a>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+
                     <div class="footerContent">
                         <div class="leftColumn">
                             <div class="d-flex flex-column">
@@ -599,7 +1046,7 @@
                                     <ul>
                                         <li><a href="#">Kullanım Koşulları</a></li>
                                         <li><a href="#">KVKK Aydınlatma Metni</a></li>
-                                        <li><a href="#">İptal ve İdade Koşulları</a></li>
+                                        <li><a href="#">İptal ve İade Koşulları</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -607,12 +1054,12 @@
                     </div>
 
                     <div class="footerBottom d-flex align-items-center">
-                        <div class="copyRightWrapper pe-5">
+                        <div class="copyRightWrapper">
                             <div class="copyRight">
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
-                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
+                        <a class="fixBtn button-outline ms-5" data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
@@ -620,51 +1067,9 @@
         </footer>
     </div>
 
-    <!-- Tek Resim İçin Modal -->
-<div class="modal fade" id="singleCropModal" tabindex="-1" role="dialog" aria-labelledby="singleCropModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="singleCropModalLabel">Resmi Kırp</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img id="singleModalImage" alt="Seçilen Resim">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                <button type="button" id="singleCropButton" class="btn btn-primary">Kırp ve Kaydet</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Bootstrap Modal -->
-<div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cropModalLabel">Resmi Kırp</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img id="modalImage" alt="Seçilen Resim">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-          <button type="button" id="cropButton" class="btn btn-primary">Kırp ve Kaydet</button>
-        </div>
-      </div>
-    </div>
-</div>
-  
-
-
-    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+    <!--modallar-->
+    <div class="modal fade type2" id="UyeGirisiTekneModal" aria-hidden="true" aria-labelledby="UyeGirisiTekneModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
@@ -672,7 +1077,7 @@
             <div class="modal-body">
                 <div class="modalHead">
                     <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
+                        <div class="modal-title text-primary mb-0" id="UyeGirisiTekneModalLabel">Üye Girişi</div>
                     </div>
                 </div>
                 <form class="form needs-validation" novalidate>
@@ -688,8 +1093,8 @@
                             Lütfen Parolanızı Giriniz
                         </div>
                     </div>
-                    <div class="mb-5 text-end">
-                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="forgotLink" data-bs-toggle="modal" data-bs-target="#sifremiUnuttumTekneModal">Şifremi Unuttum</a>
                     </div>
                     <div class="mb-3">
                         <span class="fixBtn button-primary w-100">
@@ -697,13 +1102,47 @@
                         </span>
                     </div>
                 </form>
-                <hr class="my-5">
-                <div class="otherLogin">
-                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
-                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
-                </div>
+                <hr>
                 <div class="signText paragraph text-center pt-4">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal">Üye Ol</a>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade type2" id="sifremiUnuttumTekneModal" aria-hidden="true" aria-labelledby="sifremiUnuttumTekneModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="sifremiUnuttumTekneModalLabel">Şifremi Unuttum</div>
+                    </div>
+                </div>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Şifreni Yenile">
+                        </span>
+                    </div>
+                    <div class="paragraph type3">
+                        Hesabınıza erişim sağlayabilmeniz için kayıtlı e-posta adresinizi girin. Size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz. Gelen kutunuzu ve spam'i kontrol etmeyi unutmayın!
+                    </div>
+                </form>
+                <hr>
+                <div class="signText paragraph text-center">
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal">Üye Ol</a>
                 </div>
                 
             </div>
@@ -712,8 +1151,8 @@
     </div>
 
 
-    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal fade type2" id="UyeOlTekneModal" aria-hidden="true" aria-labelledby="UyeOlTekneModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
@@ -726,7 +1165,7 @@
                         <span>2</span>
                     </div>
                     <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
+                        <div class="modal-title text-primary mb-0" id="UyeOlTekneModalLabel">Üye Hesabı Oluştur</div>
                     </div>
                 </div>
                 <div class="signupFormSteps">
@@ -744,11 +1183,6 @@
                                 </span>
                             </div>
                         </form>
-                        <hr class="my-5">
-                        <div class="otherLogin">
-                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
-                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
-                        </div>
                     </div>
                     <div class="stepTwo d-none">
                         <form class="form needs-validation" novalidate>
@@ -762,6 +1196,23 @@
                                 <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
                                 <div class="invalid-feedback">
                                     Lütfen Soyadınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                <div class="invalid-feedback">
+                                    Lütfen E-Posta Adresinizi Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="phoneWrapper">
+                                    <div class="codeWrapper position-relative">
+                                        <input type="tel" placeholder="" id="telephone">
+                                    </div>
+                                    <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                                    <div class="invalid-feedback w-100">
+                                        Lütfen Telefon Numaranızı Giriniz
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -785,69 +1236,10 @@
                         </form>
                     </div>
                 </div>
+                <hr>
                 <div class="signText paragraph text-center pt-4">
-                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
+                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal">Giriş Yap</a>
                 </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
-                    </div>
-                </div>
-                <blockquote class="blockquote">
-                    <span class="icon-info"></span> 
-                    <p>
-                        Your account is not verified. <a href="#">Resend confirmation</a>
-                    </p>
-                </blockquote>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Adınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Soyadınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="phoneWrapper">
-                            <div class="codeWrapper position-relative">
-                                <input type="tel" placeholder="" id="telephone">
-                            </div>
-                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                            <div class="invalid-feedback w-100">
-                                Lütfen Telefon Numaranızı Giriniz
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Kaydet">
-                        </span>
-                    </div>
-                </form>
             </div>
           </div>
         </div>
@@ -859,7 +1251,6 @@
     <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
@@ -870,212 +1261,7 @@
 
     <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script>
-        let singleCropper;
-
-        // Yükleme Alanı Olayları
-        const singleFileUploadArea = document.querySelector('.custom-file-upload-single');
-        const singleImageInput = document.getElementById('singleImageInput');
-        const singleModalImage = document.getElementById('singleModalImage');
-
-        singleFileUploadArea.addEventListener('dragover', (event) => {
-            event.preventDefault();
-            singleFileUploadArea.classList.add('drag-over');
-        });
-
-        singleFileUploadArea.addEventListener('dragleave', () => {
-            singleFileUploadArea.classList.remove('drag-over');
-        });
-
-        singleFileUploadArea.addEventListener('drop', (event) => {
-            event.preventDefault();
-            singleFileUploadArea.classList.remove('drag-over');
-            singleImageInput.files = event.dataTransfer.files;
-            const changeEvent = new Event('change');
-            singleImageInput.dispatchEvent(changeEvent);
-        });
-
-        singleFileUploadArea.addEventListener('click', () => {
-            singleImageInput.click();
-        });
-
-        // Resim Seçildiğinde İşlem
-        singleImageInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    singleModalImage.src = e.target.result;
-
-                    $('#singleCropModal').on('shown.bs.modal', () => {
-                        if (singleCropper) singleCropper.destroy();
-                        singleCropper = new Cropper(singleModalImage, {
-                            aspectRatio: 16 / 9,
-                            viewMode: 2,
-                        });
-                    });
-
-                    $('#singleCropModal').modal('show');
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-        document.getElementById('singleCropButton').addEventListener('click', () => {
-            if (singleCropper) {
-                // Kırpılmış görüntüyü al
-                const canvas = singleCropper.getCroppedCanvas();
-                const croppedImageURL = canvas.toDataURL();
-
-                // Yeni bir img etiketi oluştur ve kırpılmış resmi bu etikette göster
-                const croppedImage = document.createElement('img');
-                croppedImage.src = croppedImageURL;
-                croppedImage.alt = 'Kırpılmış Resim';
-                croppedImage.classList.add('cropped-image'); // Stil eklemek için bir sınıf
-
-                // Resmi bir konteynıra ekle
-                const croppedImageContainer = document.createElement('div');
-                croppedImageContainer.classList.add('cropped-image-container', 'm-2');
-                croppedImageContainer.appendChild(croppedImage);
-
-                // Eğer gerekliyse bir silme butonu ekleyebilirsiniz
-                const deleteButton = document.createElement('button');
-                deleteButton.textContent = 'Sil';
-                deleteButton.classList.add('delete-btn', 'btn', 'btn-danger', 'mt-2');
-                deleteButton.addEventListener('click', () => {
-                    croppedImageContainer.remove();
-                });
-
-                croppedImageContainer.appendChild(deleteButton);
-
-                // Galeri önizlemesine ekle
-                const galleryPreview = document.getElementById('singleImgPreview');
-                galleryPreview.innerHTML = ''; // Önceki resimleri temizle
-                galleryPreview.appendChild(croppedImageContainer);
-
-                // Modal'ı kapat ve cropper'ı sıfırla
-                $('#singleCropModal').modal('hide');
-                singleCropper.destroy();
-                singleCropper = null;
-            }
-        });
-
-
-
-        let cropper;
-        const fileUploadArea = document.querySelector('.custom-file-upload');
-        const imageInput = document.getElementById('imageInput');
-        const galleryPreview = document.getElementById('galleryPreview');
-        const modalImage = document.getElementById('modalImage');
-
-        fileUploadArea.addEventListener('dragover', (event) => {
-        event.preventDefault();
-        fileUploadArea.classList.add('drag-over');
-        });
-
-        fileUploadArea.addEventListener('dragleave', () => {
-        fileUploadArea.classList.remove('drag-over');
-        });
-
-        fileUploadArea.addEventListener('drop', (event) => {
-        event.preventDefault();
-        fileUploadArea.classList.remove('drag-over');
-        imageInput.files = event.dataTransfer.files;
-        const changeEvent = new Event('change');
-        imageInput.dispatchEvent(changeEvent);
-        });
-
-        fileUploadArea.addEventListener('click', () => {
-        imageInput.click();
-        });
-
-        imageInput.addEventListener('change', (event) => {
-        const files = event.target.files;
-
-        // Resimleri yükleyin ve her biri için işlem yapın
-        Array.from(files).forEach((file, index) => {
-            if (!file.type.startsWith('image/')) return;
-
-            const reader = new FileReader();
-            reader.onload = (e) => {
-            const img = document.createElement('img');
-            img.src = e.target.result;
-
-            // Her görsel için bir div oluşturun ve silme butonu ekleyin
-            const thumbContainer = document.createElement('div');
-            thumbContainer.classList.add('galleryThumb');
-
-            // Silme butonunu oluşturun
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Sil';
-            deleteButton.classList.add('delete-btn');
-            deleteButton.addEventListener('click', () => {
-                galleryPreview.removeChild(thumbContainer);
-            });
-
-            // Silme butonunu container'a ekleyin
-            thumbContainer.appendChild(deleteButton);
-
-            // galleryPreview'a eklemiyoruz, sadece kırpma işlemi için modali açıyoruz
-            if (index === 0) {
-                modalImage.src = URL.createObjectURL(file);
-
-                $('#cropModal').on('shown.bs.modal', () => {
-                if (cropper) cropper.destroy(); // Eski cropper'ı yok et
-                cropper = new Cropper(modalImage, {
-                    aspectRatio: 3 / 2,
-                    viewMode: 2,
-                });
-                });
-
-                $('#cropModal').modal('show');
-            }
-            };
-            reader.readAsDataURL(file);
-        });
-        });
-
-        // Kırpma butonuna tıklanıldığında
-        document.getElementById('cropButton').addEventListener('click', () => {
-        if (cropper) {
-            // Kırpılmış görüntüyü al
-            const canvas = cropper.getCroppedCanvas();
-            const croppedImage = document.createElement('img');
-            croppedImage.src = canvas.toDataURL();
-
-            // Her kırpılmış resim için bir div oluşturun ve silme butonu ekleyin
-            const thumbContainer = document.createElement('div');
-            thumbContainer.classList.add('galleryThumb');
-
-            // Kırpılmış görseli container'a ekle
-            thumbContainer.appendChild(croppedImage);
-
-            // Silme butonunu oluşturun
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Sil';
-            deleteButton.classList.add('delete-btn');
-            deleteButton.addEventListener('click', () => {
-            galleryPreview.removeChild(thumbContainer);
-            });
-
-            // Silme butonunu container'a ekleyin
-            thumbContainer.appendChild(deleteButton);
-
-            // galleryPreview'a ekleyin
-            galleryPreview.appendChild(thumbContainer);
-
-            // Modal'ı kapat ve cropper'ı sıfırla
-            $('#cropModal').modal('hide');
-            cropper.destroy();
-            cropper = null;
-        }
-        });
-
-
-      </script>
-
 </body>
 
 </html>

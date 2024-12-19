@@ -79,7 +79,7 @@
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
@@ -134,33 +134,33 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                        </div>
+                        </div> -->
                         <div class="dropdown">
-                            <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class=""><span class="icon-user"></span> </div>
+                            <button class="dropdown-toggle userButton type2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="otherUserMenuIcon">ES</div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <li><a class="dropdown-item active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Teknelerim</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Talepler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Rezervasyonlar</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Ödemeler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
 
-                        <div class="buttons d-lg-flex d-none pe-3 ps-3" >
+                        <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
                             <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
                             <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
-                <div class="headerMenuNav">
+                <!-- <div class="headerMenuNav">
                     <div class="navMenu">
                         <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
                             <div class="row navMenuTop mx-0">
@@ -474,7 +474,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </header>
 
@@ -482,20 +482,23 @@
         <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
         <main>
             <section class="pageSection">
+                <div class="overlay"></div>
                 <div class="container-3xl">
                     <div class="userPageContainer">
                         <div class="row mx-0">
-                            <div class="sidenavWrapper d-none d-lg-block">
+                            <div class="mobileSideMenu d-lg-none"><span class="text">Tekne Yönetimi</span><span class="icon-arrow-right"></span> </div>
+                            <div class="sidenavWrapper">
                                 <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
                                 <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
                                 <div class="sideNav type2">
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kapasite.html"><span>Kapasite Bilgileri</span></a>
                                     <a class="active" href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
-                                    <a href="#"><span>Sunulan Hizmetler</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
@@ -504,15 +507,15 @@
                                         <div class="pageTitle">Sunseeker, Manhattan 64</div>
                                     </div>
                                     <div class="sideContent">
-                                        <div class="bg-gray rounded-5 p-5">
+                                        <div class="bg-gray rounded-5 p-lg-5 p-4">
                                             <div class="moduleHead">
                                                 <div class="moduleTitle">Tekne Olanakları</div>
                                                 <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
                                             </div>
                                             <form class="form needs-validation type2" novalidate>
                                                 <div class="row align-items-stretch">
-                                                    <div class="col-lg-6 pe-4">
-                                                        <div class="bg-white rounded-5 h-100 p-4 pb-5 checkList">
+                                                    <div class="col-lg-6 pe-lg-4 mb-4 mb-lg-0">
+                                                        <div class="bg-white rounded-5 h-100 p-4 pb-lg-5 pb-4 checkList">
                                                             <div class="subTitle">Temel Olanaklar</div>
                                                             <label class="container-check mt-4 pt-2">
                                                                 <input type="checkbox" name="address">
@@ -542,7 +545,7 @@
                                                            
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 ps-4">
+                                                    <div class="col-lg-6 ps-lg-4">
                                                         <div class="bg-white rounded-5 h-100 p-4 pb-5 checkList">
                                                             <div class="subTitle">Diğer Olanaklar </div>
                                                             <label class="container-check mt-4 pt-2">
@@ -573,7 +576,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mb-3 d-flex align-items-center gap-5 mt-5">
+                                                <div class="mb-3 d-flex align-items-center gap-5 mt-lg-5 mt-4">
                                                     <span class="fixBtn button-success px-5">
                                                         <input type="submit" value="Kaydet">
                                                     </span>
@@ -655,7 +658,7 @@
                                     <ul>
                                         <li><a href="#">Kullanım Koşulları</a></li>
                                         <li><a href="#">KVKK Aydınlatma Metni</a></li>
-                                        <li><a href="#">İptal ve İdade Koşulları</a></li>
+                                        <li><a href="#">İptal ve İade Koşulları</a></li>
                                     </ul>
                                 </div>
                             </div>

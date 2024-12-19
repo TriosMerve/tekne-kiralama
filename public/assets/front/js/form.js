@@ -221,6 +221,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Price Mask doğrulama işlemi
+$(".priceMask").mask("000.000.000", { reverse: true }).on("input", function () {
+  var inputValue = $(this).val().replace(/\./g, ""); // Noktaları kaldırarak saf sayıyı al
+  var numericValue = parseInt(inputValue, 10); // Sayıya çevir
+
+  // Değerin geçerli olup olmadığını kontrol et
+  if (isNaN(numericValue) || numericValue <= 0) {
+    $(this).addClass("is-invalid").removeClass("is-valid");
+  } else {
+    $(this).addClass("is-valid").removeClass("is-invalid");
+  }
+});
+
 // Phone mask doğrulama fonksiyonu
 function checkValidity(inputElement, mask) {
   var inputValue = inputElement.val();

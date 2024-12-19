@@ -22,7 +22,7 @@
     @media screen and (max-width:991.98px) {
         width: 45px;
         height: 45px;
-        top: -45px!important;
+        margin-top: 30px;
     }
     svg{
         display: none;
@@ -42,7 +42,13 @@
         }
     }
 }
-
+.fancybox__toolbar{
+    .f-button {
+        @media screen and (max-width:991.98px) {
+            top: 30px!important;
+        }
+    }
+}
 .fancybox__nav {
     .f-button{
         &:before{
@@ -71,4 +77,7 @@
 }
 .fancybox__slide.has-image>.fancybox__content{
     padding-top: 50px;
+}
+.is-idle .fancybox__toolbar{
+    animation: none!important;
 }

@@ -493,56 +493,161 @@
                                 <div class="sideNav type2">
                                     <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
-                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kapasite.html"><span>Kapasite Bilgileri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
-                                <div class="col-xxl-9 px-0">
+                                <div class="col-xl-9 px-0">
                                     <div class="sideHead">
                                         <div class="pageTitle">Sunseeker, Manhattan 64</div>
                                     </div>
                                     <div class="sideContent">
-                                        <div class="bg-gray rounded-5 p-lg-5 mt-lg-5 p-4 mt-4">
+                                        <div class="bg-gray rounded-5 p-lg-5 p-4 mt-5">
                                             <div class="moduleHead">
-                                                <div class="moduleTitle">Liste Görseli</div>
+                                                <div class="moduleTitle">Sunulan Hizmetler</div>
                                                 <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
                                             </div>
-                                            <div class="customImageUpload">
-                                                <div class="custom-file-upload-single">
-                                                    <span class="icon-upload"></span>
-                                                    <p>Resmi Seçmek için Tıklayın veya Sürükleyin</p>
-                                                    <input type="file" id="singleImageInput" accept="image/*" style="display: none;">
+                                            <form class="form needs-validation type2" novalidate>
+                                                <div class="formSwitchWrapper accSwitchHead">
+                                                    <label for="sunulanhizmetler">Fully equipped kitchen</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                        <label for="sunulanhizmetler" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
                                                 </div>
-                                                <div class="single-preview" id="singleImgPreview">
-                                                    Liste Görseli
-                                                </div>
-                                            </div>
-                                        </div>
+                                                <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                    <div class="bg-white rounded-5 content">
+                                                        <div class="bg-white rounded-5 h-100 p-lg-4 pb-4 checkList">
+                                                            <div class="row priceRadioWrapper">
+                                                                <label class="container-check radioCheck col-lg-3">
+                                                                    <input type="radio" name="fiyat" class="">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Fiyata Dahil</span>
+                                                                </label>
+                                                                <label class="container-check radioCheck col-lg-3">
+                                                                    <input type="radio" name="fiyat" id="priceRadioCheck" class="priceRadioCheck">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Ücretli</span>
+                                                                </label>
 
-                                        <div class="bg-gray rounded-5 p-lg-5 mt-lg-5 p-4 mt-4">
-                                            <div class="moduleHead">
-                                                <div class="moduleTitle">Galeri Görselleri</div>
-                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                            </div>
-                                            <div class="customImageUpload type2">
-                                                <div class="custom-file-upload">
-                                                    <span class="icon-upload"></span>
-                                                    <p>Görselleri Seçmek için Tıklayın veya Sürükleyin</p>
-                                                    <input type="file" id="imageInput" accept="image/*" multiple style="display: none;">
+                                                                <div class="priceInputWrapper disabled col-lg-6">
+                                                                    <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                    <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                    <div class="invalid-feedback position-absolute">
+                                                                        Lütfen Fiyat giriniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5 mt-2">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                            <!-- <a href="#" class="editButton"><span class="icon-edit"></span><span>Düzenle</span></a> -->
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="gallery-preview" id="galleryPreview"></div>
-                                            </div>
+                                                <div class="formSwitchWrapper accSwitchHead">
+                                                    <label for="sunulanhizmetler01">Linens & towels</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="sunulanhizmetler01" class="custom-switch-input">
+                                                        <label for="sunulanhizmetler01" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="formSwitchBody accSwitchBody disabled pb-5">
+                                                    <div class="bg-white rounded-5 content">
+                                                        <div class="bg-white rounded-5 h-100 p-lg-4 pb-4 checkList">
+                                                            <div class="row priceRadioWrapper">
+                                                                <label class="container-check radioCheck col-lg-3">
+                                                                    <input type="radio" name="fiyat2" class="">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Fiyata Dahil</span>
+                                                                </label>
+                                                                <label class="container-check radioCheck col-lg-3">
+                                                                    <input type="radio" name="fiyat2" id="priceRadioCheck2" class="priceRadioCheck">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Ücretli</span>
+                                                                </label>
+
+                                                                <div class="priceInputWrapper disabled col-lg-6">
+                                                                    <label for="option01" class="customLabel">Fiyat ( $ )</label>
+                                                                    <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                    <div class="invalid-feedback position-absolute">
+                                                                        Lütfen Fiyat giriniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5 mt-2">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                            <!-- <a href="#" class="editButton"><span class="icon-edit"></span><span>Düzenle</span></a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="formSwitchWrapper accSwitchHead">
+                                                    <label for="">Fully equipped kitchen</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="yemekhazirligi01" class="custom-switch-input">
+                                                        <label for="yemekhazirligi01" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="formSwitchBody accSwitchBody disabled pb-5">
+                                                    <div class="bg-white rounded-5 content">
+                                                        <div class="bg-white rounded-5 h-100 p-lg-4 pb-4 checkList">
+                                                            <div class="row priceRadioWrapper">
+                                                                <label class="container-check radioCheck col-lg-3">
+                                                                    <input type="radio" name="fiyat3" class="">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Fiyata Dahil</span>
+                                                                </label>
+                                                                <label class="container-check radioCheck col-lg-3">
+                                                                    <input type="radio" name="fiyat3" id="priceRadioCheck3" class="priceRadioCheck">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Ücretli</span>
+                                                                </label>
+
+                                                                <div class="priceInputWrapper disabled col-lg-6">
+                                                                    <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                    <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                    <div class="invalid-feedback position-absolute">
+                                                                        Lütfen Fiyat giriniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5 mt-2">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                            <!-- <a href="#" class="editButton"><span class="icon-edit"></span><span>Düzenle</span></a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="mb-3 d-flex align-items-center gap-5 mt-lg-5 mt-4">
+                                                    <span class="fixBtn button-success px-5">
+                                                        <input type="submit" value="Kaydet">
+                                                    </span>
+                                                </div> -->
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
                     </div>
                 </div>
             </section>
@@ -630,43 +735,6 @@
             </div>
         </footer>
     </div>
-
-    <!-- Tek Resim İçin Modal -->
-    <div class="modal fade" id="singleCropModal" tabindex="-1" role="dialog" aria-labelledby="singleCropModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <a href="#" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></a>
-                </div>
-                <div class="modal-body">
-                    <img id="singleModalImage" alt="Seçilen Resim">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="fixBtn button-outline" data-dismiss="modal">Kapat</button>
-                    <button type="button" id="singleCropButton" class="fixBtn button-primary">Kırp ve Kaydet</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap Modal -->
-    <div class="modal fade" id="cropModal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <a href="#" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></a>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" alt="Seçilen Resim">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="fixBtn button-outline" data-dismiss="modal">Kapat</button>
-                    <button type="button" id="cropButton" class="fixBtn button-primary">Kırp ve Kaydet</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
 
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
         <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
@@ -875,221 +943,8 @@
 
     <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script>
-        let singleCropper;
 
-        // Yükleme Alanı Olayları
-        const singleFileUploadArea = document.querySelector('.custom-file-upload-single');
-        const singleImageInput = document.getElementById('singleImageInput');
-        const singleModalImage = document.getElementById('singleModalImage');
-
-        singleFileUploadArea.addEventListener('dragover', (event) => {
-            event.preventDefault();
-            singleFileUploadArea.classList.add('drag-over');
-        });
-
-        singleFileUploadArea.addEventListener('dragleave', () => {
-            singleFileUploadArea.classList.remove('drag-over');
-        });
-
-        singleFileUploadArea.addEventListener('drop', (event) => {
-            event.preventDefault();
-            singleFileUploadArea.classList.remove('drag-over');
-            singleImageInput.files = event.dataTransfer.files;
-            const changeEvent = new Event('change');
-            singleImageInput.dispatchEvent(changeEvent);
-        });
-
-        singleFileUploadArea.addEventListener('click', () => {
-            singleImageInput.click();
-        });
-
-        // Resim Seçildiğinde İşlem
-        singleImageInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    singleModalImage.src = e.target.result;
-
-                    $('#singleCropModal').on('shown.bs.modal', () => {
-                        if (singleCropper) singleCropper.destroy();
-                        singleCropper = new Cropper(singleModalImage, {
-                            aspectRatio: 16 / 9,
-                            viewMode: 2,
-                        });
-                    });
-
-                    $('#singleCropModal').modal('show');
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-        document.getElementById('singleCropButton').addEventListener('click', () => {
-            if (singleCropper) {
-                // Kırpılmış görüntüyü al
-                const canvas = singleCropper.getCroppedCanvas();
-                const croppedImageURL = canvas.toDataURL();
-
-                // Yeni bir img etiketi oluştur ve kırpılmış resmi bu etikette göster
-                const croppedImage = document.createElement('img');
-                croppedImage.src = croppedImageURL;
-                croppedImage.alt = 'Kırpılmış Resim';
-                croppedImage.classList.add('cropped-image'); // Stil eklemek için bir sınıf
-
-                // Resmi bir konteynıra ekle
-                const croppedImageContainer = document.createElement('div');
-                croppedImageContainer.classList.add('cropped-image-container');
-
-                 // Fancybox için data-fancybox ve data-src özelliklerini ekle
-                croppedImageContainer.setAttribute('data-fancybox', 'gallery-single'); // 'gallery' grubu için
-                croppedImageContainer.setAttribute('data-src', croppedImageURL); // Kırpılmış resmin yolu
-                
-                croppedImageContainer.appendChild(croppedImage);
-
-                // Eğer gerekliyse bir silme butonu ekleyebilirsiniz
-                const deleteButton = document.createElement('button');
-                deleteButton.innerHTML = '<span class="icon-delete"></span>';
-                deleteButton.classList.add('delete-btn', 'fixBtn', 'button-primary');
-                deleteButton.addEventListener('click', () => {
-                    croppedImageContainer.remove();
-                });
-
-                croppedImageContainer.appendChild(deleteButton);
-
-                // Galeri önizlemesine ekle
-                const galleryPreview = document.getElementById('singleImgPreview');
-                galleryPreview.innerHTML = ''; // Önceki resimleri temizle
-                galleryPreview.appendChild(croppedImageContainer);
-
-                // Modal'ı kapat ve cropper'ı sıfırla
-                $('#singleCropModal').modal('hide');
-                singleCropper.destroy();
-                singleCropper = null;
-            }
-        });
-
-
-
-        let cropper;
-        const fileUploadArea = document.querySelector('.custom-file-upload');
-        const imageInput = document.getElementById('imageInput');
-        const galleryPreview = document.getElementById('galleryPreview');
-        const modalImage = document.getElementById('modalImage');
-
-        fileUploadArea.addEventListener('dragover', (event) => {
-            event.preventDefault();
-            fileUploadArea.classList.add('drag-over');
-        });
-
-        fileUploadArea.addEventListener('dragleave', () => {
-            fileUploadArea.classList.remove('drag-over');
-        });
-
-        fileUploadArea.addEventListener('drop', (event) => {
-            event.preventDefault();
-            fileUploadArea.classList.remove('drag-over');
-            imageInput.files = event.dataTransfer.files;
-            const changeEvent = new Event('change');
-            imageInput.dispatchEvent(changeEvent);
-        });
-
-        fileUploadArea.addEventListener('click', () => {
-            imageInput.click();
-        });
-
-        imageInput.addEventListener('change', (event) => {
-            const files = event.target.files;
-
-            // Resimleri yükleyin ve her biri için işlem yapın
-            Array.from(files).forEach((file, index) => {
-                if (!file.type.startsWith('image/')) return;
-
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-
-                    // Her görsel için bir div oluşturun ve silme butonu ekleyin
-                    const thumbContainer = document.createElement('div');
-                    thumbContainer.classList.add('galleryThumb');
-
-                    // Silme butonunu oluşturun
-                    const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'Sil';
-                    deleteButton.classList.add('delete-btn');
-                    deleteButton.addEventListener('click', () => {
-                        galleryPreview.removeChild(thumbContainer);
-                    });
-
-                    // Silme butonunu container'a ekleyin
-                    thumbContainer.appendChild(deleteButton);
-
-                    // galleryPreview'a eklemiyoruz, sadece kırpma işlemi için modali açıyoruz
-                    if (index === 0) {
-                        modalImage.src = URL.createObjectURL(file);
-
-                        $('#cropModal').on('shown.bs.modal', () => {
-                            if (cropper) cropper.destroy(); // Eski cropper'ı yok et
-                            cropper = new Cropper(modalImage, {
-                                aspectRatio: 3 / 2,
-                                viewMode: 2,
-                            });
-                        });
-
-                        $('#cropModal').modal('show');
-                    }
-                };
-                reader.readAsDataURL(file);
-            });
-        });
-
-        // Kırpma butonuna tıklanıldığında
-        document.getElementById('cropButton').addEventListener('click', () => {
-            if (cropper) {
-                // Kırpılmış görüntüyü al
-                const canvas = cropper.getCroppedCanvas();
-                const croppedImage = document.createElement('img');
-                const croppedImageURL = canvas.toDataURL(); // Görselin Data URL'si
-                croppedImage.src = croppedImageURL;
-
-                // Her kırpılmış resim için bir div oluşturun
-                const thumbContainer = document.createElement('div');
-                thumbContainer.classList.add('galleryThumb');
-
-                // Fancybox entegrasyonu için nitelikler ekle
-                thumbContainer.setAttribute('data-fancybox', 'gallery'); // Fancybox galerisi için
-                thumbContainer.setAttribute('data-src', croppedImageURL); // Data URL'sini kaynak olarak ekle
-
-                // Kırpılmış görseli kapsayıcıya ekle
-                thumbContainer.appendChild(croppedImage);
-
-                // Silme butonunu oluşturun
-                const deleteButton = document.createElement('button');
-                deleteButton.innerHTML = '<span class="icon-delete"></span>';
-                deleteButton.classList.add('delete-btn', 'fixBtn', 'button-primary');
-                deleteButton.addEventListener('click', () => {
-                    galleryPreview.removeChild(thumbContainer);
-                });
-
-                // Silme butonunu kapsayıcıya ekleyin
-                thumbContainer.appendChild(deleteButton);
-
-                // Kapsayıcıyı galleryPreview'e ekleyin
-                galleryPreview.appendChild(thumbContainer);
-
-                // Modal'ı kapat ve cropper'ı sıfırla
-                $('#cropModal').modal('hide');
-                cropper.destroy();
-                cropper = null;
-            }
-        });
-
-
-      </script>
 
 </body>
 
