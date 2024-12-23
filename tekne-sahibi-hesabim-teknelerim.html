@@ -486,10 +486,12 @@
                         <div class="row mx-0">
                             <div class="sidenavWrapper d-none d-lg-block">
                                 <div class="sideNav">
-                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
-                                    <a class="active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
+                                    <a href="tekne-sahibi-hesabim-anasayfa.html"><div class="icon"><img src="public/assets/images/statics/icons/home.svg" alt=""></div><span>Anasayfa</span></a>
+                                    <a href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
                                         <hr>
@@ -533,8 +535,21 @@
                                                             <div class="name">Göcek 14.2m Kiralık Yelkenli</div>
                                                         </div>
                                                         <div class="type">Bavaria 46 Cruiser (2009 / 2021 refit)</div>
+                                                        <div class="d-flex align-items-center mt-5">
+                                                            <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" class="fixBtn button-primary detailsButton">Detay</a>
+                                                            <a href="#" class="tekneSilButon textLink ms-auto noAfter"><span class="icon-delete"></span><i>Tekne Sil</i></a>
+                                                        </div>
                                                     </div>
-                                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html" class="fixBtn button-primary">View</a>
+                                                    <div class="formSwitchWrapper">
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="teknelerim01" class="custom-switch-input" checked>
+                                                            <label for="teknelerim01" class="custom-switch-label">
+                                                            <span class="custom-switch-indicator"></span>
+                                                            <span class="custom-switch-text apply">Aktif</span>
+                                                            <span class="custom-switch-text disabled">Pasif</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="demansItem type2">
@@ -551,11 +566,27 @@
                                                             <div class="name">Sunseeker, Manhattan 64</div>
                                                         </div>
                                                         <div class="type">Bavaria 46 Cruiser (2009 / 2021 refit)</div>
+                                                        <div class="d-flex align-items-center mt-5">
+                                                            <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" class="fixBtn button-primary detailsButton">Detay</a>
+                                                            <a href="#" class="tekneSilButon textLink ms-auto noAfter"><span class="icon-delete"></span><i>Tekne Sil</i></a>
+                                                        </div>
                                                     </div>
-                                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html" class="fixBtn button-primary">View</a>
+                                                    <div class="formSwitchWrapper">
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="teknelerim02" class="custom-switch-input">
+                                                            <label for="teknelerim02" class="custom-switch-label">
+                                                            <span class="custom-switch-indicator"></span>
+                                                            <span class="custom-switch-text apply">Aktif</span>
+                                                            <span class="custom-switch-text disabled">Pasif</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                            
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="#" class="fixBtn button-primary addNewButton">Yeni Tekne Ekle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -853,11 +884,41 @@
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
     <script>
+
+         // Sayfa yüklendiğinde checked durumlarını kontrol et
+        $(".demansItem .custom-switch-input").each(function () {
+            const $demansItem = $(this).closest(".demansItem");
+            if (!$(this).is(":checked")) {
+                // Checkbox işaretli değilse `inactive` sınıfını ekle
+                $demansItem.addClass("inactive");
+            } else {
+                // Checkbox işaretliyse `inactive` sınıfını kaldır
+                $demansItem.removeClass("inactive");
+            }
+        });
+
+        // Checkbox durum değişikliğinde güncelleme yap
+        $(".demansItem .custom-switch-input").on("change", function () {
+            const $demansItem = $(this).closest(".demansItem");
+            if (!$(this).is(":checked")) {
+                $demansItem.addClass("inactive");
+            } else {
+                $demansItem.removeClass("inactive");
+            }
+        });
+
+        $(document).on("click", ".tekneSilButon", function (e) {
+            e.preventDefault(); // Sayfa yenilenmesini önler
+            const $demansItem = $(this).closest(".demansItem");
+            
+            if (confirm("Bu öğeyi silmek istediğinizden emin misiniz?")) {
+                $demansItem.remove(); // Kapsayıcı öğeyi DOM'dan sil
+            }
+        });
 
     </script>
 </body>

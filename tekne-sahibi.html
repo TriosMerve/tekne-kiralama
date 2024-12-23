@@ -149,8 +149,8 @@
                             </ul>
                         </div>
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" class="fixBtn button-outline">Üye Girişi</a>
-                            <a data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal" class="fixBtn button-primary">Üye Ol</a>
+                            <a data-bs-toggle="modal" data-bs-target="#UyeGirisiModal" class="fixBtn button-outline">Üye Girişi</a>
+                            <a data-bs-toggle="modal" data-bs-target="#UyeOlModal" class="fixBtn button-primary">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
@@ -200,8 +200,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" class="fixBtn button-primary">Üye Girişi</a>
-                                        <a data-bs-toggle="modal" data-bs-target="#OlTekneModal" class="fixBtn button-secondary">Üye Ol</a>
+                                        <a data-bs-toggle="modal" data-bs-target="#UyeGirisiModal" class="fixBtn button-primary">Üye Girişi</a>
+                                        <a data-bs-toggle="modal" data-bs-target="#UyeOlModal" class="fixBtn button-secondary">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -491,7 +491,8 @@
                                             </div>
                                             <div class="desc">
                                                 <div class="category">teknekiralama.com Tekne Sahibi Ol</div>
-                                                <p>12.000 doğrulanmış tekne arasında yerinizi alın ve hemen rezervasyon taleplerini kabul etmeye başlayın.</p>
+                                                <p class="type2">Tekne Sahibiyseniz teknenizi hemen ekleyerek teknenizi kiralamaya başlayabilirsiniz.</p>
+                                                <a data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" class="fixBtn button-primary mt-5">Tekneninizi Ekleyin</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1068,6 +1069,198 @@
     </div>
 
     <!--modallar-->
+    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
+                    </div>
+                </div>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                        Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                        <div class="invalid-feedback">
+                            Lütfen Parolanızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-5 text-end">
+                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
+                    </div>
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Giriş Yap">
+                        </span>
+                    </div>
+                </form>
+                <hr class="my-5">
+                <div class="otherLogin">
+                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
+                    <div class="stepHead">
+                        <span class="">1</span>
+                        <span>2</span>
+                    </div>
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
+                    </div>
+                </div>
+                <div class="signupFormSteps">
+                    <div class="stepOne">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                <div class="invalid-feedback">
+                                Lütfen E-Posta Adresinizi Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Devam Et">
+                                </span>
+                            </div>
+                        </form>
+                        <hr class="my-5">
+                        <div class="otherLogin">
+                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                        </div>
+                    </div>
+                    <div class="stepTwo d-none">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Adınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Soyadınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Parolanızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-5 ps-3">
+                                <label class="container-check">
+                                    <input type="checkbox" name="address">
+                                    <span class="checkmark"></span>
+                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Hesap Oluştur">
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
+                    </div>
+                </div>
+                <blockquote class="blockquote">
+                    <span class="icon-info"></span> 
+                    <p>
+                        Your account is not verified. <a href="#">Resend confirmation</a>
+                    </p>
+                </blockquote>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Adınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Soyadınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="phoneWrapper">
+                            <div class="codeWrapper position-relative">
+                                <input type="tel" placeholder="" id="telephone">
+                            </div>
+                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                            <div class="invalid-feedback w-100">
+                                Lütfen Telefon Numaranızı Giriniz
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Kaydet">
+                        </span>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
     <div class="modal fade type2" id="UyeGirisiTekneModal" aria-hidden="true" aria-labelledby="UyeGirisiTekneModalLabel" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">

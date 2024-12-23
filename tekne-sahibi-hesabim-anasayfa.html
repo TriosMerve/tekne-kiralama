@@ -59,8 +59,8 @@
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="public/assets/front/css/app.css">
+    <link rel="stylesheet" href="public/assets/plugins/sweetalert/sweetalert2.css" />
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
 <body>
@@ -79,8 +79,8 @@
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a> -->
-                        <!-- <div class="dropdown languageWrapper">
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
                             </button>
@@ -149,7 +149,7 @@
                                 <hr>
                                 <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
-                        </div>
+                        </div>   
 
                         <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
                             <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
@@ -481,61 +481,48 @@
 
         <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
         <main>
-            <section class="pageSection type2">
-                <div class="overlay"></div>
+            <section class="pageSection">
                 <div class="container-3xl">
                     <div class="userPageContainer">
                         <div class="row mx-0">
-                            <div class="mobileSideMenu d-lg-none"><span class="text">Tekne Yönetimi</span><span class="icon-arrow-right"></span> </div>
-                            <div class="sidenavWrapper">
-                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
-                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
-                                <div class="sideNav type2">
-                                    <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html" class="active"><span>Tekne Hakkında</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
+                            <div class="sidenavWrapper d-none d-lg-block">
+                                <div class="sideNav">
+                                    <a class="active" href="tekne-sahibi-hesabim-anasayfa.html"><div class="icon"><img src="public/assets/images/statics/icons/home.svg" alt=""></div><span>Anasayfa</span></a>
+                                    <a href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
+                                        <hr>
+                                    <a href="#" class="mt-4"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a>
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
                                 <div class="col-xl-9 px-0">
                                     <div class="sideHead">
-                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
+                                        <div class="pageTitle">Anasayfa</div>
+                                        <a href="javascript:history.back()" class="backLink ms-auto"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
                                     </div>
                                     <div class="sideContent">
-                                        <div class="bg-gray rounded-5 p-lg-5 p-4">
-                                            <div class="moduleHead">
-                                                <div class="moduleTitle">Tekne Hakkında</div>
-                                                <div class="info"><span class="icon-info"></span><span>Burada müşteriler için kendinizi ve teknenizi anlatın. Firma ismi ve iletişim numarası geçmemelidir. </span></div>
-                                            </div>
-                                            <form class="form needs-validation type2 mb-5" novalidate>
-                                                <div class="row ">
-                                                    <div class="mb-4 col-lg-12">
-                                                        <label for="tanitim" class="customLabel">Türkçe Açıklama</label>
-                                                        <textarea name="" class="form-control h-auto" id="tanitim" cols="30" rows="10"></textarea>
-                                                        <div class="invalid-feedback">
-                                                            Lütfen Tanıtım Alanını Doldurunuz
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-4 col-lg-12 mt-4">
-                                                        <label for="tanitim" class="customLabel">İngilizce Açıklama</label>
-                                                        <textarea name="" class="form-control h-auto" id="tanitim" cols="30" rows="10"></textarea>
-                                                        <div class="invalid-feedback">
-                                                            Lütfen Tanıtım Alanını Doldurunuz
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 d-flex align-items-center gap-5 mt-lg-5 mt-4">
-                                                    <span class="fixBtn button-success px-5">
-                                                        <input type="submit" value="Kaydet">
-                                                    </span>
-                                                </div>
-                                            </form>
-                                        </div>
+                                        <!-- <div class="boatList">
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Custom Made Custom Made </a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Sunseeker, Manhattan 64</a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Beneteau, Cyclades 43</a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Custom Made Custom Made </a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Sunseeker, Manhattan 64</a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Beneteau, Cyclades 43</a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Custom Made Custom Made </a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Sunseeker, Manhattan 64</a>
+                                            <a href="tekne-sahibi-hesabim-teknelerim-detay.html">Beneteau, Cyclades 43</a>
+                                        </div> -->
+                                        <blockquote class="blockquote">
+                                            <span class="icon-info"></span> <p>A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element.</p>
+                                            <span class="icon-plus closeBlockquote"></span>
+                                        </blockquote>
+                                     
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -616,19 +603,17 @@
                     </div>
 
                     <div class="footerBottom d-flex align-items-center">
-                        <div class="copyRightWrapper pe-5">
+                        <div class="copyRightWrapper">
                             <div class="copyRight">
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
-                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
         <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -832,13 +817,25 @@
 
 
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
+    <script src="public/assets/plugins/sweetalert/sweetalert2.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
+    <script>
 
+    </script>
 
+    <script>
+        Swal.fire({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+        })
+    </script>
 </body>
 
 </html>

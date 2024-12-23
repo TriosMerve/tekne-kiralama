@@ -491,12 +491,12 @@
                                 <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
                                 <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
                                 <div class="sideNav type2">
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" class="active"><span>Genel Bilgiler</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-kapasite.html"><span>Kapasite Bilgileri</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
                                 </div>
@@ -514,11 +514,22 @@
                                             </div>
                                             <form class="form needs-validation type2 mb-5" novalidate>
                                                 <div class="row ">
-                                                    <div class="mb-lg-4 col-lg-12">
+                                                    <div class="mb-lg-4 col-lg-8">
                                                         <label for="tekneadi" class="customLabel">Yat Adı</label>
                                                         <input type="text" id="tekneadi" name="tekneadi" class="form-control" placeholder="Yat Adı" required>
                                                         <div class="invalid-feedback">
                                                             Lütfen Yat Adı Giriniz
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-lg-4 col-lg-4">
+                                                        <label for="sehirSelect" class="customLabel">Bayrak</label>
+                                                        <select name="sehirSelect" id="sehirSelect" class="customSelect sehirSelect type2" required>
+                                                            <option value="" selected hidden>Bayrak</option>
+                                                            <option value="">Türkiye</option>
+                                                            <option value="">Yeni Zellenda</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Lütfen Şehir Seçiniz
                                                         </div>
                                                     </div>
                                                     <div class="mb-lg-4 mt-3 col-lg-4">
@@ -593,6 +604,15 @@
                                                             Lütfen Yenileme Yılı Seçiniz
                                                         </div>
                                                     </div>
+                                               
+                                                    <div class="mb-lg-4 mt-3 col-lg-4">
+                                                        <label for="uzunluk" class="customLabel">Tuvalet Sayısı</label>
+                                                        <input type="text" id="uzunluk" name="uzunluk" class="form-control numberMask2" placeholder="1" required>
+                                                        <div class="invalid-feedback">
+                                                            Lütfen Sadece Rakam Giriniz
+                                                        </div>
+                                                    </div>
+                                                  
                                                     <div class="mb-lg-4 mt-3 col-lg-4">
                                                         <label for="sehirSelect" class="customLabel">Şehir</label>
                                                         <select name="sehirSelect" id="sehirSelect" class="customSelect sehirSelect type2" required>
@@ -605,7 +625,7 @@
                                                             Lütfen Şehir Seçiniz
                                                         </div>
                                                     </div>
-                                                    <div class="mt-3 col-lg-8">
+                                                    <div class="mt-3 col-lg-4">
                                                         <label for="lokasyonSelect" class="customLabel">Lokasyon</label>
                                                         <select name="lokasyonSelect" id="lokasyonSelect" class="customSelect lokasyonSelect type2 disabled" disabled required>
                                                             <option value="" selected hidden>Lokasyon Seç</option>
@@ -618,11 +638,56 @@
                                                             Lütfen Lokasyon Seçiniz
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="mb-3 d-flex align-items-center gap-5 mt-5">
-                                                    <span class="fixBtn button-success px-5">
-                                                        <input type="submit" value="Kaydet">
-                                                    </span>
+
+                                                    <div class="mb-4 mt-3 col-lg-4">
+                                                        <label for="seyir" class="customLabel">Seyir Kapasitesi</label>
+                                                        <input type="text" id="seyir" name="seyir" class="form-control numberMask2" placeholder="Seyir Kapasitesi" required>
+                                                        <div class="invalid-feedback">
+                                                            Seyir Kapasitesi Giriniz
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4 mt-3 col-lg-4">
+                                                        <label for="seyir" class="customLabel">Yemekli Kapasitesi</label>
+                                                        <input type="text" id="seyir" name="seyir" class="form-control numberMask2" placeholder="Yemekli Kapasitesi" required>
+                                                        <div class="invalid-feedback">
+                                                            Yemekli Kapasitesi Giriniz
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4 mt-3 col-lg-4">
+                                                        <label for="seyir" class="customLabel">Kabin Sayısı</label>
+                                                        <input type="text" id="seyir" name="seyir" class="form-control numberMask2" placeholder="Kabin Sayısı" required>
+                                                        <div class="invalid-feedback">
+                                                            Kabin Sayısı Giriniz
+                                                        </div>
+                                                    </div>
+                                                    <div class="formSwitchWrapper col-12 mt-3">
+                                                        <label for="">Konaklama</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="konaklamaSwitch" class="custom-switch-input">
+                                                            <label for="konaklamaSwitch" class="custom-switch-label">
+                                                                <span class="custom-switch-indicator"></span>
+                                                                <span class="custom-switch-text apply">Evet</span>
+                                                                <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="formSwitchBody disabled col-12">
+                                                        <label for="tekneadi" class="customLabel">Konaklama Kapasitesi</label>
+                                                        <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Konaklama Sayısı" required>
+                                                        <div class="invalid-feedback">
+                                                            Konaklama Sayısı Giriniz
+                                                        </div>
+                                                        
+                                                    </div>
+                                                        
+                                                    <div class="mb-3 d-flex align-items-center gap-5 mt-5">
+                                                        <span class="fixBtn button-success px-5">
+                                                            <input type="submit" value="Kaydet">
+                                                        </span>
+                                                        <!-- <span class="fixBtn button-primary px-5">
+                                                            <input type="submit" value="Düzenle">
+                                                        </span> -->
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
@@ -924,11 +989,33 @@
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
 
-
+    <script>
+         document.addEventListener("DOMContentLoaded", () => {
+             // Tüm custom-switch-input elemanlarını seç
+             const switches = document.querySelectorAll(".custom-switch-input");
+ 
+             switches.forEach((switchElement) => {
+                 switchElement.addEventListener("change", function () {
+                     // İlgili formSwitchBody'yi bul
+                     const formSwitchBody = this.closest(".formSwitchWrapper").nextElementSibling;
+ 
+                     if (this.checked) {
+                         // Checkbox checked ise disabled sınıfını kaldır
+                         formSwitchBody.classList.remove("disabled");
+                     } else {
+                         // Checkbox unchecked ise disabled sınıfını ekle
+                         formSwitchBody.classList.add("disabled");
+                     }
+                 });
+             });
+         });
+ 
+ 
+    </script>
 </body>
 
 </html>

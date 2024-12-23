@@ -365,7 +365,7 @@
     .custom-switch-input:checked
       + .custom-switch-label
       .custom-switch-text.disabled {
-      opacity: 0;
+      opacity: 0!important;
     }
 
     /* Unchecked: Hayır Göster */

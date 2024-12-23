@@ -481,7 +481,7 @@
 
         <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
         <main>
-            <section class="pageSection">
+            <section class="pageSection type2">
                 <div class="overlay"></div>
                 <div class="container-3xl">
                     <div class="userPageContainer">
@@ -496,7 +496,7 @@
                                     <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
                                     <a class="active" href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-kapasite.html"><span>Kapasite Bilgileri</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
                                 </div>
@@ -645,6 +645,477 @@
                                                                 <input type="text" id="option01-1" name="option01-1" class="form-control numberMask2" placeholder="Yemek Hazırlığı Açıklama" required="">
                                                                 <div class="invalid-feedback">
                                                                     Ad giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5 mt-2">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                            <!-- <a href="#" class="editButton"><span class="icon-edit"></span><span>Düzenle</span></a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="mb-3 d-flex align-items-center gap-5 mt-lg-5 mt-4">
+                                                    <span class="fixBtn button-success px-5">
+                                                        <input type="submit" value="Kaydet">
+                                                    </span>
+                                                </div> -->
+                                            </form>
+                                        </div>
+
+                                        <div class="bg-gray rounded-5 p-lg-5 p-4 mt-5">
+                                            <div class="moduleHead">
+                                                <div class="moduleTitle">Yemek & Hizmet Ekstraları</div>
+                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                            </div>
+                                            <form class="form needs-validation type2" novalidate>
+                                                <div class="formSwitchWrapper accSwitchHead">
+                                                    <label for="">Yemekler</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="ekstralarYemek" class="custom-switch-input">
+                                                        <label for="ekstralarYemek" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="formSwitchBody accSwitchBody disabled pb-5">
+                                                    <div class="bg-white rounded-5 content">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Dana Antrikot Menü</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-12 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-12 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Lüks Koktyle Menü</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-12 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-12 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Karışık Izgara Menü</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Gulet</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Tavuk Izgara Menü</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5 mt-2">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Tümünü Kaydet</span></a>
+                                                            <!-- <a href="#" class="editButton"><span class="icon-edit"></span><span>Düzenle</span></a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="formSwitchWrapper accSwitchHead">
+                                                    <label for="">Paketler</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="ekstralarPaket" class="custom-switch-input">
+                                                        <label for="ekstralarPaket" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="formSwitchBody accSwitchBody disabled pb-5">
+                                                    <div class="bg-white rounded-5 content">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Ekonomik Evlilik Teklifi Paketi</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Lüks Evlilik Teklifi Paketi</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Bekarlığa Veda Süsleme Paketi</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Klasik Evlilik Teklifi Paketi</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5 mt-2">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                            <!-- <a href="#" class="editButton"><span class="icon-edit"></span><span>Düzenle</span></a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="formSwitchWrapper accSwitchHead">
+                                                    <label for="">Ekstralar</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="ekstralar" class="custom-switch-input">
+                                                        <label for="ekstralar" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="formSwitchBody accSwitchBody disabled pb-5">
+                                                    <div class="bg-white rounded-5 content">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Fotoğraf ve Video Çekimi</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Boğazda Lazer Gösterisi</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Balon Süsleme</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="border-top border-primary w-50 mx-auto opacity-25">
+                                                        <div class="row checkedControlWrapper pt-4">
+                                                            <div class="col-lg-8 mt-4">
+                                                                <label class="container-check">
+                                                                    <input type="checkbox" name="fiyat" class="checkedControl">
+                                                                    <span class="checkmark"></span>
+                                                                    <span class="checkText">Özel İsimli Karşılama Panosu</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-4">
+                                                                <label for="option01" class="customLabel">Fiyat ( <span class="currencly">₺</span> )</label>
+                                                                <input type="text" id="option01" name="option01" class="form-control priceMask" placeholder="Fiyat Giriniz" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Fiyat giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkedControlOption disabled col-lg-6 mt-3">
+                                                                <label for="aciklama" class="customLabel">Açıklama ( <b class="text-primary">EN</b> )</label>
+                                                                <input type="text" id="aciklama" name="aciklama" class="form-control" placeholder="Açıklama" required="">
+                                                                <div class="invalid-feedback position-absolute">
+                                                                    Lütfen Açıklama giriniz
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -958,9 +1429,9 @@
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
 
 
 </body>

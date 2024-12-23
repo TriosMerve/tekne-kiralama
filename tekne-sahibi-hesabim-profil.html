@@ -59,8 +59,7 @@
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="public/assets/front/css/app.css">
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
 <body>
@@ -79,8 +78,8 @@
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a> -->
-                        <!-- <div class="dropdown languageWrapper">
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
                             </button>
@@ -149,7 +148,7 @@
                                 <hr>
                                 <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
-                        </div>
+                        </div>   
 
                         <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
                             <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
@@ -481,60 +480,51 @@
 
         <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
         <main>
-            <section class="pageSection type2">
-                <div class="overlay"></div>
+            <section class="pageSection">
                 <div class="container-3xl">
                     <div class="userPageContainer">
                         <div class="row mx-0">
-                            <div class="mobileSideMenu d-lg-none"><span class="text">Tekne Yönetimi</span><span class="icon-arrow-right"></span> </div>
-                            <div class="sidenavWrapper">
-                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
-                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
-                                <div class="sideNav type2">
-                                    <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html" class="active"><span>Tekne Hakkında</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
+                            <div class="sidenavWrapper d-none d-lg-block">
+                                <div class="sideNav">
+                                    <a href="tekne-sahibi-hesabim-anasayfa.html"><div class="icon"><img src="public/assets/images/statics/icons/home.svg" alt=""></div><span>Anasayfa</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
+                                        <hr>
+                                    <a href="#" class="mt-4"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a>
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
                                 <div class="col-xl-9 px-0">
                                     <div class="sideHead">
-                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
+                                        <div class="pageTitle">Profil</div>
+                                        <a href="javascript:history.back()" class="backLink ms-auto"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
                                     </div>
+                                    <blockquote class="blockquote">
+                                        <span class="icon-info"></span> <p>A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element. A well-known quote, contained in a blockquote element.</p>
+                                        <span class="icon-plus closeBlockquote"></span>
+                                    </blockquote>
                                     <div class="sideContent">
-                                        <div class="bg-gray rounded-5 p-lg-5 p-4">
-                                            <div class="moduleHead">
-                                                <div class="moduleTitle">Tekne Hakkında</div>
-                                                <div class="info"><span class="icon-info"></span><span>Burada müşteriler için kendinizi ve teknenizi anlatın. Firma ismi ve iletişim numarası geçmemelidir. </span></div>
+                                        <div class="bg-gray rounded-5 p-5">
+                                            <div class="profileInfo readonlyForm row mx-0">
+                                                <div class="userName profilItem col-lg-6 mb-3">
+                                                    <input type="text" value="Enver" disabled readonly>
+                                                </div>
+                                                <div class="userName profilItem col-lg-6 mb-3">
+                                                    <input type="text" value="Sarıgül" disabled readonly>
+                                                </div>
+                                                <div class="email profilItem col-lg-6 mb-3">
+                                                    <input type="email" name="email" id="email" value="esarigul@trios.com.tr" disabled readonly>
+                                                </div>
+                                                <div class="userName profilItem col-lg-6 mb-3">
+                                                    <input type="text" value="05354552478" disabled readonly>
+                                                </div>
+                                                <a href="#" class="editButton" data-bs-toggle="modal" data-bs-target="#editProfileModal"><span class="icon-edit"></span><span>Düzenle</span></a>
                                             </div>
-                                            <form class="form needs-validation type2 mb-5" novalidate>
-                                                <div class="row ">
-                                                    <div class="mb-4 col-lg-12">
-                                                        <label for="tanitim" class="customLabel">Türkçe Açıklama</label>
-                                                        <textarea name="" class="form-control h-auto" id="tanitim" cols="30" rows="10"></textarea>
-                                                        <div class="invalid-feedback">
-                                                            Lütfen Tanıtım Alanını Doldurunuz
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-4 col-lg-12 mt-4">
-                                                        <label for="tanitim" class="customLabel">İngilizce Açıklama</label>
-                                                        <textarea name="" class="form-control h-auto" id="tanitim" cols="30" rows="10"></textarea>
-                                                        <div class="invalid-feedback">
-                                                            Lütfen Tanıtım Alanını Doldurunuz
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 d-flex align-items-center gap-5 mt-lg-5 mt-4">
-                                                    <span class="fixBtn button-success px-5">
-                                                        <input type="submit" value="Kaydet">
-                                                    </span>
-                                                </div>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -616,19 +606,17 @@
                     </div>
 
                     <div class="footerBottom d-flex align-items-center">
-                        <div class="copyRightWrapper pe-5">
+                        <div class="copyRightWrapper">
                             <div class="copyRight">
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
-                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
         <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -834,11 +822,151 @@
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
+    <script>
+document.querySelector('.saveButton').addEventListener('click', function (e) {
+            e.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
 
+            const profilItem = document.querySelector('.profilItem');
+            const inputs = profilItem.querySelectorAll('input');
+            let isValid = true; // Form geçerliliğini kontrol etmek için bir bayrak
 
+            // Input değerlerini kontrol et
+            inputs.forEach(input => {
+                const container = input.closest("div"); // Input'un kapsayıcı öğesi
+                if (!input.value.trim()) {
+                    // Eğer input boşsa, error sınıfı ekle
+                    input.classList.add('error');
+                    if (container) container.classList.add('error');
+                    isValid = false; // Geçersiz olduğu için bayrağı false yap
+                } else {
+                    // Eğer input doluysa, mevcut error sınıfını kaldır
+                    input.classList.remove('error');
+                    if (container) container.classList.remove('error');
+                }
+            });
+
+            // Eğer form geçerli değilse işlemi sonlandır
+            if (!isValid) {
+                console.log('Lütfen tüm alanları doldurunuz.');
+                return;
+            }
+
+            // .title öğesini geçici olarak DOM'dan kaldır
+            const titleElement = profilItem.querySelector('.profilHead');
+            if (titleElement) {
+                titleElement.remove();
+            }
+
+            // .profilItem içindeki input değerlerini kopyala
+            const clonedItem = profilItem.cloneNode(true); // Derin kopyalama (inputlar dahil)
+
+            // Yeni oluşturulan öğede input değerlerini sıfırlama ve readonly yapma
+            const clonedInputs = clonedItem.querySelectorAll('input');
+            clonedInputs.forEach(input => {
+                input.value = input.value.trim() || input.placeholder; // Girilen değer ya da placeholder
+                input.readOnly = true; // Inputları readonly yap
+            });
+
+            // Save butonunu kaldırma
+            const saveButton = clonedItem.querySelector('.saveButton');
+            if (saveButton) {
+                saveButton.remove();
+            }
+
+            // Yeni delete buton olusturma
+            const deleteButton = document.createElement('a');
+            deleteButton.href = '#';
+            deleteButton.classList.add('deleteButton');
+            deleteButton.innerHTML = `<span class="icon-delete"></span><span>Adresi Sil</span>`;
+
+            // Delete butonuna tıklandığında, profilItem'ı sil
+            deleteButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Sayfa yenilenmesini engelle
+                clonedItem.remove(); // Profil öğesini sil
+            });
+
+            // Yeni bir Edit butonu oluşturma
+            const editButton = document.createElement('a');
+            editButton.href = '#';
+            editButton.classList.add('editButton');
+            editButton.innerHTML = `<span class="icon-edit"></span><span>Adresi Düzenle</span>`;
+            editButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Sayfa yenilenmesini engelle
+
+                // Kapsayıcıdaki inputlardan readonly kaldır ve sınıf güncelle
+                const editableInputs = clonedItem.querySelectorAll('input');
+                editableInputs.forEach(input => {
+                    input.readOnly = false;
+                });
+                clonedItem.classList.add('edit'); // Edit sınıfını ekle
+                clonedItem.classList.remove('approve'); // Approve sınıfını kaldır
+
+                // Düzenle butonunu kaldır ve yerine Kaydet butonu ekle
+                editButton.remove();
+                const saveChangesButton = document.createElement('a');
+                saveChangesButton.href = '#';
+                saveChangesButton.classList.add('saveChangesButton');
+                saveChangesButton.innerHTML = `<span class="icon-save"></span><span>Adresi Kaydet</span>`;
+                saveChangesButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Inputları tekrar readonly yap ve sınıf güncelle
+                    editableInputs.forEach(input => {
+                        input.readOnly = true;
+                    });
+                    clonedItem.classList.remove('edit'); // Edit sınıfını kaldır
+                    clonedItem.classList.add('approve'); // Approve sınıfını ekle
+
+                    // Kaydet butonunu kaldır ve tekrar Düzenle butonu ekle
+                    saveChangesButton.remove();
+                    clonedItem.appendChild(editButton);
+
+                    saveChangesButton.innerHTML = '<span class="icon-plus"></span> Yeni Adres Ekle'; // Kaydet butonunun içeriğini değiştirme
+                });
+
+                clonedItem.appendChild(saveChangesButton);
+            });
+
+            clonedItem.appendChild(editButton); // Yeni öğeye Edit butonunu ekleme
+            clonedItem.appendChild(deleteButton); // Yeni öğeye Delete butonunu ekleme
+
+            // Yeni öğeyi profileInfo'nun sonuna ekleme
+            document.querySelector('.profileInfo').appendChild(clonedItem);
+
+            // Kopyalanan profilItem öğesine approve sınıfını ekleme
+            clonedItem.classList.add('approve');
+
+            // Orijinal input değerlerini sıfırlama
+            inputs.forEach(input => {
+                input.value = ''; // Değerleri sıfırlama
+            });
+
+            // .title öğesini tekrar ekle
+            if (titleElement) {
+                profilItem.prepend(titleElement);
+            }
+
+            // Kaydet butonuyla ilgili işlem sonrası .invoiceShow davranışı
+            const invoiceShowButton = clonedItem.querySelector('.invoiceShow');
+            if (invoiceShowButton) {
+                invoiceShowButton.addEventListener('click', function () {
+                    if ($(this).hasClass("hide")) {
+                        $(this).removeClass("hide");
+                        $(this).next(".profilItem").removeClass("show");
+                        $(this).html('<span class="icon-plus"></span> Yeni Adres Ekle');
+                    } else {
+                        $(this).addClass("hide");
+                        $(this).next(".profilItem").addClass("show");
+                        $(this).text('Gizle');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

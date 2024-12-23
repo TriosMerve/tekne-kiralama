@@ -184,7 +184,7 @@
   align-items: center;
   gap: 10px;
   font-size: 16px;
-  @media screen and (max-width:991.98px) {
+  @media screen and (max-width: 991.98px) {
     margin-top: 10px;
     font-size: 14px;
   }
@@ -193,7 +193,7 @@
   .icon-delete {
     font-size: 24px;
     transition: all 0.3s linear;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       font-size: 20px;
     }
   }
@@ -204,6 +204,16 @@
       .icon-edit {
         transform: translateY(-2px);
       }
+    }
+  }
+}
+.tekneSilButon{
+  gap: 5px;
+  .icon-delete {
+    font-size: 24px;
+    transition: all 0.3s linear;
+    @media screen and (max-width: 991.98px) {
+      font-size: 20px;
     }
   }
 }
@@ -244,7 +254,7 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 24px;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       margin-top: 20px;
     }
   }
@@ -254,7 +264,7 @@
     background-color: var(--white);
     padding: 30px;
     border-radius: 24px;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 991.98px) {
       padding: 16px;
     }
 
@@ -270,7 +280,7 @@
       .content {
         padding: 30px;
 
-        @media screen and (max-width:991.98px) {
+        @media screen and (max-width: 991.98px) {
           padding: 16px;
         }
       }
@@ -333,7 +343,23 @@
       font-family: "GilroyMedium";
       line-height: 22px;
       color: var(--gray-7);
+      .phoneWrapper {
+        .codeWrapper {
+          border: none;
+        }
+        #phone {
+          border: 1px solid var(--gray-4);
+          border-left: none;
+          &:focus {
+            box-shadow: none;
+            outline: 0;
+          }
 
+          &.error {
+            border-color: var(--primary);
+          }
+        }
+      }
       .profilHead {
         // margin-bottom: 30px;
       }
@@ -554,7 +580,7 @@
   gap: 50px;
   margin-bottom: 50px;
   @media screen and (max-width: 991.98px) {
-    gap:30px;
+    gap: 30px;
   }
   .demansItem {
     display: flex;
@@ -564,6 +590,7 @@
     border: 1px solid var(--primary);
     padding: 30px;
     min-height: 280px;
+    position: relative;
     @media screen and (max-width: 991.98px) {
       padding: 16px;
       gap: 10px;
@@ -592,6 +619,25 @@
       .bodyInfo {
         flex: 1;
       }
+      .detailsButton {
+        // margin-top: 50px;
+      }
+    }
+    .otherButton {
+      position: absolute;
+      top: 33px;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .tekneSilButon {
+      min-width: initial;
+      margin-top: 0;
+    }
+    .formSwitchWrapper {
+      padding: 0;
+      margin-bottom: 0;
     }
 
     .category {
@@ -715,7 +761,8 @@
       }
     }
 
-    &.disabled {
+    &.disabled,
+    &.inactive {
       border: 1px solid #dee2e6;
       .body {
         filter: grayscale(1);

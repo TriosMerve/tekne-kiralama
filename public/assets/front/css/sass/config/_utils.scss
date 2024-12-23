@@ -122,7 +122,15 @@ $colors: (
     }
   }
 }
+@mixin generate-border-classes($colors) {
+  @each $name, $color in $colors {
+    .border-#{$name} {
+      border-color: $color !important;
+    }
+  }
+}
 
+@include generate-border-classes($colors);
 @include generate-background-classes($colors);
 @include generate-text-classes($colors);
 @include generate-button-classes($colors);
@@ -422,6 +430,9 @@ a:hover {
   }
 
   @media screen and (min-width: 992px) {
+    &.addNewButton{
+      min-width: 300px;
+    }
     &:hover {
       &.button-light {
         color: var(--white) !important;

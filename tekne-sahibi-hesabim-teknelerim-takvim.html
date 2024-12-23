@@ -79,8 +79,8 @@
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a> -->
-                        <!-- <div class="dropdown languageWrapper">
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
                             </button>
@@ -491,12 +491,12 @@
                                 <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
                                 <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
                                 <div class="sideNav type2">
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html" class="active"><span>Tekne Hakkında</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
-                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
                                 </div>
@@ -509,32 +509,10 @@
                                     <div class="sideContent">
                                         <div class="bg-gray rounded-5 p-lg-5 p-4">
                                             <div class="moduleHead">
-                                                <div class="moduleTitle">Tekne Hakkında</div>
-                                                <div class="info"><span class="icon-info"></span><span>Burada müşteriler için kendinizi ve teknenizi anlatın. Firma ismi ve iletişim numarası geçmemelidir. </span></div>
+                                                <div class="moduleTitle">Müsaitlik Takvimi</div>
+                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
                                             </div>
-                                            <form class="form needs-validation type2 mb-5" novalidate>
-                                                <div class="row ">
-                                                    <div class="mb-4 col-lg-12">
-                                                        <label for="tanitim" class="customLabel">Türkçe Açıklama</label>
-                                                        <textarea name="" class="form-control h-auto" id="tanitim" cols="30" rows="10"></textarea>
-                                                        <div class="invalid-feedback">
-                                                            Lütfen Tanıtım Alanını Doldurunuz
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-4 col-lg-12 mt-4">
-                                                        <label for="tanitim" class="customLabel">İngilizce Açıklama</label>
-                                                        <textarea name="" class="form-control h-auto" id="tanitim" cols="30" rows="10"></textarea>
-                                                        <div class="invalid-feedback">
-                                                            Lütfen Tanıtım Alanını Doldurunuz
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3 d-flex align-items-center gap-5 mt-lg-5 mt-4">
-                                                    <span class="fixBtn button-success px-5">
-                                                        <input type="submit" value="Kaydet">
-                                                    </span>
-                                                </div>
-                                            </form>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -834,10 +812,33 @@
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+             // Tüm custom-switch-input elemanlarını seç
+             const switches = document.querySelectorAll(".custom-switch-input");
+ 
+             switches.forEach((switchElement) => {
+                 switchElement.addEventListener("change", function () {
+                     // İlgili formSwitchBody'yi bul
+                     const formSwitchBody = this.closest(".formSwitchWrapper").nextElementSibling;
+ 
+                     if (this.checked) {
+                         // Checkbox checked ise disabled sınıfını kaldır
+                         formSwitchBody.classList.remove("disabled");
+                     } else {
+                         // Checkbox unchecked ise disabled sınıfını ekle
+                         formSwitchBody.classList.add("disabled");
+                     }
+                 });
+             });
+         });
+ 
+ 
+     </script>
+ 
 
 </body>
 
