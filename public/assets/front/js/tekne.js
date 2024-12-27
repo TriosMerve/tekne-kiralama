@@ -7,6 +7,33 @@ $(window).on("load", function () {
   }
 });
 
+if (typeof Fancybox !== "undefined") {
+  Fancybox.bind("[data-fancybox]", {
+    compact: !1,
+    Carousel: {},
+    Thumbs: !1,
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
+  });
+  Fancybox.bind(".galleryItem", {
+    compact: !1,
+    Carousel: {},
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
+  });
+}
+
+
 if (typeof $.fn.niceSelect !== "undefined") {
   $(".customSelect").niceSelect();
   // Select elementini seç

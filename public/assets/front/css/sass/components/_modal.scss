@@ -115,6 +115,66 @@
           }
         }
       }
+
+      .form-control {
+        color: var(--text-2);
+        font-size: 14px;
+        font-family: "GilroyMedium";
+        border: 1px solid var(--gray-4);
+        height: 50px;
+        padding-left: 16px;
+        padding-right: 24px;
+        background-color: var(--white);
+        border-radius: 6px;
+        width: 100%;
+
+        &:focus{
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+      .form-label{
+        display: block;
+        color: var(--text-2);
+        font-size: 14px;
+        font-family: "GilroySemibold";
+        margin-bottom: 4px;
+      }
+      .eventItem {
+        span {
+          font-size: 17px;
+          line-height: 25px;
+          color: var(--text);
+          font-family:"GilroySemibold";
+          &.title {
+            color: var(--gray-7);
+            font-size: 16px;
+            line-height: 25px;
+            font-family: "GilroyMedium";
+          }
+          &.icon-date{
+            position: absolute;
+            bottom: 12px;
+            color: var(--primary);
+            right: 20px;
+          }
+        }
+        a{
+          font-size: 17px;
+          line-height: 25px;
+
+          span{
+            color: var(--primary);
+          }
+          @media screen and (min-width:992px) {
+            &:hover{
+              span{
+                color: var(--text-2);
+              }
+            }
+          }
+        }
+      }
     }
     .modal-footer {
       padding: 20px;
@@ -139,7 +199,7 @@
         margin-top: 0;
         margin-bottom: 5px;
         line-height: 27px;
-        @media screen and (max-width:991.98px) {
+        @media screen and (max-width: 991.98px) {
           font-size: 15px;
           line-height: 22px;
         }
@@ -201,7 +261,7 @@
         z-index: 99;
       }
     }
-    .modalHead{
+    .modalHead {
       padding-left: 0;
       padding-right: 0;
     }
@@ -311,7 +371,7 @@
     .container-check {
       .checkText {
         font-size: 16px;
-        @media screen and (max-width:991.98px) {
+        @media screen and (max-width: 991.98px) {
           font-size: 14px;
         }
       }
@@ -340,7 +400,7 @@
           font-size: 16px;
           margin-right: 5px;
           font-family: "GilroyMedium";
-          @media screen and (max-width:991.98px) {
+          @media screen and (max-width: 991.98px) {
             font-size: 14px;
           }
         }

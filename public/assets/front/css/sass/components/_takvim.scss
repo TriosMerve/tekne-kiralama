@@ -1,0 +1,204 @@
+.fc .fc-timegrid-axis-cushion {
+  white-space: nowrap;
+  max-width: initial;
+}
+.fc-direction-ltr .fc-timegrid-slot-label-frame {
+  text-align: center;
+}
+
+.fc .fc-button-primary {
+  background-color: var(--gray-5);
+  border-color: var(--gray-5);
+  font-size: 14px;
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+}
+.fc .fc-button-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+.fc .fc-button-primary:not(:disabled):active:focus {
+  box-shadow: none;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 24px;
+  color: var(--primary);
+  font-family: "GilroySemibold";
+}
+.fc {
+  .fc-col-header-cell-cushion {
+    color: var(--text-2);
+    padding: 15px 5px;
+    font-family: "GilroyMedium";
+    max-width: 95px;
+  }
+  th {
+    .fc-col-header-cell-cushion {
+      font-family: "GilroyRegular";
+      font-size: 14px;
+      @media screen and (max-width:1440px) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.fc-daygrid-dot-event {
+  padding: 6px 0;
+}
+.fc-daygrid-event-dot {
+  border-radius: 0;
+  border: none;
+  width: 6px;
+  height: 3px;
+  background-color: var(--primary);
+  min-width: 6px;
+}
+.fc a.fc-col-header-cell-cushion {
+  &:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
+.fc .fc-timegrid-axis-cushion {
+  white-space: nowrap;
+  max-width: initial;
+  font-family: "GilroyMedium";
+  color: var(--primary);
+}
+.fc-v-event {
+  background-color: var(--gray-4);
+  border-color: var(--gray-4);
+  .fc-event-main {
+    color: var(--text);
+    font-family: "GilroyMedium";
+  }
+}
+
+.fc table {
+  font-size: 15.5px;
+  font-family: "GilroySemibold";
+  color: var(--text);
+}
+.fc .fc-highlight {
+  background: rgba(217, 4, 62, 0.2);
+}
+
+.fc-timegrid-event .fc-event-main {
+  padding: 5px;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.03);
+}
+.fc .fc-timegrid-col.fc-day-today {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.03);
+}
+.fc .fc-scrollgrid-section,
+.fc .fc-scrollgrid-section table,
+.fc .fc-scrollgrid-section > td {
+  border: none;
+}
+
+.fc-day.fc-day-past {
+}
+.fc-timegrid-event-harness {
+  cursor: pointer;
+}
+.fc .fc-daygrid-day-bottom {
+  color: var(--primary);
+  // bottom: -30px;
+  // position: absolute;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+
+      &:hover{
+          background-color: rgba(0, 0, 0, 0.0);
+          color: var(--text-2);
+        }
+  }
+}
+
+/* Geçmiş günler için hücre opaklık azaltma */
+.past-day {
+  opacity: 0.5; /* Opaklığı düşür */
+}
+
+/* Geçmiş günlerde etkinlikler tıklanabilir kalacak */
+.past-day .fc-event {
+  opacity: 1; /* Etkinlikler tam görünür kalsın */
+  pointer-events: auto; /* Etkinlikler tıklanabilir kalsın */
+}
+
+.fc-day-past {
+  opacity: 0.5; /* Opaklığı düşür */
+  pointer-events: auto; /* Etkinlikler tıklanabilir kalsın */
+  cursor: default;
+
+  a:hover {
+    cursor: default !important;
+    color: var(--text-2) !important;
+  }
+}
+
+/* Geçmiş zaman dilimleri */
+.past-time-slot {
+  opacity: 0.5;
+}
+
+/* Geçmiş etkinlikler */
+.past-event {
+  opacity: 1; /* Görünür olmalı */
+  pointer-events: auto; /* Tıklanabilir olmalı */
+}
+
+/* Geçmiş etkinliklere özel stil */
+// .past-event {
+//     opacity: 1; /* Tam görünür olmalı */
+//     pointer-events: auto; /* Tıklanabilir olmalı */
+//     background-color: #dcdcdc; /* Gri bir arka plan */
+// }
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start{
+    &:hover{
+        color: var(--primary);
+        cursor: pointer;
+    }
+}

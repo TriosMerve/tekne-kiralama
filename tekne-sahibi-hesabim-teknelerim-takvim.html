@@ -51,16 +51,15 @@
     <title>Tekne Kiralama</title>
 
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">    
-    
-    <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="public/assets/front/css/app.css">
+    <link rel="stylesheet" href="public/assets/plugins/sweetalert/sweetalert2.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
 <body>
@@ -511,8 +510,86 @@
                                             <div class="moduleHead">
                                                 <div class="moduleTitle">Müsaitlik Takvimi</div>
                                                 <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                <a href="#eventAddModal" data-bs-toggle="modal" class="fixBtn button-primary ms-auto px-5">Yeni Tur Ekle</a>
                                             </div>
-                                            
+                                            <div class="d-none d-lg-block" id='calendar'></div>
+                                        </div>
+
+                                        <div class="mt-5 pt-5">
+                                            <div class="moduleHead mb-0">
+                                                <div class="moduleTitle">Rezervasyonlar</div>
+                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                            </div>
+                                         
+                                            <div class="eventsWrapper">
+                                                <div class="eventsList">
+                                                    <div class="eventsItem">
+                                                        <div class="leftColumn">
+                                                            <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
+                                                        </div>
+                                                        <div class="rightColumn">
+                                                            <div class="eventContent">
+                                                                <div>
+                                                                    <div class="eventCategory">Tekne Kiralama</div>
+                                                                    <div class="eventName">Enver Sarıgül</div>
+                                                                    <div class="eventInfo">
+                                                                        <div class="dateInfo">
+                                                                            <div class="date">12 Aralık - 15 Aralık 2024</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="eventsItem">
+                                                        <div class="leftColumn">
+                                                            <div class="date"><span class="day">15</span> <span class="month">Aralık</span></div>
+                                                        </div>
+                                                        <div class="rightColumn">
+                                                            <div class="eventContent">
+                                                                <div>
+                                                                    <div class="eventCategory">Tekne Turu</div>
+                                                                    <div class="eventName">Merve Kabakcı</div>
+                                                                    <div class="eventInfo">
+                                                                        <div class="dateInfo flex-column align-items-start">
+                                                                            <div class="date mb-4">15 Aralık 2024 Cumartesi</div>
+                                                                            <div class="dateTimeWrap">
+
+                                                                                <div class="date"><span class="text-gray-7">Check-In :</span> 11:00</div>
+                                                                                <div class="date"><span class="text-gray-7">Check-Out :</span> 11:00</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="eventsItem">
+                                                        <div class="leftColumn">
+                                                            <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
+                                                        </div>
+                                                        <div class="rightColumn">
+                                                            <div class="eventContent">
+                                                                <div>
+                                                                    <div class="eventCategory">Tekne Kiralama</div>
+                                                                    <div class="eventName">Enver Sarıgül</div>
+                                                                    <div class="eventInfo">
+                                                                        <div class="dateInfo">
+                                                                            <div class="date">12 Aralık - 15 Aralık 2024</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center pt-5">
+                                                    <a href="#" class="fixBtn button-primary">Daha Fazla Etkinlik</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -797,49 +874,161 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
+
+    <!-- Etkinlik Detayları Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="titleColumn text-start">
+                        <div class="modal-title mb-0 text-primary" id="eventModalLabel">Tur Detayı</div>
+                    </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center eventItem"><div class="col-lg-4"><span class="title">Müşteri:</span> </div> <div class="col"><span id="modalEventTitle"></span></div></div>
+                    <hr>
+                    <div class="row align-items-center eventItem"><div class="col-lg-4"><span class="title">Check-In:</span> </div> <div class="col customPicker"><span id="modalEventStart"></span></div></div>
+                    <hr>
+                    <div class="row align-items-center eventItem"><div class="col-lg-4"><span class="title">Check-Out:</span> </div> <div class="col customPicker"><span id="modalEventEnd"></span></div></div>
+                    <hr>
+                    <div class="row align-items-center eventItem"><div class="col-lg-4"><span class="title">Check-In Tur:</span> </div> <div class="col"><span id="modalEventStartTour"></span></div></div>
+                    <hr>
+                    <div class="row align-items-center eventItem"><div class="col-lg-4"><span class="title">Giriş Saati:</span> </div> <div class="col"><span id="modalEventStartHour"></span></div></div>
+                    <hr>
+                    <div class="row align-items-center eventItem"><div class="col-lg-4"><span class="title">Çıkış Saati:</span> </div> <div class="col"><span id="modalEventEndHour"></span></div></div>
+                    <hr>
+                    <div class="row align-items-center eventItem"><div class="col"><a href="https://triosagency.com/tekne-kiralama/tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" target="_blank" class="textLink noAfter mt-0"><span>Rezervasyon Detayı</span><span class="icon-arrow-right"></span></a></div></div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" id="editEventButton" class="fixBtn button-primary">Düzenle</button>
+                    <button type="button" id="editSaveEventButton" class="fixBtn button-success disabled d-none">Düzenlemeleri Kaydet</button>
+                    <button type="button" id="deleteEventButton" class="fixBtn button-primary">Sil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal fade" id="eventAddModal" tabindex="-1" aria-labelledby="eventAddModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="titleColumn text-start">
+                        <div class="modal-title mb-0 text-primary" id="eventModalLabel">Yeni Tur Ekle</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="eventForm">
+                        <div class="mb-3">
+                            <label for="eventTitle" class="form-label">Müşteri</label>
+                            <input type="text" class="form-control" id="eventTitle" placeholder="Müşteri Adı" required>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="eventDescription" class="form-label">Etkinlik Açıklaması</label>
+                            <textarea class="form-control" id="eventDescription" rows="3"></textarea>
+                        </div> -->
+                        <div class="mb-3 customPicker">
+                            <label for="eventStart" class="form-label">Başlangıç Tarihi ve Saati</label>
+                            <input type="datetime-local" class="form-control date-input" placeholder="Tarih ve saat seçin" id="eventStart" required>
+                            <span class="icon-date"></span>
+                        </div>
+                        <div class="mb-3 customPicker">
+                            <label for="eventEnd" class="form-label">Bitiş Tarihi ve Saati</label>
+                            <input type="datetime-local" class="form-control date-input" placeholder="Tarih ve saat seçin" id="eventEnd" required>
+                            <span class="icon-date"></span>
+                        </div>
+                        <input type="hidden" id="eventStart">
+                        <input type="hidden" id="eventEnd">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveEventButton" class="fixBtn button-primary">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- <div class="modal" id="eventEditModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Etkinliği Düzenle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editEventForm">
+                        <div class="mb-3">
+                            <label for="editEventTitle" class="form-label">Başlık</label>
+                            <input type="text" class="form-control" id="editEventTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEventDescription" class="form-label">Açıklama</label>
+                            <textarea class="form-control" id="editEventDescription" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEventStart" class="form-label">Başlangıç Tarihi ve Saati</label>
+                            <input type="datetime-local" class="form-control" id="editEventStart" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEventEnd" class="form-label">Bitiş Tarihi ve Saati</label>
+                            <input type="datetime-local" class="form-control" id="editEventEnd" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="saveEditButton">Düzenlemeyi Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     -->
+
     <script src="public/assets/plugins/jquery.min.js"></script>
-    <script src="public/assets/plugins/jquery.easing.min.js"></script>
-    <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
+
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
-    <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
 
 
+    <script src="public/assets/plugins/sweetalert/sweetalert2.js"></script>
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/plugins/fullcalendar/index.global.js"></script><!--müsaitlik takvimi ıcın kullanılıyor-->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Flatpickr Türkçe Dil Desteği -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/tr.js"></script>
+
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-             // Tüm custom-switch-input elemanlarını seç
-             const switches = document.querySelectorAll(".custom-switch-input");
- 
-             switches.forEach((switchElement) => {
-                 switchElement.addEventListener("change", function () {
-                     // İlgili formSwitchBody'yi bul
-                     const formSwitchBody = this.closest(".formSwitchWrapper").nextElementSibling;
- 
-                     if (this.checked) {
-                         // Checkbox checked ise disabled sınıfını kaldır
-                         formSwitchBody.classList.remove("disabled");
-                     } else {
-                         // Checkbox unchecked ise disabled sınıfını ekle
-                         formSwitchBody.classList.add("disabled");
-                     }
-                 });
-             });
-         });
- 
- 
-     </script>
- 
+    <script src="public/assets/front/js/event-calendar.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
 
+
+    <script>
+        $(window).on("load", function () {
+            if ($(window).width() < 992) {
+                console.log("Mobil modda çalışıyor");
+                // Modal açıldığında tarih inputlarını flatpickr ile aktive et
+                $('#eventAddModal').on('shown.bs.modal', function () {
+                    console.log("Modal açıldı");
+                    // flatpickr ile tarih inputlarını başlat
+                    $('.date-input').flatpickr({
+                        locale: 'tr', // Türkçe dil desteği
+                        enableTime: true,
+                        dateFormat: 'Y-m-d H:i',
+                        time_24hr: true,
+                        disableMobile: true // Mobilde Flatpickr'yi aktif et
+                    });
+                });
+            }
+        });
+
+     
+    </script>
 </body>
 
 </html>

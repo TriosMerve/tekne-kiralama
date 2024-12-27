@@ -207,7 +207,7 @@
     }
   }
 }
-.tekneSilButon{
+.tekneSilButon {
   gap: 5px;
   .icon-delete {
     font-size: 24px;
@@ -243,7 +243,7 @@
     font-size: 14px;
     height: auto;
     line-height: 16px;
-    margin-top: 10px;
+    margin-top: 14px;
     @media screen and (min-width: 992px) {
       &:hover {
         color: var(--primary);
@@ -256,6 +256,10 @@
     margin-bottom: 24px;
     @media screen and (max-width: 991.98px) {
       margin-top: 20px;
+    }
+
+    &.type2{
+      margin-bottom: 0;
     }
   }
   .formSwitchWrapper {
@@ -609,7 +613,8 @@
     }
     .body {
       display: flex;
-      align-items: flex-start;
+      align-items: stretch;
+      // align-items: flex-start;
       gap: 20px;
       width: 100%;
       @media screen and (max-width: 991.98px) {
@@ -655,6 +660,10 @@
       font-size: 22px;
       line-height: 34px;
       font-family: "GilroySemibold";
+      @media screen and (max-width:991.98px) {
+        font-size: 18px;
+        line-height: 25px;
+    }
 
       &.type2 {
         display: inline-block;
@@ -714,6 +723,11 @@
       display: flex;
       align-items: center;
       margin-top: 5px;
+      @media screen and (max-width:991.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
       .date {
         font-size: 14px;
         color: var(--primary);
@@ -729,12 +743,16 @@
         justify-content: center;
         margin-left: 10px;
         gap: 10px;
-
-        &:before {
-          content: "";
-          width: 4px;
-          height: 2px;
-          background-color: var(--primary);
+        @media screen and (max-width:991.98px) {
+          margin-left: 0;
+        }
+        @media screen and (min-width:992px) {
+          &:before {
+            content: "";
+            width: 4px;
+            height: 2px;
+            background-color: var(--primary);
+          }
         }
       }
     }
@@ -756,6 +774,10 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      @media screen and (max-width:991.98px) {
+        font-size: 14px;
+        line-height: 22px;
+    }
       &.type2 {
         color: var(--primary);
       }
@@ -766,6 +788,87 @@
       border: 1px solid #dee2e6;
       .body {
         filter: grayscale(1);
+      }
+    }
+    &.waiting {
+      border-color: #ff6815;
+      .leftColumn {
+        border-right-color: #ff6815;
+      }
+      .dateInfo {
+        .date,
+        .loc {
+          color: #ff6815;
+          &:before {
+            background-color: #ff6815;
+          }
+        }
+      }
+      .date {
+        .day {
+          background-color: #ff6815;
+        }
+      }
+      .category {
+        background-color: #ff6815;
+      }
+
+      .message {
+        background-color: rgba(255, 104, 21, 0.7);
+        display: inline-block;
+        padding: 5px;
+        color: var(--white);
+        height: auto;
+      }
+      .button-primary {
+        background-color: #ff6815 !important;
+        border-color: #ff6815 !important;
+      }
+    }
+    &.completed {
+      border-color: var(--success);
+      .leftColumn {
+        border-right-color: var(--success);
+      }
+      .dateInfo {
+        .date {
+          color: var(--success);
+        }
+      }
+      .date {
+        .day {
+          background-color: var(--success);
+        }
+      }
+      .category {
+        background-color: var(--success);
+      }
+    }
+    &.cancelled {
+      filter: grayscale(1);
+      // border-color: var(--success);
+      // .leftColumn {
+      //   border-right-color: var(--success);
+      // }
+      // .dateInfo {
+      //   .date {
+      //     color: var(--success);
+      //   }
+      // }
+      // .date {
+      //   .day {
+      //     background-color: var(--success);
+      //   }
+      // }
+      // .eventCategory {
+      //   background-color: var(--success);
+      // }
+      .message {
+        background-color: var(--primary);
+        display: inline-block;
+        padding: 5px;
+        color: var(--white);
+        height: auto;
       }
     }
     &.type2 {

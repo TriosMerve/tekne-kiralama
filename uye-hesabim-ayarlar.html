@@ -150,8 +150,8 @@
                             </ul>
                         </div>
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
-                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                            <a href="#UyeGirisiModal" class="fixBtn button-outline" data-bs-toggle="modal">Üye Girişi</a>
+                            <a href="#UyeOlModal" class="fixBtn button-primary" data-bs-toggle="modal">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
@@ -201,8 +201,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
-                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                                        <a href="#UyeGirisiModal" class="fixBtn button-primary" data-bs-toggle="modal">Üye Girişi</a>
+                                        <a href="#UyeOlModal" class="fixBtn button-secondary" data-bs-toggle="modal">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -601,7 +601,7 @@
         </footer>
     </div>
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
@@ -625,8 +625,8 @@
                             Lütfen Parolanızı Giriniz
                         </div>
                     </div>
-                    <div class="mb-5 text-end">
-                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="forgotLink" data-bs-toggle="modal" data-bs-target="#sifremiUnuttumModal">Şifremi Unuttum</a>
                     </div>
                     <div class="mb-3">
                         <span class="fixBtn button-primary w-100">
@@ -634,11 +634,12 @@
                         </span>
                     </div>
                 </form>
-                <hr class="my-5">
+                <hr>
                 <div class="otherLogin">
-                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
-                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100 mb-3"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Google ile Giriş Yap</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Facebook ile Giriş Yap</span></a>
                 </div>
+                <hr>
                 <div class="signText paragraph text-center pt-4">
                     Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                 </div>
@@ -648,9 +649,46 @@
         </div>
     </div>
 
+    <div class="modal fade type2" id="sifremiUnuttumModal" aria-hidden="true" aria-labelledby="sifremiUnuttumModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Şifremi Unuttum</div>
+                    </div>
+                </div>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Şifreni Yenile">
+                        </span>
+                    </div>
+                    <div class="paragraph type3">
+                        Hesabınıza erişim sağlayabilmeniz için kayıtlı e-posta adresinizi girin. Size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz. Gelen kutunuzu ve spam'i kontrol etmeyi unutmayın!
+                    </div>
+                </form>
+                <hr>
+                <div class="signText paragraph text-center">
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
 
     <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
@@ -681,10 +719,10 @@
                                 </span>
                             </div>
                         </form>
-                        <hr class="my-5">
+                        <hr>
                         <div class="otherLogin">
-                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
-                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100 mb-3"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Google ile Kayıt Ol</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Facebook ile Kayıt Ol</span></a>
                         </div>
                     </div>
                     <div class="stepTwo d-none">
@@ -699,6 +737,23 @@
                                 <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
                                 <div class="invalid-feedback">
                                     Lütfen Soyadınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                <div class="invalid-feedback">
+                                    Lütfen E-Posta Adresinizi Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="phoneWrapper">
+                                    <div class="codeWrapper position-relative">
+                                        <input type="tel" placeholder="" id="telephone">
+                                    </div>
+                                    <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                                    <div class="invalid-feedback w-100">
+                                        Lütfen Telefon Numaranızı Giriniz
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -722,6 +777,7 @@
                         </form>
                     </div>
                 </div>
+                <hr>
                 <div class="signText paragraph text-center pt-4">
                     Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
                 </div>
