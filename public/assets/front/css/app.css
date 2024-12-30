@@ -1459,6 +1459,9 @@ video {
 .fixBtn.notAfter:after {
   display: none;
 }
+.fixBtn.notBefore:before {
+  display: none;
+}
 .fixBtn.button-outline {
   color: var(--black);
   border: 1px solid var(--gray-5);
@@ -1722,6 +1725,10 @@ video {
 .formSelectWrapper .customSelect.type2 .option.focus {
   color: var(--primary);
 }
+.formSelectWrapper .customSelect.eventsFilterSelect.open .list {
+  max-height: initial;
+}
+
 .currencly {
   font-family: sans-serif;
   font-weight: 600;
@@ -1759,6 +1766,41 @@ video {
   left: 0;
   display: none;
   z-index: 999;
+}
+
+mark.status {
+  padding: 6px 10px !important;
+  font-size: 15px !important;
+  border-radius: 6px;
+  font-style: italic;
+}
+mark.status:before {
+  width: 10px !important;
+  height: 10px !important;
+}
+mark.status.waiting {
+  background-color: rgba(254, 150, 21, 0.1);
+  color: var(--yellow);
+}
+mark.status.waiting:before {
+  background-color: var(--yellow);
+}
+mark.status.paymentWait {
+  color: var(--primary);
+  background-color: rgba(217, 4, 62, 0.1);
+}
+mark.status.paymentWait:before {
+  background-color: var(--primary);
+}
+mark.status.completed {
+  color: var(--success);
+  background-color: rgba(20, 108, 67, 0.1);
+}
+mark.status.completed:before {
+  background-color: var(--success);
+}
+mark.status.cancelled {
+  filter: grayscale(1);
 }
 
 .preloader {
@@ -3557,13 +3599,14 @@ footer .customTabContents .listItems .item .boatName {
   margin-top: 4px;
 }
 .container-check a {
-  color: var(--light-brown);
+  color: var(--primary);
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.3s linear;
+  font-family: "GilroySemibold";
 }
 @media screen and (min-width: 992px) {
   .container-check a:hover {
-    border-color: var(--light-brown);
+    border-color: var(--primary);
   }
 }
 .container-check input {
@@ -3597,7 +3640,7 @@ footer .customTabContents .listItems .item .boatName {
   top: 2px;
   width: 8px;
   height: 15px;
-  border: solid var(--light-brown);
+  border: solid var(--primary);
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
@@ -3629,7 +3672,6 @@ footer .customTabContents .listItems .item .boatName {
 }
 .container-check.type2 .checkmark {
   border-radius: 100%;
-  height: 20px;
 }
 .container-check.type2 .checkmark:after {
   width: 70%;
@@ -6345,6 +6387,12 @@ section .customBlockquote blockquote .fixBtn,
   content: "|";
   position: absolute;
   left: 0;
+}
+.pageDetailsContent .infoDetails figure {
+  aspect-ratio: 3/2;
+  max-width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .pageDetailsContent .properties .point {
   background: var(--primary);
@@ -11907,6 +11955,28 @@ section .customBlockquote blockquote .fixBtn,
     padding-top: 0;
   }
 }
+.sideContentWrapper .status {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "GilroySemibold";
+  font-size: 13px;
+}
+.sideContentWrapper .status:before {
+  content: "";
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--primary);
+}
+.sideContentWrapper .status.waiting {
+  color: var(--yellow);
+}
+.sideContentWrapper .status.waiting:before {
+  background-color: var(--yellow);
+}
 .sideContentWrapper .backLink {
   font-family: "GilroyMedium";
   color: var(--gray-7);
@@ -11972,6 +12042,9 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 38px;
   font-family: "GilroyBold";
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper .pageTitle {
@@ -12159,6 +12232,11 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--primary);
   font-size: 20px;
 }
+.blockquote .title {
+  font-family: "GilroySemibold";
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 .blockquote .closeBlockquote {
   font-size: 20px;
   color: var(--black);
@@ -12242,10 +12320,10 @@ section .customBlockquote blockquote .fixBtn,
 }
 .demandsList .demansItem {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 20px;
   border-radius: 24px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--gray-4);
   padding: 30px;
   min-height: 280px;
   position: relative;
@@ -12257,16 +12335,14 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 .demandsList .demansItem .imageWrapper {
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
-  border-radius: 100%;
+  max-width: 300px;
+  aspect-ratio: 3/2;
+  border-radius: 24px;
+  overflow: hidden;
 }
 @media screen and (max-width: 991.98px) {
   .demandsList .demansItem .imageWrapper {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
+    max-width: 100px;
   }
 }
 .demandsList .demansItem .body {
@@ -12545,8 +12621,19 @@ section .customBlockquote blockquote .fixBtn,
   padding: 30px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 640px) {
+  .demandDetailsContent .card {
+    flex-direction: column;
+  }
+}
 .demandDetailsContent .card .cardLeft {
   width: 300px;
+}
+@media screen and (max-width: 640px) {
+  .demandDetailsContent .card .cardLeft {
+    max-width: 300px;
+    width: 100%;
+  }
 }
 .demandDetailsContent .card .cardLeft .cardImage {
   aspect-ratio: 3/2;
@@ -12558,6 +12645,9 @@ section .customBlockquote blockquote .fixBtn,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.demandDetailsContent .card .cardRight .fixBtn {
+  min-width: 120px;
 }
 .demandDetailsContent .card .category {
   display: inline-flex;
@@ -12710,7 +12800,7 @@ section .customBlockquote blockquote .fixBtn,
   position: relative;
   color: var(--primary);
 }
-.demandDetailsContent .card .infoList .text a:before {
+.demandDetailsContent .card .infoList .text a:after {
   content: "";
   width: 100%;
   border-bottom: 1px dotted var(--primary);
@@ -12726,7 +12816,7 @@ section .customBlockquote blockquote .fixBtn,
   .demandDetailsContent .card .infoList .text a:hover {
     color: var(--primary);
   }
-  .demandDetailsContent .card .infoList .text a:hover:before {
+  .demandDetailsContent .card .infoList .text a:hover:after {
     width: 0;
   }
 }
@@ -12808,6 +12898,30 @@ section .customBlockquote blockquote .fixBtn,
 .demandDetailsContent .messageList .message .fixBtn {
   margin-left: 30px;
   margin-top: 20px;
+}
+
+.boatUser {
+  font-size: 20px;
+  font-family: "GilroyMedium";
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .boatUser {
+    font-size: 14px;
+  }
+}
+.boatUser b {
+  color: var(--primary);
+  font-family: "GilroySemibold";
+  font-size: 24px;
+}
+@media screen and (max-width: 991.98px) {
+  .boatUser b {
+    font-size: 18px;
+  }
 }
 
 .moduleTitle {
@@ -13142,6 +13256,119 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroySemibold";
 }
 
+.formDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formDetails .item .title {
+  font-family: "GilroyBold";
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--primary);
+  background-color: var(--white);
+  padding: 15px 16px;
+  border-radius: 10px 0 0 10px;
+}
+.formDetails .item .content {
+  font-size: 16px;
+  line-height: 25px;
+  color: #253e34;
+  font-family: "GilroySemibold";
+  background-color: #e5e5e5;
+  padding: 15px 20px;
+  border-radius: 0 10px 10px 0;
+}
+.formDetails .item .content.waiting {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.formDetails .item .content.type2 {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "GilroyMedium";
+}
+.formDetails .item .content.type2 > div {
+  padding: 0 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.formDetails .item .content.type2 b {
+  font-family: "GilroySemibold";
+}
+.formDetails .item .text {
+  font-size: 13px;
+  color: #8d8d8d;
+  font-family: "GilroyMedium";
+}
+
+.detailsInfoRightColumn .caption {
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "GilroyMedium";
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.detailsInfoRightColumn p {
+  font-family: "GilroyMedium";
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+.detailsInfoRightColumn .whatsappInfo {
+  background-color: var(--gray);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  gap: 20px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "GilroySemibold";
+}
+.detailsInfoRightColumn .whatsappInfo .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailsInfoRightColumn .whatsappInfo .icon img {
+  height: 60px;
+}
+.detailsInfoRightColumn .callColumn {
+  background-color: var(--gray);
+  display: flex;
+  align-items: stretch;
+  border-radius: 20px;
+  gap: 20px;
+}
+.detailsInfoRightColumn .callColumn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailsInfoRightColumn .callColumn .icon img {
+  height: 60px;
+}
+.detailsInfoRightColumn .callColumn b {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "GilroySemibold";
+}
+.detailsInfoRightColumn .callColumn a {
+  font-family: "GilroyBold";
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--primary);
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .detailsInfoRightColumn .callColumn a:hover {
+    color: var(--text);
+  }
+}
+
 .boatList {
   display: flex;
   flex-direction: column;
@@ -13456,7 +13683,8 @@ section .customBlockquote blockquote .fixBtn,
 }
 .eventsWrapper .eventsList .eventsItem .eventContent {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
+  justify-content: space-between;
 }
 @media screen and (max-width: 991.98px) {
   .eventsWrapper .eventsList .eventsItem .eventContent {
@@ -13493,16 +13721,28 @@ section .customBlockquote blockquote .fixBtn,
     line-height: 22px;
   }
 }
-.eventsWrapper .eventsList .eventsItem .eventName {
+.eventsWrapper .eventsList .eventsItem .eventTitle {
   font-size: 22px;
   line-height: 34px;
   font-family: "GilroySemibold";
   color: rgb(33, 37, 41);
 }
 @media screen and (max-width: 991.98px) {
-  .eventsWrapper .eventsList .eventsItem .eventName {
+  .eventsWrapper .eventsList .eventsItem .eventTitle {
     font-size: 18px;
     line-height: 25px;
+  }
+}
+.eventsWrapper .eventsList .eventsItem .eventName {
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "GilroySemibold";
+  color: var(--gray-6);
+}
+@media screen and (max-width: 991.98px) {
+  .eventsWrapper .eventsList .eventsItem .eventName {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 .eventsWrapper .eventsList .eventsItem .dateTimeWrap {
@@ -13650,7 +13890,6 @@ section .customBlockquote blockquote .fixBtn,
   }
 }
 .eventsFilterWrapper .customSelect {
-  border: none;
   height: 45px;
 }
 .eventsFilterWrapper .customSelect .current {

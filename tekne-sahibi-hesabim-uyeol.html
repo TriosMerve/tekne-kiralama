@@ -53,12 +53,12 @@
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">    
     
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
+
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
@@ -78,7 +78,7 @@
                 <div class="headerNav">
                     <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
@@ -133,32 +133,32 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                       </div>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class=""><span class="icon-user"></span> </div>
+                       </div> -->
+                       <div class="dropdown">
+                            <button class="dropdown-toggle userButton type2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="otherUserMenuIcon">ES</div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <li><a class="dropdown-item active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Teknelerim</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Talepler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Rezervasyonlar</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Ödemeler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
                                 <hr>
-                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
-                        </div>
+                        </div>                        
                         <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="#UyeGirisiModal" class="fixBtn button-outline" data-bs-toggle="modal">Üye Girişi</a>
-                            <a href="#UyeOlModal" class="fixBtn button-primary" data-bs-toggle="modal">Üye Ol</a>
+                            <a href="tekne-sahibi-hesabim-uyegirisi.html" class="fixBtn button-outline">Üye Girişi</a>
+                            <a href="tekne-sahibi-hesabim-uyeol.html" class="fixBtn button-primary">Üye Ol</a>
                         </div>
-                        <a href="#" class="menuNavButton openMenuButton ms-4">
+                        <!-- <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
-                <div class="headerMenuNav">
+                <!-- <div class="headerMenuNav">
                     <div class="navMenu">
                         <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
                             <div class="row navMenuTop mx-0">
@@ -201,8 +201,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a href="#UyeGirisiModal" class="fixBtn button-primary" data-bs-toggle="modal">Üye Girişi</a>
-                                        <a href="#UyeOlModal" class="fixBtn button-secondary" data-bs-toggle="modal">Üye Ol</a>
+                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -472,7 +472,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </header>
 
@@ -482,233 +482,70 @@
             <section class="pageSection">
                 <div class="container-3xl">
                     <div class="userPageContainer">
-                        <div class="row mx-0">
-                            <div class="sidenavWrapper d-none d-lg-block">
-                                <div class="sideNav">
-                                    <a href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a>
-                                    <a class="active" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a>
-                                    <a href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a>
-                                    <a href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a>
-                                    <a href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a>
-                                    <a href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a>
-                                    <hr>
-                                    <a href="#" class="mt-4"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a>
-                                </div>
+                        <div class="userHead">
+                            <div class="userTitle">Üye Hesabı Oluştur</div>
+                            <div class="paragraph text-center d-none d-lg-block">
+                                Please fill in all your information completely.
                             </div>
-                            <div class="sideContentWrapper">
-                                <div class="col-xl-9 px-0">
-                                    <div class="sideHead justify-content-between">
-                                        <div class="pageTitle">Taleplerim</div>
-                                        <div class="eventsFilterWrapper">
-                                            <div class="formSelectWrapper">
-                                                <select name="" id="" class="customSelect eventsFilterSelect type2">
-                                                    <option value="" disabled selected>Durum Seçiniz</option>
-                                                    <option value="">Cevap Bekleniyor</option>
-                                                    <option value="">Ödeme Bekleniyor</option>
-                                                    <option value="">Tamamlandı</option>
-                                                    <option value="">İptal Edildi</option>
-                                                </select>
-                                            </div>
+                        </div>
+                        <div class="userContent">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-7 mx-auto">
+                                <form class="form needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                                        <div class="invalid-feedback">
+                                            Lütfen Adınızı Giriniz
                                         </div>
-                                        <a href="javascript:history.back()" class="backLink"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
                                     </div>
-                                    <div class="sideContent">
-                                        
-                                        <div class="demandsList">
-                                            <div class="demansItem">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="d-flex align-items-center gap-4">
-                                                            <div class="category">Tekne Kiralama</div>
-                                                        </div>
-                                                        <div class="title">Custom Made Custom Made </div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep - 15 Sep 2022</div>
-                                                            <div class="loc">Göcek</div>
-                                                        </div>
-                                                        <!-- <div class="message type2">
-                                                            Talebinize cevap bekleniyor...
-                                                        </div> -->
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-between align-items-end">
-                                                        <a href="uye-hesabim-talep-detay.html" class="fixBtn button-primary">Detay</a>
-                                                        <mark class="status mb-2 pb-1 waiting">Cevap Bekliyor</mark>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="demansItem">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="d-flex align-items-center gap-4">
-                                                            <div class="category">Tekne Kiralama</div>
-                                                        </div>
-                                                        <div class="title">Custom Made Custom Made </div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep - 15 Sep 2022</div>
-                                                            <div class="loc">Göcek</div>
-                                                        </div>
-                                                        <!-- <div class="message type2">
-                                                            Talebinize cevap bekleniyor...
-                                                        </div> -->
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-between align-items-end">
-                                                        <a href="uye-hesabim-talep-detay.html" class="fixBtn button-primary">Detay</a>
-                                                        <mark class="status mb-2 pb-1 paymentWait">Ödeme Bekliyor</mark>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="demansItem">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="d-flex align-items-center gap-4">
-                                                            <div class="category">Tekne Kiralama</div>
-                                                        </div>
-                                                        <div class="title">Custom Made Custom Made </div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep - 15 Sep 2022</div>
-                                                            <div class="loc">Göcek</div>
-                                                        </div>
-                                                        <!-- <div class="message type2">
-                                                            Talebinize cevap bekleniyor...
-                                                        </div> -->
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-between align-items-end">
-                                                        <a href="uye-hesabim-talep-detay.html" class="fixBtn button-primary">Detay</a>
-                                                        <mark class="status mb-2 pb-1 completed">Tamamlandı</mark>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="demansItem cancelled">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="d-flex align-items-center gap-4">
-                                                            <div class="category">Tekne Kiralama</div>
-                                                        </div>
-                                                        <div class="title">Custom Made Custom Made </div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep - 15 Sep 2022</div>
-                                                            <div class="loc">Göcek</div>
-                                                        </div>
-                                                        <!-- <div class="message type2">
-                                                            Talebinize cevap bekleniyor...
-                                                        </div> -->
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-between align-items-end">
-                                                        <a href="uye-hesabim-talep-detay.html" class="fixBtn button-primary">Detay</a>
-                                                        <mark class="status mb-2 pb-1 cancelled">İptal Edildi</mark>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="demansItem waiting">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="d-flex align-items-center gap-4">
-                                                            <div class="category">Tekne Kiralama</div>
-                                                            <div class="status waiting">Cevap Bekliyor</div>
-                                                        </div>
-                                                        <div class="title">Custom Made Custom Made </div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep - 15 Sep 2022</div>
-                                                            <div class="loc">Göcek</div>
-                                                        </div>
-                                                        <div class="message type2">
-                                                            Talebinize cevap bekleniyor...
-                                                        </div>
-                                                    </div>
-                                                    <a href="uye-hesabim-talep-detay.html" class="fixBtn button-primary">Detay</a>
-                                                </div>
-                                            </div>
-                                            <div class="demansItem waiting">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="category">Tekne Kiralama</div>
-                                                        <div class="title">Custom Made Custom Made </div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep - 15 Sep 2022</div>
-                                                            <div class="loc">Göcek</div>
-                                                        </div>
-                                                        <div class="message type2">
-                                                            Talebiniz ödeme bekleniyor...
-                                                        </div>
-                                                    </div>
-                                                    <a href="uye-hesabim-talep-detay.html" class="fixBtn button-primary">Detay</a>
-                                                </div>
-                                            </div>
-                                            <div class="demansItem">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="category">Tekne Turu</div>
-                                                        <div class="title">Sunseeker, Manhattan 64</div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep 2024 / 11:00 - 13:00</div>
-                                                            <div class="loc">Bodrum</div>
-                                                        </div>
-                                                        <div class="other">
-                                                            Ekstralar : Yemek, Müzik, Ekonomik Evlilik Teklifi Paketi
-                                                        </div>
-                                                        <div class="message">
-                                                            Merhaba Enver bey tarihler müsait size nasıl yardımcı olabilirim sormak istediğiniz soru varsa buradan mesaj atabilirsiniz.
-                                                        </div>
-                                                    </div>
-                                                    <a href="#" class="fixBtn button-primary">Detay</a>
-                                                </div>
-                                            </div>
-                                            <div class="demansItem cancelled">
-                                                <div class="imageWrapper">
-                                                    <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
-                                                </div>
-                                                <div class="body">
-                                                    <div class="bodyInfo">
-                                                        <div class="category">Tekne Turu</div>
-                                                        <div class="title">Beneteau, Cyclades 43</div>
-                                                        <div class="dateInfo">
-                                                            <div class="date">12 Sep 2024 / 11:00 - 13:00</div>
-                                                            <div class="loc">Fehiye</div>
-                                                        </div>
-                                                        <div class="other">
-                                                            Ekstralar : (Yemek, Müzik)
-                                                        </div>
-                                                        <div class="message">
-                                                            Bu talep iptal edildi
-                                                        </div>
-                                                    </div>
-                                                    <a href="#" class="fixBtn button-primary">Detay</a>
-                                                </div>
-                                            </div> -->
+                                    <div class="mb-3">
+                                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                                        <div class="invalid-feedback">
+                                            Lütfen Soyadınızı Giriniz
                                         </div>
-                                        <div class="border border-gray rounded-5 p-5">
-                                            <div class="notDataContent">
-                                                <div class="title">Henüz hiçbir talep oluşturmadın.</div>
-                                                <p>Beğendiğin teknelere talep oluşturarak müsaitlik durumlarını öğrenebilirsin. Talep oluşturmak için tekne sayfasına gitmen yeterli.</p>
-                                                <a href="#" class="fixBtn button-primary"><span>Tekneleri Keşfet</span> <span class="icon-arrow-right"></span></a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                        <div class="invalid-feedback">
+                                            Lütfen E-Posta Adresinizi Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="phoneWrapper">
+                                            <div class="codeWrapper position-relative">
+                                                <input type="tel" placeholder="" id="telephone">
+                                            </div>
+                                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                                            <div class="invalid-feedback w-100">
+                                                Lütfen Telefon Numaranızı Giriniz
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="mb-3">
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                                        <div class="invalid-feedback">
+                                            Lütfen Parolanızı Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="mb-5 ps-3">
+                                        <label class="container-check">
+                                            <input type="checkbox" name="address">
+                                            <span class="checkmark"></span>
+                                            <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
+                                        </label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="fixBtn button-primary w-100">
+                                            <input type="submit" value="Hesap Oluştur">
+                                        </span>
+                                    </div>
+                                </form>
+                                
+                                <hr>
+                                <div class="signText paragraph text-center pt-4">
+                                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
                                 </div>
                             </div>
                         </div>
-                
                     </div>
                 </div>
             </section>
@@ -796,259 +633,12 @@
         </footer>
     </div>
 
-    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                        Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                        <div class="invalid-feedback">
-                            Lütfen Parolanızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3 text-end">
-                        <a href="#" class="forgotLink" data-bs-toggle="modal" data-bs-target="#sifremiUnuttumModal">Şifremi Unuttum</a>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Giriş Yap">
-                        </span>
-                    </div>
-                </form>
-                <hr>
-                <div class="otherLogin">
-                    <a href="#" class="fixBtn button-outline-2 w-100 mb-3"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Google ile Giriş Yap</span></a>
-                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Facebook ile Giriş Yap</span></a>
-                </div>
-                <hr>
-                <div class="signText paragraph text-center pt-4">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="sifremiUnuttumModal" aria-hidden="true" aria-labelledby="sifremiUnuttumModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Şifremi Unuttum</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Şifreni Yenile">
-                        </span>
-                    </div>
-                    <div class="paragraph type3">
-                        Hesabınıza erişim sağlayabilmeniz için kayıtlı e-posta adresinizi girin. Size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz. Gelen kutunuzu ve spam'i kontrol etmeyi unutmayın!
-                    </div>
-                </form>
-                <hr>
-                <div class="signText paragraph text-center">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
-                    <div class="stepHead">
-                        <span class="">1</span>
-                        <span>2</span>
-                    </div>
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
-                    </div>
-                </div>
-                <div class="signupFormSteps">
-                    <div class="stepOne">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Devam Et">
-                                </span>
-                            </div>
-                        </form>
-                        <hr>
-                        <div class="otherLogin">
-                            <a href="#" class="fixBtn button-outline-2 w-100 mb-3"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Google ile Kayıt Ol</span></a>
-                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Facebook ile Kayıt Ol</span></a>
-                        </div>
-                    </div>
-                    <div class="stepTwo d-none">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Adınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Soyadınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                    Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="phoneWrapper">
-                                    <div class="codeWrapper position-relative">
-                                        <input type="tel" placeholder="" id="telephone">
-                                    </div>
-                                    <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                                    <div class="invalid-feedback w-100">
-                                        Lütfen Telefon Numaranızı Giriniz
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Parolanızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-5 ps-3">
-                                <label class="container-check">
-                                    <input type="checkbox" name="address">
-                                    <span class="checkmark"></span>
-                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
-                                </label>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Hesap Oluştur">
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr>
-                <div class="signText paragraph text-center pt-4">
-                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
-                    </div>
-                </div>
-                <blockquote class="blockquote">
-                    <span class="icon-info"></span> 
-                    <p>
-                        Your account is not verified. <a href="#">Resend confirmation</a>
-                    </p>
-                </blockquote>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Adınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Soyadınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="phoneWrapper">
-                            <div class="codeWrapper position-relative">
-                                <input type="tel" placeholder="" id="telephone">
-                            </div>
-                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                            <div class="invalid-feedback w-100">
-                                Lütfen Telefon Numaranızı Giriniz
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Kaydet">
-                        </span>
-                    </div>
-                </form>
-            </div>
-          </div>
-        </div>
-    </div>
-
     <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
     <script src="public/assets/plugins/jquery.easing.min.js"></script>
     <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
@@ -1058,7 +648,6 @@
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
     <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script>

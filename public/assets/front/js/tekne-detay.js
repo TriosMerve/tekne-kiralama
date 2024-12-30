@@ -54,20 +54,20 @@ if (wWidth < 992) {
   // Tıklama olayını dinle
   $(".dateColumnWrapper .dateColumn .title").on("click", function () {
     var $wrapper = $(this).closest(".dateColumnWrapper");
-    console.log("tıkladım")
+    console.log("tıkladım");
     // .fixed sınıfı eklenmişse işlem yapılacak
     if ($wrapper.hasClass("fixed")) {
-        // Başlangıç metni değişikliği ve selected sınıfının kontrolü
-        console.log("fixed")
+      // Başlangıç metni değişikliği ve selected sınıfının kontrolü
+      console.log("fixed");
       if ($wrapper.hasClass("selected")) {
-        $(".fixedColumn").removeClass("selected")
-        console.log("selected")
+        $(".fixedColumn").removeClass("selected");
+        console.log("selected");
         $(this).text("Tarih Seçimini göster");
         $wrapper.removeClass("selected");
         $("html").removeClass("overflow-hidden");
       } else {
-        $(".fixedColumn").addClass("selected")
-        console.log("selected degıl")
+        $(".fixedColumn").addClass("selected");
+        console.log("selected degıl");
         $(this).text("Fiyatları görmek için tarih seçiniz");
         $wrapper.addClass("selected");
         $("html").addClass("overflow-hidden");
@@ -77,7 +77,7 @@ if (wWidth < 992) {
           var dropdownHeight = $dropdown.outerHeight(); // Dropdown yüksekliği
           var viewportHeight = $(window).height(); // Görünen ekranın yüksekliği
           var offsetTop = $(this).offset().top; // Dropdown'un üstten uzaklığı
-        
+
           // Eğer alan yukarı daha genişse, yukarı açılacak
           if (viewportHeight - offsetTop < dropdownHeight) {
             $dropdown.css({
@@ -115,7 +115,6 @@ $(document).on("click", function (e) {
     }
   }
 });
-
 
 let isDatepickerOpen = false; // Açık durumunu kontrol etmek için
 
@@ -199,8 +198,16 @@ function initializeDatepicker(container) {
           $(".dateResult").text(formattedDate).show();
 
           //   // İlk .formSelectWrapper'dan disabled sınıfını kaldır ve select'i etkinleştir
-          $(".chooseHourWrapper .formSelectWrapper").first().removeClass("disabled").find(".checkin-hour").prop("disabled", false).niceSelect("update");
-          $(".chooseHourWrapper .formSelectWrapper").first().find(".checkin-hour").trigger("click");
+          $(".chooseHourWrapper .formSelectWrapper")
+            .first()
+            .removeClass("disabled")
+            .find(".checkin-hour")
+            .prop("disabled", false)
+            .niceSelect("update");
+          $(".chooseHourWrapper .formSelectWrapper")
+            .first()
+            .find(".checkin-hour")
+            .trigger("click");
           // Nice Select menüsünü aç
         }
         //Secım yapıldıgında takvımı kapatma
@@ -249,8 +256,14 @@ function initializeDatepicker(container) {
   });
 }
 
-$(".chooseHourWrapper .formSelectWrapper .checkin-hour").on("change",function () {
-    var selectedText = $(this).next(".nice-select").find(".current").text().trim();
+$(".chooseHourWrapper .formSelectWrapper .checkin-hour").on(
+  "change",
+  function () {
+    var selectedText = $(this)
+      .next(".nice-select")
+      .find(".current")
+      .text()
+      .trim();
 
     // "Seçiniz" kontrolü
     if (selectedText === "Seçiniz") {
@@ -261,14 +274,23 @@ $(".chooseHourWrapper .formSelectWrapper .checkin-hour").on("change",function ()
     console.log("Bir option seçildi:", selectedText);
 
     // .checkinHourGet üzerine bir işlem yaparak seçimi değiştirme (gerekirse)
-    $(".checkinHourGet").next(".nice-select").find(".current").text(selectedText); // .checkin-hour'dan alınan metni .checkinHourGet'e aktar
+    $(".checkinHourGet")
+      .next(".nice-select")
+      .find(".current")
+      .text(selectedText); // .checkin-hour'dan alınan metni .checkinHourGet'e aktar
 
     // Aktif form elemanına 'test' sınıfı ekle
     $("#dateInputs2").data("dateRangePicker").close();
     $(this).closest(".formSelectWrapper").addClass("test");
 
     // Bir sonraki form elemanını tanımla
-    $(this).closest(".formSelectWrapper").next(".formSelectWrapper").removeClass("disabled").find(".checkout-hour").prop("disabled", false).niceSelect("update");
+    $(this)
+      .closest(".formSelectWrapper")
+      .next(".formSelectWrapper")
+      .removeClass("disabled")
+      .find(".checkout-hour")
+      .prop("disabled", false)
+      .niceSelect("update");
 
     // niceSelect açma işlemi
     setTimeout(function () {
@@ -278,9 +300,15 @@ $(".chooseHourWrapper .formSelectWrapper .checkin-hour").on("change",function ()
     }, 200); // 100ms gecikme ile
   }
 );
-$(".chooseHourWrapper .formSelectWrapper .checkout-hour").on("change",function () {
+$(".chooseHourWrapper .formSelectWrapper .checkout-hour").on(
+  "change",
+  function () {
     console.log("out secım yapıldı");
-    var selectedText = $(this).next(".nice-select").find(".current").text().trim();
+    var selectedText = $(this)
+      .next(".nice-select")
+      .find(".current")
+      .text()
+      .trim();
 
     // "Seçiniz" kontrolü
     if (selectedText === "Seçiniz") {
@@ -340,43 +368,40 @@ $(".changeDateButton2").on("click", function () {
     $("#dateInputs3").data("dateRangePicker").open();
   }, 100); // 100 ms gecikme
 
+  //    // Kullanıcı bir tarih seçmiş mi kontrol et
+  //    var selectedDate = $(".checkinInput2").val(); // .checkinInput2'deki tarih değerini al
 
-//    // Kullanıcı bir tarih seçmiş mi kontrol et
-//    var selectedDate = $(".checkinInput2").val(); // .checkinInput2'deki tarih değerini al
-  
-//    if (selectedDate && selectedDate !== "Tarih Seçiniz") {
-//      // Eğer tarih seçildiyse, işlemi yap
-//      console.log("Tarih zaten seçildi: " + selectedDate);
- 
-//      // İlk .formSelectWrapper'dan disabled sınıfını kaldır ve select'i etkinleştir
-//      $(".chooseHourWrapper.offerHours .formSelectWrapper").first().removeClass("disabled").find(".checkinHourGet").prop("disabled", false).niceSelect("update");
- 
-//      $("..chooseHourWrapper.offerHours .formSelectWrapper").first().find(".checkin-hour").trigger("click");
- 
-//      // İlgili işlemleri burada yapabilirsin, örneğin formu veya saat seçimini etkinleştirebilirsin
-//    }
- 
-//    // Datepicker'ı yok et
-//    $("#dateInputs2").data("dateRangePicker").destroy();
-//    if ($("#dateInputs3").data("dateRangePicker")) {
-//      $("#dateInputs3").data("dateRangePicker").destroy();
-//    }
- 
-//    // Yeni container için başlat
-//    const newContainer = ".offerCanvas";
-//    initializeDatepicker(newContainer);
- 
-//    console.log(
-//      `Datepicker container değiştirildi ve singleDate etkinleştirildi: ${newContainer}`
-//    );
- 
-//    // Datepicker'ı bir süre sonra aç
-//    setTimeout(() => {
-//      $("#dateInputs3").data("dateRangePicker").open();
-//    }, 100); // 100 ms gecikme
+  //    if (selectedDate && selectedDate !== "Tarih Seçiniz") {
+  //      // Eğer tarih seçildiyse, işlemi yap
+  //      console.log("Tarih zaten seçildi: " + selectedDate);
+
+  //      // İlk .formSelectWrapper'dan disabled sınıfını kaldır ve select'i etkinleştir
+  //      $(".chooseHourWrapper.offerHours .formSelectWrapper").first().removeClass("disabled").find(".checkinHourGet").prop("disabled", false).niceSelect("update");
+
+  //      $("..chooseHourWrapper.offerHours .formSelectWrapper").first().find(".checkin-hour").trigger("click");
+
+  //      // İlgili işlemleri burada yapabilirsin, örneğin formu veya saat seçimini etkinleştirebilirsin
+  //    }
+
+  //    // Datepicker'ı yok et
+  //    $("#dateInputs2").data("dateRangePicker").destroy();
+  //    if ($("#dateInputs3").data("dateRangePicker")) {
+  //      $("#dateInputs3").data("dateRangePicker").destroy();
+  //    }
+
+  //    // Yeni container için başlat
+  //    const newContainer = ".offerCanvas";
+  //    initializeDatepicker(newContainer);
+
+  //    console.log(
+  //      `Datepicker container değiştirildi ve singleDate etkinleştirildi: ${newContainer}`
+  //    );
+
+  //    // Datepicker'ı bir süre sonra aç
+  //    setTimeout(() => {
+  //      $("#dateInputs3").data("dateRangePicker").open();
+  //    }, 100); // 100 ms gecikme
 });
-
-
 
 //Teklif iste butonu tıklandıgında yukarı kaydırdıgı ıcın bu kod eklendı ıslem yaparken kaldırılabılır
 // $(".teklifisteButton").on("click", function (e) {
@@ -418,8 +443,8 @@ $("#offerNavTabs .nav-link").on("click", function () {
     $(".checkinInput2").val("Tarih Seçiniz");
     console.log("check value : " + $(".checkinInput2").val());
   }
-//   if ($(".checkinInput2").val() === "Tarih Seçiniz"){
-//     $(".chooseHourWrapper.offerHours .formSelectWrapper").addClass("disabled")
-//     $(".chooseHourWrapper.offerHours .formSelectWrapper .customSelect").addClass("disabled")
-//   }
+  //   if ($(".checkinInput2").val() === "Tarih Seçiniz"){
+  //     $(".chooseHourWrapper.offerHours .formSelectWrapper").addClass("disabled")
+  //     $(".chooseHourWrapper.offerHours .formSelectWrapper .customSelect").addClass("disabled")
+  //   }
 });

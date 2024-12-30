@@ -334,6 +334,11 @@ a:hover {
       display: none;
     }
   }
+  &.notBefore {
+    &:before {
+      display: none;
+    }
+  }
 
   &.button-outline {
     color: var(--black);
@@ -617,6 +622,14 @@ a:hover {
         }
       }
     }
+
+    &.eventsFilterSelect{
+      &.open{
+        .list{
+          max-height: initial;
+        }
+      }
+    }
   }
 }
 .currencly {
@@ -656,4 +669,43 @@ a:hover {
   left: 0;
   display: none;
   z-index: 999;
+}
+
+
+mark{
+  &.status{
+    padding: 6px 10px!important;
+    font-size: 15px!important;
+    border-radius: 6px;
+    font-style: italic;
+    &:before{
+      width: 10px!important;
+      height: 10px!important;
+    }
+    &.waiting{
+      background-color: rgba(254, 150, 21, 0.1);
+      color: var(--yellow);
+
+      &:before{
+        background-color: var(--yellow);
+      }
+    }
+    &.paymentWait{
+      color: var(--primary);
+      background-color: rgba(217, 4, 62,0.1);
+      &:before{
+        background-color: var(--primary);
+      }
+    }
+    &.completed{
+      color: var(--success);
+      background-color: rgba(20, 108, 67,0.1);
+      &:before{
+        background-color: var(--success);
+      }
+    }
+    &.cancelled{
+      filter: grayscale(1);
+    }
+  }
 }

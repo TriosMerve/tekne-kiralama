@@ -1114,6 +1114,13 @@ section,
         }
       }
     }
+
+    figure{
+      aspect-ratio: 3/2;
+      max-width: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
   }
   .properties {
     .point {
