@@ -1470,9 +1470,27 @@ video {
 .fixBtn.button-outline:after {
   background-color: var(--primary);
 }
+.fixBtn.button-outline input {
+  width: 100%;
+  height: 100% !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--black);
+  border: 1px solid var(--gray-5);
+  background-color: rgba(0, 0, 0, 0);
+}
 @media screen and (min-width: 992px) {
   .fixBtn.button-outline:hover {
     color: var(--white);
+  }
+  .fixBtn.button-outline:hover input {
+    color: var(--white);
+  }
+  .fixBtn.button-outline:not(.disabled):hover {
+    color: var(--white);
+  }
+  .fixBtn.button-outline:not(.disabled):hover input {
+    color: var(--white) !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1769,38 +1787,40 @@ video {
 }
 
 mark.status {
-  padding: 6px 10px !important;
-  font-size: 15px !important;
+  padding: 8px 15px !important;
+  font-size: 16px !important;
   border-radius: 6px;
   font-style: italic;
+  color: var(--white);
 }
 mark.status:before {
   width: 10px !important;
   height: 10px !important;
 }
 mark.status.waiting {
-  background-color: rgba(254, 150, 21, 0.1);
-  color: var(--yellow);
+  background-color: var(--yellow);
+  color: var(--white) !important;
 }
 mark.status.waiting:before {
-  background-color: var(--yellow);
+  background-color: var(--white) !important;
 }
 mark.status.paymentWait {
-  color: var(--primary);
-  background-color: rgba(217, 4, 62, 0.1);
+  background-color: var(--primary);
+  color: var(--white) !important;
 }
 mark.status.paymentWait:before {
-  background-color: var(--primary);
+  background-color: var(--white) !important;
 }
 mark.status.completed {
-  color: var(--success);
-  background-color: rgba(20, 108, 67, 0.1);
+  background-color: var(--success);
+  color: var(--white) !important;
 }
 mark.status.completed:before {
-  background-color: var(--success);
+  background-color: var(--white) !important;
 }
 mark.status.cancelled {
   filter: grayscale(1);
+  color: var(--black);
 }
 
 .preloader {
@@ -11602,6 +11622,9 @@ section .customBlockquote blockquote .fixBtn,
   .userPageContainer .userHead .userTitle {
     font-size: 22px;
   }
+}
+.userPageContainer .userContent {
+  padding-bottom: 80px;
 }
 .userPageContainer .userMenuCardList {
   display: flex;

@@ -51,13 +51,11 @@
     <title>Tekne Kiralama</title>
 
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    
-    <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
+    <link rel="stylesheet" href="public/assets/plugins/sweetalert/sweetalert2.css" />
 
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
@@ -133,8 +131,8 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                       </div> -->
-                       <div class="dropdown d-none">
+                        </div> -->
+                        <div class="dropdown">
                             <button class="dropdown-toggle userButton type2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="otherUserMenuIcon">ES</div>
                             </button>
@@ -148,12 +146,13 @@
                                 <hr>
                                 <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
-                        </div>                        
+                        </div>   
+
                         <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="tekne-sahibi-hesabim-uyegirisi.html" class="fixBtn button-outline">Üye Girişi</a>
-                            <a href="tekne-sahibi-hesabim-uyeol.html" class="fixBtn button-primary">Üye Ol</a>
-                        </div> -->
-                        <!-- <a href="#" class="menuNavButton openMenuButton ms-4">
+                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                        </div>
+                        <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
                         </a> -->
                     </div>
@@ -482,70 +481,112 @@
             <section class="pageSection">
                 <div class="container-3xl">
                     <div class="userPageContainer">
-                        <div class="userHead">
-                            <div class="userTitle">Üye Hesabı Oluştur</div>
-                            <div class="paragraph text-center d-none d-lg-block">
-                                Please fill in all your information completely.
+                        <div class="row mx-0">
+                            <div class="sidenavWrapper d-none d-lg-block">
+                                <div class="sideNav">
+                                    <a href="tekne-sahibi-hesabim-anasayfa.html"><div class="icon"><img src="public/assets/images/statics/icons/home.svg" alt=""></div><span>Anasayfa</span></a>
+                                    <a href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-talepler.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
+                                    <a href="tekne-sahibi-hesabim-rezervasyonlar.html"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
+                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
+                                        <hr>
+                                    <a href="#" class="mt-4"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="userContent">
-                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-7 mx-auto">
-                                <form class="form needs-validation" novalidate>
-                                    <div class="mb-3">
-                                        <input type="text" name="name" class="form-control textMask" placeholder="Adınız" required>
-                                        <div class="invalid-feedback">
-                                            Lütfen Adınızı Giriniz
-                                        </div>
+                            <div class="sideContentWrapper">
+                                <div class="col-xl-9 px-0">
+                                    <div class="sideHead type2">
+                                        <div class="pageTitle">Teknelerim</div>
+                                        <a href="javascript:history.back()" class="backLink ms-auto"><span class="icon-arrow-right"></span> <span>Geri Dön</span></a>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="text" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                                        <div class="invalid-feedback">
-                                            Lütfen Soyadınızı Giriniz
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="email"  name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                        <div class="invalid-feedback">
-                                            Lütfen E-Posta Adresinizi Giriniz
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="phoneWrapper">
-                                            <div class="codeWrapper position-relative">
-                                                <input type="tel" placeholder="" id="telephone">
+                                    <div class="sideContent">
+                                        <div class="eventsWrapper">
+                                            <div class="eventsFilterWrapper">
+                                                <div class="formSelectWrapper">
+                                                    <select name="" id="" class="customSelect eventsFilterSelect type2">
+                                                        <option value="" disabled selected>Durum Seçiniz</option>
+                                                        <option value="">Gelecek Turlar</option>
+                                                        <option value="">Tamamlanan Turlar</option>
+                                                        <option value="">İptal Eilen Turlar</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                                            <div class="invalid-feedback w-100">
-                                                Lütfen Telefon Numaranızı Giriniz
+                                            <div class="eventsList">
+                                                <div class="eventsItem">
+                                                    <div class="leftColumn">
+                                                        <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
+                                                    </div>
+                                                    <div class="rightColumn">
+                                                        <div class="eventContent">
+                                                            <div>
+                                                                <div class="eventCategory">Tekne Kiralama</div>
+                                                                <div class="eventName">Enver Sarıgül</div>
+                                                                <div class="eventInfo">
+                                                                    <div class="dateInfo">
+                                                                        <div class="date">12 Aralık - 15 Aralık 2024</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="eventsItem">
+                                                    <div class="leftColumn">
+                                                        <div class="date"><span class="day">15</span> <span class="month">Aralık</span></div>
+                                                    </div>
+                                                    <div class="rightColumn">
+                                                        <div class="eventContent">
+                                                            <div>
+                                                                <div class="eventCategory">Tekne Turu</div>
+                                                                <div class="eventName">Merve Kabakcı</div>
+                                                                <div class="eventInfo">
+                                                                    <div class="dateInfo flex-column align-items-start">
+                                                                        <div class="date mb-4">15 Aralık 2024 Cumartesi</div>
+                                                                        <div class="d-flex align-items-center gap-4">
+
+                                                                            <div class="date"><span class="text-gray-7">Check-In :</span> 11:00</div>
+                                                                            <div class="date"><span class="text-gray-7">Check-Out :</span> 11:00</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="eventsItem">
+                                                    <div class="leftColumn">
+                                                        <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
+                                                    </div>
+                                                    <div class="rightColumn">
+                                                        <div class="eventContent">
+                                                            <div>
+                                                                <div class="eventCategory">Tekne Kiralama</div>
+                                                                <div class="eventName">Enver Sarıgül</div>
+                                                                <div class="eventInfo">
+                                                                    <div class="dateInfo">
+                                                                        <div class="date">12 Aralık - 15 Aralık 2024</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center pt-5">
+                                                <a href="#" class="fixBtn button-primary">Daha Fazla Etkinlik</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                                        <div class="invalid-feedback">
-                                            Lütfen Parolanızı Giriniz
-                                        </div>
-                                    </div>
-                                    <div class="mb-5 ps-3">
-                                        <label class="container-check">
-                                            <input type="checkbox" name="address">
-                                            <span class="checkmark"></span>
-                                            <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
-                                        </label>
-                                    </div>
-                                    <div class="mb-3">
-                                        <span class="fixBtn button-primary w-100">
-                                            <input type="submit" value="Hesap Oluştur">
-                                        </span>
-                                    </div>
-                                </form>
-                                
-                                <hr>
-                                <div class="signText paragraph text-center pt-4">
-                                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
                                 </div>
                             </div>
                         </div>
+                
                     </div>
                 </div>
             </section>
@@ -554,26 +595,324 @@
 
         </main>
 
+        <!---Tüm sayfalarda standart footer-->
+        <footer>
+            <div class="container-3xl">
+                <div class="bg-gray footer">
+                    <div class="footerContent">
+                        <div class="leftColumn">
+                            <div class="d-flex flex-column">
+                                <a href="index.html"><img src="public/assets/images/statics/logo.png" alt=""></a>
+                                <span class="logoText">TekneKiralama.com Türkiye’nin en popüler 
+                                    tatil bölgelerinde lüks teklneleri</span>
+                            </div>
+                            <div class="socialWrapper">
+                                <div class="socialMedia">
+                                    <a href="#" target="_blank" class="instagram"><span class="icon-instagram-2"></span></a>
+                                    <a href="#" target="_blank" class="facebook"><span class="icon-facebook"></span></a>
+                                    <a href="#" target="_blank" class="twitter"><span class="icon-twitter"></span></a>
+                                    <a href="#" target="_blank" class="spotify"><span class="icon-spotify"></span></a>
+                                    <a href="#" target="_blank" class="linkedin"><span class="icon-linkedin-2"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="footerMenu">
+                                <div class="menuListColumn">
+                                    <div class="title">TekneKiralama.com</div>
+                                    <ul>
+                                        <li><a href="#">Neden TekneKiralama.com</a></li>
+                                        <li><a href="#">Hakkımızda</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Sürdürülebilirlik</a></li>
+                                        <li><a href="#">İletişim</a></li>
+                                        <li><a href="#">SSS</a></li>
+                                        <li><a href="#">Kariyer</a></li>
+                                        <li><a href="#">Basın Kiti</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Lokasyonlar</div>
+                                    <ul>
+                                        <li><a href="#">İstanbul Tekne Kiralama</a></li>
+                                        <li><a href="#">Fethiye Tekne Kiralama</a></li>
+                                        <li><a href="#">Marmaris Tekne Kiralama</a></li>
+                                        <li><a href="#">Göcek Tekne Kiralama</a></li>
+                                        <li><a href="#">Bodrum Tekne Kiralama</a></li>
+                                        <li><a href="#">İzmir Tekne Kiralama</a></li>
+                                        <li><a href="#">Balıkesir Tekne Kiralama</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Tekne Sahipleri</div>
+                                    <ul>
+                                        <li><a href="#">Tekneni Kirala</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Yasal Bilgiler</div>
+                                    <ul>
+                                        <li><a href="#">Kullanım Koşulları</a></li>
+                                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="#">İptal ve İade Koşulları</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footerBottom d-flex align-items-center">
+                        <div class="copyRightWrapper">
+                            <div class="copyRight">
+                                © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
+                            </div>
+                        </div>
+                        <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
+                    </div>
+                </div>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                        Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                        <div class="invalid-feedback">
+                            Lütfen Parolanızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-5 text-end">
+                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
+                    </div>
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Giriş Yap">
+                        </span>
+                    </div>
+                </form>
+                <hr class="my-5">
+                <div class="otherLogin">
+                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                </div>
+                
+            </div>
+          </div>
+        </div>
     </div>
 
-    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
+
+    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
+                    <div class="stepHead">
+                        <span class="">1</span>
+                        <span>2</span>
+                    </div>
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
+                    </div>
+                </div>
+                <div class="signupFormSteps">
+                    <div class="stepOne">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                <div class="invalid-feedback">
+                                Lütfen E-Posta Adresinizi Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Devam Et">
+                                </span>
+                            </div>
+                        </form>
+                        <hr class="my-5">
+                        <div class="otherLogin">
+                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                        </div>
+                    </div>
+                    <div class="stepTwo d-none">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Adınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Soyadınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Parolanızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-5 ps-3">
+                                <label class="container-check">
+                                    <input type="checkbox" name="address">
+                                    <span class="checkmark"></span>
+                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Hesap Oluştur">
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
+                    </div>
+                </div>
+                <blockquote class="blockquote">
+                    <span class="icon-info"></span> 
+                    <p>
+                        Your account is not verified. <a href="#">Resend confirmation</a>
+                    </p>
+                </blockquote>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Adınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Soyadınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="phoneWrapper">
+                            <div class="codeWrapper position-relative">
+                                <input type="tel" placeholder="" id="telephone">
+                            </div>
+                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                            <div class="invalid-feedback w-100">
+                                Lütfen Telefon Numaranızı Giriniz
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Kaydet">
+                        </span>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <script src="public/assets/plugins/jquery.min.js"></script>
-    <script src="public/assets/plugins/jquery.easing.min.js"></script>
-    <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
-    <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
 
 
+    <script src="public/assets/plugins/sweetalert/sweetalert2.js"></script>
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
+    <script src="public/assets/plugins/fullcalendar/index.global.js"></script><!--müsaitlik takvimi ıcın kullanılıyor-->
+
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
+    <script>
 
+         // Sayfa yüklendiğinde checked durumlarını kontrol et
+        $(".demansItem .custom-switch-input").each(function () {
+            const $demansItem = $(this).closest(".demansItem");
+            if (!$(this).is(":checked")) {
+                // Checkbox işaretli değilse `inactive` sınıfını ekle
+                $demansItem.addClass("inactive");
+            } else {
+                // Checkbox işaretliyse `inactive` sınıfını kaldır
+                $demansItem.removeClass("inactive");
+            }
+        });
+
+        // Checkbox durum değişikliğinde güncelleme yap
+        $(".demansItem .custom-switch-input").on("change", function () {
+            const $demansItem = $(this).closest(".demansItem");
+            if (!$(this).is(":checked")) {
+                $demansItem.addClass("inactive");
+            } else {
+                $demansItem.removeClass("inactive");
+            }
+        });
+
+        $(document).on("click", ".tekneSilButon", function (e) {
+            e.preventDefault(); // Sayfa yenilenmesini önler
+            const $demansItem = $(this).closest(".demansItem");
+            
+            if (confirm("Bu öğeyi silmek istediğinizden emin misiniz?")) {
+                $demansItem.remove(); // Kapsayıcı öğeyi DOM'dan sil
+            }
+        });
+
+    </script>
 </body>
 
 </html>

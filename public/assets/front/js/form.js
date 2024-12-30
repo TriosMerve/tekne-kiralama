@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
   // Email doğrulama işlemi
-  $(".emailMask").each(function () {
-    $(this).attr("pattern", "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
-  });
+  // $(".emailMask").each(function () {
+  //   $(this).attr("pattern", /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/);
+  // });
 
   $(".emailMask").on("input", function () {
     const inputValue = $(this).val().trim();
-    const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-      inputValue
-    );
+    // const isValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(inputValue);
+    const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/.test(inputValue);
+
 
     if (inputValue && !isValid) {
       $(this).addClass("is-invalid").removeClass("is-valid");
@@ -172,8 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
         inputs.forEach((input) => {
           if (input.classList.contains("emailMask")) {
             const value = input.value.trim();
-            const isValid =
-              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+            const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/.test(value);
 
             if (value && !isValid) {
               input.classList.add("is-invalid");
