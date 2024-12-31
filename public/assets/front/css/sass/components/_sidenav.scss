@@ -267,6 +267,9 @@
     height: auto;
     line-height: 16px;
     margin-top: 14px;
+    @media screen and (max-width:991.98px) {
+      margin-top: 7px;
+    }
     @media screen and (min-width: 992px) {
       &:hover {
         color: var(--primary);
@@ -280,7 +283,6 @@
     @media screen and (max-width: 991.98px) {
       margin-top: 20px;
     }
-
     &.type2{
       margin-bottom: 0;
     }
@@ -328,12 +330,16 @@
     color: var(--primary);
     display: flex;
     align-items: center;
-    gap: 40px;
+    // gap: 40px;
+    gap: 10px;
     @media screen and (max-width: 991.98px) {
       font-size: 20px;
       line-height: 27px;
     }
-
+    small{
+      color: var(--gray-7);
+      font-size: 18px;
+    }
 
   }
   .subTitle {
@@ -863,6 +869,33 @@
       .button-primary {
         background-color: #ff6815 !important;
         border-color: #ff6815 !important;
+      }
+    }
+    &.paymentWait {
+      border-color: var(--primary);
+      .leftColumn {
+        border-right-color: var(--primary);
+      }
+      .dateInfo {
+        .date,
+        .loc {
+          color: var(--primary);
+          &:before {
+            background-color: var(--primary);
+          }
+        }
+      }
+      .date {
+        .day {
+          background-color: var(--primary);
+        }
+      }
+      .category {
+        background-color: var(--primary);
+      }
+      .button-primary {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
       }
     }
     &.completed {

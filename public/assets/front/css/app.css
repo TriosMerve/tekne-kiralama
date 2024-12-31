@@ -10703,6 +10703,7 @@ section .customBlockquote blockquote .fixBtn,
 }
 .modal .modal-content .modal-body {
   padding: 20px;
+  min-height: 580px;
 }
 .modal .modal-content .modal-body::-webkit-scrollbar {
   background-color: rgba(217, 4, 62, 0.4);
@@ -12008,6 +12009,11 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 16px;
   margin-top: 14px;
 }
+@media screen and (max-width: 991.98px) {
+  .sideContentWrapper .backLink {
+    margin-top: 7px;
+  }
+}
 @media screen and (min-width: 992px) {
   .sideContentWrapper .backLink:hover {
     color: var(--primary);
@@ -12067,13 +12073,17 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--primary);
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
 }
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper .pageTitle {
     font-size: 20px;
     line-height: 27px;
   }
+}
+.sideContentWrapper .pageTitle small {
+  color: var(--gray-7);
+  font-size: 18px;
 }
 .sideContentWrapper .subTitle {
   font-family: "GilroySemibold";
@@ -12591,6 +12601,30 @@ section .customBlockquote blockquote .fixBtn,
   background-color: #ff6815 !important;
   border-color: #ff6815 !important;
 }
+.demandsList .demansItem.paymentWait {
+  border-color: var(--primary);
+}
+.demandsList .demansItem.paymentWait .leftColumn {
+  border-right-color: var(--primary);
+}
+.demandsList .demansItem.paymentWait .dateInfo .date,
+.demandsList .demansItem.paymentWait .dateInfo .loc {
+  color: var(--primary);
+}
+.demandsList .demansItem.paymentWait .dateInfo .date:before,
+.demandsList .demansItem.paymentWait .dateInfo .loc:before {
+  background-color: var(--primary);
+}
+.demandsList .demansItem.paymentWait .date .day {
+  background-color: var(--primary);
+}
+.demandsList .demansItem.paymentWait .category {
+  background-color: var(--primary);
+}
+.demandsList .demansItem.paymentWait .button-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
 .demandsList .demansItem.completed {
   border-color: var(--success);
 }
@@ -12644,9 +12678,15 @@ section .customBlockquote blockquote .fixBtn,
   padding: 30px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 640px) {
   .demandDetailsContent .card {
     flex-direction: column;
+    padding: 16px;
   }
 }
 .demandDetailsContent .card .cardLeft {
@@ -12670,7 +12710,7 @@ section .customBlockquote blockquote .fixBtn,
   align-items: flex-start;
 }
 .demandDetailsContent .card .cardRight .fixBtn {
-  min-width: 120px;
+  min-width: 45px;
 }
 .demandDetailsContent .card .category {
   display: inline-flex;
@@ -12682,6 +12722,11 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--white);
   text-transform: uppercase;
 }
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card .category {
+    font-size: 12px;
+  }
+}
 .demandDetailsContent .card .name {
   font-size: 26px;
   line-height: 37px;
@@ -12690,6 +12735,12 @@ section .customBlockquote blockquote .fixBtn,
   display: flex;
   gap: 7px;
   align-items: flex-start;
+}
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card .name {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 .demandDetailsContent .card .name .id {
   font-family: "GilroyRegular";
@@ -12749,6 +12800,12 @@ section .customBlockquote blockquote .fixBtn,
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card .tags {
+    gap: 5px;
+    margin-top: 0;
+  }
 }
 .demandDetailsContent .card .tags span {
   font-size: 13px;
@@ -12810,6 +12867,12 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--gray-7);
   padding-left: 17px;
 }
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card .infoList .title {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 .demandDetailsContent .card .infoList hr {
   margin: 0 0;
 }
@@ -12818,6 +12881,12 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 25px;
   color: var(--primary);
   font-family: "GilroySemibold";
+}
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card .infoList .text {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 .demandDetailsContent .card .infoList .text a {
   position: relative;
@@ -12859,6 +12928,13 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 27px;
   margin-top: 15px;
 }
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card .type {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
 .demandDetailsContent .card .card-title {
   padding-left: 0;
 }
@@ -12872,6 +12948,12 @@ section .customBlockquote blockquote .fixBtn,
   align-items: center;
   margin-bottom: 0;
 }
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .card-title {
+    font-size: 15.5px;
+    padding-left: 16px;
+  }
+}
 .demandDetailsContent .messageList .messageItem {
   font-family: "GilroyMedium";
   font-size: 16px;
@@ -12881,6 +12963,13 @@ section .customBlockquote blockquote .fixBtn,
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .messageList .messageItem {
+    font-size: 14px;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
 }
 .demandDetailsContent .messageList .messageItem .icon {
   display: flex;
@@ -12896,6 +12985,11 @@ section .customBlockquote blockquote .fixBtn,
   background-color: var(--gray);
   border-radius: 24px;
   padding: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .demandDetailsContent .messageList .messageItem .text {
+    padding: 16px;
+  }
 }
 .demandDetailsContent .messageList .messageItem:nth-child(2n+1) .text {
   background-color: rgba(0, 0, 0, 0);

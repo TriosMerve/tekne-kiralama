@@ -245,7 +245,7 @@ function checkValidity(inputElement, mask) {
   }
 }
 
-var input = document.querySelector("#telephone");
+var input = document.querySelector(".telephone");
 var phoneInput = document.querySelector("#phone");
 
 var iti = window.intlTelInput(input, {

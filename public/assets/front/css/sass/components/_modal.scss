@@ -49,6 +49,7 @@
     }
     .modal-body {
       padding: 20px;
+      min-height: 580px;
       &::-webkit-scrollbar {
         background-color: rgba(217, 4, 62, 0.4);
         width: 4px;
