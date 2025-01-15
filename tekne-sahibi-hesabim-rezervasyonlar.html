@@ -74,7 +74,7 @@
         <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
-                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
                         <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -488,7 +488,7 @@
                                     <a href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
                                     <a href="tekne-sahibi-hesabim-talepler.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
-                                    <a class="active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a class="active" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
                                     <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
@@ -531,135 +531,69 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="d-flex flex-column justify-content-between align-items-end">
-                                                                <a href="tekne-sahibi-hesabim-talep-detay.html" class="fixBtn button-primary ms-auto">Detay</a>
-                                                                <mark class="status mb-2 pb-1 cancelled">İptal Edildi</mark>
+                                                            <div class="bodyRightColumn">
+                                                                <a href="tekne-sahibi-hesabim-rezervasyon-detay.html" class="fixBtn button-primary ms-auto">Detay</a>
+                                                                <mark class="status cancelled">İptal Edildi</mark>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="eventsItem">
-                                                    <div class="leftColumn">
-                                                        <div class="date"><span class="day">15</span> <span class="month">Aralık</span></div>
-                                                    </div>
-                                                    <div class="rightColumn">
-                                                        <div class="eventContent">
-                                                            <div>
-                                                                <div class="eventCategory">Tekne Turu</div>
-                                                                <div class="eventTitle">Beneteau, Cyclades 43</div>
-                                                                <div class="eventName">Merve Kabakcı</div>
-                                                                <div class="eventInfo">
-                                                                    <div class="dateInfo flex-column align-items-start">
-                                                                        <div class="date mb-4">15 Aralık 2024 Cumartesi</div>
-                                                                        <div class="d-flex align-items-center gap-4">
-
-                                                                            <div class="date"><span class="text-gray-7">Check-In :</span> 11:00</div>
-                                                                            <div class="date"><span class="text-gray-7">Check-Out :</span> 11:00</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-flex flex-column justify-content-between align-items-end">
-                                                                <a href="tekne-sahibi-hesabim-talep-detay.html" class="fixBtn button-primary ms-auto">Detay</a>
-                                                                <mark class="status mb-2 pb-1 completed">Tamamlandı</mark>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="eventsItem">
-                                                    <div class="leftColumn">
-                                                        <div class="date"><span class="day">15</span> <span class="month">Aralık</span></div>
-                                                    </div>
-                                                    <div class="rightColumn">
-                                                        <div class="eventContent">
-                                                            <div>
-                                                                <div class="eventCategory">Tekne Turu</div>
-                                                                <div class="eventTitle">Beneteau, Cyclades 43</div>
-                                                                <div class="eventName">Merve Kabakcı</div>
-                                                                <div class="eventInfo">
-                                                                    <div class="dateInfo flex-column align-items-start">
-                                                                        <div class="date mb-4">15 Aralık 2024 Cumartesi</div>
-                                                                        <div class="d-flex align-items-center gap-4">
-
-                                                                            <div class="date"><span class="text-gray-7">Check-In :</span> 11:00</div>
-                                                                            <div class="date"><span class="text-gray-7">Check-Out :</span> 11:00</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-flex flex-column justify-content-between align-items-end">
-                                                                <a href="tekne-sahibi-hesabim-talep-detay.html" class="fixBtn button-primary ms-auto">Detay</a>
-                                                                <mark class="status mb-2 pb-1 waiting">Yapılacak</mark>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- <div class="eventsItem waiting">
-                                                    <div class="leftColumn">
-                                                        <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
-                                                    </div>
-                                                    <div class="rightColumn">
-                                                        <div class="eventContent">
-                                                            <div>
-                                                                <div class="eventCategory">Tekne Kiralama</div>
-                                                                <div class="eventName">Enver Sarıgül</div>
-                                                                <div class="eventInfo">
-                                                                    <div class="dateInfo">
-                                                                        <div class="date">12 Aralık - 15 Aralık 2024</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="message">
-                                                                    Yanıt Bekleniyor
-                                                                </div>
-                                                            </div>
-                                                            <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="eventsItem completed">
                                                     <div class="leftColumn">
-                                                        <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
+                                                        <div class="date"><span class="day">15</span> <span class="month">Aralık</span></div>
                                                     </div>
                                                     <div class="rightColumn">
                                                         <div class="eventContent">
                                                             <div>
-                                                                <div class="eventCategory">Tekne Kiralama</div>
-                                                                <div class="eventName">Enver Sarıgül</div>
+                                                                <div class="eventCategory">Tekne Turu</div>
+                                                                <div class="eventTitle">Beneteau, Cyclades 43</div>
+                                                                <div class="eventName">Merve Kabakcı</div>
                                                                 <div class="eventInfo">
-                                                                    <div class="dateInfo">
-                                                                        <div class="date">12 Aralık - 15 Aralık 2024</div>
+                                                                    <div class="dateInfo flex-column align-items-start">
+                                                                        <div class="date mb-4">15 Aralık 2024 Cumartesi</div>
+                                                                        <div class="d-flex align-items-center gap-4">
+
+                                                                            <div class="date"><span class="text-gray-7">Check-In :</span> 11:00</div>
+                                                                            <div class="date"><span class="text-gray-7">Check-Out :</span> 11:00</div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="message">
-                                                                    Merhaba Enver bey tarihler müsait size nasıl yardımcı olabilirim sormak istediğiniz soru varsa buradan mesaj atabilirsiniz.
-                                                                </div>
                                                             </div>
-                                                            <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                            <div class="bodyRightColumn">
+                                                                <a href="tekne-sahibi-hesabim-rezervasyon-detay.html" class="fixBtn button-primary ms-auto">Detay</a>
+                                                                <mark class="status completed">Tamamlandı</mark>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="eventsItem cancelled">
+                                                <div class="eventsItem waiting">
                                                     <div class="leftColumn">
-                                                        <div class="date"><span class="day">12</span> <span class="month">Aralık</span></div>
+                                                        <div class="date"><span class="day">15</span> <span class="month">Aralık</span></div>
                                                     </div>
                                                     <div class="rightColumn">
                                                         <div class="eventContent">
                                                             <div>
-                                                                <div class="eventCategory">Tekne Kiralama</div>
-                                                                <div class="eventName">Enver Sarıgül</div>
+                                                                <div class="eventCategory">Tekne Turu</div>
+                                                                <div class="eventTitle">Beneteau, Cyclades 43</div>
+                                                                <div class="eventName">Merve Kabakcı</div>
                                                                 <div class="eventInfo">
-                                                                    <div class="dateInfo">
-                                                                        <div class="date">12 Aralık - 15 Aralık 2024</div>
+                                                                    <div class="dateInfo flex-column align-items-start">
+                                                                        <div class="date mb-4">15 Aralık 2024 Cumartesi</div>
+                                                                        <div class="d-flex align-items-center gap-4">
+
+                                                                            <div class="date"><span class="text-gray-7">Check-In :</span> 11:00</div>
+                                                                            <div class="date"><span class="text-gray-7">Check-Out :</span> 11:00</div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="message">
-                                                                    Bu talep iptal edildi
-                                                                </div>
                                                             </div>
-                                                            <a href="#" class="fixBtn button-primary ms-auto">Detay</a>
+                                                            <div class="bodyRightColumn">
+                                                                <a href="tekne-sahibi-hesabim-talep-detay.html" class="fixBtn button-primary ms-auto">Detay</a>
+                                                                <mark class="status waiting">Yapılacak</mark>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                             </div>
                                             <div class="text-center pt-5">
                                                 <a href="#" class="fixBtn button-primary">Daha Fazla Etkinlik</a>

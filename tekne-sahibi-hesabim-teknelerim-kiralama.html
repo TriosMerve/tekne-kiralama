@@ -74,7 +74,7 @@
         <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
-                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
                         <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -498,7 +498,7 @@
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
-                                <div class="col-xl-9 px-0">
+                                <div class="col-xxl-9 px-0">
                                     <div class="sideHead">
                                         <div class="pageTitle">Sunseeker, Manhattan 64</div>
                                     </div>
@@ -521,76 +521,78 @@
                                                       </div>
                                                 </div>
                                                 <div class="formSwitchBody disabled mb-5">
-                                                    <div class="row">
-                                                        <div class="mb-lg-4 mb-3 col-lg-6">
-                                                            <label for="iptalPolitikasi" class="customLabel">İptal Politikası</label>
-                                                            <select name="iptalPolitikasiSelect" id="iptalPolitikasi" class="customSelect iptalPolitikasi type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">3 Gün</option>
-                                                                <option value="">1 Hafta</option>
-                                                                <option value="">10 Gün</option>
-                                                                <option value="">1 Ay</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
+                                                    <div class="formBodyRow">
+                                                        <div class="row">
+                                                            <div class="mb-lg-4 mb-3 col-lg-6">
+                                                                <label for="iptalPolitikasi" class="customLabel">İptal Politikası</label>
+                                                                <select name="iptalPolitikasiSelect" id="iptalPolitikasi" class="customSelect iptalPolitikasi type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">3 Gün</option>
+                                                                    <option value="">1 Hafta</option>
+                                                                    <option value="">10 Gün</option>
+                                                                    <option value="">1 Ay</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-6">
+                                                                <label for="odemeSecenekleri" class="customLabel">Ödeme Seçenekleri</label>
+                                                                <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">Teknede Nakit</option>
+                                                                    <option value="">Teknede Kart</option>
+                                                                    <option value="">Nakit</option>
+                                                                    <option value="">Kart</option>
+                                                                    <option value="">Havale</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-6">
+                                                                <label for="tekneadi" class="customLabel">Minimum Kiralama Gün Sayısı</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Gün Sayısı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-3">
+                                                                <label for="teknetipiSelect" class="customLabel">Check In Saati</label>
+                                                                <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">10:00</option>
+                                                                    <option value="">12:00</option>
+                                                                    <option value="">13:00</option>
+                                                                    <option value="">14:00</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-3">
+                                                                <label for="teknetipiSelect" class="customLabel">Check Out Saati</label>
+                                                                <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">10:00</option>
+                                                                    <option value="">12:00</option>
+                                                                    <option value="">13:00</option>
+                                                                    <option value="">14:00</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
                                                             </div>
                                                         </div>
-                                                        <div class="mb-lg-4 mb-3 col-lg-6">
-                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Seçenekleri</label>
-                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">Teknede Nakit</option>
-                                                                <option value="">Teknede Kart</option>
-                                                                <option value="">Nakit</option>
-                                                                <option value="">Kart</option>
-                                                                <option value="">Havale</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
-                                                            </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
                                                         </div>
-                                                        <div class="mb-lg-4 col-lg-6">
-                                                            <label for="tekneadi" class="customLabel">Minimum Kiralama Gün Sayısı</label>
-                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Gün Sayısı" required>
-                                                            <div class="invalid-feedback">
-                                                                Minimum Kiralama Gün Sayısı
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                                        </div>
-                                                        <div class="mb-lg-4 mb-3 col-lg-3">
-                                                            <label for="teknetipiSelect" class="customLabel">Check In Saati</label>
-                                                            <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">10:00</option>
-                                                                <option value="">12:00</option>
-                                                                <option value="">13:00</option>
-                                                                <option value="">14:00</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
-                                                            </div>
-                                                        </div>
-                                                        <div class="mb-lg-4 col-lg-3">
-                                                            <label for="teknetipiSelect" class="customLabel">Check Out Saati</label>
-                                                            <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">10:00</option>
-                                                                <option value="">12:00</option>
-                                                                <option value="">13:00</option>
-                                                                <option value="">14:00</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3 d-flex align-items-center gap-5">
-                                                        <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -608,76 +610,78 @@
                                                 </div>
                                              
                                                 <div class="formSwitchBody disabled mb-5">
-                                                    <div class="row">
-                                                        <div class="mb-lg-4 mb-3 col-lg-6">
-                                                            <label for="iptalPolitikasi" class="customLabel">İptal Politikası</label>
-                                                            <select name="iptalPolitikasiSelect" id="iptalPolitikasi" class="customSelect iptalPolitikasi type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">3 Gün</option>
-                                                                <option value="">1 Hafta</option>
-                                                                <option value="">10 Gün</option>
-                                                                <option value="">1 Ay</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
+                                                    <div class="formBodyRow">
+                                                        <div class="row">
+                                                            <div class="mb-lg-4 mb-3 col-lg-6">
+                                                                <label for="iptalPolitikasi" class="customLabel">İptal Politikası</label>
+                                                                <select name="iptalPolitikasiSelect" id="iptalPolitikasi" class="customSelect iptalPolitikasi type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">3 Gün</option>
+                                                                    <option value="">1 Hafta</option>
+                                                                    <option value="">10 Gün</option>
+                                                                    <option value="">1 Ay</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-6">
+                                                                <label for="odemeSecenekleri" class="customLabel">Ödeme Seçenekleri</label>
+                                                                <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">Teknede Nakit</option>
+                                                                    <option value="">Teknede Kart</option>
+                                                                    <option value="">Nakit</option>
+                                                                    <option value="">Kart</option>
+                                                                    <option value="">Havale</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-6">
+                                                                <label for="tekneadi" class="customLabel">Minimum Kiralama Saati</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Saat" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Saati
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-3">
+                                                                <label for="teknetipiSelect" class="customLabel">Check In Saati</label>
+                                                                <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">10:00</option>
+                                                                    <option value="">12:00</option>
+                                                                    <option value="">13:00</option>
+                                                                    <option value="">14:00</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-3">
+                                                                <label for="teknetipiSelect" class="customLabel">Check Out Saati</label>
+                                                                <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">10:00</option>
+                                                                    <option value="">12:00</option>
+                                                                    <option value="">13:00</option>
+                                                                    <option value="">14:00</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
                                                             </div>
                                                         </div>
-                                                        <div class="mb-lg-4 mb-3 col-lg-6">
-                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Seçenekleri</label>
-                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">Teknede Nakit</option>
-                                                                <option value="">Teknede Kart</option>
-                                                                <option value="">Nakit</option>
-                                                                <option value="">Kart</option>
-                                                                <option value="">Havale</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
-                                                            </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5">
+                                                            <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
                                                         </div>
-                                                        <div class="mb-lg-4 col-lg-6">
-                                                            <label for="tekneadi" class="customLabel">Minimum Kiralama Saati</label>
-                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Saat" required>
-                                                            <div class="invalid-feedback">
-                                                                Minimum Kiralama Saati
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                                        </div>
-                                                        <div class="mb-lg-4 mb-3 col-lg-3">
-                                                            <label for="teknetipiSelect" class="customLabel">Check In Saati</label>
-                                                            <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">10:00</option>
-                                                                <option value="">12:00</option>
-                                                                <option value="">13:00</option>
-                                                                <option value="">14:00</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
-                                                            </div>
-                                                        </div>
-                                                        <div class="mb-lg-4 col-lg-3">
-                                                            <label for="teknetipiSelect" class="customLabel">Check Out Saati</label>
-                                                            <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
-                                                                <option value="" selected hidden>Saat Seç</option>
-                                                                <option value="">10:00</option>
-                                                                <option value="">12:00</option>
-                                                                <option value="">13:00</option>
-                                                                <option value="">14:00</option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Lütfen Tekne Tipinin Seçiniz
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3 d-flex align-items-center gap-5">
-                                                        <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
                                                     </div>
                                                 </div>
                                             </div>

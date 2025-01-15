@@ -10,6 +10,10 @@
   background-color: var(--gray-5);
   border-color: var(--gray-5);
   font-size: 14px;
+  @media screen and (max-width:1600px) {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
   &:focus {
     box-shadow: none;
     outline: 0;
@@ -34,6 +38,9 @@
   font-size: 24px;
   color: var(--primary);
   font-family: "GilroySemibold";
+  @media screen and (max-width:1600px) {
+    font-size: 18px;
+  }
 }
 .fc {
   .fc-col-header-cell-cushion {
@@ -41,13 +48,17 @@
     padding: 15px 5px;
     font-family: "GilroyMedium";
     max-width: 95px;
+    @media screen and (max-width:1600px) {
+      font-size: 12px;
+      padding: 10px 5px;
+    }
   }
   th {
     .fc-col-header-cell-cushion {
       font-family: "GilroyRegular";
       font-size: 14px;
-      @media screen and (max-width:1440px) {
-        font-size: 13px;
+      @media screen and (max-width:1600px) {
+        font-size: 12px;
       }
     }
   }

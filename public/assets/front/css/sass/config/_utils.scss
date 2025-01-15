@@ -11,6 +11,7 @@
   --text: #383838;
   --text-2: #5c5c5c;
   --text-3: #c6c6c6;
+  --light-gray: #fafafa;
   --gray: #f3f3f3;
   --gray-2: #f7f5f2;
   --gray-3: #e2e6e9;
@@ -29,6 +30,7 @@
 $primary: #d9043e;
 $secondary: #f2055c;
 $success: #146c43;
+$light-gray: #fafafa;
 $gray: #f3f3f3;
 $gray-3: #cccccc;
 $gray-6: #696969;
@@ -39,13 +41,14 @@ $white: #ffffff;
 $colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "light-gray": $light-gray,
   "gray": $gray,
   "gray-3": $gray-3,
   "gray-6": $gray-6,
   "gray-7": $gray-7,
   "dark": $black,
   "light": $white,
-  "success": $success // "tertiary": $tertiary,,,,,
+  "success": $success // "tertiary": $tertiary,,,,,,,
 );
 
 @mixin generate-button-classes($colors) {
@@ -301,8 +304,9 @@ a:hover {
   min-width: 95px;
   white-space: nowrap;
   gap: 10px;
+  cursor: pointer;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1600px) {
     height: 50px;
     font-size: 14px;
   }
@@ -361,7 +365,7 @@ a:hover {
       &:hover {
         color: var(--white);
 
-        input{
+        input {
           color: var(--white);
         }
       }
@@ -407,7 +411,6 @@ a:hover {
         }
       }
     }
-
 
     // &.disabled {
     //   border-color: var(--gray-2) !important;
@@ -646,31 +649,30 @@ a:hover {
         height: 8px;
       }
 
-      .current{
-        font-family: 'GilroySemibold';
+      .current {
+        font-family: "GilroySemibold";
         color: var(--gray-7);
         font-size: 16px;
       }
 
-      .option{
-        font-family: 'GilroyMedium';
+      .option {
+        font-family: "GilroyMedium";
         color: var(--gray-7);
         font-size: 16px;
 
-        &.focus{
+        &.focus {
           color: var(--primary);
         }
-        &.selected{
-          &.focus{
-
+        &.selected {
+          &.focus {
           }
         }
       }
     }
 
-    &.eventsFilterSelect{
-      &.open{
-        .list{
+    &.eventsFilterSelect {
+      &.open {
+        .list {
           max-height: initial;
         }
       }
@@ -698,10 +700,16 @@ a:hover {
   gap: 10px;
   color: var(--gray-6);
   opacity: 0.8;
+  @media screen and (max-width: 1600px) {
+    font-size: 13px;
+  }
 
   .icon-info {
     font-size: 20px;
     color: var(--gray-6);
+    @media screen and (max-width: 1600px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -716,41 +724,57 @@ a:hover {
   z-index: 999;
 }
 
-
-mark{
-  &.status{
-    padding: 8px 15px!important;
-    font-size: 16px!important;
+mark {
+  &.status {
+    padding: 8px 15px;
+    font-size: 16px;
     border-radius: 6px;
     font-style: italic;
-    color:var(--white);
-    &:before{
-      width: 10px!important;
-      height: 10px!important;
+    color: var(--white);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "GilroySemibold";
+    @media screen and (max-width: 1600px) {
+      font-size: 13px;
     }
-    &.waiting{
-      background-color:var(--yellow);
-      color:var(--white)!important;
-
-      &:before{
-        background-color: var(--white)!important;
-      }
-    }
-    &.paymentWait{
+    &:before {
+      content: "";
+      width: 10px;
+      min-width: 10px;
+      height: 10px;
+      border-radius: 100%;
       background-color: var(--primary);
-      color:var(--white)!important;
-    &:before{
-        background-color: var(--white)!important;
+      @media screen and (max-width: 1600px) {
+        width: 6px;
+        min-width: 6px;
+        height: 6px;
       }
     }
-    &.completed{
+    &.waiting {
+      background-color: var(--yellow);
+      color: var(--white) !important;
+
+      &:before {
+        background-color: var(--white) !important;
+      }
+    }
+    &.paymentWait {
+      background-color: var(--primary);
+      color: var(--white) !important;
+      &:before {
+        background-color: var(--white);
+      }
+    }
+    &.completed {
       background-color: var(--success);
-      color:var(--white)!important;
-      &:before{
-        background-color: var(--white)!important;
+      color: var(--white) !important;
+      &:before {
+        background-color: var(--white);
       }
     }
-    &.cancelled{
+    &.cancelled {
       filter: grayscale(1);
       color: var(--black);
     }

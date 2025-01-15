@@ -12,6 +12,9 @@ header {
   display: flex;
   align-items: center;
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+  @media screen and (max-width:1600px) {
+    height: 65px;
+  }
   @media screen and (max-width: 991.98px) {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -30,23 +33,34 @@ header {
       gap: 25px;
       margin-left: auto;
     }
-
-    .logo {
-      // padding-left: 14%;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      display: inline-flex;
-      width: 105px;
-      top: 2px;
-
-      @media screen and (max-width: 991.98px) {
-        position: relative;
-        top: 0;
-        width: 60px;
+    .logo{
+      width: 280px;
+      @media screen and (max-width:1600px) {
+        width: 180px;
+      }
+      @media screen and (max-width:1280px) {
+        width: 120px;
+      }
+      img{
+        max-width: 100%;
       }
     }
+    // .logo {
+    //   // padding-left: 14%;
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   margin: 0 auto;
+    //   display: inline-flex;
+    //   width: 105px;
+    //   top: 2px;
+
+    //   @media screen and (max-width: 991.98px) {
+    //     position: relative;
+    //     top: 0;
+    //     width: 60px;
+    //   }
+    // }
 
     & > a {
       @media screen and (max-width: 991.98px) {
@@ -82,11 +96,11 @@ header {
       }
     }
 
-    .logo {
-      img {
-        filter: invert(1) opacity(0.8);
-      }
-    }
+    // .logo {
+    //   img {
+    //     filter: invert(1) opacity(0.8);
+    //   }
+    // }
   }
 
   &.sticky-top,
@@ -337,19 +351,19 @@ header {
   }
 }
 
-.logo {
-  img {
-    transition: all 0.3s linear;
-  }
+// .logo {
+//   img {
+//     transition: all 0.3s linear;
+//   }
 
-  @media screen and (min-width: 992px) {
-    &:hover {
-      img {
-        transform: scale(1.05);
-      }
-    }
-  }
-}
+//   @media screen and (min-width: 992px) {
+//     &:hover {
+//       img {
+//         transform: scale(1.05);
+//       }
+//     }
+//   }
+// }
 
 .languageWrapper {
   .dropdown-toggle {
@@ -413,9 +427,10 @@ header {
   .title {
     font-size: 16px;
     font-family: "GilroySemibold";
-    color: var(--gray-6);
+    // color: var(--gray-6);
     line-height: 27px;
     margin-top: 30px;
+    color: var(--primary);
   }
   hr {
     border-top-color: var(--gray-3);

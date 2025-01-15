@@ -76,7 +76,7 @@
         <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
-                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
                         <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -489,7 +489,7 @@
                                     <a href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
                                     <a href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
                                     <a class="active" href="tekne-sahibi-hesabim-talepler.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
-                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-rezervasyonlar.html"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
                                     <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
@@ -516,7 +516,7 @@
                                                 </blockquote>
                                                 <div class="border border-gray rounded-5 card">
                                                    <div class="boatUser"><span>Müşteri Adı:</span> <b>Enver Sarıgül</b></div>
-                                                    <div class="boatContact"><span>İletişim :</span><a href="#">0530 31 7 63 71</a></div>
+                                                   <div class="boatContact ps-5"><span>İletişim :</span><a href="tel:+90-0530-317-63-71">0530 317 63 71</a></div>
                                                 </div>
                                                 <div class="border border-gray rounded-5 card">
                                                     <div class="cardLeft">
@@ -552,7 +552,7 @@
                                            <div class="col-xxl-7 ps-lg-0 mt-0">
                                                 <div class="border border-gray rounded-5 card">
                                                     <div class="cardBody">
-                                                        <div class="d-flex align-items-center py-3 px-lg-4 px-3 bg-gray rounded-5 mb-4">
+                                                        <div class="d-flex align-items-center py-xxl-3 py-2 px-lg-4 px-3 bg-gray rounded-5 mb-4">
                                                             <div class="card-title">TALEP BİLGİLERİ</div>
                                                             <div class="category ms-auto">Tekne kiralama</div>
                                                         </div>
@@ -578,7 +578,7 @@
 
                                                 <div class="border border-gray rounded-5 card">
                                                     <div class="cardBody">
-                                                        <div class="d-flex align-items-center py-3 px-4 bg-gray rounded-5 mb-4">
+                                                        <div class="d-flex align-items-center py-xxl-3 py-2 px-4 bg-gray rounded-5 mb-4">
                                                             <div class="card-title">TALEP BİLGİLERİ</div>
                                                             <div class="category ms-auto">Tekne Turları</div>
                                                         </div>
@@ -607,7 +607,7 @@
                                                                     <span class="icon-info text-success"></span> 
                                                                     <div>
                                                                         <p>Ekstalarınızı ödeme yapmadan önce değiştirebilirsiniz. Yapacağınız değişikliklerin fiyat farkları seçim yaptıktan sonra güncellenecektir.</p>
-                                                                         <a class="fixBtn button-outline-2 notAfter mt-3" href="#hizmetlerModal" data-bs-toggle="modal"> Ekstra detayları</a>
+                                                                        <a class="fixBtn button-primary mt-3 px-3 h-auto py-2" href="#hizmetlerModal" data-bs-toggle="modal"> Ekstraları Düzenle</a>
                                                                     </div>
                                                                 </blockquote>
                                                             </div>
@@ -653,20 +653,14 @@
 
                                                 
                                                 <div class="border border-gray rounded-5 card">
-                                                    <div class="cardBody">
+                                                    <div class="cardBody w-100">
                                                         <div class="d-flex align-items-center pb-3">
                                                             <div class="card-title">Mesajlar</div>
                                                         </div>
-                                                        <div class="row mx-0 messageList">
-                                                            <div class="messageItem ps-0">
-                                                                <div class="text w-100">
-                                                                    Henüz hiç mesaj gönderilmemiş
-                                                                </div>
-                                                            </div>
-                                                            <hr>
+                                                        <div class="row mx-0 messageList w-100">
                                                             <div class="message mt-4">
                                                                 <label for="">Mesaj Yaz / Cevap Ver</label>
-                                                                <textarea name="" class="form-control" id="" placeholder="message"></textarea>
+                                                                <textarea name="" class="form-control" id="" placeholder="Mesajınızı Yazın"></textarea>
                                                                 <a href="#" class="fixBtn button-primary"> Mesaj Gönder</a>
                                                             </div>
                                                         </div>
@@ -699,22 +693,6 @@
                                                             <div class="col-5 text bg-gray py-3 rounded-end-5">1500 $</div>
                                                             <div class="col-7 title">Kalan Tutar</div>
                                                             <div class="col-5 text">2500 $</div>
-                                                            <div class="col-12 py-3  mt-4">
-                                                                <label class="container-check">
-                                                                    <input type="checkbox" class="form-check-input" checked name="address">
-                                                                    <span class="checkmark"></span>
-                                                                    <span class="checkText mt-0"><a href="#" data-bs-toggle="modal">Ön bilgilendirme formu</a>'nu ve <a href="#" data-bs-toggle="modal">Mesafeli Satış Sözleşmesi</a>'ni onaylıyorum' </span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <a href="#" class="fixBtn button-primary w-100">Ödeme Yap</a>
-                                                                <div class="information pt-3">
-                                                                    <div class="notification p-0 mt-0 d-flex fs-6">
-                                                                        <span class="icon-info"></span>
-                                                                        <p class="mt-1"><b>Sadece depozito bedeli alınacaktır.</b></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -747,22 +725,6 @@
                                                             <div class="col-5 text bg-gray py-3 rounded-end-5">1500 $</div>
                                                             <div class="col-7 title">Kalan Tutar</div>
                                                             <div class="col-5 text">2500 $</div>
-                                                            <div class="col-12 py-3  mt-4">
-                                                                <label class="container-check">
-                                                                    <input type="checkbox" class="form-check-input" name="address">
-                                                                    <span class="checkmark"></span>
-                                                                    <span class="checkText mt-0"><a href="#" data-bs-toggle="modal">Ön bilgilendirme formu</a>'nu ve <a href="#" data-bs-toggle="modal">Mesafeli Satış Sözleşmesi</a>'ni onaylıyorum' </span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <a href="#" class="fixBtn button-primary w-100 disabled">Ödeme Yap</a>
-                                                                <div class="information pt-3">
-                                                                    <div class="notification p-0 mt-0 d-flex fs-6">
-                                                                        <span class="icon-info"></span>
-                                                                        <p class="mt-1"><b>Sadece depozito bedeli alınacaktır.</b></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -7,12 +7,19 @@
     flex-direction: column;
     gap: 40px;
     width: 100%;
+    @media screen and (max-width:480px) {
+      gap: 30px;
+    }
 
     .eventsItem {
       display: flex;
       align-items: stretch;
       border: 1px solid var(--gray-4);
       border-radius: 24px;
+      @media screen and (max-width:480px) {
+        flex-direction: column;
+        border-radius: 12px;
+      }
       .leftColumn {
         padding: 30px 20px;
         border-right: 1px solid var(--gray-4);
@@ -22,10 +29,17 @@
         gap: 20px;
         flex-wrap: wrap;
         align-items: center;
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 1600px) {
           padding: 20px 16px;
           width: 115px;
           min-width: 115px;
+        }
+        @media screen and (max-width:480px) {
+          width: 100%;
+          padding: 0;
+          overflow: hidden;
+          border: none;
+          border-bottom: 1px solid var(--gray-4);
         }
 
         .date {
@@ -38,6 +52,13 @@
           margin: 0 auto;
           box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
           border-radius: 8px;
+          @media screen and (max-width:480px) {
+            border-radius: 8px;
+            width: 100%;
+            box-shadow: none !important;
+          }
+  
+
           .day {
             background: var(--primary);
             color: var(--white);
@@ -48,6 +69,13 @@
             align-items: center;
             justify-content: center;
             border-radius: 8px 8px 0 0;
+            @media screen and (max-width: 1600px) {
+              font-size: 14px;
+              height: 25px;
+            }
+            @media screen and (max-width:480px) {
+              border-radius: 12px 12px 0 0;
+            }
           }
           .month {
             background-color: var(--white);
@@ -58,14 +86,22 @@
             font-family: "GilroyMedium";
             color: var(--text-2);
             height: 55px;
+            font-size: 16px;
+            @media screen and (max-width: 1600px) {
+              font-size: 13px;
+              height: 45px;
+            }
           }
         }
       }
       .rightColumn {
         padding: 30px 20px;
         flex: 1;
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width:1600px) {
           padding: 20px 16px;
+        }
+        @media screen and (max-width:480px) {
+          padding: 16px;
         }
       }
       .eventContent {
@@ -73,13 +109,39 @@
         // align-items: flex-start;
         align-items: stretch;
         justify-content: space-between;
+        @media screen and (max-width: 1600px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
         @media screen and (max-width: 991.98px) {
           flex-direction: column;
         }
         .fixBtn {
+          @media screen and (max-width: 1600px) {
+            height: 45px;
+            font-size: 14px;
+          }
           @media screen and (max-width: 991.98px) {
             margin-left: 0 !important;
             margin-top: 20px;
+          }
+        }
+        .bodyRightColumn {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          @media screen and (max-width: 1600px) {
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+          }
+
+          .fixBtn {
+            @media screen and (max-width: 1600px) {
+              margin-left: 0 !important;
+              height: 35px !important;
+            }
           }
         }
       }
@@ -93,6 +155,10 @@
         color: var(--white);
         margin-bottom: 10px;
         text-transform: uppercase;
+        @media screen and (max-width: 1600px) {
+          font-size: 12px;
+          padding: 3px 7px;
+        }
       }
       .message {
         font-family: "GilroyMedium";
@@ -105,7 +171,7 @@
           line-height: 22px;
         }
       }
-      .eventTitle{
+      .eventTitle {
         font-size: 22px;
         line-height: 34px;
         font-family: "GilroySemibold";
@@ -120,6 +186,10 @@
         line-height: 25px;
         font-family: "GilroySemibold";
         color: var(--gray-6);
+        @media screen and (max-width: 1600px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
         @media screen and (max-width: 991.98px) {
           font-size: 16px;
           line-height: 22px;
@@ -130,7 +200,7 @@
         align-items: center;
         gap: 20px;
         @media screen and (max-width: 991.98px) {
-          flex-direction: column;
+          // flex-direction: column;
           align-items: flex-start;
           gap: 5px;
         }
@@ -140,6 +210,10 @@
         line-height: 25px;
         color: var(--text);
         font-family: "GilroySemibold";
+        @media screen and (max-width: 1600px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
         .dateInfo {
           display: flex;
           align-items: center;
@@ -149,6 +223,9 @@
             font-size: 16px;
             color: var(--primary);
             font-family: "GilroySemibold";
+            @media screen and (max-width: 1600px) {
+              font-size: 12px;
+            }
           }
           .loc {
             font-size: 14px;
@@ -160,6 +237,9 @@
             justify-content: center;
             margin-left: 10px;
             gap: 10px;
+            @media screen and (max-width: 1600px) {
+              font-size: 12px;
+            }
           }
         }
         .other {
@@ -168,32 +248,34 @@
           line-height: 22px;
           font-family: "GilroyMedium";
           margin-top: 10px;
+          @media screen and (max-width: 1600px) {
+            font-size: 12px;
+          }
         }
         b {
           color: var(--gray-7);
           font-size: 16px;
           line-height: 25px;
           font-family: "GilroyMedium";
+          @media screen and (max-width: 1600px) {
+            font-size: 12px;
+          }
         }
       }
 
       &.waiting {
-        border-color: #ff6815;
-        .leftColumn {
-          border-right-color: #ff6815;
-        }
         .dateInfo {
           .date {
-            color: #ff6815;
+            color: var(--yellow);
           }
         }
         .date {
           .day {
-            background-color: #ff6815;
+            background-color: var(--yellow);
           }
         }
         .eventCategory {
-          background-color: #ff6815;
+          background-color: var(--yellow);
         }
 
         .message {
@@ -203,15 +285,16 @@
           color: var(--white);
         }
         .button-primary {
-            background-color: #ff6815 !important;
-            border-color: #ff6815 !important;
+          background-color: var(--yellow) !important;
+          border-color: var(--yellow) !important;
+          @media screen and (min-width: 992px) {
+            &:hover {
+              color: var(--yellow);
+            }
           }
+        }
       }
       &.completed {
-        border-color: var(--success);
-        .leftColumn {
-          border-right-color: var(--success);
-        }
         .dateInfo {
           .date {
             color: var(--success);
@@ -226,9 +309,14 @@
           background-color: var(--success);
         }
         .button-primary {
-            background-color:  var(--success) !important;
-            border-color:  var(--success) !important;
+          background-color: var(--success) !important;
+          border-color: var(--success) !important;
+          @media screen and (min-width: 992px) {
+            &:hover {
+              color: var(--success);
+            }
           }
+        }
       }
       &.cancelled {
         filter: grayscale(1);
@@ -295,12 +383,89 @@
       width: 100%;
     }
   }
-  .customSelect{
+  .customSelect {
     // border: none;
     height: 45px;
 
-    .current{
-        height: 45px;
+    .current {
+      height: 45px;
+    }
+  }
+}
+
+.SeasonPriceNew {
+  height: 0;
+  overflow: visible;
+  opacity: 0;
+  transition: all 0.3s linear;
+
+  &.active {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    padding-bottom: 40px;
+  }
+}
+.seasonPriceList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .seasonsItem {
+    padding: 20px;
+    box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 24px;
+    @media screen and (max-width: 1600px) {
+      padding: 10px;
+    }
+    @media screen and (max-width: 991.98px) {
+      margin: 0;
+    }
+    &:not(:first-child) {
+      // border-top: 1px solid var(--gray);
+      // border-bottom: 1px solid var(--gray);
+    }
+    & > div {
+      @media screen and (max-width: 991.98px) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        label {
+          width: 45%;
+          max-width: 45%;
+          margin-bottom: 0;
+        }
+        .text {
+          width: 55%;
+          max-width: 55%;
+          text-align: right;
+        }
+      }
+    }
+    .customLabel {
+      font-family: "GilroyMedium";
+      color: var(--gray-6);
+      @media screen and (max-width: 1600px) {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 991.98px) {
+        font-size: 12px;
+      }
+    }
+    .text {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      font-family: "GilroySemibold";
+      @media screen and (max-width: 1600px) {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 991.98px) {
+        font-size: 12px;
+      }
+    }
+    .price {
+      color: var(--primary);
     }
   }
 }
@@ -328,6 +493,9 @@
 }
 .flatpickr-innerContainer {
   padding-top: 15px;
+}
+.flatpickr-calendar {
+  padding: 0 20px;
 }
 .flatpickr-calendar.hasTime .flatpickr-time {
   height: 45px;

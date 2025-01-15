@@ -516,6 +516,7 @@ video {
   --text: #383838;
   --text-2: #5c5c5c;
   --text-3: #c6c6c6;
+  --light-gray: #fafafa;
   --gray: #f3f3f3;
   --gray-2: #f7f5f2;
   --gray-3: #e2e6e9;
@@ -538,6 +539,10 @@ video {
 
 .border-secondary {
   border-color: #f2055c !important;
+}
+
+.border-light-gray {
+  border-color: #fafafa !important;
 }
 
 .border-gray {
@@ -576,6 +581,10 @@ video {
   background-color: #f2055c !important;
 }
 
+.bg-light-gray {
+  background-color: #fafafa !important;
+}
+
 .bg-gray {
   background-color: #f3f3f3 !important;
 }
@@ -610,6 +619,10 @@ video {
 
 .text-secondary {
   color: #f2055c !important;
+}
+
+.text-light-gray {
+  color: #fafafa !important;
 }
 
 .text-gray {
@@ -731,6 +744,56 @@ video {
   color: var(--gray-5) !important;
 }
 .button-secondary.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  position: absolute;
+}
+
+.button-light-gray {
+  background-color: #fafafa !important;
+  border: 1px solid #fafafa !important;
+}
+.button-light-gray input {
+  width: 100%;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 0 !important;
+}
+@media screen and (max-width: 991.98px) {
+  .button-light-gray:hover {
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-light-gray:not(.disabled):hover {
+    color: #fafafa;
+  }
+  .button-light-gray:not(.disabled):hover input {
+    color: #fafafa !important;
+  }
+  .button-light-gray:hover input {
+    color: #fafafa !important;
+  }
+}
+.button-light-gray.disabled {
+  border-color: var(--gray-2) !important;
+  background-color: var(--gray-2) !important;
+  color: var(--gray-5) !important;
+  pointer-events: none;
+}
+.button-light-gray.disabled:after {
+  display: none;
+}
+.button-light-gray.disabled input {
+  color: var(--gray-5) !important;
+}
+.button-light-gray.disabled:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1427,8 +1490,9 @@ video {
   min-width: 95px;
   white-space: nowrap;
   gap: 10px;
+  cursor: pointer;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
   .fixBtn {
     height: 50px;
     font-size: 14px;
@@ -1770,9 +1834,19 @@ video {
   color: var(--gray-6);
   opacity: 0.8;
 }
+@media screen and (max-width: 1600px) {
+  .info {
+    font-size: 13px;
+  }
+}
 .info .icon-info {
   font-size: 20px;
   color: var(--gray-6);
+}
+@media screen and (max-width: 1600px) {
+  .info .icon-info {
+    font-size: 18px;
+  }
 }
 
 .overlay {
@@ -1787,15 +1861,36 @@ video {
 }
 
 mark.status {
-  padding: 8px 15px !important;
-  font-size: 16px !important;
+  padding: 8px 15px;
+  font-size: 16px;
   border-radius: 6px;
   font-style: italic;
   color: var(--white);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "GilroySemibold";
+}
+@media screen and (max-width: 1600px) {
+  mark.status {
+    font-size: 13px;
+  }
 }
 mark.status:before {
-  width: 10px !important;
-  height: 10px !important;
+  content: "";
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--primary);
+}
+@media screen and (max-width: 1600px) {
+  mark.status:before {
+    width: 6px;
+    min-width: 6px;
+    height: 6px;
+  }
 }
 mark.status.waiting {
   background-color: var(--yellow);
@@ -1809,14 +1904,14 @@ mark.status.paymentWait {
   color: var(--white) !important;
 }
 mark.status.paymentWait:before {
-  background-color: var(--white) !important;
+  background-color: var(--white);
 }
 mark.status.completed {
   background-color: var(--success);
   color: var(--white) !important;
 }
 mark.status.completed:before {
-  background-color: var(--white) !important;
+  background-color: var(--white);
 }
 mark.status.cancelled {
   filter: grayscale(1);
@@ -1975,6 +2070,11 @@ mark.status.cancelled {
   font-family: "GilroySemibold";
   margin-bottom: 4px;
 }
+@media screen and (max-width: 1600px) {
+  .form .customLabel {
+    font-size: 13px;
+  }
+}
 .form .customSelect.type2 {
   color: var(--text-2);
   font-size: 14px;
@@ -1987,14 +2087,22 @@ mark.status.cancelled {
   border-radius: 6px;
   width: 100%;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .form .customSelect.type2 {
     height: 45px;
+    font-size: 13px;
   }
 }
 .form .customSelect.type2:after {
   width: 10px;
   height: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .form .customSelect.type2:after {
+    width: 6px;
+    height: 6px;
+    margin-top: -2px;
+  }
 }
 .form .customSelect.type2 .current {
   display: flex;
@@ -2031,10 +2139,11 @@ mark.status.cancelled {
   border-radius: 6px;
   width: 100%;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .form.type2 input,
   .form.type2 .form-control {
     height: 45px;
+    font-size: 13px;
   }
 }
 
@@ -2861,6 +2970,11 @@ header {
   align-items: center;
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
 }
+@media screen and (max-width: 1600px) {
+  header {
+    height: 65px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   header {
     padding-top: 15px;
@@ -2880,20 +2994,20 @@ header .headerNav .buttons {
   margin-left: auto;
 }
 header .headerNav .logo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: inline-flex;
-  width: 105px;
-  top: 2px;
+  width: 280px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   header .headerNav .logo {
-    position: relative;
-    top: 0;
-    width: 60px;
+    width: 180px;
   }
+}
+@media screen and (max-width: 1280px) {
+  header .headerNav .logo {
+    width: 120px;
+  }
+}
+header .headerNav .logo img {
+  max-width: 100%;
 }
 @media screen and (max-width: 991.98px) {
   header .headerNav > a {
@@ -2913,9 +3027,6 @@ header.sticky-top .language a, header.light .language a {
 }
 header.sticky-top .language a + a:before, header.light .language a + a:before {
   color: var(--text-2);
-}
-header.sticky-top .logo img, header.light .logo img {
-  filter: invert(1) opacity(0.8);
 }
 header.sticky-top, header.sticky {
   position: fixed !important;
@@ -3151,15 +3262,6 @@ header.sticky-top.transitionTop, header.sticky.transitionTop {
   }
 }
 
-.logo img {
-  transition: all 0.3s linear;
-}
-@media screen and (min-width: 992px) {
-  .logo:hover img {
-    transform: scale(1.05);
-  }
-}
-
 .languageWrapper .dropdown-toggle {
   padding-right: 20px;
   margin-right: 15px;
@@ -3228,9 +3330,9 @@ header.sticky-top.transitionTop, header.sticky.transitionTop {
 .languageDropdown .title {
   font-size: 16px;
   font-family: "GilroySemibold";
-  color: var(--gray-6);
   line-height: 27px;
   margin-top: 30px;
+  color: var(--primary);
 }
 .languageDropdown hr {
   border-top-color: var(--gray-3);
@@ -3836,6 +3938,12 @@ footer .customTabContents .listItems .item .boatName {
   color: var(--text-2);
   font-family: "GilroySemibold";
 }
+@media screen and (max-width: 1600px) {
+  .formSwitchWrapper {
+    padding: 7px 7px 7px 14px;
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .formSwitchWrapper {
     font-size: 14px;
@@ -3871,6 +3979,14 @@ footer .customTabContents .listItems .item .boatName {
   font-weight: bold;
   cursor: pointer;
 }
+@media screen and (max-width: 1600px) {
+  .formSwitchWrapper .custom-switch .custom-switch-label {
+    padding: 3px 7px;
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .formSwitchWrapper .custom-switch .custom-switch-label {
     height: 30px;
@@ -3891,6 +4007,12 @@ footer .customTabContents .listItems .item .boatName {
   transform: translateY(-50%);
   left: 5px; /* Başlangıç pozisyonu */
 }
+@media screen and (max-width: 1600px) {
+  .formSwitchWrapper .custom-switch .custom-switch-indicator {
+    width: 22px;
+    height: 22px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .formSwitchWrapper .custom-switch .custom-switch-indicator {
     width: 18px;
@@ -3903,6 +4025,11 @@ footer .customTabContents .listItems .item .boatName {
 .formSwitchWrapper .custom-switch .custom-switch-input:checked + .custom-switch-label .custom-switch-indicator {
   transform: translate(57px, -50%); /* Sağ tarafa kaydır */
 }
+@media screen and (max-width: 1600px) {
+  .formSwitchWrapper .custom-switch .custom-switch-input:checked + .custom-switch-label .custom-switch-indicator {
+    transform: translate(48px, -50%);
+  }
+}
 @media screen and (max-width: 991.98px) {
   .formSwitchWrapper .custom-switch .custom-switch-input:checked + .custom-switch-label .custom-switch-indicator {
     transform: translate(52px, -50%); /* Sağ tarafa kaydır */
@@ -3913,9 +4040,19 @@ footer .customTabContents .listItems .item .boatName {
   transition: opacity 0.3s ease;
   left: 25px;
 }
+@media screen and (max-width: 1600px) {
+  .formSwitchWrapper .custom-switch .custom-switch-text {
+    left: 20px;
+  }
+}
 .formSwitchWrapper .custom-switch .custom-switch-text.disabled {
   right: 25px;
   left: auto;
+}
+@media screen and (max-width: 1600px) {
+  .formSwitchWrapper .custom-switch .custom-switch-text.disabled {
+    right: 15px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .formSwitchWrapper .custom-switch .custom-switch-text.disabled {
@@ -4279,7 +4416,7 @@ footer .customTabContents .listItems .item .boatName {
   gap: 20px;
 }
 .cards:not(.swiper-wrapper).third {
-  gap: 60px;
+  gap: 80px 60px;
 }
 @media screen and (max-width: 991.98px) {
   .cards:not(.swiper-wrapper).third {
@@ -5926,10 +6063,10 @@ section .customBlockquote blockquote .fixBtn,
 }
 
 .pageSection {
-  padding-top: 120px;
+  padding-top: 85px;
   width: 100%;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .pageSection {
     padding-top: 65px;
   }
@@ -5939,6 +6076,16 @@ section .customBlockquote blockquote .fixBtn,
 }
 .pageSection.type2 .sideContentWrapper {
   padding-top: 0;
+}
+@media screen and (max-width: 1280px) {
+  .pageSection.type2 .sideContentWrapper {
+    padding-top: 7px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .pageSection.type2 .sideContent {
+    padding-top: 16px;
+  }
 }
 .pageSection .shareButton {
   position: absolute;
@@ -10131,6 +10278,7 @@ section .customBlockquote blockquote .fixBtn,
 /*Banner Slider*/
 .bannerWrapper {
   position: relative;
+  margin-top: 35px;
 }
 
 .bannerSlider {
@@ -10270,7 +10418,7 @@ section .customBlockquote blockquote .fixBtn,
   background: var(--white);
   padding: 20px 0;
   transition: all 0.3s linear;
-  box-shadow: 0 12px 10px rgba(217, 4, 62, 0.3) !important;
+  box-shadow: 0 3px 6px rgba(217, 4, 62, 0.3) !important;
 }
 @media screen and (max-width: 991.98px) {
   .filterWrapper .filterHead.fixed .filterTop > .filterModalButton {
@@ -10280,7 +10428,7 @@ section .customBlockquote blockquote .fixBtn,
 .filterWrapper .filterHead.fixed.sticky {
   top: 85px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .filterWrapper .filterHead.fixed.sticky {
     top: 65px;
   }
@@ -11602,6 +11750,16 @@ section .customBlockquote blockquote .fixBtn,
   bottom: 15px;
 }
 
+@media screen and (max-width: 1600px) {
+  .userPageContainer {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .userPageContainer {
+    padding-top: 0;
+  }
+}
 .userPageContainer .userHead {
   padding-top: 50px;
   padding-bottom: 30px;
@@ -11759,6 +11917,12 @@ section .customBlockquote blockquote .fixBtn,
   width: 300px;
   padding-top: 60px;
 }
+@media screen and (max-width: 1280px) {
+  .sidenavWrapper {
+    padding-top: 30px;
+    width: 230px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .sidenavWrapper {
     background: var(--gray);
@@ -11814,6 +11978,13 @@ section .customBlockquote blockquote .fixBtn,
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 1280px) {
+  .sidenavWrapper .sideNav a {
+    font-size: 14px;
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+}
 .sidenavWrapper .sideNav a.active {
   color: var(--primary);
 }
@@ -11827,12 +11998,24 @@ section .customBlockquote blockquote .fixBtn,
   height: 32px;
   transition: all 0.3s linear;
 }
+@media screen and (max-width: 1280px) {
+  .sidenavWrapper .sideNav a .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
 .sidenavWrapper .sideNav a .icon img {
   max-width: 20px;
   max-height: 20px;
   -o-object-fit: contain;
   object-fit: contain;
   height: initial;
+}
+@media screen and (max-width: 1280px) {
+  .sidenavWrapper .sideNav a .icon img {
+    width: 14px;
+    height: 14px;
+  }
 }
 @media screen and (min-width: 992px) {
   .sidenavWrapper .sideNav a:hover {
@@ -11864,6 +12047,12 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroyMedium";
   font-size: 15.5px;
 }
+@media screen and (max-width: 1600px) {
+  .sidenavWrapper .sideNav.type2 a {
+    font-size: 13.5px;
+    padding-bottom: 10px;
+  }
+}
 .sidenavWrapper .sideNav.type2 a:after {
   content: "";
   border-bottom: 1px solid #e5dfdf;
@@ -11883,10 +12072,11 @@ section .customBlockquote blockquote .fixBtn,
   margin-top: 30px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 16px;
+  gap: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .editButton,
   .saveButton,
   .saveChangesButton,
@@ -11972,34 +12162,19 @@ section .customBlockquote blockquote .fixBtn,
   width: calc(100% - 300px);
   padding-left: 60px;
 }
+@media screen and (max-width: 1280px) {
+  .sideContentWrapper {
+    padding-top: 30px;
+    width: calc(100% - 230px);
+    padding-left: 30px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper {
     width: 100%;
     padding-left: 0;
     padding-top: 0;
   }
-}
-.sideContentWrapper .status {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: "GilroySemibold";
-  font-size: 13px;
-}
-.sideContentWrapper .status:before {
-  content: "";
-  width: 8px;
-  min-width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  background-color: var(--primary);
-}
-.sideContentWrapper .status.waiting {
-  color: var(--yellow);
-}
-.sideContentWrapper .status.waiting:before {
-  background-color: var(--yellow);
 }
 .sideContentWrapper .backLink {
   font-family: "GilroyMedium";
@@ -12008,6 +12183,11 @@ section .customBlockquote blockquote .fixBtn,
   height: auto;
   line-height: 16px;
   margin-top: 14px;
+}
+@media screen and (max-width: 1280px) {
+  .sideContentWrapper .backLink {
+    margin-top: 3px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper .backLink {
@@ -12024,6 +12204,11 @@ section .customBlockquote blockquote .fixBtn,
   align-items: flex-start;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 1280px) {
+  .sideContentWrapper .sideHead {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper .sideHead {
     margin-top: 20px;
@@ -12033,14 +12218,7 @@ section .customBlockquote blockquote .fixBtn,
   margin-bottom: 0;
 }
 .sideContentWrapper .formSwitchBody {
-  background-color: var(--white);
-  padding: 30px;
-  border-radius: 24px;
-}
-@media screen and (max-width: 991.98px) {
-  .sideContentWrapper .formSwitchBody {
-    padding: 16px;
-  }
+  padding: 0;
 }
 .sideContentWrapper .formSwitchBody.accSwitchBody {
   background-color: rgba(0, 0, 0, 0);
@@ -12066,6 +12244,16 @@ section .customBlockquote blockquote .fixBtn,
   overflow: visible;
   height: auto;
 }
+.sideContentWrapper .formSwitchBody .formBodyRow {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 24px;
+}
+@media screen and (max-width: 991.98px) {
+  .sideContentWrapper .formSwitchBody .formBodyRow {
+    padding: 16px;
+  }
+}
 .sideContentWrapper .pageTitle {
   font-size: 26px;
   line-height: 38px;
@@ -12075,7 +12263,7 @@ section .customBlockquote blockquote .fixBtn,
   align-items: center;
   gap: 10px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1280px) {
   .sideContentWrapper .pageTitle {
     font-size: 20px;
     line-height: 27px;
@@ -12084,6 +12272,11 @@ section .customBlockquote blockquote .fixBtn,
 .sideContentWrapper .pageTitle small {
   color: var(--gray-7);
   font-size: 18px;
+}
+@media screen and (max-width: 1280px) {
+  .sideContentWrapper .pageTitle small {
+    font-size: 14px;
+  }
 }
 .sideContentWrapper .subTitle {
   font-family: "GilroySemibold";
@@ -12098,6 +12291,11 @@ section .customBlockquote blockquote .fixBtn,
   align-items: flex-start;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 1600px) {
+  .sideContentWrapper .moduleHead {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper .moduleHead {
     flex-direction: column;
@@ -12107,6 +12305,9 @@ section .customBlockquote blockquote .fixBtn,
 .sideContentWrapper .moduleHead .info {
   max-width: 500px;
   margin-top: 4px;
+}
+.sideContentWrapper .moduleHead .moduleTitle {
+  white-space: nowrap;
 }
 @media screen and (max-width: 991.98px) {
   .sideContentWrapper .moduleHead .moduleTitle {
@@ -12260,10 +12461,25 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 22px;
   color: rgba(217, 4, 62, 0.6);
 }
+@media screen and (max-width: 1280px) {
+  .blockquote {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    min-height: 40px;
+    gap: 10px;
+  }
+}
 .blockquote .icon-info {
   margin-top: -1.1px;
   color: var(--primary);
   font-size: 20px;
+}
+@media screen and (max-width: 1280px) {
+  .blockquote .icon-info {
+    font-size: 16px;
+    margin-top: 3px;
+  }
 }
 .blockquote .title {
   font-family: "GilroySemibold";
@@ -12293,7 +12509,7 @@ section .customBlockquote blockquote .fixBtn,
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  .blockquote a:after {
+  .blockquote a:not(.fixBtn):after {
     content: "";
     width: 100%;
     border-bottom: 1px dotted var(--primary);
@@ -12305,7 +12521,7 @@ section .customBlockquote blockquote .fixBtn,
   .blockquote a:hover {
     color: var(--primary);
   }
-  .blockquote a:hover:after {
+  .blockquote a:hover:not(.fixBtn):after {
     width: 0;
   }
 }
@@ -12367,15 +12583,41 @@ section .customBlockquote blockquote .fixBtn,
     gap: 10px;
   }
 }
+@media screen and (max-width: 480px) {
+  .demandsList .demansItem {
+    flex-direction: column;
+  }
+}
 .demandsList .demansItem .imageWrapper {
   max-width: 300px;
   aspect-ratio: 3/2;
   border-radius: 24px;
   overflow: hidden;
+  background-color: var(--light-gray);
+  z-index: 1;
+}
+.demandsList .demansItem .imageWrapper:before {
+  content: "\e91b";
+  font-family: "customFont";
+  font-size: 70px;
+  filter: grayscale(1);
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (max-width: 991.98px) {
+  .demandsList .demansItem .imageWrapper:before {
+    font-size: 30px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .demandsList .demansItem .imageWrapper {
     max-width: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .demandsList .demansItem .imageWrapper {
+    max-width: initial;
   }
 }
 .demandsList .demansItem .body {
@@ -12384,14 +12626,48 @@ section .customBlockquote blockquote .fixBtn,
   gap: 20px;
   width: 100%;
 }
+@media screen and (max-width: 1600px) {
+  .demandsList .demansItem .body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .demandsList .demansItem .body {
     flex-direction: column;
     gap: 10px;
   }
 }
-.demandsList .demansItem .body .bodyInfo {
-  flex: 1;
+@media screen and (min-width: 1660px) {
+  .demandsList .demansItem .body .bodyInfo {
+    flex: 1;
+  }
+}
+.demandsList .demansItem .body .bodyRightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1600px) {
+  .demandsList .demansItem .body .bodyRightColumn {
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .demandsList .demansItem .body .bodyRightColumn .fixBtn {
+    height: 35px !important;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .demandsList .demansItem .body .bodyRightColumn.type2 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 .demandsList .demansItem .otherButton {
   position: absolute;
@@ -12425,7 +12701,7 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 34px;
   font-family: "GilroySemibold";
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1700px) {
   .demandsList .demansItem .title {
     font-size: 18px;
     line-height: 25px;
@@ -12570,25 +12846,19 @@ section .customBlockquote blockquote .fixBtn,
 .demandsList .demansItem.disabled .body, .demandsList .demansItem.inactive .body {
   filter: grayscale(1);
 }
-.demandsList .demansItem.waiting {
-  border-color: #ff6815;
-}
-.demandsList .demansItem.waiting .leftColumn {
-  border-right-color: #ff6815;
-}
 .demandsList .demansItem.waiting .dateInfo .date,
 .demandsList .demansItem.waiting .dateInfo .loc {
-  color: #ff6815;
+  color: var(--yellow);
 }
 .demandsList .demansItem.waiting .dateInfo .date:before,
 .demandsList .demansItem.waiting .dateInfo .loc:before {
-  background-color: #ff6815;
+  background-color: var(--yellow);
 }
 .demandsList .demansItem.waiting .date .day {
-  background-color: #ff6815;
+  background-color: var(--yellow);
 }
 .demandsList .demansItem.waiting .category {
-  background-color: #ff6815;
+  background-color: var(--yellow);
 }
 .demandsList .demansItem.waiting .message {
   background-color: rgba(255, 104, 21, 0.7);
@@ -12598,14 +12868,13 @@ section .customBlockquote blockquote .fixBtn,
   height: auto;
 }
 .demandsList .demansItem.waiting .button-primary {
-  background-color: #ff6815 !important;
-  border-color: #ff6815 !important;
+  background-color: var(--yellow) !important;
+  border-color: var(--yellow) !important;
 }
-.demandsList .demansItem.paymentWait {
-  border-color: var(--primary);
-}
-.demandsList .demansItem.paymentWait .leftColumn {
-  border-right-color: var(--primary);
+@media screen and (min-width: 992px) {
+  .demandsList .demansItem.waiting .button-primary:hover {
+    color: var(--yellow);
+  }
 }
 .demandsList .demansItem.paymentWait .dateInfo .date,
 .demandsList .demansItem.paymentWait .dateInfo .loc {
@@ -12625,20 +12894,28 @@ section .customBlockquote blockquote .fixBtn,
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
 }
-.demandsList .demansItem.completed {
-  border-color: var(--success);
-}
-.demandsList .demansItem.completed .leftColumn {
-  border-right-color: var(--success);
-}
-.demandsList .demansItem.completed .dateInfo .date {
+.demandsList .demansItem.completed .dateInfo .date,
+.demandsList .demansItem.completed .dateInfo .loc {
   color: var(--success);
+}
+.demandsList .demansItem.completed .dateInfo .date:before,
+.demandsList .demansItem.completed .dateInfo .loc:before {
+  background-color: var(--success);
 }
 .demandsList .demansItem.completed .date .day {
   background-color: var(--success);
 }
 .demandsList .demansItem.completed .category {
   background-color: var(--success);
+}
+.demandsList .demansItem.completed .button-primary {
+  background-color: var(--success) !important;
+  border-color: var(--success) !important;
+}
+@media screen and (min-width: 992px) {
+  .demandsList .demansItem.completed .button-primary:hover {
+    color: var(--success);
+  }
 }
 .demandsList .demansItem.cancelled {
   filter: grayscale(1);
@@ -12678,6 +12955,12 @@ section .customBlockquote blockquote .fixBtn,
   padding: 30px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card {
     margin-bottom: 20px;
@@ -12692,6 +12975,11 @@ section .customBlockquote blockquote .fixBtn,
 .demandDetailsContent .card .cardLeft {
   width: 300px;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .cardLeft {
+    max-width: 200px;
+  }
+}
 @media screen and (max-width: 640px) {
   .demandDetailsContent .card .cardLeft {
     max-width: 300px;
@@ -12702,6 +12990,11 @@ section .customBlockquote blockquote .fixBtn,
   aspect-ratio: 3/2;
   border-radius: 24px;
   overflow: hidden;
+}
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .cardLeft .cardImage {
+    border-radius: 16px;
+  }
 }
 .demandDetailsContent .card .cardRight {
   flex: 1;
@@ -12736,6 +13029,12 @@ section .customBlockquote blockquote .fixBtn,
   gap: 7px;
   align-items: flex-start;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .name {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card .name {
     font-size: 18px;
@@ -12762,6 +13061,12 @@ section .customBlockquote blockquote .fixBtn,
 @media screen and (max-width: 1600px) {
   .demandDetailsContent .card .title .location {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .title .location {
+    font-size: 13px;
+    line-height: 20px;
   }
 }
 .demandDetailsContent .card .title .id {
@@ -12801,6 +13106,12 @@ section .customBlockquote blockquote .fixBtn,
   gap: 20px;
   margin-top: 20px;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .tags {
+    gap: 0;
+    margin-top: 10px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card .tags {
     gap: 5px;
@@ -12818,6 +13129,13 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 5px;
   color: var(--gray-6);
   position: relative;
+}
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .tags span {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 4px 12px;
+  }
 }
 .demandDetailsContent .card .tags span:first-child {
   padding-left: 0;
@@ -12860,12 +13178,22 @@ section .customBlockquote blockquote .fixBtn,
 .demandDetailsContent .card .infoList {
   gap: 10px 0;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .infoList {
+    gap: 5px 0;
+  }
+}
 .demandDetailsContent .card .infoList .title {
   font-size: 14px;
   font-family: "GilroySemibold";
   line-height: 22px;
   color: var(--gray-7);
   padding-left: 17px;
+}
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .infoList .title {
+    font-size: 13px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card .infoList .title {
@@ -12881,6 +13209,11 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 25px;
   color: var(--primary);
   font-family: "GilroySemibold";
+}
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .infoList .text {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card .infoList .text {
@@ -12928,6 +13261,13 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 27px;
   margin-top: 15px;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card .type {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 20px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card .type {
     margin-top: 10px;
@@ -12948,6 +13288,12 @@ section .customBlockquote blockquote .fixBtn,
   align-items: center;
   margin-bottom: 0;
 }
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .card-title {
+    font-size: 15px;
+    min-height: 22px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .card-title {
     font-size: 15.5px;
@@ -12964,7 +13310,7 @@ section .customBlockquote blockquote .fixBtn,
   gap: 20px;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1280px) {
   .demandDetailsContent .messageList .messageItem {
     font-size: 14px;
     margin-bottom: 20px;
@@ -12985,6 +13331,12 @@ section .customBlockquote blockquote .fixBtn,
   background-color: var(--gray);
   border-radius: 24px;
   padding: 30px;
+}
+@media screen and (max-width: 1280px) {
+  .demandDetailsContent .messageList .messageItem .text {
+    padding: 20px;
+    border-radius: 16px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .demandDetailsContent .messageList .messageItem .text {
@@ -13017,32 +13369,50 @@ section .customBlockquote blockquote .fixBtn,
   margin-top: 20px;
 }
 
-.boatUser {
-  font-size: 20px;
+.boatUser,
+.boatContact {
+  font-size: 18px;
   font-family: "GilroyMedium";
   color: var(--text);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
-@media screen and (max-width: 991.98px) {
-  .boatUser {
+@media screen and (max-width: 1280px) {
+  .boatUser,
+  .boatContact {
     font-size: 14px;
   }
 }
-.boatUser b {
+.boatUser b,
+.boatUser a,
+.boatContact b,
+.boatContact a {
   color: var(--primary);
   font-family: "GilroySemibold";
-  font-size: 24px;
+  font-size: 20px;
 }
-@media screen and (max-width: 991.98px) {
-  .boatUser b {
-    font-size: 18px;
+@media screen and (max-width: 1280px) {
+  .boatUser b,
+  .boatUser a,
+  .boatContact b,
+  .boatContact a {
+    font-size: 13px;
+  }
+}
+.boatUser a,
+.boatContact a {
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .boatUser a:hover,
+  .boatContact a:hover {
+    color: var(--text);
   }
 }
 
 .moduleTitle {
-  font-size: 17px;
+  font-size: 15px;
   font-family: "GilroySemibold";
   color: var(--primary);
   padding-left: 0;
@@ -13050,6 +13420,13 @@ section .customBlockquote blockquote .fixBtn,
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1600px) {
+  .moduleTitle {
+    margin-bottom: 10px;
+    font-size: 14.5px;
+  }
 }
 
 #cropModal .modal-body,
@@ -13131,7 +13508,7 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 24px;
   height: 200px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .customImageUpload .custom-file-upload {
     font-size: 14px;
     line-height: 20px;
@@ -13248,7 +13625,7 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 24px;
   flex: 1;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .customImageUpload .custom-file-upload-single {
     font-size: 14px;
     line-height: 20px;
@@ -13539,6 +13916,12 @@ section .customBlockquote blockquote .fixBtn,
   border-color: var(--gray-5);
   font-size: 14px;
 }
+@media screen and (max-width: 1600px) {
+  .fc .fc-button-primary {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+}
 .fc .fc-button-primary:focus {
   box-shadow: none;
   outline: 0;
@@ -13565,6 +13948,11 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--primary);
   font-family: "GilroySemibold";
 }
+@media screen and (max-width: 1600px) {
+  .fc .fc-toolbar-title {
+    font-size: 18px;
+  }
+}
 
 .fc .fc-col-header-cell-cushion {
   color: var(--text-2);
@@ -13572,13 +13960,19 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroyMedium";
   max-width: 95px;
 }
+@media screen and (max-width: 1600px) {
+  .fc .fc-col-header-cell-cushion {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+}
 .fc th .fc-col-header-cell-cushion {
   font-family: "GilroyRegular";
   font-size: 14px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
   .fc th .fc-col-header-cell-cushion {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -13734,11 +14128,22 @@ section .customBlockquote blockquote .fixBtn,
   gap: 40px;
   width: 100%;
 }
+@media screen and (max-width: 480px) {
+  .eventsWrapper .eventsList {
+    gap: 30px;
+  }
+}
 .eventsWrapper .eventsList .eventsItem {
   display: flex;
   align-items: stretch;
   border: 1px solid var(--gray-4);
   border-radius: 24px;
+}
+@media screen and (max-width: 480px) {
+  .eventsWrapper .eventsList .eventsItem {
+    flex-direction: column;
+    border-radius: 12px;
+  }
 }
 .eventsWrapper .eventsList .eventsItem .leftColumn {
   padding: 30px 20px;
@@ -13750,11 +14155,20 @@ section .customBlockquote blockquote .fixBtn,
   flex-wrap: wrap;
   align-items: center;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .eventsWrapper .eventsList .eventsItem .leftColumn {
     padding: 20px 16px;
     width: 115px;
     min-width: 115px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .eventsWrapper .eventsList .eventsItem .leftColumn {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid var(--gray-4);
   }
 }
 .eventsWrapper .eventsList .eventsItem .leftColumn .date {
@@ -13768,6 +14182,13 @@ section .customBlockquote blockquote .fixBtn,
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
   border-radius: 8px;
 }
+@media screen and (max-width: 480px) {
+  .eventsWrapper .eventsList .eventsItem .leftColumn .date {
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: none !important;
+  }
+}
 .eventsWrapper .eventsList .eventsItem .leftColumn .date .day {
   background: var(--primary);
   color: var(--white);
@@ -13779,6 +14200,17 @@ section .customBlockquote blockquote .fixBtn,
   justify-content: center;
   border-radius: 8px 8px 0 0;
 }
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .leftColumn .date .day {
+    font-size: 14px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .eventsWrapper .eventsList .eventsItem .leftColumn .date .day {
+    border-radius: 12px 12px 0 0;
+  }
+}
 .eventsWrapper .eventsList .eventsItem .leftColumn .date .month {
   background-color: var(--white);
   border-radius: 0 0 8px 8px;
@@ -13788,14 +14220,26 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroyMedium";
   color: var(--text-2);
   height: 55px;
+  font-size: 16px;
+}
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .leftColumn .date .month {
+    font-size: 13px;
+    height: 45px;
+  }
 }
 .eventsWrapper .eventsList .eventsItem .rightColumn {
   padding: 30px 20px;
   flex: 1;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .eventsWrapper .eventsList .eventsItem .rightColumn {
     padding: 20px 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .eventsWrapper .eventsList .eventsItem .rightColumn {
+    padding: 16px;
   }
 }
 .eventsWrapper .eventsList .eventsItem .eventContent {
@@ -13803,15 +14247,46 @@ section .customBlockquote blockquote .fixBtn,
   align-items: stretch;
   justify-content: space-between;
 }
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .eventsWrapper .eventsList .eventsItem .eventContent {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventContent .fixBtn {
+    height: 45px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 991.98px) {
   .eventsWrapper .eventsList .eventsItem .eventContent .fixBtn {
     margin-left: 0 !important;
     margin-top: 20px;
+  }
+}
+.eventsWrapper .eventsList .eventsItem .eventContent .bodyRightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventContent .bodyRightColumn {
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventContent .bodyRightColumn .fixBtn {
+    margin-left: 0 !important;
+    height: 35px !important;
   }
 }
 .eventsWrapper .eventsList .eventsItem .eventCategory {
@@ -13824,6 +14299,12 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--white);
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventCategory {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
 }
 .eventsWrapper .eventsList .eventsItem .message {
   font-family: "GilroyMedium";
@@ -13856,6 +14337,12 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroySemibold";
   color: var(--gray-6);
 }
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventName {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .eventsWrapper .eventsList .eventsItem .eventName {
     font-size: 16px;
@@ -13869,7 +14356,6 @@ section .customBlockquote blockquote .fixBtn,
 }
 @media screen and (max-width: 991.98px) {
   .eventsWrapper .eventsList .eventsItem .dateTimeWrap {
-    flex-direction: column;
     align-items: flex-start;
     gap: 5px;
   }
@@ -13880,6 +14366,12 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--text);
   font-family: "GilroySemibold";
 }
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventInfo {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .eventsWrapper .eventsList .eventsItem .eventInfo .dateInfo {
   display: flex;
   align-items: center;
@@ -13889,6 +14381,11 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 16px;
   color: var(--primary);
   font-family: "GilroySemibold";
+}
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventInfo .dateInfo .date {
+    font-size: 12px;
+  }
 }
 .eventsWrapper .eventsList .eventsItem .eventInfo .dateInfo .loc {
   font-size: 14px;
@@ -13901,6 +14398,11 @@ section .customBlockquote blockquote .fixBtn,
   margin-left: 10px;
   gap: 10px;
 }
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventInfo .dateInfo .loc {
+    font-size: 12px;
+  }
+}
 .eventsWrapper .eventsList .eventsItem .eventInfo .other {
   font-size: 13px;
   color: var(--primary);
@@ -13908,26 +14410,30 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroyMedium";
   margin-top: 10px;
 }
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventInfo .other {
+    font-size: 12px;
+  }
+}
 .eventsWrapper .eventsList .eventsItem .eventInfo b {
   color: var(--gray-7);
   font-size: 16px;
   line-height: 25px;
   font-family: "GilroyMedium";
 }
-.eventsWrapper .eventsList .eventsItem.waiting {
-  border-color: #ff6815;
-}
-.eventsWrapper .eventsList .eventsItem.waiting .leftColumn {
-  border-right-color: #ff6815;
+@media screen and (max-width: 1600px) {
+  .eventsWrapper .eventsList .eventsItem .eventInfo b {
+    font-size: 12px;
+  }
 }
 .eventsWrapper .eventsList .eventsItem.waiting .dateInfo .date {
-  color: #ff6815;
+  color: var(--yellow);
 }
 .eventsWrapper .eventsList .eventsItem.waiting .date .day {
-  background-color: #ff6815;
+  background-color: var(--yellow);
 }
 .eventsWrapper .eventsList .eventsItem.waiting .eventCategory {
-  background-color: #ff6815;
+  background-color: var(--yellow);
 }
 .eventsWrapper .eventsList .eventsItem.waiting .message {
   background-color: rgba(255, 104, 21, 0.7);
@@ -13936,14 +14442,13 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--white);
 }
 .eventsWrapper .eventsList .eventsItem.waiting .button-primary {
-  background-color: #ff6815 !important;
-  border-color: #ff6815 !important;
+  background-color: var(--yellow) !important;
+  border-color: var(--yellow) !important;
 }
-.eventsWrapper .eventsList .eventsItem.completed {
-  border-color: var(--success);
-}
-.eventsWrapper .eventsList .eventsItem.completed .leftColumn {
-  border-right-color: var(--success);
+@media screen and (min-width: 992px) {
+  .eventsWrapper .eventsList .eventsItem.waiting .button-primary:hover {
+    color: var(--yellow);
+  }
 }
 .eventsWrapper .eventsList .eventsItem.completed .dateInfo .date {
   color: var(--success);
@@ -13957,6 +14462,11 @@ section .customBlockquote blockquote .fixBtn,
 .eventsWrapper .eventsList .eventsItem.completed .button-primary {
   background-color: var(--success) !important;
   border-color: var(--success) !important;
+}
+@media screen and (min-width: 992px) {
+  .eventsWrapper .eventsList .eventsItem.completed .button-primary:hover {
+    color: var(--success);
+  }
 }
 .eventsWrapper .eventsList .eventsItem.cancelled {
   filter: grayscale(1);
@@ -14013,6 +14523,90 @@ section .customBlockquote blockquote .fixBtn,
   height: 45px;
 }
 
+.SeasonPriceNew {
+  height: 0;
+  overflow: visible;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.SeasonPriceNew.active {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  padding-bottom: 40px;
+}
+
+.seasonPriceList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.seasonPriceList .seasonsItem {
+  padding: 20px;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 24px;
+}
+@media screen and (max-width: 1600px) {
+  .seasonPriceList .seasonsItem {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .seasonPriceList .seasonsItem {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .seasonPriceList .seasonsItem > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .seasonPriceList .seasonsItem > div label {
+    width: 45%;
+    max-width: 45%;
+    margin-bottom: 0;
+  }
+  .seasonPriceList .seasonsItem > div .text {
+    width: 55%;
+    max-width: 55%;
+    text-align: right;
+  }
+}
+.seasonPriceList .seasonsItem .customLabel {
+  font-family: "GilroyMedium";
+  color: var(--gray-6);
+}
+@media screen and (max-width: 1600px) {
+  .seasonPriceList .seasonsItem .customLabel {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .seasonPriceList .seasonsItem .customLabel {
+    font-size: 12px;
+  }
+}
+.seasonPriceList .seasonsItem .text {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  font-family: "GilroySemibold";
+}
+@media screen and (max-width: 1600px) {
+  .seasonPriceList .seasonsItem .text {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .seasonPriceList .seasonsItem .text {
+    font-size: 12px;
+  }
+}
+.seasonPriceList .seasonsItem .price {
+  color: var(--primary);
+}
+
 .flatpickr-current-month .flatpickr-monthDropdown-months {
   font-family: "GilroyMedium";
   font-size: 16px;
@@ -14042,6 +14636,10 @@ section .customBlockquote blockquote .fixBtn,
 
 .flatpickr-innerContainer {
   padding-top: 15px;
+}
+
+.flatpickr-calendar {
+  padding: 0 20px;
 }
 
 .flatpickr-calendar.hasTime .flatpickr-time {

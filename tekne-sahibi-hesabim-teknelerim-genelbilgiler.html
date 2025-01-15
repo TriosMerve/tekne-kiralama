@@ -74,7 +74,7 @@
         <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
-                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
                         <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -499,7 +499,7 @@
                                 </div>
                             </div>
                             <div class="sideContentWrapper">
-                                <div class="col-xl-9 px-0">
+                                <div class="col-xxl-9 px-0">
                                     <div class="sideHead">
                                         <div class="pageTitle">Sunseeker, Manhattan 64</div>
                                     </div>
@@ -509,7 +509,7 @@
                                                 <div class="moduleTitle">Genel Bilgiler</div>
                                                 <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum voluptas cupiditate necessitatibus officia animi quam, exercitationem incidunt, aut nihil doloribus accusantium voluptatibus praesentium delectus, quidem debitis laboriosam rem sequi.</span></div>
                                             </div>
-                                            <form class="form needs-validation type2 mb-5" novalidate>
+                                            <div data-submit="btnKaydet" class="form needs-validation type2 mb-5" novalidate>
                                                 <div class="row ">
                                                     <div class="mb-lg-4 col-lg-8">
                                                         <label for="tekneadi" class="customLabel">Yat Adı</label>
@@ -522,8 +522,8 @@
                                                         <label for="sehirSelect" class="customLabel">Bayrak</label>
                                                         <select name="sehirSelect" id="sehirSelect" class="customSelect sehirSelect type2" required>
                                                             <option value="" selected hidden>Bayrak</option>
-                                                            <option value="">Türkiye</option>
-                                                            <option value="">Yeni Zellenda</option>
+                                                            <option value="Turkiye">Türkiye</option>
+                                                            <option value="Yeni Zellenda">Yeni Zellenda</option>
                                                         </select>
                                                         <div class="invalid-feedback">
                                                             Lütfen Şehir Seçiniz
@@ -533,10 +533,10 @@
                                                         <label for="teknetipiSelect" class="customLabel">Tekne Tipi</label>
                                                         <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
                                                             <option value="" selected hidden>Tekne Tipi Seç</option>
-                                                            <option value="">Gulet</option>
-                                                            <option value="">Yelkenli</option>
-                                                            <option value="">Katamaran</option>
-                                                            <option value="">Şişme Bot</option>
+                                                            <option value="Gulet">Gulet</option>
+                                                            <option value="Yelkenli">Yelkenli</option>
+                                                            <option value="Katamaran">Katamaran</option>
+                                                            <option value="sismebot">Şişme Bot</option>
                                                         </select>
                                                         <div class="invalid-feedback">
                                                             Lütfen Tekne Tipinin Seçiniz
@@ -679,14 +679,14 @@
                                                         
                                                     <div class="mb-3 d-flex align-items-center gap-5 mt-5">
                                                         <span class="fixBtn button-success px-5">
-                                                            <input type="submit" value="Kaydet">
+                                                            <input type="submit" id="btnKaydet" value="Kaydet">
                                                         </span>
                                                         <!-- <span class="fixBtn button-primary px-5">
                                                             <input type="submit" value="Düzenle">
                                                         </span> -->
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -984,7 +984,6 @@
 
     <script src="public/assets/plugins/fullcalendar/index.global.js"></script><!--müsaitlik takvimi ıcın kullanılıyor-->
 
-    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/tekne.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
 

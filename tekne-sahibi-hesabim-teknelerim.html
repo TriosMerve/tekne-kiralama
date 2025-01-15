@@ -74,7 +74,7 @@
         <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
-                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
                         <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -487,8 +487,8 @@
                                     <a href="tekne-sahibi-hesabim-anasayfa.html"><div class="icon"><img src="public/assets/images/statics/icons/home.svg" alt=""></div><span>Anasayfa</span></a>
                                     <a href="tekne-sahibi-hesabim-profil.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div><span>Profil</span></a>
                                     <a class="active" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div><span>Teknelerim</span></a>
-                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
-                                    <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Talepler</span></a>
+                                    <a href="tekne-sahibi-hesabim-rezervasyonlar.html"><div class="icon"><img src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div><span>Rezervasyonlar</span></a>
                                     <a href="tekne-sahibi-hesabim-sirketbilgileri.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Şirket Bilgileri</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div><span>Ödemeler</span></a>
                                     <a href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div><span>Ayarlar</span></a>
@@ -521,6 +521,38 @@
                                         <div class="demandsList">
                                             <div class="demansItem type2">
                                                 <div class="imageWrapper">
+                                                </div>
+                                                <div class="body">
+                                                    <div class="bodyInfo">
+                                                        <div class="title type2">
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <div class="location">Fethiye, Muğla</div>
+                                                                <div class="id d-none d-lg-block">ID:1789034A</div>
+                                                            </div>
+                                                            <div class="name">Göcek 14.2m Kiralık Yelkenli</div>
+                                                        </div>
+                                                        <div class="type">Bavaria 46 Cruiser (2009 / 2021 refit)</div>
+                                                        <div class="d-flex align-items-center mt-5">
+                                                            <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" class="fixBtn button-primary detailsButton">Detay</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bodyRightColumn type2">
+                                                        <div class="formSwitchWrapper">
+                                                            <div class="custom-switch ms-auto">
+                                                                <input type="checkbox" id="teknelerim01" class="custom-switch-input" checked>
+                                                                <label for="teknelerim01" class="custom-switch-label">
+                                                                <span class="custom-switch-indicator"></span>
+                                                                <span class="custom-switch-text apply">Aktif</span>
+                                                                <span class="custom-switch-text disabled">Pasif</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="tekneSilButon textLink ms-auto noAfter me-2"><span class="icon-delete"></span><i>Tekne Sil</i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="demansItem type2">
+                                                <div class="imageWrapper">
                                                     <img src="public/assets/images/media/onecikantekne/tekne-1.jpg" alt="">
                                                 </div>
                                                 <div class="body">
@@ -537,7 +569,7 @@
                                                             <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" class="fixBtn button-primary detailsButton">Detay</a>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex flex-column justify-content-between">
+                                                    <div class="bodyRightColumn type2">
                                                         <div class="formSwitchWrapper">
                                                             <div class="custom-switch ms-auto">
                                                                 <input type="checkbox" id="teknelerim01" class="custom-switch-input" checked>
@@ -570,7 +602,7 @@
                                                             <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html" class="fixBtn button-primary detailsButton">Detay</a>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex flex-column justify-content-between">
+                                                    <div class="bodyRightColumn type2">
                                                         <div class="formSwitchWrapper">
                                                             <div class="custom-switch ms-auto">
                                                                 <input type="checkbox" id="teknelerim02" class="custom-switch-input">
@@ -885,7 +917,6 @@
 
     <script src="public/assets/plugins/fullcalendar/index.global.js"></script><!--müsaitlik takvimi ıcın kullanılıyor-->
 
-    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
     <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
     <script>

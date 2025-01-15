@@ -1,6 +1,5 @@
 $(".stepHead span").first().addClass("active"); // İlk span'ı aktif yap
 // .backStep butonuna tıklanınca
-// .backStep butonuna tıklanınca
 $(".backStep").on("click", function (e) {
   e.preventDefault(); // Sayfanın yenilenmesini engelle
 
@@ -50,8 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".emailMask").on("input", function () {
     const inputValue = $(this).val().trim();
     // const isValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(inputValue);
-    const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/.test(inputValue);
-
+    const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/.test(
+      inputValue
+    );
 
     if (inputValue && !isValid) {
       $(this).addClass("is-invalid").removeClass("is-valid");
@@ -115,18 +115,18 @@ document.addEventListener("DOMContentLoaded", function () {
       var inputValue = $(this).val();
       checkValidity($(this), /^[A-Za-zÇçĞğİıÖöŞşÜü ]+$/);
     });
-    $(".numberMask2")
+  $(".numberMask2")
     .mask("0", {
-        translation: {
-            0: {
-                pattern: /\d/,
-                recursive: true
-            }
-        }
+      translation: {
+        0: {
+          pattern: /\d/,
+          recursive: true,
+        },
+      },
     })
     .on("input", function () {
-        var inputValue = $(this).val();
-        checkValidity($(this), /^[0-9]+$/);
+      var inputValue = $(this).val();
+      checkValidity($(this), /^[0-9]+$/);
     });
 
   // Step 1 formu için özel doğrulama
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Form geçerli ise email alanındaki değeri al
 
       // Değeri email2 alanına ata
-      
+
       // Form geçerli ise, step 1'den step 2'ye geçiş yapılır
       $(".stepOne").addClass("d-none"); // Step 1'i gizle
       $(".stepTwo").removeClass("d-none"); // Step 2'yi göster
@@ -156,82 +156,141 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Bootstrap doğrulaması ve diğer işlemler
-  const forms = document.querySelectorAll(".needs-validation");
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+  const divs = document.querySelectorAll(".needs-validation");
+  if (divs.length > 0) {
+    Array.from(divs).forEach((div) => {
+      const submitButtonID = div.getAttribute("data-submit");
+      const btnSubmit = document.getElementById(submitButtonID);
+      if (submitButtonID) {
+        btnSubmit.addEventListener(
+          "click",
+          function (event) {
+            //if (!div.checkValidity()) {
+            //    event.preventDefault();
+            //    event.stopPropagation();
+            //}
+            const inputs = div.querySelectorAll(
+              ".emailMask, .phoneMask, .textMask"
+            );
+            const selects = div.querySelectorAll(".customSelect");
 
-        const inputs = form.querySelectorAll(
-          ".emailMask, .phoneMask, .textMask"
-        );
-        inputs.forEach((input) => {
-          if (input.classList.contains("emailMask")) {
-            const value = input.value.trim();
-            const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/.test(value);
+            let isDivValid = true;
 
-            if (value && !isValid) {
-              input.classList.add("is-invalid");
-              input.classList.remove("is-valid");
-              input.setCustomValidity("Invalid email address");
-            } else if (value && isValid) {
-              input.classList.add("is-valid");
-              input.classList.remove("is-invalid");
-              input.setCustomValidity("");
-            } else {
-              input.classList.remove("is-valid", "is-invalid");
-              input.setCustomValidity("");
-            }
-          }
-        });
-
-        if (form.checkValidity()) {
-          event.preventDefault();
-
-          // AJAX işlemleri
-          const formData = new FormData(form);
-          $.ajax({
-            type: "POST",
-            url: form.action,
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (response) {
-              if (response === "ok") {
-                alert("Form başarıyla gönderildi!");
+            inputs.forEach((input) => {
+              if (!input.checkValidity()) {
+                isDivValid = false;
+                input.classList.add("is-invalid");
+                input.classList.remove("is-valid");
               } else {
-                alert("Form gönderiminde hata oluştu.");
+                input.classList.add("is-valid");
+                input.classList.remove("is-invalid");
               }
-            },
-            error: function () {
-              alert("Form gönderiminde hata oluştu.");
-            },
-          });
-        }
+            });
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
+            // Nice Select öğelerinde seçim değiştiğinde tetiklenecek olay
+            document.querySelectorAll('.customSelect').forEach(niceSelect => {
+              niceSelect.addEventListener('click', function (event) {
+                // Eğer tıklanan element bir option değilse, fonksiyonu durdur
+                if (!event.target.classList.contains('option')) return;
+
+                const select = niceSelect.previousElementSibling; // Gerçek select öğesi
+                const invalidFeedback = niceSelect.parentElement.querySelector('.invalid-feedback');
+                const selectedOption = event.target; // Tıklanan option öğesi
+                const selectedValue = selectedOption.getAttribute('data-value');
+                
+                // Seçilen değeri kontrol et
+                if (selectedValue && selectedValue !== '') {
+                  console.log("Geçerli Seçim Yapıldı:", selectedValue); // Konsola geçerli seçimi yazdır
+
+                  // Gerçek select öğesinin değerini güncelle
+                  select.value = selectedValue;
+
+                  // Stil sınıflarını güncelle
+                  select.classList.add('is-valid');
+                  select.classList.remove('is-invalid');
+                  niceSelect.classList.add('is-valid');
+                  niceSelect.classList.remove('is-invalid');
+
+                  // Hata mesajını gizle
+                  if (invalidFeedback) invalidFeedback.style.display = 'none';
+                } else {
+                  console.log("Geçersiz veya Boş Seçim Yapıldı:", selectedValue); // Konsola geçersiz seçimi yazdır
+
+                  // Stil sınıflarını güncelle
+                  select.classList.add('is-invalid');
+                  select.classList.remove('is-valid');
+                  niceSelect.classList.add('is-invalid');
+                  niceSelect.classList.remove('is-valid');
+
+                  // Hata mesajını göster
+                  if (invalidFeedback) invalidFeedback.style.display = 'block';
+                }
+              });
+            });
+
+
+
+
+            if (!isDivValid) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            inputs.forEach((input) => {
+              if (input.classList.contains("emailMask")) {
+                const value = input.value.trim();
+                const isValid =
+                  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|co)$/.test(value);
+
+                if (value && !isValid) {
+                  input.classList.add("is-invalid");
+                  input.classList.remove("is-valid");
+                  input.setCustomValidity("Invalid email address");
+                } else if (value && isValid) {
+                  input.classList.add("is-valid");
+                  input.classList.remove("is-invalid");
+                  input.setCustomValidity("");
+                } else {
+                  input.classList.remove("is-valid", "is-invalid");
+                  input.setCustomValidity("");
+                }
+              }
+            });
+
+            //if (div.checkValidity()) {
+            //    event.preventDefault();
+            //}
+            if (isDivValid) {
+              event.preventDefault();
+            }
+
+            div.classList.add("was-validated");
+          },
+          false
+        );
+      } else {
+        console.warn("data-submit attribute'u eksik");
+      }
+    });
+  } else {
+    console.warn(".needs-validation sınıfına sahip bir öğe bulunamadı.");
+  }
 });
 
 // Price Mask doğrulama işlemi
-$(".priceMask").mask("000.000.000", { reverse: true }).on("input", function () {
-  var inputValue = $(this).val().replace(/\./g, ""); // Noktaları kaldırarak saf sayıyı al
-  var numericValue = parseInt(inputValue, 10); // Sayıya çevir
+$(".priceMask")
+  .mask("000.000.000", { reverse: true })
+  .on("input", function () {
+    var inputValue = $(this).val().replace(/\./g, ""); // Noktaları kaldırarak saf sayıyı al
+    var numericValue = parseInt(inputValue, 10); // Sayıya çevir
 
-  // Değerin geçerli olup olmadığını kontrol et
-  if (isNaN(numericValue) || numericValue <= 0) {
-    $(this).addClass("is-invalid").removeClass("is-valid");
-  } else {
-    $(this).addClass("is-valid").removeClass("is-invalid");
-  }
-});
+    // Değerin geçerli olup olmadığını kontrol et
+    if (isNaN(numericValue) || numericValue <= 0) {
+      $(this).addClass("is-invalid").removeClass("is-valid");
+    } else {
+      $(this).addClass("is-valid").removeClass("is-invalid");
+    }
+  });
 
 // Phone mask doğrulama fonksiyonu
 function checkValidity(inputElement, mask) {
@@ -245,35 +304,36 @@ function checkValidity(inputElement, mask) {
   }
 }
 
-var input = document.querySelector(".telephone");
+var input = document.querySelector("#telephone");
 var phoneInput = document.querySelector("#phone");
 
 var iti = window.intlTelInput(input, {
-    initialCountry: "tr", // Türkiye'yi varsayılan yapar
-    separateDialCode: true, // Bayrak ile telefon kodunu ayırır
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // Formatlama ve doğrulama için
-    geoIpLookup: function(callback) {
-        fetch("https://ipinfo.io?token=YOUR_TOKEN")
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                var countryCode = (data && data.country) ? data.country : "us";
-                callback(countryCode);
-            });
-    }
+  initialCountry: "tr", // Türkiye'yi varsayılan yapar
+  separateDialCode: true, // Bayrak ile telefon kodunu ayırır
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // Formatlama ve doğrulama için
+  geoIpLookup: function (callback) {
+    fetch("https://ipinfo.io?token=YOUR_TOKEN")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var countryCode = data && data.country ? data.country : "us";
+        callback(countryCode);
+      });
+  },
 });
 
 // Sadece ülke kodu seçimlerine izin vermek için 'readonly' yapıyoruz
-input.addEventListener("focus", function() {
-    input.readOnly = true; // Odaklandığında readonly yapar
+input.addEventListener("focus", function () {
+  input.readOnly = true; // Odaklandığında readonly yapar
 });
 
-input.addEventListener("blur", function() {
-    input.readOnly = false; // Odak dışı olduğunda readonly kaldırır
+input.addEventListener("blur", function () {
+  input.readOnly = false; // Odak dışı olduğunda readonly kaldırır
 });
 
- // Ülke kodu değiştiğinde #phone inputuna odaklanma
- input.addEventListener("change", function() {
+// Ülke kodu değiştiğinde #phone inputuna odaklanma
+input.addEventListener("change", function () {
   phoneInput.focus();
 });

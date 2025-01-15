@@ -60,6 +60,10 @@
 .sidenavWrapper {
   width: 300px;
   padding-top: 60px;
+  @media screen and (max-width: 1280px) {
+    padding-top: 30px;
+    width: 230px;
+  }
   @media screen and (max-width: 991.98px) {
     background: var(--gray);
     padding-top: 30px;
@@ -111,6 +115,11 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      @media screen and (max-width: 1280px) {
+        font-size: 14px;
+        margin-bottom: 15px;
+        gap: 15px;
+      }
       &.active {
         color: var(--primary);
       }
@@ -123,12 +132,20 @@
         width: 32px;
         height: 32px;
         transition: all 0.3s linear;
+        @media screen and (max-width: 1280px) {
+          width: 26px;
+          height: 26px;
+        }
         img {
           max-width: 20px;
           max-height: 20px;
           -o-object-fit: contain;
           object-fit: contain;
           height: initial;
+          @media screen and (max-width: 1280px) {
+            width: 14px;
+            height: 14px;
+          }
         }
       }
       @media screen and (min-width: 992px) {
@@ -160,6 +177,10 @@
         padding-bottom: 20px;
         font-family: "GilroyMedium";
         font-size: 15.5px;
+        @media screen and (max-width:1600px) {
+          font-size: 13.5px;
+          padding-bottom: 10px;
+        }
         &:after {
           content: "";
           border-bottom: 1px solid #e5dfdf;
@@ -182,9 +203,10 @@
   margin-top: 30px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  @media screen and (max-width: 991.98px) {
+  gap:5px;
+  font-size: 15px;
+  text-transform: uppercase;
+  @media screen and (max-width: 1600px) {
     margin-top: 10px;
     font-size: 14px;
   }
@@ -232,33 +254,15 @@
   padding-top: 60px;
   width: calc(100% - 300px);
   padding-left: 60px;
+  @media screen and (max-width: 1280px) {
+    padding-top: 30px;
+    width: calc(100% - 230px);
+    padding-left: 30px;
+  }
   @media screen and (max-width: 991.98px) {
     width: 100%;
     padding-left: 0;
     padding-top: 0;
-  }
-  .status{
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'GilroySemibold';
-    font-size: 13px;
-    &:before{
-      content: "";
-      width: 8px;
-      min-width: 8px;
-      height: 8px;
-      border-radius: 100%;
-      background-color: var(--primary);
-    }
-    &.waiting{
-      color: var(--yellow);
-
-      &:before{
-        background-color: var(--yellow);
-      }
-    }
   }
   .backLink {
     font-family: "GilroyMedium";
@@ -267,7 +271,10 @@
     height: auto;
     line-height: 16px;
     margin-top: 14px;
-    @media screen and (max-width:991.98px) {
+    @media screen and (max-width: 1280px) {
+      margin-top: 3px;
+    }
+    @media screen and (max-width: 991.98px) {
       margin-top: 7px;
     }
     @media screen and (min-width: 992px) {
@@ -280,23 +287,20 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 24px;
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 10px;
+    }
     @media screen and (max-width: 991.98px) {
       margin-top: 20px;
     }
-    &.type2{
+    &.type2 {
       margin-bottom: 0;
     }
   }
   .formSwitchWrapper {
   }
   .formSwitchBody {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 24px;
-    @media screen and (max-width: 991.98px) {
-      padding: 16px;
-    }
-
+    padding: 0;
     &.accSwitchBody {
       background-color: rgba(0, 0, 0, 0);
       padding: 0 !important;
@@ -321,6 +325,14 @@
         height: auto;
       }
     }
+    .formBodyRow{
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 24px;
+      @media screen and (max-width: 991.98px) {
+        padding: 16px;
+      }
+    }
   }
 
   .pageTitle {
@@ -332,15 +344,17 @@
     align-items: center;
     // gap: 40px;
     gap: 10px;
-    @media screen and (max-width: 991.98px) {
+    @media screen and (max-width: 1280px) {
       font-size: 20px;
       line-height: 27px;
     }
-    small{
+    small {
       color: var(--gray-7);
       font-size: 18px;
+      @media screen and (max-width: 1280px) {
+        font-size: 14px;
+      }
     }
-
   }
   .subTitle {
     font-family: "GilroySemibold";
@@ -354,6 +368,9 @@
     gap: 40px;
     align-items: flex-start;
     margin-bottom: 30px;
+    @media screen and (max-width:1600px) {
+      margin-bottom: 10px;
+    }
     @media screen and (max-width: 991.98px) {
       flex-direction: column;
       gap: 10px;
@@ -364,6 +381,7 @@
       margin-top: 4px;
     }
     .moduleTitle {
+      white-space: nowrap;
       @media screen and (max-width: 991.98px) {
         margin-bottom: 0;
       }
@@ -534,15 +552,26 @@
   font-size: 14px;
   line-height: 22px;
   color: rgba(217, 4, 62, 0.6);
+  @media screen and (max-width: 1280px) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    min-height: 40px;
+    gap: 10px;
+  }
 
   .icon-info {
     margin-top: -1.1px;
     color: var(--primary);
     font-size: 20px;
+    @media screen and (max-width: 1280px) {
+      font-size: 16px;
+      margin-top: 3px;
+    }
   }
 
-  .title{
-    font-family:'GilroySemibold';
+  .title {
+    font-family: "GilroySemibold";
     font-size: 20px;
     margin-bottom: 10px;
   }
@@ -568,7 +597,7 @@
   a {
     position: relative;
     @media screen and (min-width: 992px) {
-      &:after {
+      &:not(.fixBtn):after {
         content: "";
         width: 100%;
         border-bottom: 1px dotted var(--primary);
@@ -579,7 +608,7 @@
       }
       &:hover {
         color: var(--primary);
-        &:after {
+        &:not(.fixBtn):after {
           width: 0;
         }
       }
@@ -636,9 +665,13 @@
     padding: 30px;
     min-height: 280px;
     position: relative;
+
     @media screen and (max-width: 991.98px) {
       padding: 16px;
       gap: 10px;
+    }
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
     }
 
     .imageWrapper {
@@ -650,11 +683,28 @@
       aspect-ratio: 3 / 2;
       border-radius: 24px;
       overflow: hidden;
+      background-color: var(--light-gray);
+      z-index: 1;
+      &:before{
+        content: "\e91b";
+        font-family: 'customFont';
+        font-size:70px;
+        filter: grayscale(1);
+        opacity: 0.2;
+        position: absolute;
+        z-index: -1;
+        @media screen and (max-width: 991.98px) {
+          font-size: 30px;
+        }
+      }
       @media screen and (max-width: 991.98px) {
-      max-width: 100px;
-      // width: 70px;
+        max-width: 100px;
+        // width: 70px;
         // height: 70px;
         // min-width: 70px;
+      }
+      @media screen and (max-width: 480px) {
+       max-width: initial;
       }
     }
     .body {
@@ -663,15 +713,47 @@
       // align-items: flex-start;
       gap: 20px;
       width: 100%;
+      @media screen and (max-width: 1600px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       @media screen and (max-width: 991.98px) {
         flex-direction: column;
         gap: 10px;
       }
       .bodyInfo {
-        flex: 1;
+        @media screen and (min-width: 1660px) {
+          flex: 1;
+        }
       }
       .detailsButton {
         // margin-top: 50px;
+      }
+      .bodyRightColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media screen and (max-width: 1600px) {
+          align-items: flex-start;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .fixBtn {
+          @media screen and (max-width: 1600px) {
+            height: 35px !important;
+          }
+        }
+
+        &.type2{
+          @media screen and (max-width:1600px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+          }
+        }
       }
     }
     .otherButton {
@@ -706,10 +788,10 @@
       font-size: 22px;
       line-height: 34px;
       font-family: "GilroySemibold";
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 1700px) {
         font-size: 18px;
         line-height: 25px;
-    }
+      }
 
       &.type2 {
         display: inline-block;
@@ -769,7 +851,7 @@
       display: flex;
       align-items: center;
       margin-top: 5px;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
@@ -789,10 +871,10 @@
         justify-content: center;
         margin-left: 10px;
         gap: 10px;
-        @media screen and (max-width:991.98px) {
+        @media screen and (max-width: 991.98px) {
           margin-left: 0;
         }
-        @media screen and (min-width:992px) {
+        @media screen and (min-width: 992px) {
           &:before {
             content: "";
             width: 4px;
@@ -820,10 +902,10 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width: 991.98px) {
         font-size: 14px;
         line-height: 22px;
-    }
+      }
       &.type2 {
         color: var(--primary);
       }
@@ -837,26 +919,22 @@
       }
     }
     &.waiting {
-      border-color: #ff6815;
-      .leftColumn {
-        border-right-color: #ff6815;
-      }
       .dateInfo {
         .date,
         .loc {
-          color: #ff6815;
+          color: var(--yellow);
           &:before {
-            background-color: #ff6815;
+            background-color: var(--yellow);
           }
         }
       }
       .date {
         .day {
-          background-color: #ff6815;
+          background-color: var(--yellow);
         }
       }
       .category {
-        background-color: #ff6815;
+        background-color: var(--yellow);
       }
 
       .message {
@@ -867,15 +945,16 @@
         height: auto;
       }
       .button-primary {
-        background-color: #ff6815 !important;
-        border-color: #ff6815 !important;
+        background-color: var(--yellow) !important;
+        border-color: var(--yellow) !important;
+        @media screen and (min-width: 992px) {
+          &:hover {
+            color: var(--yellow);
+          }
+        }
       }
     }
     &.paymentWait {
-      border-color: var(--primary);
-      .leftColumn {
-        border-right-color: var(--primary);
-      }
       .dateInfo {
         .date,
         .loc {
@@ -899,13 +978,14 @@
       }
     }
     &.completed {
-      border-color: var(--success);
-      .leftColumn {
-        border-right-color: var(--success);
-      }
       .dateInfo {
-        .date {
+        .date,
+        .loc {
           color: var(--success);
+
+          &:before {
+            background-color: var(--success);
+          }
         }
       }
       .date {
@@ -915,6 +995,15 @@
       }
       .category {
         background-color: var(--success);
+      }
+      .button-primary {
+        background-color: var(--success) !important;
+        border-color: var(--success) !important;
+        @media screen and (min-width: 992px) {
+          &:hover {
+            color: var(--success);
+          }
+        }
       }
     }
     &.cancelled {

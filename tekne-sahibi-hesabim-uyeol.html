@@ -76,7 +76,7 @@
         <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
-                    <a href="index.html"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
                         <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
@@ -490,7 +490,7 @@
                         </div>
                         <div class="userContent">
                             <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-7 mx-auto">
-                                <form class="form needs-validation" novalidate>
+                                <div role="form" data-submit="btnHesapOlustur" class="form needs-validation" novalidate>
                                     <div class="mb-3">
                                         <input type="text" name="name" class="form-control textMask" placeholder="Adınız" required>
                                         <div class="invalid-feedback">
@@ -535,7 +535,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <span class="fixBtn button-primary w-100">
-                                            <input type="submit" value="Hesap Oluştur">
+                                            <input id="btnHesapOlustur" type="submit" value="Hesap Oluştur" />
                                         </span>
                                     </div>
                                 </form>

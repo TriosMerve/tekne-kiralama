@@ -17,7 +17,8 @@
       padding: 20px 0;
       transition: all 0.3s linear;
       // box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2) !important;
-      box-shadow: 0 12px 10px rgba(217, 4, 62, 0.3) !important;
+      // box-shadow: 0 12px 10px rgba(217, 4, 62, 0.3) !important;
+      box-shadow: 0 3px 6px rgba(217, 4, 62, 0.3) !important;
       .filterTop{
 
         & > .filterModalButton {
@@ -28,7 +29,7 @@
       }
       &.sticky {
         top: 85px;
-        @media screen and (max-width:991.98px) {
+        @media screen and (max-width:1600px) {
           top: 65px;
         }
         .filterTop{

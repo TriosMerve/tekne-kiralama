@@ -7,6 +7,21 @@ $(window).on("load", function () {
   }
 });
 
+/*Scrooll page fixed header */
+let lastScrollY = window.scrollY;
+
+document.addEventListener("scroll", function () {
+  var header = document.getElementById("header");
+
+  // Header için sticky sınıfı ekleme
+  if (window.scrollY > 0) {
+    header.classList.add("sticky-top");
+  } else {
+    header.classList.remove("sticky-top");
+  }
+});
+
+
 if (typeof Fancybox !== "undefined") {
   Fancybox.bind("[data-fancybox]", {
     compact: !1,

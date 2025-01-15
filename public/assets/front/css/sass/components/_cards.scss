@@ -280,7 +280,7 @@
     }
   }
   &.third {
-    gap: 60px;
+    gap: 80px 60px;
     @media screen and (max-width: 991.98px) {
       gap: 50px;
     }

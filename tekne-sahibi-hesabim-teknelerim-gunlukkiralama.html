@@ -48,16 +48,17 @@
         rel="stylesheet">
 
 
-    <title>Tekne Sahibi</title>
+    <title>Tekne Kiralama</title>
 
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    
-    <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
     <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
+    <link rel="stylesheet" href="public/assets/plugins/sweetalert/sweetalert2.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
@@ -73,12 +74,12 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header">
+        <header id="header" class="">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
@@ -133,31 +134,32 @@
                                 </ul>
                                 <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
                             </form>
-                       </div>
+                        </div> -->
                         <div class="dropdown">
-                            <button class="dropdown-toggle userButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class=""><span class="icon-user"></span> </div>
+                            <button class="dropdown-toggle userButton type2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="otherUserMenuIcon">ES</div>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="uye-hesabim-profile.html"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-taleplerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Taleplerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-rezervasyonlarim.html"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Rezervasyonlarım</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-favorilerim.html"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Favorilerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-faturabilgi.html"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Fatura Bilgilerim</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
-                                <li><a class="dropdown-item" href="uye-hesabim-ayarlar.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
+                                <li><a class="dropdown-item active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Teknelerim</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Talepler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Rezervasyonlar</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Ödemeler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
                             </ul>
                         </div>
-                        <div class="buttons d-lg-flex d-none pe-3 ps-3" >
-                            <a href="#UyeGirisiModal" class="fixBtn button-outline" data-bs-toggle="modal">Üye Girişi</a>
-                            <a href="#UyeOlModal" class="fixBtn button-primary" data-bs-toggle="modal">Üye Ol</a>
+                        <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
+                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                         </div>
                         <a href="#" class="menuNavButton openMenuButton ms-4">
                             <span></span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
-                <div class="headerMenuNav">
+                <!-- <div class="headerMenuNav">
                     <div class="navMenu">
                         <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
                             <div class="row navMenuTop mx-0">
@@ -200,8 +202,8 @@
                                         </li>
                                     </ul>
                                     <div class="buttons d-lg-none" >
-                                        <a href="#UyeGirisiModal" class="fixBtn button-primary" data-bs-toggle="modal">Üye Girişi</a>
-                                        <a href="#UyeOlModal" class="fixBtn button-secondary" data-bs-toggle="modal">Üye Ol</a>
+                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                                     </div>
                                     <div class="socialWrapper">
                                         <div class="socialMedia">
@@ -471,240 +473,291 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </header>
 
 
         <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
         <main>
-            <section class="pageSection">
+            <section class="pageSection type2">
+                <div class="overlay"></div>
                 <div class="container-3xl">
-                    <div class="sectionContent">
-                        <div class="breadCrumbWrapper">
-                            <div class="breadcrumb">
-                                <a href="index.html">TekneKiralama.com</a>
-                                <a href="#" class="active">Tekne Sahibi</a>
-                            </div>
-                        </div>
-                        <div class="twiceColumn flex-lg-row flex-column-reverse pb-5">
-                            <div class="leftColumn pageDetailsContent row mx-0 pe-lg-5 staticColumn">
-                                <div class="sectionHead type2 px-0">
-                                    <h1 class="sectionTitle">
-                                        REZERVASYON TALEP DETAYI
-                                    </h1>
+                    <div class="userPageContainer">
+                        <div class="row mx-0">
+                            <div class="mobileSideMenu d-lg-none"><span class="text">Tekne Yönetimi</span><span class="icon-arrow-right"></span> </div>
+                            <div class="sidenavWrapper">
+                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
+                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
+                                <div class="sideNav type2">
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim-gunlukkiralama.html"><span>Günlük Kiralama</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-tekneturlari.html"><span>Tekne Turları</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
                                 </div>
-                                <div class="bg-gray rounded-5 p-lg-5 p-4">
-                                    <div class="moduleHead d-flex justify-content-between align-items-center mb-4">
-                                        <div class="moduleTitle mb-0">TEKNE BİLGİSİ</div>
-                                        <a href="#"><span class="icon-open fs-1"></span></a>
+                            </div>
+                            <div class="sideContentWrapper">
+                                <div class="col-xxl-9 px-0">
+                                    <div class="sideHead">
+                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
                                     </div>
-                                    <div class="infoDetails">
-                                        <div class="d-flex align-items-stretch gap-5">
-                                            <figure>
-                                                <img src="public/assets/images/media/onecikantekne/tekne-2.jpg" alt="">
-                                            </figure>
-                                            <div class="detailsHead d-inline-block w-auto">
-                                                <div class="pageTitle pe-lg-3">
-                                                    <div class="d-flex align-items-center justify-content-between">
-                                                        <div class="location">Fethiye, Muğla</div>
-                                                        <!-- <div class="id d-none d-lg-block">ID:1789034A</div> -->
+                                    <div class="sideContent">
+                                        <div class="bg-gray rounded-5 p-lg-5 p-4">
+                                            <div class="moduleHead">
+                                                <div class="moduleTitle">Kiralama Seçenekleri</div>
+                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                            </div>
+                                            <div class="form needs-validation type2" novalidate>
+                                                <div class="formSwitchWrapper">
+                                                    <label for="">Günlük Kiralama</label>
+                                                    <div class="custom-switch ms-auto">
+                                                        <input type="checkbox" id="gunlukKiralamaSwitch" class="custom-switch-input">
+                                                        <label for="gunlukKiralamaSwitch" class="custom-switch-label">
+                                                          <span class="custom-switch-indicator"></span>
+                                                          <span class="custom-switch-text apply">Evet</span>
+                                                          <span class="custom-switch-text disabled">Hayır</span>
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                                <div class="formSwitchBody disabled mb-5">
+                                                    <div class="formBodyRow">
+                                                        <div class="row">
+                                                            <div class="mb-lg-4 mb-3 col-lg-6">
+                                                                <label for="iptalPolitikasi" class="customLabel">İptal Politikası</label>
+                                                                <select name="iptalPolitikasiSelect" id="iptalPolitikasi" class="customSelect iptalPolitikasi type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">3 Gün</option>
+                                                                    <option value="">1 Hafta</option>
+                                                                    <option value="">10 Gün</option>
+                                                                    <option value="">1 Ay</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-6">
+                                                                <label for="odemeSecenekleri" class="customLabel">Ödeme Seçenekleri</label>
+                                                                <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">Teknede Nakit</option>
+                                                                    <option value="">Teknede Kart</option>
+                                                                    <option value="">Nakit</option>
+                                                                    <option value="">Kart</option>
+                                                                    <option value="">Havale</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-6">
+                                                                <label for="tekneadi" class="customLabel">Minimum Kiralama Gün Sayısı</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Gün Sayısı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-3">
+                                                                <label for="teknetipiSelect" class="customLabel">Check In Saati</label>
+                                                                <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">10:00</option>
+                                                                    <option value="">12:00</option>
+                                                                    <option value="">13:00</option>
+                                                                    <option value="">14:00</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-3">
+                                                                <label for="teknetipiSelect" class="customLabel">Check Out Saati</label>
+                                                                <select name="teknetipiSelect" id="teknetipiSelect" class="customSelect teknetipiSelect type2" required>
+                                                                    <option value="" selected hidden>Saat Seç</option>
+                                                                    <option value="">10:00</option>
+                                                                    <option value="">12:00</option>
+                                                                    <option value="">13:00</option>
+                                                                    <option value="">14:00</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Tekne Tipinin Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="info pt-lg-4 mt-2 ps-lg-3 mb-3 mb-lg-0"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 d-flex align-items-center gap-5">
+                                                            <a href="#" class="saveButton mt-0"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                        </div>
                                                     </div>
-                                                    <h1 class="title">Göcek 14.2m Kiralık Yelkenli</h1>
+                                                    <div class="moduleHead mt-5 mb-3">
+                                                        <div class="moduleTitle mb-0">Fiyatlar</div>
+                                                    </div>
+                                                    <div class="formBodyRow">
+                                                        <div class="moduleHead">
+                                                            <div class="moduleTitle mb-0">Liste Fiyatı</div>
+                                                            <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="mb-lg-4 mb-3 col-xxl-2 col-lg-3">
+                                                                <label for="odemeSecenekleri" class="customLabel">Kur</label>
+                                                                <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                    <option value="" selected hidden>Seçiniz</option>
+                                                                    <option value="">Türk Lirası</option>
+                                                                    <option value="">Dolar</option>
+                                                                    <option value="">Euro</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Kur Seçiniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-4 col-9">
+                                                                <label for="tekneadi" class="customLabel">Liste Fiyatı</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Liste Fiyatı Giriniz
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-3 d-flex align-items-center ps-0">
+                                                                <label for="tekneadi" class="customLabel mt-4 pt-3 text-primary fs-xxl-3"> / Gün</label>
+                                                            </div>
+                                                        
+                                                            <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                <div class="d-flex align-items-end h-100 gap-5">
+                                                                    <a href="#" class="saveButton mt-0"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="bg-light-gray rounded-5 p-lg-4 p-3 mt-4">
+                                                            <div class="moduleHead mb-3 justify-content-between">
+                                                                <div>
+                                                                    <div class="moduleTitle mb-0">Dönemsel Fiyatlar</div>
+                                                                    <div class="info mt-3"><span class="icon-info"></span><span>Liste Fiyatı girilse bile buradaki fiyatlar geçerli olacaktır. </span></div>
+                                                                </div>
+                                                                <a href="#" class="newSeasonPriceButton fixBtn button-primary fs-6 mb-4 h-auto py-3 px-4">Yeni Dönem Fiyatı Ekle</a>
+                                                            </div>
+                                                            <div class="SeasonPriceNew">
+                                                                <div class="row">
+                                                                    <div class="mb-lg-4 col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Başlangıç Tarihi</label>
+                                                                        <input type="text" id="tekneadi" name="tekneadi" class="form-control date-input startDateInput" placeholder="Başlangıç Tarihi" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Minimum Kiralama Gün Sayısı
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-lg-4 col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Bitiş Tarihi</label>
+                                                                        <input type="text" id="tekneadi" name="tekneadi" class="form-control date-input endDateInput" placeholder="Bitiş Tarihi" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Minimum Kiralama Gün Sayısı
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-lg-4 mb-3 col-xxl-2 col-lg-3">
+                                                                        <label for="odemeSecenekleri" class="customLabel">Kur</label>
+                                                                        <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                            <option value="" selected hidden>Seçiniz</option>
+                                                                            <option value="tl">Türk Lirası</option>
+                                                                            <option value="dolar">Dolar</option>
+                                                                            <option value="euro">Euro</option>
+                                                                        </select>
+                                                                        <div class="invalid-feedback">
+                                                                            Lütfen Ödeme Kuru Seçiniz
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mb-lg-4 col-xxl-4 col-lg-3">
+                                                                        <label for="fiyat" class="customLabel">Fiyat</label>
+                                                                        <input type="text" id="fiyat" name="fiyat" class="form-control" placeholder="Fiyat" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Fiyat Giriniz
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 d-flex align-items-center gap-5 justify-content-end">
+                                                                    <a href="#" class="saveButton mt-lg-0"><span class="icon-save"></span><span>Ekle</span></a>
+                                                                </div>
+                                                        
+                                                        
+                                                            </div>
+                                                            <div class="seasonPriceList">
+                                                                <div class="seasonsItem row">
+                                                                    <div class="col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Başlangıç Tarihi</label>
+                                                                        <div class="startDate text">2025-01-08</div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Bitiş Tarihi</label>
+                                                                        <div class="endDate text">2025-01-08</div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <label for="tekneadi" class="customLabel">Fiyat</label>
+                                                                        <div class="price text"><span class="currencly">₺</span> 1200</div>
+                                                                    </div>
+                                                                    <div class="col-lg-2">
+                                                                        <a href="#" class="tekneSilButon textLink noAfter mt-4"><span class="icon-delete"></span><i>Sil</i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="seasonsItem row">
+                                                                    <div class="col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Başlangıç Tarihi</label>
+                                                                        <div class="startDate text">2025-01-08</div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Bitiş Tarihi</label>
+                                                                        <div class="endDate text">2025-01-08</div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <label for="tekneadi" class="customLabel">Fiyat</label>
+                                                                        <div class="price text"><span class="currencly">₺</span> 1200</div>
+                                                                    </div>
+                                                                    <div class="col-lg-2">
+                                                                        <a href="#" class="tekneSilButon textLink noAfter mt-4"><span class="icon-delete"></span><i>Sil</i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="seasonsItem row">
+                                                                    <div class="col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Başlangıç Tarihi</label>
+                                                                        <div class="startDate text">2025-01-08</div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 customPicker">
+                                                                        <label for="tekneadi" class="customLabel">Bitiş Tarihi</label>
+                                                                        <div class="endDate text">2025-01-08</div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <label for="tekneadi" class="customLabel">Fiyat</label>
+                                                                        <div class="price text"><span class="currencly">₺</span> 1200</div>
+                                                                    </div>
+                                                                    <div class="col-lg-2">
+                                                                        <a href="#" class="tekneSilButon textLink noAfter mt-4"><span class="icon-delete"></span><i>Sil</i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="type">Bavaria 46 Cruiser (2009 / 2021 refit)</div>
-                                                <div class="tags">
-                                                    <span>Seyir 14 kişi</span>
-                                                    <span>14.2m</span>
-                                                    <span>3 kabin</span>
-                                                    <span>Konaklama 6 kişi</span>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                   
-                                    
-                                </div>
-                                <div class="bg-gray rounded-5 p-lg-5 p-4 mt-5">
-                                    <div class="moduleHead">
-                                        <div class="moduleTitle">TALEP BİLGİLERİ</div>
-                                    </div>
-                                    <div class="infoDetails">
-                                        <div class="formDetails">
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Talep Durumu</div>
-                                                <div class="col-lg-6 content waiting">Cevap Bekleniyor</div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Talep Id</div>
-                                                <div class="col-lg-6 content">#15987</div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Talep Tipi</div>
-                                                <div class="col-lg-6 content">Tekne Kiralama</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    
-                                </div>
-                                <div class="bg-gray rounded-5 p-lg-5 p-4 mt-5">
-                                    <div class="moduleHead">
-                                        <div class="moduleTitle">REZERVASYON TARİHLERİ</div>
-                                    </div>
-                                    <div class="infoDetails">
-                                        <div class="formDetails">
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Check In</div>
-                                                <div class="col-lg-6 content">05.01.2024 &nbsp; &nbsp; / &nbsp;&nbsp;10:00</div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Check Out</div>
-                                                <div class="col-lg-6 content">30.04.2024 &nbsp; &nbsp; / &nbsp;&nbsp;16:00</div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Kiralama Süresi</div>
-                                                <div class="col-lg-6 content">10 Gün</div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Kişi Sayısı</div>
-                                                <div class="col-lg-6 content">2 Kişi</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    
-                                </div>
-                                <div class="bg-gray rounded-5 p-lg-5 p-4 mt-5">
-                                    <div class="moduleHead">
-                                        <div class="moduleTitle">YEMEK VE EKSTRALAR</div>
-                                    </div>
-                                    <div class="infoDetails">
-                                        <div class="formDetails">
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Yemek 1</div>
-                                                <div class="col-lg-3 content">1500 TL &nbsp; / &nbsp; 2 kişi</div>
-                                                <div class="col-lg-3 text">Detayları için <a href="#" class="textLink">tıklayınız</a></div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Keman</div>
-                                                <div class="col-lg-3 content">3500 TL &nbsp; / &nbsp; 2 saat</div>
-                                                <div class="col-lg-3 text">Detayları için <a href="#" class="textLink">tıklayınız</a></div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Balon Süsleme</div>
-                                                <div class="col-lg-3 content">1750 TL</div>
-                                                <div class="col-lg-3 text">Detayları için <a href="#" class="textLink">tıklayınız</a></div>
-                                            </div>
-                                            <div class="item row mx-0">
-                                                <div class="col-lg-4 title">Kutlama Pastası</div>
-                                                <div class="col-lg-3 content">3500 TL &nbsp; / &nbsp; 2 saat</div>
-                                                <div class="col-lg-3 text">Detayları için <a href="#" class="textLink">tıklayınız</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    
-                                </div>
-                            </div>
-                            <div class="rightColumn">
-                                <div class="fixedColumn">
-                                    <div class="detailsInfoRightColumn">
-                                        <div class="caption">
-                                            Bizi tercih ettiğiniz için teşekkürler
-                                        </div>
-                                        <p>LiwinCo is bringing flexible living to major cities all over the world with our best-in-class, move-in ready furnished apartments. Our stylish homes are located in the best neighborhoods in major metropolitan areas so that our guests can make the most of their time.</p>
-                                        <div class="callColumn p-4 mt-5">
-                                            <div class="icon">
-                                                <img src="public/assets/images/statics/icons/call.svg" alt="">
-                                            </div>
-                                            <div>
-                                                <b>Detek Hattı</b><br>
-                                                <a href="tel:+90-850-309-36-56">0850 309 36 56</a>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="whatsappInfo p-4 mt-5">
-                                            <div class="icon">
-                                                <img src="public/assets/images/statics/icons/whatsapp.svg" alt="">
-                                            </div>
-                                            <div>
-                                                Nasıl Yardımcı Olabiliriz?
-                                            </div>
-                                        </a>
-                                    </div>
-                                    
-    
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5 mt-5">
-                            <blockquote class="blockquote py-5">
-                                <span class="icon-info"></span> 
-                                <div>
-                                    <div class="title">Your bank transfer of CAD 1950 is expected.</div>
-                                    <p>
-                                        Your reservation process will be completed when your payment reaches us.
-                                    </p>
-                                </div>
-                            </blockquote>
-                        </div>
-                        <div class="bg-gray rounded-5 p-lg-5 p-4 mt-5">
-                            <div class="moduleHead">
-                                <div class="moduleTitle">ÖDEME PLANI</div>
-                            </div>
-                            <div class="infoDetails">
-                                <div class="formDetails">
-                                    <div class="item row mx-0 gap-3">
-                                        <div class="col-lg-3 title">Toplam Kiralama Bedeli</div>
-                                        <div class="col-lg-2 content">8500 TL</div>
-                                        <div class="col-lg-1 px-0 ps-3"><a href="#" class="fixBtn button-primary h-100">PAY NOW</a></div>
-                                        <div class="col text text-primary d-flex align-items-center gap-3"><span class="icon-info fs-2"></span><span>You must pay First Rent 2 days before entering the rooms.</span></div>
-                                    </div>
-                                    <div class="item row mx-0 gap-3">
-                                        <div class="col-lg-3 title">02.02.2024</div>
-                                        <div class="col-lg-2 content">CAD 2.000</div>
-                                    </div>
-                                    <div class="item row mx-0 gap-3">
-                                        <div class="col-lg-3 title">01.03.2024</div>
-                                        <div class="col-lg-2 content">CAD 2.000</div>
-                                    </div>
-                                    <div class="item row mx-0 gap-3">
-                                        <div class="col-lg-3 title">29.03.2024</div>
-                                        <div class="col-lg-2 content">CAD 357</div>
-                                    </div>
-                                    <div class="item row mx-0 gap-3">
-                                        <div class="col-lg-3 title">Last Rent <span>(Paid)</span></div>
-                                        <div class="col-lg-2 content "><s>CAD 200</s></div>
-                                        <div class="col-lg-3 content type2 p-0 ps-3"><div class="bg-white h-100"><b>Move Out Date:</b> 30.04.2024</div></div>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-            <!--E-Bulten section-->
-            <section class="eBultenSection">
-                <div class="container-3xl">
-                    <div class="bg-primary rounded-5 sectionWrapper">
-                        <div class="title">
-                            SİZDE MİSAFİRİMİZ OLMAK İSTER MİSİNİZ ?
-                        </div>
-                        <div class="emailInputWrapper">
-                            <input type="email"  placeholder="E-mail adresiniz">
-                            <a href="#" class="fixBtn button-outline type3">Abone ol</a>
-                        </div>
-                        <div id="captchaWrapper">
-                            <img src="public/assets/images/statics/captcha.png" alt="">
-                        </div>
+                
                     </div>
                 </div>
             </section>
-            
+
+
 
         </main>
 
@@ -712,123 +765,6 @@
         <footer>
             <div class="container-3xl">
                 <div class="bg-gray footer">
-                    <div class="footerTop">
-                        <div class="title">Sizin için hazırladığımız özel fikirler</div>
-                        <div class="verticalCustomScroll">
-                            <ul class="nav nav-tabs customTab footerTab" id="footerTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="populer-tab" data-bs-toggle="tab" data-bs-target="#populer-tab-pane" type="button" role="tab" aria-controls="populer-tab-pane" aria-selected="true">Popüler Aramalar</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="gezilecekkoy-tab" data-bs-toggle="tab" data-bs-target="#gezilecekkoy-tab-pane" type="button" role="tab" aria-controls="gezilecekkoy-tab-pane" aria-selected="false">Gezilecek Koylar</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="organizasyon-tab" data-bs-toggle="tab" data-bs-target="#organizasyon-tab-pane" type="button" role="tab" aria-controls="organizasyon-tab-pane" aria-selected="false">Organizasyonlar</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-content customTabContents" id="footerTabContent">
-                              <div class="tab-pane fade show active" id="populer-tab-pane" role="tabpanel" aria-labelledby="populer-tab" tabindex="0">
-                                <div class="listItems">
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Yat</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Göcek</div>
-                                        <div class="boatName">Kiralık Katamaran</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Gulet</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                </div>
-
-                              </div>
-                              <div class="tab-pane fade" id="gezilecekkoy-tab-pane" role="tabpanel" aria-labelledby="gezilecekkoy-tab" tabindex="0">
-                                <div class="listItems">
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Cennet Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Göcek</div>
-                                        <div class="boatName">Hattat Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Salih Adası</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Yalıkavak</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Turgutreis</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Bağla Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kissebükü Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Aspat Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Karaincir Koyu</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                  
-                                </div>
-                              </div>
-                              <div class="tab-pane fade" id="organizasyon-tab-pane" role="tabpanel" aria-labelledby="organizasyon-tab" tabindex="0">
-                                <div class="listItems">
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Yat</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Göcek</div>
-                                        <div class="boatName">Kiralık Katamaran</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Gulet</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="cityName">Bodrum</div>
-                                        <div class="boatName">Kiralık Tekne</div>
-                                    </a>
-                                </div>
-                              </div>
-                          </div>
-                    </div>
-
                     <div class="footerContent">
                         <div class="leftColumn">
                             <div class="d-flex flex-column">
@@ -892,12 +828,12 @@
                     </div>
 
                     <div class="footerBottom d-flex align-items-center">
-                        <div class="copyRightWrapper">
+                        <div class="copyRightWrapper pe-5">
                             <div class="copyRight">
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
-                        <a class="fixBtn button-outline ms-5" data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal" target="_blank">Tekne Sahibi Yönetim Paneli</a>
+                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
@@ -905,10 +841,8 @@
         </footer>
     </div>
 
-    <!--modallar-->
-
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
@@ -932,8 +866,8 @@
                             Lütfen Parolanızı Giriniz
                         </div>
                     </div>
-                    <div class="mb-3 text-end">
-                        <a href="#" class="forgotLink" data-bs-toggle="modal" data-bs-target="#sifremiUnuttumModal">Şifremi Unuttum</a>
+                    <div class="mb-5 text-end">
+                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
                     </div>
                     <div class="mb-3">
                         <span class="fixBtn button-primary w-100">
@@ -941,51 +875,12 @@
                         </span>
                     </div>
                 </form>
-                <hr>
+                <hr class="my-5">
                 <div class="otherLogin">
-                    <a href="#" class="fixBtn button-outline-2 w-100 mb-3"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Google ile Giriş Yap</span></a>
-                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Facebook ile Giriş Yap</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
                 </div>
-                <hr>
                 <div class="signText paragraph text-center pt-4">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="sifremiUnuttumModal" aria-hidden="true" aria-labelledby="sifremiUnuttumModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Şifremi Unuttum</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Şifreni Yenile">
-                        </span>
-                    </div>
-                    <div class="paragraph type3">
-                        Hesabınıza erişim sağlayabilmeniz için kayıtlı e-posta adresinizi girin. Size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz. Gelen kutunuzu ve spam'i kontrol etmeyi unutmayın!
-                    </div>
-                </form>
-                <hr>
-                <div class="signText paragraph text-center">
                     Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
                 </div>
                 
@@ -996,7 +891,7 @@
 
 
     <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
@@ -1027,10 +922,10 @@
                                 </span>
                             </div>
                         </form>
-                        <hr>
+                        <hr class="my-5">
                         <div class="otherLogin">
-                            <a href="#" class="fixBtn button-outline-2 w-100 mb-3"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Google ile Kayıt Ol</span></a>
-                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Facebook ile Kayıt Ol</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
                         </div>
                     </div>
                     <div class="stepTwo d-none">
@@ -1045,23 +940,6 @@
                                 <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
                                 <div class="invalid-feedback">
                                     Lütfen Soyadınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                    Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="phoneWrapper">
-                                    <div class="codeWrapper position-relative">
-                                        <input type="tel" placeholder="" id="telephone">
-                                    </div>
-                                    <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                                    <div class="invalid-feedback w-100">
-                                        Lütfen Telefon Numaranızı Giriniz
-                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -1085,7 +963,6 @@
                         </form>
                     </div>
                 </div>
-                <hr>
                 <div class="signText paragraph text-center pt-4">
                     Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
                 </div>
@@ -1093,7 +970,6 @@
           </div>
         </div>
     </div>
-
 
     <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
         <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
@@ -1155,248 +1031,216 @@
         </div>
     </div>
 
-
-
-    <div class="modal fade type2" id="UyeGirisiTekneModal" aria-hidden="true" aria-labelledby="UyeGirisiTekneModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeGirisiTekneModalLabel">Üye Girişi</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                        Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                        <div class="invalid-feedback">
-                            Lütfen Parolanızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3 text-end">
-                        <a href="#" class="forgotLink" data-bs-toggle="modal" data-bs-target="#sifremiUnuttumTekneModal">Şifremi Unuttum</a>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Giriş Yap">
-                        </span>
-                    </div>
-                </form>
-                <hr>
-                <div class="signText paragraph text-center pt-4">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="sifremiUnuttumTekneModal" aria-hidden="true" aria-labelledby="sifremiUnuttumTekneModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="sifremiUnuttumTekneModalLabel">Şifremi Unuttum</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Şifreni Yenile">
-                        </span>
-                    </div>
-                    <div class="paragraph type3">
-                        Hesabınıza erişim sağlayabilmeniz için kayıtlı e-posta adresinizi girin. Size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz. Gelen kutunuzu ve spam'i kontrol etmeyi unutmayın!
-                    </div>
-                </form>
-                <hr>
-                <div class="signText paragraph text-center">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-
-    <div class="modal fade type2" id="UyeOlTekneModal" aria-hidden="true" aria-labelledby="UyeOlTekneModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
-                    <div class="stepHead">
-                        <span class="">1</span>
-                        <span>2</span>
-                    </div>
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlTekneModalLabel">Üye Hesabı Oluştur</div>
-                    </div>
-                </div>
-                <div class="signupFormSteps">
-                    <div class="stepOne">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Devam Et">
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="stepTwo d-none">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Adınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Soyadınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                    Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="phoneWrapper">
-                                    <div class="codeWrapper position-relative">
-                                        <input type="tel" placeholder="" id="telephone">
-                                    </div>
-                                    <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                                    <div class="invalid-feedback w-100">
-                                        Lütfen Telefon Numaranızı Giriniz
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Parolanızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-5 ps-3">
-                                <label class="container-check">
-                                    <input type="checkbox" name="address">
-                                    <span class="checkmark"></span>
-                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
-                                </label>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Hesap Oluştur">
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr>
-                <div class="signText paragraph text-center pt-4">
-                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal">Giriş Yap</a>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
-    <script src="public/assets/plugins/jquery.easing.min.js"></script>
-    <script src="public/assets/plugins/jquery.pause.js"></script>
     <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
-    <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
 
 
+    <script src="public/assets/plugins/sweetalert/sweetalert2.js"></script>
     <script src="public/assets/plugins/jquery.mask.min.js"></script>
     <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
 
-    <script src="public/assets/front/js/app.js"></script>
-    <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/plugins/fullcalendar/index.global.js"></script><!--müsaitlik takvimi ıcın kullanılıyor-->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Flatpickr Türkçe Dil Desteği -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/tr.js"></script>
+
     <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
 
     <script>
-        var headerHeight = $("header").outerHeight();
-        var staticColumn =
-        $(".staticColumn").offset().top + $(".staticColumn").outerHeight();
-        var fixedColumn = $(".fixedColumn");
-        var fixedColumnTop = fixedColumn.offset().top;
-        var wWidth = $(window).width();
-
-        $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();
-        // Header yüksekliğinden +100px daha aşağı scroll yapıldığında show class'ı ekle
-        if (scrollTop > fixedColumnTop - 100) {
-            fixedColumn.addClass("show");
-        } else {
-            fixedColumn.removeClass("show");
-        }
-
-        // pageContent'in altına geldiğimizde absolute class'ı ekle
-        if (scrollTop + $(window).height() - 300 >= staticColumn) {
-            fixedColumn.addClass("absolute");
-        } else {
-            fixedColumn.removeClass("absolute");
-        }
-
-        if (isDatepickerOpen) {
-            if (wWidth < 992) {
-            if (scrollTop > fixedColumnTop - 100) {
-                $(".dateColumnWrapper").addClass("fixed selected");
-            }
-            }
-            console.log("Datepicker açıkken sayfa scroll edildi.");
-        }
-        if (wWidth < 992) {
-            if (scrollTop > fixedColumnTop - 100) {
-            $(".dateColumnWrapper").addClass("fixed");
-            $(".dateColumnWrapper .dateColumn .title").text("Tarih Seçimini göster");
-            } else {
-            $(".dateColumnWrapper").removeClass("fixed");
-            $(".dateColumnWrapper .dateColumn .title").text(
-                "Fiyatları görmek için tarih seçiniz"
-            );
-            }
-        }
+        $('.customPicker .date-input').flatpickr({
+            locale: 'tr', // Türkçe dil desteği
+            enableTime: false,
+            dateFormat: 'Y-m-d',
+            disableMobile: true, // Mobilde Flatpickr'yi aktif et
+            minDate: "today" // Bugünden önceki tarihleri engelle
         });
+        document.addEventListener("DOMContentLoaded", () => {
+            // Tüm custom-switch-input elemanlarını seç
+            const switches = document.querySelectorAll(".custom-switch-input");
+
+            switches.forEach((switchElement) => {
+                switchElement.addEventListener("change", function () {
+                    // İlgili formSwitchBody'yi bul
+                    const formSwitchBody = this.closest(".formSwitchWrapper").nextElementSibling;
+
+                    if (this.checked) {
+                        // Checkbox checked ise disabled sınıfını kaldır
+                        formSwitchBody.classList.remove("disabled");
+                    } else {
+                        // Checkbox unchecked ise disabled sınıfını ekle
+                        formSwitchBody.classList.add("disabled");
+                    }
+                });
+            });
+
+            const newSeasonPriceButton = document.querySelector(".newSeasonPriceButton");
+            const seasonPriceNew = document.querySelector(".SeasonPriceNew");
+            const saveButton = document.querySelector(".SeasonPriceNew .saveButton");
+            const seasonPriceList = document.querySelector(".seasonPriceList");
+
+            // Dinamik olarak eklenen öğeler için silme işlemi
+            seasonPriceList.addEventListener("click", function (e) {
+                if (e.target.classList.contains("tekneSilButon") || e.target.closest(".tekneSilButon")) {
+                    e.preventDefault();
+
+                    // Silme işlemi: Bu butona ait olan parent öğesini sil
+                    const seasonItem = e.target.closest(".seasonsItem");
+                    if (seasonItem) {
+                        seasonItem.remove();
+                    }
+                }
+            });
+            
+            if (!seasonPriceList) {
+                return;
+            }
+
+            document.querySelector('.newSeasonPriceButton').addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const originalItem = document.querySelector('.seasonsItem');
+                if (!originalItem) {
+                    console.error('.seasonsItem öğesi bulunamadı!');
+                    return;
+                }
+
+                const newSeasonItem = originalItem.cloneNode(true);
+
+                // Klonlanan alanlardaki input ve select değerlerini temizle
+                newSeasonItem.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
+
+                newSeasonItem.querySelectorAll('select').forEach(select => {
+                    select.selectedIndex = 0;
+                });
+
+                seasonPriceList.appendChild(newSeasonItem);
+            });
+
+
+           
+            let selectedOption = "";  // Seçilen değeri tutacak değişken
+
+            if (newSeasonPriceButton) {
+                newSeasonPriceButton.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    seasonPriceNew.classList.add("active");
+                    this.classList.add("disabled");
+                });
+            }
+
+            // Nice Select'teki seçeneklerden biri seçildiğinde
+            $('.odemeSecenekleri').on('click', '.option', function() {
+                selectedOption = $(this).data('value');  // Seçilen option'un data-value değerini al
+                if (selectedOption === "") {
+                    console.log("bos");
+                } else {
+                    console.log(selectedOption);
+                }
+            });
+
+            // Kaydet butonuna tıklanıldığında
+            if (saveButton) {
+                saveButton.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    // Gerekli input değerlerini al
+                    const startDateInput = document.querySelector(".startDateInput");
+                    const endDateInput = document.querySelector(".endDateInput");
+                    const priceInput = document.querySelector(".SeasonPriceNew #fiyat");
+
+                    // Girdi alanlarını kontrol et ve işlem yap
+                    console.log("Başlangıç Tarihi:", startDateInput.value.trim());
+                    console.log("Bitiş Tarihi:", endDateInput.value.trim());
+                    console.log("Fiyat:", priceInput.value.trim());
+                    console.log("Seçilen Kuru:", selectedOption);
+
+                    // Alanların dolu olup olmadığını kontrol et
+                    if (
+                        startDateInput.value.trim() &&
+                        endDateInput.value.trim() &&
+                        priceInput.value.trim() &&
+                        selectedOption !== ""  // Seçilen kuru kontrol et
+                    ) {
+                        // Para birimi simgesini belirle
+                        let currencySymbol = "";
+                        if (selectedOption === "tl") {
+                            currencySymbol = "₺";
+                        } else if (selectedOption === "dolar") {
+                            currencySymbol = "$";
+                        } else if (selectedOption === "euro") {
+                            currencySymbol = "€";
+                        }
+
+                        // Yeni .seasonsItem öğesi oluştur
+                        const newSeasonItem = document.createElement("div");
+                        newSeasonItem.className = "seasonsItem row";
+                        newSeasonItem.innerHTML = `
+                            <div class="col-lg-3 customPicker">
+                                <label class="customLabel">Başlangıç Tarihi</label>
+                                <div class="startDate text">${startDateInput.value}</div>
+                            </div>
+                            <div class="col-lg-3 customPicker">
+                                <label class="customLabel">Bitiş Tarihi</label>
+                                <div class="endDate text">${endDateInput.value}</div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="customLabel">Fiyat</label>
+                                <div class="price text"><span class="currencly">${currencySymbol}</span> ${priceInput.value}</div>
+                            </div>
+                            <div class="col-lg-2">
+                                <a href="#" class="tekneSilButon textLink noAfter mt-4"><span class="icon-delete"></span><i>Sil</i></a>
+                            </div>
+                        `;
+
+                        // Yeni öğeyi .seasonPriceList'e ekle
+                        seasonPriceList.appendChild(newSeasonItem);
+
+                        // Girdi alanlarını temizle
+                        startDateInput.value = "";
+                        endDateInput.value = "";
+                        priceInput.value = "";
+
+                        // .SeasonPriceNew'den active class'ını kaldır
+                        document.querySelector(".SeasonPriceNew").classList.remove("active");
+                        document.querySelector(".newSeasonPriceButton").classList.remove("disabled");
+
+                        // niceSelect öğesini sıfırlama
+                        $('.odemeSecenekleri').niceSelect('destroy'); // niceSelect'i yok et
+                        $('.odemeSecenekleri').val(''); // Seçilen değeri boş yap
+                        $('.odemeSecenekleri').niceSelect(); // niceSelect'i yeniden başlat
+
+                        
+                    } else {
+                        alert("Lütfen tüm alanları doldurun ve bir ödeme kuru seçin!");
+                    }
+                });
+            }
+
+
+            // Mevcut öğeler için silme işlevini uygulama
+            const deleteButtons = document.querySelectorAll(".tekneSilButon");
+            deleteButtons.forEach(deleteButton => {
+                deleteButton.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    // Silme işlemi: Bu butona ait olan parent öğesini sil
+                    const seasonItem = deleteButton.closest(".seasonsItem");
+                    if (seasonItem) {
+                        seasonItem.remove();
+                    }
+                });
+            });
+        });
+    
     </script>
+
 </body>
 
 </html>

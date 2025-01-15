@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="" />
+    <meta name="publisher" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon'">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="public/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="manifest" href="public/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="public/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <title>Tekne Kiralama</title>
+
+    <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    
+    <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
+    <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
+    <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
+    <link rel="stylesheet" href="public/assets/plugins/sweetalert/sweetalert2.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="public/assets/front/css/app.css">
+</head>
+
+<body>
+    <!---Tüm sayfalarda standart-->
+    <div class="preloader">
+        <div class="preloader-container">
+            <div class="circle">
+            </div>
+        </div>
+    </div>
+    <!---Tüm sayfalarda standart kapsayıcı-->
+    <div id="app">
+        <!---Tüm sayfalarda standart header-->
+        <header id="header" class="">
+            <div class="header container-3xl">
+                <div class="headerNav">
+                    <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
+                    <div class="d-flex hstack ms-auto">
+                        <!-- <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <div class="dropdown languageWrapper">
+                            <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <span class="icon-language"></span>
+                            </button>
+                            <form class="dropdown-menu p-4 languageDropdown">
+                                <div class="title">Para Birimi</div>
+                                <ul class="languageList">
+                                    <li>
+                                    <div class="form-check container-check type2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label checkText" for="flexRadioDefault1">
+                                          English
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label checkText" for="flexRadioDefault2">
+                                               Türkçe
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <hr class="mx-auto">
+                                <div class="title">Dil ve Bölge</div>
+                                <ul class="languageList">
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="Euro">
+                                            <label class="form-check-label" for="Euro">
+                                                <span class="currencly">€</span> EUR
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="Dolar" checked>
+                                            <label class="form-check-label" for="Dolar">
+                                                <span class="currencly">$</span> USD
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check container-check type2">
+                                            <input class="form-check-input" type="radio" name="currencyInput" id="TurkLisari" checked>
+                                            <label class="form-check-label" for="TurkLisari">
+                                                <span class="currencly">₺</span> TRY
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="submit" class="fixBtn button-dark languageSaveButton">Kaydet</button>
+                            </form>
+                        </div> -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle userButton type2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="otherUserMenuIcon">ES</div>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#"><div class="icon"><img src="public/assets/images/statics/icons/profile.svg" alt=""></div> <span>Profil</span></a></li>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim-teknelerim.html"><div class="icon"><img src="public/assets/images/statics/icons/taleplerim.svg" alt=""></div> <span>Teknelerim</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img width="17" src="public/assets/images/statics/icons/rezervasyon.svg" alt=""></div> <span>Talepler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/favorilerim.svg" alt=""></div><span>Rezervasyonlar</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/faturabilgilerim.svg" alt=""></div> <span>Ödemeler</span></a></li>
+                                <li><a class="dropdown-item" href="#"><div class="icon"><img src="public/assets/images/statics/icons/ayarlar.svg" alt=""></div> <span>Ayarlar</span></a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="tekne-sahibi-hesabim.html"><div class="icon"><img src="public/assets/images/statics/icons/logout.svg" alt=""></div> <span>Çıkış</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="buttons d-lg-flex d-none pe-3 ps-3" >
+                            <a href="#" class="fixBtn button-outline" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                            <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                        </div>
+                        <a href="#" class="menuNavButton openMenuButton ms-4">
+                            <span></span>
+                        </a> -->
+                    </div>
+                </div>
+                <!-- <div class="headerMenuNav">
+                    <div class="navMenu">
+                        <div class="container-xl ps-xxl-0 pe-xxl-0 h-100">
+                            <div class="row navMenuTop mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0 d-none d-md-flex">
+                                    <a class="logo" href="index.html"><img src="public/assets/images/statics/logo-white.png" alt="TekneKiralama logo beyaz"></a>
+                                </div>
+                                <div class="rightMenuColumn bg-primary col-md-8 pe-0">
+                                    <div class="searchInputWrapper position-relative">
+                                        <input type="text" class="searchInput" placeholder="Aramak istediğiniz kelimeyi giriniz">
+                                        <a href="#" class="searchButton"><span class="icon-search"></span></a>
+                                    </div>
+                                    <a href="#" class="menuNavButton closedMenuButton ms-4">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row navMenuContent mx-0">
+                                <div class="leftMenuColumn col-lg-4 ps-0">
+                                    <ul class="menuList">
+                                        <li>
+                                            <a href="index.html"><span>Anasayfa</span></a>
+                                        </li>
+                                        <li>
+                                            <div data-target="1" class="subMenuItem"><span>Destinations</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <div data-target="2" class="subMenuItem"><span>Things to do</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Guides</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Festival & events</span></a>
+                                        </li>
+                                        <li>
+                                            <div data-target="3" class="subMenuItem"><span>Routes & trails</span><span class="icon-arrow-right"></span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>Accommodation</span></a>
+                                        </li>
+                                    </ul>
+                                    <div class="buttons d-lg-none" >
+                                        <a href="#" class="fixBtn button-primary" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Üye Girişi</a>
+                                        <a href="#" class="fixBtn button-secondary" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                                    </div>
+                                    <div class="socialWrapper">
+                                        <div class="socialMedia">
+                                            <a href="#" target="_blank"><span class="icon-twitter"></span></a>
+                                            <a href="#" target="_blank"><span class="icon-linkedin"></span></a>
+                                            <a href="#" target="_blank"><span class="icon-instagram"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rightMenuColumn mobileMenuColumn bg-primary col-lg-8 pe-0">
+                                    <div class="backLink">
+                                        <span class="icon-arrow-right"></span><span>Geri Dön</span>
+                                    </div>
+                                    <div class="customScrollContent">
+                                        <div class="subMenuWrapper">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2">
+                                                <div class="title">Keep Discovering</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-02.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Enigma Blue</div>
+                                                                <div class="options">
+                                                                    <span>Fethiye, 10.9m, Yelkenli</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-03.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Bavaria 46 Cruiser</div>
+                                                                <div class="options">
+                                                                    <span>Göcek, 14.2m<sup>2</sup>, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-04.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Fethiye</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList w-100">
+                                                <div class="title">Popular destinations</div>
+                                                <ul class="columns-2">
+                                                    <li><a href="#">Donegal</a></li>
+                                                    <li><a href="#">Cork</a></li>
+                                                    <li><a href="#">Sligo</a></li>
+                                                    <li><a href="#">Killkeny</a></li>
+                                                    <li><a href="#">Mayo</a></li>
+                                                    <li><a href="#">Waterford</a></li>
+                                                    <li><a href="#">Galway</a></li>
+                                                    <li><a href="#">Kerry</a></li>
+                                                    <li><a href="#">Limerick</a></li>
+                                                    <li><a href="#">Dublin</a></li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all destinations</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all things to do</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="subMenuWrapper d-none">
+                                            <div class="subMenuList">
+                                                <div class="title">Regions</div>
+                                                <ul>
+                                                    <li><a href="#">The Ring of Kerry</a></li>
+                                                    <li><a href="#">The Burren</a></li>
+                                                    <li><a href="#">The Boyne Valley</a></li>
+                                                    <li><a href="#">Wild Atlantic Way</a></li>
+                                                    <li><a href="#">Ireland's Ancient East</a></li>
+                                                    <li><a href="#">Ireland's Hidden Heartlands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subMenuList">
+                                                <div class="title">Trip type</div>
+                                                <ul>
+                                                    <li><a href="#">City breaks</a></li>
+                                                    <li><a href="#">Coastal escapes</a></li>
+                                                    <li><a href="#">Lakes & rivers</a></li>
+                                                    <li><a href="#">Islands</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="keepDiscover subMenuList type2 moretoexplore">
+                                                <div class="title">More to explore</div>
+                                                <ul class="items">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="imageWrapper">
+                                                                <img src="public/assets/images/media/keep-disover-01.jpg" alt="">
+                                                            </div>
+                                                            <div class="desc">
+                                                                <div class="name">Grand Mare</div>
+                                                                <div class="options">
+                                                                    <span>Bodrum, 12m, Motoryat</span>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-100">
+                                                <a href="#" class="textLink d-none d-lg-flex">See all routes & trails</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </header>
+
+
+        <!---Tüm sayfalarda standart main kapsayıcı content alanı-->
+        <main>
+            <section class="pageSection type2">
+                <div class="overlay"></div>
+                <div class="container-3xl">
+                    <div class="userPageContainer">
+                        <div class="row mx-0">
+                            <div class="mobileSideMenu d-lg-none"><span class="text">Tekne Yönetimi</span><span class="icon-arrow-right"></span> </div>
+                            <div class="sidenavWrapper">
+                                <a href="tekne-sahibi-hesabim-teknelerim.html" class="backLink"><span class="icon-arrow-right"></span> <span>Ana Menü</span></a>
+                                <!-- <div class="boatName">Sunseeker, Manhattan 64</div> -->
+                                <div class="sideNav type2">
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hakkinda.html"><span>Tekne Hakkında</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-genelbilgiler.html"><span>Genel Bilgiler</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-gorseller.html"><span>Görseller</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-hizmetler.html"><span>Hizmet Seçenekleri</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Kiralama Seçenekleri</span></a>
+                                    <a class="active" href="tekne-sahibi-hesabim-teknelerim-kiralama.html"><span>Fiyatlar</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-takvim.html"><span>Müsaitlik Takvimi</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-olanaklar.html"><span>Tekne Olanakları</span></a>
+                                    <a href="tekne-sahibi-hesabim-teknelerim-sunulanhizmetler.html"><span>Sunulan Hizmetler</span></a>
+                                </div>
+                            </div>
+                            <div class="sideContentWrapper">
+                                <div class="col-xl-9 px-0">
+                                    <div class="sideHead">
+                                        <div class="pageTitle">Sunseeker, Manhattan 64</div>
+                                    </div>
+                                    <div class="sideContent">
+                                        <div class="bg-gray rounded-5 p-lg-5 p-4">
+                                            <div class="moduleHead">
+                                                <div class="moduleTitle">Fiyatlar</div>
+                                                <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                            </div>
+                                            <div class="form needs-validation type2" novalidate>
+                                                <div class="moduleHead">
+                                                    <div class="moduleTitle mb-0">Tekne Kiralama</div>
+                                                </div>
+                                                <div class="formSwitchBody mb-5">
+                                                    <div class="moduleHead">
+                                                        <div class="moduleTitle">Genel Fiyatlandırma</div>
+                                                        <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">1 Günlük Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">2 Günlük Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">3 Günlük Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">4 Günlük Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">5 Günlük Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">10 Günlük Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <hr class="my-5 opacity-25">
+                                                    <div class="moduleHead">
+                                                        <div class="moduleTitle">Kişi Sayısına Göre</div>
+                                                        <div class="info"><span class="icon-info"></span><span>Gündüz saatleri 08:00-18:00 arasına denk gelmektedir. <br>
+                                                            Akşam saatleri 18:00-00:00 arasına denk gelmektedir. <br>
+                                                            Gece saatleri 00:00-08:00 arasına denk gelmektedir. </span></div>
+                                                    </div>
+                                                    <div class="formSwitchWrapper accSwitchHead mb-0">
+                                                        <label for="sunulanhizmetler">0-12 Kişi</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                            <label for="sunulanhizmetler" class="custom-switch-label">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-text apply">Evet</span>
+                                                              <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                        <div class="bg-white rounded-5 content">
+                                                            <div class="row">
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="my-3 opacity-25">
+                                                    <div class="formSwitchWrapper accSwitchHead mb-0">
+                                                        <label for="sunulanhizmetler">12-20 Kişi</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                            <label for="sunulanhizmetler" class="custom-switch-label">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-text apply">Evet</span>
+                                                              <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                        <div class="bg-white rounded-5 content">
+                                                            <div class="row">
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="my-3 opacity-25">
+                                                    <div class="formSwitchWrapper accSwitchHead mb-0">
+                                                        <label for="sunulanhizmetler">20-22 Kişi</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                            <label for="sunulanhizmetler" class="custom-switch-label">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-text apply">Evet</span>
+                                                              <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                        <div class="bg-white rounded-5 content">
+                                                            <div class="row">
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <hr class="my-5 opacity-25">
+                                                    <div class="moduleHead">
+                                                        <div class="moduleTitle">Dönemsel Fiyatlar</div>
+                                                        <div class="info"><span class="icon-info"></span><span>Liste Fiyatı girilse bile buradaki fiyatlar geçerli olacaktır. </span></div>
+                                                    </div>
+                                                    
+                                                    <div class="SeasonPriceList">
+                                                        <div class="seasonsItem row">
+                                                            <div class="mb-lg-4 col-lg-3 customPicker">
+                                                                <label for="tekneadi" class="customLabel">Başlangıç Tarihi</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control date-input" placeholder="Tekne Fiyatı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-3 customPicker">
+                                                                <label for="tekneadi" class="customLabel">Bitiş Tarihi</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control data-input" placeholder="Tekne Fiyatı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-4">
+                                                                <label for="tekneadi" class="customLabel">Fiyat</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control" placeholder="Fiyat" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-2">
+                                                                <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                                <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                    <option value="" selected hidden>Seçiniz</option>
+                                                                    <option value="">Türk Lirası</option>
+                                                                    <option value="">Dolar</option>
+                                                                    <option value="">Euro</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Ödeme Kuru Seçiniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="newSeasonPriceButton fixBtn button-outline fs-5">Yeni Fiyat Ekle</a>
+
+                                                    <div class="mb-3 d-flex align-items-center gap-5">
+                                                        <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form needs-validation type2 pt-5" novalidate>
+                                                <div class="moduleHead">
+                                                    <div class="moduleTitle mb-0">Tekne Turu</div>
+                                                </div>
+                                                <div class="formSwitchBody mb-5">
+                                                    <div class="moduleHead">
+                                                        <div class="moduleTitle">Genel Fiyatlandırma</div>
+                                                        <div class="info"><span class="icon-info"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">1 Saatlik Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">2 Saatlik Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">3 Saatlik Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">4 Saatlik Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">5 Saatlik Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 col-lg-4">
+                                                            <label for="tekneadi" class="customLabel">10 Saatlik Boş Tekne Fiyatı</label>
+                                                            <input type="text" id="tekneadi" name="tekneadi" class="form-control numberMask2" placeholder="Tekne Fiyatı" required>
+                                                            <div class="invalid-feedback">
+                                                                Minimum Kiralama Gün Sayısı
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-lg-4 mb-3 col-lg-2">
+                                                            <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                            <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                <option value="" selected hidden>Seçiniz</option>
+                                                                <option value="">Türk Lirası</option>
+                                                                <option value="">Dolar</option>
+                                                                <option value="">Euro</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Lütfen Ödeme Kuru Seçiniz
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <hr class="my-5 opacity-25">
+                                                    <div class="moduleHead">
+                                                        <div class="moduleTitle">Kişi Sayısına Göre</div>
+                                                        <div class="info"><span class="icon-info"></span><span>Gündüz saatleri 08:00-18:00 arasına denk gelmektedir. <br>
+                                                            Akşam saatleri 18:00-00:00 arasına denk gelmektedir. <br>
+                                                            Gece saatleri 00:00-08:00 arasına denk gelmektedir. </span></div>
+                                                    </div>
+                                                    <div class="formSwitchWrapper accSwitchHead mb-0">
+                                                        <label for="sunulanhizmetler">0-12 Kişi</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                            <label for="sunulanhizmetler" class="custom-switch-label">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-text apply">Evet</span>
+                                                              <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                        <div class="bg-white rounded-5 content">
+                                                            <div class="row">
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="my-3 opacity-25">
+                                                    <div class="formSwitchWrapper accSwitchHead mb-0">
+                                                        <label for="sunulanhizmetler">12-20 Kişi</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                            <label for="sunulanhizmetler" class="custom-switch-label">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-text apply">Evet</span>
+                                                              <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                        <div class="bg-white rounded-5 content">
+                                                            <div class="row">
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="my-3 opacity-25">
+                                                    <div class="formSwitchWrapper accSwitchHead mb-0">
+                                                        <label for="sunulanhizmetler">20-22 Kişi</label>
+                                                        <div class="custom-switch ms-auto">
+                                                            <input type="checkbox" id="sunulanhizmetler" class="custom-switch-input">
+                                                            <label for="sunulanhizmetler" class="custom-switch-label">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-text apply">Evet</span>
+                                                              <span class="custom-switch-text disabled">Hayır</span>
+                                                            </label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="formSwitchBody accSwitchBody disabled pb-lg-5">
+                                                        <div class="bg-white rounded-5 content">
+                                                            <div class="row">
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftasonu Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gündüz Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Akşam Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-lg-4 mb-3 col-lg-4">
+                                                                    <label for="odemeSecenekleri" class="customLabel">Haftaiçi Gece Fiyat Oranları</label>
+                                                                    <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                        <option value="" selected hidden>Seçiniz</option>
+                                                                        <option value="">%20</option>
+                                                                        <option value="">%30</option>
+                                                                        <option value="">%40</option>
+                                                                        <option value="">%50</option>
+                                                                        <option value="">%60</option>
+                                                                    </select>
+                                                                    <div class="invalid-feedback">
+                                                                        Lütfen Ödeme Kuru Seçiniz
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <hr class="my-5 opacity-25">
+                                                    <div class="moduleHead">
+                                                        <div class="moduleTitle">Dönemsel Fiyatlar</div>
+                                                        <div class="info"><span class="icon-info"></span><span>Liste Fiyatı girilse bile buradaki fiyatlar geçerli olacaktır. </span></div>
+                                                    </div>
+                                                    
+                                                    <div class="SeasonPriceList">
+                                                        <div class="seasonsItem row">
+                                                            <div class="mb-lg-4 col-lg-3 customPicker">
+                                                                <label for="tekneadi" class="customLabel">Başlangıç Tarihi</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control date-input" placeholder="Tekne Fiyatı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-3 customPicker">
+                                                                <label for="tekneadi" class="customLabel">Bitiş Tarihi</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control data-input" placeholder="Tekne Fiyatı" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 col-lg-4">
+                                                                <label for="tekneadi" class="customLabel">Fiyat</label>
+                                                                <input type="text" id="tekneadi" name="tekneadi" class="form-control" placeholder="Fiyat" required>
+                                                                <div class="invalid-feedback">
+                                                                    Minimum Kiralama Gün Sayısı
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-lg-4 mb-3 col-lg-2">
+                                                                <label for="odemeSecenekleri" class="customLabel">Ödeme Kuru</label>
+                                                                <select name="odemeSecenekleriSelect" id="odemeSecenekleri" class="customSelect odemeSecenekleri type2" required>
+                                                                    <option value="" selected hidden>Seçiniz</option>
+                                                                    <option value="">Türk Lirası</option>
+                                                                    <option value="">Dolar</option>
+                                                                    <option value="">Euro</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Lütfen Ödeme Kuru Seçiniz
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="newSeasonPriceButton fixBtn button-outline fs-5">Yeni Fiyat Ekle</a>
+
+                                                    <div class="mb-3 d-flex align-items-center gap-5">
+                                                        <a href="#" class="saveButton"><span class="icon-save"></span><span>Kaydet</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <!---Tüm sayfalarda standart footer-->
+        <footer>
+            <div class="container-3xl">
+                <div class="bg-gray footer">
+                    <div class="footerContent">
+                        <div class="leftColumn">
+                            <div class="d-flex flex-column">
+                                <a href="index.html"><img src="public/assets/images/statics/logo.png" alt=""></a>
+                                <span class="logoText">TekneKiralama.com Türkiye’nin en popüler 
+                                    tatil bölgelerinde lüks teklneleri</span>
+                            </div>
+                            <div class="socialWrapper">
+                                <div class="socialMedia">
+                                    <a href="#" target="_blank" class="instagram"><span class="icon-instagram-2"></span></a>
+                                    <a href="#" target="_blank" class="facebook"><span class="icon-facebook"></span></a>
+                                    <a href="#" target="_blank" class="twitter"><span class="icon-twitter"></span></a>
+                                    <a href="#" target="_blank" class="spotify"><span class="icon-spotify"></span></a>
+                                    <a href="#" target="_blank" class="linkedin"><span class="icon-linkedin-2"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="footerMenu">
+                                <div class="menuListColumn">
+                                    <div class="title">TekneKiralama.com</div>
+                                    <ul>
+                                        <li><a href="#">Neden TekneKiralama.com</a></li>
+                                        <li><a href="#">Hakkımızda</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Sürdürülebilirlik</a></li>
+                                        <li><a href="#">İletişim</a></li>
+                                        <li><a href="#">SSS</a></li>
+                                        <li><a href="#">Kariyer</a></li>
+                                        <li><a href="#">Basın Kiti</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Lokasyonlar</div>
+                                    <ul>
+                                        <li><a href="#">İstanbul Tekne Kiralama</a></li>
+                                        <li><a href="#">Fethiye Tekne Kiralama</a></li>
+                                        <li><a href="#">Marmaris Tekne Kiralama</a></li>
+                                        <li><a href="#">Göcek Tekne Kiralama</a></li>
+                                        <li><a href="#">Bodrum Tekne Kiralama</a></li>
+                                        <li><a href="#">İzmir Tekne Kiralama</a></li>
+                                        <li><a href="#">Balıkesir Tekne Kiralama</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Tekne Sahipleri</div>
+                                    <ul>
+                                        <li><a href="#">Tekneni Kirala</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menuListColumn">
+                                    <div class="title">Yasal Bilgiler</div>
+                                    <ul>
+                                        <li><a href="#">Kullanım Koşulları</a></li>
+                                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="#">İptal ve İade Koşulları</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footerBottom d-flex align-items-center">
+                        <div class="copyRightWrapper pe-5">
+                            <div class="copyRight">
+                                © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
+                            </div>
+                        </div>
+                        <a class="fixBtn button-outline ms-5" href="tekne-sahibi-hesabim.html" target="_blank">Tekne Sahibi Yönetim Paneli</a>
+                        <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Girişi</div>
+                    </div>
+                </div>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                        Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                        <div class="invalid-feedback">
+                            Lütfen Parolanızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-5 text-end">
+                        <a href="#" class="forgotLink">Şifremi Unuttum</a>
+                    </div>
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Giriş Yap">
+                        </span>
+                    </div>
+                </form>
+                <hr class="my-5">
+                <div class="otherLogin">
+                    <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                    <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlModal">Üye Ol</a>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade type2" id="UyeOlModal" aria-hidden="true" aria-labelledby="UyeOlModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
+                    <div class="stepHead">
+                        <span class="">1</span>
+                        <span>2</span>
+                    </div>
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0" id="UyeOlModalLabel">Üye Hesabı Oluştur</div>
+                    </div>
+                </div>
+                <div class="signupFormSteps">
+                    <div class="stepOne">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                                <div class="invalid-feedback">
+                                Lütfen E-Posta Adresinizi Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Devam Et">
+                                </span>
+                            </div>
+                        </form>
+                        <hr class="my-5">
+                        <div class="otherLogin">
+                            <a href="#" class="fixBtn button-outline-2 w-100 mb-4"><span class="icon"><img src="public/assets/images/statics/icons/google.svg" alt=""></span><span>Sign up with Google</span></a>
+                            <a href="#" class="fixBtn button-outline-2 w-100"><span class="icon"><img src="public/assets/images/statics/icons/facebook.svg" alt=""></span><span>Sign up with Facebook</span></a>
+                        </div>
+                    </div>
+                    <div class="stepTwo d-none">
+                        <form class="form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Adınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Soyadınızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
+                                <div class="invalid-feedback">
+                                    Lütfen Parolanızı Giriniz
+                                </div>
+                            </div>
+                            <div class="mb-5 ps-3">
+                                <label class="container-check">
+                                    <input type="checkbox" name="address">
+                                    <span class="checkmark"></span>
+                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <span class="fixBtn button-primary w-100">
+                                    <input type="submit" value="Hesap Oluştur">
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="signText paragraph text-center pt-4">
+                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiModal">Giriş Yap</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="modalHead">
+                    <div class="titleColumn">
+                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
+                    </div>
+                </div>
+                <blockquote class="blockquote">
+                    <span class="icon-info"></span> 
+                    <p>
+                        Your account is not verified. <a href="#">Resend confirmation</a>
+                    </p>
+                </blockquote>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3">
+                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Adınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
+                        <div class="invalid-feedback">
+                            Lütfen Soyadınızı Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
+                        <div class="invalid-feedback">
+                            Lütfen E-Posta Adresinizi Giriniz
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="phoneWrapper">
+                            <div class="codeWrapper position-relative">
+                                <input type="tel" placeholder="" id="telephone">
+                            </div>
+                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
+                            <div class="invalid-feedback w-100">
+                                Lütfen Telefon Numaranızı Giriniz
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="fixBtn button-primary w-100">
+                            <input type="submit" value="Kaydet">
+                        </span>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="public/assets/plugins/jquery.min.js"></script>
+    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
+    <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
+
+
+    <script src="public/assets/plugins/sweetalert/sweetalert2.js"></script>
+    <script src="public/assets/plugins/jquery.mask.min.js"></script>
+    <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
+
+    <script src="public/assets/plugins/fullcalendar/index.global.js"></script><!--müsaitlik takvimi ıcın kullanılıyor-->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Flatpickr Türkçe Dil Desteği -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/tr.js"></script>
+
+    <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/tekne.js"></script><!--Tekne saihibi kısmı ıcın kullanılır dıger alanlarda kullanılmaz. app.js de tekne sahıbınde kullanılmaz-->
+
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+            // Tüm custom-switch-input elemanlarını seç
+            const switches = document.querySelectorAll(".custom-switch-input");
+
+            switches.forEach((switchElement) => {
+                switchElement.addEventListener("change", function () {
+                    // İlgili formSwitchBody'yi bul
+                    const formSwitchBody = this.closest(".formSwitchWrapper").nextElementSibling;
+
+                    if (this.checked) {
+                        // Checkbox checked ise disabled sınıfını kaldır
+                        formSwitchBody.classList.remove("disabled");
+                    } else {
+                        // Checkbox unchecked ise disabled sınıfını ekle
+                        formSwitchBody.classList.add("disabled");
+                    }
+                });
+            });
+        });
+        $('.customPicker .date-input').flatpickr({
+            locale: 'tr', // Türkçe dil desteği
+            enableTime: true,
+            dateFormat: 'Y-m-d H:i',
+            time_24hr: true,
+            disableMobile: true // Mobilde Flatpickr'yi aktif et
+        });
+
+        document.querySelector('.newSeasonPriceButton').addEventListener('click', function (e) {
+            e.preventDefault(); // Varsayılan davranışı engelle
+
+            // İlk .seasonsItem öğesini klonla
+            const originalItem = document.querySelector('.seasonsItem');
+            const newSeasonItem = originalItem.cloneNode(true);
+
+            // Klonlanan alanlardaki input ve select değerlerini temizle
+            newSeasonItem.querySelectorAll('input').forEach(input => {
+                input.value = ''; // Input alanlarını temizle
+            });
+
+            newSeasonItem.querySelectorAll('select').forEach(select => {
+                select.selectedIndex = 0; // Select alanlarını sıfırla
+            });
+
+            // Yeni öğeyi SeasonPriceList'e ekle
+            document.querySelector('.SeasonPriceList').appendChild(newSeasonItem);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

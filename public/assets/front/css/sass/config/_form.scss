@@ -57,6 +57,9 @@
     font-size: 14px;
     font-family: "GilroySemibold";
     margin-bottom: 4px;
+    @media screen and (max-width:1600px) {
+      font-size: 13px;
+    }
   }
   .customSelect{
     &.type2{
@@ -70,12 +73,19 @@
       background-color: var(--white);
       border-radius: 6px;
       width: 100%;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width:1600px) {
         height: 45px;
+        font-size: 13px;
       }
+
       &:after{
         width: 10px;
         height: 10px;
+        @media screen and (max-width:1600px) {
+          width: 6px;
+          height:6px;
+          margin-top: -2px;
+        }
       }
       .current{
         display: flex;
@@ -120,8 +130,9 @@
       background-color: var(--white);
       border-radius: 6px;
       width: 100%;
-      @media screen and (max-width:991.98px) {
+      @media screen and (max-width:1600px) {
         height: 45px;
+        font-size: 13px;
       }
     }
   }

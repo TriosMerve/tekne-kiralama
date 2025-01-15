@@ -271,6 +271,10 @@
   font-size: 16px;
   color: var(--text-2);
   font-family: "GilroySemibold";
+  @media screen and (max-width:1600px) {
+    padding: 7px 7px 7px 14px;
+    font-size: 14px;
+  }
 
   @media screen and (max-width: 991.98px) {
     font-size: 14px;
@@ -302,6 +306,12 @@
       color: white;
       font-weight: bold;
       cursor: pointer;
+      @media screen and (max-width:1600px) {
+        padding: 3px 7px;
+        font-size: 13px;
+        width: 80px;
+        height: 30px;
+      }
       @media screen and (max-width: 991.98px) {
         height: 30px;
         font-size: 12px;
@@ -321,6 +331,10 @@
       top: 50%; /* Dikey hizalama */
       transform: translateY(-50%);
       left: 5px; /* Başlangıç pozisyonu */
+      @media screen and (max-width:1600px) {
+        width: 22px;
+        height: 22px;
+      }
 
       @media screen and (max-width: 991.98px) {
         width: 18px;
@@ -336,6 +350,9 @@
       + .custom-switch-label
       .custom-switch-indicator {
       transform: translate(57px, -50%); /* Sağ tarafa kaydır */
+      @media screen and (max-width:1600px) {
+        transform:translate(48px, -50%);
+      }
       @media screen and (max-width: 991.98px) {
         transform: translate(52px, -50%); /* Sağ tarafa kaydır */
       }
@@ -347,9 +364,15 @@
       // transform: translateX(-50%);
       transition: opacity 0.3s ease;
       left: 25px;
+      @media screen and (max-width:1600px) {
+        left: 20px;
+      }
       &.disabled {
         right: 25px;
         left: auto;
+        @media screen and (max-width:1600px) {
+          right: 15px;
+        }
         @media screen and (max-width: 991.98px) {
           right: 20px;
         }
