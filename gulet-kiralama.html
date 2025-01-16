@@ -48,17 +48,16 @@
         rel="stylesheet">
 
 
-    <title>Tekne Sahibi</title>
+    <title>Tekne Kiralama</title>
 
     <link href="public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="public/assets/plugins/aos/aos.css">
     
-    
+    <link rel="stylesheet" href="public/assets/plugins/datapicker/daterangepicker.min.css">
     <link rel="stylesheet" href="public/assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/assets/plugins/nice-select/nice-select.css">
     <link rel="stylesheet" href="public/assets/plugins/fancyapps/fancybox.css">
-    <link rel="stylesheet" href="public/assets/plugins/phoneInput/intlTelInput.min.css" />
-
+    <link rel="stylesheet" href="public/assets/plugins/rangeSlider/nouislider.min.css">
     <link rel="stylesheet" href="public/assets/front/css/app.css">
 </head>
 
@@ -73,7 +72,7 @@
     <!---Tüm sayfalarda standart kapsayıcı-->
     <div id="app">
         <!---Tüm sayfalarda standart header-->
-        <header id="header">
+        <header id="header" class="type2">
             <div class="header container-3xl">
                 <div class="headerNav">
                     <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
@@ -481,96 +480,706 @@
             <section class="pageSection">
                 <div class="container-3xl">
                     <div class="sectionContent">
-                        <div class="bannerWrapper">
-                            <div class="swiper bannerSlider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="bannerItem">
-                                            <div class="imageWrapper">
-                                                <img src="public/assets/images/media/banners/blogSlider01.jpg" alt="">
+                        <div class="position-relative">
+                            <div class="filterWrapper leftColumn">
+                                <div class="filterTop">
+                                    <div class="calendarMobilButton  d-lg-none my-lg-5">
+                                        <div class="calendarResult">
+                                            <div class="dateInfo">
+                                                <span class="icon-search"></span>
+                                                <div>
+                                                    <div id="locationName" class="locationName">İstanbul</div>
+                                                    <div class="dateResult">
+                                                        Tarih Seçiniz
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="desc">
-                                                <div class="category">teknekiralama.com Tekne Sahibi Ol</div>
-                                                <p class="type2">Tekne Sahibiyseniz teknenizi hemen ekleyerek teknenizi kiralamaya başlayabilirsiniz.</p>
-                                                <a href="tekne-sahibi-hesabim-uyeol.html" class="fixBtn button-primary mt-5">Tekneninizi Ekleyin</a>
-                                            </div>
+                                            <!-- <a href="#" class="filterModalButton" data-bs-target="#filterModal" data-bs-toggle="modal"><span class="icon-filter"></span></a> -->
                                         </div>
                                     </div>
+                                    <div class="calendarWrapper type2">
+                                        <div class="closeCalendarButton d-lg-none"><span class="icon-close"></span></div>
+                    
+                                        <div class="boatType">
+                                            <button id="hiraBoat2" data-id="hiraBoat" class="active typeItem shadow-md fs-1 mb-2 d-none"><span>Gulet Kiralama</span></button>
+                                            <!-- <button id="toursBoat2" data-id="toursBoat" class="typeItem shadow-md"><span class="icon-route"></span><span>Tekne Turları</span></button> -->
+                                        </div>
+                                
+                                    
+                                        <div class="dateTimeSearchWrapper">
+                                            <div class="form-floating formSelectWrapper">
+                                                <select class="form-select customSelect locationSelect" id="floatingSelect" aria-label="Floating label select example">
+                                                    <!-- <option selected>Nereden binmek istersin?</option> -->
+                                                    <option value="1">İstanbul</option>
+                                                    <option selected value="2">Ordu</option>
+                                                    <option value="3">Trabzon</option>
+                                                    <option value="4">Çanakkale</option>
+                                                    <option value="5">Üsküdar</option>
+                                                    <option value="6">Beşiktaş</option>
+                                                    <option value="7">Büyükçekmece</option>
+                                                </select>
+                                                <label for="floatingSelect">Şehir</label>
+                                            </div>
+                                            <div class="dateInputWrapper">
+                                                <div id="dateInputs" class="dateInputs">
+                                                    <input id="checkinInput" class="checkinInput" value="">  <input id="checkoutInput" class="checkoutInput" value=""> 
+                                                    <div id="checkInText" class="checkInText"><span class="name">CheckIn</span><span class="choose">Tarih Seç</span></div>
+                                                    <div id="checkOutText" class="checkOutText"><span class="name">CheckOut</span><span class="choose">Tarih Seç</span></div>
+                                                    <div class="chooseHourWrapper">
+                                                        <div class="formSelectWrapper disabled">
+                                                            <span class="selectLabel">Giriş Saati</span>
+                                                            <select name="" id="checkin-hour" disabled class="checkin-hour customSelect">
+                                                                <option value="" selected>Seçiniz</option>
+                                                                <option value="">08:00</option>
+                                                                <option value="">09:00</option>
+                                                                <option value="">10:00</option>
+                                                                <option value="">11:00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="formSelectWrapper disabled">
+                                                            <span class="selectLabel">Çıkış Saati</span>
+                                                            <select name="" id="checkout-hour" disabled class="checkout-hour customSelect">
+                                                                <option value="" selected>Seçiniz</option>
+                                                                <option value="">08:00</option>
+                                                                <option value="">09:00</option>
+                                                                <option value="">10:00</option>
+                                                                <option value="">11:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="dateSearchButton button-primary fixBtn">Arama</a>
+                                            <div class="reservation-type d-none w-100">
+                                                <button id="overnight" class="active typeItem shadow-md">Gece Konaklamalı</button>
+                                                <button id="hourly" class="typeItem shadow-md">Saatlik</button>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
                                 </div>
-                                <div class="swiper-pagination swiper-pagination position-relative type3"></div>
+                            </div>
+                            <div class="bannerWrapper type2 rightColumn">
+                                <div class="bannerDesc">
+                                    <div class="title">GULET Kiralama</div>
+                                    <p>Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, sequi.</p>
+                                </div>
+                                <div class="imageWrapper">
+                                    <img src="public/assets/images/media/banners/blogSlider02.jpg" alt="">
+                                </div>
                             </div>
                         </div>
-                        <div class="breadCrumbWrapper px-4">
+                        <div class="breadCrumbWrapper px-4 mt-4">
                             <div class="breadcrumb">
                                 <a href="index.html">TekneKiralama.com</a>
-                                <a href="#" class="active">Tekne Sahibi</a>
+                                <a href="#" class="active">Gulet Kiralama</a>
                             </div>
+                        </div>
+
+
+                        <div class="cards third mt-5">
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                    </div>
+                                    
+                                    <div class="category">
+                                        <span>Konaklamalı</span>
+                                        <span>Kaptanlı</span>
+                                    </div>
+                                    <!-- <div class="point ms-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="icon-star-percent"></span>
+                                            <span class="pointNumber">5.0</span>
+                                        </div>
+                                        <span class="text">1586 Yorum</span>
+                                    </div> -->
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Bavaria 46 Cruiser</div>
+                                            <div class="options">Göcek, 14.2m2, Motoryat</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <div class="discount">25.800</div>
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                    </div>
+                                    <div class="category">
+                                        <span>Konaklamalı</span>
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Enigma Blue</div>
+                                            <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1789034A</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 5 kişi</span>
+                                        <span>10.9m</span>
+                                        <span>2 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                    </div>
+                                    <div class="category">
+                                        <span>Kaptanlı</span>
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Grande Mare</div>
+                                            <div class="options">Bodrum, 12 m, Motoryat</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 8 kişi</span>
+                                        <span>11.6m</span>
+                                        <span>1 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                    </div>
+                                    <div class="category">
+                                        <span>Konaklamalı</span>
+                                        <span>Kaptanlı</span>
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Azimut, Fly</div>
+                                            <div class="options">Göcek, 12m2, Motoryat</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">50.000</span><span class="currencly">$</span> / Gün</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Sunseeker, Manhattan 64</div>
+                                            <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1789034A</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">28.750 </span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 5 kişi</span>
+                                        <span>10.9m</span>
+                                        <span>2 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Beneteau, Cyclades 43</div>
+                                            <div class="options">Bodrum, 12 m, Motoryat</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">15.000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 8 kişi</span>
+                                        <span>11.6m</span>
+                                        <span>1 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                    </div>
+                                    
+                                    <div class="category">
+                                        <span>Konaklamalı</span>
+                                        <span>Kaptanlı</span>
+                                    </div>
+                                    <!-- <div class="point ms-auto">
+                                        <div class="d-flex align-items-center">
+                                            <span class="icon-star-percent"></span>
+                                            <span class="pointNumber">5.0</span>
+                                        </div>
+                                        <span class="text">1586 Yorum</span>
+                                    </div> -->
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Bavaria 46 Cruiser</div>
+                                            <div class="options">Göcek, 14.2m2, Motoryat</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <div class="discount">25.800</div>
+                                        <div class="countPrice"><span class="price">20.744</span><span class="currencly">₺</span> / Gün</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 14 kişi</span>
+                                        <span>14.2m</span>
+                                        <span>3 kabin</span>
+                                        <span>Konaklama 6 kişi</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                    </div>
+                                    <div class="category">
+                                        <span>Konaklamalı</span>
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Enigma Blue</div>
+                                            <div class="options">Fethiye, 10.9 m, Yelkenli</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1789034A</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">18.250 </span><span class="currencly">€</span> / Gün</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 5 kişi</span>
+                                        <span>10.9m</span>
+                                        <span>2 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <div class="cardTop-image">
+                                    <div class="imageWrapper d-lg-none">
+                                        <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                    </div>
+                                    <div class="category">
+                                        <span>Kaptanlı</span>
+                                    </div>
+                                    <div class="swiper singleSlide d-none d-lg-block">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="imageWrapper">
+                                                    <img src="public/assets/images/media/tekne3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination type2 swiper-pagination-single"></div>
+                                        <div class="swiperButtons type2">
+                                            <div class="swiper-button-prev prevButton-single"><span class="icon-arrow-right"></span></div>
+                                            <div class="swiper-button-next nextButton-single"><span class="icon-arrow-right"></span></div>
+                                        </div>
+                                    </div>
+                                    <label class="container-check favorite">
+                                        <input type="checkbox" checked name="address">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="d-flex align-items-strech">
+                                        <div>
+                                            <div class="title">Grande Mare</div>
+                                            <div class="options">Bodrum, 12 m, Motoryat</div>
+                                        </div>
+                                        <div class="card-id ms-auto">ID: 1014434P</div>
+                                    </div>
+                                    <div class="priceWrapper">
+                                        <!-- <div class="discount">25.800</div> -->
+                                        <div class="countPrice"><span class="price">5000</span><span class="currencly">₺</span> / Saat</div>
+                                    </div>
+                                    <div class="tags">
+                                        <span>Seyir 8 kişi</span>
+                                        <span>11.6m</span>
+                                        <span>1 kabin</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="d-flex text-center mt-5 pt-lg-4">
+                            <a href="#" class="fixBtn button-primary mx-auto moreButton">Daha fazla göster</a>
                         </div>
                     
-                        <div class="pageContent">
-                            <div class="sectionHead col-lg-11 mx-auto">
-                                <div class="sectionTitle">
-                                    Tekne sahiplerimiz ile tanışın
+                        <div class="pageContent padding bg-gray rounded-5">
+                            <div class="paragraph">
+                                <h2>Muğla Tekne Kiralama</h2>
+                                <div class="shortText col-lg-9 text-primary">
+                                    Sıradan ve rutin geçen 364 günün ertesi, senede bir gün dahi olsa kendinizi şımartın. Teknede doğum günü; Boğaz Çocuğu konseptleri arasında en güzel alternatifler arasında yer almaktadır. 
+                                    Teknede doğum günü için tüm süslemeler
                                 </div>
-                                <div class="sectionText type2">
-                                    Tekne turizmini sevdirmek ve daha geniş kitlelerin erişimine sunmak için birlikte çalışıyoruz.
-                                </div>
+                                Doğum günü için süslenmiş, makyajı tamamlanmış muhteşem bir teknede bir tek güne, o özel ve güzel güne, en özel anlarla tanıklık etmeniz için teknede doğum günü kutlaması davetlisisiniz.
+                                <br><br>
+                                <h3>Senede Bir Gün</h3>
+                                Sıradan ve rutin geçen 364 günün ertesi, senede bir gün dahi olsa kendinizi şımartın. Teknede doğum günü; Boğaz Çocuğu konseptleri arasında en güzel alternatifler arasında yer almaktadır. 
+                                <br><br>
+                                Teknede doğum günü için tüm süslemeler, konfetiler, doğum günü pastası, havai fişekler, hediyeler, içecekler ve mumlar hazır. 
+                                <br><br>
+                                Siz de hazırsanız mumları üfleyebilirsiniz. Yeni yaşınızın birinci günü davetlilerin her zaman hatırlayacağı güzel bir anıya dönüştü bile.
+                                <br><br>
+
+                                <h3>Yeni Yaş Yeni Konseptler</h3>
+                                Her yeni yaş özeldir. Boğaz Çocuğu müşterilerinin istek ve dileklerine göre şekillendirdiği yeni konseptlerle kalitesini her zaman konuşturmaya devam edecektir.
+                                <br><br>
+                                Planlı veya sürpriz doğum günü etkinliklerinde Boğaz Çocuğu farkını yaşayabilmeniz adına Teknede Doğum Günü organizasyonları için doğru adrestesiniz. 
+                                <br><br>
+                                Akılda kalıcı, etkileyici hatta ilham verici olması adına her ayrıntı düşünülerek davetlilerinizin unutamayacağı göz alıcı boğaz manzarası eşliğinde mükemmel bir doğum gününe davetlisiniz. 
+                                <br><br>
+                                Her Doğum günü özeldir ancak Teknede Doğum Günü sizinle daha da güzeldir.
+
+
                             </div>
-                     
-                            <div class="cards quad">
-                                <div class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-4.jpg" alt="">
-                                        </div>
+                            <div class="row mx-0 mt-5">
+                                <div class="accordion customAcc accordion-flush" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                            Tekne kiralama hangi illerde yapılıyor? Tekne kiralama hangi illerde yapılıyor?
+                                        </button>
+                                      </h2>
+                                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                        <div class="accordion-body">yatkiralama.net, sadece İstanbul'da, saatlik ve günlük sürelerde yat kiralama hizmeti vermektedir.</div>
+                                      </div>
                                     </div>
-                                    <div class="cardBody">
-                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
-                                        <div class="moreLink">Daha Fazla</div>
-                                        <div class="userShortInfo">
-                                            Kemal Erden, Tekne Sahibi, Erden Guleti
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            En az yat kiralama süresi nedir?
+                                        </button>
+                                      </h2>
+                                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            Yat kiralama süresi minimum 2 saattir. 30 dakika da kiralama yapmak isteseniz yine 2 saatlik yat kiralama ücretini ödemeniz gerekir.
                                         </div>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-6.jpg" alt="">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Kiralık yatların ses sistemi var mı?
+                                        </button>
+                                      </h2>
+                                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            Evet, tüm kiralık yatların ses sistemi vardır ve kullanımları ücretsizdir. Bluetooth ile ses sistemine bağlanarak istediğiniz şarkıları cep telefonunuz üzerinden dinletebilirsiniz.
                                         </div>
+                                      </div>
                                     </div>
-                                    <div class="cardBody">
-                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
-                                        <div class="moreLink">Daha Fazla</div>
-                                        <div class="userShortInfo">
-                                            Uğur Özdel, Tekne Sahibi, Saadet Guleti
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
-                                        <div class="moreLink">Daha Fazla</div>
-                                        <div class="userShortInfo">
-                                            Ali Engin Haznedar, CEO, Sailfleet
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <p class="card-text line-clamp line-clamp-3">“teknekiralama.com üzerinden aldığımız rezervasyonlardan oldukça memnun kaldık. teknekiralama.com ekibinin pozitif oluşu ve çözüm odaklı yaklaşımları iş birliğimizi gerçek anlamda olumlu etkiliyor. Tatilcileri ve tekne sahiplerini buluşturan olukça faydalı bir platform.“  </p>
-                                        <div class="moreLink">Daha Fazla</div>
-                                        <div class="userShortInfo">
-                                            N. Candan Tokyürek, Tekne Sahibi, Ancyra Sailing
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                            Kiralanan yata yemek getirilir mi?
+                                          </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                          <div class="accordion-body">
+                                                Evet, kiralık yatları menü talep etmeden kiralayıp, kendi yiyecek ve içeceklerinizi yanınızda getirebilirsiniz ancak bu durumda ekstra 1.500 TL karşılığında garson hizmeti almanız gerekecektir. Yatta yemek pişirme imkanı olmadığını bilerek getireceğiniz yiyecekleri ona göre seçmelisiniz.
+                                          </div>
                                         </div>
                                     </div>
                                 </div>
@@ -578,277 +1187,38 @@
                         </div>
 
                         <div class="pageContent padding bg-gray rounded-5">
-                            <div class="sectionHead">
-                                <div class="sectionTitle">
-                                    Teknemi neden teknekiralama.com’da listelemeliyim?
+                            <div class="placesVisit mt-0 p-0">
+                                <div class="top">
+                                    <span class="icon-route-map"></span>
+                                    <h2 class="title">Muğla etrafındaki <b>popüler destinasyonlar</b>  <span></span></h2>
+                                </div>
+                                <div class="placesVisitList col-lg-7">
+                                    <div class="visitItem"><a href="#">Fethiye Tekne Kiralama</a></div>
+                                    <div class="visitItem"><a href="#">Bodrum Tekne Kiralama</a></div>
                                 </div>
                             </div>
-                            <div class="cards third type3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
-                                            <div>
-                                                <div class="card-title">Pazarlama & Satış Giderlerinizi Düşürün</div>
-                                                <div class="card-text">teknekiralama.com sayesinde tekne sahipleri tekne kiralamak isteyen kişiler ile bir araya gelirler. Charter firmaları pazarlama giderlerini düşürürken, bireysel tekne sahipleri daha önceden bağlantıları olmayan geniş bir talep havuzuna erişim sağlarlar.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
-                                            <div>
-                                                <div class="card-title">Tahsilat Riskinizi Ortadan Kaldırın</div>
-                                                <div class="card-text">teknekiralama.com tekne sahipleri için tahsilat riskini de ortadan kaldırır. Rezervasyon sırasında kiracıdan tahsil edilen ödemeler tekne sahibinin hesabına yatırılana kadar BDDK tarafından denetlenen bir ödeme hizmeti sağlayıcısının koruma hesabında tutulur.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
-                                            <div>
-                                                <div class="card-title">Müşterilerinize Taksit İmkanı Sunun</div>
-                                                <div class="card-text">Teknenizi kiralamak isteyen kişilere 12’ye kadar taksit imkanı sunabilirsiniz.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
-                                            <div>
-                                                <div class="card-title">Tekneniz için Ücretsiz Bir Listeleme Sayfası Yapın</div>
-                                                <div class="card-text">Verdiğiniz ilanlar ile teknenizin tüm özelliklerini ve görsellerini yayınlayabilirsiniz.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
-                                            <div>
-                                                <div class="card-title">Kullanıcı Yorumları ile Güven Sağlayın</div>
-                                                <div class="card-text">Teknenizi daha önceden kiralayan kişilerin kullanıcı yorumları sayesinde potansiyel müşteriler nezdinde iyi bir intiba bırakırsınız.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-start gap-3">
-                                            <div class="icon"><img src="public/assets/images/statics/icons/check-circle.svg" alt=""></div>
-                                            <div>
-                                                <div class="card-title">Kredi Kartı ve EFT/Havale ile Online Ödeme Alın</div>
-                                                <div class="card-text">Müşterilerinizden online olarak kredi kartı ve EFT/Havale ile ödeme alabilirsiniz.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           
+                       
                         </div>
-                        <div class="pageContent">
-                            <div class="sectionHead col-lg-11 mx-auto">
-                                <div class="sectionTitle d-flex align-items-center justify-content-center gap-3">
-                                    Nasıl <span class="notLinkButton primaryButton">Süper Tekne Sahibi</span> olurum?
-                                </div>
-                                <div class="sectionText type2">
-                                    teknekiralama.com’da Süper Tekne Sahibi olarak aramalarda üst sıralarda çıkabilir ve rezervasyon alma ihtimalinizi 3 kata kadar artırabilirsiniz!
-                                    Süper tekne sahibi olmak için;
-                                </div>
-                            </div>
-                            <div class="sectionContent">
-                                <div class="listHowCan row">
-                                    <div class="col-md-6 col-xl-3">
-                                        <div class="num">1</div>
-                                        <div class="title">
-                                            Tekne ve kullanıcı bilgilerini eksiksiz doldurun
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-xl-3">
-                                        <div class="num">2</div>
-                                        <div class="title">
-                                            Doğrulama belgelerini ekibimize iletin
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-xl-3">
-                                        <div class="num">3</div>
-                                        <div class="title">
-                                            viravira.co sözleşmesini imzalayın
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-xl-3">
-                                        <div class="num">4</div>
-                                        <div class="title">
-                                            Rezervasyonlarınızdan minimum 4,5 puan alın
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
 
                         <div class="pageContent padding bg-gray rounded-5">
-                            <div class="sectionHead col-lg-11 mx-auto">
-                                <div class="sectionTitle">
-                                    Pazarlama ve Promosyon
+                            <div class="placesVisit mt-0 p-0">
+                                <div class="top">
+                                    <span class="icon-route-map"></span>
+                                    <h2 class="title">Muğla’daki Kiralama Yapabileceğiniz <b>Tekne Tipleri</b>   <span></span></h2>
+                                </div>
+                                <div class="placesVisitList col-lg-9 col-xxl-7">
+                                    <div class="visitItem"><a href="#">Tekne Kiralama Muğla</a></div>
+                                    <div class="visitItem"><a href="#">Gulet Kiralama Muğla</a></div>
+                                    <div class="visitItem"><a href="#">Katamaran Kiralama Muğla</a></div>
                                 </div>
                             </div>
-
-                            <div class="sectionContent">
-                                <div class="row twiceList">
-                                    <div class="col-lg-4 imageColumn leftColumn mb-lg-5 pb-lg-4">
-                                        <img class="img-fluid" src="https://partner.viravira.co/img/b1.png" alt="">
-                                    </div>
-                                    <div class="col-lg-8 textColumn rightColumn mb-lg-5 pb-lg-4">
-                                        <div class="title">Birçok seyahat sever tekne tatillerini planlamaya arama motorlarıyla başlıyor</div>
-                                        <p>Konukların bize gelmesini beklemek yerine teknenizi tüm arama motorlarında aktif olarak tanıtıyoruz.</p>
-                                    </div>
-                                    <div class="col-lg-8 textColumn leftColumn mb-lg-5 pb-lg-4">
-                                        <div class="title">Tekne kiralamak isteyenler sadakat platformlarındaki fırsatları değerlendiriyor</div>
-                                        <p>viravira.co Hopi gibi sadakat platformlarında yer alıyor. Ayrıca, büyük bankaların, şirketlerin ve holdinglerin çalışanlarına ve müşterilerine yönelik kampanyalar yapıyor.</p>
-                                    </div>
-                                    <div class="col-lg-4 imageColumn leftColumn mb-lg-5 pb-lg-4">
-                                        <img class="img-fluid" src="https://partner.viravira.co/img/b2.png" alt="">
-                                    </div>
-                                    <div class="col-lg-4 imageColumn leftColumn mb-lg-5 pb-lg-4">
-                                        <img class="img-fluid" src="https://partner.viravira.co/img/b3.png" alt="">
-                                    </div>
-                                    <div class="col-lg-8 textColumn rightColumn mb-lg-5 pb-lg-4">
-                                        <div class="title">Sosyal medya hesapları ile dijital reklamlar kullanıcı seçimlerinde etkili oluyor</div>
-                                        <p>viravira.co sosyal medya hesapları üzerinden ve dijital mecralarda verdiği reklamlarla hem daha önceden mavi tur yapanlara hem de ilk defa mavi tura çıkacaklara yönelik iletişim yapıyor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="pageContent">
-                            <div class="sectionHead">
-                                <div class="sectionTitle">
-                                    Hangi tip tekneler viravira.co’da listelenebilir?
-                                </div>
-                            </div>
-                     
-                            <div class="cards third blogCards">
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-4.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="title">Katamaran</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-6.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="title">Yelkenli </div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="title">Motoryat</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="title">Gulet</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="title">Sürat Teknesi</div>
-                                    </div>
-                                </a>
-                                <a href="blog-detay.html" class="card">
-                                    <div class="cardTop-image">
-                                        <div class="imageWrapper">
-                                            <img src="public/assets/images/media/blog-5.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="cardBody">
-                                        <div class="title">Şişme Bot</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <div class="pageContent padding bg-gray rounded-5">
-                            <div class="sectionHead col-lg-11 mx-auto">
-                                <div class="sectionTitle">
-                                    Farklı bir deniz deneyimi mi listelemek istiyorsunuz?
-                                </div>
-                                <div class="sectionText type2">
-                                    teknekiralama.com’da üzerinden rezerve edilebilen hizmetler her geçen gün artıyor. Gelişmelerden haberdar olmak için iletişim bilgilerinizi bırakabilirsiniz.
-                                </div>
-                            </div>
-                            <div class="sectionContent">
-                                <div class="col-xxl-4 col-xl-6 col-lg-7 col-md-8 mx-auto">
-                                    <form class="form needs-validation" novalidate>
-                                        <div class="mb-3">
-                                            <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                            <div class="invalid-feedback">
-                                                Lütfen E-Posta Adresinizi Giriniz
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                                            <div class="invalid-feedback">
-                                                Lütfen Adınızı Giriniz
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="phoneWrapper">
-                                                <div class="codeWrapper position-relative">
-                                                    <input type="tel" placeholder="" id="telephone">
-                                                </div>
-                                                <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                                                <div class="invalid-feedback w-100">
-                                                    Lütfen Telefon Numaranızı Giriniz
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
-                                        <div class="mb-3">
-                                            <span class="fixBtn button-primary w-100">
-                                                <input type="submit" value="Beni Arayın">
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                       
                         </div>
                     </div>
-
                 </div>
+
+               
+            
             </section>
             <!--E-Bulten section-->
             <section class="eBultenSection">
@@ -1069,7 +1439,6 @@
     </div>
 
     <!--modallar-->
-
     <div class="modal fade type2" id="UyeGirisiModal" aria-hidden="true" aria-labelledby="UyeGirisiModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -1258,262 +1627,73 @@
     </div>
 
 
-    <div class="modal fade type2" id="editProfileModal" aria-hidden="true" aria-labelledby="editProfileModal" tabindex="-1">
-        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0 text-start" id="UyeOlModalLabel">Personal details</div>
-                    </div>
-                </div>
-                <blockquote class="blockquote">
-                    <span class="icon-info"></span> 
-                    <p>
-                        Your account is not verified. <a href="#">Resend confirmation</a>
-                    </p>
-                </blockquote>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Adınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                        <div class="invalid-feedback">
-                            Lütfen Soyadınızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="phoneWrapper">
-                            <div class="codeWrapper position-relative">
-                                <input type="tel" placeholder="" id="telephone">
-                            </div>
-                            <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                            <div class="invalid-feedback w-100">
-                                Lütfen Telefon Numaranızı Giriniz
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Kaydet">
-                        </span>
-                    </div>
-                </form>
-            </div>
-          </div>
-        </div>
-    </div>
-
-
-
-    <div class="modal fade type2" id="UyeGirisiTekneModal" aria-hidden="true" aria-labelledby="UyeGirisiTekneModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeGirisiTekneModalLabel">Üye Girişi</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                        Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                        <div class="invalid-feedback">
-                            Lütfen Parolanızı Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3 text-end">
-                        <a href="#" class="forgotLink" data-bs-toggle="modal" data-bs-target="#sifremiUnuttumTekneModal">Şifremi Unuttum</a>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Giriş Yap">
-                        </span>
-                    </div>
-                </form>
-                <hr>
-                <div class="signText paragraph text-center pt-4">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="modal fade type2" id="sifremiUnuttumTekneModal" aria-hidden="true" aria-labelledby="sifremiUnuttumTekneModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="sifremiUnuttumTekneModalLabel">Şifremi Unuttum</div>
-                    </div>
-                </div>
-                <form class="form needs-validation" novalidate>
-                    <div class="mb-3">
-                        <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                        <div class="invalid-feedback">
-                            Lütfen E-Posta Adresinizi Giriniz
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <span class="fixBtn button-primary w-100">
-                            <input type="submit" value="Şifreni Yenile">
-                        </span>
-                    </div>
-                    <div class="paragraph type3">
-                        Hesabınıza erişim sağlayabilmeniz için kayıtlı e-posta adresinizi girin. Size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz. Gelen kutunuzu ve spam'i kontrol etmeyi unutmayın!
-                    </div>
-                </form>
-                <hr>
-                <div class="signText paragraph text-center">
-                    Üyeliğin yok ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeOlTekneModal">Üye Ol</a>
-                </div>
-                
-            </div>
-          </div>
-        </div>
-    </div>
-
-
-    <div class="modal fade type2" id="UyeOlTekneModal" aria-hidden="true" aria-labelledby="UyeOlTekneModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
-            </div>
-            <div class="modal-body">
-                <div class="modalHead">
-                    <a href="#" class="backStep disabled"><span class="icon-arrow-long"></span></a>
-                    <div class="stepHead">
-                        <span class="">1</span>
-                        <span>2</span>
-                    </div>
-                    <div class="titleColumn">
-                        <div class="modal-title text-primary mb-0" id="UyeOlTekneModalLabel">Üye Hesabı Oluştur</div>
-                    </div>
-                </div>
-                <div class="signupFormSteps">
-                    <div class="stepOne">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="email" id="email" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Devam Et">
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="stepTwo d-none">
-                        <form class="form needs-validation" novalidate>
-                            <div class="mb-3">
-                                <input type="text" id="name" name="name" class="form-control textMask" placeholder="Adınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Adınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" id="surname" name="surname" class="form-control textMask" placeholder="Soyadınız" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Soyadınızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" id="email2" name="email" class="form-control emailMask" placeholder="E-Posta Adresiniz" required>
-                                <div class="invalid-feedback">
-                                    Lütfen E-Posta Adresinizi Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="phoneWrapper">
-                                    <div class="codeWrapper position-relative">
-                                        <input type="tel" placeholder="" id="telephone">
-                                    </div>
-                                    <input type="text" id="phone" name="phone" class="form-control numberMask" placeholder="Telefon Numaranız" required>
-                                    <div class="invalid-feedback w-100">
-                                        Lütfen Telefon Numaranızı Giriniz
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Şifre" required>
-                                <div class="invalid-feedback">
-                                    Lütfen Parolanızı Giriniz
-                                </div>
-                            </div>
-                            <div class="mb-5 ps-3">
-                                <label class="container-check">
-                                    <input type="checkbox" name="address">
-                                    <span class="checkmark"></span>
-                                    <span class="checkText">I don't want to receive marketing communications from Blueground. Read our Privacy Policy</span>
-                                </label>
-                            </div>
-                            <div class="mb-3">
-                                <span class="fixBtn button-primary w-100">
-                                    <input type="submit" value="Hesap Oluştur">
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr>
-                <div class="signText paragraph text-center pt-4">
-                    Zaten üyeliğiniz var ise <a href="#" class="notafter" data-bs-toggle="modal" data-bs-target="#UyeGirisiTekneModal">Giriş Yap</a>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
     <script src="public/assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/moment.min.js"></script>
+    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/jquery.easing.min.js"></script>
     <script src="public/assets/plugins/jquery.pause.js"></script>
-    <script src="public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="public/assets/plugins/datapicker/jquery.daterangepicker.js"></script><!--Bu script daterangepicker eklentisidir date olan sayfalarda eklenmesı yeterlidir-->
     <script src="public/assets/plugins/nice-select/jquery.nice-select.js"></script>
     <script src="public/assets/plugins/aos/aos.js"></script>
     <script src="public/assets/plugins/fancyapps/fancybox.umd.js"></script>
-
-
-    <script src="public/assets/plugins/jquery.mask.min.js"></script>
-    <script src="public/assets/plugins/phoneInput/intlTelInput.min.js"></script>
+    <script src="public/assets/plugins/rangeSlider/nouislider.min.js"></script><!--Bu script fiyat aralıgı ıcın eklenmıs eklentidir. filtreleme modal ıcerısınde kullanılır-->
 
     <script src="public/assets/front/js/app.js"></script>
     <script src="public/assets/front/js/swiper-custom.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
-    <script src="public/assets/front/js/form.js"></script><!--Eger slider kullanılmayan bır sayfa ise bunu kullanmaya gerek yok-->
+    <script src="public/assets/front/js/custom-date.js"></script><!--Bu sadace anasayfa ve liste sayfasında olması gerekıyor. Search tarih filtreleme ıcın-->
+    <script>
+         const rangeSlider = document.getElementById('rangeSlider');
+
+            // Binlik ayracı ve TL simgesi eklemek için formatter
+            const formatThousands = {
+                to: function (value) {
+                    return Math.round(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); // Sadece sayıyı döndür
+                },
+                from: function (value) {
+                    return Number(value.replace(/\./g, ''));
+                }
+            };
+
+            noUiSlider.create(rangeSlider, {
+                start: [0, 10000000], // Başlangıç ve bitiş değerleri
+                connect: true, // Seçili aralığı renklendirme
+                range: {
+                    'min': 0,
+                    'max': 10000000
+                },
+                step: 1, // Artış değeri
+                tooltips: false, // Her iki değerde tooltip gösterimi
+                format: formatThousands // Sadece sayısal format
+            });
+
+            // Gösterim ve input alanlarına değerleri güncelleme
+            const sliderStartValueDisplay = document.getElementById('sliderStartValueDisplay');
+            const sliderEndValueDisplay = document.getElementById('sliderEndValueDisplay');
+            const sliderStartInput = document.getElementById('sliderStartInput');
+            const sliderEndInput = document.getElementById('sliderEndInput');
+
+            rangeSlider.noUiSlider.on('update', function (values) {
+                // Gösterim alanlarına HTML ile TL simgesi ekleme
+                sliderStartValueDisplay.innerHTML = values[0] + ' <span class="icon-tl priceIcon"></span>';
+                sliderEndValueDisplay.innerHTML = values[1] + ' <span class="icon-tl priceIcon"></span>';
+                
+                // Input alanları
+                sliderStartInput.value = values[0];
+                sliderEndInput.value = values[1];
+            });
+
+            // Input alanlarında değer değiştiğinde slider'ı güncelle
+            sliderStartInput.addEventListener('change', function () {
+                rangeSlider.noUiSlider.set([formatThousands.from(this.value), null]);
+            });
+
+            sliderEndInput.addEventListener('change', function () {
+                rangeSlider.noUiSlider.set([null, formatThousands.from(this.value)]);
+            });
+
+
+    </script>
 </body>
 
 </html>

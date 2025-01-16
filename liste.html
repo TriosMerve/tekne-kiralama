@@ -77,7 +77,7 @@
                 <div class="headerNav">
                     <a href="index.html" class="logo"><img src="public/assets/images/statics/logo.png" alt="teknekiralama.com Logo"></a>
                     <div class="d-flex hstack ms-auto">
-                        <a href="#" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
+                        <a href="tekne-sahibi.html" class="textLink me-5 mt-0 d-none d-lg-flex">Teknenizi Ekleyin</a>
                         <div class="dropdown languageWrapper">
                             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="icon-language"></span>
@@ -1454,14 +1454,14 @@
                                 <div class="menuListColumn">
                                     <div class="title">TekneKiralama.com</div>
                                     <ul>
-                                        <li><a href="#">Neden TekneKiralama.com</a></li>
-                                        <li><a href="#">Hakkımızda</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Sürdürülebilirlik</a></li>
-                                        <li><a href="#">İletişim</a></li>
-                                        <li><a href="#">SSS</a></li>
-                                        <li><a href="#">Kariyer</a></li>
-                                        <li><a href="#">Basın Kiti</a></li>
+                                        <!-- <li><a href="#">Neden TekneKiralama.com</a></li> -->
+                                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <!-- <li><a href="#">Sürdürülebilirlik</a></li> -->
+                                        <li><a href="iletisim.html">İletişim</a></li>
+                                        <li><a href="sss.html">SSS</a></li>
+                                        <!-- <li><a href="#">Kariyer</a></li>
+                                        <li><a href="#">Basın Kiti</a></li> -->
                                     </ul>
                                 </div>
                                 <div class="menuListColumn">
@@ -1477,17 +1477,17 @@
                                     </ul>
                                 </div>
                                 <div class="menuListColumn">
-                                    <div class="title">Tekne Sahipleri</div>
+                                   <div class="title">Tekne Sahipleri</div>
                                     <ul>
-                                        <li><a href="#">Tekneni Kirala</a></li>
+                                        <li><a href="tekne-sahibi.html">Tekneni Kirala</a></li>
                                     </ul>
                                 </div>
                                 <div class="menuListColumn">
                                     <div class="title">Yasal Bilgiler</div>
                                     <ul>
-                                        <li><a href="#">Kullanım Koşulları</a></li>
-                                        <li><a href="#">KVKK Aydınlatma Metni</a></li>
-                                        <li><a href="#">İptal ve İade Koşulları</a></li>
+                                        <li><a href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+                                        <li><a href="kvkk.html">KVKK Aydınlatma Metni</a></li>
+                                        <li><a href="iptal-iade-kosullari.html">İptal ve İade Koşulları</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1500,6 +1500,7 @@
                                 © 2023 - Tüm hakları Organikasyon Ltd Şti’ye aittir
                             </div>
                         </div>
+                        <a href="tekne-sahibi-hesabim-uyegirisi.html" class="fixBtn button-primary ms-5" target="_blank">Tekne Sahibi Yönetim Paneli</a>
                         <a class="designLogo ms-auto" href="https://www.trios.com.tr/" target="_blank"><img src="public/assets/images/statics/trios-logo.png" alt=""></a>
                     </div>
                 </div>
@@ -1694,6 +1695,301 @@
           </div>
         </div>
     </div>
+
+
+  <!--Bu filtreleme modalı sadece filtreleme olan sayfalar ıcın eklenmelı-->
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="filterModalLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="titleColumn text-start">
+                    <div class="modal-title mb-0" id="filterModalLabel">Filtrele</div>
+                    <p>Mükemmel tekneleri bulun</p>
+                </div>
+            <a href="#" class="btn-close type2" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                <div class="propList">
+                    <div class="listItem">
+                        <div class="title">Fiyat</div>
+                        <div class="rangesliderWrapper">
+                            <!-- Başlangıç ve bitiş değerleri için gösterim alanları -->
+                            <div class="valueTop">
+                                <span id="sliderStartValueDisplay"></span>
+                                <span id="sliderEndValueDisplay"></span>
+                            </div>
+                            <div id="rangeSlider"></div>
+
+                            <!-- Başlangıç ve bitiş değerleri için input alanları -->
+                            <div class="rangeInput">
+                                <div class="sliderInputWrapper">
+                                    <span class="icon-tl priceIcon"></span>
+                                    <input type="text" id="sliderStartInput">
+                                </div>
+                                <div class="sliderInputWrapper">
+                                    <span class="icon-tl priceIcon"></span>
+                                    <input type="text" id="sliderEndInput">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush customAcc" id="filtrelemeAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                Tekne Tipi
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button type2">
+                                        <input type="radio" name="boatType">
+                                        <span class="checkmark"> <span class="checkText">Gulet</span></span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="radio" name="boatType">
+                                        <span class="checkmark"><span class="checkText">Yelkenli</span></span>
+
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="radio" name="boatType">
+                                        <span class="checkmark">
+                                        <span class="checkText">Katamaran</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="radio" name="boatType">
+                                        <span class="checkmark">
+                                        <span class="checkText">Motoryat</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="radio" name="boatType">
+                                        <span class="checkmark">
+                                        <span class="checkText">Şişme Bot</span>
+                                    </span>
+                                    </label>
+                                    <label class="container-check button type2">
+                                        <input type="radio" name="boatType">
+                                        <span class="checkmark">
+                                        <span class="checkText">Sürat Teknesi</span>
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
+                                Mürettebat
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="crewType">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Tümün Göster</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="crewType">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptanlı Kiralama</span>
+                                    </label>
+                                    <label class="container-check radioCheck">
+                                        <input type="radio" name="crewType">
+                                        <span class="checkmark"></span>
+                                        <span class="checkText">Kaptansız Kiralama</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="true" aria-controls="flush-collapseThree">
+                            Kapasite
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="radio" name="capacity">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="capacity">
+                                        <span class="checkmark">
+                                            <span class="checkText">1-5</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="capacity">
+                                        <span class="checkmark">
+                                            <span class="checkText">6-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="capacity">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-15</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="capacity">
+                                        <span class="checkmark">
+                                            <span class="checkText">16-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="capacity">
+                                        <span class="checkmark">
+                                            <span class="checkText">20+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="true" aria-controls="flush-collapseFour">
+                            Seyir Kapasitesi
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="radio" name="length">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="length">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="length">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="length">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="radio" name="length">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="true" aria-controls="flush-collapseFive">
+                            Uzunluğu
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="checkList">
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">Tümü</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">5-10</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">11-20</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">21-30</span>
+                                        </span>
+                                    </label>
+                                    <label class="container-check button">
+                                        <input type="checkbox" name="address">
+                                        <span class="checkmark">
+                                            <span class="checkText">30+</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="true" aria-controls="flush-collapseFive">
+                            Tekne Bilgileri
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="boatInformation form">
+                                    <div class="position-relative formSelectWrapper">
+                                        <label for="MARKA"></label>
+                                        <select name="" id="boatBrandSelect" class="form-select boatBrandSelect customSelect">
+                                            <option value="">Sunseeker</option>
+                                            <option value="">Yacth</option>
+                                            <option value="">Bavaria</option>
+                                            <option value="">Lagoon</option>
+                                            <option value="">Aicon</option>
+                                            <option value="">Absolute</option>
+                                        </select>
+                                    </div>
+                                    <div class="position-relative formSelectWrapper">
+                                        <label for="MODEL"></label>
+                                        <select name="" id="boatBrandSelect" class="form-select boatBrandSelect customSelect">
+                                            <option value="">Sunseeker</option>
+                                            <option value="">Yacth</option>
+                                            <option value="">Bavaria</option>
+                                            <option value="">Lagoon</option>
+                                            <option value="">Aicon</option>
+                                            <option value="">Absolute</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <a href="#" class="clearFilterButton textLink">Filtreleri Temizle</a>
+                <a href="#" class="filterAppylButton fixBtn button-primary">Filtreleri Uygula</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
 
 
     <script src="public/assets/plugins/jquery.min.js"></script>
