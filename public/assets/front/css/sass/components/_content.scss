@@ -1,6 +1,6 @@
 .bannerWrapper {
   position: relative;
-  &.type2{
+  &.type2 {
     border-radius: 24px;
     overflow: hidden;
     height: 500px;
@@ -63,13 +63,13 @@
       }
     }
   }
-  &.short{
+  &.short {
     height: 220px;
   }
   &.rightColumn {
     width: calc(100% - 300px);
 
-    .bannerDesc{
+    .bannerDesc {
       padding-left: 250px;
       @media screen and (max-width: 1280px) {
         padding-left: 500px;
@@ -77,9 +77,7 @@
       @media screen and (max-width: 991.98px) {
         padding-left: 30px;
       }
-
     }
-
   }
 }
 .filterWrapper {
@@ -223,64 +221,109 @@
   }
 }
 
-
 /*İletişim Sayfası*/
-.contactColumn{
+.contactColumn {
   display: flex;
   align-items: stretch;
   border-radius: 24px;
   overflow: hidden;
   margin-top: 40px;
-  .leftColumn{
-    background-color: var(--gray-4);
-    width: 300px;
-    padding:40px 30px;
+  border: 1px solid var(--gray);
+  @media screen and (max-width:768px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .rightColumn{
+  .leftColumn {
     background-color: var(--gray);
-    width: calc(100% - 300px);
+    width: 400px;
+    padding: 40px 30px;
+    @media screen and (max-width:991.98px) {
+      width: 350px;
+      padding: 20px;
+    }
+    @media screen and (max-width:768px) {
+      width:100%;
+      padding: 16px;
+    }
+  }
+  .rightColumn {
+    width: calc(100% - 400px);
     padding: 40px;
     padding-left: 50px;
+    @media screen and (max-width:991.98px) {
+      width: calc(100% - 350px);
+      padding: 20px ;
+    }
+    @media screen and (max-width:768px) {
+      width:100%;
+      padding: 16px;
+    }
   }
-  .contactTitle{
+  .contactTitle {
     font-size: 24px;
     line-height: 32px;
     color: var(--primary);
-    font-family: 'GilroySemibold';
+    font-family: "GilroySemibold";
     margin-bottom: 20px;
+    @media screen and (max-width:991.98px) {
+     font-size: 20px;
+     line-height: 27px;
+     margin-bottom: 10px;
+    }
   }
-  .text{
-    font-family: 'GilroyMedium';
+  .text {
+    font-family: "GilroyMedium";
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 20px;
     color: var(--gray-6);
+    @media screen and (max-width:768px) {
+      margin-bottom: 10px;
+    }
   }
-  .contactInfo{
+  .contactInfo {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    .name{
+    align-items: flex-start;
+    @media screen and (max-width:768px) {
+      padding-top: 15px;
+    }
+    .name {
       display: flex;
       align-items: center;
       font-size: 16px;
-      font-family: 'GilroyMedium';
-      color:var(--text);
+      font-family: "GilroyMedium";
+      color: var(--primary);
       gap: 5px;
-    }
-    a{
-      font-family: 'GilroySemibold';
-      color: var(--black);
-      font-size: 20px;
-      line-height: 22px;
-      transition: all .3s linear;
-      margin-bottom: 20px;
-      margin-top: 5px;
+      @media screen and (max-width:991.98px) {
+        font-size: 14px;
+        line-height: 25px;
+       }
 
-      @media screen and (min-width:992px) {
-        &:hover{
+      // img {
+      //   filter: grayscale(1);
+      // }
+    }
+    a {
+      font-family: "GilroySemibold";
+      color: var(--gray-7);
+      font-size: 18px;
+      line-height: 27px;
+      transition: all 0.3s linear;
+      margin-bottom: 30px;
+      margin-top: 5px;
+      @media screen and (max-width:991.98px) {
+        font-size: 16px;
+        line-height: 25px;
+       }
+       @media screen and (max-width:768px) {
+        margin-bottom: 15px;
+      }
+
+      @media screen and (min-width: 992px) {
+        &:hover {
           color: var(--primary);
         }
       }

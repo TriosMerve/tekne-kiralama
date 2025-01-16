@@ -14949,17 +14949,47 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 24px;
   overflow: hidden;
   margin-top: 40px;
+  border: 1px solid var(--gray);
+}
+@media screen and (max-width: 768px) {
+  .contactColumn {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .contactColumn .leftColumn {
-  background-color: var(--gray-4);
-  width: 300px;
+  background-color: var(--gray);
+  width: 400px;
   padding: 40px 30px;
 }
+@media screen and (max-width: 991.98px) {
+  .contactColumn .leftColumn {
+    width: 350px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactColumn .leftColumn {
+    width: 100%;
+    padding: 16px;
+  }
+}
 .contactColumn .rightColumn {
-  background-color: var(--gray);
-  width: calc(100% - 300px);
+  width: calc(100% - 400px);
   padding: 40px;
   padding-left: 50px;
+}
+@media screen and (max-width: 991.98px) {
+  .contactColumn .rightColumn {
+    width: calc(100% - 350px);
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactColumn .rightColumn {
+    width: 100%;
+    padding: 16px;
+  }
 }
 .contactColumn .contactTitle {
   font-size: 24px;
@@ -14968,6 +14998,13 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroySemibold";
   margin-bottom: 20px;
 }
+@media screen and (max-width: 991.98px) {
+  .contactColumn .contactTitle {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 10px;
+  }
+}
 .contactColumn .text {
   font-family: "GilroyMedium";
   font-size: 14px;
@@ -14975,29 +15012,56 @@ section .customBlockquote blockquote .fixBtn,
   margin-bottom: 20px;
   color: var(--gray-6);
 }
+@media screen and (max-width: 768px) {
+  .contactColumn .text {
+    margin-bottom: 10px;
+  }
+}
 .contactColumn .contactInfo {
   padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .contactColumn .contactInfo {
+    padding-top: 15px;
+  }
 }
 .contactColumn .contactInfo .name {
   display: flex;
   align-items: center;
   font-size: 16px;
   font-family: "GilroyMedium";
-  color: var(--text);
+  color: var(--primary);
   gap: 5px;
+}
+@media screen and (max-width: 991.98px) {
+  .contactColumn .contactInfo .name {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 .contactColumn .contactInfo a {
   font-family: "GilroySemibold";
-  color: var(--black);
-  font-size: 20px;
-  line-height: 22px;
+  color: var(--gray-7);
+  font-size: 18px;
+  line-height: 27px;
   transition: all 0.3s linear;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-top: 5px;
+}
+@media screen and (max-width: 991.98px) {
+  .contactColumn .contactInfo a {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactColumn .contactInfo a {
+    margin-bottom: 15px;
+  }
 }
 @media screen and (min-width: 992px) {
   .contactColumn .contactInfo a:hover {
