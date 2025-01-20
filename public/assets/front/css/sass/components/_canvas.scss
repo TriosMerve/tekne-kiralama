@@ -276,7 +276,7 @@
     color: var(--text);
     left: 21px;
     top: 11px;
-    @media screen and (max-width:1366px) {
+    @media screen and (max-width:1600px) {
      top: 8px;
      left: 11px;
     }
@@ -292,7 +292,8 @@
     background-color: var(--gray);
     border: 1px solid var(--gray-3);
     border-radius: 10px;
-    @media screen and (max-width:1366px) {
+    @media screen and (max-width:1600px) {
+      font-size: 12px;
       height: 45px;
     }
 
@@ -310,13 +311,16 @@
     border: 1px solid var(--gray-3);
     border-radius: 10px;
     width: 100%;
-    @media screen and (max-width:1366px) {
+    @media screen and (max-width:1600px) {
       height: 45px;
       padding-top: 8px;
       padding-left:11px;
     }
     .current {
       color: #878787;
+      @media screen and (max-width:1600px) {
+        font-size: 12px;
+      }
     }
     .list {
       border: 1px solid var(--gray-3) !important;

@@ -90,6 +90,9 @@
 
 .customTabContents {
   margin-top: 34px;
+  @media screen and (max-width:1600px) {
+    margin-top: 15px;
+  }
   @media screen and (max-width: 991.98px) {
     margin-top: 18px;
     margin-bottom: 30px;

@@ -68,9 +68,15 @@
   }
   &.rightColumn {
     width: calc(100% - 300px);
+    @media screen and (max-width:1280px) {
+      width: 100%;
+    }
 
     .bannerDesc {
       padding-left: 250px;
+      @media screen and (max-width: 1600px) {
+        padding-left: 200px;
+      }
       @media screen and (max-width: 1280px) {
         padding-left: 500px;
       }

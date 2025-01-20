@@ -310,14 +310,14 @@ a:hover {
   cursor: pointer;
 
   @media screen and (max-width: 1600px) {
-    height: 50px;
-    font-size: 14px;
-  }
-
-  @media screen and (max-width: 991.98px) {
     height: 45px;
     font-size: 13px;
   }
+
+  // @media screen and (max-width: 991.98px) {
+  //   height: 45px;
+  //   font-size: 13px;
+  // }
 
   svg,
   img {
@@ -620,10 +620,17 @@ a:hover {
     border: 1px solid #bfbfbf;
     border-radius: 10px;
     overflow: hidden;
+    @media screen and (max-width: 1600px) {
+      height: 45px;
+    }
     .current {
       display: flex;
       align-items: center;
       height: 50px;
+      @media screen and (max-width: 1600px) {
+        height: initial;
+        font-size: 12px;
+      }
     }
     &:after {
       border: none;

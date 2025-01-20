@@ -1498,12 +1498,6 @@ video {
 }
 @media screen and (max-width: 1600px) {
   .fixBtn {
-    height: 50px;
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .fixBtn {
     height: 45px;
     font-size: 13px;
   }
@@ -1769,10 +1763,21 @@ video {
   border-radius: 10px;
   overflow: hidden;
 }
+@media screen and (max-width: 1600px) {
+  .formSelectWrapper .customSelect {
+    height: 45px;
+  }
+}
 .formSelectWrapper .customSelect .current {
   display: flex;
   align-items: center;
   height: 50px;
+}
+@media screen and (max-width: 1600px) {
+  .formSelectWrapper .customSelect .current {
+    height: initial;
+    font-size: 12px;
+  }
 }
 .formSelectWrapper .customSelect:after {
   border: none;
@@ -3457,6 +3462,11 @@ footer .footerTop {
   border-bottom: 1px solid var(--white);
   padding-bottom: 70px;
 }
+@media screen and (max-width: 1600px) {
+  footer .footerTop {
+    padding-bottom: 50px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   footer .footerTop {
     padding-bottom: 0px;
@@ -3480,6 +3490,12 @@ footer .footerTop .title {
   line-height: 32px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 1600px) {
+  footer .footerTop .title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   footer .footerTop .title {
     font-size: 20px;
@@ -3490,6 +3506,11 @@ footer .footerContent {
   display: flex;
   align-items: flex-start;
   padding-top: 70px;
+}
+@media screen and (max-width: 1600px) {
+  footer .footerContent {
+    padding-top: 50px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   footer .footerContent {
@@ -3557,6 +3578,12 @@ footer .footerMenu .menuListColumn .title {
   color: var(--black);
   margin-bottom: 25px;
 }
+@media screen and (max-width: 1600px) {
+  footer .footerMenu .menuListColumn .title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   footer .footerMenu .menuListColumn .title {
     margin-bottom: 15px;
@@ -3572,6 +3599,12 @@ footer .footerMenu .menuListColumn ul li a {
   align-items: center;
   position: relative;
   transition: all 0.3s linear;
+}
+@media screen and (max-width: 1600px) {
+  footer .footerMenu .menuListColumn ul li a {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 footer .footerMenu .menuListColumn ul li a:after {
   content: "";
@@ -3605,6 +3638,11 @@ footer .footerBottom .copyRight {
   line-height: 20px;
   color: var(--gray-6);
 }
+@media screen and (max-width: 1600px) {
+  footer .footerBottom .copyRight {
+    font-size: 13px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   footer .footerBottom .designLogo {
     margin: 30px auto !important;
@@ -3615,6 +3653,11 @@ footer .customTab {
   gap: 25px;
   flex-wrap: nowrap;
   padding-left: 16px !important;
+}
+@media screen and (max-width: 1600px) {
+  footer .customTab {
+    gap: 15px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   footer .customTab {
@@ -3637,7 +3680,7 @@ footer .customTab .nav-item .nav-link {
   padding: 0 25px;
   white-space: nowrap;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   footer .customTab .nav-item .nav-link {
     font-size: 14px;
     padding: 0 15px;
@@ -3654,6 +3697,11 @@ footer .customTab .nav-item .nav-link.active {
 }
 footer .customTabContents {
   padding: 20px 0;
+}
+@media screen and (max-width: 1600px) {
+  footer .customTabContents {
+    padding: 0;
+  }
 }
 footer .customTabContents .listItems {
   display: flex;
@@ -4199,7 +4247,7 @@ footer .customTabContents .listItems .item .boatName {
   color: var(--primary);
   transition: all 0.3s linear;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .cards:not(.swiper-wrapper) .card .cardBody .title {
     font-size: 20px;
     line-height: 27px;
@@ -4212,7 +4260,7 @@ footer .customTabContents .listItems .item .boatName {
   color: var(--gray-6);
   padding-top: 12px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .cards:not(.swiper-wrapper) .card .cardBody .cardText {
     font-size: 13px;
   }
@@ -4278,9 +4326,10 @@ footer .customTabContents .listItems .item .boatName {
   font-family: "GilroySemibold";
   line-height: 19px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .cards:not(.swiper-wrapper) .card .cardBody .countPrice .price {
     font-size: 24px;
+    line-height: 24px;
   }
 }
 .cards:not(.swiper-wrapper) .card .cardBody .countPrice .currencly {
@@ -4525,10 +4574,16 @@ footer .customTabContents .listItems .item .boatName {
   line-height: 27px;
   color: var(--black);
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .cards:not(.swiper-wrapper).third.blogCards .card .cardBody .title {
     font-size: 18px;
     line-height: 26px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .cards:not(.swiper-wrapper).third.blogCards .card .cardBody .title {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -4579,7 +4634,7 @@ footer .customTabContents .listItems .item .boatName {
   }
 }
 .cards:not(.swiper-wrapper).quad {
-  gap: 20px;
+  gap: 40px 20px;
 }
 .cards:not(.swiper-wrapper).quad .card {
   width: calc(25% - 15px);
@@ -4613,6 +4668,11 @@ footer .customTabContents .listItems .item .boatName {
   text-align: left;
   transition: all 0.3s linear;
 }
+@media screen and (max-width: 1600px) {
+  .cards:not(.swiper-wrapper).quad .card .card-text {
+    font-size: 14px;
+  }
+}
 .cards:not(.swiper-wrapper).quad .card .moreLink {
   color: var(--primary);
   font-family: "GilroySemibold";
@@ -4623,6 +4683,11 @@ footer .customTabContents .listItems .item .boatName {
   display: inline-flex;
   margin-top: 10px;
   cursor: pointer;
+}
+@media screen and (max-width: 1600px) {
+  .cards:not(.swiper-wrapper).quad .card .moreLink {
+    font-size: 13px;
+  }
 }
 @media screen and (min-width: 992px) {
   .cards:not(.swiper-wrapper).quad .card .moreLink:after {
@@ -4644,6 +4709,12 @@ footer .customTabContents .listItems .item .boatName {
   color: var(--text-2);
   font-family: "GilroyMedium";
   margin-top: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .cards:not(.swiper-wrapper).quad .card .userShortInfo {
+    font-size: 13px;
+    margin-top: 10px;
+  }
 }
 .cards:not(.swiper-wrapper).quad.type2 {
   gap: 80px 20px;
@@ -4832,7 +4903,7 @@ footer .customTabContents .listItems .item .boatName {
   flex: 1;
   color: var(--primary);
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .thirdSlider .cards.swiper-wrapper .card .cardBody .title {
     font-size: 18px;
     line-height: 26px;
@@ -4868,6 +4939,11 @@ footer .customTabContents .listItems .item .boatName {
   gap: 15px;
   margin-top: 30px;
 }
+@media screen and (max-width: 1600px) {
+  .thirdSlider .cards.swiper-wrapper .card .cardBody .priceWrapper {
+    margin-top: 10px;
+  }
+}
 .thirdSlider .cards.swiper-wrapper .card .cardBody .discount {
   margin-top: 20px;
   font-size: 16px;
@@ -4899,9 +4975,10 @@ footer .customTabContents .listItems .item .boatName {
   font-family: "GilroySemibold";
   line-height: 19px;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 1600px) {
   .thirdSlider .cards.swiper-wrapper .card .cardBody .countPrice .price {
     font-size: 24px;
+    line-height: 24px;
   }
 }
 .thirdSlider .cards.swiper-wrapper .card .cardBody .countPrice .currencly {
@@ -4970,6 +5047,20 @@ footer .customTabContents .listItems .item .boatName {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1600px) {
+  .listHowCan .num {
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .listHowCan .num {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
 .listHowCan .title {
   margin-top: 25px;
   color: var(--gray-7);
@@ -4978,15 +5069,57 @@ footer .customTabContents .listItems .item .boatName {
   font-family: "GilroySemibold";
   text-align: center;
 }
+@media screen and (max-width: 1600px) {
+  .listHowCan .title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .listHowCan .title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .listHowCan .title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+}
 
+.twiceList {
+  margin: 0;
+}
 .twiceList .leftColumn {
   padding-right: 50px;
 }
+@media screen and (max-width: 991.98px) {
+  .twiceList .leftColumn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .twiceList .leftColumn.imageColumn {
   padding-right: 0;
+  padding-left: 0;
 }
 .twiceList .rightColumn {
   padding-left: 50px;
+}
+@media screen and (max-width: 991.98px) {
+  .twiceList .rightColumn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .twiceList .textColumn {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
 }
 .twiceList .title {
   font-size: 26px;
@@ -4994,12 +5127,38 @@ footer .customTabContents .listItems .item .boatName {
   line-height: 32px;
   font-family: "GilroySemibold";
 }
+@media screen and (max-width: 1600px) {
+  .twiceList .title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .twiceList .title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 .twiceList p {
   line-height: 40px;
   font-size: 22px;
   color: var(--gray-6);
   font-family: "GilroyMedium";
   margin-top: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .twiceList p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .twiceList p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
 }
 
 .customTabs {
@@ -5087,6 +5246,11 @@ footer .customTabContents .listItems .item .boatName {
 
 .customTabContents {
   margin-top: 34px;
+}
+@media screen and (max-width: 1600px) {
+  .customTabContents {
+    margin-top: 15px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .customTabContents {
@@ -5359,6 +5523,12 @@ section .sectionWrapper,
 .section .sectionWrapper {
   padding: 65px;
 }
+@media screen and (max-width: 1600px) {
+  section .sectionWrapper,
+  .section .sectionWrapper {
+    padding: 30px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   section .sectionWrapper,
   .section .sectionWrapper {
@@ -5368,6 +5538,12 @@ section .sectionWrapper,
 section .sectionWrapper-2 .sectionContent,
 .section .sectionWrapper-2 .sectionContent {
   padding: 45px;
+}
+@media screen and (max-width: 1600px) {
+  section .sectionWrapper-2 .sectionContent,
+  .section .sectionWrapper-2 .sectionContent {
+    padding: 30px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   section .sectionWrapper-2 .sectionContent,
@@ -5385,6 +5561,12 @@ section .sectionHead,
   margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1600px) {
+  section .sectionHead,
+  .section .sectionHead {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   section .sectionHead,
@@ -5407,6 +5589,12 @@ section .sectionHead .sectionTitle,
   font-size: 35px;
   color: var(--primary);
   line-height: 45px;
+}
+@media screen and (max-width: 1600px) {
+  section .sectionHead .sectionTitle,
+  .section .sectionHead .sectionTitle {
+    font-size: 30px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   section .sectionHead .sectionTitle,
@@ -5445,6 +5633,14 @@ section .sectionHead.type2 .sectionTitle,
   line-height: 37px;
   text-transform: none;
 }
+@media screen and (max-width: 1600px) {
+  section .sectionHead.type2 .sectionTitle,
+  .section .sectionHead.type2 .sectionTitle {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   section .sectionHead.type2 .sectionTitle,
   .section .sectionHead.type2 .sectionTitle {
@@ -5463,10 +5659,23 @@ section .sectionHead.type2 .sectionText,
   margin-top: 15px;
   text-align: justify;
 }
+@media screen and (max-width: 1600px) {
+  section .sectionHead.type2 .sectionText,
+  .section .sectionHead.type2 .sectionText {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
 section .sectionHead.type2 .sectionText.type2,
 .section .sectionHead.type2 .sectionText.type2 {
   font-size: 16px;
   line-height: 25px;
+}
+@media screen and (max-width: 1600px) {
+  section .sectionHead.type2 .sectionText.type2,
+  .section .sectionHead.type2 .sectionText.type2 {
+    font-size: 14px;
+  }
 }
 section .customBlockquote blockquote,
 .section .customBlockquote blockquote {
@@ -5688,6 +5897,12 @@ section .customBlockquote blockquote .fixBtn,
   padding: 50px 0 0;
   text-align: center;
   line-height: 24px;
+}
+@media screen and (max-width: 1600px) {
+  .homeSection small {
+    padding-top: 20px;
+    font-size: 13px;
+  }
 }
 .homeSection small a {
   color: var(--primary);
@@ -6023,6 +6238,12 @@ section .customBlockquote blockquote .fixBtn,
   color: var(--white);
   max-width: 640px;
 }
+@media screen and (max-width: 1600px) {
+  .eBultenSection .title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .eBultenSection .title {
     font-size: 24px;
@@ -6182,6 +6403,11 @@ section .customBlockquote blockquote .fixBtn,
 .pageContent {
   margin-top: 100px;
 }
+@media screen and (max-width: 1600px) {
+  .pageContent {
+    margin-top: 70px;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .pageContent {
     margin-top: 50px;
@@ -6201,6 +6427,11 @@ section .customBlockquote blockquote .fixBtn,
   line-height: 22px;
   color: var(--gray-7);
   font-family: "GilroyRegular";
+}
+@media screen and (max-width: 1600px) {
+  .paragraph {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .paragraph {
@@ -6242,6 +6473,13 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroySemibold";
   margin-bottom: 10px;
   margin-top: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .paragraph span,
+  .paragraph h2 {
+    font-size: 20px;
+    line-height: 27px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .paragraph span,
@@ -6300,6 +6538,12 @@ section .customBlockquote blockquote .fixBtn,
 .paragraph.type2 {
   font-size: 18px;
   line-height: 30px;
+}
+@media screen and (max-width: 1600px) {
+  .paragraph.type2 {
+    font-size: 15px;
+    line-height: 22px;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .paragraph.type2 {
@@ -8159,7 +8403,7 @@ section .customBlockquote blockquote .fixBtn,
   background-color: var(--gray);
   border: 1px solid var(--gray-3);
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
   .chooseHourWrapper .formSelectWrapper .customSelect {
     height: 45px;
     padding-top: 10px;
@@ -8370,13 +8614,18 @@ section .customBlockquote blockquote .fixBtn,
   font-family: "GilroySemibold";
   color: var(--text);
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
     padding-top: 0;
     top: 5px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper label {
     padding-top: 0;
     top: 5px;
@@ -8426,7 +8675,12 @@ section .customBlockquote blockquote .fixBtn,
   font-size: 14px;
   z-index: 99;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
     height: 45px;
     padding-top: 11px;
@@ -8435,7 +8689,7 @@ section .customBlockquote blockquote .fixBtn,
     top: 0;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .calendarWrapper .dateTimeSearchWrapper .formSelectWrapper .form-select .current {
     height: 45px;
     padding-top: 11px;
@@ -8649,13 +8903,18 @@ section .customBlockquote blockquote .fixBtn,
   background: var(--gray);
   border-color: var(--gray);
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .calendarWrapper .customRangeButton {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .calendarWrapper .customRangeButton {
     height: 45px;
     padding-top: 21px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .calendarWrapper .customRangeButton {
     height: 45px;
     padding-top: 21px;
@@ -8677,6 +8936,11 @@ section .customBlockquote blockquote .fixBtn,
   transition: all 0.3s linear;
   font-size: 14px;
 }
+@media screen and (max-width: 1600px) {
+  .calendarWrapper .customRangeButton span {
+    font-size: 12px;
+  }
+}
 .calendarWrapper .customRangeButton span.name {
   font-size: 12px;
   position: absolute;
@@ -8684,12 +8948,17 @@ section .customBlockquote blockquote .fixBtn,
   text-transform: uppercase;
   font-family: "GilroySemibold";
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .calendarWrapper .customRangeButton span.name {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .calendarWrapper .customRangeButton span.name {
     top: 4px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .calendarWrapper .customRangeButton span.name {
     top: 4px;
   }
@@ -9222,13 +9491,19 @@ section .customBlockquote blockquote .fixBtn,
   padding-left: 10px;
   color: #878787;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .dateInputs .checkinInput,
+  .dateInputs .checkinInput2 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .dateInputs .checkinInput,
   .dateInputs .checkinInput2 {
     height: 45px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .dateInputs .checkinInput,
   .dateInputs .checkinInput2 {
     height: 45px;
@@ -9255,12 +9530,17 @@ section .customBlockquote blockquote .fixBtn,
   padding-left: 10px;
   color: #878787;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .dateInputs .checkoutInput {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .dateInputs .checkoutInput {
     height: 45px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .dateInputs .checkoutInput {
     height: 45px;
   }
@@ -9306,13 +9586,19 @@ section .customBlockquote blockquote .fixBtn,
   color: #878787;
   cursor: pointer;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .dateInputs .checkInText,
+  .dateInputs .checkInText2 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .dateInputs .checkInText,
   .dateInputs .checkInText2 {
     height: 45px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .dateInputs .checkInText,
   .dateInputs .checkInText2 {
     height: 45px;
@@ -9349,12 +9635,17 @@ section .customBlockquote blockquote .fixBtn,
   color: #878787;
   cursor: no-drop;
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 1600px) {
+  .dateInputs .checkOutText {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1366px) {
   .dateInputs .checkOutText {
     height: 45px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-height: 768px) {
   .dateInputs .checkOutText {
     height: 45px;
   }
@@ -9433,7 +9724,7 @@ section .customBlockquote blockquote .fixBtn,
   border: 1px solid var(--gray-3);
   height: 60px;
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
   .dateColumnWrapper.singleDateWrapper .chooseHourWrapper .formSelectWrapper .customSelect {
     height: 45px;
   }
@@ -10240,6 +10531,12 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 4px;
   transition: all 0.3s linear;
 }
+@media screen and (max-width: 1600px) {
+  .filterSlideTab .filterSlideButton {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
 .filterSlideTab .filterSlideButton.active {
   color: var(--white);
   background-color: var(--primary);
@@ -10417,14 +10714,14 @@ section .customBlockquote blockquote .fixBtn,
 }
 @media screen and (max-width: 1600px) {
   .bannerSlider .bannerItem .desc p {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 @media screen and (max-width: 1440px) {
   .bannerSlider .bannerItem .desc p {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -10906,7 +11203,11 @@ section .customBlockquote blockquote .fixBtn,
 }
 .modal .modal-content .modal-body {
   padding: 20px;
-  min-height: 555px;
+}
+@media screen and (min-height: 750px) {
+  .modal .modal-content .modal-body {
+    min-height: 555px;
+  }
 }
 .modal .modal-content .modal-body::-webkit-scrollbar {
   background-color: rgba(217, 4, 62, 0.4);
@@ -11159,22 +11460,24 @@ section .customBlockquote blockquote .fixBtn,
 #sifremiUnuttumTekneModal .modal-dialog {
   max-width: 650px;
 }
-#UyeGirisiModal .modal-content,
-#UyeOlModal .modal-content,
-#sifremiUnuttumModal .modal-content,
-#UyeGirisiTekneModal .modal-content,
-#UyeOlTekneModal .modal-content,
-#sifremiUnuttumTekneModal .modal-content {
-  min-height: 750px;
-}
-#UyeGirisiModal .modal-content .modal-header .btn-close,
-#UyeOlModal .modal-content .modal-header .btn-close,
-#sifremiUnuttumModal .modal-content .modal-header .btn-close,
-#UyeGirisiTekneModal .modal-content .modal-header .btn-close,
-#UyeOlTekneModal .modal-content .modal-header .btn-close,
-#sifremiUnuttumTekneModal .modal-content .modal-header .btn-close {
-  width: 35px;
-  height: 35px;
+@media screen and (min-height: 900px) {
+  #UyeGirisiModal .modal-content,
+  #UyeOlModal .modal-content,
+  #sifremiUnuttumModal .modal-content,
+  #UyeGirisiTekneModal .modal-content,
+  #UyeOlTekneModal .modal-content,
+  #sifremiUnuttumTekneModal .modal-content {
+    min-height: 750px;
+  }
+  #UyeGirisiModal .modal-content .modal-header .btn-close,
+  #UyeOlModal .modal-content .modal-header .btn-close,
+  #sifremiUnuttumModal .modal-content .modal-header .btn-close,
+  #UyeGirisiTekneModal .modal-content .modal-header .btn-close,
+  #UyeOlTekneModal .modal-content .modal-header .btn-close,
+  #sifremiUnuttumTekneModal .modal-content .modal-header .btn-close {
+    width: 35px;
+    height: 35px;
+  }
 }
 #UyeGirisiModal .modal-body,
 #UyeOlModal .modal-body,
@@ -11725,7 +12028,7 @@ section .customBlockquote blockquote .fixBtn,
   left: 21px;
   top: 11px;
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
   .otherOptions label {
     top: 8px;
     left: 11px;
@@ -11743,8 +12046,9 @@ section .customBlockquote blockquote .fixBtn,
   border: 1px solid var(--gray-3);
   border-radius: 10px;
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
   .otherOptions input {
+    font-size: 12px;
     height: 45px;
   }
 }
@@ -11762,7 +12066,7 @@ section .customBlockquote blockquote .fixBtn,
   border-radius: 10px;
   width: 100%;
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
   .otherOptions .customSelect {
     height: 45px;
     padding-top: 8px;
@@ -11771,6 +12075,11 @@ section .customBlockquote blockquote .fixBtn,
 }
 .otherOptions .customSelect .current {
   color: #878787;
+}
+@media screen and (max-width: 1600px) {
+  .otherOptions .customSelect .current {
+    font-size: 12px;
+  }
 }
 .otherOptions .customSelect .list {
   border: 1px solid var(--gray-3) !important;
@@ -14802,8 +15111,18 @@ section .customBlockquote blockquote .fixBtn,
 .bannerWrapper.rightColumn {
   width: calc(100% - 300px);
 }
+@media screen and (max-width: 1280px) {
+  .bannerWrapper.rightColumn {
+    width: 100%;
+  }
+}
 .bannerWrapper.rightColumn .bannerDesc {
   padding-left: 250px;
+}
+@media screen and (max-width: 1600px) {
+  .bannerWrapper.rightColumn .bannerDesc {
+    padding-left: 200px;
+  }
 }
 @media screen and (max-width: 1280px) {
   .bannerWrapper.rightColumn .bannerDesc {

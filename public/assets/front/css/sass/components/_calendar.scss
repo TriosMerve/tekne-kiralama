@@ -462,7 +462,7 @@
       height: 60px;
       background-color: var(--gray);
       border: 1px solid var(--gray-3);
-      @media screen and (max-width: 1366px) {
+      @media screen and (max-width: 1600px) {
         height: 45px;
         padding-top: 10px;
       }
@@ -665,11 +665,15 @@
         text-transform: uppercase;
         font-family: "GilroySemibold";
         color: var(--text);
-        @media screen and (max-height: 768px) {
+     
+        @media screen and (max-width:1600px) {
+          font-size: 10px;
+        }
+        @media screen and (max-width: 1366px) {
           padding-top: 0;
           top: 5px;
         }
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-height: 768px) {
           padding-top: 0;
           top: 5px;
         }
@@ -712,14 +716,17 @@
           padding-top: 19px;
           font-size: 14px;
           z-index: 99;
-          @media screen and (max-height: 768px) {
+          @media screen and (max-width:1600px) {
+            font-size: 12px;
+          }
+          @media screen and (max-width: 1366px) {
             height: 45px;
             padding-top: 11px;
             margin-top: 0;
             position: absolute;
             top: 0;
           }
-          @media screen and (max-width: 1366px) {
+          @media screen and (max-height: 768px) {
             height: 45px;
             padding-top: 11px;
             margin-top: 0;
@@ -944,11 +951,14 @@
     padding-top: 29px;
     background: var(--gray);
     border-color: var(--gray);
-    @media screen and (max-height: 768px) {
+    @media screen and (max-width:1600px) {
+      font-size: 11px;
+    }
+    @media screen and (max-width: 1366px) {
       height: 45px;
       padding-top: 21px;
     }
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-height: 768px) {
       height: 45px;
       padding-top: 21px;
     }
@@ -968,6 +978,9 @@
       font-family: "GilroyRegular";
       transition: all 0.3s linear;
       font-size: 14px;
+      @media screen and (max-width:1600px) {
+        font-size: 12px;
+      }
       &.name {
         font-size: 12px;
         position: absolute;
@@ -975,11 +988,13 @@
         text-transform: uppercase;
         font-family: "GilroySemibold";
         // color: var(--text);
-
-        @media screen and (max-height: 768px) {
-          top: 4px;
+        @media screen and (max-width:1600px) {
+          font-size: 11px;
         }
         @media screen and (max-width: 1366px) {
+          top: 4px;
+        }
+        @media screen and (max-height: 768px) {
           top: 4px;
         }
       }
@@ -1501,12 +1516,15 @@
     padding-top: 16px;
     padding-left: 10px;
     color: #878787;
-    @media screen and (max-height: 768px) {
-      height: 45px;
-    }
-    @media screen and (max-width: 1366px) {
-      height: 45px;
-    }
+    @media screen and (max-width: 1600px) {
+      font-size: 12px;
+     }
+     @media screen and (max-width: 1366px) {
+       height: 45px;
+      }
+      @media screen and (max-height: 768px) {
+        height: 45px;
+      }
     &.selected {
       border-radius: 10px 50px 50px 10px;
       background-color: var(--black);
@@ -1528,10 +1546,13 @@
     padding-top: 16px;
     padding-left: 10px;
     color: #878787;
-    @media screen and (max-height: 768px) {
-      height: 45px;
+    @media screen and (max-width: 1600px) {
+      font-size: 12px;
     }
     @media screen and (max-width: 1366px) {
+      height: 45px;
+    }
+    @media screen and (max-height: 768px) {
       height: 45px;
     }
     &.selected {
@@ -1573,10 +1594,13 @@
     font-size: 13px;
     color: #878787;
     cursor: pointer;
-    @media screen and (max-height: 768px) {
-      height: 45px;
+    @media screen and (max-width: 1600px) {
+     font-size: 12px;
     }
     @media screen and (max-width: 1366px) {
+      height: 45px;
+    }
+    @media screen and (max-height: 768px) {
       height: 45px;
     }
     .name {
@@ -1608,12 +1632,15 @@
     font-size: 13px;
     color: #878787;
     cursor: no-drop;
-    @media screen and (max-height: 768px) {
-      height: 45px;
-    }
-    @media screen and (max-width: 1366px) {
-      height: 45px;
-    }
+    @media screen and (max-width: 1600px) {
+      font-size: 12px;
+     }
+     @media screen and (max-width: 1366px) {
+       height: 45px;
+      }
+      @media screen and (max-height: 768px) {
+        height: 45px;
+      }
     &.selected {
       border-radius: 10px 50px 50px 10px;
       background-color: var(--black);
@@ -1690,7 +1717,7 @@
           background-color: var(--gray);
           border: 1px solid var(--gray-3);
           height: 60px;
-          @media screen and (max-width:1366px) {
+          @media screen and (max-width:1600px) {
             height: 45px;
           }
         }

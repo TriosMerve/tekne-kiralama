@@ -59,7 +59,7 @@
         line-height: 35px;
         color: var(--primary);
         transition: all 0.3s linear;
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 1600px) {
           font-size: 20px;
           line-height: 27px;
         }
@@ -70,7 +70,7 @@
         line-height: 22px;
         color: var(--gray-6);
         padding-top: 12px;
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 1600px) {
           font-size: 13px;
         }
       }
@@ -125,8 +125,9 @@
           font-size: 28px;
           font-family: "GilroySemibold";
           line-height: 19px;
-          @media screen and (max-width: 991.98px) {
+          @media screen and (max-width: 1600px) {
             font-size: 24px;
+            line-height: 24px;
           }
         }
         .currencly {
@@ -369,9 +370,13 @@
             font-size: 20px;
             line-height: 27px;
             color: var(--black);
-            @media screen and (max-width: 991.98px) {
+            @media screen and (max-width:1600px) {
               font-size: 18px;
               line-height: 26px;
+            }
+            @media screen and (max-width: 991.98px) {
+              font-size: 16px;
+              line-height: 24px;
             }
           }
         }
@@ -422,7 +427,7 @@
     }
   }
   &.quad {
-    gap: 20px;
+    gap:40px 20px;
     .card {
       width: calc(25% - 15px);
       @media screen and (max-width: 1280px) {
@@ -449,6 +454,9 @@
         color: var(--gray-7);
         text-align: left;
         transition: all 0.3s linear;
+        @media screen and (max-width:1600px) {
+          font-size: 14px;
+        }
       }
       .moreLink {
         color: var(--primary);
@@ -460,6 +468,9 @@
         display: inline-flex;
         margin-top: 10px;
         cursor: pointer;
+        @media screen and (max-width:1600px) {
+          font-size: 13px;
+        }
         @media screen and (min-width: 992px) {
           &:after {
             content: "";
@@ -484,6 +495,10 @@
         color: var(--text-2);
         font-family: "GilroyMedium";
         margin-top: 20px;
+        @media screen and (max-width:1600px) {
+          font-size: 13px;
+          margin-top: 10px;
+        }
       }
     }
 
@@ -699,7 +714,7 @@
             padding-right: 10px;
             flex: 1;
             color: var(--primary);
-            @media screen and (max-width: 991.98px) {
+            @media screen and (max-width: 1600px) {
               font-size: 18px;
               line-height: 26px;
             }
@@ -729,6 +744,9 @@
             align-items: flex-end;
             gap: 15px;
             margin-top: 30px;
+            @media screen and (max-width:1600px) {
+              margin-top: 10px;
+            }
           }
           .discount {
             margin-top: 20px;
@@ -755,8 +773,9 @@
               font-size: 28px;
               font-family: "GilroySemibold";
               line-height: 19px;
-              @media screen and (max-width: 991.98px) {
+              @media screen and (max-width: 1600px) {
                 font-size: 24px;
+                line-height: 24px;
               }
             }
             .currencly {
@@ -829,6 +848,17 @@
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width:1600px) {
+      font-size: 26px;
+      width: 50px;
+      height: 50px;
+    }
+    @media screen and (max-width:1440px) {
+      font-size:20px;
+      width: 40px;
+      height: 40px;
+    }
+
   }
   .title {
     margin-top: 25px;
@@ -837,24 +867,62 @@
     line-height: 27px;
     font-family: "GilroySemibold";
     text-align: center;
+    @media screen and (max-width:1600px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media screen and (max-width:1440px) {
+      font-size:16px;
+      line-height: 22px;
+    }
+    @media screen and (max-width:991.98px) {
+      font-size:14px;
+      line-height: 20px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
   }
 }
 
 .twiceList {
+  margin: 0;
   .leftColumn {
     padding-right: 50px;
+    @media screen and (max-width:991.98px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &.imageColumn {
       padding-right: 0;
+      padding-left: 0;
     }
   }
   .rightColumn {
     padding-left: 50px;
+    @media screen and (max-width:991.98px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .textColumn {
+    @media screen and (max-width:991.98px) {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
   }
   .title {
     font-size: 26px;
     color: var(--gray-7);
     line-height: 32px;
     font-family: "GilroySemibold";
+    @media screen and (max-width:1600px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    @media screen and (max-width:1280px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
   p {
     line-height: 40px;
@@ -862,5 +930,15 @@
     color: var(--gray-6);
     font-family: "GilroyMedium";
     margin-top: 40px;
+    @media screen and (max-width:1600px) {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 20px;
+    }
+    @media screen and (max-width:1280px) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 10px;
+    }
   }
 }

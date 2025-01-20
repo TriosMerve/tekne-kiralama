@@ -8,6 +8,9 @@ section,
   }
   .sectionWrapper {
     padding: 65px;
+    @media screen and (max-width: 1600px) {
+      padding: 30px;
+    }
     @media screen and (max-width: 991.98px) {
       padding: 30px 16px;
     }
@@ -15,6 +18,9 @@ section,
   .sectionWrapper-2 {
     .sectionContent {
       padding: 45px;
+      @media screen and (max-width: 1600px) {
+        padding: 30px;
+      }
       @media screen and (max-width: 991.98px) {
         padding: 30px 16px;
       }
@@ -28,6 +34,9 @@ section,
     margin: 0 auto;
     text-align: center;
     margin-bottom: 60px;
+    @media screen and (max-width:1600px) {
+      margin-bottom: 30px;
+    }
     @media screen and (max-width: 991.98px) {
       margin-bottom: 20px;
       padding-left: 16px;
@@ -44,6 +53,9 @@ section,
       font-size: 35px;
       color: var(--primary);
       line-height: 45px;
+      @media screen and (max-width:1600px) {
+        font-size: 30px;
+      }
       @media screen and (max-width: 991.98px) {
         font-size: 20px;
         line-height: 30px;
@@ -72,6 +84,11 @@ section,
         font-size: 30px;
         line-height: 37px;
         text-transform: none;
+        @media screen and (max-width:1600px) {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
         @media screen and (max-width: 991.98px) {
           font-size: 20px;
           line-height: 30px;
@@ -86,9 +103,17 @@ section,
         line-height: 22px;
         margin-top: 15px;
         text-align: justify;
+        @media screen and (max-width:1600px) {
+          font-size: 13px;
+          margin-top: 10px;
+        }
         &.type2 {
           font-size: 16px;
           line-height: 25px;
+
+          @media screen and (max-width:1600px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -272,6 +297,10 @@ section,
     padding: 50px 0 0;
     text-align: center;
     line-height: 24px;
+    @media screen and (max-width:1600px) {
+      padding-top: 20px;
+      font-size: 13px;
+    }
 
     a {
       color: var(--primary);
@@ -596,6 +625,10 @@ section,
     line-height: 85px;
     color: var(--white);
     max-width: 640px;
+    @media screen and (max-width:1600px) {
+      font-size: 40px;
+      line-height: 60px;
+    }
     @media screen and (max-width: 991.98px) {
       font-size: 24px;
       line-height: 32px;
@@ -744,6 +777,9 @@ section,
 }
 .pageContent {
   margin-top: 100px;
+  @media screen and (max-width:1600px) {
+    margin-top: 70px;
+  }
   @media screen and (max-width: 991.98px) {
     margin-top: 50px;
   }
@@ -763,6 +799,9 @@ section,
   line-height: 22px;
   color: var(--gray-7);
   font-family: "GilroyRegular";
+  @media screen and (max-width:1600px) {
+    font-size: 15px;
+  }
   @media screen and (max-width: 991.98px) {
     font-size: 14px;
     line-height: 22px;
@@ -803,6 +842,10 @@ section,
     font-family: "GilroySemibold";
     margin-bottom: 10px;
     margin-top: 20px;
+    @media screen and (max-width:1600px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
     @media screen and (max-width: 991.98px) {
       font-size: 18px;
       line-height: 24px;
@@ -861,6 +904,10 @@ section,
   &.type2 {
     font-size: 18px;
     line-height: 30px;
+    @media screen and (max-width:1600px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
     @media screen and (max-width: 991.98px) {
       font-size: 14px;
       line-height: 22px;

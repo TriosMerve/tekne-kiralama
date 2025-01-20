@@ -49,7 +49,9 @@
     }
     .modal-body {
       padding: 20px;
-      min-height: 555px;
+      @media screen and (min-height: 750px) {
+        min-height: 555px;
+      }
       &::-webkit-scrollbar {
         background-color: rgba(217, 4, 62, 0.4);
         width: 4px;
@@ -129,12 +131,12 @@
         border-radius: 6px;
         width: 100%;
 
-        &:focus{
+        &:focus {
           outline: 0;
           box-shadow: none;
         }
       }
-      .form-label{
+      .form-label {
         display: block;
         color: var(--text-2);
         font-size: 14px;
@@ -146,30 +148,30 @@
           font-size: 17px;
           line-height: 25px;
           color: var(--text);
-          font-family:"GilroySemibold";
+          font-family: "GilroySemibold";
           &.title {
             color: var(--gray-7);
             font-size: 16px;
             line-height: 25px;
             font-family: "GilroyMedium";
           }
-          &.icon-date{
+          &.icon-date {
             position: absolute;
             bottom: 12px;
             color: var(--primary);
             right: 20px;
           }
         }
-        a{
+        a {
           font-size: 17px;
           line-height: 25px;
 
-          span{
+          span {
             color: var(--primary);
           }
-          @media screen and (min-width:992px) {
-            &:hover{
-              span{
+          @media screen and (min-width: 992px) {
+            &:hover {
+              span {
                 color: var(--text-2);
               }
             }
@@ -308,11 +310,13 @@
     max-width: 650px;
   }
   .modal-content {
-    min-height: 750px;
-    .modal-header {
-      .btn-close {
-        width: 35px;
-        height: 35px;
+    @media screen and (min-height: 900px) {
+      min-height: 750px;
+      .modal-header {
+        .btn-close {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
   }

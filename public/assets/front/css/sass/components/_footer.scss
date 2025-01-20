@@ -36,6 +36,9 @@ footer {
   .footerTop {
     border-bottom: 1px solid var(--white);
     padding-bottom: 70px;
+    @media screen and (max-width:1600px) {
+      padding-bottom: 50px;
+    }
     @media screen and (max-width: 991.98px) {
       padding-bottom: 0px;
     }
@@ -63,6 +66,10 @@ footer {
       color: var(--black);
       line-height: 32px;
       margin-bottom: 30px;
+      @media screen and (max-width:1600px) {
+        font-size: 22px;
+        line-height: 30px;
+      }
       @media screen and (max-width: 991.98px) {
         font-size: 20px;
         line-height: 28px;
@@ -73,6 +80,9 @@ footer {
     display: flex;
     align-items: flex-start;
     padding-top: 70px;
+    @media screen and (max-width:1600px) {
+      padding-top: 50px;
+    }
     @media screen and (max-width: 991.98px) {
       flex-direction: column;
       align-items: center;
@@ -128,6 +138,10 @@ footer {
         line-height: 24px;
         color: var(--black);
         margin-bottom: 25px;
+        @media screen and (max-width: 1600px) {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
         @media screen and (max-width: 991.98px) {
           margin-bottom: 15px;
         }
@@ -144,6 +158,10 @@ footer {
             align-items: center;
             position: relative;
             transition: all 0.3s linear;
+            @media screen and (max-width: 1600px) {
+              font-size: 13px;
+              line-height: 20px;
+            }
 
             &:after {
               content: "";
@@ -180,6 +198,9 @@ footer {
       font-size: 14px;
       line-height: 20px;
       color: var(--gray-6);
+      @media screen and (max-width:1600px) {
+        font-size: 13px;
+      }
     }
 
     .designLogo {
@@ -195,6 +216,9 @@ footer {
     flex-wrap: nowrap;
     padding-left: 16px !important;
     // padding-right: 30px !important;
+    @media screen and (max-width:1600px) {
+      gap: 15px;
+    }
     @media screen and (max-width: 991.98px) {
       gap: 0;
     }
@@ -213,7 +237,8 @@ footer {
         height: 52px;
         padding: 0 25px;
         white-space: nowrap;
-        @media screen and (max-width: 991.98px) {
+        
+        @media screen and (max-width: 1600px) {
           font-size: 14px;
           padding: 0 15px;
           height: 45px;
@@ -233,6 +258,9 @@ footer {
   }
   .customTabContents {
     padding: 20px 0;
+    @media screen and (max-width:1600px) {
+      padding: 0;
+    }
     .listItems {
       display: flex;
       align-items: flex-start;
